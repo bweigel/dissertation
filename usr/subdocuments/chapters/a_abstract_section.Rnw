@@ -1,0 +1,15 @@
+%%%-------------------------------------------------%%%
+%%% Sub document abstract %%%
+%%%-------------------------------------------------%%%
+
+\part{Preface}
+
+\chapter{Abstracts}
+
+\section{English Abstract}
+
+\lipsum[1]
+
+\section{Deutsche Zusammenfassung}
+
+\lipsum[2]

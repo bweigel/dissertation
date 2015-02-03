@@ -1,0 +1,78 @@
+%%%-------------------------------------------------%%%
+%%% Glossary definitions %%%
+%%%-------------------------------------------------%%%
+
+
+% starts the glossary files creation
+\makeglossaries
+
+
+\newacronym{tu}{TU}{Technical University}
+% from the documentation
+% \newacronym[⟨key-val list⟩]{⟨label ⟩}{⟨abbrv ⟩}{⟨long⟩}
+
+% above is short version of this
+
+% \newglossaryentry{⟨label ⟩}{type=\acronymtype,
+%  name={⟨abbrv ⟩},
+%  description={⟨long⟩},
+%  text={⟨abbrv ⟩},
+%  first={⟨long⟩ (⟨abbrv ⟩)},
+%  plural={⟨abbrv ⟩\glspluralsuffix},
+%  firstplural={⟨long⟩\glspluralsuffix\space (⟨abbrv ⟩\glspluralsuffix)},
+%  ⟨key-val list⟩}
+
+% example with glslinks
+
+% \newglossaryentry{API}{
+%  type=\acronymtype,
+%  name=API,
+%  first=Application Programming Interface (API),
+%  firstplural={Application Programming Interfaces (API's)},
+%  see=[Glossary:]{\gls{APIG}},
+%  description=\glslink{APIG}{Application Programming Interfaces}}
+
+% \newglossaryentry{APIG}{
+%  name=\glslink{API}{Application Programming Interface (\gls{API})},
+%  description={
+%  Application Programming Interface Desc}
+%  }
+
+
+
+% start your declarations
+
+\newglossaryentry{itc}{
+	type        = \acronymtype,
+	name        = ITC,
+	text        = ITC,
+	first       = Isothermal Titration Calorimetry (ITC),
+%	see         = [see also]{itc},
+	description = \glslink{itcg}{Isothermal Titration Calorimetry}
+}
+
+\newglossaryentry{itcg}{
+	name        = \glslink{itc}{Isothermal Titration Calorimetry (ITC)},
+	description = {
+		Fill in description here.
+	}
+}
+
+\newglossaryentry{xml}{
+	type        = \acronymtype,
+	name        = XML,
+	text        = XML,
+	first       = Extensible Markup Language (XML),
+	%see         = [Glossary:]{xmlg},
+	description = \glslink{xmlg}{Extensible Markup Language}
+}
+
+\newglossaryentry{xmlg}{
+	name        = \glslink{xml}{Extensible Markup Language (XML)},
+	description = {
+		It is an extensible markup langue that can be used to describe
+		hirarchical structured data. Own structural scaffolds (dialects) can
+		simply defined and validated. One of its greatest features is that the
+		files are human as well as machine readable.
+	}
+}

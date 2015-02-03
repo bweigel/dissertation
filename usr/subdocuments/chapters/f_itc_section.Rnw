@@ -1,0 +1,9 @@
+%%%-------------------------------------------------%%%
+%%% Sub document for ITC %%%
+%%%-------------------------------------------------%%%
+
+\chapter{Binding studies on cation-dependent and independent methyl transferases}
+
+\section{Test}
+% Remove the lipsum and fill in your discussion text here
+\lipsum[1-4]

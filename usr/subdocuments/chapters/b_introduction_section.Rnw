@@ -6,51 +6,30 @@
 
 \chapter{Introduction}\index{capital letters}
 
-% Remove the lipsum and the list example and fill in your introduction text here
+\capital{S}ome introductionary text
 
-\capital{S}hiiiiiiieeeet! This is just an introduction  \href{http://www.test.de}{testlink}
-text snippet to show how drop caps look in this document.  \lipsum[1] And a
-nice margin note \marginnote[1cm]{This is a margin note at 1cm vertical offset
-to the first line it is typeset.}
+\section{Natural products and secondary metabolites} 
+\subsection{General}
+\subsection{Classes of natural products}
+\subsubsection{Terpenoids and Steroids} ... here is some text
+\subsubsection{Polyketides and non-ribosomal peptides} ... here is some text
+\subsubsection{Alkaloids} ... here is some text
+\subsubsection{Phenylpropanoids} ... here is some text
 
-\begin{itemize}
-  \item One
-    \begin{itemize}
-      \item One One
-        \begin{itemize}
-          \item One One One
-        \end{itemize}
-    \end{itemize}
-  \item Two
-  \item Three
-\end{itemize}
+\section{Alkylating reactions in nature}
+\subsection{Methylation}
+\subsection{Prenylation}
+\subsection{Glycosylation}
 
-\claas{This command is generated from ostSetRevisor!}
-\lipsum[1]  
+\section{Usage and expansion of natures reaction toolbox}
+\subsection{Terpene synthases and elongases}
+\subsection{Methyl transferases}
+\subsection{Glycosyl transferases}
+\subsection{Other important enzymes in biotech research}
+\paragraph{BMVOs}
+\paragraph{Esterases/Lipases}
+\paragraph{Oxidases}
+\paragraph{Lyases}
+\paragraph{Transaminases}
 
-\section{Section} 
-
-This is just a test citation \citep{renwick_chemical_2002}.
-\lipsum[1]  
-
-\subsection{Subsection} 
-
-\lipsum[1]  
-
-\subsubsection{SubSub-Section} 
-
-\claas{This command is generated from ostSetRevisor!}
-\lipsum[2]  
-
-\paragraph{Testparagraph:}\index{paragraph format}
-
-\lipsum[1]  
-
-\ostQuote[author = John Doe]{Lorem ipsum dolor sit amet, consectetur adipiscing
-elit. Morbi id hendrerit nunc. Sed scelerisque lacus vitae erat eleifend
-eleifend. Donec eros mi, placerat
-
-in porta eleifend, placerat a urna. Pellentesque venenatis neque non turpis
-convallis vehicula. Aliquam aliquet ultricies tincidunt.}
-
-\lipsum[1-2]  
+\section{Conclusion}

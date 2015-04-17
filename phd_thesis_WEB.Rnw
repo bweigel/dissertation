@@ -148,24 +148,24 @@
 @
 
 %%%-------------------------------------------------%%%
+%%% Include PFOMT alkylation Section (apo-structure solution and ITC)  %%%
+%%%-------------------------------------------------%%%
+
+<<subdoc_content_results, child='usr/subdocuments/chapters/d_pfomt_section.Rnw', eval=T>>=
+@
+
+%%%-------------------------------------------------%%%
+%%% Include Non-Catecholic methylation section (SOMT/PFOMT Mg/ COMT??) %%%
+%%%-------------------------------------------------%%%
+
+<<subdoc_content_results, child='usr/subdocuments/chapters/e_noncatechol_section.Rnw', eval=T>>=
+@
+
+%%%-------------------------------------------------%%%
 %%% Include MT whole cell screening section %%%
 %%%-------------------------------------------------%%%
 
-<<subdoc_content_results, child='usr/subdocuments/chapters/d_mtscreening_section.Rnw', eval=T>>=
-@
-
-%%%-------------------------------------------------%%%
-%%% Include SOMT section %%%
-%%%-------------------------------------------------%%%
-
-<<subdoc_content_results, child='usr/subdocuments/chapters/e_somt_section.Rnw', eval=T>>=
-@
-
-%%%-------------------------------------------------%%%
-%%% Include ITC section %%%
-%%%-------------------------------------------------%%%
-
-<<subdoc_content_discussion, child='usr/subdocuments/chapters/f_itc_section.Rnw', eval=T>>=
+<<subdoc_content_discussion, child='usr/subdocuments/chapters/f_mtscreening_section.Rnw', eval=T>>=
 @
 
 %%%-------------------------------------------------%%%

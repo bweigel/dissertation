@@ -6,37 +6,16 @@
 % starts the glossary files creation
 \makeglossaries
 
-
-\newacronym{tu}{TU}{Technical University}
-% from the documentation
-% \newacronym[⟨key-val list⟩]{⟨label ⟩}{⟨abbrv ⟩}{⟨long⟩}
-
-% above is short version of this
-
-% \newglossaryentry{⟨label ⟩}{type=\acronymtype,
-%  name={⟨abbrv ⟩},
-%  description={⟨long⟩},
-%  text={⟨abbrv ⟩},
-%  first={⟨long⟩ (⟨abbrv ⟩)},
-%  plural={⟨abbrv ⟩\glspluralsuffix},
-%  firstplural={⟨long⟩\glspluralsuffix\space (⟨abbrv ⟩\glspluralsuffix)},
-%  ⟨key-val list⟩}
-
-% example with glslinks
-
-% \newglossaryentry{API}{
-%  type=\acronymtype,
-%  name=API,
-%  first=Application Programming Interface (API),
-%  firstplural={Application Programming Interfaces (API's)},
-%  see=[Glossary:]{\gls{APIG}},
-%  description=\glslink{APIG}{Application Programming Interfaces}}
-
-% \newglossaryentry{APIG}{
-%  name=\glslink{API}{Application Programming Interface (\gls{API})},
-%  description={
-%  Application Programming Interface Desc}
-%  }
+% analytics
+\newacronym{gc}{GC}{gas chromatography}
+\newacronym{gcms}{GC/MS}{gas chromatography coupled mass-spectrometry}
+\newacronym{lcms}{LC/MS}{liquid chromatography coupled mass-spectrometry}
+\newacronym{hplc}{HPLC}{high-performance liquid chromatography}
+% enzymes
+%newacronym{pfomt}{PFOMT}{phenylpropanoid and flavonoid O-methyl transferase}
+\newacronym{comt}{COMT}{catechol O-methyl transferase}
+\newacronym{somt}{SOMT-2}{soy O-methyl transferase}
+% misc
 
 
 
@@ -58,21 +37,21 @@
 	}
 }
 
-\newglossaryentry{xml}{
+
+\newglossaryentry{pfomt}{
 	type        = \acronymtype,
-	name        = XML,
-	text        = XML,
-	first       = Extensible Markup Language (XML),
-	%see         = [Glossary:]{xmlg},
-	description = \glslink{xmlg}{Extensible Markup Language}
+	name        = PFOMT,
+	text        = PFOMT,
+	first       = phenylpropanoid and flavonoid O-methyl transferase (PFOMT),
+%	see         = [see also]{itc},
+	description = \glslink{pfomtg}{phenylpropanoid and flavonoid O-methyl transferase}
 }
 
-\newglossaryentry{xmlg}{
-	name        = \glslink{xml}{Extensible Markup Language (XML)},
+\newglossaryentry{pfomtg}{
+	name        = \glslink{pfomt}{PFOMT},
 	description = {
-		It is an extensible markup langue that can be used to describe
-		hirarchical structured data. Own structural scaffolds (dialects) can
-		simply defined and validated. One of its greatest features is that the
-		files are human as well as machine readable.
-	}
+		Phenylpropanoid and flavonoid O-methyl transferase from \textit{Mesembryanthemum crystallinum}, which was first described by Ibdah \citep{Ibdah2003b}%
+        }
 }
+
+

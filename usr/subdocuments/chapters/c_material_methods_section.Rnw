@@ -130,7 +130,7 @@ The reaction mixture was placed in a thermocycler and inbcubated at \degC{37} fo
 \section{Protein biochemistry}
 
 \subsection{Production of recombinant protein}
-\subsubsection{Heterologous production of \gslentrytext{pfomt}}
+\subsubsection{Heterologous production of \glsentrytext{pfomt}}
 
 
 %%%% analytical methods

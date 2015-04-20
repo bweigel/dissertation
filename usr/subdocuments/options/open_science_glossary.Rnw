@@ -8,9 +8,12 @@
 
 % analytics
 \newacronym{gc}{GC}{gas chromatography}
+\newacronym{cd}{CD}{circulary dichroism}
+\newacronym{fplc}{FPLC}{fast protein liquid chromatography}
 \newacronym{gcms}{GC/MS}{gas chromatography coupled mass-spectrometry}
 \newacronym{lcms}{LC/MS}{liquid chromatography coupled mass-spectrometry}
 \newacronym{hplc}{HPLC}{high-performance liquid chromatography}
+\newacronym{nmr}{NMR}{nuclear magnetic resonance}
 % enzymes
 %newacronym{pfomt}{PFOMT}{phenylpropanoid and flavonoid O-methyl transferase}
 \newacronym{comt}{COMT}{catechol O-methyl transferase}
@@ -53,5 +56,25 @@
 		Phenylpropanoid and flavonoid O-methyl transferase from \textit{Mesembryanthemum crystallinum}, which was first described by Ibdah \citep{Ibdah2003b}%
         }
 }
+
+\newglossaryentry{mtp}{
+	type        = \acronymtype,
+	name        = MTP,
+	text        = MTP,
+        plural	    = MTPs,
+        longplural  = micro-titer plates,
+	first       = micro-titer plate (MTP),
+	description = \glslink{mtpg}{micro-titer plate}
+}
+
+\newglossaryentry{mtpg}{
+	name        = \glslink{mtp}{MTP},
+        plural      = MTPs,
+        longplural  = micro-titer plates,
+	description = {
+		Micro-titer plate. Small format rectangular plastic plate containing wells to allow for storage of multiple small samples or the containment multiple simultaneous reactions. Typical sizes include 24, 96 and 384-wells%
+        }
+}
+
 
 

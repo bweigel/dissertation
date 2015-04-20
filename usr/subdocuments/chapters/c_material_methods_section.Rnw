@@ -7,21 +7,94 @@
 %%%% materials (chemicals, inbstrumenmts, software etc)
 \section{Materials}
 \subsection{Chemicals}
+Enzymes and buffers used for molecular cloning were obtained from Thermo Scientific (Darmstadt, Germany), unless otherwise noted. 
+Flavonoid HPLC standards were purchased from Extrasynthese (Genay, France). 
+Deuterated solvents were aquired from Deutero GmbH (Kastellaun, Germany). 
+Solvents, purchased from VWR (Poole, England), were distilled in-house before use. \\
+All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany), Applichem (Darmstadt, Germany), Carl Roth (Karlsruhe, Germany) or Merck (Darmstadt, Germany).
+
 \subsection{Instruments}
+
+\begin{small}
+\begin{tabular}{p{0.35\textwidth}p{0.65\textwidth}}
+  \gls{cd}-spectrometer & Jasco J-815 (Eaton, USA) \\
+  electrophoresis (horizontal) & Biometra Compact XS/S (Göttingen, Germany)\\
+  electrophoresis (vertical) & Biometra Compact M (Göttingen, Germany) \newline Biometra Minigel-Twin (Göttingen, Germany) \\
+  \gls{fplc} & ÄKTA purifier (GE Healthcare, Freiburg, Germany) \\
+  \gls{gcms} & GC-MS-QP2010 Ultra (Shimadzu, Duisburg, Germany)\\
+  \gls{hplc} & VWR ??? \\
+  \gls{itc} & MicroCal iTC200 (Malvern, Worcestershire, UK) \\
+  \gls{mtp} & ??? \\
+  \gls{mtp}-reader & SpectraMax M5 (Molecular Devices, Biberach, Germany) \\
+  \gls{nmr}-spectrometer & Varian Unity 400 (Agilent, Böblingen, Germany) \newline Varian VNMRS 600 (Agilent, Böblingen, Germany) \\
+  photospectrometer & Eppendorf Biophotometer Plus (Hamburg, Germany) \newline JASCO V-560 (Eaton, USA) \newline Nanodrop ??? \\
+  centrifuges & Eppendorf 5424 (Hamburg, Germany) \newline Hettich Mikro 120 (Kirchlengern, Germany) \newline Beckman Avanti J-E (Krefeld, Germany) \\
+  centrifuge rotors & Beckman JA-10, JA-16.250, JS-4.3 (Krefeld, Germany)    
+\end{tabular}
+\end{small}
+
 \subsection{Proteins}
 
-\subsection{Plasmids}
+\subsection{Bacterial strains}
 
+\subsubsection{\textit{E.coli}}
+\begin{tabular}{p{0.3\textwidth}p{0.68\textwidth}}
+  DH5$\alpha$ & F$^-$ $\Phi$80\textit{lacZ}$\Delta$M15 $\Delta$(\textit{lacZYA-argF}) U169 \textit{recA}1 \textit{endA}1 \textit{hsdR}17 (rK$^-$,mK$^+$) \textit{phoA supE}44 $\lambda^-$ \textit{thi}-1 \textit{gyrA}96 \textit{relA}1 \newline Invitrogen, Karlsruhe \\
+  One Shot TOP10 & F$^-$ $\Phi$80\textit{lacZ}$\Delta$M15 $\Delta$(\textit{mrr-hsdRMS-mcrBC}) \textit{recA}1 \textit{endA}1 \textit{mcrA} $\Delta$\textit{lacX}74 \textit{araD}139 $\Delta$(\textit{ara-leu})7697 \textit{galU galK rpsL} (Str$^R$) $\lambda^-$ \textit{nupG} \newline Invitrogen, Karlsruhe \\
+  BL21(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) \newline Invitrogen, Karslruhe \\
+  JM110 & \textit{rpsL thr leu thi lacY galK galT ara tonA tsx dam dcm glnV}44 $\Delta$(\textit{lac-proAB}) e14- [F' \textit{traD}36 \textit{proAB}$^+$ \textit{lacI}$^q$ \textit{lacZ}$\Delta$M15] \textit{hsdR}17(r$_K^-$m$_K^+$) \newline Martin-Luther-University Halle-Wittenberg \\
+  JW1593 \newline (BW25113 derivative) & \textit{rrnB} $\Delta$\textit{lacZ}4787 \textit{HsdR}514 $\Delta$(\textit{araBAD})568 \textit{rph}-1 $\Delta$\textit{ydgG} (Kan$^R$) \newline Keio Collection, National Institute of Genetics (Japan) \\
+  MG1655 & F$^-$ $\lambda^-$ \textit{ilvG}$^-$ \textit{rfb}-50 \textit{rph}-1 \newline DSMZ, Hamburg \\
+  Origami(DE3) & genotype \newline Novagen, Wisconsin (USA) \\
+  Rosetta & genotype \newline Novagen, Wisconsin (USA) \\
+  Rosetta pLys & genotype \newline Novagen, Wisconsin (USA) \\
+  C41(DE3) & genotype \newline Lucigen, Wisconsin (USA) \\
+  C43(DE3) & genotype \newline Lucigen, Wisconsin (USA) \\
+  T7 Express & genotype \newline NEB, Massachusetts (USA) \\
+  
+\end{tabular}
+\subsubsection{\textit{Agrobacterium tumefaciens}}
+\begin{tabular}{p{0.2\textwidth}p{0.8\textwidth}}
+GV3101 & genotype \newline Sylvestre Marillonet, IPB \\  
+\end{tabular}
+
+
+\subsection{Plasmids}
 \ostTableEnv[label = tab:plasmids]{%
   \begin{tabular}{p{0.2\textwidth}p{0.5\textwidth}}
     \toprule
 	name & description \\ 
     \midrule
-    	pET28a(+) & ... \\
+    pACYC Duet-1 & .. \\
+    pCDF Duet-1 & .. \\
+    pET20b(+) & ... \\
+    pET28a(+) & .. \\
+    pET32a(+) & .. \\
+    pET41a(+) & .. \\
+    pQE30 & .. \\
+    pUC19 & .. \\
     \bottomrule
   \end{tabular}
 }{%
 Plasmids used in this work.
+}
+
+\subsection{Primers}
+\ostTableEnv[label = tab:primers]{%
+  \begin{tabular}{p{0.15\textwidth}p{0.7\textwidth}p{0.15\textwidth}}
+    \toprule
+    	name & sequence (5'$\rightarrow$3') & cloning site \\ 
+    \midrule
+    	T7 & TAATACGACTCACTATAGGGT & n/a \\
+        T7.term & GCTAGTTATTGCTCAGCGGT & n/a \\
+        somt1 & TT\underline{GAAGAC}AAAATGGCTTCTTCATTAAACAATGGCCG & BpiI \\
+        somt2 & TT\underline{GAAGAC}AAGGACACCCCAAATACTGTGAGATCTTCC & BpiI \\
+        somt3 & TT\underline{GAAGAC}AAGTCCTTAGGAACACCTTTCTGGGAC & BpiI \\
+        somt4 & TT\underline{GAAGAC}AAAAGCTCAAGGATAGATCTCAATAAGAGAC & BpiI \\
+    \bottomrule
+  \end{tabular}
+}{%
+Primers used in this work. Recognition sites for endonucleases are underlined. 
 }
 
 \subsection{Software}

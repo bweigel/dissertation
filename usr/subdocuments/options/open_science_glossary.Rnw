@@ -14,6 +14,7 @@
 \newacronym{lcms}{LC/MS}{liquid chromatography coupled mass-spectrometry}
 \newacronym{hplc}{HPLC}{high-performance liquid chromatography}
 \newacronym{nmr}{NMR}{nuclear magnetic resonance}
+%\newacronym{pcr}{PCR}{polymerase chain reaction}
 % enzymes
 %newacronym{pfomt}{PFOMT}{phenylpropanoid and flavonoid O-methyl transferase}
 \newacronym{comt}{COMT}{catechol O-methyl transferase}
@@ -23,6 +24,15 @@
 
 
 % start your declarations
+
+\newglossaryentry{pcr}{
+  	type	= \acronymtype,
+        name	= PCR,
+        text	= PCR,
+        symbol	= PCR,
+        first	= polymerase chain reaction (PCR),
+        description	= polymerase chain reaction%
+}
 
 \newglossaryentry{itc}{
 	type        = \acronymtype,
@@ -36,7 +46,7 @@
 \newglossaryentry{itcg}{
 	name        = \glslink{itc}{Isothermal Titration Calorimetry (ITC)},
 	description = {
-		Fill in description here.
+		Fill in description here%
 	}
 }
 
@@ -53,7 +63,7 @@
 \newglossaryentry{pfomtg}{
 	name        = \glslink{pfomt}{PFOMT},
 	description = {
-		Phenylpropanoid and flavonoid O-methyl transferase from \textit{Mesembryanthemum crystallinum}, which was first described by Ibdah \citep{Ibdah2003b}%
+		Phenylpropanoid and flavonoid O-methyl transferase from \textit{Mesembryanthemum crystallinum}, which was first described by Ibdah et al. in 2003 \citep{Ibdah2003b}%
         }
 }
 
@@ -76,5 +86,23 @@
         }
 }
 
+\newglossaryentry{tip}{
+	type        = \acronymtype,
+	name        = Ti-plasmid,
+	text        = Ti-plasmid,
+        plural	    = Ti-plasmids,
+        longplural  = tumor inducing plasmids,
+	first       = tumor inducing plasmid (Ti-plasmid),
+	description = \glslink{tipg}{tumor inducing plasmid}
+}
+
+\newglossaryentry{tipg}{
+	name        = \glslink{tip}{Ti-plasmid},
+        plural      = Ti-plasmids,
+        longplural  = tumor inducing plasmids,
+	description = {
+		Commonly found plasmids in \textit{A.\,tumefaciens} and \textit{A.\,rhizogenes} that confer virulence%
+        }
+}
 
 

@@ -33,29 +33,27 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
 \end{tabular}
 \end{small}
 
-\subsection{Proteins}
-
 \subsection{Bacterial strains}
 
 \subsubsection{\textit{E.coli}}
 \begin{tabular}{p{0.3\textwidth}p{0.68\textwidth}}
-  DH5$\alpha$ & F$^-$ $\Phi$80\textit{lacZ}$\Delta$M15 $\Delta$(\textit{lacZYA-argF}) U169 \textit{recA}1 \textit{endA}1 \textit{hsdR}17 (rK$^-$,mK$^+$) \textit{phoA supE}44 $\lambda^-$ \textit{thi}-1 \textit{gyrA}96 \textit{relA}1 \newline Invitrogen, Karlsruhe \\
-  One Shot TOP10 & F$^-$ $\Phi$80\textit{lacZ}$\Delta$M15 $\Delta$(\textit{mrr-hsdRMS-mcrBC}) \textit{recA}1 \textit{endA}1 \textit{mcrA} $\Delta$\textit{lacX}74 \textit{araD}139 $\Delta$(\textit{ara-leu})7697 \textit{galU galK rpsL} (Str$^R$) $\lambda^-$ \textit{nupG} \newline Invitrogen, Karlsruhe \\
   BL21(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) \newline Invitrogen, Karslruhe \\
+  C41(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) \newline Lucigen, Wisconsin (USA) \\
+  C43(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3)\newline Lucigen, Wisconsin (USA) \\
+  DH5$\alpha$ & F$^-$ $\Phi$80\textit{lacZ}$\Delta$M15 $\Delta$(\textit{lacZYA-argF}) U169 \textit{recA}1 \textit{endA}1 \textit{hsdR}17(r$_K^-$m$_K^+$) \textit{phoA supE}44 $\lambda^-$ \textit{thi}-1 \textit{gyrA}96 \textit{relA}1 \newline Invitrogen, Karlsruhe (Germany) \\
   JM110 & \textit{rpsL thr leu thi lacY galK galT ara tonA tsx dam dcm glnV}44 $\Delta$(\textit{lac-proAB}) e14- [F' \textit{traD}36 \textit{proAB}$^+$ \textit{lacI}$^q$ \textit{lacZ}$\Delta$M15] \textit{hsdR}17(r$_K^-$m$_K^+$) \newline Martin-Luther-University Halle-Wittenberg \\
   JW1593 \newline (BW25113 derivative) & \textit{rrnB} $\Delta$\textit{lacZ}4787 \textit{HsdR}514 $\Delta$(\textit{araBAD})568 \textit{rph}-1 $\Delta$\textit{ydgG} (Kan$^R$) \newline Keio Collection, National Institute of Genetics (Japan) \\
-  MG1655 & F$^-$ $\lambda^-$ \textit{ilvG}$^-$ \textit{rfb}-50 \textit{rph}-1 \newline DSMZ, Hamburg \\
-  Origami(DE3) & genotype \newline Novagen, Wisconsin (USA) \\
-  Rosetta & genotype \newline Novagen, Wisconsin (USA) \\
-  Rosetta pLys & genotype \newline Novagen, Wisconsin (USA) \\
-  C41(DE3) & genotype \newline Lucigen, Wisconsin (USA) \\
-  C43(DE3) & genotype \newline Lucigen, Wisconsin (USA) \\
-  T7 Express & genotype \newline NEB, Massachusetts (USA) \\
+  MG1655 & F$^-$ $\lambda^-$ \textit{ilvG}$^-$ \textit{rfb}-50 \textit{rph}-1 \newline DSMZ, Hamburg (Germany) \\
+  One Shot TOP10 & F$^-$ $\Phi$80\textit{lacZ}$\Delta$M15 $\Delta$(\textit{mrr-hsdRMS-mcrBC}) \textit{recA}1 \textit{endA}1 \textit{mcrA} $\Delta$\textit{lacX}74 \textit{araD}139 $\Delta$(\textit{ara-leu})7697 \textit{galU galK rpsL} (Str$^R$) $\lambda^-$ \textit{nupG} \newline Invitrogen, Karlsruhe (Germany) \\
+  Origami(DE3) & $\Delta$(\textit{ara-leu})7697 $\Delta$\textit{lacX}74 $\Delta$\textit{phoA} \textit{Pvull phoR araD}139 \textit{ahpC galE galK rpsL} F'[\textit{lac + lacI q pro}] (DE3)\textit{gor}522::\textit{Tn}10 \textit{trxB} (Kan$^R$, Str$^R$, Tet$^R$) \newline Novagen, Wisconsin (USA) \\
+  Rosetta(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) pRARE (Cam$^R$) \newline Novagen, Wisconsin (USA) \\
+  Rosetta(DE3) pLysS & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) pLysSRARE (Cam$^R$) \newline Novagen, Wisconsin (USA) \\
+  T7 Express & \textit{fhuA}2 \textit{lacZ::T}7 \textit{gene}1 \textit{[lon] ompT gal sulA}11 \textit{R}(\textit{mcr-}73\textit{::miniTn}10--Tet$^S$)2 \textit{[dcm] R}(\textit{zgb}-210\textit{::Tn}10--Tet$^S$) \textit{endA}1 $\Delta$(\textit{mcrC-mrr})114\textit{::IS}10 \newline NEB, Massachusetts (USA) \\
   
 \end{tabular}
 \subsubsection{\textit{Agrobacterium tumefaciens}}
 \begin{tabular}{p{0.2\textwidth}p{0.8\textwidth}}
-GV3101 & genotype \newline Sylvestre Marillonet, IPB \\  
+GV3101 & chromosomal background: C58, marker gene: \textit{rif}, \gls{tip}: cured, opine: nopaline \newline Sylvestre Marillonet, IPB \\  
 \end{tabular}
 
 
@@ -79,14 +77,16 @@ GV3101 & genotype \newline Sylvestre Marillonet, IPB \\
 Plasmids used in this work.
 }
 
-\subsection{Primers}
+\subsection{Oligonucleotides}
+Oligonucleotides and primers were ordered from Eurofins Genomics (Ebersberg, Germany). The purity grade was \emph{high purity salt free} (HPSF).
+
 \ostTableEnv[label = tab:primers]{%
   \begin{tabular}{p{0.15\textwidth}p{0.7\textwidth}p{0.15\textwidth}}
     \toprule
     	name & sequence (5'$\rightarrow$3') & cloning site \\ 
     \midrule
-    	T7 & TAATACGACTCACTATAGGGT & n/a \\
-        T7.term & GCTAGTTATTGCTCAGCGGT & n/a \\
+%    	T7 & TAATACGACTCACTATAGGGT & n/a \\
+%       T7.term & GCTAGTTATTGCTCAGCGGT & n/a \\
         somt1 & TT\underline{GAAGAC}AAAATGGCTTCTTCATTAAACAATGGCCG & BpiI \\
         somt2 & TT\underline{GAAGAC}AAGGACACCCCAAATACTGTGAGATCTTCC & BpiI \\
         somt3 & TT\underline{GAAGAC}AAGTCCTTAGGAACACCTTTCTGGGAC & BpiI \\
@@ -98,6 +98,8 @@ Primers used in this work. Recognition sites for endonucleases are underlined.
 }
 
 \subsection{Software}
+All mathematical and statistical computations and graphics were done with the \verb+R+ software (versions 3.1.X, \url{http://cran.r-project.org/}). Visualizations of macromolecules were arranged using the PyMol Molecular Graphics System, version 1.7.0.0 (Schrödinger, New York (USA)).\\
+Physicochemical calculations and calculations of different molecular descriptors were performed using Marvin Beans 15.4.13.0 (ChemAxon, Budapest (Hungary)) and Molecular Operating Environment 2008.10 (Chemical Computing Group, Montreal (Canada)).
 
 %%%% Microbiologicyl Methods
 \section{Microbiology}
@@ -105,10 +107,31 @@ Primers used in this work. Recognition sites for endonucleases are underlined.
 
 %%%% Molecular Biology methods
 \section{Molecular Biology}
+Basic molecular biology methods like \gls{pcr}, DNA restriction/ligation, DNA gel electrophoresis, preparation of competent cells and transformation were performed based on the protocols summarized by Sambrook and Russell \citep{Sambrook2001}.\\
+Plasmid DNA was isolated using the QIAprep Spin Miniprep Kit (QIAGEN, Hilden (Germany)) according to the manufacturer's instructions. \\
+In vitro site-directed mutatgenesis was set-up according to the protocol of the \emph{QuikChange Site-Directed Mutagenesis} kit \cite{Technologies} offered by Agilent Technologies (Santa Clara, USA). \\
+Nucleotide fragments obtained by \gls{pcr}, restriction/ligation procedures or excision from electrophoresis gels were purified and concentrated using the \emph{Nucleospin Gel and PCR Clean-up} kit provided by Machery-Nagel (Düren, Germany) according to the instructions provided by the manufacturer.
+
+\subsection{Golden Gate Cloning}
+
+The Golden Gate cloning procedure is a one-pot method, meaning the restriction digestion and ligation are carried out in the same reaction vessel at the same time \cite{Kondou2011,Engler2008}. Consequently \gls{pcr}-fragments, destination vector, restriction endonuclease and ligase are added together in this reaction. The methodology employs type II restriction enzymes, which together with proper design of the fragments allow for a ligation product lacking the original restriction sites.  \\
+For digestion/ligation reactions of fragments containing BpiI sites, 20\,fmol of each fragment or vector, together with 5\,U of BpiI and 5\,U of T4 ligase were combined in a total volume of \ul{15} 1$\times$ ligase buffer.
+For fragments to be cloned via BsaI sites, BpiI in the above reaction was substituted by 5\,U BsaI. \\
+The reaction mixture was placed in a thermocycler and inbcubated at \degC{37} for 2\,min and \degC{16} for 5\,min. These two first steps were repeated 50 times over. Finally, the temperature was raised to \degC{50} (5\,min) and \degC{80} (10\,min) to inactivate the enzymes.
+
+%\subsection{Polymerase chain reaction (\protect{\Gls{pcr}})}
+%\subsection{\Glsentryfirst{pcr}}
+%\Glssymbol{pcr} was performed using the \emph{KOD Hot Start DNA Polymerase} kit (Novagen, Wisconsin (USA)).
+%\cite{Sambrook2001}
+
 
 
 %%%% protein biochemical methods
 \section{Protein biochemistry}
+
+\subsection{Production of recombinant protein}
+\subsubsection{Heterologous production of \gslentrytext{pfomt}}
+
 
 %%%% analytical methods
 \section{Analytics}

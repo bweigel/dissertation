@@ -245,7 +245,9 @@
   fancylist=true,
   natbib=true,
   backend=biber,
-  style=authoryear,
+  %style=authoryear,
+% options include authoryear, numeric, numeric-comp, numeric-verb, alphabetic, authoryear, authortitle
+  style=numeric,
   language=english,
   sensitivespacing=true,
   floatafter=false,

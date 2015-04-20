@@ -72,7 +72,11 @@
 %%%-------------------------------------------------%%%
 
 %% Example:
-
+\newcommand{\degC}[1]{\SI[mode=text]{#1}{\celsius}}
+\newcommand{\ul}[1]{\SI[mode=text]{#1}{\micro\litre}}
+\newcommand{\ug}[1]{\SI[mode=text]{#1}{\micro\gram}}
+\newcommand{\uM}[1]{\SI[mode=text]{#1}{\micro\mole}}
+\newcommand{\ra}{$\rightarrow$\xspace}
 % \newcommand{name}[number of parameters]{things to do}
 
 %%%-------------------------------------------------%%%
@@ -186,7 +190,7 @@
 %%% Set revisors for the document  %%%
 %%%-------------------------------------------------%%%
 
- \ostSetRevisor{claas}
+ \ostSetRevisor{bweigel}
  \ostSetRevisor{chris}
 
 %% Note: 

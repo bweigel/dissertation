@@ -135,6 +135,49 @@ The reaction mixture was placed in a thermocycler and inbcubated at \degC{37} fo
 
 %%%% analytical methods
 \section{Analytics}
+\subsection{In vitro determination of glucose}
+The glucose concentration in clarified, aqueous samples was determined by a modified version of the glucose assay kit procedure provided by Sigma-Aldrich \citep{Sigma-Aldrich}. \Gls{god} oxidizes D-glucose to gluconic acid, whereby hydrogen peroxide is produced. The hydrogen peroxide can be detected and quantified by \gls{hrp}, which reduces the produced \cf{H2O2} and thereby oxidizes its chromogenic substrate \textit{o}-dianisidine. The oxidized form of \textit{o}-dianisidine can then be measured photospectrometrically.\\
+The methodology employs a coupled photospectrometric assay using \gls{god} and \gls{hrp} with \textit{o}-dianisidine as reporter substrate. 
+The assay was prepared in \gls{mtp}-format. A reaction solution containing \SI{12.5}{U\per\milli\litre} \gls{god}, \SI{2.5}{U\per\milli\litre} \gls{hrp} and \SI{0.125}{\milli\gram\per\milli\litre} \textit{o}-dianisidine dihydrochloride in \SI{50}{mM} sodium acetate pH\,5.1 was prepared. \\
+Sample solutions from culture supernatants were typically diluted in 9\,volumes of water.
+The reaction was started, by adding \ul{50} reaction solution to \ul{25} of sample and was incubated at \degC{37} and 200\,rpm for 30\,min in a shaking incubator.
+\ul{50} 6\,M sulfuric acid was added to stop the reaction and achieve maximum color development (full oxidation of any \textit{o}-dianisidine charge transfer complexes). \\
+The developed pink color was measured at 540\,nm in a \gls{mtp}-reader.
+A calibration curve of a standard D-glucose solutions (0 to 100\,\si{\micro\gram\per\milli\litre}), that was always part of the experiments, was used to quantify the sample measurements.
 
 
+\framedfigure[label = fig:godassay]{
+  \begin{subfigure}{0.4\linewidth}\centering
+    \begin{tikzpicture}[node distance=2.5cm]\tiny
+     
+     \node (0,0) (a) {D-Glc + \newline \cf{O2} + \cf{H2O}};
+     \node [right of=a] (b) {gluconic acid + \cf{H2O2}};
+     \draw[->] (a) -- node[midway, above] {GOD} (b);
+		
+     \begin{scope}[nodes = {shape=rectangle, draw=none, below=1cm}]
+       \node 		at (a) (c) {\cf{H2O2} + \textit{o}-dianisidine};
+       \node        at (b) (d) {CTC};
+     \end{scope}
+     \draw[->] (c) -- node[midway,above] {HRP} (d);
+    
+     \begin{scope}[->, nodes = {shape=rectangle, draw=none, below = 2cm}]
+       \node 		at (a) (e) {CTC};
+       \node        at (b) (f) {ox. dianisidine};      
+     \end{scope}
+     \draw[->] (e) -- node[midway, above] {\cf{H2SO4}} (f);
 
+   \end{tikzpicture}
+  \end{subfigure}
+  \begin{subfigure}{0.4\linewidth}\centering
+    \setatomsep{2em}
+    \setarrowdefault{-90}
+	\schemestart
+    	\chemname{\chemfig[][scale=0.5]{*6((-H_2N)-(-OMe)=-(-*6(-=-(-NH_2)=(-OMe)-=))=-=)}}{diamine}\arrow{->[*{0}{-2\cf{e^-},2\cf{H^+}}]}
+	\chemname{\chemfig[][scale=0.5]{*6((-H_2N)-(-OMe)=-(-*6(-=-(-NH_2)=(-OMe)-=))=-=)}}{charge transfer complex}\arrow{<=>}
+	\chemname{\chemfig[][scale=0.5]{*6((=HN)-(-OMe)=-(-*6(-=-(=NH)-(-OMe)=-))-=--)}}{quinonediimine}
+    \schemestop
+      \end{subfigure}
+  
+}{GOD assay}
+
+\subsection{\glsentrytext{hplc} measurements}

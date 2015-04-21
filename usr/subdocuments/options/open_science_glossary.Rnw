@@ -14,6 +14,7 @@
 \newacronym{lcms}{LC/MS}{liquid chromatography coupled mass-spectrometry}
 \newacronym{hplc}{HPLC}{high-performance liquid chromatography}
 \newacronym{nmr}{NMR}{nuclear magnetic resonance}
+\newacronym{hrp}{HRP}{horseradish peroxidase}
 %\newacronym{pcr}{PCR}{polymerase chain reaction}
 % enzymes
 %newacronym{pfomt}{PFOMT}{phenylpropanoid and flavonoid O-methyl transferase}
@@ -105,4 +106,18 @@
         }
 }
 
+\newglossaryentry{god}{
+	type        = \acronymtype,
+	name        = GOD,
+	text        = GOD,
+	first       = glucose oxidase (GOD),
+	description = \glslink{godg}{glucose oxidase}
+}
+
+\newglossaryentry{godg}{
+	name        = \glslink{god}{GOD},
+	description = {
+		Glucose oxidase is an enzyme....
+        }
+}
 

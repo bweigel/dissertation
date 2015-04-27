@@ -4,6 +4,19 @@
 
 \chapter{Evaluation of PFOMT towards the acceptance of long-chain SAM analogues}
 
+\section{Introduction}
+
+\section{Substrate binding studies using \glsentrytext{itc}}
+
+\section{Determination of the structure of \emph{apo}-\glsentrytext{pfomt}}
+\subsection{\glsentrytext{pfomt} activity in \glsentryfirst{des} / Solubility-enhancing effects of \glsentrytext{des}}
+vielleicht eigenes kapitel DES?
+
+\section{Study of variants for long-chain alkylations}
+\subsection{\glsentrytext{pfomt}-Paper (DIM)}
+\subsection{Dockings???}
+
+\section{Colclusion/Discussion}
 
 
 

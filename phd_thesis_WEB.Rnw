@@ -165,7 +165,14 @@
 %%% Include MT whole cell screening section %%%
 %%%-------------------------------------------------%%%
 
-<<subdoc_content_discussion, child='usr/subdocuments/chapters/f_mtscreening_section.Rnw', eval=T>>=
+<<subdoc_content_results, child='usr/subdocuments/chapters/f_mtscreening_section.Rnw', eval=T>>=
+@
+
+%%%-------------------------------------------------%%%
+%%% Include DES section %%%
+%%%-------------------------------------------------%%%
+
+<<subdoc_content_results, child='usr/subdocuments/chapters/g_des_section.Rnw', eval=T>>=
 @
 
 %%%-------------------------------------------------%%%

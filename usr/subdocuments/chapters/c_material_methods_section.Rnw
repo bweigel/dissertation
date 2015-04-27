@@ -16,7 +16,7 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
 \subsection{Instruments}
 
 \begin{small}
-\begin{tabular}{p{0.35\textwidth}p{0.65\textwidth}}
+\begin{longtable}{p{0.35\textwidth}p{0.65\textwidth}}
   \gls{cd}-spectrometer & Jasco J-815 (Eaton, USA) \\
   electrophoresis (horizontal) & Biometra Compact XS/S (Göttingen, Germany)\\
   electrophoresis (vertical) & Biometra Compact M (Göttingen, Germany) \newline Biometra Minigel-Twin (Göttingen, Germany) \\
@@ -29,14 +29,14 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
   photospectrometer & Eppendorf Biophotometer Plus (Hamburg, Germany) \newline JASCO V-560 (Eaton, USA) \newline Colibri Microvolume Spectrometer (Biozym, Hess. Oldendorf, Germany) \\
   centrifuges & Eppendorf 5424 (Hamburg, Germany) \newline Hettich Mikro 120 (Kirchlengern, Germany) \newline Beckman Avanti J-E, Beckman Allegra X-30R (Krefeld, Germany)  \\
   centrifuge rotors & Beckman JA-10, JA-16.250, JS-4.3 (Krefeld, Germany)    
-\end{tabular}
+\end{longtable}
 \end{small}
 
 \subsection{Bacterial strains}
 
 \subsubsection{\textit{E.coli}}
-\begin{tabular}{p{0.3\textwidth}p{0.68\textwidth}}
-  BL21(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) \newline Invitrogen, Karslruhe \\
+\begin{longtable}{p{0.3\textwidth}p{0.68\textwidth}}
+  BL21(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) \newline Invitrogen, Karslruhe (Germany) \\
   C41(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) \newline Lucigen, Wisconsin (USA) \\
   C43(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3)\newline Lucigen, Wisconsin (USA) \\
   DH5$\alpha$ & F$^-$ $\Phi$80\textit{lacZ}$\Delta$M15 $\Delta$(\textit{lacZYA-argF}) U169 \textit{recA}1 \textit{endA}1 \textit{hsdR}17(r$_K^-$m$_K^+$) \textit{phoA supE}44 $\lambda^-$ \textit{thi}-1 \textit{gyrA}96 \textit{relA}1 \newline Invitrogen, Karlsruhe (Germany) \\
@@ -48,8 +48,8 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
   Rosetta(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) pRARE (Cam$^R$) \newline Novagen, Wisconsin (USA) \\
   Rosetta(DE3) pLysS & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) pLysSRARE (Cam$^R$) \newline Novagen, Wisconsin (USA) \\
   T7 Express & \textit{fhuA}2 \textit{lacZ::T}7 \textit{gene}1 \textit{[lon] ompT gal sulA}11 \textit{R}(\textit{mcr-}73\textit{::miniTn}10--Tet$^S$)2 \textit{[dcm] R}(\textit{zgb}-210\textit{::Tn}10--Tet$^S$) \textit{endA}1 $\Delta$(\textit{mcrC-mrr})114\textit{::IS}10 \newline NEB, Massachusetts (USA) \\
-  
-\end{tabular}
+\end{longtable}
+
 \subsubsection{\textit{Agrobacterium tumefaciens}}
 \begin{tabular}{p{0.2\textwidth}p{0.8\textwidth}}
 GV3101 & chromosomal background: C58, marker gene: \textit{rif}, \gls{tip}: cured, opine: nopaline \newline Sylvestre Marillonet, IPB \\  
@@ -127,6 +127,19 @@ The reaction mixture was placed in a thermocycler and inbcubated at \degC{37} fo
 
 %%%% protein biochemical methods
 \section{Protein biochemistry}
+Stock solutions of antibiotics, IPTG or sugars were generally prepared according to the pET System Manual by Novagen \citep{Novagen2011}.
+
+\subsection{Protein production test (Expression test)}
+The heterologous production of proteins in \eco was assessed in a small scale protein production test, henceforth called expression test.
+Single colonies of \eco transformed with the constructs to be studied were used to inoculate a 2\,ml starter culture in \gls{lb}-medium containing the appropriate antibiotics. 
+The concentrations of antiobiotics used was as follows:
+\ugperml{200} ampicillin, \ugperml{150} kanamycin, \ugperml{50} chloramphenicol, \ugperml{20} tetracycline. \\
+The starter culture was allowed to grow at \degC{37} and 200\,rpm over night.
+A 5\,ml sampling culture in the medium to be studied containing the appropriate antibiotics was prepared. The media tested included \gls{lb}, \gls{tb} and auto-induction media like \gls{zyp}.
+The sampling culture was inoculated to an \odx{600} of 0.075 using the starter culture and incubated at different temperatures and 200\,rpm in a shaking incubator.
+1\,mM \gls{iptg} was added when the \odx{600} reached 0.6-0.8, if appropriate for the studied construct.
+1\,ml samples were removed after different times of incubation (e.g. 4, 8, 12 hours), subfractionated and analyzed via \gls{sds}-\gls{page}.
+
 
 \subsection{Production of recombinant protein}
 \subsubsection{Heterologous production of \glsentrytext{pfomt}}

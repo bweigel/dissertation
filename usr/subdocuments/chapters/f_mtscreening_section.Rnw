@@ -4,6 +4,17 @@
 
 \chapter{Development of an whole cell methyl transferase screening system}
 
+\section{Introduction}
+
+\section{Theoretical considerations / design of system}
+
+\section{Detectability of \glsentryfirst{sah}}
+
+\gls{sam}
+
+\section{Usage of the lsr-promoter for true autoinduction}
+  
+\section{Conclusion/Discussion}
 
 
 

@@ -1,0 +1,15 @@
+%%%-------------------------------------------------%%%
+%%% Sub document DES %%%
+%%%-------------------------------------------------%%%
+
+\chapter{\glsentrytext{des} in protein crystallography}
+
+\section{Introduction}
+
+\section{Solubility enhancement of hydrophopbic substances by addition of \glsentrytext{des}}
+
+\section{Enzymatic \textit{O}-methylation in \glsentrytext{des}}
+
+\section{\glsentrytext{des} as precipitants in protein crystallization}
+
+\section{Conclusion/Discussion}

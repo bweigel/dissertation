@@ -15,16 +15,41 @@
 \newacronym{hplc}{HPLC}{high-performance liquid chromatography}
 \newacronym{nmr}{NMR}{nuclear magnetic resonance}
 \newacronym{hrp}{HRP}{horseradish peroxidase}
+\newacronym{hrms}{HRMS}{high resolution mass spectrometry}
+\newacronym{page}{PAGE}{polyacrylamid gel electrophoresis}
+\newacronym{sds}{SDS}{sodium dodecylsulfate}
+%\newacronym{sdspage}{sodium dodecylsulfate-polyacrylamid gel elecrtophoresis}%
 %\newacronym{pcr}{PCR}{polymerase chain reaction}
 % enzymes
 %newacronym{pfomt}{PFOMT}{phenylpropanoid and flavonoid O-methyl transferase}
 \newacronym{comt}{COMT}{catechol O-methyl transferase}
 \newacronym{somt}{SOMT-2}{soy O-methyl transferase}
-% misc
-
+%\newacronym{des}{DES}{deep eutectic solvent}
+% substances
+\newacronym{lb}{LB}{lysogeny broth}
+\newacronym{tb}{TB}{terrific broth}
+\newacronym{zyp}{ZYP-5052}{auto-induction medium}
+\newacronym{iptg}{IPTG}{isopropyl-\textsc{D}-thiogalactopyranosid}
 
 
 % start your declarations
+\newglossaryentry{sah}{
+  	type	= \acronymtype,
+        name	= SAH,
+        text	= SAH,
+        symbol	= SAH,
+        first	= \protect\textit{S}-adenosyl-textsc{L}-homocysteine (SAH),
+        description	= \textit{S}-adenosyl homocysteine%
+}
+
+\newglossaryentry{sam}{
+  	type	= \acronymtype,
+        name	= SAM,
+        text	= SAM,
+        symbol	= SAM,
+        first	= \textit{S}-adenosyl-\textsc{L}-methionine (SAM),
+        description	= \textit{S}-adenosyl-\textsc{L}-methionine%
+}
 
 \newglossaryentry{pcr}{
   	type	= \acronymtype,
@@ -33,6 +58,17 @@
         symbol	= PCR,
         first	= polymerase chain reaction (PCR),
         description	= polymerase chain reaction%
+}
+
+\newglossaryentry{des}{
+  	type	= \acronymtype,
+        name	= DES,
+        text	= DES,
+        symbol	= DES,
+        longplural	= deep eutectic solvents,
+        plural	= DES,
+        first	= deep eutectic solvent (DES),
+        description	= deep eutectic solvent%
 }
 
 \newglossaryentry{itc}{

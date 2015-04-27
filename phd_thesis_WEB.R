@@ -1,11 +1,8 @@
-
 ## ----glossary_definitions, child='usr/subdocuments/options/open_science_glossary.Rnw', eval=T----
 
 
 
-
 ## ----chunk_global_r_options, child='usr/subdocuments/options/ost_global_r_options.Rnw', eval=T----
-
 
 ## ----ost_global_r_options, tidy=FALSE, highlight=FALSE, include=FALSE, cache=FALSE, eval=TRUE----
   ## Load packages 
@@ -102,10 +99,7 @@
 
 
 
-
-
 ## ----subdoc_content_header, child='usr/subdocuments/chapters/x_header.Rnw', eval=T----
-
 
 
 
@@ -113,9 +107,7 @@
 
 
 
-
 ## ----subdoc_content_introduction, child='usr/subdocuments/chapters/b_introduction_section.Rnw', eval=T----
-
 
 
 
@@ -123,9 +115,7 @@
 
 
 
-
 ## ----subdoc_content_results, child='usr/subdocuments/chapters/d_pfomt_section.Rnw', eval=T----
-
 
 
 
@@ -133,9 +123,11 @@
 
 
 
+## ----subdoc_content_results, child='usr/subdocuments/chapters/f_mtscreening_section.Rnw', eval=T----
 
-## ----subdoc_content_discussion, child='usr/subdocuments/chapters/f_mtscreening_section.Rnw', eval=T----
 
+
+## ----subdoc_content_results, child='usr/subdocuments/chapters/g_des_section.Rnw', eval=T----
 
 
 
@@ -143,9 +135,7 @@
 
 
 
-
 ## ----subdoc_content_appendix, child='usr/subdocuments/chapters/x_appendix_section.Rnw', eval=T----
-
 
 ## ----test_plot_one_appendix, fig.width=3.415, fig.height=2.5, echo=FALSE----
    ggplot(movies, aes(x=rating)) +
@@ -153,10 +143,7 @@
    theme_ost() 
 
 
-
-
 ## ----subdoc_content_introduction, child='usr/subdocuments/chapters/x_affidavit_section.Rnw', eval=T----
-
 
 
 
@@ -164,9 +151,7 @@
 
 
 
-
 ## ----body_mainmatter_chapter_one, child='usr/subdocuments/chapters/x_glossaries_section.Rnw', eval=T----
-
 
 
 

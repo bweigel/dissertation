@@ -3,6 +3,20 @@
 %%%-------------------------------------------------%%%
 
 \chapter{Enzymatic methylation of Non-catechols}
-testing the \gls{hplc} and again the \gls{hplc}.
 
-Blöalala \gls{pfomt} and \gls{pfomt}
+\section{Introduction}
+Non-catechols in nature (biosynthesis, mode of action?), chemical methylation???
+
+\section{\glsentrytext{somt}}
+\subsection{In vivo methylation studies using \textit{N.\,benthamiana}}
+\subsection{In vivo studies in \textit{E.\,coli}}
+\subsection{In vitro studies using recombinantly produced \glsentrytext{somt}}
+
+\section{\glsentrytext{pfomt}}
+\subsection{Acidity and Nucleophilicity of phenolic hydroxyl-groups}
+\subsection{pH-Profiles of \glsentrytext{pfomt}-catalysis}
+\subsection{Influence of \cf{Mg^2+} on \glsentrytext{pfomt} activity}
+
+\section{Consensus or Bioinformatic points-of-view (\glsentrytext{comt})???}
+
+\section{Conclusion/Discussion}

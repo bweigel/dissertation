@@ -22,13 +22,12 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
   electrophoresis (vertical) & Biometra Compact M (Göttingen, Germany) \newline Biometra Minigel-Twin (Göttingen, Germany) \\
   \gls{fplc} & ÄKTA purifier (GE Healthcare, Freiburg, Germany) \\
   \gls{gcms} & GC-MS-QP2010 Ultra (Shimadzu, Duisburg, Germany)\\
-  \gls{hplc} & VWR ??? \\
+  \gls{hplc} & VWR-Hitachi LaChrom Elite (VWR, Darmstadt, Germany) \\
   \gls{itc} & MicroCal iTC200 (Malvern, Worcestershire, UK) \\
-  \gls{mtp} & ??? \\
   \gls{mtp}-reader & SpectraMax M5 (Molecular Devices, Biberach, Germany) \\
   \gls{nmr}-spectrometer & Varian Unity 400 (Agilent, Böblingen, Germany) \newline Varian VNMRS 600 (Agilent, Böblingen, Germany) \\
-  photospectrometer & Eppendorf Biophotometer Plus (Hamburg, Germany) \newline JASCO V-560 (Eaton, USA) \newline Nanodrop ??? \\
-  centrifuges & Eppendorf 5424 (Hamburg, Germany) \newline Hettich Mikro 120 (Kirchlengern, Germany) \newline Beckman Avanti J-E (Krefeld, Germany) \\
+  photospectrometer & Eppendorf Biophotometer Plus (Hamburg, Germany) \newline JASCO V-560 (Eaton, USA) \newline Colibri Microvolume Spectrometer (Biozym, Hess. Oldendorf, Germany) \\
+  centrifuges & Eppendorf 5424 (Hamburg, Germany) \newline Hettich Mikro 120 (Kirchlengern, Germany) \newline Beckman Avanti J-E, Beckman Allegra X-30R (Krefeld, Germany)  \\
   centrifuge rotors & Beckman JA-10, JA-16.250, JS-4.3 (Krefeld, Germany)    
 \end{tabular}
 \end{small}
@@ -136,7 +135,7 @@ The reaction mixture was placed in a thermocycler and inbcubated at \degC{37} fo
 %%%% analytical methods
 \section{Analytics}
 \subsection{In vitro determination of glucose}
-The glucose concentration in clarified, aqueous samples was determined by a modified version of the glucose assay kit procedure provided by Sigma-Aldrich \citep{Sigma-Aldrich}. \Gls{god} oxidizes D-glucose to gluconic acid, whereby hydrogen peroxide is produced. The hydrogen peroxide can be detected and quantified by \gls{hrp}, which reduces the produced \cf{H2O2} and thereby oxidizes its chromogenic substrate \textit{o}-dianisidine. The oxidized form of \textit{o}-dianisidine can then be measured photospectrometrically.\\
+The glucose concentration in clarified, aqueous samples was determined by a modified version of the glucose assay kit procedure provided by Sigma-Aldrich \citep{Sigma-Aldrich}. \Gls{god} oxidizes D-glucose to gluconic acid, whereby hydrogen peroxide is produced. The hydrogen peroxide can be detected and quantified by \gls{hrp}, which reduces the produced \cf{H2O2} and thereby oxidizes its chromogenic substrate \textit{o}-dianisidine. The oxidized form of \textit{o}-dianisidine can then be measured photospectrometrically \citep{Claiborne1979}.\\
 The methodology employs a coupled photospectrometric assay using \gls{god} and \gls{hrp} with \textit{o}-dianisidine as reporter substrate. 
 The assay was prepared in \gls{mtp}-format. A reaction solution containing \SI{12.5}{U\per\milli\litre} \gls{god}, \SI{2.5}{U\per\milli\litre} \gls{hrp} and \SI{0.125}{\milli\gram\per\milli\litre} \textit{o}-dianisidine dihydrochloride in \SI{50}{mM} sodium acetate pH\,5.1 was prepared. \\
 Sample solutions from culture supernatants were typically diluted in 9\,volumes of water.

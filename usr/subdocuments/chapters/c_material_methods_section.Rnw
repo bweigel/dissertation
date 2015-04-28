@@ -129,17 +129,50 @@ The reaction mixture was placed in a thermocycler and inbcubated at \degC{37} fo
 \section{Protein biochemistry}
 Stock solutions of antibiotics, IPTG or sugars were generally prepared according to the pET System Manual by Novagen \citep{Novagen2011}.
 
-\subsection{Protein production test (Expression test)}
+\subsection{Protein production test (expression test)}
 The heterologous production of proteins in \eco was assessed in a small scale protein production test, henceforth called expression test.
 Single colonies of \eco transformed with the constructs to be studied were used to inoculate a 2\,ml starter culture in \gls{lb}-medium containing the appropriate antibiotics. 
 The concentrations of antiobiotics used was as follows:
 \ugperml{200} ampicillin, \ugperml{150} kanamycin, \ugperml{50} chloramphenicol, \ugperml{20} tetracycline. \\
 The starter culture was allowed to grow at \degC{37} and 200\,rpm over night.
-A 5\,ml sampling culture in the medium to be studied containing the appropriate antibiotics was prepared. The media tested included \gls{lb}, \gls{tb} and auto-induction media like \gls{zyp}.
+A 5\,ml sampling culture of the medium to be studied containing the appropriate antibiotics was prepared. The media tested included \gls{lb}, \gls{tb} and auto-induction media like ZYP-5052.
 The sampling culture was inoculated to an \odx{600} of 0.075 using the starter culture and incubated at different temperatures and 200\,rpm in a shaking incubator.
 1\,mM \gls{iptg} was added when the \odx{600} reached 0.6-0.8, if appropriate for the studied construct.
-1\,ml samples were removed after different times of incubation (e.g. 4, 8, 12 hours), subfractionated and analyzed via \gls{sds}-\gls{page}.
+1\,ml samples were removed after different times of incubation (e.g. 4, 8, 12 hours), subfractionated (\ref{sec:subfractionation}) and analyzed via \gls{sds}-\gls{page} (\ref{sec:sdspage}).
 
+\subsection{Protein subfractionation}
+\label{sec:subfractionation}
+The protein subfractionation procedure described herein was adapted from the protocol described in the pET Manual \citep{Novagen2011}. 
+Overall 5 protein subfractions can be obtained, including \emph{total cell protein, culture supernatant (medium) protein, periplasmic protein, solube cytoplasmic protein} and \emph{insoluble protein}. \\
+The \odx{600} of the culture sample was measured and the cells harvested by centrifugation at \timesg{10000}, \degC{4} for 5\,minutes.
+The protein in the supernatant medium was concentrated by precipitation with \gls{tca} (\ref{sec:tcaprecipitation}) for \sdspage analysis.
+The periplasmic protein was prepared (\ref{sec:ppprep}) and also concentrated by \gls{tca} precipitation for \sdspage.
+Cells were lysed by resuspending the cell pellet in (\odx{600}$\times~\mathrm{V}~\times~50$)\,\si{\micro\litre} of \gls{bper} and vortexing vigorously for 30\,s. 
+The suspension was incubated at \gls{rt} for 30\,min to assure complete lysis. To separate insoluble protein and cell debris from the soluble cytosolic protein, the suspension was centrifuged at \timesg{10000} and \degC{4} for 10\,min.
+Soluble cytoplasmic protein was contained in the supernatant, whereas insoluble protein remained in the pellet. For \sdspage analysis of the insoluble protein, the pellet was resuspended in the same volume of \gls{bper}.
+To obtain only the total cell protein fraction, the preparation of periplasmic and soluble cytosolic protein was omitted. Sample volumes of \ul{10} of each fraction were used for \sdspage analysis.
+
+
+\subsection{Protein sample concentration by \glsentrytext{tca} precipitation}
+\label{sec:tcaprecipitation}
+Diluted protein samples were concetrated by \gls{tca} precipitation in microcentrifuge tubes.
+Therefore 0.1\,\gls{v} of 100\,\%~(w/v) \gls{tca} in water was added to the clarified sample, which was then vortexed for 15\,s and placed on ice for a minimum of 15\,min.
+The sample was centrifuged at \timesg{14000}, \degC{4} for 15\,min. The supernatant was discarded and the pellet was washed twice with 0.2\,\gls{v} ice-cold acetone.
+The acetone was removed and the pellet set to air-dry in an open tube.
+After drying, the protein pellet was resuspended in 0.1\,\gls{v} \gls{pbs} containing 1\,$\times$ \gls{sds}-sample buffer by heating to \degC{85} and vigorous vortexing, to achieve a 10\,$\times$ concentration.
+After resuspension the sample was analyzed by \sdspage or stored at \degC{-20} until use.
+
+\subsection{Preparation of periplasmic protein}
+\label{sec:ppprep}
+Target proteins may be directed to the periplasmic space by N-terminal signal sequences like \textit{pelB} or \textit{DsbA/C} \citep{Makrides1996}. The periplasma is, other than the cytosol, an oxidizing environment and often used for the production of proteins containing dilsufide linkages.
+The preparation of periplasmic protein was accomplished by an osmotic shock protocol modified from Current Protocols in Molecular Biology \citep{Ausubel2008}.\\
+The cell pellet was resuspended in the same volume as the culture sample of 30\,mM tris-HCl, 20\,\% (w/v) sucrose, pH\,8 and 1\,mM \gls{edta} was added. The suspension was stirred for 10\,min at \gls{rt} and the cells were collected by centrifugation at \timesg{10000}, \degC{4} for 10\,min.
+The supernatant was discarded and the cell pellet was resuspended in the same volume of ice-cold 5\,mM \cf{MgSO4}.
+The suspension was stirred for 10\,min on ice, while the periplasmic proteins were released into the solution.
+The cells were collected by centrifugation as before. Periplasmic proteins were contained in the supernatant.
+
+\subsection{Discontinous SDS-polyacrylamid gel electrophoresis (\glsentrytext{sds}-\glsentrytext{page})}
+\label{sec:sdspage}
 
 \subsection{Production of recombinant protein}
 \subsubsection{Heterologous production of \glsentrytext{pfomt}}

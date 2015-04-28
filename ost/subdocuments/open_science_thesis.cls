@@ -23,6 +23,10 @@
 
 \define@key[KV]{open-science-thesis}{language}{\PassOptionsToPackage{#1}{babel}}
 
+%% test
+%\define@boolkey[KV]{open-science-thesis}{listgroup}{\PassOptionsToPackage{#1}{glossaries}}
+%% test end
+
 \define@key[KV]{open-science-thesis}{style}{\PassOptionsToPackage{style = #1}{biblatex}}
 \define@key[KV]{open-science-thesis}{bibstyle}{\PassOptionsToPackage{bibstyle = #1}{biblatex}}
 \define@key[KV]{open-science-thesis}{citestyle}{\PassOptionsToPackage{citestyle = #1}{biblatex}}
@@ -2356,7 +2360,7 @@
 % \renewcommand\UrlFont{\color{ostColorURLLinks}\normalfont\normalsize}
 
 % Note: load glossaries always after hyperref!
-\RequirePackage[xindy, acronym, toc]{glossaries} 
+\RequirePackage[xindy, nopostdot, acronym, toc]{glossaries} 
 \RequirePackage{glossaries-babel}
 
 %package options
@@ -2364,6 +2368,7 @@
 % xindy        = use xindy indexer instead of mkindex
 % acronym      = make separate list for acronyms
 % toc          = entry to table of contents
+% nopostdot    = remove the dot after glossary description
 % nonumberlist = no page numbers in glossary
 
 % modify the gls link color

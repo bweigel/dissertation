@@ -18,6 +18,12 @@
 \newacronym{hrms}{HRMS}{high resolution mass spectrometry}
 \newacronym{page}{PAGE}{polyacrylamid gel electrophoresis}
 \newacronym{sds}{SDS}{sodium dodecylsulfate}
+\newacronym{edta}{EDTA}{ethylenediaminetetraacetic acid}
+\newacronym{rt}{RT}{room temperature}
+% units
+\newacronym[nonumberlist=true, firstplural={minutes (min)}, plural={min}]{min}{min}{minute}
+\newacronym[nonumberlist=true]{v}{V}{volume}
+\newacronym[nonumberlist]{bper}{B-PER}{bacterial protein extraction reagent}
 %\newacronym{sdspage}{sodium dodecylsulfate-polyacrylamid gel elecrtophoresis}%
 %\newacronym{pcr}{PCR}{polymerase chain reaction}
 % enzymes
@@ -30,9 +36,13 @@
 \newacronym{tb}{TB}{terrific broth}
 \newacronym{zyp}{ZYP-5052}{auto-induction medium}
 \newacronym{iptg}{IPTG}{isopropyl-\textsc{D}-thiogalactopyranosid}
+\newacronym{tca}{TCA}{trichloro acetic acid}
+\newacronym{pbs}{PBS}{phosphate buffered saline}
+
 
 
 % start your declarations
+
 \newglossaryentry{sah}{
   	type	= \acronymtype,
         name	= SAH,

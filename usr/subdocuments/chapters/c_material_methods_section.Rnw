@@ -7,7 +7,7 @@
 %%%% materials (chemicals, inbstrumenmts, software etc)
 \section{Materials}
 \subsection{Chemicals}
-Enzymes and buffers used for molecular cloning were obtained from Thermo Scientific (Darmstadt, Germany), unless otherwise noted. 
+Enzymes and buffers used for molecular cloning were obtained from Life Technologies (Darmstadt, Germany), unless otherwise noted. 
 Flavonoid HPLC standards were purchased from Extrasynthese (Genay, France). 
 Deuterated solvents were aquired from Deutero GmbH (Kastellaun, Germany). 
 Solvents, purchased from VWR (Poole, England), were distilled in-house before use. \\
@@ -171,8 +171,17 @@ The supernatant was discarded and the cell pellet was resuspended in the same vo
 The suspension was stirred for 10\,min on ice, while the periplasmic proteins were released into the solution.
 The cells were collected by centrifugation as before. Periplasmic proteins were contained in the supernatant.
 
-\subsection{Discontinous SDS-polyacrylamid gel electrophoresis (\glsentrytext{sds}-\glsentrytext{page})}
+\subsection{Discontinous SDS-polyacrylamide gel electrophoresis (\glsentrytext{sds}-\glsentrytext{page})}
 \label{sec:sdspage}
+
+The analysis of samples via \sdspage was realized via the discontinous system first described by Laemmli, which allows separation of proteins based on their electrophoretic mobility, which in turn depends on their size \citep{Laemmli1970}.\\
+The \sdspage procedure was carried out according to standard protocols described by Sambrook and Russell \citep{Sambrook2001}.
+Very dilute and/or samples with high ionic strength were concentrated and/or desalted by the \gls{tca} precipitation procedure described in \autoref{sec:tcaprecipitation}.
+Generally a 10\,\% (acrylamide/bisacrylamide) running gel combined with a 4\,\% stacking gel was used. Reducing \sdspage sample buffer was added to the protein sample to be analyzed, whereafter the sample was heated to \degC{95} for 5\,min, to allow for total unfolding of the protein.
+After cooling to \gls{rt} the samples were transferred into the gel pockets for analysis.
+The \emph{PageRuler Prestained Protein Ladder} (Life Technologies GmbH, Darmstadt, Germany) was used as a \gls{mw} marker and run alongside every analysis as a reference. 
+Gels were stained using a staining solution of 0.25\,\% Coomassie Brilliant Blue G-250 (w/v) in water:methanol:acetic acid (4:5:1) and destained by treatment with water:methanol:acetic acid (6:3:1). 
+
 
 \subsection{Production of recombinant protein}
 \subsubsection{Heterologous production of \glsentrytext{pfomt}}

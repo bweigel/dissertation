@@ -16,7 +16,7 @@
 \newacronym{nmr}{NMR}{nuclear magnetic resonance}
 \newacronym{hrp}{HRP}{horseradish peroxidase}
 \newacronym{hrms}{HRMS}{high resolution mass spectrometry}
-\newacronym{page}{PAGE}{polyacrylamid gel electrophoresis}
+\newacronym{page}{PAGE}{polyacrylamide gel electrophoresis}
 \newacronym{sds}{SDS}{sodium dodecylsulfate}
 \newacronym{edta}{EDTA}{ethylenediaminetetraacetic acid}
 \newacronym{rt}{RT}{room temperature}
@@ -38,6 +38,7 @@
 \newacronym{iptg}{IPTG}{isopropyl-\textsc{D}-thiogalactopyranosid}
 \newacronym{tca}{TCA}{trichloro acetic acid}
 \newacronym{pbs}{PBS}{phosphate buffered saline}
+\newacronym{mw}{MW}{molecular weight}
 
 
 

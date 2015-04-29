@@ -58,42 +58,48 @@ GV3101 & chromosomal background: C58, marker gene: \textit{rif}, \gls{tip}: cure
 
 \subsection{Plasmids}
 \ostTableEnv[label = tab:plasmids]{%
-  \begin{tabular}{p{0.2\textwidth}p{0.5\textwidth}}
+  \begin{tabularx}{\textwidth}{p{0.3\textwidth}X}
     \toprule
-	name & description \\ 
+	name & supplier/source \\ 
     \midrule
-    pACYC Duet-1 & .. \\
-    pCDF Duet-1 & .. \\
-    pET20b(+) & ... \\
-    pET28a(+) & .. \\
-    pET32a(+) & .. \\
-    pET41a(+) & .. \\
-    pQE30 & .. \\
-    pUC19 & .. \\
+    pACYCDuet-1 & Merck, Darmstadt (Germany)  \\
+    pCDFDuet-1 & Merck, Darmstadt (Germany) \\
+    pET-20b(+) & Merck, Darmstadt (Germany) \\
+    pET-28a(+) & Merck, Darmstadt (Germany) \\
+    pET-32a(+) & Merck, Darmstadt (Germany) \\
+    pET-41a(+) & Merck, Darmstadt (Germany) \\
+    pQE30 & QIAGEN, Hilden (Germany) \\
+    pUC19 & Invitrogen, Karslruhe (Germany) \\
+    pQU30-PFOMT & Thomas Vogt (\gls{ipb}, Halle, Germany) \\
     \bottomrule
-  \end{tabular}
+  \end{tabularx}
 }{%
 Plasmids used in this work.
 }
 
-\subsection{Oligonucleotides}
+\subsection{Oligonucleotides and synthetic genes}
 Oligonucleotides and primers were ordered from Eurofins Genomics (Ebersberg, Germany). The purity grade was \emph{high purity salt free} (HPSF).
+Synthetic genes or gene fragments were obtained from GeneArt (Life Technologies, Darmstadt, Germany) or Eurofins Genomics (Ebersberg, Germany).
 
 \ostTableEnv[label = tab:primers]{%
-  \begin{tabular}{p{0.15\textwidth}p{0.7\textwidth}p{0.15\textwidth}}
+  \begin{tabularx}{\textwidth}{X >{\footnotesize}p{0.70\textwidth} X}
     \toprule
     	name & sequence (5'$\rightarrow$3') & cloning site \\ 
     \midrule
 %    	T7 & TAATACGACTCACTATAGGGT & n/a \\
 %       T7.term & GCTAGTTATTGCTCAGCGGT & n/a \\
-        somt1 & TT\underline{GAAGAC}AAAATGGCTTCTTCATTAAACAATGGCCG & BpiI \\
-        somt2 & TT\underline{GAAGAC}AAGGACACCCCAAATACTGTGAGATCTTCC & BpiI \\
-        somt3 & TT\underline{GAAGAC}AAGTCCTTAGGAACACCTTTCTGGGAC & BpiI \\
-        somt4 & TT\underline{GAAGAC}AAAAGCTCAAGGATAGATCTCAATAAGAGAC & BpiI \\
+        somt1 & TT\underline{G AAG AC}A AAA TGG CTT CTT CAT TAA ACA ATG GCC G & BpiI \\
+        somt2 & TT\underline{G AAG AC}A AGG ACA CCC CAA ATA CTG TGA GAT CTT CC & BpiI \\
+        somt3 & TT\underline{G AAG AC}A AGT CCT TAG GAA CAC CTT TCT GGG AC  & BpiI \\
+        somt4 & TT\underline{G AAG AC}A AAA GCT CAA GGA TAG ATC TCA ATA AGA GAC & BpiI \\
+        pfomt1.fw & CAG AGA GGC cTA TGA GAT TGG CTT GC & \\
+        pfomt1.rv & GCA AGC CAA TCT CAT AgG CCT CTC TG & \\
+        pfomt2.fw & \underline{CAT ATG} GAT TTT GCT GTG ATG AAG CAG GTC & NdeI \\
+        pfomt2.rv & \underline{GAA TTC} AAT AAA GAC GCC TGC AGA AAG TG & EcoRI \\
     \bottomrule
-  \end{tabular}
+  \end{tabularx}
 }{%
-Primers used in this work. Recognition sites for endonucleases are underlined. 
+Primers used in this work. Recognition sites for endonucleases are underlined. Positions used for mutagenesis are in lower case font.
 }
 
 \subsection{Software}
@@ -118,16 +124,17 @@ For digestion/ligation reactions of fragments containing BpiI sites, 20\,fmol of
 For fragments to be cloned via BsaI sites, BpiI in the above reaction was substituted by 5\,U BsaI. \\
 The reaction mixture was placed in a thermocycler and inbcubated at \degC{37} for 2\,min and \degC{16} for 5\,min. These two first steps were repeated 50 times over. Finally, the temperature was raised to \degC{50} (5\,min) and \degC{80} (10\,min) to inactivate the enzymes.
 
-%\subsection{Polymerase chain reaction (\protect{\Gls{pcr}})}
-%\subsection{\Glsentryfirst{pcr}}
-%\Glssymbol{pcr} was performed using the \emph{KOD Hot Start DNA Polymerase} kit (Novagen, Wisconsin (USA)).
-%\cite{Sambrook2001}
+\subsection{Subcloning of \textit{pfomt}}
+The \textit{pfomt} gene was subcloned from the pQE-30 vector kindly provided by Thomas Vogt (\gls{ipb}, Halle, Germany) into the pET-28a(+) vector. 
+First an endogenous NdeI site was removed by site directed mutagenesis using primers \emph{pfomt1.fw} and \emph{pfomt1.rv}.
+The \textit{pfomt} gene was then amplified using oligonucleotides \emph{pfomt2.fw} and \emph{pfomt2.rv} and cloned into pET-28 employing the NdeI and EcoRI cloning sites. 
 
+\subsection{Subcloning og \textit{somt-2}}
 
 
 %%%% protein biochemical methods
 \section{Protein biochemistry}
-Stock solutions of antibiotics, IPTG or sugars were generally prepared according to the pET System Manual by Novagen \citep{Novagen2011}.
+Stock solutions of antibiotics, IPTG or sugars were prepared according to the pET System Manual by Novagen \citep{Novagen2011}, unless otherwise noted.
 
 \subsection{Protein production test (expression test)}
 The heterologous production of proteins in \eco was assessed in a small scale protein production test, henceforth called expression test.
@@ -138,7 +145,8 @@ The starter culture was allowed to grow at \degC{37} and 200\,rpm over night.
 A 5\,ml sampling culture of the medium to be studied containing the appropriate antibiotics was prepared. The media tested included \gls{lb}, \gls{tb} and auto-induction media like ZYP-5052.
 The sampling culture was inoculated to an \odx{600} of 0.075 using the starter culture and incubated at different temperatures and 200\,rpm in a shaking incubator.
 1\,mM \gls{iptg} was added when the \odx{600} reached 0.6-0.8, if appropriate for the studied construct.
-1\,ml samples were removed after different times of incubation (e.g. 4, 8, 12 hours), subfractionated (\ref{sec:subfractionation}) and analyzed via \gls{sds}-\gls{page} (\ref{sec:sdspage}).
+1\,ml samples were removed after different times of incubation (e.g. 4, 8, 12 hours), subfractionated (\ref{sec:subfractionation}) and analyzed via \gls{sds}-\gls{page} (\ref{sec:sdspage}).\\
+Exact specifications of growth conditions (e.g. temperature, time, constructs) are discussed in the individual sections.
 
 \subsection{Protein subfractionation}
 \label{sec:subfractionation}

@@ -39,6 +39,7 @@
 \newacronym{tca}{TCA}{trichloro acetic acid}
 \newacronym{pbs}{PBS}{phosphate buffered saline}
 \newacronym{mw}{MW}{molecular weight}
+\newacronym[nonumberlist]{ipb}{IPB}{Leibniz-Institute of Plant Biochemistry}
 
 
 

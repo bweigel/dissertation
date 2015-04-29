@@ -948,6 +948,7 @@
 \RequirePackage{overpic}
 \RequirePackage{tikz}
 \RequirePackage{subcaption} 
+\RequirePackage{rotating}
 
 % Load some tikz libraries
 \usetikzlibrary{spy,external,automata,patterns,shadows.blur,trees,mindmap,arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
@@ -1880,6 +1881,9 @@
 
 \define@key{ostTableEnv}{placement}{\renewcommand*\placement{#1}}
 \define@key{ostTableEnv}{label}{\renewcommand*\envlabel{#1}}
+
+%\define@key{ostTableEnv}{sidewaystable}{\renewcommand*\sidewaystable{#1}}  %for sidewaxystable
+
 \presetkeys{ostTableEnv}{placement = H, label = nolabel}{}%
 
 \providecommand\ostTableEnv[3][]{
@@ -1905,6 +1909,19 @@
   }
 \end{table*} 
 } 
+
+%% for sidewaystable
+\WithSuffix\providecommand\ostTableEnv|[3][]{
+\setkeys{ostTableEnv}{#1}
+\begin{sidewaystable}
+  \centering
+  \label{\envlabel}
+  \caption{#3}
+  {\small  
+    #2
+  }
+\end{sidewaystable} 
+}
 
 \lstnewenvironment{ostCodeEnv}[1][]{
   \vspace{.5em}

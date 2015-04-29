@@ -21,17 +21,15 @@
 
 \chapter{Tables}
 
-% {{{ table: tab:test_table_one
-\ostTableEnv[label = tab:test_table_one_appendix]{%
-  \begin{tabular}{p{0.055\textwidth}p{0.055\textwidth}p{0.055\textwidth}p{0.055\textwidth}p{0.055\textwidth}p{0.055\textwidth}p{0.055\textwidth}p{0.055\textwidth}p{0.055\textwidth}}
+%% Table of cloned constructs (appendix)
+\ostTableEnv|[label = tab:molecularcloning]{%
+  \begin{tabularx}{\textwidth}{l X X X X}
     \toprule
-    A & B & C & D & E & F & G & H & I\\ 
+    name & description & entry contruct & destination (e.g. vector) & workflow\\ 
     \midrule
-    1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9\\ 
-    1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9\\ 
-    1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9\\ 
+    pET28-pfomt & \textit{pfomt} gene in pET-28a(+) & pQE30-pfomt & pET-28a(+) & mutagenesis, PCR, cloning \\
     \bottomrule
-  \end{tabular}
+  \end{tabularx}
 }{%
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
 commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis

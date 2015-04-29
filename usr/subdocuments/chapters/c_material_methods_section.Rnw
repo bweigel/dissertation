@@ -96,15 +96,19 @@ Synthetic genes or gene fragments were obtained from GeneArt (Life Technologies,
         pfomt1.rv & GCA AGC CAA TCT CAT AgG CCT CTC TG & \\
         pfomt2.fw & \underline{CAT ATG} GAT TTT GCT GTG ATG AAG CAG GTC & NdeI \\
         pfomt2.rv & \underline{GAA TTC} AAT AAA GAC GCC TGC AGA AAG TG & EcoRI \\
+        pRha1.fw & CTC TAG C\underline{AG ATC T}CG GTG AGC ATC ACA TCA CCA CAA TTC & BglII \\
+        pRha1.rv & CAA TTG A\underline{GG ATC C}CC ATT TTA ACC TCC TTA GTG & BamHI \\
+        pUC1.fw & GCG TAT TGG Gag aTC TTC CGC TTC CTC & \\
+        pUC1.rv & GAG GAA GCG GAA GAt ctC CCA ATA CGC & \\
     \bottomrule
   \end{tabularx}
 }{%
-Primers used in this work. Recognition sites for endonucleases are underlined. Positions used for mutagenesis are in lower case font.
+Primers used in this work. Recognition sites for endonucleases are underlined. Positions used for site directed mutagenesis are in lower case font.
 }
 
 \subsection{Software}
-All mathematical and statistical computations and graphics were done with the \verb+R+ software (versions 3.1.X, \url{http://cran.r-project.org/}). Visualizations of macromolecules were arranged using the PyMol Molecular Graphics System, version 1.7.0.0 (Schrödinger, New York (USA)).\\
-Physicochemical calculations and calculations of different molecular descriptors were performed using Marvin Beans 15.4.13.0 (ChemAxon, Budapest (Hungary)) and Molecular Operating Environment 2008.10 (Chemical Computing Group, Montreal (Canada)).
+All mathematical and statistical computations and graphics were done with the \verb+R+ software (versions 3.1.X, \url{http://cran.r-project.org/}). Visualizations of macromolecules were arranged using the PyMol Molecular Graphics System, version 1.7.0.0 (Schrödinger, New York, USA).\\
+Physicochemical calculations and calculations of different molecular descriptors were performed using Marvin Beans 15.4.13.0 (ChemAxon, Budapest, Hungary) and Molecular Operating Environment 2008.10 (Chemical Computing Group, Montreal, Canada).
 
 %%%% Microbiologicyl Methods
 \section{Microbiology}
@@ -113,7 +117,7 @@ Physicochemical calculations and calculations of different molecular descriptors
 %%%% Molecular Biology methods
 \section{Molecular Biology}
 Basic molecular biology methods like \gls{pcr}, DNA restriction/ligation, DNA gel electrophoresis, preparation of competent cells and transformation were performed based on the protocols summarized by Sambrook and Russell \citep{Sambrook2001}.\\
-Plasmid DNA was isolated using the QIAprep Spin Miniprep Kit (QIAGEN, Hilden (Germany)) according to the manufacturer's instructions. \\
+Plasmid DNA was isolated using the QIAprep Spin Miniprep Kit (QIAGEN, Hilden, Germany) according to the manufacturer's instructions. \\
 In vitro site-directed mutatgenesis was set-up according to the protocol of the \emph{QuikChange Site-Directed Mutagenesis} kit \cite{Technologies} offered by Agilent Technologies (Santa Clara, USA). \\
 Nucleotide fragments obtained by \gls{pcr}, restriction/ligation procedures or excision from electrophoresis gels were purified and concentrated using the \emph{Nucleospin Gel and PCR Clean-up} kit provided by Machery-Nagel (Düren, Germany) according to the instructions provided by the manufacturer.
 

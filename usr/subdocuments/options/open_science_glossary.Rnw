@@ -20,6 +20,7 @@
 \newacronym{sds}{SDS}{sodium dodecylsulfate}
 \newacronym{edta}{EDTA}{ethylenediaminetetraacetic acid}
 \newacronym{rt}{RT}{room temperature}
+\newacronym{aic}{AIC}{affinity interaction chromatography}
 % units
 \newacronym[nonumberlist=true, firstplural={minutes (min)}, plural={min}]{min}{min}{minute}
 \newacronym[nonumberlist=true]{v}{V}{volume}
@@ -38,6 +39,7 @@
 \newacronym{iptg}{IPTG}{isopropyl-\textsc{D}-thiogalactopyranosid}
 \newacronym{tca}{TCA}{trichloro acetic acid}
 \newacronym{pbs}{PBS}{phosphate buffered saline}
+\newacronym{nta}{NTA}{nitrilo triacetic acid}
 \newacronym{mw}{MW}{molecular weight}
 \newacronym[nonumberlist]{ipb}{IPB}{Leibniz-Institute of Plant Biochemistry}
 

@@ -55,6 +55,6 @@
     \bottomrule
   \end{tabularx}
 }{%
-Overview over the contructs produced for the present thesis. In the workflow steps column, each step during the production of the construct is given. In parenthesis the primers (italic font) or restriction sites used during each step are given.
+Overview over the contructs produced for the present thesis. Each step during the production of the construct is given in the workflow steps column. Primers (italic font) or restriction sites used during each step are displayed in parenthesis.
 }
 % }}}

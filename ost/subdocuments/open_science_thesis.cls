@@ -1041,6 +1041,7 @@
 
 %% Tables over multiple pages %%
 \RequirePackage{longtable}
+\RequirePackage{ltablex}
 
 %%%-------------------------------------------------%%%
 %%% Multi column documents %%%
@@ -1882,8 +1883,6 @@
 \define@key{ostTableEnv}{placement}{\renewcommand*\placement{#1}}
 \define@key{ostTableEnv}{label}{\renewcommand*\envlabel{#1}}
 
-%\define@key{ostTableEnv}{sidewaystable}{\renewcommand*\sidewaystable{#1}}  %for sidewaxystable
-
 \presetkeys{ostTableEnv}{placement = H, label = nolabel}{}%
 
 \providecommand\ostTableEnv[3][]{
@@ -1922,6 +1921,7 @@
   }
 \end{sidewaystable} 
 }
+
 
 \lstnewenvironment{ostCodeEnv}[1][]{
   \vspace{.5em}

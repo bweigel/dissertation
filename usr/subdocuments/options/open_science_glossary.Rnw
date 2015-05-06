@@ -7,15 +7,15 @@
 \makeglossaries
 
 % analytics
-\newacronym{gc}{GC}{gas chromatography}
-\newacronym{cd}{CD}{circulary dichroism}
-\newacronym{fplc}{FPLC}{fast protein liquid chromatography}
-\newacronym{gcms}{GC/MS}{gas chromatography coupled mass-spectrometry}
-\newacronym{lcms}{LC/MS}{liquid chromatography coupled mass-spectrometry}
-\newacronym{hplc}{HPLC}{high-performance liquid chromatography}
-\newacronym{nmr}{NMR}{nuclear magnetic resonance}
+\newacronym[symbol=GC]{gc}{GC}{gas chromatography}
+\newacronym[symbol=CD]{cd}{CD}{circulary dichroism}
+\newacronym[symbol=FPLC]{fplc}{FPLC}{fast protein liquid chromatography}
+\newacronym[symbol=GC/MS]{gcms}{GC/MS}{gas chromatography coupled mass-spectrometry}
+\newacronym[symbol=LC/MS]{lcms}{LC/MS}{liquid chromatography coupled mass-spectrometry}
+\newacronym[symbol=HPLC]{hplc}{HPLC}{high-performance liquid chromatography}
+\newacronym[symbol=NMR]{nmr}{NMR}{nuclear magnetic resonance}
 \newacronym{hrp}{HRP}{horseradish peroxidase}
-\newacronym{hrms}{HRMS}{high resolution mass spectrometry}
+\newacronym[symbol=HRMS]{hrms}{HRMS}{high resolution mass spectrometry}
 \newacronym{page}{PAGE}{polyacrylamide gel electrophoresis}
 \newacronym{sds}{SDS}{sodium dodecylsulfate}
 \newacronym{edta}{EDTA}{ethylenediaminetetraacetic acid}
@@ -35,17 +35,36 @@
 % substances
 \newacronym{lb}{LB}{lysogeny broth}
 \newacronym{tb}{TB}{terrific broth}
-\newacronym{zyp}{ZYP-5052}{auto-induction medium}
+\newacronym[plural={inclusion bodies}]{ib}{IBs}{inclusion bodies}
+\newacronym{mmt}{MMT}{Mes/malate/Tris}
+\newacronym{ssg}{SSG}{succinate/sodium phosphate/glycine}
 \newacronym{iptg}{IPTG}{isopropyl-\textsc{D}-thiogalactopyranosid}
 \newacronym{tca}{TCA}{trichloro acetic acid}
 \newacronym{pbs}{PBS}{phosphate buffered saline}
 \newacronym{nta}{NTA}{nitrilo triacetic acid}
 \newacronym{mw}{MW}{molecular weight}
 \newacronym[nonumberlist]{ipb}{IPB}{Leibniz-Institute of Plant Biochemistry}
-
+\newacronym[nonumberlist]{cv}{CV}{column volumes}
 
 
 % start your declarations
+\newglossaryentry{zyp}{
+  type	=	\acronymtype,
+  name	=	ZYP,
+  text	=	ZYP-5052,
+  symbol=	ZYP,
+  first	=	{N-\emph{Z}-amine, \emph{y}east extract, \emph{p}hosphate (ZYP-5052)},
+% description = {N-Z-amine, yeast extract, phosphate}%
+%  description = {N-\emph{Z}-amine, \emph{y}east extract, \emph{p}hosphate}
+  description = \glslink{zypg}{N-\protect\emph{Z}-amine, \protect\emph{y}east extract, \protect\emph{p}hosphate}%
+}
+
+\newglossaryentry{zypg}{
+   name	=	\glslink{zyp}{ZYP-5052},
+   description = {%
+     Autoinduction medium developed by Studier \citep{Studier2005}. The naming stems from the components N-\protect\emph{Z}-amine, \protect\emph{y}east extract and \protect\emph{p}hosphate. The numbering designates the composition; e.g. 5052 refers to 0.5\,\% glycerol, 0.05\,\% glucose and 0.2\,\% lactose.
+   }
+}
 
 \newglossaryentry{sah}{
   	type	= \acronymtype,
@@ -89,6 +108,7 @@
 	type        = \acronymtype,
 	name        = ITC,
 	text        = ITC,
+        symbol	    = Isothermal Titration Calorimetry,
 	first       = Isothermal Titration Calorimetry (ITC),
 %	see         = [see also]{itc},
 	description = \glslink{itcg}{Isothermal Titration Calorimetry}
@@ -114,7 +134,7 @@
 \newglossaryentry{pfomtg}{
 	name        = \glslink{pfomt}{PFOMT},
 	description = {
-		Phenylpropanoid and flavonoid O-methyl transferase from \textit{Mesembryanthemum crystallinum}, which was first described by Ibdah et al. in 2003 \citep{Ibdah2003b}%
+		Phenylpropanoid and flavonoid O-methyl transferase from \textit{Mesembryanthemum crystallinum}, which was first described by Ibdah et al. in 2003 \citep{Ibdah2003}%
         }
 }
 

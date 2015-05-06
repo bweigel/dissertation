@@ -13,29 +13,35 @@ Deuterated solvents were aquired from Deutero GmbH (Kastellaun, Germany).
 Solvents, purchased from VWR (Poole, England), were distilled in-house before use. \\
 All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany), Applichem (Darmstadt, Germany), Carl Roth (Karlsruhe, Germany) or Merck (Darmstadt, Germany).
 
-\subsection{Instruments}
+\subsection{Commonly used solutions and buffers}
+Percentages refer to weight per volume (w/v) percentages unless otherwise specified.
 
-\begin{small}
-\begin{longtable}{p{0.35\textwidth}p{0.65\textwidth}}
-  \gls{cd}-spectrometer & Jasco J-815 (Eaton, USA) \\
-  electrophoresis (horizontal) & Biometra Compact XS/S (Göttingen, Germany)\\
-  electrophoresis (vertical) & Biometra Compact M (Göttingen, Germany) \newline Biometra Minigel-Twin (Göttingen, Germany) \\
-  \gls{fplc} & ÄKTA purifier (GE Healthcare, Freiburg, Germany) \\
-  \gls{gcms} & GC-MS-QP2010 Ultra (Shimadzu, Duisburg, Germany)\\
-  \gls{hplc} & VWR-Hitachi LaChrom Elite (VWR, Darmstadt, Germany) \\
-  \gls{itc} & MicroCal iTC200 (Malvern, Worcestershire, UK) \\
-  \gls{mtp}-reader & SpectraMax M5 (Molecular Devices, Biberach, Germany) \\
-  \gls{nmr}-spectrometer & Varian Unity 400 (Agilent, Böblingen, Germany) \newline Varian VNMRS 600 (Agilent, Böblingen, Germany) \\
-  photospectrometer & Eppendorf Biophotometer Plus (Hamburg, Germany) \newline JASCO V-560 (Eaton, USA) \newline Colibri Microvolume Spectrometer (Biozym, Hess. Oldendorf, Germany) \\
-  centrifuges & Eppendorf 5424 (Hamburg, Germany) \newline Hettich Mikro 120 (Kirchlengern, Germany) \newline Beckman Avanti J-E, Beckman Allegra X-30R (Krefeld, Germany)  \\
-  centrifuge rotors & Beckman JA-10, JA-16.250, JS-4.3 (Krefeld, Germany)    
-\end{longtable}
-\end{small}
+\begin{lstTabularx}{\linewidth}{>{\small}p{0.25\textwidth}<{\small}X}
+  lysis buffer & 50\,mM Tris/HCl, 500\,mM NaCl, 10\,\% (v/v) glycerol, 2.5\,mM imidazole, 0.2\,\% Tween-20 pH 7\\
+  binding buffer & 50\,mM Tris/HCl, 500\,mM NaCl, 10\,\% (v/v) glycerol, 2.5\,mM imidazole pH 7\\
+  elution buffer & 50\,mM Tris/HCl, 500\,mM NaCl, 10\,\% (v/v) glycerol, 250\,mM imidazole pH 7 \\
+  50$\times$5052 & 25\,\% (v/v) glycerol, 2.5\,\% glucose, 10\,\% \textalpha-lactose \\
+  20$\times$NPS & 1\,M \cf{Na2HPO4}, 1\,M \cf{KH2PO4}, 0.5\,M \cf{(NH4)2SO4} \\
+  ZY & \SI{10}{\g\per\l} tryptone, \SI{5}{\g\per\l} yeast extract \\ 
+  1000$\times$ trace elements & 50\,mM \cf{FeCl3}, 20\,mM \cf{CaCl2}, 10\,mM \cf{MnCl2}, 10\,mM \cf{ZnSO4}, 2\,mM \cf{CoCl2}, 2\,mM \cf{CuCl2}, 2\,mM \cf{NiCl2}, 2\,mM \cf{Na2MoO4}, 2\,mM \cf{Na2SeO3}, 2\,mM \cf{H3BO3} \\
+  
+\end{lstTabularx}
 
+
+\subsection{Culture media used to grow bacteria}
+
+\begin{lstTabularx}{\linewidth}{>{\small}p{0.25\textwidth}<{\small}X}
+  LB-medium & \SI{10}{\g\per\l} NaCl, \SI{10}{\g\per\l} tryptone, \SI{5}{\g\per\l} yeast extract, pH 7.5 \\
+  LB-agar & LB + 1.5\,\% (w/v) agar-agar \\ 
+  TB-medium & \SI{12}{\g\per\l} tryptone, \SI{24}{\g\per\l} yeaxst extract, 0.4\,\% (v/v) glycerol, 72\,mM \cf{K2HPO4}, 17\,mM \cf{KH2PO4}\\
+  ZYP-5052 & 0.928\,\glsentryfirst{v} 20$\times$NPS, 0.02\,V 50$\times$5052, 0.002\,V 1\,M \cf{MgSO4}, 0.0002\,V 1000$\times$ trace elements\\
+\end{lstTabularx}
+
+  
 \subsection{Bacterial strains}
 
 \subsubsection{\textit{E.coli}}
-\begin{longtable}{p{0.3\textwidth}p{0.68\textwidth}}
+\begin{lstTabularx}{\linewidth}{>{\small}p{0.25\textwidth}<{\small}X}
   BL21(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) \newline Invitrogen, Karslruhe (Germany) \\
   C41(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) \newline Lucigen, Wisconsin (USA) \\
   C43(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3)\newline Lucigen, Wisconsin (USA) \\
@@ -48,12 +54,12 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
   Rosetta(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) pRARE (Cam$^R$) \newline Novagen, Wisconsin (USA) \\
   Rosetta(DE3) pLysS & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) pLysSRARE (Cam$^R$) \newline Novagen, Wisconsin (USA) \\
   T7 Express & \textit{fhuA}2 \textit{lacZ::T}7 \textit{gene}1 \textit{[lon] ompT gal sulA}11 \textit{R}(\textit{mcr-}73\textit{::miniTn}10--Tet$^S$)2 \textit{[dcm] R}(\textit{zgb}-210\textit{::Tn}10--Tet$^S$) \textit{endA}1 $\Delta$(\textit{mcrC-mrr})114\textit{::IS}10 \newline NEB, Massachusetts (USA) \\
-\end{longtable}
+\end{lstTabularx}
 
 \subsubsection{\textit{Agrobacterium tumefaciens}}
-\begin{tabular}{p{0.2\textwidth}p{0.8\textwidth}}
+\begin{lstTabularx}{\linewidth}{>{\small}p{0.25\textwidth}<{\small}X}
 GV3101 & chromosomal background: C58, marker gene: \textit{rif}, \gls{tip}: cured, opine: nopaline \newline Sylvestre Marillonet, IPB \\  
-\end{tabular}
+\end{lstTabularx}
 
 
 \subsection{Plasmids}
@@ -70,7 +76,7 @@ GV3101 & chromosomal background: C58, marker gene: \textit{rif}, \gls{tip}: cure
     pET-41a(+) & Merck, Darmstadt (Germany) \\
     pQE30 & QIAGEN, Hilden (Germany) \\
     pUC19 & Invitrogen, Karslruhe (Germany) \\
-    pQU30-PFOMT & Thomas Vogt (\gls{ipb}, Halle, Germany) \\
+    pQE30-PFOMT & Thomas Vogt (\gls{ipb}, Halle, Germany) \\
     \bottomrule
   \end{tabularx}
 }{%
@@ -105,6 +111,25 @@ Synthetic genes or gene fragments were obtained from GeneArt (Life Technologies,
 }{%
 Primers used in this work. Recognition sites for endonucleases are underlined. Positions used for site directed mutagenesis are in lower case font.
 }
+
+\subsection{Instruments}
+
+%\begin{small}
+\begin{tabularx}{\linewidth}{>{\small}p{0.3\textwidth}>{\small}X}
+  \glssymbol{cd}-spectrometer & Jasco J-815 (Eaton, USA) \\
+  electrophoresis (horizontal) & Biometra Compact XS/S (Göttingen, Germany)\\
+  electrophoresis (vertical) & Biometra Compact M (Göttingen, Germany) \newline Biometra Minigel-Twin (Göttingen, Germany) \\
+  \glsentrytext{fplc} & ÄKTA purifier (GE Healthcare, Freiburg, Germany) \\
+  \glsentrytext{gcms} & GC-MS-QP2010 Ultra (Shimadzu, Duisburg, Germany)\\
+  \glsentrytext{hplc} & VWR-Hitachi LaChrom Elite (VWR, Darmstadt, Germany) \\
+  \glsentrytext{itc} & MicroCal iTC200 (Malvern, Worcestershire, UK) \\
+  plate-reader & SpectraMax M5 (Molecular Devices, Biberach, Germany) \\
+  \glsentrytext{nmr}-spectrometer & Varian Unity 400 (Agilent, Böblingen, Germany) \newline Varian VNMRS 600 (Agilent, Böblingen, Germany) \\
+  photospectrometer & Eppendorf Biophotometer Plus (Hamburg, Germany) \newline JASCO V-560 (Eaton, USA) \newline Colibri Microvolume Spectrometer (Biozym, Hess. Oldendorf, Germany) \\
+  centrifuges & Eppendorf 5424 (Hamburg, Germany) \newline Hettich Mikro 120 (Kirchlengern, Germany) \newline Beckman Avanti J-E, Beckman Allegra X-30R (Krefeld, Germany)  \\
+  centrifuge rotors & Beckman JA-10, JA-16.250, JS-4.3 (Krefeld, Germany)    
+\end{tabularx}
+%\end{small}
 
 \subsection{Software}
 All mathematical and statistical computations and graphics were done with the \verb+R+ software (versions 3.1.X, \url{http://cran.r-project.org/}). Visualizations of macromolecules were arranged using the PyMol Molecular Graphics System, version 1.7.0.0 (Schrödinger, New York, USA).\\
@@ -201,7 +226,7 @@ Gels were stained using a staining solution of 0.25\,\% Coomassie Brilliant Blue
 
 \subsection{Production of recombinant protein}
 \subsubsection{Heterologous production of \glsentrytext{pfomt}}
-\gls{pfomt} was produced as a N-terminally (His)$_6$-tagged fusion protein.
+\Gls{pfomt} was produced as a N-terminally (His)$_6$-tagged fusion protein.
 A 2\,ml starter culture of \gls{lb} containing \ugperml{100} kanamycin was inoculated with a single colony of \eco BL21(DE3) transformed with pET28-pfomt and incubated at \degC{37}, 220\,rpm for 6\,hours.
 The main culture (\gls{zyp} containing \ugperml{150} kanamycin) was inoculated with the starter culture such that \odx{600} was 0.05.
 The culture was incubated in a shaking incubator at \degC{37}, 220\,rpm over night ($\approx$16\,h).
@@ -212,11 +237,21 @@ The cells were lysed by sonication (70\,\% amplitude, 1\,s on-off-cycle) for 30\
 The crude lysate was clarified by centrifugation at \timesg{15000}, \degC{4} for 15\,minutes followed by filtration through a \SI{0.45}{\micro\metre} filter.
 Consequently, the His-tagged \gls{pfomt} was purified by \gls{aic}.
 
+\subsubsection{Heterologous production of \glsentrytext{somt}}
+\Gls{somt} 
+
+\subsection{Preparation of \glsentryfirst{ib}}
+
 \subsection{Purification of His-tagged proteins using \glsentryfirst{aic}}
 \label{sec:aic}
 N- or C-terminal oligo-histidine tags (His-tags) are a common tool to ease purification of recombinantly produced proteins.
 The free electron pairs of the imidazol nitrogens of the histidines can complex divalent cations such as \cf{Mg^2+} or \cf{Ni^2+}, which are usually immobilized on a matrix of \gls{nta}-derivatives.
-The affinity of the His-tag is correlated with its length and tagged proteins can simply be eluted by increasing the concentration of competing molecules (e.g. imidazole).
+The affinity of the His-tag is correlated with its length and tagged proteins can simply be eluted by increasing the concentration of competing molecules (e.g. imidazole). \\
+His-tagged protein was purified by \gls{fplc} via \cf{Ni^2+}- (HisTrap FF crude)  or \cf{Co^2+}-NTA (HiTrap Talon FF crude) columns, obtained from GE Healthcare (Freiburg, Germany), following modified suppliers instructions.
+First the column was equilibrated with 5\,\gls{cv} of binding buffer (50\,mM Tris/HCl, 500\,mM NaCl, 10\,\% (v/v) glycerol, 2.5\,mM imidazole pH 7).
+The sample (generally clarified lysate) was applied to the column using a flow of \SI{0.75}{\milli\litre\per\minute}. Unound protein was removed by washing with 3\,\gls{cv} binding buffer.
+Unspecifically bound proteins were washed away by increasing the amount of elution buffer (50\,mM Tris/HCl, 500\,mM NaCl, 10\,\% (v/v) glycerol, 250\,mM imidazole pH 7) to 10\,\% (constant for 3 to 5\,\gls{cv}). 
+Highly enriched and purified target protein was eluted with 6 to 10\,\gls{cv} of 100\,\% elution buffer. 
 
 
 %%%% analytical methods

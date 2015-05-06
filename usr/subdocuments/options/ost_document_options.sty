@@ -92,6 +92,24 @@
 %% Example:
 
 % \newenvironment{name}[number of parameters]{definition begin}{definition end}
+%% Definition for pseudotable environment
+\usepackage[euler]{textgreek}
+\usepackage{environ}
+
+\NewEnviron{lstTabularx}[3][1.1]{
+  {%
+    \renewcommand*{\arraystretch}{#1}
+    \begin{tabularx}{#2}{#3}
+      \BODY
+    \end{tabularx}%
+  }
+}
+%% \newenvironment{lstTabularx}[1][1.2]{%
+%%   \renewcommand*{\arraystretch}{#1}
+%%   \tabularx%
+%% }{%
+%%   \endtabularx
+%% }
 
 %%%-------------------------------------------------%%%
 %%% Set title page contents %%%
@@ -174,14 +192,6 @@
 %%% Set PDF options %%%
 %%%-------------------------------------------------%%%
 
-%% Example:
-%  \hypersetup{%
-%   pdfauthor={Your-Name},
-%   pdfcreator={Your-Name},
-%   pdfsubject={Subject},
-%   pdfkeywords={Keyword1, Keyword2, ...}
-%  }
-
   \hypersetup{%
    pdfauthor={Weigel, Benjamin},
    pdfcreator={Weigel, Benjamin},
@@ -232,3 +242,13 @@ firstinits=false%
 % and add a new one with the path to the new file. 
 
 \addbibresource{usr/subdocuments/bibliography/phd_thesis.bib}
+
+%%%-------------------------------------------------%%%
+%%% Caption Spacing options %%%
+%%%-------------------------------------------------%%%
+\captionsetup[table]{belowskip=0pt, aboveskip=0pt}
+
+%%%-------------------------------------------------%%%
+%%% siunitx setup options %%%
+%%%-------------------------------------------------%%%
+\sisetup{per-mode=symbol}

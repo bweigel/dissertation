@@ -28,6 +28,22 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
   \addtocounter{table}{-1} 
 \end{lstTabularx}
 
+\subsubsection{Preparation of \glsentryfirst{des}}
+
+\Gls{des} were prepared by adding each component in a round-bottom flask with a stirrer and stirring the mixture at \degC{50} with intermittent sonication treatments until a clear solution was obtained.
+
+ \ostTableEnv[label=tab:des]{%
+   \begin{tabularx}{\linewidth}{X p{0.3\textwidth} X p{0.3\textwidth}}
+   \toprule
+   name & composition & mole ratio & mass fraction (w/w) \\
+   \midrule
+   PCH & propane-1,2-diol \newline choline chloride \newline water & 1:1:1 &  0.326 \newline 0.597 \newline 0.077 \\
+   GCH & \textsc{D}-glucose \newline choline chloride \newline water & 2:5:5 & 0.314 \newline 0.608 \newline 0.078 \\
+   \bottomrule
+ \end{tabularx}
+ }{%
+   \gls{nades}-mixtures
+ }
 
 \subsection{Culture media used to grow bacteria}
 
@@ -265,7 +281,7 @@ Centrifugal concentrators were used according to the manufacturers instructions.
 \subsubsection{Heterologous production of \glsentrytext{pfomt}}
 \Gls{pfomt} was produced as a N-terminally (His)$_6$-tagged fusion protein.
 A 2\,ml starter culture of \gls{lb} containing \ugperml{100} kanamycin was inoculated with a single colony of \eco BL21(DE3) transformed with pET28-pfomt and incubated at \degC{37}, 220\,rpm for 6\,hours.
-The main culture (\gls{zyp} containing \ugperml{150} kanamycin) was inoculated with the starter culture such that \odx{600} was 0.05.
+The main culture (\gls{zyp} containing \ugperml{200} kanamycin) was inoculated with the starter culture such that \odx{600} was 0.05.
 The culture was incubated in a shaking incubator at \degC{37}, 220\,rpm over night ($\approx$16\,h).
 Due to the autoinducing nature of the \gls{zyp} medium, addition of \gls{iptg} was not neccesary.
 Cells were harvested by centrifugation at \timesg{10000}, \degC{4} for 10\,min and the supernatant discarded.
@@ -283,14 +299,25 @@ The culture was incubated at \degC{37}, 220\,rpm in a shaking incubator until \o
 Expression was induced by addition of 1\,mM \gls{iptg}.
 Incubation continued at \degC{37}, 220\,rpm for 6 hours.
 Cells were harvested by centrifugation (\timesg{10000}, \degC{4}, 10\,min) and used, or stored at \degC{-20} until use.
-\Gls{somt} was produced only in \glspl{ib}, which were prepared as laid out in \autoref{sec:ibprep}.
+\Gls{somt} was produced in \glspl{ib}, which were prepared as laid out in \autoref{sec:ibprep}.
 
-\subsection{Preparation of \glsentrytext{ib}}
+\subsection{Preparation of \glsentryfirst{ib}}
 \label{sec:ibprep}
-When insoluble protein is produced in large amounts in \eco it is accumulated in so-called \glsentryfirst{ib}. 
+Often, when recombinant protein is produced in high levels in \eco it is accumulated in so-called \glsentryfirst{ib}. 
 The accumulating \glspl{ib} consist mainly of the overproduced target protein, which is inherently quite pure already.
-\Glspl{ib} can be prepared \bweigel{complete}
-\citep{Palmer2012}
+\Glspl{ib} can be selectively recovered from \eco cell lysates and can consequently be refolded. 
+\Glspl{ib} were prepared according to a modified protocol by Palmer \citep{Palmer2012}. \\
+The cells were resusupended in 5\,ml/$\mathrm{g_{cells}}$ IB lysis buffer (100\,mM \gls{tris}/HCl, 5\,mM \gls{edta}, 5\,mM \gls{dtt} pH\,7) and 5\,mM benzamidine was added as protease inhibitor.
+The solution was homogenized using a tissue grinder homogenizer.
+\ugperml{200} lysozyme was added to aid in the breakage of cells and the cells were lysed by sonicating thrice at 70\,\% amplitude (1\,s on-off-cycle) for 30 seconds.
+The lysate was clarified by centrifuging for 1\,h at \timesg{20000}, \degC{4}.
+The supernatant was discarded and the pellet was resuspended in 5\,ml/$\mathrm{g_{cells}}$ IB wash buffer (100\,mM \gls{tris}/HCl, 5\,mM \gls{edta}, 5\,mM \gls{dtt}, 2\,M urea, 2\,\% (w/v) Triton X-100 pH\,7), followed by thorough homogenization.
+The solution was centrifuged (30\,min at \timesg{20000}, \degC{4}), the supernatant discarded and the pellet was washed twice more.
+To remove detergent, the pellet was washed twice again. However, for this step the Triton X-100 was omitted from the IB-wash buffer.
+The \glspl{ib} were resuspended in extraction buffer (100\,mM \gls{tris}/HCl, 5\,mM \gls{edta}, 5\,mM \gls{dtt}, 8\,M \gls{gua} pH\,7) and stored at \degC{-20} until use.
+
+
+
 
 \subsection{Purification of His-tagged proteins using \glsentryfirst{imac}}
 \label{sec:imac}
@@ -303,6 +330,37 @@ The sample (generally clarified lysate) was applied to the column using a flow o
 Unspecifically bound proteins were washed away by increasing the amount of elution buffer (50\,mM \gls{tris}/HCl, 500\,mM NaCl, 10\,\% glycerol, 250\,mM imidazole pH 7) to 10\,\% (constant for 3 to 5\,\gls{cv}). 
 Highly enriched and purified target protein was eluted with 6 to 10\,\gls{cv} of 100\,\% elution buffer. 
 
+\section{Crystallographic Procedures}
+
+\subsection{Crystallization of proteins}
+
+Commercially available crystallization screens were used to find initial crystallization conditions.
+The tested screens included kits available from Hampton Research (Aliso Viejo, USA) and Jena Bioscience (Jena, Germany).
+Crystallization screens were processed in 96-well \glspl{mtp}, where each well possessed 4 subwells aligned in a 2$\times$2 matrix. The subwells were divided into 3 shallow wells for sitting drop vapour diffusion experimental setups and a fourth subwell, which was deep enough to act as buffer reservoir.
+This way the performance of each crystallization buffer could be assessed using three different protein solutions with varying concentrations, effectors etc.
+A pipetting robot (Cartesian Microsys, Zinsser-Analystik; Frankfurt, Germany) was used to mix \SI{200}{\nano\litre} of each, protein and buffer solution, for a final volume of \SI{400}{\nano\litre}.
+The crystallization preparations were incubated at \degC{16} and the progress of the experiment was documented by an automated imaging-system (Desktop Minstrel UV, Rigaku Europe, Kent, UK).
+Furthermore, fine screens (e.g. for refinement of crystallization conditions) were set up by hand in 24-well \glspl{mtp} using the hanging drop vapour diffusion method.
+
+\subsubsection{\glsentrytext{pfomt}}
+\Gls{pfomt} protein was concentrated to \SIrange{6}{8}{\mg\per\ml} and rebuffered to 10\,mM \gls{tris}/HCl pH 7.5 using Amicon\textsuperscript{\textregistered} Ultracel centrifugal concentrators (10\,kDa \gls{mwco}).
+The concentrated protein solution was centrifuged at \timesg{14000}, \degC{4} for 10\,min to remove any insoluble material or aggregates.
+Crystallization screens were set up as described above. \\
+\Gls{pfomt} was crystallized using the following conditions \bweigel{nochma genau guckn}  2\,M \cf{(NH4)2SO4}, 20\,\%glycerol. The protein solution contained 0.25\,mM \gls{sah}, 0.25\,mM \cf{MgCl2}, 0.25\,mM ferulic acid and \SI{7.53}{\mg\per\ml} \gls{pfomt}.
+
+\subsection{Data collection and processing}
+Crystallographic data were collected at the beamline of the group of Professor Stubbs (\gls{mlu}, Halle, Germany). 
+The rotating anode X-ray source MicroMax007 (Rigaku/MSC, Tokio, Japan) had a maximum power of \SI{0.8}{\kilo\watt} (\SI{40}{\kilo\volt}, \SI{20}{\milli\ampere}) and supplied monochromatic \cf{Cu}-K\textsubscript{\textalpha}-radiation with a wavelength of 1.5418\,\AA.
+Diffraction patterns were detected with a Saturn 944+ detector (CCD++, Rigaku/MSC, Tokio, Japan). \\
+Indexing and integration of the reflexes via Fourier transformation was accomplished using \emph{XDS} \citep{Kabsch2010,Kabsch1993,Kabsch2010a} or \emph{MOSFLM} \citep{Powell1999}.
+\emph{Scala} \citep{Evans2006}, which is integrated in the CCP4-Suite (Collaborative Computational Project, 1994), was used for scaling of the intensities.
+
+
+\subsection{Structure solution}
+
+\subsection{Model building, refinement and visualization}
+
+\subsection{\textit{In silico} substrate docking}
 
 %%%% analytical methods
 \section{Analytics}
@@ -318,46 +376,35 @@ A calibration curve of a standard D-glucose solutions (0 to 100\,\si{\micro\gram
 
 
 \framedfigure[label = fig:godassay]{
-  \begin{subfigure}{0.4\linewidth}\centering
-    \begin{tikzpicture}[node distance=2.5cm]\tiny
-     
-     \node (0,0) (a) {D-Glc + \newline \cf{O2} + \cf{H2O}};
-     \node [right of=a] (b) {gluconic acid + \cf{H2O2}};
-     \draw[->] (a) -- node[midway, above] {GOD} (b);
-		
-     \begin{scope}[nodes = {shape=rectangle, draw=none, below=1cm}]
-       \node 		at (a) (c) {\cf{H2O2} + \textit{o}-dianisidine};
-       \node        at (b) (d) {CTC};
-     \end{scope}
-     \draw[->] (c) -- node[midway,above] {HRP} (d);
-    
-     \begin{scope}[->, nodes = {shape=rectangle, draw=none, below = 2cm}]
-       \node 		at (a) (e) {CTC};
-       \node        at (b) (f) {ox. dianisidine};      
-     \end{scope}
-     \draw[->] (e) -- node[midway, above] {\cf{H2SO4}} (f);
-
-   \end{tikzpicture}
+  \begin{subfigure}{0.3\linewidth}\centering
+    \begin{chemEnv}[0.5]
+      \schemestart
+      D-Glc\arrow{-y>[\chemfig{O_2}, \chemfig{H_2O}][\chemfig{H_2O_2}][GOD]}[,1.5]gluconic acid 
+      \arrow(@c1.south east--.north east){0}[-90,.7]
+      o-dianisidine\arrow{-y>[\chemfig{H_2O_2}][\chemfig{2 H_2O}][HRP]}[,1.5]CTC 
+      \arrow(@c3.south east--.north east){0}[-90,.7]
+      CTC\arrow{->[][\chemfig{H_2SO_4}]}[,1.5]diimine 
+      \schemestop
+ \end{chemEnv}
   \end{subfigure}
-  \begin{subfigure}{0.4\linewidth}\centering
-    \setatomsep{2em}
-    \setarrowdefault{-90}
-	\schemestart
-    	\chemname{\chemfig[][scale=0.5]{*6((-H_2N)-(-OMe)=-(-*6(-=-(-NH_2)=(-OMe)-=))=-=)}}{diamine}\arrow{->[*{0}{-2\cf{e^-},2\cf{H^+}}]}
-	\chemname{\chemfig[][scale=0.5]{*6((-H_2N)-(-OMe)=-(-*6(-=-(-NH_2)=(-OMe)-=))=-=)}}{charge transfer complex}\arrow{<=>}
-	\chemname{\chemfig[][scale=0.5]{*6((=HN)-(-OMe)=-(-*6(-=-(=NH)-(-OMe)=-))-=--)}}{quinonediimine}
+  \begin{subfigure}{0.6\linewidth}\centering
+    \begin{chemEnv}[0.75]
+      \setarrowdefault{-90}
+      \schemestart
+    	\Mchemname{\chemfig[][scale=1]{*6((-H_2N)-(-OMe)=-(-*6(-=-(-NH_2)=(-OMe)-=))=-=)}}{\textbf{diamine}}\arrow{->[*{0}{-2\cf{e^-},2\cf{H^+}}]}
+    	\chemleft[
+	  \Mchemname{\subscheme{
+	      \chemfig[]{*6((-H_2N)-(-OMe)=-(-*6(-=-(-NH_2)=(-OMe)-=))=-=)}\arrow{0}[0,0.1]
+              \chemfig[]{*6((=HN)-(-OMe)=-(-*6(-=-(=NH)-(-OMe)=-))-=--)}    
+          }}{Charge transfer complex}\chemright]
+        \arrow{<=>}
+	\Mchemname{\chemfig[]{*6((=HN)-(-OMe)=-(-*6(-=-(=NH)-(-OMe)=-))-=--)}}{quinonediimine}
     \schemestop
-      \end{subfigure}
+    \end{chemEnv}
+  \end{subfigure}
   
 }{GOD assay}
 
-\begin{chemEnv}[0.75]
-      \setarrowdefault{-90}
-	\schemestart
-    	\chemname{\chemfig[]{*6((-H_2N)-(-OMe)=-(-*6(-=-(-NH_2)=(-OMe)-=))=-=)}}{diamine}\arrow{->[*{0}{-2\cf{e^-},2\cf{H^+}}]}
-	\chemname{\chemfig[]{*6((-H_2N)-(-OMe)=-(-*6(-=-(-NH_2)=(-OMe)-=))=-=)}}{charge transfer complex}\arrow{<=>}
-	\chemname{\chemfig[]{*6((=HN)-(-OMe)=-(-*6(-=-(=NH)-(-OMe)=-))-=--)}}{quinonediimine}
-    \schemestop
-\end{chemEnv}
+
 
 \subsection{\glsentrytext{hplc} measurements}

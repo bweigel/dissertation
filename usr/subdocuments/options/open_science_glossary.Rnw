@@ -31,7 +31,8 @@
 %newacronym{pfomt}{PFOMT}{phenylpropanoid and flavonoid O-methyl transferase}
 \newacronym{comt}{COMT}{catechol O-methyl transferase}
 \newacronym{somt}{SOMT-2}{soy O-methyl transferase}
-%\newacronym{des}{DES}{deep eutectic solvent}
+%\newacronym{des}{DES}{deep eutectic solvent, see also \gls{nades}}
+\newacronym[first={NADES}]{nades}{NADES}{natural deep eutectic solvent}
 % substances
 \newacronym{lb}{LB}{lysogeny broth}
 \newacronym{tb}{TB}{terrific broth}
@@ -47,11 +48,17 @@
 \newacronym[nonumberlist]{ipb}{IPB}{Leibniz-Institute of Plant Biochemistry}
 \newacronym[nonumberlist]{cv}{CV}{column volumes}
 \newacronym[nonumberlist]{tris}{Tris}{tris(hydroxymethyl)-aminomethane}
+\newacronym[first={GdmCl}, nonumberlist]{gua}{GdmCl}{guanidinium hydrochloride}
 \newacronym[nonumberlist]{mes}{MES}{2-(\textit{N}-morpholino)ethanesulfonic acid}
 \newacronym[nonumberlist]{nps}{NPS}{nitrogen, phosphate, sulfate buffer}
 \newacronym[nonumberlist]{hepes}{HEPES}{2-[4-(2-hydroxyethyl)piperazin-1-yl]ethanesulfonic acid}
-
-
+\newacronym[first={DTT}, nonumberlist]{dtt}{DTT}{dithiothreitol; (2\textit{S},3\textit{S})-1,4-bis(sulfanyl)butane-2,3-diol}
+\newacronym[nonumberlist]{pmsf}{PMSF}{phenylmethylsulfonylfluoride}
+\newacronym[first={GCH}]{pch}{PCH}{propane-1,2-diol/choline chloride,\gls{nades}-mixture}
+\newacronym[first={GCH}]{gch}{GCH}{\textsc{D}-glucose/choline chloride,\gls{nades}-mixture}
+\newacronym[nonumberlist, first={MWCO}]{mwco}{MWCO}{molecular weight cut-off}
+\newacronym[first={\textit{S}-adenosyl-\textsc{L}-ethionine (SAE)}]{sae}{SAE}{\textit{S}-adenosyl-\textsc{L}-ethionine, (2\textit{S})-2-amino-4-[[(2\textit{S},3\textit{S},4\textit{R},5\textit{R})-5-(6-aminopurin-9-yl)-3,4-dihydroxyoxolan-2-yl]methyl-ethylsulfonio]butanoat}
+\newacronym[first={MLU}, nonumberlist]{mlu}{MLU}{Martin-Luther-Universität}
 
 
 % start your declarations
@@ -78,8 +85,9 @@
         name	= SAH,
         text	= SAH,
         symbol	= SAH,
-        first	= \protect\textit{S}-adenosyl-textsc{L}-homocysteine (SAH),
-        description	= \textit{S}-adenosyl homocysteine%
+        first   = {\protect\textit{S}-adenosyl-\protect\textsc{L}-homocysteine (SAH)},
+        %first	= {\textit{S}-adenosyl-\textsc{L}-homocysteine (SAH)},
+        description	= {\textit{S}-adenosyl-\textsc{L}-homocysteine}%
 }
 
 \newglossaryentry{sam}{
@@ -107,8 +115,8 @@
         symbol	= DES,
         longplural	= deep eutectic solvents,
         plural	= DES,
-        first	= deep eutectic solvent (DES),
-        description	= deep eutectic solvent%
+        first	= deep eutectic solvents (DES),
+        description	= {deep eutectic solvent, see also \gls{nades}}%
 }
 
 \newglossaryentry{itc}{

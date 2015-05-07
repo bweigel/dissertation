@@ -115,11 +115,27 @@
     \setatomsep{6mm}
     \setbondstyle{line width=0.8pt, black}
     \setdoublesep{2pt}
+    \def\x{%
+	    \BODY
+    }
     \scalebox{#1}{%
-      \BODY
+    	\begin{minipage}{\linewidth}
+    		\x  
+    	\end{minipage}
     }
   }
 }
+
+%% \NewEnviron{chemEnv}[1][1]{
+%%   {%
+%%     \setatomsep{6mm}
+%%     \setbondstyle{line width=0.8pt, black}
+%%     \setdoublesep{2pt}
+%%     \scalebox{#1}{%
+%%       \BODY
+%%     }
+%%   }
+%% }
 
 %% \newenvironment{lstTabularx}[1][1.2]{%
 %%   \renewcommand*{\arraystretch}{#1}
@@ -268,10 +284,57 @@ firstinits=false%
 %%%-------------------------------------------------%%%
 %%% siunitx setup options %%%
 %%%-------------------------------------------------%%%
-\sisetup{per-mode=symbol}
+\sisetup{%
+  per-mode=symbol,
+  fixed-exponent=3,
+  list-units=brackets,
+  range-units=brackets,
+  %scientific-notation=fixed
+}
 
 %%%-------------------------------------------------%%%
 %%% chemfig print style options %%%
 %%%-------------------------------------------------%%%
 %\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}} %uncomment for sf font
 
+\newcommand{\Mchemname}[3][black]{%
+\chemname{#2}{\textbf{\textcolor{#1}{#3}}}
+}
+
+\makeatletter
+% define an arrow type `-y>' that takes 6 optional arguments
+% \arrow{-y>[<label arc start>]%
+%           [<label arc end>]%
+%           [<label below>]%
+%           [<arrow shift>]%
+%           [<ratio arc radius/arrow length>]% default: 0.333
+%           [<half of angle of arc>]% default: 60
+\definearrow{6}{-y>}{%
+    % shift the arrow:
+    \CF@arrow@shift@nodes{#4}%
+    % draw main arrow:
+    \expandafter\draw\expandafter[\CF@arrow@current@style,-CF@full]
+      (\CF@arrow@start@node)--(\CF@arrow@end@node)node[midway](yarrow@arctangent){};%
+    % draw first half of arc if label #1 is given:
+    \edef\CF@tmp@str{\ifx\@empty#1\@empty[draw=none]\fi}%
+    \expandafter\draw\CF@tmp@str (yarrow@arctangent)%
+        arc[
+          radius=\CF@compound@sep*\CF@current@arrow@length*\ifx\@empty#5\@empty0.333\else#5\fi,
+          start angle=\CF@arrow@current@angle-90,
+          delta angle=-\ifx\@empty#6\@empty60\else#6\fi]
+        node(yarrow@start){};
+    % draw second half of arrow if label #2 is given:
+    \edef\CF@tmp@str{[\ifx\@empty#2\@empty draw=none,\fi-CF@full]}%
+    \expandafter\draw\CF@tmp@str (yarrow@arctangent)%
+        arc[
+          radius=\CF@compound@sep*\CF@current@arrow@length*\ifx\@empty#5\@empty0.333\else#5\fi,
+          start angle=\CF@arrow@current@angle-90,%
+          delta angle=\ifx\@empty#6\@empty60\else#6\fi]
+        node(yarrow@end){};
+    \edef\CF@tmp@str{\if\string-\expandafter\@car\detokenize{#4.}\@nil-\else+\fi}%
+    % place labels #1 and #2:
+    \CF@arrow@display@label{#1}{0}\CF@tmp@str{yarrow@start}{#2}{1}\CF@tmp@str{yarrow@end}%
+    % place label #3:
+    \CF@arrow@display@label{#3}{0.5}-\CF@arrow@start@node{}{}{}\CF@arrow@end@node
+}
+\makeatother

@@ -26,7 +26,7 @@
   \scriptsize
   \begin{tabularx}{\textwidth}{l p{0.35\textwidth} p{0.1\textwidth} l X}
     \toprule
-    name & description & entry contructs & destination & workflow steps (primers/cloning sites)\\ 
+    construct name & description & entry constructs & destination & workflow steps (primers/cloning sites)\\ 
     \midrule
     pBEW101 & & & & \\
     pBEW102 & lsrA promoter & & & \\

@@ -35,16 +35,23 @@
 % substances
 \newacronym{lb}{LB}{lysogeny broth}
 \newacronym{tb}{TB}{terrific broth}
-\newacronym[plural={inclusion bodies}]{ib}{IBs}{inclusion bodies}
-\newacronym{mmt}{MMT}{Mes/malate/Tris}
+\newacronym[first={inlusion bodies (IBs)}, plural={IBs}, longplural={inclusion bodies}]{ib}{IB}{inclusion body}
+\newacronym{mmt}{MMT}{\textsc{L}-malic acid/\glslink{mes}{MES}/\glslink{tris}{Tris}}
 \newacronym{ssg}{SSG}{succinate/sodium phosphate/glycine}
 \newacronym{iptg}{IPTG}{isopropyl-\textsc{D}-thiogalactopyranosid}
 \newacronym{tca}{TCA}{trichloro acetic acid}
 \newacronym{pbs}{PBS}{phosphate buffered saline}
 \newacronym{nta}{NTA}{nitrilo triacetic acid}
 \newacronym{mw}{MW}{molecular weight}
+\newacronym[nonumberlist]{imac}{IMAC}{immobilized metal affinity chromatography}
 \newacronym[nonumberlist]{ipb}{IPB}{Leibniz-Institute of Plant Biochemistry}
 \newacronym[nonumberlist]{cv}{CV}{column volumes}
+\newacronym[nonumberlist]{tris}{Tris}{tris(hydroxymethyl)-aminomethane}
+\newacronym[nonumberlist]{mes}{MES}{2-(\textit{N}-morpholino)ethanesulfonic acid}
+\newacronym[nonumberlist]{nps}{NPS}{nitrogen, phosphate, sulfate buffer}
+\newacronym[nonumberlist]{hepes}{HEPES}{2-[4-(2-hydroxyethyl)piperazin-1-yl]ethanesulfonic acid}
+
+
 
 
 % start your declarations

@@ -99,11 +99,28 @@
 \NewEnviron{lstTabularx}[3][1.1]{
   {%
     \renewcommand*{\arraystretch}{#1}
+    {\small
     \begin{tabularx}{#2}{#3}
+   %   \label{#4} \\
+   %   \caption{#5} \\ 
       \BODY
     \end{tabularx}%
+    }
   }
 }
+\keepXColumns %uncomment to enable conversion of X to l typesetting, when space allows
+
+\NewEnviron{chemEnv}[1][1]{
+  {%
+    \setatomsep{6mm}
+    \setbondstyle{line width=0.8pt, black}
+    \setdoublesep{2pt}
+    \scalebox{#1}{%
+      \BODY
+    }
+  }
+}
+
 %% \newenvironment{lstTabularx}[1][1.2]{%
 %%   \renewcommand*{\arraystretch}{#1}
 %%   \tabularx%
@@ -252,3 +269,9 @@ firstinits=false%
 %%% siunitx setup options %%%
 %%%-------------------------------------------------%%%
 \sisetup{per-mode=symbol}
+
+%%%-------------------------------------------------%%%
+%%% chemfig print style options %%%
+%%%-------------------------------------------------%%%
+%\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}} %uncomment for sf font
+

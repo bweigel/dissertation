@@ -1922,6 +1922,18 @@
 \end{sidewaystable} 
 }
 
+%% for longtable
+\WithSuffix\providecommand\ostTableEnv+[5][]{
+\setkeys{ostTableEnv}{#1}
+\begin{tabularx}{#2}{#3}
+%  \centering
+  \label{\envlabel} \\
+  \caption{#5} \\
+  {\small  
+    #4
+  }
+\end{tabularx} 
+}
 
 \lstnewenvironment{ostCodeEnv}[1][]{
   \vspace{.5em}
@@ -2374,7 +2386,8 @@
 %  \nolinkurl{URL}
 
 % To change the font of URLs use this one
-% \renewcommand\UrlFont{\color{ostColorURLLinks}\normalfont\normalsize}
+%\renewcommand\UrlFont{\color{ostColorURLLinks}\slshape\ttfamily\small}
+\renewcommand\UrlFont{\color{ostColorURLLinks}\slshape}
 
 % Note: load glossaries always after hyperref!
 \RequirePackage[xindy, nopostdot, acronym, toc]{glossaries} 

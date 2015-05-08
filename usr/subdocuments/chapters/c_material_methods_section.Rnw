@@ -177,8 +177,9 @@ Primers used in this work. Recognition sites for endonucleases are underlined. P
 %\end{small}
 
 \subsection{Software}
-All mathematical and statistical computations and graphics were done with the \verb+R+ software (versions 3.1.X, \url{http://cran.r-project.org/}). Visualizations of macromolecules were arranged using the PyMol Molecular Graphics System, version 1.7.0.0 (Schrödinger, New York, USA).\\
+All mathematical and statistical computations and graphics were done with the \verb+R+ software (versions 3.1.X, \url{http://cran.r-project.org/}) \citep{RCoreTeam2015}. Visualizations of macromolecules were arranged using the PyMol Molecular Graphics System, version 1.7.0.0 (Schrödinger, New York, USA).\\
 Physicochemical calculations and calculations of different molecular descriptors were performed using Marvin Beans 15.4.13.0 (ChemAxon, Budapest, Hungary) and Molecular Operating Environment 2008.10 (Chemical Computing Group, Montreal, Canada).
+Special software used for X-ray crystal structure solution is discussed seperately in the corresponding section (\ref{sec:xraymethods}).
 
 %%%% Microbiologicyl Methods
 \section{Microbiology}
@@ -331,6 +332,7 @@ Unspecifically bound proteins were washed away by increasing the amount of eluti
 Highly enriched and purified target protein was eluted with 6 to 10\,\gls{cv} of 100\,\% elution buffer. 
 
 \section{Crystallographic Procedures}
+\label{sec:xraymethods}
 
 \subsection{Crystallization of proteins}
 
@@ -348,19 +350,42 @@ The concentrated protein solution was centrifuged at \timesg{14000}, \degC{4} fo
 Crystallization screens were set up as described above. \\
 \Gls{pfomt} was crystallized using the following conditions \bweigel{nochma genau guckn}  2\,M \cf{(NH4)2SO4}, 20\,\%glycerol. The protein solution contained 0.25\,mM \gls{sah}, 0.25\,mM \cf{MgCl2}, 0.25\,mM ferulic acid and \SI{7.53}{\mg\per\ml} \gls{pfomt}.
 
+\bweigel{add DES crystallization}
+
 \subsection{Data collection and processing}
 Crystallographic data were collected at the beamline of the group of Professor Stubbs (\gls{mlu}, Halle, Germany). 
-The rotating anode X-ray source MicroMax007 (Rigaku/MSC, Tokio, Japan) had a maximum power of \SI{0.8}{\kilo\watt} (\SI{40}{\kilo\volt}, \SI{20}{\milli\ampere}) and supplied monochromatic \cf{Cu}-K\textsubscript{\textalpha}-radiation with a wavelength of 1.5418\,\AA.
+The beamline was equipped with a rotating anode X-ray source MicroMax007 (Rigaku/MSC, Tokio, Japan), which had a maximum power of \SI{0.8}{\kilo\watt} (\SI{40}{\kilo\volt}, \SI{20}{\milli\ampere}) and supplied monochromatic \cf{Cu}-K\textsubscript{\textalpha}-radiation with a wavelength of 1.5418\,\gls{a}.
 Diffraction patterns were detected with a Saturn 944+ detector (CCD++, Rigaku/MSC, Tokio, Japan). \\
 Indexing and integration of the reflexes via Fourier transformation was accomplished using \emph{XDS} \citep{Kabsch2010,Kabsch1993,Kabsch2010a} or \emph{MOSFLM} \citep{Powell1999}.
-\emph{Scala} \citep{Evans2006}, which is integrated in the CCP4-Suite (Collaborative Computational Project, 1994), was used for scaling of the intensities.
+\emph{Scala} \citep{Evans2006}, which is integrated in the \gls{ccp4}-Suite, was used for scaling of the intensities.
 
 
 \subsection{Structure solution}
+For the determination of the electron density $\rho(\textrm{\textbf{r}})$, where \textbf{r} is the positional vector, from the diffraction images by Fourier transformation two terms are neccessary as coefficients; the \emph{structure factor amplitudes}, $F_{\mathrm{obs}}(\mathrm{\textbf{h}}$) and the \emph{phase angles} or \emph{phases}, $\alpha\mathrm{(\textbf{h})}$, where \textbf{h} is the reciprocal index vector.
+The structure factor amplitudes can be directly determined from the measured and corrected diffraction intensities of each spot.
+However, the phase information is lost during the detection of the diffracted photons and there is no direct way to determine the phases.
+This constitutes the so-called \emph{phase problem}.
+Thus, additional phasing experiments are necessary in order to obtain the phases.
+A variety of phasing experiments are available, which include \emph{marker atom substructure methods}, \emph{density modification} and \emph{\gls{mr}} techniques \citep{Rupp2009}.
+Phases of the structures herein were exclusively determined by \gls{mr} \citep{Rossmann1962,Rossmann2001}. \\
+\Gls{mr} was performed using the software \emph{Phaser} \citep{McCoy2007,McCoy2007a}, which is included in the \gls{ccp4}-Suite \citep{Winn2011}. 
+A previously published \gls{pfomt} structure (\gls{pdb}-code: 3C3Y \citep{Kopycki2008b}) was used as a template during \gls{mr} procedure for the \gls{pfomt} structure solution.
+%%
+\bweigel{Lysozym struktur}
+For the \gls{mr} of the lysozyme structure the \gls{pdb}-entry XXXX was used.
 
-\subsection{Model building, refinement and visualization}
+
+\subsection{Model building, refinement and validation}
+Macromolecular model building and manipulation, as well as real space refinement and Ramachandran idealization were performed using the \gls{coot} software \citep{emsley2010:coot}.
+Structure refinement was done using the software REFMAC5 \citep{Murshudov1997,Vagin2004} as part of the \gls{ccp4}-suite or the \gls{phenix} \citep{Adams2010}.
+Validation of the structures was carried out using the web service MolProbity (\url{http://molprobity.biochem.duke.edu/}) \citep{Chen2010}.
+Structure visualization and the preparation of figures was performed using PyMOL (Schrödinger, New York, USA).
 
 \subsection{\textit{In silico} substrate docking}
+\textit{In silico} molecular docking studies were performed using the AutoDock Vina 1.1.2 or AutoDock 4.2.6 software in combination with the AutoDockTools-Suite (\url{http://autodock.scripps.edu/}) \citep{Huey2007,Morris2009,Trott2010}.
+Substrates were docked into the \gls{pfomt} structure with the \gls{pdb}-code 3C3Y.
+The grid box, which determines the search space, was manually assigned to center at 1.581, 5.196, 25.718 (x,y,z) and had size of 22, 20, 25 \gls{a} (x, y, z)).
+The exhaustiveness of the global search for AutoDock Vina was set to 25, whereas the rest of the input parameters were kept at their defaults.
 
 %%%% analytical methods
 \section{Analytics}

@@ -7,6 +7,12 @@
 \makeglossaries
 
 % analytics
+\newacronym[nonumberlist, first={\AA}]{a}{\AA}{\AA ngstrom, 0.1\,nm}
+\newacronym{phenix}{PHENIX}{\href{https://www.phenix-online.org/}{Phyton-based Hierarchial Environment for Integrated Xtallography}}
+\newacronym[first={PDB}]{pdb}{PDB}{Protein Data Base}
+\newacronym{coot}{\textit{Coot}}{\href{http://www2.mrc-lmb.cam.ac.uk/personal/pemsley/coot/}{Crystallographic Object-Oriented Toolkit}}
+\newacronym[nonumberlist]{mr}{MR}{molecular replacement}
+\newacronym{ccp4}{CCP4}{\href{http://www.ccp4.ac.uk/}{Collaborative Computational Project No. 4}}
 \newacronym[symbol=GC]{gc}{GC}{gas chromatography}
 \newacronym[symbol=CD]{cd}{CD}{circulary dichroism}
 \newacronym[symbol=FPLC]{fplc}{FPLC}{fast protein liquid chromatography}

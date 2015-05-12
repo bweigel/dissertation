@@ -7,6 +7,9 @@
 \makeglossaries
 
 % analytics
+\newacronym{omt}{\protect\textit{O}-MT}{\protect\textit{O}-methyl transferase}
+\newacronym{pda}{PDA}{photo diode array}
+\newacronym[first={UV/VIS}]{uvvis}{UV/VIS}{ultra violet/visible (light spectrum)}
 \newacronym[nonumberlist, first={\AA}]{a}{\AA}{\AA ngstrom, 0.1\,nm}
 \newacronym{phenix}{PHENIX}{\href{https://www.phenix-online.org/}{Phyton-based Hierarchial Environment for Integrated Xtallography}}
 \newacronym[first={PDB}]{pdb}{PDB}{Protein Data Base}
@@ -43,7 +46,7 @@
 \newacronym{lb}{LB}{lysogeny broth}
 \newacronym{tb}{TB}{terrific broth}
 \newacronym[first={inlusion bodies (IBs)}, plural={IBs}, longplural={inclusion bodies}]{ib}{IB}{inclusion body}
-\newacronym{mmt}{MMT}{\textsc{L}-malic acid/\glslink{mes}{MES}/\glslink{tris}{Tris}}
+\newacronym{mmt}{MMT}{\protect\textsc{L}-malic acid/\glslink{mes}{MES}/\glslink{tris}{Tris}}
 \newacronym{ssg}{SSG}{succinate/sodium phosphate/glycine}
 \newacronym{iptg}{IPTG}{isopropyl-\textsc{D}-thiogalactopyranosid}
 \newacronym{tca}{TCA}{trichloro acetic acid}

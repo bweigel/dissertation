@@ -308,16 +308,15 @@ Often, when recombinant protein is produced in high levels in \eco it is accumul
 The accumulating \glspl{ib} consist mainly of the overproduced target protein, which is inherently quite pure already.
 \Glspl{ib} can be selectively recovered from \eco cell lysates and can consequently be refolded. 
 \Glspl{ib} were prepared according to a modified protocol by Palmer \citep{Palmer2012}. \\
-The cells were resusupended in 5\,ml/$\mathrm{g_{cells}}$ IB lysis buffer (100\,mM \gls{tris}/HCl, 5\,mM \gls{edta}, 5\,mM \gls{dtt} pH\,7) and 5\,mM benzamidine was added as protease inhibitor.
-The solution was homogenized using a tissue grinder homogenizer.
+The cells were resusupended in 5\,ml/$\mathrm{g_{cells}}$ IB lysis buffer (100\,mM \gls{tris}/HCl, 1\,mM \gls{edta} pH\,7), 0.5\,mM \gls{pmsf} was added as protease inhibitor.
+The solution was homogenized using a tissue grinder homogenizer (Ultra Turrax\textsuperscript\textregistered; IKA\textsuperscript\textregistered-Werke GmbH \& Co. KG, Staufen, Germany).
 \ugperml{200} lysozyme was added to aid in the breakage of cells and the cells were lysed by sonicating thrice at 70\,\% amplitude (1\,s on-off-cycle) for 30 seconds.
+DNase~I (\ugperml{10}) was added and the solution was incubated on ice for 10\,min.
 The lysate was clarified by centrifuging for 1\,h at \timesg{20000}, \degC{4}.
-The supernatant was discarded and the pellet was resuspended in 5\,ml/$\mathrm{g_{cells}}$ IB wash buffer (100\,mM \gls{tris}/HCl, 5\,mM \gls{edta}, 5\,mM \gls{dtt}, 2\,M urea, 2\,\% (w/v) Triton X-100 pH\,7), followed by thorough homogenization.
+The supernatant was discarded and the pellet was resuspended in 5\,ml/$\mathrm{g_{cells}}$ IB wash buffer I (20\,mM \gls{edta}, 500\,mM NaCl, 2\,\% (w/v) Triton X-100 pH), followed by thorough homogenization.
 The solution was centrifuged (30\,min at \timesg{20000}, \degC{4}), the supernatant discarded and the pellet was washed twice more.
-To remove detergent, the pellet was washed twice again. However, for this step the Triton X-100 was omitted from the IB-wash buffer.
-The \glspl{ib} were resuspended in extraction buffer (100\,mM \gls{tris}/HCl, 5\,mM \gls{edta}, 5\,mM \gls{dtt}, 8\,M \gls{gua} pH\,7) and stored at \degC{-20} until use.
-
-
+To remove detergent, the pellet was washed twice again with IB washing buffer II (20\,mM \gls{edta}, 100\,mM Tris/HCl pH\,7).
+The \glspl{ib} were resuspended in IB solubilization buffer (100\,mM \gls{tris}/HCl, 5\,mM \gls{dtt}, 6\,M \gls{gua} pH\,7), such that the protein concentration was about \SI{25}{\mg\per\ml} and stored at \degC{-20} until use.
 
 
 \subsection{Purification of His-tagged proteins using \glsentryfirst{imac}}
@@ -330,6 +329,9 @@ First the column was equilibrated with 5\,\gls{cv} of binding buffer (50\,mM \gl
 The sample (generally clarified lysate) was applied to the column using a flow of \SI{0.75}{\milli\litre\per\minute}. Unound protein was removed by washing with 3\,\gls{cv} binding buffer.
 Unspecifically bound proteins were washed away by increasing the amount of elution buffer (50\,mM \gls{tris}/HCl, 500\,mM NaCl, 10\,\% glycerol, 250\,mM imidazole pH 7) to 10\,\% (constant for 3 to 5\,\gls{cv}). 
 Highly enriched and purified target protein was eluted with 6 to 10\,\gls{cv} of 100\,\% elution buffer. 
+
+\subsection{Enzymatic production of \glsentrytext{sam} and derivatives}
+\label{sec:samprod}
 
 \section{Crystallographic Procedures}
 \label{sec:xraymethods}
@@ -389,47 +391,83 @@ The exhaustiveness of the global search for AutoDock Vina was set to 25, whereas
 
 %%%% analytical methods
 \section{Analytics}
-\subsection{In vitro determination of glucose}
-The glucose concentration in clarified, aqueous samples was determined by a modified version of the glucose assay kit procedure provided by Sigma-Aldrich \citep{Sigma-Aldrich}. \Gls{god} oxidizes D-glucose to gluconic acid, whereby hydrogen peroxide is produced. The hydrogen peroxide can be detected and quantified by \gls{hrp}, which reduces the produced \cf{H2O2} and thereby oxidizes its chromogenic substrate \textit{o}-dianisidine. The oxidized form of \textit{o}-dianisidine can then be measured photospectrometrically \citep{Claiborne1979}.\\
+\subsection{\textit{In vitro} determination of glucose}
+The glucose concentration in clarified, aqueous samples was determined by a modified version of the glucose assay kit procedure provided by Sigma-Aldrich \citep{Sigma-Aldrich}. \Gls{god} oxidizes \textsc{D}-glucose to gluconic acid, whereby hydrogen peroxide is produced. 
+The hydrogen peroxide can be detected and quantified by \gls{hrp}, which reduces the produced \cf{H2O2} and thereby oxidizes its chromogenic substrate \textit{o}-dianisidine via consecutive one-electron transfers. 
+The oxidized diimine form of \textit{o}-dianisidine can then be measured photospectrometrically \citep{Claiborne1979}.\\
 The methodology employs a coupled photospectrometric assay using \gls{god} and \gls{hrp} with \textit{o}-dianisidine as reporter substrate. 
 The assay was prepared in \gls{mtp}-format. A reaction solution containing \SI{12.5}{U\per\milli\litre} \gls{god}, \SI{2.5}{U\per\milli\litre} \gls{hrp} and \SI{0.125}{\milli\gram\per\milli\litre} \textit{o}-dianisidine dihydrochloride in \SI{50}{mM} sodium acetate pH\,5.1 was prepared. \\
 Sample solutions from culture supernatants were typically diluted in 9\,volumes of water.
 The reaction was started, by adding \ul{50} reaction solution to \ul{25} of sample and was incubated at \degC{37} and 200\,rpm for 30\,min in a shaking incubator.
-\ul{50} 6\,M sulfuric acid was added to stop the reaction and achieve maximum color development (full oxidation of any \textit{o}-dianisidine charge transfer complexes). \\
+\ul{50} 6\,M sulfuric acid was added to stop the reaction and achieve maximum color development (full oxidation of any \textit{o}-dianisidine charge transfer complexes) (\autoref{fig:godassay}). \\
 The developed pink color was measured at 540\,nm in a \gls{mtp}-reader.
-A calibration curve of a standard D-glucose solutions (0 to 100\,\si{\micro\gram\per\milli\litre}), that was always part of the experiments, was used to quantify the sample measurements.
+A calibration curve of a standard \textsc{D}-glucose solutions (0 to 100\,\si{\micro\gram\per\milli\litre}), that was always part of the experiments, was used to quantify the sample measurements.
 
 
 \framedfigure[label = fig:godassay]{
-  \begin{subfigure}{0.3\linewidth}\centering
-    \begin{chemEnv}[0.5]
-      \schemestart
-      D-Glc\arrow{-y>[\chemfig{O_2}, \chemfig{H_2O}][\chemfig{H_2O_2}][GOD]}[,1.5]gluconic acid 
-      \arrow(@c1.south east--.north east){0}[-90,.7]
-      o-dianisidine\arrow{-y>[\chemfig{H_2O_2}][\chemfig{2 H_2O}][HRP]}[,1.5]CTC 
-      \arrow(@c3.south east--.north east){0}[-90,.7]
-      CTC\arrow{->[][\chemfig{H_2SO_4}]}[,1.5]diimine 
-      \schemestop
- \end{chemEnv}
-  \end{subfigure}
-  \begin{subfigure}{0.6\linewidth}\centering
+%  \begin{subfigure}{0.2\linewidth}\centering
+%    \begin{chemEnv}[0.5]
+%      \schemestart
+%      D-Glc\arrow{-y>[\chemfig{O_2}, \chemfig{H_2O}][\chemfig{H_2O_2}][GOD]}[,1.5]gluconic acid 
+%      \arrow(@c1.south east--.north east){0}[-90,.7]
+%      o-dianisidine\arrow{-y>[\chemfig{H_2O_2}][\chemfig{2 H_2O}][HRP]}[,1.5]CTC 
+%      \arrow(@c3.south east--.north east){0}[-90,.7]
+%      CTC\arrow{->[][\chemfig{H_2SO_4}]}[,1.5]diimine 
+%      \schemestop
+% \end{chemEnv}
+%  \end{subfigure}
+%  \begin{subfigure}{0.7\linewidth}\centering
     \begin{chemEnv}[0.75]
       \setarrowdefault{-90}
       \schemestart
-    	\Mchemname{\chemfig[][scale=1]{*6((-H_2N)-(-OMe)=-(-*6(-=-(-NH_2)=(-OMe)-=))=-=)}}{\textbf{diamine}}\arrow{->[*{0}{-2\cf{e^-},2\cf{H^+}}]}
-    	\chemleft[
-	  \Mchemname{\subscheme{
-	      \chemfig[]{*6((-H_2N)-(-OMe)=-(-*6(-=-(-NH_2)=(-OMe)-=))=-=)}\arrow{0}[0,0.1]
-              \chemfig[]{*6((=HN)-(-OMe)=-(-*6(-=-(=NH)-(-OMe)=-))-=--)}    
-          }}{Charge transfer complex}\chemright]
-        \arrow{<=>}
-	\Mchemname{\chemfig[]{*6((=HN)-(-OMe)=-(-*6(-=-(=NH)-(-OMe)=-))-=--)}}{quinonediimine}
+    	\Mchemname{\chemfig[][scale=1]{*6((-H_2N)-(-OMe)=-(-*6(-=-(-NH_2)=(-OMe)-=))=-=)}}{\textbf{diamine}}\arrow{->[*{0}{-\cf{e^-},\cf{H^+}}]}
+    	\subscheme{
+          1/2 \arrow{0}[0,0.2] \Mchemname{\chemleft[
+	      \subscheme{
+	        \chemfig[]{*6((-H_2N)-(-OMe)=-(-*6(-=-(-NH_2)=(-OMe)-=))=-=)}\arrow{0}[0,0.1]
+                \chemfig[]{*6((=HN)-(-OMe)=-(=*6(-=-(=NH)-(-OMe)=-))-=--)}    
+              }\chemright]}{charge transfer complex}
+          %+ \chemfig{H^+}
+          }
+          \arrow{<=>[*{0}{-\cf{e^-},\cf{H^+}}]}
+	\Mchemname{\chemfig[]{*6((=HN)-(-OMe)=-(=*6(-=-(=NH)-(-OMe)=-))-=--)}}{quinonediimine}
     \schemestop
     \end{chemEnv}
-  \end{subfigure}
+%  \end{subfigure}
   
-}{GOD assay}
+}{Oxidation of the reporter substrate \textit{o}-dianisidine. Consecutive one-electron transfers lead to the fully oxidized diimine form of \textit{o}-dianisidine. The first electron transfer is believed to produce a charge transfer complex intermediate. \citep{Josephy1982a,Claiborne1979}}
 
+\subsection{\textit{In vitro} \glsentryfirst{omt} assay}
+\label{sec:omtassay}
+\bweigel{nochmal auseinanderklamüsern wegen den konzentrationen und eingesetzten enzymmengen...}
+\gls{omt} assays were conducted in a total volume of \SIrange{50}{100}{\micro\litre}. 
+The standard assay buffer was 100\,mM Tris/HCl, 2.5\,mM \textsc{L}-glutathion pH\,7.5.
+1\,mM \cf{MgCl2}, which was otherwise omitted, was added for reactions using cation dependent \glspl{omt} (e.g. \gls{pfomt}).
+Reactions contained \SI{0.5}{\milli\molar} alkyl donor (e.g. (\textit{S},\textit{S})-\glsentrytext{sam}) and \SI{0.4}{\milli\molar} flavonoid or cinnamic acid substrate.
+To start the reactions enzyme was added; \SI{20}{\micro\gram}, \gls{pfomt}.
+%%%%%%%%%%%%%%%%%%%%%%% Platzhalter
+Reactions were stopped by addition of \ul{500} ethyl acetate containing 2\,\% formic acid and vortexed for 15\,s to extract the hydrophobic phenylpropanoids and flavonoids.
+After centrifugation (\timesg{10000}, \degC{4}, 10\,min) the organic phase was transferred into a new tube.
+The reaction was extraced once more with \ul{500} ethyl acetate, 0.2\,\% formic acid and the pooled organic phases were evaporated using a vacuum concentrator (Concentrator 5301; eppendorf, Hamburg, Germany).
+The residue was dissolved in methanol and centrifuged at \timesg{10000} for 10\,min to remove unsoluble matter. 
+The supernatant was transferred into a \glsentrytext{hplc} vial and analyzed by \gls{hplc} (\ref{sec:hplc}).\\
+When detection of hydrophobic (e.g. flavonoids) and hydrophilic compounds (e.g. \glsentrytext{sam}, \glsentrytext{sah}) was performed simultaneously reactions were stopped by addition of 0.3 volumes 10\,\% (w/v) \gls{tca} in 50\,\% acetonitrile.
+The mixture was vortexed for complete mixing and incubated on ice for at least 30\,min.
+After centrifugation (\timesg{10000}, \degC{4}, 10\,min) the supernatant was transferred into \glsentrytext{hplc}-sample vials and analyzed (see \ref{sec:hplc}).
 
+\subsection{Measurement of activity/pH profiles}
+Assays to measure activity over larger pH ranges were set up in 100\,mM \glsentryfirst{mmt}- (pH 4 to 9) or \glsentryfirst{ssg}-buffer (pH 4 to 10) to keep the concentrations of buffer salts constant for each pH.
 
-\subsection{\glsentrytext{hplc} measurements}
+\subsection{Photospectrometric assay for the methylation of catecholic moieties} 
+
+\subsection{\Glsentryfirst{hplc} analytics}
+\label{sec:hplc}
+Due to their aromaticity, methanolic extracts of flavonoids exhibit two major absorption peaks in the \gls{uvvis} region of the light spectrum in the range of \SIrange{240}{400}{\nm} \citep{Mabry1970}.
+However, even the more simple phenyl propanoids (e.g. cinnamic acids) show absorption of light in the \gls{uvvis}-region. \\
+Methanolic extracts of flavonoids and phenyl propanoids were analyzed by \gls{hplc} using a \gls{pda}-detector, which was set to record in the range of \SIrange{200}{400}{\nm}.
+\Gls{hplc} runs were performed on a reverse-phase C-18 end-capped column (YMC-Pack ODS-A; YMC Europe, Dinslaken, Germany) with a pore size of 120\,\gls{a}.
+The mobile phase was aqueous acetonitrile supplemented with 0.2\,\% formic acid. The flow was kept constant at \SI{0.8}{\milli\litre\per\minute}.
+\Gls{omt} enzyme assay extracts (\ref{sec:omtassay}) were analyzed using an acetonitrile gradient starting with 5\,\% acetonitrile (1\,min). 
+The acetonitrile content was increased to 100\,\% in 29\,min and was kept at 100\,\% for 5\,min.
+%Beside the \gls{pda} data, four distinct traces (200, 220, 280 and 325\,nm) were also recorded.
+Peaks were integrated from the 280\,nm trace using the software provided by the manufacturer of the device.

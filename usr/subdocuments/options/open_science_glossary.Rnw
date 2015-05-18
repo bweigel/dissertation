@@ -33,6 +33,7 @@
 % units
 \newacronym[nonumberlist=true, firstplural={minutes (min)}, plural={min}]{min}{min}{minute}
 \newacronym[nonumberlist=true]{v}{V}{volume}
+\newacronym[nonumberlist, first={U}]{u}{U}{enzyme unit; measure for enzymatic activity (1\,U = 1\,\textmu mole/min = 1/60 \textmu kat)}
 \newacronym[nonumberlist]{bper}{B-PER}{bacterial protein extraction reagent}
 %\newacronym{sdspage}{sodium dodecylsulfate-polyacrylamid gel elecrtophoresis}%
 %\newacronym{pcr}{PCR}{polymerase chain reaction}
@@ -40,9 +41,12 @@
 %newacronym{pfomt}{PFOMT}{phenylpropanoid and flavonoid O-methyl transferase}
 \newacronym{comt}{COMT}{catechol O-methyl transferase}
 \newacronym{somt}{SOMT-2}{soy O-methyl transferase}
+\newacronym{sams}{SAMS}{\protect\textit{S}-adenosylmethionine synthase}
 %\newacronym{des}{DES}{deep eutectic solvent, see also \gls{nades}}
-\newacronym[first={NADES}]{nades}{NADES}{natural deep eutectic solvent}
+\newacronym[]{nades}{NADES}{natural deep eutectic solvent}
+\newacronym{iex}{IEX}{ion exchange chromatography}
 % substances
+\newacronym{gsh}{GSH}{\textsc{L}-glutathion}
 \newacronym{lb}{LB}{lysogeny broth}
 \newacronym{tb}{TB}{terrific broth}
 \newacronym[first={inlusion bodies (IBs)}, plural={IBs}, longplural={inclusion bodies}]{ib}{IB}{inclusion body}
@@ -50,6 +54,7 @@
 \newacronym{ssg}{SSG}{succinate/sodium phosphate/glycine}
 \newacronym{iptg}{IPTG}{isopropyl-\textsc{D}-thiogalactopyranosid}
 \newacronym{tca}{TCA}{trichloro acetic acid}
+\newacronym{atp}{ATP}{adenosine 5'-triphosphate}
 \newacronym{pbs}{PBS}{phosphate buffered saline}
 \newacronym{nta}{NTA}{nitrilo triacetic acid}
 \newacronym{mw}{MW}{molecular weight}
@@ -66,10 +71,12 @@
 \newacronym[first={GCH}]{pch}{PCH}{propane-1,2-diol/choline chloride,\gls{nades}-mixture}
 \newacronym[first={GCH}]{gch}{GCH}{\textsc{D}-glucose/choline chloride,\gls{nades}-mixture}
 \newacronym[nonumberlist, first={MWCO}]{mwco}{MWCO}{molecular weight cut-off}
-\newacronym[first={\textit{S}-adenosyl-\textsc{L}-ethionine (SAE)}]{sae}{SAE}{\textit{S}-adenosyl-\textsc{L}-ethionine, (2\textit{S})-2-amino-4-[[(2\textit{S},3\textit{S},4\textit{R},5\textit{R})-5-(6-aminopurin-9-yl)-3,4-dihydroxyoxolan-2-yl]methyl-ethylsulfonio]butanoat}
+\newacronym[first={\textit{S}-adenosyl-\textsc{L}-ethionine (SAE)}]{sae}{SAE}{\textit{S}-adenosyl-\textsc{L}-ethionine, (2\textit{S})-2-amino-4-[[(2\textit{S},3\textit{S},4\textit{R},5\textit{R})-5-(6-aminopurin-9-yl)-3,4-dihydroxyoxolan-2-yl]methyl-ethylsulfonio]butanoat}%)]]
+
 \newacronym[first={MLU}, nonumberlist]{mlu}{MLU}{Martin-Luther-Universität}
 
 
+    
 % start your declarations
 \newglossaryentry{zyp}{
   type	=	\acronymtype,
@@ -144,6 +151,13 @@
 		Fill in description here%
 	}
 }
+
+%\newglossaryentry{ethionine}{
+%  name = ethionine,
+%  decription = {%
+%    Homologue of methionine, where the sulfur is alkylated with an ethyl group%
+%    }
+%  }
 
 
 \newglossaryentry{pfomt}{

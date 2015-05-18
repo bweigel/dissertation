@@ -1,7 +1,7 @@
 %%%-------------------------------------------------%%%
 %%% Sub document for material and methods %%%
 %%%-------------------------------------------------%%%
-
+c
 \chapter{Material And Methods}
 Within this section percentages refer to volume per volume (v/v) percentages unless otherwise specified.
 %%%% materials (chemicals, inbstrumenmts, software etc)
@@ -28,9 +28,9 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
   \addtocounter{table}{-1} 
 \end{lstTabularx}
 
-\subsubsection{Preparation of \glsentryfirst{des}}
+\subsubsection{Preparation of \glsentryfirst{nades}}
 
-\Gls{des} were prepared by adding each component in a round-bottom flask with a stirrer and stirring the mixture at \degC{50} with intermittent sonication treatments until a clear solution was obtained.
+\Gls{nades} were prepared by adding each component in a round-bottom flask with a stirrer and stirring the mixture at \degC{50} with intermittent sonication treatments until a clear solution was obtained.
 
  \ostTableEnv[label=tab:des]{%
    \begin{tabularx}{\linewidth}{X p{0.3\textwidth} X p{0.3\textwidth}}
@@ -42,7 +42,7 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
    \bottomrule
  \end{tabularx}
  }{%
-   \gls{nades}-mixtures
+   \gls{nades}-mixtures used within this work.%
  }
 
 \subsection{Culture media used to grow bacteria}
@@ -52,7 +52,7 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
   LB-agar & LB + 1.5\,\% (w/v) agar-agar \\ 
   TB-medium & \SI{12}{\g\per\l} tryptone, \SI{24}{\g\per\l} yeaxst extract, 0.4\,\% glycerol, 72\,mM \cf{K2HPO4}, 17\,mM \cf{KH2PO4}\\
   ZY & \SI{10}{\g\per\l} tryptone, \SI{5}{\g\per\l} yeast extract \\ 
-  ZYP-5052 & in proportions: 0.928 ZY, 0.05 20$\times$ NPS, 0.02 50$\times$ 5052, 0.002 1\,M \cf{MgSO4}, 0.0002 1000$\times$ trace elements\\
+  ZYP-5052 & volume fraction (v/v): 0.928 ZY, 0.05 20$\times$ NPS, 0.02 50$\times$ 5052, 0.002 1\,M \cf{MgSO4}, 0.0002 1000$\times$ trace elements\\
   \addtocounter{table}{-1} 
 \end{lstTabularx}
 
@@ -213,7 +213,7 @@ The \textit{somt-2} gene was subcloned from the pQE-30 vector kindly provided by
 
 %%%% protein biochemical methods
 \section{Protein biochemistry}
-Stock solutions of antibiotics, IPTG or sugars were prepared according to the pET System Manual by Novagen \citep{Novagen2011}, unless otherwise noted.
+Stock solutions of antibiotics, IPTG or sugars were prepared according to the pET System Manual by Novagen \citep{Novagen2010}, unless otherwise noted.
 
 \subsection{Protein production test (expression test)}
 The heterologous production of proteins in \eco was assessed in a small scale protein production test, henceforth called expression test.
@@ -229,7 +229,7 @@ Exact specifications of growth conditions (e.g. temperature, time, constructs) a
 
 \subsection{Protein subfractionation}
 \label{sec:subfractionation}
-The protein subfractionation procedure described herein was adapted from the protocol described in the pET Manual \citep{Novagen2011}. 
+The protein subfractionation procedure described herein was adapted from the protocol described in the pET Manual \citep{Novagen2010}. 
 Overall 5 protein subfractions can be obtained, including \emph{total cell protein, culture supernatant (medium) protein, periplasmic protein, solube cytoplasmic protein} and \emph{insoluble protein}. \\
 The \odx{600} of the culture sample was measured and the cells harvested by centrifugation at \timesg{10000}, \degC{4} for 5\,minutes.
 The protein in the supernatant medium was concentrated by precipitation with \gls{tca} (\ref{sec:tcaprecipitation}) for \sdspage analysis.
@@ -330,8 +330,21 @@ The sample (generally clarified lysate) was applied to the column using a flow o
 Unspecifically bound proteins were washed away by increasing the amount of elution buffer (50\,mM \gls{tris}/HCl, 500\,mM NaCl, 10\,\% glycerol, 250\,mM imidazole pH 7) to 10\,\% (constant for 3 to 5\,\gls{cv}). 
 Highly enriched and purified target protein was eluted with 6 to 10\,\gls{cv} of 100\,\% elution buffer. 
 
-\subsection{Enzymatic production of \glsentrytext{sam} and derivatives}
+\subsection{Enzymatic production of \glsentrytext{sam} and \glsentrytext{sae}}
 \label{sec:samprod}
+\Gls{sam} and \gls{sae} were prepared according to the method described by Dippe, et. al \citep{Dippe2015}. \\
+Preparative reactions (20\,ml) were performed in  0.1\,M Tris/HCl, 20\,mM \cf{MgCl2}, 200\,mM \cf{KCl} pH\,8.0 and contained 7.5\,mM \gls{atp}, 10\,mM \textsc{D,L}-methionine or \textsc{D,L}-ethionine, for the production of \gls{sam} or \gls{sae} respectively, and 0.2\,\gls{u} \gls{sams} variant I317V.
+The reaction was stopped by lowering the pH to 4 using 10\,M acetic acid after 18\,h of incubation at \degC{30}, 60\,rpm.
+After 10\,min incubation on ice the solution was centrifuged (\timesg{15000}, 10\,min) to remove insoluble matter. 
+The supernatant was transferred to a round bottom flask, frozen in liquid nitrogen and lyophilized. \\
+Crude products were extracted from the pellet using 73\,\% ethanol and purified using \gls{iex}.
+\Gls{iex} was performed on a sulfopropyl sepharose matrix (25\,ml) via isocratic elution (500\,mM \cf{HCl}).
+%Therefore the column was equilibrated using 500\,mM \cf{HCl} and the crude extract injected.
+Before injection, the crude extract was acidified to 0.5\,M \cf{HCl} using concentrated hydrochloric acid.
+After elution, the product containing fractions were dried via lyophilization. \\
+The amount of product was determined by \gls{uvvis}-spectroscopy at 260\,nm using the published extinction coefficient of \gls{sam} (\textepsilon\textsubscript{0}\,=\,\SI[per-mode=reciprocal]{15400}{\per\molar\per\cm}) after resuspension in water \citep{Shapiro1966}.
+
+
 
 \section{Crystallographic Procedures}
 \label{sec:xraymethods}
@@ -352,6 +365,7 @@ The concentrated protein solution was centrifuged at \timesg{14000}, \degC{4} fo
 Crystallization screens were set up as described above. \\
 \Gls{pfomt} was crystallized using the following conditions \bweigel{nochma genau guckn}  2\,M \cf{(NH4)2SO4}, 20\,\%glycerol. The protein solution contained 0.25\,mM \gls{sah}, 0.25\,mM \cf{MgCl2}, 0.25\,mM ferulic acid and \SI{7.53}{\mg\per\ml} \gls{pfomt}.
 
+\subsubsection{Crystallization of proteins using \glsentrytext{nades}}
 \bweigel{add DES crystallization}
 
 \subsection{Data collection and processing}
@@ -441,24 +455,53 @@ A calibration curve of a standard \textsc{D}-glucose solutions (0 to 100\,\si{\m
 \label{sec:omtassay}
 \bweigel{nochmal auseinanderklamüsern wegen den konzentrationen und eingesetzten enzymmengen...}
 \gls{omt} assays were conducted in a total volume of \SIrange{50}{100}{\micro\litre}. 
-The standard assay buffer was 100\,mM Tris/HCl, 2.5\,mM \textsc{L}-glutathion pH\,7.5.
-1\,mM \cf{MgCl2}, which was otherwise omitted, was added for reactions using cation dependent \glspl{omt} (e.g. \gls{pfomt}).
-Reactions contained \SI{0.5}{\milli\molar} alkyl donor (e.g. (\textit{S},\textit{S})-\glsentrytext{sam}) and \SI{0.4}{\milli\molar} flavonoid or cinnamic acid substrate.
-To start the reactions enzyme was added; \SI{20}{\micro\gram}, \gls{pfomt}.
+The standard assay buffer was 100\,mM Tris/HCl, \uM{2.5} \gls{gsh} pH\,7.5.
+\SI{1}{\milli\molar} \cf{MgCl2}, which was otherwise omitted, was added for reactions using cation dependent \glspl{omt} (e.g. \gls{pfomt}).
+Reactions contained \SI{0.5}{\milli\molar} alkyl donor (e.g.~(\textit{S},\textit{S})-\glslink{sam}{SAM}) and \SI{0.4}{\milli\molar} flavonoid or cinnamic acid substrate.
+Enzymatic reactions were started by addition of enzyme (usually \SI{0.2}{\milli\gram\per\milli\litre}) and incubated at \degC{30}.\\
 %%%%%%%%%%%%%%%%%%%%%%% Platzhalter
 Reactions were stopped by addition of \ul{500} ethyl acetate containing 2\,\% formic acid and vortexed for 15\,s to extract the hydrophobic phenylpropanoids and flavonoids.
 After centrifugation (\timesg{10000}, \degC{4}, 10\,min) the organic phase was transferred into a new tube.
 The reaction was extraced once more with \ul{500} ethyl acetate, 0.2\,\% formic acid and the pooled organic phases were evaporated using a vacuum concentrator (Concentrator 5301; eppendorf, Hamburg, Germany).
 The residue was dissolved in methanol and centrifuged at \timesg{10000} for 10\,min to remove unsoluble matter. 
 The supernatant was transferred into a \glsentrytext{hplc} vial and analyzed by \gls{hplc} (\ref{sec:hplc}).\\
-When detection of hydrophobic (e.g. flavonoids) and hydrophilic compounds (e.g. \glsentrytext{sam}, \glsentrytext{sah}) was performed simultaneously reactions were stopped by addition of 0.3 volumes 10\,\% (w/v) \gls{tca} in 50\,\% acetonitrile.
+When detection of hydrophobic (e.g. flavonoids) and hydrophilic compounds (e.g. \gls{sam}, \gls{sah}) was performed simultaneously reactions were stopped by addition of 0.3 volumes 10\,\% (w/v) \gls{tca} in 50\,\% acetonitrile.
 The mixture was vortexed for complete mixing and incubated on ice for at least 30\,min.
 After centrifugation (\timesg{10000}, \degC{4}, 10\,min) the supernatant was transferred into \glsentrytext{hplc}-sample vials and analyzed (see \ref{sec:hplc}).
 
 \subsection{Measurement of activity/pH profiles}
-Assays to measure activity over larger pH ranges were set up in 100\,mM \glsentryfirst{mmt}- (pH 4 to 9) or \glsentryfirst{ssg}-buffer (pH 4 to 10) to keep the concentrations of buffer salts constant for each pH.
+Assays to measure activity over larger pH ranges were set up in 50\,mM \glsentryfirst{mmt}- (pH 4 to 9) or \glsentryfirst{ssg}-buffer (pH 4 to 10) to keep the concentrations of buffer salts constant for each pH \citep{Newman2004}. \\
+The protein of interest was first extensively dialyzed against the reaction buffer (e.g. \glsentrytext{mmt}, \glsentrytext{ssg}) at pH 7 with added \gls{edta} (\mM{5}) and then against the same buffer without \gls{edta}.
+Standard reaction conditions were 50\,mM buffer, 0.4\,mM alkyl acceptor (e.g. caffeic acid), 0.5\,mM \gls{sam}, \uM{2.5} \gls{gsh} and \SI{0.2}{\mg\per\ml} enyzme.
+\cf{MgCl2} was either omitted or added at \SI{10}{\milli\molar} to assess influences of divalent cations.
+Assays were stopped as described in \ref{sec:omtassay} and analyzed accordingly.
 
 \subsection{Photospectrometric assay for the methylation of catecholic moieties} 
+Catecholic moieties can form stable complexes in the presence of heavy metals such as copper or iron \citep{Schweigert2001,Mentasti1973}.
+Hence, caffeic acid can complex ferric (\cf{Fe^3+}) ions and form a colored complex with \textlambda\textsubscript{max} = \SI{595}{nm} \citep{Dippe}. 
+Since the complex formation is specific for caffeic acid and methylated derivatives (i.e. ferulic and iso-ferulic acid) cannot complex \cf{Fe^3+}, this can be used as a measure for methylation reactions.\\
+\Gls{omt} assays were prepared as before. 
+However, the reactions were stopped by addition of 0.5 volumes catechol reagent (\mM{2} \cf{FeCl3} in \mM{10} \cf{HCl}).
+The complex formation reaction was allowed to equilibrate for 5\,min at \gls{rt} and the absorbance at \SI{595}{\nm} was measured.
+
+% {{{ plot fig:test_plot_two 
+\framedfigure[label = fig:c_plot_cali]{ 
+<<test, fig.width=6.415, fig.height=2.5, echo=F>>=
+load("../../statistics/data/WEB338.fa-ca.calibration.Rda")
+
+ggplot(cali.curve, aes(x=FA, y=value, shape=as.factor(pH), color=as.factor(DES), group=buffer.no)) + 
+    labs(x="ferulic acid/caffeic acid", y="Abs 595nm") +
+    geom_point() +
+    theme_ost()
+@
+}{Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+  commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+  dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+  pellentesque eu, pretium quis, sem.}
+% }}}
+
+
+
 
 \subsection{\Glsentryfirst{hplc} analytics}
 \label{sec:hplc}
@@ -467,7 +510,9 @@ However, even the more simple phenyl propanoids (e.g. cinnamic acids) show absor
 Methanolic extracts of flavonoids and phenyl propanoids were analyzed by \gls{hplc} using a \gls{pda}-detector, which was set to record in the range of \SIrange{200}{400}{\nm}.
 \Gls{hplc} runs were performed on a reverse-phase C-18 end-capped column (YMC-Pack ODS-A; YMC Europe, Dinslaken, Germany) with a pore size of 120\,\gls{a}.
 The mobile phase was aqueous acetonitrile supplemented with 0.2\,\% formic acid. The flow was kept constant at \SI{0.8}{\milli\litre\per\minute}.
-\Gls{omt} enzyme assay extracts (\ref{sec:omtassay}) were analyzed using an acetonitrile gradient starting with 5\,\% acetonitrile (1\,min). 
-The acetonitrile content was increased to 100\,\% in 29\,min and was kept at 100\,\% for 5\,min.
+\SI{10}{\micro\litre} \gls{omt} enzyme assay extract (\ref{sec:omtassay}) were injected and analyzed using an acetonitrile gradient starting with 5\,\% acetonitrile (4\,min). 
+The acetonitrile content was increased to 100\,\% in 21\,min and was kept at 100\,\% for 5\,min.
 %Beside the \gls{pda} data, four distinct traces (200, 220, 280 and 325\,nm) were also recorded.
 Peaks were integrated from the 280\,nm trace using the software provided by the manufacturer of the device.
+
+\subsection{\glsentryfirst{lcms} measurements}

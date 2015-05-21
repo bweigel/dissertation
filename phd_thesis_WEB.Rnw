@@ -101,7 +101,6 @@
 %%%-------------------------------------------------%%%
 
 <<chunk_global_r_options, child='usr/subdocuments/options/ost_global_r_options.Rnw', eval=T>>=
-read_chunk("usr/statistics/rproject/test.R")
 @ 
 
 
@@ -111,6 +110,9 @@ read_chunk("usr/statistics/rproject/test.R")
 %%
 %
 
+<<subdoc_content_scripts, eval=T, echo=F, cache=F>>=
+read_chunk("usr/statistics/rproject/test.R")
+@ 
 %%%-------------------------------------------------%%%
 %%% Include header %%%
 %%%-------------------------------------------------%%%

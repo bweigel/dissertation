@@ -22,7 +22,12 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
   lysis buffer & 50\,mM \gls{tris}/HCl, 500\,mM NaCl, 10\,\% glycerol, 2.5\,mM imidazole, 0.2\,\% Tween-20 pH 7\\
   1\,M \gls{mmt} pH 4 (10$\times$) & \SI{26.8}{\g\per\l} \textsc{L}-malic acid, \SI{78.1}{\g\per\l} \gls{mes}, \SI{26.8}{\g\per\l} \gls{tris}, 2.1\,\% 10\,M HCl \\
     1\,M \gls{mmt} pH 9 (10$\times$) & \SI{26.8}{\g\per\l} \textsc{L}-malic acid, \SI{78.1}{\g\per\l} \gls{mes}, \SI{26.8}{\g\per\l} \gls{tris}, 6.7\,\% 10\,M NaOH \\
+
   20$\times$ \gls{nps} & 1\,M \cf{Na2HPO4}, 1\,M \cf{KH2PO4}, 0.5\,M \cf{(NH4)2SO4} \\
+    
+  1\,M \gls{ssg} pH 4 (10$\times$) & \SI{14.8}{\g\per\l} succinic acid, \SI{60.4}{\g\per\l} \cf{NaH2PO4*H2O}, \SI{32.8}{\g\per\l} glycine, 0.4\,\% 10\,M NaOH \\
+    1\,M \gls{ssg} pH 10 (10$\times$) & \SI{14.8}{\g\per\l} succinic acid, \SI{60.4}{\g\per\l} \cf{NaH2PO4*H2O}, \SI{32.8}{\g\per\l} glycine, 10.3\,\% 10\,M NaOH \\
+    
   5$\times$ SDS sample buffer &  10\,\% (w/v) \gls{sds}, 10\,mM \textbeta-mercapto ethanol, 20\,\% glycerol, 0.2\,M Tris/HCl pH\,6.8, 0.05\,\% (w/v) bromophenolblue\\
   1000$\times$ trace elements & 50\,mM \cf{FeCl3}, 20\,mM \cf{CaCl2}, 10\,mM \cf{MnCl2}, 10\,mM \cf{ZnSO4}, 2\,mM \cf{CoCl2}, 2\,mM \cf{CuCl2}, 2\,mM \cf{NiCl2}, 2\,mM \cf{Na2MoO4}, 2\,mM \cf{Na2SeO3}, 2\,mM \cf{H3BO3} \\
   \addtocounter{table}{-1} 
@@ -181,9 +186,6 @@ All mathematical and statistical computations and graphics were done with the \v
 Physicochemical calculations and calculations of different molecular descriptors were performed using Marvin Beans 15.4.13.0 (ChemAxon, Budapest, Hungary) and Molecular Operating Environment 2008.10 (Chemical Computing Group, Montreal, Canada).
 Special software used for X-ray crystal structure solution is discussed seperately in the corresponding section (\ref{sec:xraymethods}).
 
-%%%% Microbiologicyl Methods
-\section{Microbiology}
-
 
 %%%% Molecular Biology methods
 \section{Molecular Biology}
@@ -206,6 +208,31 @@ Specific steps for the subcloning of any genes discussed can be found in the app
 The \textit{pfomt} gene was subcloned from the pQE-30 vector kindly provided by Thomas Vogt (\gls{ipb}, Halle, Germany) into the pET-28a(+) vector.
 The \textit{somt-2} gene was subcloned from the pQE-30 vector kindly provided by Martin Dippe (\gls{ipb}, Halle, Germany) into the pET-28-MC vector.
 
+\subsection{Transformation of electrocompetent \textit{Agrobacterium tumefaciens} cells}
+A \ul{50} aliquot of electrocompetent \agro cells was thawed on ice.
+\SIrange{50}{100}{\ng} of plasmid were added, the solution was mixed gently and transferred to a pre-cooled electroporation cuvette.
+After pulsing (2.5\,kV, \SI{200}{\ohm}) 1\,ml of \gls{lb}-medium was added, the mixture transferred to a 1.5\,ml tube and incubated for (3 to 4)\,hours at \degC{28}.
+The culture was centrifuged (\timesg{10000}, 1\,min) and \ul{900} supernatant were discarded.
+The pellet was resuspended in the remaining liquid, plated onto \gls{lb}-agar plates supplemented with \ugperml{40} rifampicin and \ugperml{50} carbencillin and incubated at \degC{28} for (2 to 3)\,days.
+
+\section{Treatment of plant material}
+\subsection{Infiltration of \textit{Nicotiana benthamiana}}
+Before infiltration \nico plants were pruned, such that only leaves to be infiltrated remained with the plant.
+5\,ml cultures of transformed \agro in \gls{lb}-medium (with \ugperml{40} rifampicin and \ugperml{50} carbencillin) were grown over night at \degC{28} and 220\,rpm.
+\odx{600} of the culture was measured and adjusted to 0.2 by dilution with infiltration buffer (10\,mM \gls{mes}/\cf{NaOH}, 10\,mM \cf{MgSO4} pH 5.5).
+When multiple \agro transformed with different contructs/plasmids were used for infiltration, the cultures were mixed and diluted using infiltration buffer, such that \odx{600} of each culture in the mix was 0.2.
+The solution was infiltrated into the abaxial side of \nico leaves using a plastic syringe.
+The leaf material was harvested after 7 days.
+
+\subsection{Plant material harvest}
+Infiltrated/Infected areas of \nico leaf material were cut out and grouped by plant number, leaf position (top/bottom) and leaf side (right/left).
+The grouped clippings were weighed, frozen in liquid nitrogen, ground to a powder, freeze-dried and stored at \degC{-80}.
+
+\subsection{Extraction of flavonoids from \nico leaves}
+Two tips of a small spatula of freeze-dried material ($\approx$6\,mg), were weighed exactly and extracted with \ul{500} 75\,\% aqueous methanol containing 1\,mM ascorbic acid, 0.2\,\% formic acid and 0.1\,mM flavone (internal standard).
+Therefore the suspension was vortexed for 30\,s, rotated on an orbital shaker for 10\,min and vortexed again for 30\,s.
+The suspension was centrifuged (\timesg{20000}, \degC{4}, 10\,min) and the supernatant transferrerd to a new tube, to remove the insoluble plant material.
+The supernatant was centrifuged again (\timesg{20000}, \degC{4}, 10\,min) and the resulting supernatant was transferred to a \gls{hplc}-vial and stored at \degC{-20} until analysis.
 
 %% \subsection{Cloning of \textit{p-lsr} reporter constructs} --> evtl Ergebnisse
 
@@ -215,10 +242,36 @@ The \textit{somt-2} gene was subcloned from the pQE-30 vector kindly provided by
 \section{Protein biochemistry}
 Stock solutions of antibiotics, IPTG or sugars were prepared according to the pET System Manual by Novagen \citep{Novagen2010}, unless otherwise noted.
 
+\subsection{Determination of protein concentration}
+Protein concentrations were estimated using the absorption of protein solutions at 280\,nm, which is mainly dependent on the amino acid composition of the protein studied \citep{Gill1989}.
+Extinction coefficients of proteins were calculated from the amino acid sequence using the ExpPASy servers's ProtParam tool \citep{Gasteiger2005}.
+
+\begin{lstTabularx}[1]{\linewidth}{p{0.5\textwidth}X}
+  \caption{Calculated extinction coefficients of proteins used in this work.} \\
+  \label{tab:extinctioncoefficients}
+  \small
+  \hfill \\
+     \toprule
+	protein/enzyme & $\varepsilon^{\mathrm{\SI{1}{\g\per\l}}}_{280\mathrm{nm}}$ in \si[per-mode=reciprocal]{\ml\per\mg\per\cm}\\ 
+     \midrule
+     \endfirsthead
+     \toprule
+     protein/enzyme & $\varepsilon^{\mathrm{\SI{1}{\g\per\l}}}_{280\mathrm{nm}}$ in \si[per-mode=reciprocal]{\ml\per\mg\per\cm}\\ 
+     \midrule
+     \endhead
+     \gls{pfomt} (reduced) & 0.714 \\
+     \gls{pfomt} Y51K N202W (reduced) & 0.852 \\
+     \gls{somt} (oxidized) & 1.263 \\
+     \gls{somt} (reduced) & 1.247 \\
+     \gls{comt} & \\
+     \bottomrule
+\end{lstTabularx}
+
+
 \subsection{Protein production test (expression test)}
 The heterologous production of proteins in \eco was assessed in a small scale protein production test, henceforth called expression test.
 Single colonies of \eco transformed with the constructs to be studied were used to inoculate a 2\,ml starter culture in \gls{lb}-medium containing the appropriate antibiotics. 
-The concentrations of antiobiotics used was as follows:
+The working concentrations of antiobiotics used was as follows:
 \ugperml{200} ampicillin, \ugperml{150} kanamycin, \ugperml{50} chloramphenicol, \ugperml{20} tetracycline. \\
 The starter culture was allowed to grow at \degC{37} and 200\,rpm over night.
 A 5\,ml sampling culture of the medium to be studied containing the appropriate antibiotics was prepared. The media tested included \gls{lb}, \gls{tb} and auto-induction media like ZYP-5052.
@@ -405,6 +458,7 @@ The exhaustiveness of the global search for AutoDock Vina was set to 25, whereas
 
 %%%% analytical methods
 \section{Analytics}
+
 \subsection{\textit{In vitro} determination of glucose}
 The glucose concentration in clarified, aqueous samples was determined by a modified version of the glucose assay kit procedure provided by Sigma-Aldrich \citep{Sigma-Aldrich}. \Gls{god} oxidizes \textsc{D}-glucose to gluconic acid, whereby hydrogen peroxide is produced. 
 The hydrogen peroxide can be detected and quantified by \gls{hrp}, which reduces the produced \cf{H2O2} and thereby oxidizes its chromogenic substrate \textit{o}-dianisidine via consecutive one-electron transfers. 
@@ -481,28 +535,26 @@ Catecholic moieties can form stable complexes in the presence of heavy metals su
 Hence, caffeic acid can complex ferric (\cf{Fe^3+}) ions and form a colored complex with \textlambda\textsubscript{max} = \SI{595}{nm} \citep{Dippe}. 
 Since the complex formation is specific for caffeic acid and methylated derivatives (i.e. ferulic and iso-ferulic acid) cannot complex \cf{Fe^3+}, this can be used as a measure for methylation reactions.\\
 \Gls{omt} assays were prepared as before (\ref{sec:omtassay}). 
-However, the reactions were stopped by addition of 0.5 volumes catechol reagent (\mM{2} \cf{FeCl3} in \mM{10} \cf{HCl}).
+However, the reactions were stopped by addition of 0.1 volumes 1\,M Tris/HCl pH 8, immediately followed by 0.5 volumes catechol reagent (\mM{2} \cf{FeCl3} in \mM{10} \cf{HCl}).
 The complex formation reaction was allowed to equilibrate for 5\,min at \gls{rt} and the absorbance at \SI{595}{\nm} was measured.
 
-% {{{ plot fig:test_plot_two 
+
 \framedfigure[label = fig:c_plot_cali]{ 
-%<<test, fig.width=6.415, fig.height=2.5, echo=F>>=
-%load("../../statistics/data/WEB338.fa-ca.calibration.Rda")
-
-%ggplot(cali.curve, aes(x=FA, y=value, shape=as.factor(pH), color=as.factor(DES), group=buffer.no)) + 
-%    labs(x="ferulic acid/caffeic acid", y="Abs 595nm") +
-%    geom_point() +
-%    theme_ost()
-%@
-<<test, echo=TRUE, tidy=TRUE>>=
+<<test, echo=F, tidy=TRUE, fig.height=3.25, fig.width=5.25, dev='tikz'>>=
 @ 
-}{Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-  commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-  dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-  pellentesque eu, pretium quis, sem.}
-% }}}
+}{This is a test.}
 
 
+\subsection{Binding experiments using \Glsentryfirst{itc}}
+\Gls{itc} can be used to directly characterize the thermodynamics of an observed process, be this a binding interaction or an enzymatic reaction \citep{Freyer2008}.   \\
+\Gls{itc} measurements to describe the interaction between \gls{pfomt} and its substrates/effector where performed using a MicroCal iTC200 device (Malvern, Worcestershire, UK).
+\Gls{pfomt} protein was extensively dialyzed against 50\,mM \gls{mmt}-buffer pH 7 prior to \gls{itc} experiments.
+The solution was susequently centrifuged (\timesg{14000}, \degC{4}, 10\,min), to remove insoluble matter and aggregates.
+The dialysate was stored at \degC{4} and used to prepare substrate and effector solutions.
+Generally \uM{50} protein was provided in the \gls{itc} cell and the effectors/substrates to be titrated were loaded into the syringe.
+The substance concentration in the syringe was ten times higher than the protein solution.
+Experiments were carried out at \degC{20} unless otherwise stated. The stirring speed was set to 500\,rpm.
+The injection volume was set to \SIrange{2}{4}{\micro\litre}, amounting to a total of \numrange{10}{19} injections.
 
 
 \subsection{\Glsentryfirst{hplc} analytics}
@@ -518,3 +570,4 @@ The acetonitrile content was increased to 100\,\% in 21\,min and was kept at 100
 Peaks were integrated from the 280\,nm trace using the software provided by the manufacturer of the device.
 
 \subsection{\glsentryfirst{lcms} measurements}
+

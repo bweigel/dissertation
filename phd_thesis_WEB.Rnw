@@ -101,7 +101,9 @@
 %%%-------------------------------------------------%%%
 
 <<chunk_global_r_options, child='usr/subdocuments/options/ost_global_r_options.Rnw', eval=T>>=
+read_chunk("usr/statistics/rproject/test.R")
 @ 
+
 
 %%%--------------------------------------------------------------%%%
 %%% Document content %%%

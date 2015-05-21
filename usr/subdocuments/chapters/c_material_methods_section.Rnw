@@ -469,7 +469,7 @@ When detection of hydrophobic (e.g. flavonoids) and hydrophilic compounds (e.g. 
 The mixture was vortexed for complete mixing and incubated on ice for at least 30\,min.
 After centrifugation (\timesg{10000}, \degC{4}, 10\,min) the supernatant was transferred into \glsentrytext{hplc}-sample vials and analyzed (see \ref{sec:hplc}).
 
-\subsection{Measurement of activity/pH profiles}
+\subsubsection{Measurement of activity/pH profiles}
 Assays to measure activity over larger pH ranges were set up in 50\,mM \glsentryfirst{mmt}- (pH 4 to 9) or \glsentryfirst{ssg}-buffer (pH 4 to 10) to keep the concentrations of buffer salts constant for each pH \citep{Newman2004}. \\
 The protein of interest was first extensively dialyzed against the reaction buffer (e.g. \glsentrytext{mmt}, \glsentrytext{ssg}) at pH 7 with added \gls{edta} (\mM{5}) and then against the same buffer without \gls{edta}.
 Standard reaction conditions were 50\,mM buffer, 0.4\,mM alkyl acceptor (e.g. caffeic acid), 0.5\,mM \gls{sam}, \uM{2.5} \gls{gsh} and \SI{0.2}{\mg\per\ml} enyzme.
@@ -480,20 +480,22 @@ Assays were stopped as described in \ref{sec:omtassay} and analyzed accordingly.
 Catecholic moieties can form stable complexes in the presence of heavy metals such as copper or iron \citep{Schweigert2001,Mentasti1973}.
 Hence, caffeic acid can complex ferric (\cf{Fe^3+}) ions and form a colored complex with \textlambda\textsubscript{max} = \SI{595}{nm} \citep{Dippe}. 
 Since the complex formation is specific for caffeic acid and methylated derivatives (i.e. ferulic and iso-ferulic acid) cannot complex \cf{Fe^3+}, this can be used as a measure for methylation reactions.\\
-\Gls{omt} assays were prepared as before. 
+\Gls{omt} assays were prepared as before (\ref{sec:omtassay}). 
 However, the reactions were stopped by addition of 0.5 volumes catechol reagent (\mM{2} \cf{FeCl3} in \mM{10} \cf{HCl}).
 The complex formation reaction was allowed to equilibrate for 5\,min at \gls{rt} and the absorbance at \SI{595}{\nm} was measured.
 
 % {{{ plot fig:test_plot_two 
 \framedfigure[label = fig:c_plot_cali]{ 
-<<test, fig.width=6.415, fig.height=2.5, echo=F>>=
-load("../../statistics/data/WEB338.fa-ca.calibration.Rda")
+%<<test, fig.width=6.415, fig.height=2.5, echo=F>>=
+%load("../../statistics/data/WEB338.fa-ca.calibration.Rda")
 
-ggplot(cali.curve, aes(x=FA, y=value, shape=as.factor(pH), color=as.factor(DES), group=buffer.no)) + 
-    labs(x="ferulic acid/caffeic acid", y="Abs 595nm") +
-    geom_point() +
-    theme_ost()
-@
+%ggplot(cali.curve, aes(x=FA, y=value, shape=as.factor(pH), color=as.factor(DES), group=buffer.no)) + 
+%    labs(x="ferulic acid/caffeic acid", y="Abs 595nm") +
+%    geom_point() +
+%    theme_ost()
+%@
+<<test, echo=TRUE, tidy=TRUE>>=
+@ 
 }{Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
   commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
   dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,

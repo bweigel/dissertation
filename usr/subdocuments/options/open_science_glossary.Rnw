@@ -10,7 +10,7 @@
 \newacronym{omt}{\protect\textit{O}-MT}{\protect\textit{O}-methyl transferase}
 \newacronym{pda}{PDA}{photo diode array}
 \newacronym[first={UV/VIS}]{uvvis}{UV/VIS}{ultra violet/visible (light spectrum)}
-\newacronym[nonumberlist, first={\AA}]{a}{\AA}{\AA ngstrom, 0.1\,nm}
+\newacronym[nonumberlist, first={\AA}]{a}{\AA}{\AA ngström, 0.1\,nm}
 \newacronym{phenix}{PHENIX}{\href{https://www.phenix-online.org/}{Phyton-based Hierarchial Environment for Integrated Xtallography}}
 \newacronym[first={PDB}]{pdb}{PDB}{Protein Data Base}
 \newacronym{coot}{\textit{Coot}}{\href{http://www2.mrc-lmb.cam.ac.uk/personal/pemsley/coot/}{Crystallographic Object-Oriented Toolkit}}
@@ -43,10 +43,16 @@
 \newacronym{somt}{SOMT-2}{soy O-methyl transferase}
 \newacronym{sams}{SAMS}{\protect\textit{S}-adenosylmethionine synthase}
 %\newacronym{des}{DES}{deep eutectic solvent, see also \gls{nades}}
-\newacronym[]{nades}{NADES}{natural deep eutectic solvent}
+\newacronym{ft}{FT}{Fourier transformation}
+\newacronym{nades}{NADES}{natural deep eutectic solvent}
 \newacronym{iex}{IEX}{ion exchange chromatography}
+\newacronym{gfp}{GFP}{green fluorescent protein}
+\newacronym{doe}{DoE}{design of experiments}
+\newacronym{ffd}{FFD}{fractional factorial design}
+\newacronym{hic}{HIC}{hydrophobic interaction chromatography}
 % substances
-\newacronym{gsh}{GSH}{\textsc{L}-glutathion}
+\newacronym[first={glutathione (GSH)}]{gsh}{GSH}{glutathione, \textgamma-\textsc{L}-glutamyl-\textsc{L}-cysteinylglycine}
+\newacronym{gssg}{GSSG}{glutathione disulfide}
 \newacronym{lb}{LB}{lysogeny broth}
 \newacronym{tb}{TB}{terrific broth}
 \newacronym[first={inlusion bodies (IBs)}, plural={IBs}, longplural={inclusion bodies}]{ib}{IB}{inclusion body}
@@ -62,13 +68,15 @@
 \newacronym[nonumberlist]{ipb}{IPB}{Leibniz-Institute of Plant Biochemistry}
 \newacronym[nonumberlist]{cv}{CV}{column volumes}
 \newacronym[nonumberlist]{tris}{Tris}{tris(hydroxymethyl)-aminomethane}
+\newacronym[nonumberlist]{bistris}{BisTris}{2-[Bis(2-hydroxyethyl)amino]-2-(hydroxymethyl)propane-1,3-diol}
+\newacronym{ac9}{AC-9}{anthracene-9-carboxylic acid}
 \newacronym[first={GdmCl}, nonumberlist]{gua}{GdmCl}{guanidinium hydrochloride}
 \newacronym[nonumberlist]{mes}{MES}{2-(\textit{N}-morpholino)ethanesulfonic acid}
 \newacronym[nonumberlist]{nps}{NPS}{nitrogen, phosphate, sulfate buffer}
 \newacronym[nonumberlist]{hepes}{HEPES}{2-[4-(2-hydroxyethyl)piperazin-1-yl]ethanesulfonic acid}
 \newacronym[first={DTT}, nonumberlist]{dtt}{DTT}{dithiothreitol; (2\textit{S},3\textit{S})-1,4-bis(sulfanyl)butane-2,3-diol}
 \newacronym[nonumberlist]{pmsf}{PMSF}{phenylmethylsulfonylfluoride}
-\newacronym[first={GCH}]{pch}{PCH}{propane-1,2-diol/choline chloride,\gls{nades}-mixture}
+\newacronym[first={PCH}]{pch}{PCH}{propane-1,2-diol/choline chloride,\gls{nades}-mixture}
 \newacronym[first={GCH}]{gch}{GCH}{\textsc{D}-glucose/choline chloride,\gls{nades}-mixture}
 \newacronym[nonumberlist, first={MWCO}]{mwco}{MWCO}{molecular weight cut-off}
 \newacronym[first={\textit{S}-adenosyl-\textsc{L}-ethionine (SAE)}]{sae}{SAE}{\textit{S}-adenosyl-\textsc{L}-ethionine, (2\textit{S})-2-amino-4-[[(2\textit{S},3\textit{S},4\textit{R},5\textit{R})-5-(6-aminopurin-9-yl)-3,4-dihydroxyoxolan-2-yl]methyl-ethylsulfonio]butanoat}%)]]

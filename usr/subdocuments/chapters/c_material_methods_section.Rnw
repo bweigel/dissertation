@@ -28,11 +28,11 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
   1\,M \gls{ssg} pH 4 (10$\times$) & \SI{14.8}{\g\per\l} succinic acid, \SI{60.4}{\g\per\l} \cf{NaH2PO4*H2O}, \SI{32.8}{\g\per\l} glycine, 0.4\,\% 10\,M NaOH \\
     1\,M \gls{ssg} pH 10 (10$\times$) & \SI{14.8}{\g\per\l} succinic acid, \SI{60.4}{\g\per\l} \cf{NaH2PO4*H2O}, \SI{32.8}{\g\per\l} glycine, 10.3\,\% 10\,M NaOH \\
     
-  5$\times$ SDS sample buffer &  10\,\% (w/v) \gls{sds}, 10\,mM \textbeta-mercapto ethanol, 20\,\% glycerol, 0.2\,M Tris/HCl pH\,6.8, 0.05\,\% (w/v) bromophenolblue\\
+  5$\times$ SDS sample buffer &  10\,\% (w/v) \gls{sds}, 10\,mM \textbeta-mercaptoethanol, 20\,\% glycerol, 0.2\,M Tris/HCl pH\,6.8, 0.05\,\% (w/v) bromophenolblue\\
   1000$\times$ trace elements & 50\,mM \cf{FeCl3}, 20\,mM \cf{CaCl2}, 10\,mM \cf{MnCl2}, 10\,mM \cf{ZnSO4}, 2\,mM \cf{CoCl2}, 2\,mM \cf{CuCl2}, 2\,mM \cf{NiCl2}, 2\,mM \cf{Na2MoO4}, 2\,mM \cf{Na2SeO3}, 2\,mM \cf{H3BO3} \\
-  \addtocounter{table}{-1} 
 \end{lstTabularx}
-
+\addtocounter{table}{-1} 
+  
 \subsubsection{Preparation of \glsentryfirst{nades}}
 
 \Gls{nades} were prepared by adding each component in a round-bottom flask with a stirrer and stirring the mixture at \degC{50} with intermittent sonication treatments until a clear solution was obtained.
@@ -58,9 +58,8 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
   TB-medium & \SI{12}{\g\per\l} tryptone, \SI{24}{\g\per\l} yeaxst extract, 0.4\,\% glycerol, 72\,mM \cf{K2HPO4}, 17\,mM \cf{KH2PO4}\\
   ZY & \SI{10}{\g\per\l} tryptone, \SI{5}{\g\per\l} yeast extract \\ 
   ZYP-5052 & volume fraction (v/v): 0.928 ZY, 0.05 20$\times$ NPS, 0.02 50$\times$ 5052, 0.002 1\,M \cf{MgSO4}, 0.0002 1000$\times$ trace elements\\
-  \addtocounter{table}{-1} 
 \end{lstTabularx}
-
+\addtocounter{table}{-1} 
   
 \subsection{Bacterial strains}
 
@@ -78,15 +77,14 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
   Rosetta(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) pRARE (Cam$^R$) \newline Novagen, Wisconsin (USA) \\
   Rosetta(DE3) pLysS & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) pLysSRARE (Cam$^R$) \newline Novagen, Wisconsin (USA) \\
   T7 Express & \textit{fhuA}2 \textit{lacZ::T}7 \textit{gene}1 \textit{[lon] ompT gal sulA}11 \textit{R}(\textit{mcr-}73\textit{::miniTn}10--Tet$^S$)2 \textit{[dcm] R}(\textit{zgb}-210\textit{::Tn}10--Tet$^S$) \textit{endA}1 $\Delta$(\textit{mcrC-mrr})114\textit{::IS}10 \newline NEB, Massachusetts (USA) \\
-\addtocounter{table}{-1} 
 \end{lstTabularx}
-
+\addtocounter{table}{-1} 
+ 
 \subsubsection{\textit{Agrobacterium tumefaciens}}
 \begin{lstTabularx}{\linewidth}{>{\small}p{0.25\textwidth}<{\small}X}
 GV3101 & chromosomal background: C58, marker gene: \textit{rif}, \gls{tip}: cured, opine: nopaline \newline Sylvestre Marillonet, IPB \\
-\addtocounter{table}{-1} 
 \end{lstTabularx}
-
+\addtocounter{table}{-1} 
 
 \subsection{Plasmids}
 %% \ostTableEnv[label = tab:plasmids]{%
@@ -179,13 +177,12 @@ Primers used in this work. Recognition sites for endonucleases are underlined. P
   centrifuges & Eppendorf 5424 (Hamburg, Germany) \newline Hettich Mikro 120 (Kirchlengern, Germany) \newline Beckman Avanti J-E, Beckman Allegra X-30R (Krefeld, Germany)  \\
   centrifuge rotors & Beckman JA-10, JA-16.250, JS-4.3 (Krefeld, Germany)    
 \end{tabularx}
-%\end{small}
+\addtocounter{table}{-1} 
 
 \subsection{Software}
 All mathematical and statistical computations and graphics were done with the \verb+R+ software (versions 3.1.X, \url{http://cran.r-project.org/}) \citep{RCoreTeam2015}. Visualizations of macromolecules were arranged using the PyMol Molecular Graphics System, version 1.7.0.0 (Schrödinger, New York, USA).\\
 Physicochemical calculations and calculations of different molecular descriptors were performed using Marvin Beans 15.4.13.0 (ChemAxon, Budapest, Hungary) and Molecular Operating Environment 2008.10 (Chemical Computing Group, Montreal, Canada).
 Special software used for X-ray crystal structure solution is discussed seperately in the corresponding section (\ref{sec:xraymethods}).
-
 
 %%%% Molecular Biology methods
 \section{Molecular Biology}
@@ -232,7 +229,7 @@ The grouped clippings were weighed, frozen in liquid nitrogen, ground to a powde
 Two tips of a small spatula of freeze-dried material ($\approx$6\,mg), were weighed exactly and extracted with \ul{500} 75\,\% aqueous methanol containing 1\,mM ascorbic acid, 0.2\,\% formic acid and 0.1\,mM flavone (internal standard).
 Therefore the suspension was vortexed for 30\,s, rotated on an orbital shaker for 10\,min and vortexed again for 30\,s.
 The suspension was centrifuged (\timesg{20000}, \degC{4}, 10\,min) and the supernatant transferrerd to a new tube, to remove the insoluble plant material.
-The supernatant was centrifuged again (\timesg{20000}, \degC{4}, 10\,min) and the resulting supernatant was transferred to a \gls{hplc}-vial and stored at \degC{-20} until analysis.
+The supernatant was centrifuged again (\timesg{20000}, \degC{4}, 10\,min) and the resulting supernatant was transferred to a \glssymbol{hplc}-vial and stored at \degC{-20} until analysis.
 
 %% \subsection{Cloning of \textit{p-lsr} reporter constructs} --> evtl Ergebnisse
 
@@ -357,7 +354,7 @@ Cells were harvested by centrifugation (\timesg{10000}, \degC{4}, 10\,min) and u
 
 \subsection{Preparation of \glsentryfirst{ib}}
 \label{sec:ibprep}
-Often, when recombinant protein is produced in high levels in \eco it is accumulated in so-called \glsentryfirst{ib}. 
+Often, when recombinant protein is produced in high levels in \eco it is accumulated in so-called \glsentryfirst{ib} \citep{Rudolph1996}. 
 The accumulating \glspl{ib} consist mainly of the overproduced target protein, which is inherently quite pure already.
 \Glspl{ib} can be selectively recovered from \eco cell lysates and can consequently be refolded. 
 \Glspl{ib} were prepared according to a modified protocol by Palmer \citep{Palmer2012}. \\
@@ -383,6 +380,86 @@ The sample (generally clarified lysate) was applied to the column using a flow o
 Unspecifically bound proteins were washed away by increasing the amount of elution buffer (50\,mM \gls{tris}/HCl, 500\,mM NaCl, 10\,\% glycerol, 250\,mM imidazole pH 7) to 10\,\% (constant for 3 to 5\,\gls{cv}). 
 Highly enriched and purified target protein was eluted with 6 to 10\,\gls{cv} of 100\,\% elution buffer. 
 
+\subsection{Refolding of \glsentrytext{somt} on a micro scale using \glsentryfirst{doe}}
+\Gls{doe} and \gls{ffd} have been successfully used to optimize the refolding conditions of several proteins \citep{Willis2005,Akbari2010,Benoit2007}.
+Thus, an approach using \gls{ffd} was used to find optimal refolding conditions for \gls{somt}. \\
+Factors studied were pH (buffer), arginine, glycerol, divalent cations, ionic strength, redox system, cyclodextrin and co-factor addition.
+The experimental matrix was constructed using the \verb+FrF2+ package (\url{http://cran.r-project.org/web/packages/FrF2/index.html}) in the R software.
+
+\begin{lstTabularx}[1]{\linewidth}{Xc>{\centering\arraybackslash}p{0.25\textwidth}>{\centering\arraybackslash}p{0.25\textwidth}c}
+  \caption{Factors used in the construction of the \gls{ffd}.} \\
+  \label{tab:ffd_factors}
+  \small
+  \hfill \\
+     \toprule
+	factor & symbol & \multicolumn{2}{c}{setting} & unit \\ 
+        & & -1 & +1 & \\
+     \midrule
+     \endfirsthead
+     \toprule
+	factor & symbol & \multicolumn{2}{c}{setting} & unit \\ 
+        & & -1 & +1 & \\
+     \midrule
+     \endhead
+     pH & A & 5.5 & 9.5 & - \\
+     arginine & B & 0 & 0.5 & M \\
+     glycerol & C & 0 & 10 & \% (v/v) \\
+     divalent cations\footnote{no: 1\,mM \gls{edta}; yes: 2\,mM \cf{CaCl2}, \cf{MgCl2}} & D & no & yes & - \\
+     ionic strength\footnote{low: 10\,mM NaCl, 0.5\,mM KCl; high: 250\,mM NaCl, 10\,mM KCl} & E & low & high & -  \\
+     redox state\footnote{reducing: 5\,mM \gls{dtt}; redox-shuffling: 1\,mM \gls{gsh}, 0.2\,mM \gls{gssg}} & F & reducing & redox-shuffling & - \\
+     \textalpha -cyclodextrin & G & 0 & 30 & mM \\
+     \gls{sah} & H & 0 & 0.5 & mM \\
+     \bottomrule
+\end{lstTabularx}
+
+\begin{lstTabularx}[1]{\linewidth}{ccccccccccccc}
+  \caption{Experimental design matrix for the \gls{ffd}.} \\
+  \label{tab:ffd_matrix}
+  \small
+  \hfill \\
+     \toprule
+	Experiment & A & B & C & D & E & F & G & H \\ 
+     \midrule
+     \endfirsthead
+     \toprule
+     Experiment & A & B & C & D & E & F & G & H \\ 
+     \midrule
+     \endhead
+     1 & +&+&+&-&-&-&-&+\\
+     2 & -&-&-&-&-&-&-&-\\
+     3 &+&-&+&+&-&+&+&-\\
+     4 &-&+&+&-&+&+&+&-\\
+     5 &+&+&-&-&+&+&-&-\\
+     6 &-&+&-&+&+&-&+&+\\
+     7 &+&+&-&+&-&-&+&-\\
+     8 &-&-&+&-&+&-&+&+\\
+     9 &+&-&+&+&+&-&-&-\\
+     10 &-&-&-&-&-&+&+&+\\
+     11 &+&-&-&+&+&+&-&+\\
+     12 &-&+&+&+&-&+&-&+\\
+     \bottomrule
+\end{lstTabularx}
+
+The buffers were mixed from stock solutions and prepared in 1.5\,ml microcentrifuge tubes immediately prior to the experiment.
+\ul{50} of solubilized \gls{somt} (\SI{1}{\mg\per\ml}) in \gls{ib} solubilization buffer was added to each buffer followed by a short vortex boost for rapid mixing.
+The final protein concentration in the refolding reaction was \ugperml{50}, whereas the remaining \gls{gua} concentration was $\approx$286\,mM.
+The refolding reactions were incubated at \gls{rt} for 1 hour, followed by an over night incubation at \degC{4}.
+After incubation the refolding reactions were centrifuged (\timesg{10000}, \degC{4}, 10\,min) to separate insoluble and soluble protein fractions.
+The supernatant was transferred to a new tube, whereas the pellet was washed twice with \ul{200} acetone and once with \ul{400} methanol/acetone (1:1). 
+The pellet was resuspended in \ul{100} \gls{pbs} with \ul{20} \sdspage sample buffer and \ul{10} were used for \sdspage analysis. \\
+\ul{100} of the supernatant were concentrated using \gls{tca} precipitation (\ref{sec:tcaprecipitation}) and analyzed by \sdspage.
+The remaining supernatant was rebuffered into 50\,mM \gls{bistris} pH\,7.5 using Amicon\textsuperscript{\textregistered} Ultra 0.5 ml centrifugal filters (Merck, Darmstadt, Germany) according to the manufacturers instructions.
+The pre-weighed collection tubes were re-weighed after recovery and the volume of recovered liquid calculated ($\rho \approx \mathrm{\SI{1}{\g\per\cm\cubed}}$).
+The sample was filled up to \ul{100} using 50\,mM \gls{bistris} pH 7.5 and the protein concentration was assessed using the Roti\textsuperscript{\textregistered}-Quant protein quantification solution (Carl Roth, Karlsruhe, Germany) according to the manufacturers description.
+\ul{50} of each refolded sample was used for an activity test using naringenin as substrate (\ref{sec:omtassay}). 
+The reactions were incubated over night and stopped by the extraction method.
+However, before the actual extraction \ul{1} of \gls{ac9} was added as internal standard.
+The samples were analyzed by \gls{hplc}. \\
+
+\subsubsection{Assessment of refolding performance}
+The performance of each buffer on the refolding of \gls{somt} was examined by comparing the \sdspage results, as well as the amount of soluble protein and the conversion of substrate.
+Main effects were analyzed qualitatively using main effects plots \citep{Box2005}.
+  
 \subsection{Enzymatic production of \glsentrytext{sam} and \glsentrytext{sae}}
 \label{sec:samprod}
 \Gls{sam} and \gls{sae} were prepared according to the method described by Dippe, et. al \citep{Dippe2015}. \\
@@ -416,21 +493,31 @@ Furthermore, fine screens (e.g. for refinement of crystallization conditions) we
 \Gls{pfomt} protein was concentrated to \SIrange{6}{8}{\mg\per\ml} and rebuffered to 10\,mM \gls{tris}/HCl pH 7.5 using Amicon\textsuperscript{\textregistered} Ultracel centrifugal concentrators (10\,kDa \gls{mwco}).
 The concentrated protein solution was centrifuged at \timesg{14000}, \degC{4} for 10\,min to remove any insoluble material or aggregates.
 Crystallization screens were set up as described above. \\
-\Gls{pfomt} was crystallized using the following conditions \bweigel{nochma genau guckn}  2\,M \cf{(NH4)2SO4}, 20\,\%glycerol. The protein solution contained 0.25\,mM \gls{sah}, 0.25\,mM \cf{MgCl2}, 0.25\,mM ferulic acid and \SI{7.53}{\mg\per\ml} \gls{pfomt}.
+\textit{apo}-\Gls{pfomt} was crystallized using the following conditions -- 2\,M \cf{(NH4)2SO4}, 20\,\%glycerol. The protein solution contained 0.25\,mM \gls{sae}, 0.25\,mM \cf{MgCl2}, 0.25\,mM eriodictyol and \SI{7.53}{\mg\per\ml} (\SI{0.262}{\milli\molar}) \gls{pfomt}.
 
 \subsubsection{Crystallization of proteins using \glsentrytext{nades}}
-\bweigel{add DES crystallization}
+\Gls{nades} have the potential to be excellent solvents for hydrophobic compounds such as flavonoids or cinnamic acids \citep{Dai2013} and in addition they are able to stabilize and activate enzymes \citep{Huang2014}.
+\bweigel{To introduction}
+
+Four different model proteins (bovine trypsin, hen-egg white lysozyme, proteinase K and \textit{Candida cylindrica} lipase B) were used to assess the capability of \gls{nades} for protein crystallization.
+\Gls{pch} was tested in a full factorial grid layout using \gls{pch} concentrations of \SIlist{20;30;40;50}{\percent} combined with buffers of different pH.
+The buffers included 0.1\,M sodium acetate pH (4.5 and 5.5), 0.1\,M sodium citrate pH 6.5, 0.1\,M \gls{hepes}/NaOH pH (7 and 7.5) and 0.1\,M \gls{tris}/HCl pH 8.5.
+Thus, the full factorial design had a size of $4 \times 6 = 24$ different conditions.
+Protein solutions were prepared from lyophilized protein and were as follows: \SI{90}{\mg\per\ml} trypsin in \SI{10}{\mg\per\ml} benzamidine, 3\,mM \cf{CaCl2}; \SI{75}{\mg\per\ml} lysozyme in 0.1\,M sodium acetate pH 4.6; \SI{24}{\mg\per\ml} proteinase K in 25\,mM \gls{tris}/HCl pH 7.5 and \SI{6}{\mg\per\ml} lipase B in water.
+For crystallization \ul{2} enzyme solution and \ul{1} reservoir buffer were mixed and set up in a hanging drop experiment on a 24-well \gls{mtp}.
+The experiments were set up at \degC{4}.
+
 
 \subsection{Data collection and processing}
 Crystallographic data were collected at the beamline of the group of Professor Stubbs (\gls{mlu}, Halle, Germany). 
 The beamline was equipped with a rotating anode X-ray source MicroMax007 (Rigaku/MSC, Tokio, Japan), which had a maximum power of \SI{0.8}{\kilo\watt} (\SI{40}{\kilo\volt}, \SI{20}{\milli\ampere}) and supplied monochromatic \cf{Cu}-K\textsubscript{\textalpha}-radiation with a wavelength of 1.5418\,\gls{a}.
 Diffraction patterns were detected with a Saturn 944+ detector (CCD++, Rigaku/MSC, Tokio, Japan). \\
-Indexing and integration of the reflexes via Fourier transformation was accomplished using \emph{XDS} \citep{Kabsch2010,Kabsch1993,Kabsch2010a} or \emph{MOSFLM} \citep{Powell1999}.
+Indexing and integration of the reflexes via \gls{ft} was accomplished using \emph{XDS} \citep{Kabsch2010,Kabsch1993,Kabsch2010a} or \emph{MOSFLM} \citep{Powell1999}.
 \emph{Scala} \citep{Evans2006}, which is integrated in the \gls{ccp4}-Suite, was used for scaling of the intensities.
 
 
 \subsection{Structure solution}
-For the determination of the electron density $\rho(\textrm{\textbf{r}})$, where \textbf{r} is the positional vector, from the diffraction images by Fourier transformation two terms are neccessary as coefficients; the \emph{structure factor amplitudes}, $F_{\mathrm{obs}}(\mathrm{\textbf{h}}$) and the \emph{phase angles} or \emph{phases}, $\alpha\mathrm{(\textbf{h})}$, where \textbf{h} is the reciprocal index vector.
+For the determination of the electron density $\rho(\textrm{\textbf{r}})$, where \textbf{r} is the positional vector, from the diffraction images by \gls{ft} two terms are neccessary as coefficients; the \emph{structure factor amplitudes}, $F_{\mathrm{obs}}(\mathrm{\textbf{h}}$) and the \emph{phase angles} or \emph{phases}, $\alpha\mathrm{(\textbf{h})}$, where \textbf{h} is the reciprocal index vector.
 The structure factor amplitudes can be directly determined from the measured and corrected diffraction intensities of each spot.
 However, the phase information is lost during the detection of the diffracted photons and there is no direct way to determine the phases.
 This constitutes the so-called \emph{phase problem}.
@@ -441,7 +528,7 @@ Phases of the structures herein were exclusively determined by \gls{mr} \citep{R
 A previously published \gls{pfomt} structure (\gls{pdb}-code: 3C3Y \citep{Kopycki2008b}) was used as a template during \gls{mr} procedure for the \gls{pfomt} structure solution.
 %%
 \bweigel{Lysozym struktur}
-For the \gls{mr} of the lysozyme structure the \gls{pdb}-entry XXXX was used.
+For the \gls{mr} of the lysozyme structure the \gls{pdb}-entry 4NHI was used.
 
 
 \subsection{Model building, refinement and validation}
@@ -453,11 +540,25 @@ Structure visualization and the preparation of figures was performed using PyMOL
 \subsection{\textit{In silico} substrate docking}
 \textit{In silico} molecular docking studies were performed using the AutoDock Vina 1.1.2 or AutoDock 4.2.6 software in combination with the AutoDockTools-Suite (\url{http://autodock.scripps.edu/}) \citep{Huey2007,Morris2009,Trott2010}.
 Substrates were docked into the \gls{pfomt} structure with the \gls{pdb}-code 3C3Y.
-The grid box, which determines the search space, was manually assigned to center at 1.581, 5.196, 25.718 (x,y,z) and had size of 22, 20, 25 \gls{a} (x, y, z)).
+The grid box, which determines the search space, was manually assigned to center at \numlist{1.581;5.196;25.718} (x, y, z) and had size of \SIlist{22;20;25}{\angstrom} (x, y, z).
 The exhaustiveness of the global search for AutoDock Vina was set to 25, whereas the rest of the input parameters were kept at their defaults.
 
 %%%% analytical methods
 \section{Analytics}
+
+\subsection{Recording of growth curves}
+Starter cultures ($\approx$2\,ml) of the transformed \eco cells were prepared in the medium to be studied, containing the appropriate antibiotics.
+The cultures were incubated at \degC{37}, 200\,rpm over night and harvested by centrifugation (\timesg{5000}, \degC{4}, 5\,min).
+The pellet was resuspended in 15\,ml \gls{pbs} and the suspension centrifuged (\timesg{5000}, \degC{4}, 5\,min).
+The supernatant was discarded and the washing step repeated once more.
+The washed pellet was resuspended in 2\,ml of the medium to be studied with the appropriate antibiotics and the \odx{600} was measured.
+Three independent 50\,ml cultures of the medium containing the appropriate antibiotics were inoculated such that $\mathrm{OD}^{600}\,\approx\,0.05$ using the washed cell suspension.
+The cultures were incubated at the conditions to be studied and sampled at appropriate intervals of time ($\approx$1\,h).
+One\,ml samples were kept on ice until all samples were aquired.
+\SI{100}{\micro\litre} aliquots of the samples were transferred into a clear \gls{mtp} and the \odx{600} was measured. \\
+\Gls{gfp} fluorescence was measured accordingly, but the \gls{mtp} used was opaque.
+Exitation ($\lambda^{\mathrm{ex}}$) and emission ($\lambda^{\mathrm{em}}$) wavelengths were \SIlist{470;510}{\nm} respectively.
+
 
 \subsection{\textit{In vitro} determination of glucose}
 The glucose concentration in clarified, aqueous samples was determined by a modified version of the glucose assay kit procedure provided by Sigma-Aldrich \citep{Sigma-Aldrich}. \Gls{god} oxidizes \textsc{D}-glucose to gluconic acid, whereby hydrogen peroxide is produced. 
@@ -531,6 +632,7 @@ Standard reaction conditions were 50\,mM buffer, 0.4\,mM alkyl acceptor (e.g. ca
 Assays were stopped as described in \ref{sec:omtassay} and analyzed accordingly.
 
 \subsection{Photospectrometric assay for the methylation of catecholic moieties} 
+\label{sec:photoassay}
 Catecholic moieties can form stable complexes in the presence of heavy metals such as copper or iron \citep{Schweigert2001,Mentasti1973}.
 Hence, caffeic acid can complex ferric (\cf{Fe^3+}) ions and form a colored complex with \textlambda\textsubscript{max} = \SI{595}{nm} \citep{Dippe}. 
 Since the complex formation is specific for caffeic acid and methylated derivatives (i.e. ferulic and iso-ferulic acid) cannot complex \cf{Fe^3+}, this can be used as a measure for methylation reactions.\\
@@ -542,8 +644,19 @@ The complex formation reaction was allowed to equilibrate for 5\,min at \gls{rt}
 \framedfigure[label = fig:c_plot_cali]{ 
 <<test, echo=F, tidy=TRUE, fig.height=3.25, fig.width=5.25, dev='tikz'>>=
 @ 
-}{This is a test.}
+}{%
+    Calibration curves of different relative compositions of ferulic acid to caffeic acid, that were taken as described in \ref{sec:photoassay}. 
+    The total concentration was always \SI{0.4}{\milli\molar}.
+    At lower pH values around 4, the method seems to overestimate the concentration of caffeic acid.
+    However, the slope of the curves stays the same.
+    }
+  
 
+\subsection{\Glsentryfirst{hic}}
+\bweigel{complete}
+
+\subsection{Analytical gel filtration}
+\bweigel{complete}
 
 \subsection{Binding experiments using \Glsentryfirst{itc}}
 \Gls{itc} can be used to directly characterize the thermodynamics of an observed process, be this a binding interaction or an enzymatic reaction \citep{Freyer2008}.   \\

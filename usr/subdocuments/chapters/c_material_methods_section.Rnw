@@ -135,6 +135,7 @@ GV3101 & chromosomal background: C58, marker gene: \textit{rif}, \gls{tip}: cure
 Oligonucleotides and primers were ordered from Eurofins Genomics (Ebersberg, Germany). The purity grade was \emph{high purity salt free} (HPSF).
 Synthetic genes or gene fragments were obtained from GeneArt\textsuperscript{\textregistered} (Life Technologies, Darmstadt, Germany) or Eurofins Genomics (Ebersberg, Germany).
 
+\bweigel{needs completion}
 \ostTableEnv[label = tab:primers]{%
   \begin{tabularx}{\textwidth}{X >{\footnotesize}p{0.70\textwidth} X}
     \toprule
@@ -460,6 +461,12 @@ The samples were analyzed by \gls{hplc}. \\
 The performance of each buffer on the refolding of \gls{somt} was examined by comparing the \sdspage results, as well as the amount of soluble protein and the conversion of substrate.
 Main effects were analyzed qualitatively using main effects plots \citep{Box2005}.
   
+\subsubsection{Upscaling of refolding reactions}
+Refolding reactions were scaled up to 50\,ml.
+Therefore 2.5\,ml solubilized \gls{somt} (\SI{1}{\mg\per\ml}) were added over 10\,minutes to 50\,ml of refolding buffer while stirring at \gls{rt}.
+The refolding reaction was allowed to complete over night at \degC{4}.
+
+
 \subsection{Enzymatic production of \glsentrytext{sam} and \glsentrytext{sae}}
 \label{sec:samprod}
 \Gls{sam} and \gls{sae} were prepared according to the method described by Dippe, et. al \citep{Dippe2015}. \\
@@ -652,11 +659,20 @@ The complex formation reaction was allowed to equilibrate for 5\,min at \gls{rt}
     }
   
 
-\subsection{\Glsentryfirst{hic}}
-\bweigel{complete}
+\subsection{Concentration of \glsentrytext{somt} using \glsentryfirst{hic}}
+After refolding using rapid dilution protein samples are very dilute and a concentration step is required.
+Refolded \gls{somt} was concentrated directly from the refolding buffer using \gls{hic}. \\
+The ammonium sulfate concentration of the protein sample was brought to 1\,M using a 2\,M \cf{(NH4)2SO4} solution and the pH was adjusted to 7 using 5\,M NaOH.
+The sample was centrifuged (\timesg{20000}, \degC{4}, 30\,min) to remove insoluble material and the clarified supernatant was applied to a 1\,ml HiTrap Phenyl FF (Low Sub) (GE Healthcare, Freiburg, Germany), which had been equilibrated with high salt buffer (1\,M \cf{(NH4)2SO4}, 50\,mM \gls{hepes} pH 7).
+The target protein was eluted using a stepwise gradient (\SIlist{1;0.8;0.6;0.4;0.2;0}{\molar} \cf{(NH4)2SO4}, 50\,mM \gls{hepes} pH 7; 5\,\gls{cv} each) to remove the ammonium sulfate.
+The column was washed using 20\,\% ethanol.
+Before \sdspage analysis the eluted high salt fractions were desalted using \gls{tca} precipitation (\ref{sec:tcaprecipitation}).
 
 \subsection{Analytical gel filtration}
-\bweigel{complete}
+Analytical gel filtration was done using a Superdex 200 10/300 GL column (GE Healthcare, Freiburg, Germany) in combination with a \gls{fplc} system according to the manufacturers instructions.
+The column was equilibrated using an appropriate buffer (e.g. 0.1\,M \gls{tris}/HCl pH 7.5) and \ul{100} of sufficiently concentrated ($\geq$\SI{1}{\mg\per\ml}) protein sample were injected.
+The Gel Filtration Standard by Bio-Rad (München, Germany) was run seperately to assess the size of the proteins in the analyzed sample.
+
 
 \subsection{Binding experiments using \Glsentryfirst{itc}}
 \Gls{itc} can be used to directly characterize the thermodynamics of an observed process, be this a binding interaction or an enzymatic reaction \citep{Freyer2008}.   \\

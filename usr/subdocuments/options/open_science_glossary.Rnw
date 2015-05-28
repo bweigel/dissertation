@@ -7,6 +7,13 @@
 \makeglossaries
 
 % analytics
+\newacronym[plural={NRPS}]{nrps}{NRPS}{non-ribosomal peptide synthase}
+\newacronym{seam}{\protect\textit{Se}AM}{\protect\textit{Se}-adenosyl selenomethionine}
+\newacronym[plural={PKS}]{pks}{PKS}{poly ketide synthase}
+\newacronym{mt}{MT}{methyl transferase}
+\newacronym{pmt}{P-MT}{protein methyl transferase}
+\newacronym[nonumberlist, first={DNA}]{dna}{DNA}{desoxyribonucleic acid}
+\newacronym{dmt}{DNA MT}{DNA methyl transferase}
 \newacronym{omt}{\protect\textit{O}-MT}{\protect\textit{O}-methyl transferase}
 \newacronym{pda}{PDA}{photo diode array}
 \newacronym[first={UV/VIS}]{uvvis}{UV/VIS}{ultra violet/visible (light spectrum)}
@@ -51,14 +58,14 @@
 \newacronym{ffd}{FFD}{fractional factorial design}
 \newacronym{hic}{HIC}{hydrophobic interaction chromatography}
 % substances
-\newacronym[first={glutathione (GSH)}]{gsh}{GSH}{glutathione, \textgamma-\textsc{L}-glutamyl-\textsc{L}-cysteinylglycine}
+\newacronym[first={glutathione (GSH)}]{gsh}{GSH}{glutathione, \textgamma-\textsc{l}-glutamyl-\textsc{l}-cysteinylglycine}
 \newacronym{gssg}{GSSG}{glutathione disulfide}
 \newacronym{lb}{LB}{lysogeny broth}
 \newacronym{tb}{TB}{terrific broth}
 \newacronym[first={inlusion bodies (IBs)}, plural={IBs}, longplural={inclusion bodies}]{ib}{IB}{inclusion body}
-\newacronym{mmt}{MMT}{\protect\textsc{L}-malic acid/\glslink{mes}{MES}/\glslink{tris}{Tris}}
+\newacronym{mmt}{MMT}{\protect\textsc{l}-malic acid/\glslink{mes}{MES}/\glslink{tris}{Tris}}
 \newacronym{ssg}{SSG}{succinate/sodium phosphate/glycine}
-\newacronym{iptg}{IPTG}{isopropyl-\textsc{D}-thiogalactopyranosid}
+\newacronym{iptg}{IPTG}{isopropyl-\textsc{d}-thiogalactopyranosid}
 \newacronym{tca}{TCA}{trichloro acetic acid}
 \newacronym{atp}{ATP}{adenosine triphosphate}
 \newacronym{pbs}{PBS}{phosphate buffered saline}
@@ -77,9 +84,9 @@
 \newacronym[first={DTT}, nonumberlist]{dtt}{DTT}{dithiothreitol; (2\textit{S},3\textit{S})-1,4-bis(sulfanyl)butane-2,3-diol}
 \newacronym[nonumberlist]{pmsf}{PMSF}{phenylmethylsulfonylfluoride}
 \newacronym[first={PCH}]{pch}{PCH}{propane-1,2-diol/choline chloride,\gls{nades}-mixture}
-\newacronym[first={GCH}]{gch}{GCH}{\textsc{D}-glucose/choline chloride,\gls{nades}-mixture}
+\newacronym[first={GCH}]{gch}{GCH}{\textsc{d}-glucose/choline chloride,\gls{nades}-mixture}
 \newacronym[nonumberlist, first={MWCO}]{mwco}{MWCO}{molecular weight cut-off}
-\newacronym[first={\textit{S}-adenosyl-\textsc{L}-ethionine (SAE)}]{sae}{SAE}{\textit{S}-adenosyl-\textsc{L}-ethionine, (2\textit{S})-2-amino-4-[[(2\textit{S},3\textit{S},4\textit{R},5\textit{R})-5-(6-aminopurin-9-yl)-3,4-dihydroxyoxolan-2-yl]methyl-ethylsulfonio]butanoat}%)]]
+\newacronym[first={\textit{S}-adenosyl-\textsc{l}-ethionine (SAE)}]{sae}{SAE}{\textit{S}-adenosyl-\textsc{l}-ethionine, (2\textit{S})-2-amino-4-[[(2\textit{S},3\textit{S},4\textit{R},5\textit{R})-5-(6-aminopurin-9-yl)-3,4-dihydroxyoxolan-2-yl]methyl-ethylsulfonio]butanoat}%)]]
 
 \newacronym[first={MLU}, nonumberlist]{mlu}{MLU}{Martin-Luther-Universität}
 
@@ -109,9 +116,9 @@
         name	= SAH,
         text	= SAH,
         symbol	= SAH,
-        first   = {\protect\textit{S}-adenosyl-\protect\textsc{L}-homocysteine (SAH)},
+        first   = {\protect\textit{S}-adenosyl-\protect\textsc{l}-homocysteine (SAH)},
         %first	= {\textit{S}-adenosyl-\textsc{L}-homocysteine (SAH)},
-        description	= {\textit{S}-adenosyl-\textsc{L}-homocysteine}%
+        description	= {\textit{S}-adenosyl-\textsc{l}-homocysteine}%
 }
 
 \newglossaryentry{sam}{
@@ -119,8 +126,8 @@
         name	= SAM,
         text	= SAM,
         symbol	= SAM,
-        first	= \textit{S}-adenosyl-\textsc{L}-methionine (SAM),
-        description	= \textit{S}-adenosyl-\textsc{L}-methionine%
+        first	= \textit{S}-adenosyl-\textsc{l}-methionine (SAM),
+        description	= \textit{S}-adenosyl-\textsc{l}-methionine%
 }
 
 \newglossaryentry{pcr}{

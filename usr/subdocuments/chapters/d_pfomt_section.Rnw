@@ -5,7 +5,19 @@
 \chapter{Evaluation of PFOMT towards the acceptance of long-chain SAM analogues}
 
 \section{Introduction}
+Methylation reactions are one of the key tailoring steps during natural product biosynthesis and can greatly affect a molecules bio- and physicochemical behavoir \bweigel{cite something}.
+However, between the highly complex core structures of natural products, which can be produced by a plethora of enzymes (e.g. \glspl{pks}, \glspl{nrps}, terpene cyclases), and the rather simple alkyl-modification introduced by methylation nature is missing some medium-sized modifaction options \bweigel{cite something}.
+Thus, molecules containing longer chain alkyl modifications like ethyl or propyl moieties on O, N or S-centers have rarely, if ever been observed. \bweigel{cite something}\\
+It has recently been shown, however that a wide array of \glspl{mt}, especially \glspl{pmt} and \glspl{dmt} are capable of using \gls{sam} analogues as co-substrates \citep{Struck2012}.
+The first description of novel synthetic \gls{sam} analogues, including \gls{sae}, allyl and propargyl derivatives, that were also shown to be useful in modifying \gls{dna} via the action of several \glspl{dmt} was provided by Dalhoff, et al. \cite{Dalhoff2006,Dalhoff2006a}.\\
+Later site-specific introduction of allyl, pent-2-en-4-ynyl and even 4-propargyloxy-but-2-enyl moieties into proteins (i.e. histones) was demonstrated using \glspl{pmt} \citep{Wang2011,Peters2010}.
+However the larger substrate analogues were not neccesarily accomodated by the native \glspl{pmt} making engineering efforts for the accomodation of larger substrates inevitable \cite{Wang2011}.
+The specific introduction of alkine functionalized groups made it then possible to use click chemistry for further functionalization and/or detection of the labelled proteins \cite{Wang2011,Peters2010}. \\
+In 2014 Bothwell and Luo even described the exchange of the sulfonium with a selenonium center, which afforded \gls{seam} analogues that were also used as substrates by several \glspl{pmt} \citep{Bothwell2014}.
 
+
+However, as extensively as the labelling of macromolecules by substrate analogues via \glspl{pmt} and \glspl{dmt} has been studied, small molecule \glspl{mt} have been left out.
+Only two \citep{Law2015,Winter2013}
 \section{Substrate binding studies using \glsentrytext{itc}}
 
 \section{Determination of the structure of \emph{apo}-\glsentrytext{pfomt}}

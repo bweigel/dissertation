@@ -20,8 +20,8 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
   binding buffer & 50\,mM \gls{tris}/HCl, 500\,mM NaCl, 10\,\% glycerol, 2.5\,mM imidazole pH 7\\
   elution buffer & 50\,mM \gls{tris}/HCl, 500\,mM NaCl, 10\,\% glycerol, 250\,mM imidazole pH 7 \\
   lysis buffer & 50\,mM \gls{tris}/HCl, 500\,mM NaCl, 10\,\% glycerol, 2.5\,mM imidazole, 0.2\,\% Tween-20 pH 7\\
-  1\,M \gls{mmt} pH 4 (10$\times$) & \SI{26.8}{\g\per\l} \textsc{L}-malic acid, \SI{78.1}{\g\per\l} \gls{mes}, \SI{26.8}{\g\per\l} \gls{tris}, 2.1\,\% 10\,M HCl \\
-    1\,M \gls{mmt} pH 9 (10$\times$) & \SI{26.8}{\g\per\l} \textsc{L}-malic acid, \SI{78.1}{\g\per\l} \gls{mes}, \SI{26.8}{\g\per\l} \gls{tris}, 6.7\,\% 10\,M NaOH \\
+  1\,M \gls{mmt} pH 4 (10$\times$) & \SI{26.8}{\g\per\l} \textsc{l}-malic acid, \SI{78.1}{\g\per\l} \gls{mes}, \SI{26.8}{\g\per\l} \gls{tris}, 2.1\,\% 10\,M HCl \\
+    1\,M \gls{mmt} pH 9 (10$\times$) & \SI{26.8}{\g\per\l} \textsc{l}-malic acid, \SI{78.1}{\g\per\l} \gls{mes}, \SI{26.8}{\g\per\l} \gls{tris}, 6.7\,\% 10\,M NaOH \\
 
   20$\times$ \gls{nps} & 1\,M \cf{Na2HPO4}, 1\,M \cf{KH2PO4}, 0.5\,M \cf{(NH4)2SO4} \\
     
@@ -43,7 +43,7 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
    name & composition & mole ratio & mass fraction (w/w) \\
    \midrule
    PCH & propane-1,2-diol \newline choline chloride \newline water & 1:1:1 &  0.326 \newline 0.597 \newline 0.077 \\
-   GCH & \textsc{D}-glucose \newline choline chloride \newline water & 2:5:5 & 0.314 \newline 0.608 \newline 0.078 \\
+   GCH & \textsc{l}-glucose \newline choline chloride \newline water & 2:5:5 & 0.314 \newline 0.608 \newline 0.078 \\
    \bottomrule
  \end{tabularx}
  }{%
@@ -470,7 +470,7 @@ The refolding reaction was allowed to complete over night at \degC{4}.
 \subsection{Enzymatic production of \glsentrytext{sam} and \glsentrytext{sae}}
 \label{sec:samprod}
 \Gls{sam} and \gls{sae} were prepared according to the method described by Dippe, et. al \citep{Dippe2015}. \\
-Preparative reactions (20\,ml) were performed in  0.1\,M Tris/HCl, 20\,mM \cf{MgCl2}, 200\,mM \cf{KCl} pH\,8.0 and contained 7.5\,mM \gls{atp}, 10\,mM \textsc{D,L}-methionine or \textsc{D,L}-ethionine, for the production of \gls{sam} or \gls{sae} respectively, and 0.2\,\gls{u} \gls{sams} variant I317V.
+Preparative reactions (20\,ml) were performed in  0.1\,M Tris/HCl, 20\,mM \cf{MgCl2}, 200\,mM \cf{KCl} pH\,8.0 and contained 7.5\,mM \gls{atp}, 10\,mM \textsc{d,l}-methionine or \textsc{d,l}-ethionine, for the production of \gls{sam} or \gls{sae} respectively, and 0.2\,\gls{u} \gls{sams} variant I317V.
 The reaction was stopped by lowering the pH to 4 using 10\,M acetic acid after 18\,h of incubation at \degC{30}, 60\,rpm.
 After 10\,min incubation on ice the solution was centrifuged (\timesg{15000}, 10\,min) to remove insoluble matter. 
 The supernatant was transferred to a round bottom flask, frozen in liquid nitrogen and lyophilized. \\
@@ -568,7 +568,7 @@ Exitation ($\lambda^{\mathrm{ex}}$) and emission ($\lambda^{\mathrm{em}}$) wavel
 
 
 \subsection{\textit{In vitro} determination of glucose}
-The glucose concentration in clarified, aqueous samples was determined by a modified version of the glucose assay kit procedure provided by Sigma-Aldrich \citep{Sigma-Aldrich}. \Gls{god} oxidizes \textsc{D}-glucose to gluconic acid, whereby hydrogen peroxide is produced. 
+The glucose concentration in clarified, aqueous samples was determined by a modified version of the glucose assay kit procedure provided by Sigma-Aldrich \citep{Sigma-Aldrich}. \Gls{god} oxidizes \textsc{d}-glucose to gluconic acid, whereby hydrogen peroxide is produced. 
 The hydrogen peroxide can be detected and quantified by \gls{hrp}, which reduces the produced \cf{H2O2} and thereby oxidizes its chromogenic substrate \textit{o}-dianisidine via consecutive one-electron transfers. 
 The oxidized diimine form of \textit{o}-dianisidine can then be measured photospectrometrically \citep{Claiborne1979}.\\
 The methodology employs a coupled photospectrometric assay using \gls{god} and \gls{hrp} with \textit{o}-dianisidine as reporter substrate. 
@@ -577,7 +577,7 @@ Sample solutions from culture supernatants were typically diluted in 9\,volumes 
 The reaction was started, by adding \ul{50} reaction solution to \ul{25} of sample and was incubated at \degC{37} and 200\,rpm for 30\,min in a shaking incubator.
 \ul{50} 6\,M sulfuric acid was added to stop the reaction and achieve maximum color development (full oxidation of any \textit{o}-dianisidine charge transfer complexes) (\autoref{fig:godassay}). \\
 The developed pink color was measured at 540\,nm in a \gls{mtp}-reader.
-A calibration curve of a standard \textsc{D}-glucose solutions (0 to 100\,\si{\micro\gram\per\milli\litre}), that was always part of the experiments, was used to quantify the sample measurements.
+A calibration curve of a standard \textsc{d}-glucose solutions (0 to 100\,\si{\micro\gram\per\milli\litre}), that was always part of the experiments, was used to quantify the sample measurements.
 
 
 \framedfigure[label = fig:godassay]{

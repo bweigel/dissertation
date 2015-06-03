@@ -8,7 +8,10 @@
 
 % analytics
 \newacronym[plural={NRPS}]{nrps}{NRPS}{non-ribosomal peptide synthase}
+\newacronym{sar}{SAR}{structure activity relationship}
+\newacronym{qsar}{QSAR}{quantitative structure activity relationship}
 \newacronym{seam}{\protect\textit{Se}AM}{\protect\textit{Se}-adenosyl selenomethionine}
+
 \newacronym[plural={PKS}]{pks}{PKS}{poly ketide synthase}
 \newacronym{mt}{MT}{methyl transferase}
 \newacronym{pmt}{P-MT}{protein methyl transferase}

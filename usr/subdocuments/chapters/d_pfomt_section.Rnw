@@ -5,15 +5,77 @@
 \chapter{Evaluation of PFOMT towards the acceptance of long-chain SAM analogues}
 
 \section{Introduction}
-Methylation reactions are one of the key tailoring steps during natural product biosynthesis and can greatly affect a molecules bio- and physicochemical behavoir \bweigel{cite something}.
-However, between the highly complex core structures of natural products, which can be produced by a plethora of enzymes (e.g. \glspl{pks}, \glspl{nrps}, terpene cyclases), and the rather simple alkyl-modification introduced by methylation nature is missing some medium-sized modifaction options \bweigel{cite something}.
-Thus, molecules containing longer chain alkyl modifications like ethyl or propyl moieties on O, N or S-centers have rarely, if ever been observed. \bweigel{cite something}\\
-It has recently been shown, however that a wide array of \glspl{mt}, especially \glspl{pmt} and \glspl{dmt} are capable of using \gls{sam} analogues as co-substrates \citep{Struck2012}.
-The first description of novel synthetic \gls{sam} analogues, including \gls{sae}, allyl and propargyl derivatives, that were also shown to be useful in modifying \gls{dna} via the action of several \glspl{dmt} was provided by Dalhoff, et al. \cite{Dalhoff2006,Dalhoff2006a}.\\
+
+Small changes to molecules can have profound influences on their chemical, physical and biological properties.
+Butyric acid esters differing only by a few methylene groups already exhibit quite divergent smells. 
+However, not only the macroscopically qualitative properties can differ.
+The quantifyable psychotomimetic effect of methylated and ethylated lysergic acid amids differ by at least an order of magnitude \citep{Shulgin1997,Hofmann2000}.
+There are many more of these so-called \glspl{sar} and \glspl{qsar} studies on any number of compounds and situations \citep{Santos2014,Alexander1966,Mani1991}. \\
+Methylation reactions are one of the key tailoring steps during natural product biosynthesis and can in consequence greatly affect a molecules bio- and physicochemical behavoir \citep{Struck2012,Ley2005}.
+However, between the highly complex core structures of natural products, which are produced by a plethora of enzymes (e.g. \glspl{pks}, \glspl{nrps}, terpene cyclases), and the rather simple alkyl-modification introduced by methylation nature is missing some medium-sized modifaction options, that proceed as elegantly as the methylation by \glspl{mt}.
+Thus, natural products containing longer chain alkyl modifications like ethyl or propyl moieties on O, N or S-centers have rarely, if ever been observed. \bweigel{cite something}
+
+It has recently been shown however, that a wide array of \glspl{mt}, especially \glspl{pmt} and \glspl{dmt} are capable of using \gls{sam} analogues as co-substrates \citep{Struck2012}.
+The first description of novel synthetic \gls{sam} analogues, including \gls{sae}, allyl and propargyl derivatives, that were also shown to be useful in modifying \gls{dna} via the action of several \glspl{dmt} was provided by Dalhoff, \etal \cite{Dalhoff2006,Dalhoff2006a}. \\
 Later site-specific introduction of allyl, pent-2-en-4-ynyl and even 4-propargyloxy-but-2-enyl moieties into proteins (i.e. histones) was demonstrated using \glspl{pmt} \citep{Wang2011,Peters2010}.
-However the larger substrate analogues were not neccesarily accomodated by the native \glspl{pmt} making engineering efforts for the accomodation of larger substrates inevitable \cite{Wang2011}.
+However, the larger substrate analogues were not neccesarily accomodated by the native \glspl{pmt} making engineering efforts for the accomodation of larger substrates inevitable \cite{Wang2011}.
 The specific introduction of alkine functionalized groups made it then possible to use click chemistry for further functionalization and/or detection of the labelled proteins \cite{Wang2011,Peters2010}. \\
 In 2014 Bothwell and Luo even described the exchange of the sulfonium with a selenonium center, which afforded \gls{seam} analogues that were also used as substrates by several \glspl{pmt} \citep{Bothwell2014}.
+
+\begin{lstTabularx}[1]{\linewidth}{>{\scriptsize}p{0.45\textwidth}XX>{\scriptsize}p{0.12\textwidth}}
+  \caption{\gls{sam} analogues that have been used with \glspl{mt}. Targets: \emph{P} -- protein, \emph{D} -- DNA, \emph{R} -- RNA, \emph{S} -- small molecule.} \\
+  \label{tab:mtlit}
+  \hfill \\
+     \toprule
+	\small analogue & enzyme & target & \small references \\ 
+     \midrule
+     \endfirsthead
+     \toprule
+	\small analogue & enzyme & target & \small references \\ 
+     \midrule
+     \endhead
+     \small\textit{SAM} & & &\\
+    % \cf{-CH3} & & &\\
+     \cf{-CH2-CH3} & & S & \citep{Wang2014,Thomsen2013,Dalhoff2006,Singh2014,Law2015} \footnote{Singh \etal (2014) published a series of 44 biocatalytically synthesized \gls{sam} and \gls{seam} derivatives, most of which were not tested towards their alkyl donation potential in \gls{mt} reactions.}\\
+     \cf{-CH2-CH2-CH3} & & & \citep{Thomsen2013,Dalhoff2006}\\
+     \cf{-CH2-CH2-CH2-CH3} & & & \citep{Thomsen2013}\\
+     \cf{-CH2-C6H5} & NovO, CouO & S & \citep{Stecher2009,Thomsen2013}\\
+     \cf{-CH2-CH2-C6H5} & & & \citep{Thomsen2013}\\
+     \cf{-CH2-CH(-NH2)-COOH} & & & \citep{Thomsen2013}\\
+     \cf{-CH2-C(=O)-NH2} & & & \citep{Thomsen2013}\\
+     \cf{-CH2-C(=O)-CH3} & COMT, TPMT & S & \citep{Lee2010}\\
+     
+     \cf{-CH2-CH=CH2} & NovO, CouO, RapM & P,S & \citep{Wang2014,Stecher2009,Thomsen2013,Dalhoff2006,Singh2014,Wang2011,Wang2011a,Tengg2012a,Law2015} \\
+     \cf{-CH2-CH=CH-CH3} & NovO, CouO & S & \citep{Wang2014,Stecher2009}\\
+     \cf{-CH2-CH=CH-CH2-CH3} & & & \citep{Wang2014}\\
+    
+     \cf{-CH2-C#CH} & Dim-5, \textit{Hs}MLL, TRM1, NovO, CouO & P,R,S & \citep{Willnow2012,Stecher2009,Thomsen2013,Wang2011,Wang2011a,Islam2011}\\
+     \cf{-CH2-C#N} & & S & \citep{Singh2014} \\
+     \cf{-CH2-CH2-C#CH} & PKMT & P & \citep{Islam2011}\\
+     \cf{-CH2-CH2-CH2-C#CH} & PKMT & P & \citep{Islam2011}\\
+     \cf{-CH2-C#C-CH3} & NovO, CouO & S & \citep{Stecher2009,Dalhoff2006,Lukinavicius2013}\\
+     \cf{-CH2-C#C-CH2-CH3} & & & \citep{Lukinavicius2013} \\
+     \cf{-CH2-C#C-CH2-NH2} & & & \citep{Lukinavicius2013} \\
+     \cf{-CH2-C#C-CH2-NH-C(=O)(-CH2-)3-NH2} & & & \citep{Lukinavicius2013} \\
+     \cf{-CH2-C#C(-CH2-)3-NH2} & & & \citep{Lukinavicius2013} \\
+     \cf{-CH2-C#C(-CH2-)3-NH-C(=O)(-CH2-)3-NH2} & & & \citep{Lukinavicius2013} \\
+     \cf{-CH2-C#C(-CH2-)3-C#CH} & & & \citep{Lukinavicius2013} \\
+     \cf{-CH2-C#C(-CH2-)3-N3} & & & \citep{Lukinavicius2013} \\
+     \cf{-CH2-CH=CH-C#CH} & Dim-5, \textit{Hs}MLL, TRM1 & P,R & \citep{Willnow2012,Peters2010,Wang2014,Wang2011,Wang2011a,Motorin2011,Islam2011}\\
+     \cf{-CH2-CH=CH-CH2-C#CH} & & & \citep{Wang2014,Wang2011a,Islam2011} \\
+     \cf{-CH2-CH=CH-CH2-O-CH2-C#CH} & & P & \citep{Wang2014,Wang2011,Wang2011a}\\
+     
+    \\
+     \small\textit{SeAM} & & &\\
+     \cf{-CH3} & & & \\
+     \cf{-CH2-C#CH} & Dim-5, \textit{Hs}MLL, TRM1 & P,R & \citep{Willnow2012,Singh2014,Bothwell2012}\\
+     
+     \\
+     \small\textit{N}-mustard derivatives & & &\\
+     \cf{-CH2-CH2-I} & RebM & S & \citep{Zhang2006} \\
+     
+     \bottomrule
+\end{lstTabularx}
 
 
 However, as extensively as the labelling of macromolecules by substrate analogues via \glspl{pmt} and \glspl{dmt} has been studied, small molecule \glspl{mt} have been left out.

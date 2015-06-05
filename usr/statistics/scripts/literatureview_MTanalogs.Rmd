@@ -1,0 +1,330 @@
+---
+title: "Literaturreview SAM-Analogs"
+output: html_document
+---
+
+The described SAM analogs in the literature were analyzed by:
+
+a) which were tested 
+b) which of the tested were active
+
+
+First load the required packages and load data
+
+```{r, message=FALSE}
+library(tidyr)
+library(magrittr)
+library(ggplot2)
+library(stringr)
+library(dplyr)
+
+dat <- read.csv("~/litreview.csv", na.strings = c("NA", ""))
+```
+
+The data is in a type, which is not easy to work with:
+```{r}
+head(dat)
+```
+
+That is why the data need to be brought in a format, which is easier to interpret.
+For each substrate (keys 1:29) to occurence in each of the three cells _substrate_, _tested_ and _converted_ is extracted by means of `grepl()` and regular expression of the type `(((^X|\D)\D)|(X$))`, where _X_ is the substrate number.
+The results of the three columns are converted into `TRUE = 1` or `FALSE = 0` and combined into a key of the form __XXX__, where __X__ is either __0__ or __1__.
+
+
+```{r}
+for(i in 1:29){
+  if(!exists("daf")){
+    daf <- cbind(dat[,1:2], 
+                 paste(
+                   grepl(
+                     pattern = paste("(((^",as.character(i),"|\\D",as.character(i),")\\D)|(",as.character(i),"$))", sep=""), 
+                     dat$substrates) %>% ifelse(1,0),
+                   grepl(
+                     pattern = paste("(((^",as.character(i),"|\\D",as.character(i),")\\D)|(",as.character(i),"$))", sep=""), 
+                     dat$tested) %>% ifelse(1,0),
+                   grepl(
+                     pattern = paste("(((^",as.character(i),"|\\D",as.character(i),")\\D)|(",as.character(i),"$))", sep=""), 
+                     dat$converted) %>% ifelse(1,0),
+                   sep=""
+                   ))
+    
+    }else{
+      daf <- cbind(daf, 
+                   paste(
+                     grepl(pattern = paste("(((^",as.character(i),"|\\D",as.character(i),")\\D)|(",as.character(i),"$))", sep=""), 
+                           dat$substrates) %>% ifelse(1,0),
+                     grepl(
+                       pattern = paste("(((^",as.character(i),"|\\D",as.character(i),")\\D)|(",as.character(i),"$))", sep=""), 
+                       dat$tested) %>% ifelse(1,0),
+                     grepl(
+                       pattern = paste("(((^",as.character(i),"|\\D",as.character(i),")\\D)|(",as.character(i),"$))", sep=""), 
+                       dat$converted) %>% ifelse(1,0),
+                     sep=""
+                     ))
+      }
+  }
+
+tmp<-expand.grid(A="S", B=1:29) 
+names(daf)[-c(1,2)] <- paste(tmp[,1], tmp[,2], sep=".")
+
+head(daf[1:10])
+```
+
+Next the __XX__ keys are translated into three different classifiers _C_, _T_ and _NT_, which mean _conversion_, _tested_ and _not tested_ respectively. The following rules are applied for the conversion:
+
++ any three 0/1 combinations ending in 1 --> _C_
++ any three 0/1 combinations ending in 1[01] --> _T_
++ any three 0/1 combinations ending in 00 --> _NT_
+
+```{r, warning=FALSE}
+daf <- apply(daf, 2, FUN = function(x){str_replace(string = x, pattern = "^[01]{2}1$", "C")}) %>% as.data.frame
+daf <- apply(daf, 2, FUN = function(x){str_replace(string = x, pattern = "^[01]{1}10$", "T")}) %>% as.data.frame
+daf <- apply(daf, 2, FUN = function(x){str_replace(string = x, pattern = "^[01]{1}00$", "NT")}) %>% as.data.frame
+
+daf %<>% separate(enzymes, into = c("enzyme", "wt"), sep = "_", extra="drop")
+daf$wt <- ifelse(daf$wt == "wt", T, F)
+head(daf[1:10])
+```
+
+The dataframe was then brought into long format and the resukts plotted as a histogram (leaving out the NT values)
+
+```{r, warning=FALSE, dev='CairoPNG'}
+daf %<>% gather(substrate, key, S.1:S.29) 
+head(daf)
+
+daf %>% dplyr::filter(key != "NT") %>%
+  ggplot(data=.) + geom_bar(aes(x=substrate, fill=key))
+```
+
+However this way is not really convenient for grasping the results. But first add the target molecule and atom to the table.
+Then make two separate dfs (`daf.atom` and `daf.mol`) for plotting.
+Split the `key` column into three separate columns for arithmetics.
+Calculate "_relative activity_" by dividing the number of conversions by the number of times tested.
+
+```{r}
+hash_enz <- read.csv("~/enzyme_hash.csv")
+hash_sub <- read.csv("~/substrate_hash.csv")
+
+daf <- merge(daf, hash_enz, by.x = "enzyme", by.y = "enzyme")
+daf <- merge(daf, hash_sub, by.x = "substrate", by.y = "substrate")
+
+daf$type <- factor(daf$type, levels = c("aliphatic", "allylic", "propargylic", "aromatic", "Se-derivative", "N-derivative", "misc"))
+daf <- daf[order(daf$type),]
+
+rm(hash_enz, hash_sub)
+head(daf)
+
+daf %>% dplyr::filter(key != "NT") %>%
+  ggplot(data=.) + geom_bar(aes(x=substrate, fill=target.atom)) + coord_polar()
+
+daf %>% dplyr::filter(key != "NT") %>%
+  ggplot(data=.) + geom_bar(aes(x=substrate, fill=target.mol)) + coord_polar() + facet_grid(~wt)
+
+daf.mol <- daf %>% group_by(target.mol, substrate, name, type, key, wt) %>%
+  summarise(count = n())
+daf.atom <- daf %>% group_by(target.atom, substrate, name, type, key, wt) %>%
+  summarise(count = n())
+daf %<>% group_by(target.mol, target.atom, substrate, name, type, key, wt) %>%
+  summarise(count = n())
+
+
+daf.atom <- tidyr::spread(daf.atom, key = key, value = count, fill = 0)
+daf.mol <- tidyr::spread(daf.mol, key = key, value = count, fill = 0)
+daf <- tidyr::spread(daf, key = key, value = count, fill = 0)
+
+daf.atom %<>% mutate(T = T+C) %>% mutate(C.T = (C/T))
+daf.mol %<>% mutate(T = T+C) %>% mutate(C.T = (C/T))
+daf %<>% mutate(T = T+C) %>% mutate(C.T = (C/T))
+```
+
+PLot heat-map of the data:
+```{r}
+p <- ggplot(daf.mol, aes(target.mol, substrate)) + 
+  geom_tile(aes(fill=C.T, alpha=T, group=substrate), colour="white") +
+  scale_fill_gradient(low = "red", high = "green", na.value="white") +
+  scale_alpha_continuous(range = c(1,1)) +
+  facet_grid(~wt)
+
+base_size <- 9
+p + theme_grey(base_size = base_size) + 
+  labs(x = "", y= "") +
+  scale_x_discrete(expand=c(0,0)) + 
+  theme(legend.position = "none", axis.ticks = element_blank(), panel.background = element_blank())
+```
+
+PLot heat-map of the substrates vs. target.mol (heat = times tested):
+```{r}
+p <- ggplot(daf, aes(target.mol, substrate)) + 
+  geom_tile(aes(fill=C.T, alpha=T, group=substrate), colour="white") +
+  scale_fill_gradient(low = "red", high = "green", na.value="white") +
+  scale_alpha_continuous(range = c(1,1)) +
+  facet_grid(~wt)
+
+base_size <- 9
+p + theme_grey(base_size = base_size) + 
+  labs(x = "", y= "") +
+  scale_x_discrete(expand=c(0,0)) + 
+  theme(legend.position = "none", axis.ticks = element_blank(), panel.background = element_blank())
+```
+
+Radial plot of times a substrate was tested vs. substrate. The actual times the substrates were converted is indicated by the lines.
+
+```{r}
+## order dataframe by type of sidechain
+daf <- daf[order(daf$type),]
+newlev <- merge(data.frame(substrate=unique(daf$substrate)), (daf[,c(3,5)]), by.x = "substrate", by.y = "substrate") %>%
+  unique
+newlev <- newlev[order(newlev$type),]
+daf$substrate <- factor(daf$substrate, levels = as.character(newlev$substrate))
+
+
+## calculate nodes for plotting rectangular segments (corresponding to the types)
+nodes <- data.frame(gpmin=c(0, cumsum(summary(newlev$type)[-length(summary(newlev$type))])+0.5), gpmax=cumsum(summary(newlev$type))+0.5)
+nodes[nrow(nodes),ncol(nodes)] <- nodes[nrow(nodes),ncol(nodes)]+1
+nodes$type <- levels(newlev$type)
+
+size <- daf %>% group_by(type) %>%
+  summarise(size = sum(T))
+nodes$size <- scales::rescale(size$size,to = c(5,30))
+
+nodes %<>% mutate(mid = gpmin + (gpmax-gpmin)/2)
+
+
+## calculate angles for the text annotations of the types
+polarLabs <- function(pos = nodes$mid, max = 30){
+  tmp <- pos/max
+  le <- (-270 - 360 * tmp[which(tmp < 0.5)])
+  #le <- le-(le%/%180)*180 
+  
+  ri <- (-270 - 360 * tmp[which(tmp >= 0.5)])+180
+  #ri <- ri-(ri%/%180)*180 
+  return(c(le,ri))
+  }
+
+nodes$angles <- polarLabs()
+```
+
+A heat map for different target molecules:
+```{r, eval=F}
+p <- ggplot(daf.mol, aes(target.mol, substrate)) + 
+  geom_point(aes(color=C.T, size=T)) +
+  scale_color_gradient(low = "red", high = "green", na.value="white") +
+  scale_size_continuous(range = c(5,20), na.value=0) +
+  facet_grid(~wt)
+```
+
+The following chart shows the total times each substrate has been tested, together with the total number of timnes this subsbstrate was converted (black line). The height of the grey segments corresponds to the frequency a substrate from this group was used.
+
+```{r, eval=TRUE, dev='CairoPNG', fig.height=10, fig.width=10}
+# calculate positions for the black bars
+tmp <- daf %>% group_by(substrate, name, type) %>%
+  summarise(C = sum(C), group="A") 
+
+# save all of it
+save(list = c("daf", "nodes", "tmp"), file="litSAMder.Rda")
+
+
+p <- daf %>% group_by(substrate, target.mol, name, type) %>%
+  summarise(T = sum(T), C = sum(C)) %>%
+  ungroup %>% 
+  ggplot(data=.) + 
+  geom_bar(stat="identity", aes(x = substrate, fill=target.mol, y=T)) +
+  scale_y_continuous(expand=c(0.2, 0))  +
+  theme(panel.background = element_blank(), 
+        axis.text = element_blank(),
+        axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        legend.position = "bottom") +
+  geom_rect(data=nodes, aes(xmin=gpmin, xmax = gpmax, ymin=0, ymax=size), fill="black", color="white", alpha=0.2) +
+  #  geom_segment(data=nodes, aes(x=gpmin, xend = gpmin, y=0, yend=30), color="black") +
+  geom_bar(stat="identity", aes(x = substrate, fill=target.mol, y=T))  +
+  geom_crossbar(data=tmp, aes(x=substrate, ymin=C, ymax=C, y=C), width=0.8, color="black") +
+  # geom_segment(aes(x=substrate, y=0, yend=30, xend=),)
+  geom_text(data=nodes, aes(x = mid, y=25, label=type, angle=angles)) 
+p + coord_polar() 
+```
+
+```{r, eval=TRUE, dev='CairoPNG', fig.height=10, fig.width=10, echo=FALSE}
+tmp <- daf %>% group_by(substrate, name, type) %>%
+  summarise(C = sum(C), group="A") 
+
+cols <- RColorBrewer::brewer.pal(n = 5, "Set1")[c(1,2,4,5)]
+names(cols) <- c("O", "N", "C", "S")
+
+p <- daf %>% group_by(substrate, target.atom, name, type) %>%
+  summarise(T = sum(T), C = sum(C)) %>%
+  ungroup %>% 
+  ggplot(data=.) + 
+  geom_bar(stat="identity", aes(x = substrate, fill=target.atom, y=T)) +
+  scale_y_continuous(expand=c(0.2, 0))  +
+  theme(panel.background = element_blank(), 
+        axis.text = element_blank(),
+        axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        legend.position = "bottom") +
+  geom_rect(data=nodes, aes(xmin=gpmin, xmax = gpmax, ymin=0, ymax=size), fill="black", color="white", alpha=0.2) +
+  geom_bar(stat="identity", aes(x = substrate, fill=target.atom, y=T))  +
+  geom_crossbar(data=tmp, aes(x=substrate, ymin=C, ymax=C, y=C), width=0.8, color="black") +
+ # scale_fill_manual(values =cols) +
+  geom_text(data=nodes, aes(x = mid, y=25, label=type, angle=angles)) 
+p + coord_polar() 
+```
+and one for the different target atoms:
+
+__log-scaling__:
+```{r, eval=FALSE}
+p <- ggplot(daf.atom, aes(target.atom, substrate)) + 
+  geom_point(aes(color=C.T, size=log10(T))) +
+  scale_color_gradient(low = "red", high = "green", na.value="white") +
+  #scale_size_manual(values=c(0,4,6)) +
+  scale_size_continuous(range = c(0,20), na.value=0) +
+  facet_grid(~wt)
+
+base_size <- 9
+p + theme_grey(base_size = base_size) + 
+  labs(x = "", y= "") +
+  scale_x_discrete(expand=c(0.1,0.1)) + 
+  theme(legend.position = "none", axis.ticks = element_blank(), panel.background = element_blank())
+
+```
+
+__normal scaling__:
+```{r, eval=FALSE}
+p <- ggplot(daf.atom, aes(target.atom, substrate)) + 
+  geom_point(aes(color=C.T, size=T)) +
+  scale_color_gradient(low = "red", high = "green", na.value="white") +
+  #scale_size_manual(values=c(0,4,6)) +
+  scale_size_continuous(range = c(5,20), na.value=0) +
+  facet_grid(~wt)
+
+base_size <- 9
+p + theme_grey(base_size = base_size) + 
+  labs(x = "", y= "") +
+  scale_x_discrete(expand=c(0.1,0.1)) + 
+  theme(legend.position = "none", axis.ticks = element_blank(), panel.background = element_blank())
+
+```
+
+```{r, eval=FALSE}
+daf %>% group_by(substrate, target.mol) %>%
+  summarise(T = sum(T), C = sum(C)) %>%
+  ungroup %>% gather(key, count, C:T) %>%
+  ggplot(data=., aes(x = substrate, fill=target.mol)) + 
+  geom_bar(stat="identity", aes(y=count)) + 
+  coord_polar() +
+  scale_y_continuous(expand=c(0.2, 0)) +
+  facet_grid(~key) 
+
+
+ggplot(daf.mol, aes(x = substrate)) + 
+  geom_bar(stat="identity", aes(y=T, fill = C.T)) + 
+  coord_polar() + facet_grid(wt~target.mol) +
+  scale_fill_gradient(low = "red", high = "green", na.value="white") +
+  scale_y_continuous(expand=c(0.2, 0))
+
+ggplot(daf.atom, aes(x = substrate)) + 
+  geom_bar(stat="identity", aes(y=T, fill = C.T)) + 
+  coord_flip() + facet_wrap(~target.atom, nrow = 2) +
+  scale_fill_gradient(low = "red", high = "green", na.value="white") +
+  scale_y_continuous(expand=c(0.2, 0))
+```

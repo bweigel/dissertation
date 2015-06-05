@@ -5,8 +5,11 @@
 <<ost_global_r_options, tidy=FALSE, highlight=FALSE, include=FALSE, cache=FALSE, eval=TRUE>>=  
   ## Load packages 
   suppressPackageStartupMessages(library(ggplot2)) 
+  suppressPackageStartupMessages(library(magrittr))
   suppressPackageStartupMessages(library(plyr))
+  suppressPackageStartupMessages(library(dplyr)) 
   suppressPackageStartupMessages(library(rgbif))
+  suppressPackageStartupMessages(library(gridExtra))
 
   ## Knitr 
 
@@ -15,7 +18,7 @@
   # code evaluation 
   opts_chunk$set(eval=TRUE)
   # code decoration
-  opts_chunk$set(tidy=TRUE, prompt=TRUE, comment='##', highlight=TRUE, size='normalsize')
+  opts_chunk$set(tidy=TRUE, prompt=TRUE, comment='##', highlight=TRUE, size='scriptsize')
   # cache options
   opts_chunk$set(cache.path='usr/cache/')  
   # Caching on by default

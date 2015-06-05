@@ -1,0 +1,8 @@
+type,sidechain,enzyme,target,ref
+SAM,methyl,Dim-5; human MLL; TRM1,"protein, RNA",Willnow2012
+,ethyl,,,
+,propyl,,,
+,allyl,,,
+,propargyl,Dim-5; human MLL; TRM1,"protein, RNA",Willnow2012
+,pent-2-en-4-ynyl,Dim-5; human MLL; TRM1,"protein, RNA",Willnow2012
+SeAM,propargyl,Dim-5; human MLL; TRM1,"protein, RNA",Willnow2012

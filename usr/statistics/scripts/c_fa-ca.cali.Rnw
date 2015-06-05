@@ -1,0 +1,8 @@
+<<test, fig.width=3.415, fig.height=2.5>>=
+#load("usr/statistics/data/WEB338.fa-ca.calibration.Rda")
+plot(cars)
+#ggplot(cali.curve, aes(x=FA, y=value, shape=as.factor(pH), color=as.factor(DES), group=buffer.no)) + 
+#  labs(x="ferulic acid/caffeic acid", y="Abs 595nm") +
+#  geom_point() +
+#  theme_ost()
+@

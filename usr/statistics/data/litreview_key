@@ -1,0 +1,31 @@
+key:								
+1	ethyl			C	converted		P	protein/peptide
+2	propyl			N	not converted		S	small molecule
+3	butyl			NT	not tested		D	DNA
+4	benzyl						R	RNA
+5	homobenzyl							
+6	2-amino-2-carboxy-ethyl							
+7	2-amino-2-oxoethyl							
+8	2-oxopropyl							
+9	allyl							
+10	but-2-enyl							
+11	pent-2-enyl							
+12	propargyl							
+13	cyanomethyl							
+14	homopropargyl							
+15	pent-4-ynyl							
+16	but-2-ynyl							
+17	pent-2-ynyl							
+18	4-amino-but-2-ynyl							
+19	4-(4-amino-butanamido)-but-2-ynyl							
+20	6-amino-hex-2-ynyl							
+21	6-(4-amino-butanamido)-hex-2-ynyl							
+22	oct-2,7-diynyl							
+23	6-azido-hex-2-ynyl							
+24	Pent-2-en-4-ynyl							
+25	hex-2-en-5-ynyl							
+26	4-(pro-2-yn-1-yloxi)-but-2-enyl							
+27	Se-methyl							
+28	Se-propargyl							
+29	N-2-iodoethyl							
+

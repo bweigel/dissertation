@@ -23,7 +23,7 @@ The specific introduction of alkine functionalized groups made it then possible 
 In 2014 Bothwell and Luo even described the exchange of the sulfonium with a selenonium center, which afforded \gls{seam} analogues that were also used as substrates by several \glspl{pmt} \citep{Bothwell2014}.
 
 \begin{lstTabularx}[1]{\linewidth}{>{\scriptsize}p{0.45\textwidth}XX>{\scriptsize}p{0.12\textwidth}}
-  \caption{\gls{sam} analogues that have been used with \glspl{mt}. Targets: \emph{P} -- protein, \emph{D} -- DNA, \emph{R} -- RNA, \emph{S} -- small molecule.} \\
+  \caption{\gls{sam} analogues that have been used with \glspl{mt}. Targets: \emph{P} -- peptide/protein, \emph{D} -- DNA, \emph{R} -- RNA, \emph{S} -- small molecule.} \\
   \label{tab:mtlit}
   \hfill \\
      \toprule
@@ -36,39 +36,39 @@ In 2014 Bothwell and Luo even described the exchange of the sulfonium with a sel
      \endhead
      \small\textit{SAM} & & &\\
     % \cf{-CH3} & & &\\
-     \cf{-CH2-CH3} & & S & \citep{Wang2014,Thomsen2013,Dalhoff2006,Singh2014,Law2015} \footnote{Singh \etal (2014) published a series of 44 biocatalytically synthesized \gls{sam} and \gls{seam} derivatives, most of which were not tested towards their alkyl donation potential in \gls{mt} reactions.}\\
-     \cf{-CH2-CH2-CH3} & & & \citep{Thomsen2013,Dalhoff2006}\\
-     \cf{-CH2-CH2-CH2-CH3} & & & \citep{Thomsen2013}\\
-     \cf{-CH2-C6H5} & NovO, CouO & S & \citep{Stecher2009,Thomsen2013}\\
-     \cf{-CH2-CH2-C6H5} & & & \citep{Thomsen2013}\\
-     \cf{-CH2-CH(-NH2)-COOH} & & & \citep{Thomsen2013}\\
-     \cf{-CH2-C(=O)-NH2} & & & \citep{Thomsen2013}\\
+     \cf{-CH2-CH3} & PRMT1, M.TaqI, M.HhaI, M.BcnIB, RebM, RapM & S,P,D & \citep{Thomsen2013,Dalhoff2006,Singh2014,Law2015} \footnote{Singh \etal (2014) published a series of 44 biocatalytically synthesized \gls{sam} and \gls{seam} derivatives, most of which were not tested towards their alkyl donation potential in \gls{mt} reactions.}\\
+     \cf{-CH2-CH2-CH3} & PRMT1, M.TaqI, M.HhaI, M.BcnIB & P,D & \citep{Thomsen2013,Dalhoff2006}\\
+     \cf{-CH2-CH2-CH2-CH3} & PRMT1 & P & \citep{Thomsen2013}\\
+     \cf{-CH2-C6H5} & NovO, CouO, PRMT1 & S,P & \citep{Stecher2009,Thomsen2013}\\
+%    \cf{-CH2-CH2-C6H5} & & & \citep{Thomsen2013}\\ % not tested with MTs
+%    \cf{-CH2-CH(-NH2)-COOH} & & & \citep{Thomsen2013}\\ % not tested with Mts
+%     \cf{-CH2-C(=O)-NH2} & & & \citep{Thomsen2013}\\ % not tested with Mts
      \cf{-CH2-C(=O)-CH3} & COMT, TPMT & S & \citep{Lee2010}\\
      
-     \cf{-CH2-CH=CH2} & NovO, CouO, RapM & P,S & \citep{Wang2014,Stecher2009,Thomsen2013,Dalhoff2006,Singh2014,Wang2011,Wang2011a,Tengg2012a,Law2015} \\
-     \cf{-CH2-CH=CH-CH3} & NovO, CouO & S & \citep{Wang2014,Stecher2009}\\
-     \cf{-CH2-CH=CH-CH2-CH3} & & & \citep{Wang2014}\\
+     \cf{-CH2-CH=CH2} & NovO, CouO, RapM, PRMT1, M.TaqI, M.HhaI, M.BcnIB, RebM & P,S,D & \citep{Stecher2009,Thomsen2013,Dalhoff2006,Singh2014,Wang2011,Wang2011a,Tengg2012a,Law2015} \\
+     \cf{-CH2-CH=CH-CH3} & NovO, CouO & S & \citep{Stecher2009}\\
+  %  \cf{-CH2-CH=CH-CH2-CH3} & & & \citep{Wang2014}\\ %% only SAM synthase
     
-     \cf{-CH2-C#CH} & Dim-5, \textit{Hs}MLL, TRM1, NovO, CouO & P,R,S & \citep{Willnow2012,Stecher2009,Thomsen2013,Wang2011,Wang2011a,Islam2011}\\
-     \cf{-CH2-C#N} & & S & \citep{Singh2014} \\
+     \cf{-CH2-C#CH} & Dim-5, \textit{Hs}MLL, TRM1, NovO, CouO, PRMT1 & P,R,S & \citep{Willnow2012,Stecher2009,Wang2011,Wang2011a,Islam2011}\\
+     \cf{-CH2-C#N} & RebM & S & \citep{Singh2014} \\
      \cf{-CH2-CH2-C#CH} & PKMT & P & \citep{Islam2011}\\
      \cf{-CH2-CH2-CH2-C#CH} & PKMT & P & \citep{Islam2011}\\
-     \cf{-CH2-C#C-CH3} & NovO, CouO & S & \citep{Stecher2009,Dalhoff2006,Lukinavicius2013}\\
-     \cf{-CH2-C#C-CH2-CH3} & & & \citep{Lukinavicius2013} \\
-     \cf{-CH2-C#C-CH2-NH2} & & & \citep{Lukinavicius2013} \\
-     \cf{-CH2-C#C-CH2-NH-C(=O)(-CH2-)3-NH2} & & & \citep{Lukinavicius2013} \\
-     \cf{-CH2-C#C(-CH2-)3-NH2} & & & \citep{Lukinavicius2013} \\
-     \cf{-CH2-C#C(-CH2-)3-NH-C(=O)(-CH2-)3-NH2} & & & \citep{Lukinavicius2013} \\
-     \cf{-CH2-C#C(-CH2-)3-C#CH} & & & \citep{Lukinavicius2013} \\
-     \cf{-CH2-C#C(-CH2-)3-N3} & & & \citep{Lukinavicius2013} \\
-     \cf{-CH2-CH=CH-C#CH} & Dim-5, \textit{Hs}MLL, TRM1 & P,R & \citep{Willnow2012,Peters2010,Wang2014,Wang2011,Wang2011a,Motorin2011,Islam2011}\\
-     \cf{-CH2-CH=CH-CH2-C#CH} & & & \citep{Wang2014,Wang2011a,Islam2011} \\
-     \cf{-CH2-CH=CH-CH2-O-CH2-C#CH} & & P & \citep{Wang2014,Wang2011,Wang2011a}\\
+     \cf{-CH2-C#C-CH3} & NovO, CouO, M.HhaI, M.TaqI, M.BcnIB & S,D & \citep{Stecher2009,Dalhoff2006,Lukinavicius2013}\\
+     \cf{-CH2-C#C-CH2-CH3} & M.HhaI & D & \citep{Lukinavicius2013} \\
+     \cf{-CH2-C#C-CH2-NH2} & M.HhaI & D & \citep{Lukinavicius2013} \\
+     \cf{-CH2-C#C-CH2-NH-C(=O)(-CH2-)3-NH2} & M.HhaI & D & \citep{Lukinavicius2013} \\
+     \cf{-CH2-C#C(-CH2-)3-NH2} & M.HhaI & D & \citep{Lukinavicius2013} \\
+     \cf{-CH2-C#C(-CH2-)3-NH-C(=O)(-CH2-)3-NH2} & M.HhaI & D & \citep{Lukinavicius2013} \\
+     \cf{-CH2-C#C(-CH2-)3-C#CH} & M.HhaI & D & \citep{Lukinavicius2013} \\
+     \cf{-CH2-C#C(-CH2-)3-N3} & M.HhaI & D & \citep{Lukinavicius2013} \\
+     \cf{-CH2-CH=CH-C#CH} & Dim-5, \textit{Hs}MLL, TRM1, PRMT1 & P,R & \citep{Willnow2012,Peters2010,Wang2011,Wang2011a,Motorin2011,Islam2011}\\
+     \cf{-CH2-CH=CH-CH2-C#CH} & & & \citep{Wang2011a,Islam2011} \\
+     \cf{-CH2-CH=CH-CH2-O-CH2-C#CH} & PRMT1 & P & \citep{Wang2011,Wang2011a}\\
      
     \\
      \small\textit{SeAM} & & &\\
      \cf{-CH3} & & & \\
-     \cf{-CH2-C#CH} & Dim-5, \textit{Hs}MLL, TRM1 & P,R & \citep{Willnow2012,Singh2014,Bothwell2012}\\
+     \cf{-CH2-C#CH} & Dim-5, \textit{Hs}MLL, TRM1, RebM & P,R,S & \citep{Willnow2012,Singh2014,Bothwell2012}\\
      
      \\
      \small\textit{N}-mustard derivatives & & &\\
@@ -77,6 +77,12 @@ In 2014 Bothwell and Luo even described the exchange of the sulfonium with a sel
      \bottomrule
 \end{lstTabularx}
 
+\framedfigure[label = fig:d_lit_sam]{ 
+<<litSAM, echo=F, tidy=TRUE, fig.height=7, fig.width=10, out.width='\\textwidth', dev='pdf', error=T>>=
+@ 
+}{%
+    Test.
+    }
 
 However, as extensively as the labelling of macromolecules by substrate analogues via \glspl{pmt} and \glspl{dmt} has been studied, small molecule \glspl{mt} have been left out.
 Only two \citep{Law2015,Winter2013}

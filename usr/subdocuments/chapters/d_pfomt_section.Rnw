@@ -13,80 +13,63 @@ The quantifyable psychotomimetic effect of methylated and ethylated lysergic aci
 There are many more of these so-called \glspl{sar} and \glspl{qsar} studies on any number of compounds and situations \citep{Santos2014,Alexander1966,Mani1991}. \\
 Methylation reactions are one of the key tailoring steps during natural product biosynthesis and can in consequence greatly affect a molecules bio- and physicochemical behavoir \citep{Struck2012,Ley2005}.
 However, between the highly complex core structures of natural products, which are produced by a plethora of enzymes (e.g. \glspl{pks}, \glspl{nrps}, terpene cyclases), and the rather simple alkyl-modification introduced by methylation nature is missing some medium-sized modifaction options, that proceed as elegantly as the methylation by \glspl{mt}.
-Thus, natural products containing longer chain alkyl modifications like ethyl or propyl moieties on O, N or S-centers have rarely, if ever been observed. \bweigel{cite something}
+Thus, natural products containing longer chain alkyl modifications like ethyl or propyl moieties on O, N or S-centers have rarely, if ever been observed.\footnote{Reaxys searches for natural product isolates with a molecular mass between (150 and 1500) containing the substructures methyl, ethyl or propyl connected to a heteroatom return 66759, 2797 and 52 results respectively. However, it stands to note that 70\,\% of the propyl results were either esters or otherwise activated moieties. \citep{Elsevier}}
 
-It has recently been shown however, that a wide array of \glspl{mt}, especially \glspl{pmt} and \glspl{dmt} are capable of using \gls{sam} analogues as co-substrates \citep{Struck2012}.
-The first description of novel synthetic \gls{sam} analogues, including \gls{sae}, allyl and propargyl derivatives, that were also shown to be useful in modifying \gls{dna} via the action of several \glspl{dmt} was provided by Dalhoff, \etal \cite{Dalhoff2006,Dalhoff2006a}. \\
-Later site-specific introduction of allyl, pent-2-en-4-ynyl and even 4-propargyloxy-but-2-enyl moieties into proteins (i.e. histones) was demonstrated using \glspl{pmt} \citep{Wang2011,Peters2010}.
-However, the larger substrate analogues were not neccesarily accomodated by the native \glspl{pmt} making engineering efforts for the accomodation of larger substrates inevitable \cite{Wang2011}.
-The specific introduction of alkine functionalized groups made it then possible to use click chemistry for further functionalization and/or detection of the labelled proteins \cite{Wang2011,Peters2010}. \\
-In 2014 Bothwell and Luo even described the exchange of the sulfonium with a selenonium center, which afforded \gls{seam} analogues that were also used as substrates by several \glspl{pmt} \citep{Bothwell2014}.
 
-\begin{lstTabularx}[1]{\linewidth}{>{\scriptsize}p{0.45\textwidth}XX>{\scriptsize}p{0.12\textwidth}}
-  \caption{\gls{sam} analogues that have been used with \glspl{mt}. Targets: \emph{P} -- peptide/protein, \emph{D} -- DNA, \emph{R} -- RNA, \emph{S} -- small molecule.} \\
-  \label{tab:mtlit}
-  \hfill \\
-     \toprule
-	\small analogue & enzyme & target & \small references \\ 
-     \midrule
-     \endfirsthead
-     \toprule
-	\small analogue & enzyme & target & \small references \\ 
-     \midrule
-     \endhead
-     \small\textit{SAM} & & &\\
-    % \cf{-CH3} & & &\\
-     \cf{-CH2-CH3} & PRMT1, M.TaqI, M.HhaI, M.BcnIB, RebM, RapM & S,P,D & \citep{Thomsen2013,Dalhoff2006,Singh2014,Law2015} \footnote{Singh \etal (2014) published a series of 44 biocatalytically synthesized \gls{sam} and \gls{seam} derivatives, most of which were not tested towards their alkyl donation potential in \gls{mt} reactions.}\\
-     \cf{-CH2-CH2-CH3} & PRMT1, M.TaqI, M.HhaI, M.BcnIB & P,D & \citep{Thomsen2013,Dalhoff2006}\\
-     \cf{-CH2-CH2-CH2-CH3} & PRMT1 & P & \citep{Thomsen2013}\\
-     \cf{-CH2-C6H5} & NovO, CouO, PRMT1 & S,P & \citep{Stecher2009,Thomsen2013}\\
-%    \cf{-CH2-CH2-C6H5} & & & \citep{Thomsen2013}\\ % not tested with MTs
-%    \cf{-CH2-CH(-NH2)-COOH} & & & \citep{Thomsen2013}\\ % not tested with Mts
-%     \cf{-CH2-C(=O)-NH2} & & & \citep{Thomsen2013}\\ % not tested with Mts
-     \cf{-CH2-C(=O)-CH3} & COMT, TPMT & S & \citep{Lee2010}\\
-     
-     \cf{-CH2-CH=CH2} & NovO, CouO, RapM, PRMT1, M.TaqI, M.HhaI, M.BcnIB, RebM & P,S,D & \citep{Stecher2009,Thomsen2013,Dalhoff2006,Singh2014,Wang2011,Wang2011a,Tengg2012a,Law2015} \\
-     \cf{-CH2-CH=CH-CH3} & NovO, CouO & S & \citep{Stecher2009}\\
-  %  \cf{-CH2-CH=CH-CH2-CH3} & & & \citep{Wang2014}\\ %% only SAM synthase
-    
-     \cf{-CH2-C#CH} & Dim-5, \textit{Hs}MLL, TRM1, NovO, CouO, PRMT1 & P,R,S & \citep{Willnow2012,Stecher2009,Wang2011,Wang2011a,Islam2011}\\
-     \cf{-CH2-C#N} & RebM & S & \citep{Singh2014} \\
-     \cf{-CH2-CH2-C#CH} & PKMT & P & \citep{Islam2011}\\
-     \cf{-CH2-CH2-CH2-C#CH} & PKMT & P & \citep{Islam2011}\\
-     \cf{-CH2-C#C-CH3} & NovO, CouO, M.HhaI, M.TaqI, M.BcnIB & S,D & \citep{Stecher2009,Dalhoff2006,Lukinavicius2013}\\
-     \cf{-CH2-C#C-CH2-CH3} & M.HhaI & D & \citep{Lukinavicius2013} \\
-     \cf{-CH2-C#C-CH2-NH2} & M.HhaI & D & \citep{Lukinavicius2013} \\
-     \cf{-CH2-C#C-CH2-NH-C(=O)(-CH2-)3-NH2} & M.HhaI & D & \citep{Lukinavicius2013} \\
-     \cf{-CH2-C#C(-CH2-)3-NH2} & M.HhaI & D & \citep{Lukinavicius2013} \\
-     \cf{-CH2-C#C(-CH2-)3-NH-C(=O)(-CH2-)3-NH2} & M.HhaI & D & \citep{Lukinavicius2013} \\
-     \cf{-CH2-C#C(-CH2-)3-C#CH} & M.HhaI & D & \citep{Lukinavicius2013} \\
-     \cf{-CH2-C#C(-CH2-)3-N3} & M.HhaI & D & \citep{Lukinavicius2013} \\
-     \cf{-CH2-CH=CH-C#CH} & Dim-5, \textit{Hs}MLL, TRM1, PRMT1 & P,R & \citep{Willnow2012,Peters2010,Wang2011,Wang2011a,Motorin2011,Islam2011}\\
-     \cf{-CH2-CH=CH-CH2-C#CH} & & & \citep{Wang2011a,Islam2011} \\
-     \cf{-CH2-CH=CH-CH2-O-CH2-C#CH} & PRMT1 & P & \citep{Wang2011,Wang2011a}\\
-     
-    \\
-     \small\textit{SeAM} & & &\\
-     \cf{-CH3} & & & \\
-     \cf{-CH2-C#CH} & Dim-5, \textit{Hs}MLL, TRM1, RebM & P,R,S & \citep{Willnow2012,Singh2014,Bothwell2012}\\
-     
-     \\
-     \small\textit{N}-mustard derivatives & & &\\
-     \cf{-CH2-CH2-I} & RebM & S & \citep{Zhang2006} \\
-     
-     \bottomrule
-\end{lstTabularx}
+It has recently been shown however, that a wide array of \gls{sam} analogues are used as co-substrates by a variety of \glspl{mt} \citep{Struck2012}.  
+The majority of the work so far has been done on \glspl{pmt} and \glspl{dmt} (\autoref{fig:d_lit_sam}), since epi-genetics and finding regions of gene-reulation is of great interest. 
+There have been a great many of \gls{sam} analogues synthesized, both chemically and with the help of enzymes \citep{Dalhoff2006,Singh2014}.\\  
 
-\framedfigure[label = fig:d_lit_sam]{ 
-<<litSAM, echo=F, tidy=TRUE, fig.height=7, fig.width=10, out.width='\\textwidth', dev='pdf', error=T>>=
+\framedfigure[label = fig:d_lit_sam]{%
+<<litSAM, echo=F, tidy=TRUE, fig.height=5, fig.width=5, out.width='0.7\\textwidth', dev='pdf', error=T>>=
 @ 
 }{%
-    Test.
+    Graphical representation of the work that has been done on \glspl{mt} in combination with \gls{sam} analogues.
+    The grey areas represent individual groups of \gls{sam} analogues (aliphatic, allylic, propargylic, aromatic, \gls{seam} analogues, nitrogen analogues and miscelaneous others). 
+    The height of the grey areas represents the number of times a member of the corresponding group has been described as tested in the \gls{mt} literature.
+    The height of the colored bars represents the times that individual substrate has been tested. The colors represent the different types of \gls{mt} (red -- \gls{dmt}, green -- \gls{pmt}, lilac -- small molecule \gls{mt}, blue -- \gls{rna} \gls{mt}).
+    The black dash across the bar shows the number of times this substrate was actually converted by either enzyme.%    
     }
 
-However, as extensively as the labelling of macromolecules by substrate analogues via \glspl{pmt} and \glspl{dmt} has been studied, small molecule \glspl{mt} have been left out.
-Only two \citep{Law2015,Winter2013}
+However, the first description of novel synthetic \gls{sam} analogues with extended carbon chains, including \gls{sae}, allyl and propargyl derivatives, that were also shown to be useful in modifying \gls{dna} via the action of several \glspl{dmt} was provided by Dalhoff, \etal \citep{Dalhoff2006,Dalhoff2006a}. 
+It was also noted, that allyl transalkylation reactions proceeded much faster than ethyl- or propyl transfers possibly due to conjugative stabilization of the transition state \citep{Dalhoff2006}.
+A whole variety of allyl derivatives was examined by different researchers and site-specific introductions of allyl, pent-2-en-4-ynyl and even 4-propargyloxy-but-2-enyl moieties into proteins (i.e. histones) was demonstrated using \glspl{pmt} \citep{Wang2011,Peters2010}.
+However, the larger substrate analogues were not neccesarily accomodated by the native \glspl{pmt} making engineering efforts for the accomodation of larger substrates inevitable \cite{Wang2011}.
+The specific introduction of alkine functionalized groups made it then possible to use click chemistry for further functionalization and/or detection of the labelled proteins, DNA or RNA and has been studied extensively (\autoref{fig:d_cuaac}) \citep{Wang2011,Peters2010, Motorin2011, Willnow2012,Schulz2013}.\\ 
+In 2012 Bothwell and Luo even described the exchange of the sulfonium with a selenonium center, which afforded \gls{seam} analogues that have since then been described as substrates for several \glspl{pmt} \citep{Bothwell2012,Bothwell2014}.
+\gls{seam} analogues have the advantage of being more resistant to chemical decomposition than their sulfur counterparts, but also show enhanced transmethylation reactivity \citep{Bothwell2014}.
+
+\framedfigure[label = fig:d_cuaac]{%
+Platzhalter -- Bild Click Chemistry labelling.
+}{%
+   Labelling of alkynylated macromolecules by \gls{cuaac}.%    
+    }
+  
+There have also been some reports on the use of \gls{sam} analogues by small molecule \glspl{mt}.
+In 2009 Stecher \etal reported the use of the \glspl{cmt} NovO and CouO along with synthetic \gls{sam} analogues to accomplish biocatalytic Friedel-Crafts alkyations of some aminocoumarine antibiotics \citep{Stecher2009}.
+Lee \etal were the first ones to describe the transfer of a keto-group from an \gls{sam} derivative by means of the small molecule \glspl{mt} catechol \textit{O}-methyl transferase (EC 2.1.1.6) and thiopurine \textit{S}-methyl transferase (EC 2.1.1.67) \citep{Lee2010}.
+Furthermore there was work done on the \glspl{omt} RebM and RapM, which modify the antitumor active natural products rebeccamycin and rapamycin respectively, that shows the general feasability of using \gls{sam} analogues in combination with \glspl{mt} to modify small molecules \cite{Law2015,Singh2014,Zhang2006}.
+In all of these reports the specificity of the group transfer is retained despite the fact that \gls{sam} analogues are employed as substrates. \\
+There is of yet no bioactivity data reported that shows the biological activity of the newly produced compounds.
+
+\gls{pfomt} is highly promiscuous towards its flavonoid substrate \citep{Kopycki2008b,Ibdah2003}.
+However, the promiscuity towards different \gls{sam} analogues has net yet been described.
+Combination of both, substrate and co-substrate promiscuity in the small molucule \gls{mt} \gls{pfomt} could provide a powerful tool towards the biosynthestic production of novel small molecules with potentially new and promising biological activities.
+It was thus of interest, whether or not \gls{pfomt} would accept \gls{sam} analogues as alkyl donors.
+The already extensively studied \gls{pfomt} was the prime candidate, since the preparation and crystallizability were established and lots of substrates had already been described \citep{Vogt2004,Ibdah2003,Kopycki2008b,Brandt2015}.
+
+
 \section{Substrate binding studies using \glsentrytext{itc}}
+
+The binding of different substrates by \gls{pfomt} was examined by \gls{itc}.
+\gls{sah}, \gls{sam} and \gls{sae} were selected to study the influence of the alkyl chain length on binding.
+Furthermore the binding of the substrate caffeic acid and the influence of \cf{Mg^2+} addition on substrate binding was investigated.
+
+\framedfigure[label = fig:d_itc_substances]{%
+Platzhalter -- Untersuchte Substanzen ITC
+}{%
+   The binding of %    
+    }
 
 \section{Determination of the structure of \emph{apo}-\glsentrytext{pfomt}}
 \subsection{\glsentrytext{pfomt} activity in \glsentryfirst{des} / Solubility-enhancing effects of \glsentrytext{des}}
@@ -96,7 +79,7 @@ vielleicht eigenes kapitel DES?
 \subsection{\glsentrytext{pfomt}-Paper (DIM)}
 \subsection{Dockings???}
 
-\section{Colclusion/Discussion}
+\section{Conclusion/Discussion}
 
 
 

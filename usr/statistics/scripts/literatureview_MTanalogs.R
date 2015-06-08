@@ -13,6 +13,7 @@ rm(daf)
 
 library(tidyr)
 library(magrittr)
+library(ggplot2)
 
 for(i in 1:29){
   if(!exists("daf")){
@@ -51,7 +52,7 @@ names(daf)[-c(1,2)] <- paste(tmp[,1], tmp[,2], sep=".")
 
 library(stringr)
 daf <- apply(daf, 2, FUN = function(x){str_replace(string = x, pattern = "[01]{2}1$", "C")}) %>% as.data.frame
-daf <- apply(daf, 2, FUN = function(x){str_replace(string = x, pattern = "[01]{1}10$", "T")}) %>% as.data.frame
+daf <- apply(daf, 2, FUN = function(x){str_replace(string = x, pattern = "[01]{1}1[01]$", "T")}) %>% as.data.frame
 daf <- apply(daf, 2, FUN = function(x){str_replace(string = x, pattern = "[01]{1}00$", "NT")}) %>% as.data.frame
 
 daf %<>% separate(enzymes, into = c("enzyme", "wt"), sep = "_", extra="drop")
@@ -61,4 +62,7 @@ daf %<>% gather(substrate, key, S.1:S.29)
 
 daf %>% dplyr::filter(key != "NT") %>%
 ggplot(data=.) + geom_bar(aes(x=substrate, fill=key))
+
+daf %>% dplyr::filter(key != "NT") %>%
+ggplot(data=., aes())
 

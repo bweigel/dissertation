@@ -11,13 +11,17 @@
 \newacronym{sar}{SAR}{structure activity relationship}
 \newacronym{qsar}{QSAR}{quantitative structure activity relationship}
 \newacronym{seam}{\protect\textit{Se}AM}{\protect\textit{Se}-adenosyl selenomethionine}
-
+\newacronym{cuaac}{CuAAC}{\cf{Cu^I}-catalyzed azide-alkyne 1,3-dipolar cycloaddition}
+\newacronym{rna}{rna}{ribonucleic acid}
 \newacronym[plural={PKS}]{pks}{PKS}{poly ketide synthase}
 \newacronym{mt}{MT}{methyl transferase}
 \newacronym{pmt}{P-MT}{protein methyl transferase}
 \newacronym[nonumberlist, first={DNA}]{dna}{DNA}{desoxyribonucleic acid}
 \newacronym{dmt}{DNA MT}{DNA methyl transferase}
 \newacronym{omt}{\protect\textit{O}-MT}{\protect\textit{O}-methyl transferase}
+\newacronym{cmt}{\protect\textit{C}-MT}{\protect\textit{C}-methyl transferase}
+\newacronym{smt}{\protect\textit{S}-MT}{\protect\textit{S}-methyl transferase}
+\newacronym{nmt}{\protect\textit{N}-MT}{\protect\textit{N}-methyl transferase}
 \newacronym{pda}{PDA}{photo diode array}
 \newacronym[first={UV/VIS}]{uvvis}{UV/VIS}{ultra violet/visible (light spectrum)}
 \newacronym[nonumberlist, first={\AA}]{a}{\AA}{\AA ngström, 0.1\,nm}

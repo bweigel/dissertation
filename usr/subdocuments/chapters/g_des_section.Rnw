@@ -3,6 +3,7 @@
 %%%-------------------------------------------------%%%
 
 \chapter{\glsentrytext{des} in protein crystallography}
+\label{sec:des}
 
 \section{Introduction}
 

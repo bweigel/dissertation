@@ -499,8 +499,9 @@ Furthermore, fine screens (e.g. for refinement of crystallization conditions) we
 \subsubsection{\glsentrytext{pfomt}}
 \Gls{pfomt} protein was concentrated to \SIrange{6}{8}{\mg\per\ml} and rebuffered to 10\,mM \gls{tris}/HCl pH 7.5 using Amicon\textsuperscript{\textregistered} Ultracel centrifugal concentrators (10\,kDa \gls{mwco}).
 The concentrated protein solution was centrifuged at \timesg{14000}, \degC{4} for 10\,min to remove any insoluble material or aggregates.
+Flavonoids and phenylpropanoid substrates were added to the protein solution from 10\,mM stock solution in \gls{dmso}. 
 Crystallization screens were set up as described above. \\
-\textit{apo}-\Gls{pfomt} was crystallized using the following conditions -- 2\,M \cf{(NH4)2SO4}, 20\,\%glycerol. The protein solution contained 0.25\,mM \gls{sae}, 0.25\,mM \cf{MgCl2}, 0.25\,mM eriodictyol and \SI{7.53}{\mg\per\ml} (\SI{0.262}{\milli\molar}) \gls{pfomt}.
+\textit{apo}-\Gls{pfomt} was crystallized using the following conditions -- 2\,M \cf{(NH4)2SO4}, 20\,\%glycerol. The protein solution contained 0.25\,mM \gls{sae}, 0.25\,mM \cf{MgCl2}, 0.25\,mM eriodictyol and \SI{7.53}{\mg\per\ml} (\SI{0.262}{\milli\molar}) \gls{pfomt} \bweigel{ist das korrekt?}.
 
 \subsubsection{Crystallization of proteins using \glsentrytext{nades}}
 \Gls{nades} have the potential to be excellent solvents for hydrophobic compounds such as flavonoids or cinnamic acids \citep{Dai2013} and in addition they are able to stabilize and activate enzymes \citep{Huang2014}.

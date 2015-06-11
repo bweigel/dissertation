@@ -40,9 +40,11 @@ In 2012 Bothwell and Luo even described the exchange of the sulfonium with a sel
 \gls{seam} analogues have the advantage of being more resistant to chemical decomposition than their sulfur counterparts, but also show enhanced transmethylation reactivity \citep{Bothwell2014}.
 
 \framedfigure[label = fig:d_cuaac]{%
-Platzhalter -- Bild Click Chemistry labelling.
+  \includegraphics{usr/graphics/static/CuAAC}
 }{%
-   Labelling of alkynylated macromolecules by \gls{cuaac}.%    
+   Labelling of macromolecules by using a combination of novel alkine-derivatized \gls{sam} analogues and \glsentryfirst{cuaac}.
+   Depending on the type of label used, it can be employed for detection (e.g. through fluorophores, coupled assays) or affinity purification (e.g. biotin).
+   This technique is also feasable for use in \glsentryfirst{abpp} approaches.%    
     }
   
 There have also been some reports on the use of \gls{sam} analogues by small molecule \glspl{mt}.
@@ -55,6 +57,7 @@ There is of yet no bioactivity data reported that shows the biological activity 
 \gls{pfomt} is highly promiscuous towards its flavonoid substrate \citep{Kopycki2008b,Ibdah2003}.
 However, the promiscuity towards different \gls{sam} analogues has net yet been described.
 Combination of both, substrate and co-substrate promiscuity in the small molucule \gls{mt} \gls{pfomt} could provide a powerful tool towards the biosynthestic production of novel small molecules with potentially new and promising biological activities.
+Functionalization/Detection of substrates could furthermore provide a means of finding new compounds/substrates in complex (e.g. biological) samples analogous to \gls{abpp} approaches.
 It was thus of interest, whether or not \gls{pfomt} would accept \gls{sam} analogues as alkyl donors.
 The already extensively studied \gls{pfomt} was the prime candidate, since the preparation and crystallizability were established and lots of substrates had already been described \citep{Vogt2004,Ibdah2003,Kopycki2008b,Brandt2015}.
 
@@ -66,16 +69,139 @@ The binding of different substrates by \gls{pfomt} was examined by \gls{itc}.
 Furthermore the binding of the substrate caffeic acid and the influence of \cf{Mg^2+} addition on substrate binding was investigated.
 
 \framedfigure[label = fig:d_itc_substances]{%
-Platzhalter -- Untersuchte Substanzen ITC
+\includegraphics{usr/graphics/static/itc-sam}
 }{%
    The binding of %    
     }
 
+\section{Study of variants for long-chain alkylations}
+
+The work described in this section was done in cooperation with Dr. Martin Dippe. Dr. Dippe did most of the work on the \gls{pfomt} variants described herein. \\
+
+Since the ability to bind the enlongated analogue \gls{sae} was present in wildtype \gls{pfomt}, the activity of the \gls{pfomt} protein was tested.
+Activity tests were performed with caffeic acid as substrate under standard reaction conditions.
+The wildtype of \gls{pfomt} was able to use \gls{sae} as a co-substrate for the ethylation of caffeic acid, albeit the amount of detected product was very minute. \bweigel{literaturvergleich der umsäzte?}
+The site of ethylation was determined by \gls{lcms} measurements. \bweigel{LCMS messungen?}
+It was found that ethylation occurs on the catecholic group, however it could not be determined whether at the 3- or 4-position.
+Nonetheless it is highly likely that ethylation occurs at the same position as methylation and thus the product was annotated as 3-ethoxy-4-hydroxy cinnamic acid. \\
+Enzyme variants were prepared to further test the ethylation reactivity of \gls{pfomt}, since a number of groups were able to accomplish transalkylation with larger substrates by expanding the available space in the active site \citep{Wang2011}.
+Residues that were exchanged were selected based upon their position in the active site and in relation to the substrate(s) (\autoref{fig:d_activesite_resis}).
+Fortunately a crystal structure of \gls{pfomt} was available to help with the selection. \bweigel{Genauer zu den Resten...}
+
+\framedfigure[label = fig:d_activesite_resis]{%
+\includegraphics[width=\textwidth, trim=300 100 300 100, clip]{usr/graphics/static/d_activesite_resis}
+}{%
+   The active site of \gls{pfomt}. 
+   The outline of the protein backbone is displayed, with active site residues portrayed as colored sticks (cyan -- F103, red -- F80, turqouise -- M52, yellow -- Y51, white -- F198, blue -- W184, orange -- N202, grey -- as labelled).
+   The co-substrate \gls{sam} (ball-and-stick model) was docked into the structure. %    
+    }
+
+Over 20 enzyme variants were prepared to assess, whether \gls{pfomt} ethylation activity would improve over the wildtype.
+Be that as is may, an improved ethylation activity was not observed. 
+Some of the new variants however displayed an increased methylation activity with the substrates caffeic acid and \gls{sam}.
+The methylation activity of some of the variants increased by over 4-fold \bweigel{grafik?}.
+Interestingly most amino acid substitutions proved as beneficial, rather than detrimental.\\
+Methylation activity benifited greatly from the replacement of bulky hydrophobic residues by smaller and/or charged residues in the vicinity of the acceptor substrates (Tyr51, Trp184 and Phe198).
+However, this was not a general trend since the substitutions N202W and Y51W also improved methylation activity.
+Looking more closely at residue Tyr51, the activity enhancing effect was greatest, when the tyrosine was substituted by the basic amino acids lysine or arginine.
+In addition to an enhanced activity the selectivity for the hydroxyl position to be methylated was also altered in these variants.
+This was not apparent, when caffeic acid was used as a substrate. 
+However when a flavonoid, especially eriodictyol, was used not only the 3' hydroxyl, but to some extent the 4' hydroxyl was methylated.
+This effect was improved in some double variants, where also position 202 was altered. 
+For example the variant Y51R N202W almost exclusively methylated flavonoid substrates at the 4' position \bweigel{grafik? \& paper}.
+A detailed discussion of the results was published in a peer reviewed journal.
+
 \section{Determination of the structure of \emph{apo}-\glsentrytext{pfomt}}
+The binding of the non-natural substrate \gls{sae} to \gls{pfomt} could be shown.
+However, a transethylation reactivity was not observed.
+The question was to the chemical reasons behind these observations.
+Crystallization was sought to answer this question.
+
+At first the already published crystallization procedures were evaluated to start with \citep{Kopycki2008b}. 
+Albeit, reproduction of the results could not be accomplished and new crystallization conditions had to be found.
+This was done using commercially crystallization screening kits and a semi-automated pipetting robot along with an automated imaging system for the observation of the crystallization plates.
+
+Each buffer solution was screened in combination with three different protein solutions (\textit{A} -- 0.25\,mM \gls{sah}, 0.25\,mM \cf{MgCl2}, 0.25\,mM ferulic acid, 0.262\,mM \gls{pfomt}; \textit{B} -- 0.25\,mM \gls{sae}, 0.25\,mM \cf{MgCl2}, 0.25\,mM eriodictyol, 0.262\,mM \gls{pfomt} and \textit{C} -- 0.25\,mM \gls{sah}, 0.25\,mM \cf{MgCl2}, 0.25\,mM ferulic acid, 0.219\,mM \gls{pfomt} Y51R N202W) to obtain protein crystals co-crystallized with the substrates. \\
+During the preparation of the protein solutions it was noted, that upon addition of the flavonoids or phenyl propanoids from \gls{dmso} stocks these tended to precipitate.
+Thechniques meant to circumvent this problem are discussed in \autoref{sec:des}. 
+Crystals began to appear in various wells after a few days (\autoref{fig:d_xtals}) and were observed for each tested protein solution at least once.
+The crystal shape varied from very smooth and almost cubic (high ammonium sulfate) over sphreulites and intergrown crystals (\cf{CaCl2}, PEG-4000) to brittle and ragged needles (\cf{LiCl}, PEG-6000).
+
+\framedfigure[label = fig:d_xtals]{%
+  \begin{subfigure}{0.18\textwidth}
+    \includegraphics[trim=100 0 0 0, clip]{usr/graphics/static/MP000715_C8-3_64d}
+  \end{subfigure}
+  \begin{subfigure}{0.18\textwidth}
+    \includegraphics[trim=100 0 0 0, clip]{usr/graphics/static/MC001414_D4-2_92d}
+  \end{subfigure}
+  \begin{subfigure}{0.18\textwidth}
+    \includegraphics[trim=100 0 0 0, clip]{usr/graphics/static/MC001414_C12-1_3d}
+  \end{subfigure}
+  \begin{subfigure}{0.18\textwidth}
+    \includegraphics[trim=100 0 0 0, clip]{usr/graphics/static/MC001414_D4-1_92d}
+  \end{subfigure}
+  \begin{subfigure}{0.18\textwidth}
+    \includegraphics[trim=100 0 0 0, clip]{usr/graphics/static/MC001414_G10-1_64d}
+  \end{subfigure}
+}{%
+  Some crystal and pseudo-crystal shapes that were observed during the crytsallization screen.
+}
+
+Crystals that grew out of high \cf{(NH4)2SO4} conditions were large enough ($\geq$ \SI{50}{\micro\metre} \bweigel{wie groß?}) to be screened for diffraction right away.
+From these crystals datasets were obtained and the structures solved.
+
+\ostTableEnv[label = tab:d-xtalstat]{%
+  \begin{tabularx}{\textwidth}{Xl}%
+% \caption{Crystallographic data, phasing and refinement statistics.} \\
+%  \label{tab:d-xtalstat}
+%    \small
+%  \hfill \\
+    \toprule
+    & PFOMT \\
+    \midrule
+ %    \endfirsthead
+ %   \toprule
+ %   & PFOMT \\
+ %   \midrule
+ %   \endhead
+     
+    \textit{data collection} & \\
+    wavelength (\gls{a}) & \\
+    resolution (\gls{a}) & \\
+    total reflections & \\
+    unique reflections & \\
+    completeness (\%) & \\
+    $I/\sigma (I)$ & \\
+    $R^a_{sym}$ & \\
+    redundancy & \\
+    space group & \\
+    cell simensions (\gls{a}) & \\
+    \textit{a} & \\
+    \textit{b} & \\
+    \textit{c} & \\ \\
+    
+    \textit{refinement} & \\
+    $R_{\mathrm{work}}$/$R_{\mathrm{free}}$ & \\
+    \gls{rmsd} bond lengths (\gls{a}) & \\
+    \gls{rmsd} bond angles (°) & \\
+    B-values ($\mathrm{\AA^2}$) & \\
+    water & \\
+    ions & \\ \\
+     
+    \textit{Ramachandran plot} (\%) & \\
+    favoured & \\
+    allowed & \\
+    outliers & \\
+    \bottomrule
+  \end{tabularx}
+}{%
+Crystallographic data, phasing and refinement statistics.
+}
+
 \subsection{\glsentrytext{pfomt} activity in \glsentryfirst{des} / Solubility-enhancing effects of \glsentrytext{des}}
 vielleicht eigenes kapitel DES?
 
-\section{Study of variants for long-chain alkylations}
+
 \subsection{\glsentrytext{pfomt}-Paper (DIM)}
 \subsection{Dockings???}
 

@@ -124,27 +124,33 @@ This was done using commercially crystallization screening kits and a semi-autom
 Each buffer solution was screened in combination with three different protein solutions (\textit{A} -- 0.25\,mM \gls{sah}, 0.25\,mM \cf{MgCl2}, 0.25\,mM ferulic acid, 0.262\,mM \gls{pfomt}; \textit{B} -- 0.25\,mM \gls{sae}, 0.25\,mM \cf{MgCl2}, 0.25\,mM eriodictyol, 0.262\,mM \gls{pfomt} and \textit{C} -- 0.25\,mM \gls{sah}, 0.25\,mM \cf{MgCl2}, 0.25\,mM ferulic acid, 0.219\,mM \gls{pfomt} Y51R N202W) to obtain protein crystals co-crystallized with the substrates. \\
 During the preparation of the protein solutions it was noted, that upon addition of the flavonoids or phenyl propanoids from \gls{dmso} stocks these tended to precipitate.
 Thechniques meant to circumvent this problem are discussed in \autoref{sec:des}. 
-Crystals began to appear in various wells after a few days (\autoref{fig:d_xtals}) and were observed for each tested protein solution at least once.
-The crystal shape varied from very smooth and almost cubic (high ammonium sulfate) over sphreulites and intergrown crystals (\cf{CaCl2}, PEG-4000) to brittle and ragged needles (\cf{LiCl}, PEG-6000).
+Crystals began to appear in various wells after a few days and were observed for each tested protein solution at least once.
+The crystal shape varied from very smooth and almost cubic (high ammonium sulfate) over sphreulites and intergrown crystals (\cf{CaCl2}, PEG-4000) to brittle and ragged needles (\cf{LiCl}, PEG-6000)  (\autoref{fig:d_xtals}).
 
 \framedfigure[label = fig:d_xtals]{%
   \begin{subfigure}{0.18\textwidth}
-    \includegraphics[trim=100 0 0 0, clip]{usr/graphics/static/MP000715_C8-3_64d}
+    \includegraphics[trim=0 0 0 0, clip]{usr/graphics/static/MP000715_C8-3_64d}
+    \caption{}
   \end{subfigure}
   \begin{subfigure}{0.18\textwidth}
-    \includegraphics[trim=100 0 0 0, clip]{usr/graphics/static/MC001414_D4-2_92d}
+    \includegraphics[trim=0 0 0 0, clip]{usr/graphics/static/MC001414_D4-2_92d}
+    \caption{}
   \end{subfigure}
   \begin{subfigure}{0.18\textwidth}
-    \includegraphics[trim=100 0 0 0, clip]{usr/graphics/static/MC001414_C12-1_3d}
+    \includegraphics[trim=0 0 0 0, clip]{usr/graphics/static/MC001414_C12-1_3d}
+    \caption{}
   \end{subfigure}
   \begin{subfigure}{0.18\textwidth}
-    \includegraphics[trim=100 0 0 0, clip]{usr/graphics/static/MC001414_D4-1_92d}
+    \includegraphics[trim=0 0 0 0, clip]{usr/graphics/static/MC001414_D4-1_92d}
+    \caption{}
   \end{subfigure}
   \begin{subfigure}{0.18\textwidth}
-    \includegraphics[trim=100 0 0 0, clip]{usr/graphics/static/MC001414_G10-1_64d}
+    \includegraphics[trim=0 0 0 0, clip]{usr/graphics/static/MC001414_G10-1_64d}
+    \caption{}
   \end{subfigure}
 }{%
   Some crystal and pseudo-crystal shapes that were observed during the crytsallization screen.
+  a -- high \cf{(NH4)2SO4}, b-c -- \cf{CaCl2}, PEG-4000, e -- \cf{LiCl}, PEG-6000
 }
 
 Crystals that grew out of high \cf{(NH4)2SO4} conditions were large enough ($\geq$ \SI{50}{\micro\metre} \bweigel{wie groß?}) to be screened for diffraction right away.
@@ -157,7 +163,7 @@ From these crystals datasets were obtained and the structures solved.
 %    \small
 %  \hfill \\
     \toprule
-    & PFOMT \\
+    & 140519\_PFOMT \\
     \midrule
  %    \endfirsthead
  %   \toprule
@@ -167,31 +173,31 @@ From these crystals datasets were obtained and the structures solved.
      
     \textit{data collection} & \\
     wavelength (\gls{a}) & \\
-    resolution (\gls{a}) & \\
-    total reflections & \\
-    unique reflections & \\
-    completeness (\%) & \\
-    $I/\sigma (I)$ & \\
+    resolution (\gls{a}) & 1.95 \\
+    total reflections & \num{392368}\\
+    unique reflections & \num{125822}\\
+    completeness (\%) & 99.12 \\
+    $I/\sigma (I)$ & 9.9\\
     $R^a_{sym}$ & \\
     redundancy & \\
-    space group & \\
-    cell simensions (\gls{a}) & \\
-    \textit{a} & \\
-    \textit{b} & \\
-    \textit{c} & \\ \\
+    space group & $P2_12_12_1$\\
+    cell dimensions (\gls{a}) & \\
+    \textit{a} & 86.16\\
+    \textit{b} & 128\\
+    \textit{c} & 129.3\\ \\
     
     \textit{refinement} & \\
-    $R_{\mathrm{work}}$/$R_{\mathrm{free}}$ & \\
-    \gls{rmsd} bond lengths (\gls{a}) & \\
-    \gls{rmsd} bond angles (°) & \\
-    B-values ($\mathrm{\AA^2}$) & \\
+    $R_{\mathrm{work}}$/$R_{\mathrm{free}}$ & 0.21369 / 0.24700\\
+    \gls{rmsd} bond lengths (\gls{a}) & 0.0199 \\
+    \gls{rmsd} bond angles (°) & 2.0568\\
+    B-values ($\mathrm{\AA^2}$) & 21.593 \\
     water & \\
     ions & \\ \\
      
     \textit{Ramachandran plot} (\%) & \\
-    favoured & \\
-    allowed & \\
-    outliers & \\
+    favoured & 96.82\\
+    allowed & 2.38\\
+    outliers & 0.8\\
     \bottomrule
   \end{tabularx}
 }{%

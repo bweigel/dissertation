@@ -1,11 +1,8 @@
-
 ## ----glossary_definitions, child='usr/subdocuments/options/open_science_glossary.Rnw', eval=T----
 
 
 
-
 ## ----chunk_global_r_options, child='usr/subdocuments/options/ost_global_r_options.Rnw', eval=T----
-
 
 ## ----ost_global_r_options, tidy=FALSE, highlight=FALSE, include=FALSE, cache=FALSE, eval=TRUE----
   ## Load packages 
@@ -105,15 +102,11 @@
 
 
 
-
-
 ## ----subdoc_content_scripts, eval=T, echo=F, cache=F---------------------
 read_chunk("usr/statistics/rproject/test.R")
 read_chunk("usr/statistics/rproject/litSAM.R")
 
-
 ## ----subdoc_content_header, child='usr/subdocuments/chapters/x_header.Rnw', eval=T----
-
 
 
 
@@ -121,14 +114,11 @@ read_chunk("usr/statistics/rproject/litSAM.R")
 
 
 
-
 ## ----subdoc_content_introduction, child='usr/subdocuments/chapters/b_introduction_section.Rnw', eval=T----
 
 
 
-
 ## ----subdoc_content_material_methods, child='usr/subdocuments/chapters/c_material_methods_section.Rnw', eval=T----
-
 
 ## ----test, echo=F, tidy=TRUE, fig.height=3.25, fig.width=5.25, dev='tikz'----
 load("../../statistics/data/WEB338.fa-ca.calibration.Rda")
@@ -138,10 +128,7 @@ ggplot(cali.curve, aes(x=FA, y=value, shape=as.factor(pH), color=as.factor(DES),
  theme_ost()
 
 
-
-
 ## ----subdoc_content_results, child='usr/subdocuments/chapters/d_pfomt_section.Rnw', eval=T----
-
 
 ## ----litSAM, echo=F, tidy=TRUE, fig.height=5, fig.width=5, out.width='0.7\\textwidth', dev='pdf', error=T----
 load("../../statistics/data/litSAMder.Rda")
@@ -184,10 +171,7 @@ a
 #grid.arrange(a,b, nrow=1)
 
 
-
-
 ## ----subdoc_content_results, child='usr/subdocuments/chapters/e_noncatechol_section.Rnw', eval=T----
-
 
 
 
@@ -195,9 +179,7 @@ a
 
 
 
-
 ## ----subdoc_content_results, child='usr/subdocuments/chapters/g_des_section.Rnw', eval=T----
-
 
 
 
@@ -205,9 +187,7 @@ a
 
 
 
-
 ## ----subdoc_content_appendix, child='usr/subdocuments/chapters/x_appendix_section.Rnw', eval=T----
-
 
 ## ----test_plot_one_appendix, fig.width=3.415, fig.height=2.5, echo=FALSE----
    ggplot(movies, aes(x=rating)) +
@@ -215,10 +195,7 @@ a
    theme_ost() 
 
 
-
-
 ## ----subdoc_content_introduction, child='usr/subdocuments/chapters/x_affidavit_section.Rnw', eval=T----
-
 
 
 
@@ -226,9 +203,7 @@ a
 
 
 
-
 ## ----body_mainmatter_chapter_one, child='usr/subdocuments/chapters/x_glossaries_section.Rnw', eval=T----
-
 
 
 

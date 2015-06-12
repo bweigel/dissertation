@@ -111,13 +111,14 @@ This effect was improved in some double variants, where also position 202 was al
 For example the variant Y51R N202W almost exclusively methylated flavonoid substrates at the 4' position \bweigel{grafik? \& paper}.
 A detailed discussion of the results was published in a peer reviewed journal.
 
-\section{Determination of the structure of \emph{apo}-\glsentrytext{pfomt}}
+\section{Crystallization of \glsentrytext{pfomt}}
 The binding of the non-natural substrate \gls{sae} to \gls{pfomt} could be shown.
 However, a transethylation reactivity was not observed.
 The question was to the chemical reasons behind these observations.
-Crystallization was sought to answer this question.
+Previous work on the crystal structure of \gls{pfomt} had been done, but only \gls{sah} could be co-crystallized \citep{Kopycki2008b}.
+But since the crystallizability of \gls{pfomt} had already been shown, this method was chosen to answer the aforementioned question.
 
-At first the already published crystallization procedures were evaluated to start with \citep{Kopycki2008b}. 
+At first the already crystallization procedures were evaluated to start with \citep{Kopycki2008b}. 
 Albeit, reproduction of the results could not be accomplished and new crystallization conditions had to be found.
 This was done using commercially crystallization screening kits and a semi-automated pipetting robot along with an automated imaging system for the observation of the crystallization plates.
 
@@ -153,56 +154,86 @@ The crystal shape varied from very smooth and almost cubic (high ammonium sulfat
   a -- high \cf{(NH4)2SO4}, b-c -- \cf{CaCl2}, PEG-4000, e -- \cf{LiCl}, PEG-6000
 }
 
-Crystals that grew out of high \cf{(NH4)2SO4} conditions were large enough ($\geq$ \SI{50}{\micro\metre} \bweigel{wie groß?}) to be screened for diffraction right away.
-From these crystals datasets were obtained and the structures solved.
+Crystals that were large enough ($\geq$ \SI{50}{\micro\metre} \bweigel{wie groß?}), where screened for diffraction right away.
+A rough estimate of the resolution, cell parameters and the space group was aquired, if the diffraction images could be indexed.
+The screened crystals all had similar cell parameters and belonged to the same space group, $P2_12_12_1$.
+However, the unit cell of crystals that grew out of high ammonium sulfate concentrations ($\geq$\SI{1.8}{\molar}) was approximately four times as large as that of the published structure 3C3Y and crystrals that developed under different crystallization conditions.
+Consequently the assymetric unit consisted of 4, instead of 2 \gls{pfomt} monomers.
+Several datasets were collected of crystals from high \cf{(NH4)2SO4}, since these possessed different cell parameters than the previously reported structure and therefore seemed to be promising candidates for bound substrates.
+
+\subsubsection{The crystal structure of \textit{apo}-PFOMT}
+
+Most of the collected datasets were partly solved.
+As it turned out however the substrates were not co-crystallized.
+Rather, the \emph{apo}-form of \gls{pfomt} had been crystallized.
+Thus, one dataset was solved to completion to obtain a novel \gls{pfomt} structure with no substrate bound.
+
+The assymetric unit of \emph{apo}-\Gls{pfomt} contained two homodimers (4 monomers).
+The active site of each monomer was found to be empty except for a sole sulfate ion, which was positioned where the amino- and carboxylate group of the \gls{sah} reside in the 3C3Y structure.
+Significant shifts in the structure of some loops were observed and contrary to the previously published structure the N-terminus of the monomers was resolved up to the His-tag.
+
+
+\framedfigure[label = fig:d_struct]{%
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[scale=0.175, trim=0 0 0 0, clip]{usr/graphics/static/apo-pfomt_unit_cell.png}
+    \caption{assymetric unit}
+  \end{subfigure}
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[scale=0.175, trim=0 0 0 50, clip]{usr/graphics/static/image_002_1.png}
+    \caption{comparison of 3C3Y (orange) and \emph{apo}-\gls{pfomt} (green)}
+  \end{subfigure}
+}{%
+An overview of the features in the \emph{apo}-\gls{pfomt} structure.
+}
 
 \ostTableEnv[label = tab:d-xtalstat]{%
-  \begin{tabularx}{\textwidth}{Xl}%
+  \begin{tabularx}{\textwidth}{Xll}%
 % \caption{Crystallographic data, phasing and refinement statistics.} \\
 %  \label{tab:d-xtalstat}
 %    \small
 %  \hfill \\
     \toprule
-    & 140519\_PFOMT \\
+    & 140519\_PFOMT  & MC001413-G10.1 \\
     \midrule
  %    \endfirsthead
  %   \toprule
- %   & PFOMT \\
+ %   & PFOMT  & \\
  %   \midrule
  %   \endhead
      
-    \textit{data collection} & \\
-    wavelength (\gls{a}) & \\
-    resolution (\gls{a}) & 1.95 \\
-    total reflections & \num{392368}\\
-    unique reflections & \num{125822}\\
-    completeness (\%) & 99.12 \\
-    $I/\sigma (I)$ & 9.9\\
-    $R^a_{sym}$ & \\
-    redundancy & \\
-    space group & $P2_12_12_1$\\
-    cell dimensions (\gls{a}) & \\
-    \textit{a} & 86.16\\
-    \textit{b} & 128\\
-    \textit{c} & 129.3\\ \\
+    \textit{data collection} &  & \\
+    wavelength (\gls{a}) &  & \\
+    resolution (\gls{a}) & 1.95  & \\
+    total reflections & \num{392368} & \\
+    unique reflections & \num{125822} & \\
+    completeness (\%) & 99.12 & \\
+    $I/\sigma (I)$ & 9.9 & \\
+    $R^a_{sym}$ &  & \\
+    redundancy &  & \\
+    space group & $P2_12_12_1$ & \\
+    cell dimensions (\gls{a}) &  & \\
+    \textit{a} & 86.16 & 48.88 \\
+    \textit{b} & 128 & 71.36 \\
+    \textit{c} & 129.3 & 127.80 \\ \\
     
-    \textit{refinement} & \\
-    $R_{\mathrm{work}}$/$R_{\mathrm{free}}$ & 0.21369 / 0.24700\\
-    \gls{rmsd} bond lengths (\gls{a}) & 0.0199 \\
-    \gls{rmsd} bond angles (°) & 2.0568\\
-    B-values ($\mathrm{\AA^2}$) & 21.593 \\
-    water & \\
-    ions & \\ \\
+    \textit{refinement} &  & \\
+    $R_{\mathrm{work}}$/$R_{\mathrm{free}}$ & 0.21369 / 0.24700 & \\
+    \gls{rmsd} bond lengths (\gls{a}) & 0.0199  & \\
+    \gls{rmsd} bond angles (°) & 2.0568 & \\
+    B-values ($\mathrm{\AA^2}$) & 21.593  & \\
+    water &  & \\
+    ions &  & \\ \\
      
-    \textit{Ramachandran plot} (\%) & \\
-    favoured & 96.82\\
-    allowed & 2.38\\
-    outliers & 0.8\\
+    \textit{Ramachandran plot} (\%) &  & \\
+    favoured & 96.82 & \\
+    allowed & 2.38 & \\
+    outliers & 0.8 & \\
     \bottomrule
   \end{tabularx}
 }{%
 Crystallographic data, phasing and refinement statistics.
 }
+
 
 \subsection{\glsentrytext{pfomt} activity in \glsentryfirst{des} / Solubility-enhancing effects of \glsentrytext{des}}
 vielleicht eigenes kapitel DES?

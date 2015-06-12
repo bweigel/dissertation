@@ -1,0 +1,101 @@
+---
+title: "PFOMT Xtals"
+author: "Benjamin Weigel"
+date: "12.06.2015"
+output:
+html_document:
+highlight: pygments
+theme: flatly
+---
+
+A simple script to process the unit cell parameters and space groups captured by the rigacu software from the `*.log` files.
+The actual data was extracted via `$ grep()`in this fashion:
+`grep "Spacegroup\ number" -r --include \*.log ../Stuff/datasets/ > ~/IPB/thesis/usr/statistics/data/spacegroup.txt`
+
+Used `grep "^[\ ]\{9\}Mosaicity:" -r --include \*.log ../Stuff/datasets/ > ~/IPB/thesis/usr/statistics/data/unitcellmosaicity.txt`
+for the mosaicity (first occurence in *.log file from XDS)
+
+From Rigaku software:
+```{r}
+library(magrittr)
+library(stringr)
+library(dplyr)
+
+## process spacegroup
+tmp <- readLines("../data/spacegroup.txt") %>% str_extract_all(pattern = "((dtrefine){1}[_]*[[:digit:]]*)|([/][[:digit:]]+([_][[:alpha:]]+)+[_]*[/])|[[:digit:]]+$") %>%
+  lapply(., function(x){if(length(x)>2) return(x) else return(NULL)})
+
+id <- tmp %>%
+  lapply(X = ., FUN = "[", 1) %>% unlist %>% str_replace_all(pattern = "[/]|(_/)", replacement = "")
+
+xtaldf <- data.frame(cbind(id, tmp %>%
+                             lapply(X = ., FUN = "[", 2) %>% unlist))
+
+xtaldf <- data.frame(cbind(xtaldf, tmp %>%
+                             lapply(X = ., FUN = "[", 3) %>% unlist %>% as.numeric))
+
+## process unit cell size
+tmp <- readLines("../data/unitcelllen.txt") %>% str_extract_all(pattern = "((dtrefine){1}[_]*[[:digit:]]*)|([/][[:digit:]]+([_][[:alpha:]]+)+[_]*[/])|([[:digit:]]+[.][[:digit:]]+)")  %>%
+  lapply(., function(x){if(length(x)>4) return(x) else return(NULL)})
+
+xtaldf <- data.frame(cbind(xtaldf, tmp %>%
+                             lapply(X = ., FUN = "[", 3:5) %>% unlist %>% as.numeric %>% matrix(ncol = 3)))
+
+## process angles
+tmp <- readLines("../data/unitcellangle.txt") %>% str_extract_all(pattern = "((dtrefine){1}[_]*[[:digit:]]*)|([/][[:digit:]]+([_][[:alpha:]]+)+[_]*[/])|([[:digit:]]+[.][[:digit:]]+)")  %>%
+  lapply(., function(x){if(length(x)>4) return(x) else return(NULL)})
+
+xtaldf <- data.frame(cbind(xtaldf, tmp %>%
+                             lapply(X = ., FUN = "[", 3:5) %>% unlist %>% as.numeric %>% matrix(ncol = 3)))
+
+## process angles
+tmp <- readLines("../data/unitcellmosaicity.txt") %>% str_extract_all(pattern = "((dtrefine){1}[_]*[[:digit:]]*)|([/][[:digit:]]+([_][[:alpha:]]+)+[_]*[/])|([[:digit:]]+[.][[:digit:]]+)")  %>%
+  lapply(., function(x){if(length(x)>2) return(x) else return(NULL)})
+
+xtaldf <- data.frame(cbind(xtaldf, tmp %>%
+                             lapply(X = ., FUN = "[", 3) %>% unlist %>% as.numeric %>% matrix(ncol = 1)))
+
+names(xtaldf)[-1] <- c("dtref", "spacegroup.num", "len.a", "len.b", "len.c", "ang.a", "ang.b", "ang.c", "mosaicity")
+
+xtaldf %>% mutate(volume = len.a*len.b*len.c)
+head(xtaldf)
+```
+
+From Refmac:
+
+`grep "\(Cell\ from\ mtz\)\|\(Space\ group\ from\ mtz\)" -r --include \*refmac5.log > ~/IPB/thesis/usr/statistics/data/refmac.txt`
+
+```{r}
+refmacdf <- readLines("../data/refmac.txt") %>% 
+  str_extract_all(pattern = "(^([[:alnum:]]+)([_]*[[:alnum:]]+)+([.]1)?[_]?[/])|([[:digit:]]+[.][[:digit:]]+)|([-][ ]+[[:digit:]]+)|([-][ ]+[[:alpha:]]{1}[ ]+([[:digit:]]+[ ]*)+)|([[:digit:]]+_refmac)") %>% matrix(ncol = 2, byrow = T) %>%
+  apply(., 1, unlist) %>% t %>% data.frame(stringsAsFactors = F)
+
+refmacdf %<>% select(-c(9,10)) %>%
+  mutate(X1 = str_replace(X1,"[/]", ""),
+         X2 = str_replace(X2,"[_]refmac", ""),
+         X11 = str_replace(X11,"[-][ ]+", ""),
+         X12 = str_replace(X12,"[-][ ]+", ""))
+
+names(refmacdf) <- c("id", "refmac.run", "len.a", "len.b", "len.c", "ang.a", "ang.b", "ang.c", "spacegroup.num", "spacegroup.name")
+
+refmacdf[2:8] <- transform(refmacdf[2:8], 
+          len.a = as.numeric(len.a),
+          len.b = as.numeric(len.b),
+          len.c = as.numeric(len.c),
+          ang.a = as.numeric(ang.a),
+          ang.b = as.numeric(ang.a),
+          ang.c = as.numeric(ang.a),
+          refmac.run = as.numeric(refmac.run))
+
+## to get the latest refmac run results
+refmacdf$id <- factor(refmacdf$id, levels = unique(refmacdf$id), ordered = T)
+refmacdf %<>% group_by(id) %>% mutate(max=which(refmac.run == max(refmac.run)))
+
+tmp <- refmacdf %>% group_by(id) %>% summarize(n = n(), max=unique(max))
+tmp <- c(0,cumsum(tmp$n)[-5]) + tmp$max
+
+refmacdf <- refmacdf[tmp,]
+
+print(refmacdf)
+```
+

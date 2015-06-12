@@ -1,0 +1,234 @@
+140519_PFOMT/33_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/33_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/38_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/38_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/39_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/39_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/66_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/66_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/60_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/60_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/95_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/95_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/11_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/11_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/40_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/40_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/4_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/4_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/49_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/49_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/42_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/42_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/101_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/101_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/7_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/7_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/72_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/72_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/100_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/100_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/19_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/19_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/89_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/89_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/5_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/5_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/25_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/25_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/54_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/54_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/8_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/8_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/83_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/83_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/88_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/88_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/47_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/47_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/32_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/32_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/56_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/56_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/65_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/65_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/63_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/63_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/94_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/94_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/30_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/30_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/10_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/10_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/90_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/90_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/12_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/12_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/96_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/96_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/26_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/26_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/57_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/57_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/48_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/48_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/62_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/62_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/67_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/67_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/61_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/61_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/45_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/45_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/20_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/20_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/43_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/43_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/3_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/3_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/28_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/28_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/16_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/16_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/64_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/64_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/36_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/36_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/69_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/69_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/71_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/71_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/82_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/82_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/18_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/18_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/98_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/98_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/15_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/15_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/9_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/9_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/70_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/70_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/68_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/68_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/6_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/6_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/87_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/87_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/97_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/97_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/24_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/24_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/14_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/14_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/59_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/59_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/22_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/22_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/99_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/99_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/31_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/31_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/23_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/23_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/41_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/41_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/34_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/34_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/58_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/58_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/13_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/13_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/37_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/37_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/21_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/21_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/55_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/55_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/17_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/17_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/35_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/35_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/84_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/84_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/46_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/46_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/44_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/44_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/29_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/29_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140519_PFOMT/2_refmac5.log:Cell from mtz :    86.158   128.042   129.273    90.000    90.000    90.000
+140519_PFOMT/2_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140521_PFOMT_D/19_refmac5.log:Cell from mtz :    85.840   126.742   128.202    90.000    90.000    90.000
+140521_PFOMT_D/19_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140521_PFOMT_D/20_refmac5.log:Cell from mtz :    85.840   126.742   128.202    90.000    90.000    90.000
+140521_PFOMT_D/20_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+140521_PFOMT_D/23_refmac5.log:Cell from mtz :    85.840   126.742   128.202    90.000    90.000    90.000
+140521_PFOMT_D/23_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+1405015_PFOMT_/4_refmac5.log:Cell from mtz :    86.186   125.918   127.928    90.000    90.000    90.000
+1405015_PFOMT_/4_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+1405015_PFOMT_/5_refmac5.log:Cell from mtz :    86.186   125.918   127.928    90.000    90.000    90.000
+1405015_PFOMT_/5_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+1405015_PFOMT_/3_refmac5.log:Cell from mtz :    86.186   125.918   127.928    90.000    90.000    90.000
+1405015_PFOMT_/3_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+1405014_PFOMT_/3_refmac5.log:Cell from mtz :    86.078   127.205   128.793    90.000    90.000    90.000
+1405014_PFOMT_/3_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/33_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/33_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/39_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/39_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/11_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/11_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/40_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/40_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/42_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/42_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/7_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/7_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/19_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/19_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/25_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/25_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/8_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/8_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/32_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/32_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/30_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/30_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/10_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/10_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/12_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/12_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/27_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/27_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/28_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/28_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/36_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/36_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/18_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/18_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/9_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/9_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/6_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/6_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/24_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/24_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/14_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/14_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/22_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/22_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/23_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/23_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/41_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/41_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/34_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/34_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/13_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/13_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/17_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/17_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/35_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/35_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21
+MC001413_G10.1/29_refmac5.log:Cell from mtz :    48.876    71.356   127.803    90.000    90.000    90.000
+MC001413_G10.1/29_refmac5.log:Space group from mtz: number -   19; name - P 21 21 21

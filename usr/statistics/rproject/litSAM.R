@@ -37,3 +37,6 @@ a <- a + coord_polar()
 # b <- b + coord_polar() 
 a
 #grid.arrange(a,b, nrow=1)
+
+# torm <- ls()
+# rm(list = torm[!grepl(pattern = "(ost)", torm)])

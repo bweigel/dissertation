@@ -1,0 +1,5 @@
+Ligand	c(mg/ml)	c(uM)	D/L
+NameofLigand	MasseConcentration	Molarity	VerhaltnisDzuL
+PFOMT	1.29	49
+SAM		0.422	0.538
+SAE		0.39	1

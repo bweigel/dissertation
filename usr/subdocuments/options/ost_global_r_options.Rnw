@@ -10,11 +10,12 @@
   suppressPackageStartupMessages(library(dplyr)) 
   suppressPackageStartupMessages(library(rgbif))
   suppressPackageStartupMessages(library(gridExtra))
+  suppressPackageStartupMessages(library(nwc.itc)) 
 
   ## Knitr 
 
   # messages 
-  opts_chunk$set(warning=FALSE)
+  opts_chunk$set(warning=FALSE, error=TRUE, message=FALSE)
   # code evaluation 
   opts_chunk$set(eval=TRUE)
   # code decoration

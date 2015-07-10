@@ -61,6 +61,15 @@ Functionalization/Detection of substrates could furthermore provide a means of f
 It was thus of interest, whether or not \gls{pfomt} would accept \gls{sam} analogues as alkyl donors.
 The already extensively studied \gls{pfomt} was the prime candidate, since the preparation and crystallizability were established and lots of substrates had already been described \citep{Vogt2004,Ibdah2003,Kopycki2008b,Brandt2015}.
 
+\section{\textit{In silico} docking studies using computational tools}
+
+Prior to any experimental techniques different known and potential substrates were docked to \gls{pfomt} using molecular modelling.
+
+\framedfigure[label = fig:d_itc_substances]{%
+\includegraphics{usr/graphics/static/itc-sam}
+}{%
+   The binding of different \gls{sam} analogues was measured via \gls{itc}, but also calculated using molecular modelling techniques.%    
+    }
 
 \section{Substrate binding studies using \glsentrytext{itc}}
 
@@ -68,11 +77,69 @@ The binding of different substrates by \gls{pfomt} was examined by \gls{itc}.
 \gls{sah}, \gls{sam} and \gls{sae} were selected to study the influence of the alkyl chain length on binding.
 Furthermore the binding of the substrate caffeic acid and the influence of \cf{Mg^2+} addition on substrate binding was investigated.
 
-\framedfigure[label = fig:d_itc_substances]{%
-\includegraphics{usr/graphics/static/itc-sam}
+The $K_D$ values of \gls{sah}, \gls{sam} and \gls{sae} are in the low micromolar range, all around \SI{2}{\micro\molar}.
+However, the binding enthalpy clearly decreased with the length of the aliphatic chain connected to the sulfur atom (\autoref{fig:d_itc_substances}).
+The binding of \gls{sah}, gave off more heat than the binding of \gls{sam}, which in turn gave off more heat than the binding of \gls{sae}.
+Thus, the entropic influence must get larger with increasing chain length in order for (\ref{eq:gibbs1}) and (\ref{eq:gibbs2}) to still hold true (\autoref{tab:d-itc}).
+Indeed, the value for $\Delta S$ was negative for binding of \gls{sah} and got positive for the binding of \gls{sam} and \gls{sae}.
+
+
+\begin{equation} \label{eq:gibbs1}
+  \Delta G = \Delta H - T \Delta S \\
+\end{equation}
+
+\begin{equation} \label{eq:gibbs2}
+  \Delta G = \Delta G^0 - RT~\mathrm{ln}\,K 
+\end{equation}
+
+
+%\framedfigure[label = fig:d_itc]{%
+
+%}{%
+%\gls{itc}-experiments using \gls{sah} (black), \gls{sam} (red) and \gls{sae} (blue).  
+%}
+
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \begin{subfigure}{0.45\textwidth}
+      \includegraphics[scale=0.25]{usr/graphics/static/itc_sah-sam-sae}
+      \caption{}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+      \begin{subfigure}{\textwidth}
+        <<itc.sah,  echo=F, tidy=TRUE, fig.height=4.5, fig.width=8, out.width='\\textwidth', dev='tikz', error=T>>=
+        @
+        \caption{}
+      \end{subfigure}
+     
+      \begin{subfigure}{\textwidth}
+        <<itc.ca,  echo=F, tidy=TRUE, fig.height=4.5, fig.width=8, out.width='\\textwidth', dev='tikz', error=T>>=
+        @
+        \caption{}
+      \end{subfigure}
+    \end{subfigure}
+  \end{figureframe}
+    \caption{Examplary ITC measurements. \textbf{a} -- Binding of \gls{sah}, \gls{sam} and \gls{sae} to \gls{pfomt}. 
+      \textbf{b} -- SAH is injected into a \gls{pfomt} solution, with (red) or without (black) addition of \cf{Mg^2+} and caffeic acid. 
+          When \cf{Mg^2+} and caffeic acid were already present, the binding process seems to happen quicker, but is less enthalpic.
+          \textbf{c} -- Upon addition of caffeic acid to the protein heat is produced, however no sensible binding curve could be obtained.}
+  \label{fig:d_itc.sah}
+\end{figure}
+
+\ostTableEnv[label = tab:d-itc]{%
+  \begin{tabularx}{\textwidth}{Xrrrr}%
+    \toprule
+    & $K_D$ [\si{\micro\molar}]  & $\Delta H$ [\si[per-mode=reciprocal]{\cal\per\mole}] & $\Delta S$ [\si[per-mode=reciprocal]{\cal\per\mole\per\kelvin}] & N  \\
+    \midrule
+    SAH & \num[separate-uncertainty]{2.06(427)} &  \num[separate-uncertainty]{-10380(1025)} & \num[separate-uncertainty]{-9.41} & \num[separate-uncertainty]{0.505(38)} \\
+    SAM & \num[separate-uncertainty]{1.08(350)} &  \num[separate-uncertainty]{-4606(242)} & \num[separate-uncertainty]{11.6} & \num[separate-uncertainty]{0.492(18)} \\
+    SAE & \num[separate-uncertainty]{2.22(379)} &  \num[separate-uncertainty]{-1338(190)} & \num[separate-uncertainty]{21.3} & \num[separate-uncertainty]{0.513(50)} \\
+    \bottomrule
+  \end{tabularx}
 }{%
-   The binding of %    
-    }
+Results of fitting a simple one-site binding model to the data obtained from \gls{itc} experiments.
+}
 
 \section{Study of variants for long-chain alkylations}
 
@@ -158,89 +225,61 @@ Crystals that were large enough ($\geq$ \SI{50}{\micro\metre} \bweigel{wie groß
 A rough estimate of the resolution, cell parameters and the space group was aquired, if the diffraction images could be indexed.
 The screened crystals all had similar cell parameters and belonged to the same space group, $P2_12_12_1$.
 However, the unit cell of crystals that grew out of high ammonium sulfate concentrations ($\geq$\SI{1.8}{\molar}) was approximately four times as large as that of the published structure 3C3Y and crystrals that developed under different crystallization conditions.
-Consequently the assymetric unit consisted of 4, instead of 2 \gls{pfomt} monomers.
+%Consequently the assymetric unit consisted of 4, instead of 2 \gls{pfomt} monomers.
 Several datasets were collected of crystals from high \cf{(NH4)2SO4}, since these possessed different cell parameters than the previously reported structure and therefore seemed to be promising candidates for bound substrates.
+
 
 \subsubsection{The crystal structure of \textit{apo}-PFOMT}
 
 Most of the collected datasets were partly solved.
 As it turned out however the substrates were not co-crystallized.
 Rather, the \emph{apo}-form of \gls{pfomt} had been crystallized.
-Thus, one dataset was solved to completion to obtain a novel \gls{pfomt} structure with no substrate bound.
+Thus, one dataset was solved to completion to obtain a novel \gls{pfomt} structure with no substrate bound and a resolution of \SI{1.95}{\angstrom} (\autoref{tab:d-xtalstat}).
+The assymetric unit of \emph{apo}-\Gls{pfomt} contained two homodimers (4 monomers) (\autoref{fig:d_struct_a}), rather than just one homodimer (3C3Y).
+The active site of each monomer was found to be empty except for a sole sulfate ion, which was positioned where the amino- and carboxylate groups of the \gls{sah} reside in the 3C3Y structure (\autoref{fig:d_struct_b}).
+Shifts in the structure of some loops were observed and contrary to the previously published structure the entire N-terminus was resolved up to the His-tag.
 
-The assymetric unit of \emph{apo}-\Gls{pfomt} contained two homodimers (4 monomers).
-The active site of each monomer was found to be empty except for a sole sulfate ion, which was positioned where the amino- and carboxylate group of the \gls{sah} reside in the 3C3Y structure.
-Significant shifts in the structure of some loops were observed and contrary to the previously published structure the N-terminus of the monomers was resolved up to the His-tag.
+The resolved N-terminus contained another N-terminal \textalpha-helix, which was positioned in a cleft on the surface, where substrates may be bound \citep{Kopycki2008b}.
+This interaction extends up to the His-tag.
+Considerable movement was observed in different parts of the protein, when no substrate was bound, some of which can be attributed to \gls{sam} and metal ion binding residues (\autoref{fig:d_struc.compare} and \autoref{fig:app_struc.compare}) as is obvious for the loop region between \textbeta-sheet 1 and \textalpha-helix 4.
+Nonetheless, most of the movement seemed to be restricted to areas, which are not directly involved in the binding of either \gls{sam} or metal ions.
+However, all of the regions that moved are located at or near the active site.
 
 
 \framedfigure[label = fig:d_struct]{%
-  \begin{subfigure}{0.45\textwidth}
-    \includegraphics[scale=0.175, trim=0 0 0 0, clip]{usr/graphics/static/apo-pfomt_unit_cell.png}
-    \caption{assymetric unit}
+  \begin{subfigure}{\textwidth}\centering
+    \includegraphics[scale=0.225, trim=0 0 0 0, clip]{usr/graphics/static/tetramer.png}
+    \caption{The assymetric unit of \textit{apo}-\gls{pfomt} consists of two homodimers (4 monomers). Individual monomers are rainbow colored from N- (blue) to C-terminus (red).}
+    \label{fig:d_struct_a}
   \end{subfigure}
-  \begin{subfigure}{0.45\textwidth}
-    \includegraphics[scale=0.175, trim=0 0 0 50, clip]{usr/graphics/static/image_002_1.png}
-    \caption{comparison of 3C3Y (orange) and \emph{apo}-\gls{pfomt} (green)}
+  
+  \begin{subfigure}{\textwidth}\centering
+    \includegraphics[scale=0.175, trim=0 0 0 0, clip]{usr/graphics/static/pfomt_monomer.png}
+    \caption{Comparison of 3C3Y (steelblue) and \emph{apo}-\gls{pfomt} (green). The N-terminus of \textit{apo}-\gls{pfomt} was resolved up to the N-terminus (red) and even the His-tag (red, transparent) was partly resolved.
+      The N-terminus fits into a cleft on the surface of the 3C3Y structure, shown as a surface model on the right.
+      \gls{sah} (white ball-and-sticks) and \cf{Ca^2+} (green sphere) are featured in the published structure, whereas a sulphate ion (red/yellow spheres) was bound in the newly solved structure.
+    }
+    \label{fig:d_struct_b}
   \end{subfigure}
+    
 }{%
 An overview of the features in the \emph{apo}-\gls{pfomt} structure.
 }
 
-\ostTableEnv[label = tab:d-xtalstat]{%
-  \begin{tabularx}{\textwidth}{Xll}%
-% \caption{Crystallographic data, phasing and refinement statistics.} \\
-%  \label{tab:d-xtalstat}
-%    \small
-%  \hfill \\
-    \toprule
-    & 140519\_PFOMT  & MC001413-G10.1 \\
-    \midrule
- %    \endfirsthead
- %   \toprule
- %   & PFOMT  & \\
- %   \midrule
- %   \endhead
-     
-    \textit{data collection} &  & \\
-    wavelength (\gls{a}) &  & \\
-    resolution (\gls{a}) & 1.95  & \\
-    total reflections & \num{392368} & \\
-    unique reflections & \num{125822} & \\
-    completeness (\%) & 99.12 & \\
-    $I/\sigma (I)$ & 9.9 & \\
-    $R^a_{sym}$ &  & \\
-    redundancy &  & \\
-    space group & $P2_12_12_1$ & \\
-    cell dimensions (\gls{a}) &  & \\
-    \textit{a} & 86.16 & 48.88 \\
-    \textit{b} & 128 & 71.36 \\
-    \textit{c} & 129.3 & 127.80 \\ \\
-    
-    \textit{refinement} &  & \\
-    $R_{\mathrm{work}}$/$R_{\mathrm{free}}$ & 0.21369 / 0.24700 & \\
-    \gls{rmsd} bond lengths (\gls{a}) & 0.0199  & \\
-    \gls{rmsd} bond angles (°) & 2.0568 & \\
-    B-values ($\mathrm{\AA^2}$) & 21.593  & \\
-    water &  & \\
-    ions &  & \\ \\
-     
-    \textit{Ramachandran plot} (\%) &  & \\
-    favoured & 96.82 & \\
-    allowed & 2.38 & \\
-    outliers & 0.8 & \\
-    \bottomrule
-  \end{tabularx}
-}{%
-Crystallographic data, phasing and refinement statistics.
-}
-
-
-\subsection{\glsentrytext{pfomt} activity in \glsentryfirst{des} / Solubility-enhancing effects of \glsentrytext{des}}
-vielleicht eigenes kapitel DES?
-
-
-\subsection{\glsentrytext{pfomt}-Paper (DIM)}
-\subsection{Dockings???}
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    <<struct.compare,  echo=F, tidy=TRUE, fig.height=3, fig.width=8, out.width='\\textwidth', dev='tikz', error=T>>=
+    @
+  \end{figureframe}
+    \caption{Positional differences between the individual residues of the solved \textit{apo}-PFOMT and the structure with bound \gls{sah} (pdb: 3C3Y). The \glsentryfirst{dpi} of the structures was \SIlist{0.137;0.064}{\angstrom} respectively.
+      The overall rmsd amounted to \SI{0.9034}{\angstrom}.
+  The secondary structure of apo-\gls{pfomt} is displayed at the top. Helices are displayed as rectangles and sheets are shown as arrows.
+  Graphical background annotations are used to display the binding sites of \gls{sah} (green) and the metal ion (plum).
+  The orange bars indicate regions, where much movement seems to happen upon binding or release of the co-substrate.
+  The blue bar shows the region that was annotated as "insertion loop" in previous studies \citep{Kopycki2008b}.}
+  \label{fig:d_struc.compare}
+\end{figure}
 
 \section{Conclusion/Discussion}
 

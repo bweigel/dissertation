@@ -113,6 +113,8 @@
 <<subdoc_content_scripts, eval=T, echo=F, cache=F>>=
 read_chunk("usr/statistics/rproject/test.R")
 read_chunk("usr/statistics/rproject/litSAM.R")
+read_chunk("usr/statistics/rproject/struct.compare.R")
+read_chunk("usr/statistics/rproject/itc.R")
 @ 
 %%%-------------------------------------------------%%%
 %%% Include header %%%

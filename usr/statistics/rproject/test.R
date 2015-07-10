@@ -5,3 +5,5 @@ ggplot(cali.curve, aes(x=FA, y=value, shape=as.factor(pH), color=as.factor(DES),
  geom_point() +
  theme_ost()
 
+# torm <- ls()
+# rm(list = torm[!grepl(pattern = "(ost)", torm)])

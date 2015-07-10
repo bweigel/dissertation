@@ -66,3 +66,4 @@ ggplot(data=.) + geom_bar(aes(x=substrate, fill=key))
 daf %>% dplyr::filter(key != "NT") %>%
 ggplot(data=., aes())
 
+rm(list = ls())

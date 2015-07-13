@@ -179,23 +179,23 @@ a
 # torm <- ls()
 # rm(list = torm[!grepl(pattern = "(ost)", torm)])
 
-## ----itc.sah,  echo=F, tidy=TRUE, fig.height=4, fig.width=8, out.width='\\textwidth', dev='tikz', error=T----
+## ----itc.sah,  echo=F, tidy=TRUE, fig.height=2.25, fig.width=4, dev='tikz', error=T----
 #library(nwc.itc)
 
 load("../../statistics/data/WEB338.itc.Rda")
 cols <- c("black", "red")
 
 names <- c("PFOMT vs. SAH", "PFOMT/caffeic acid/\\cf{Mg^2+} vs SAH/\\cf{Mg^2+}")
-itc.compare(itcs[c(5, 16)], noms = names, ylim=c(-0.85, 0.05), lwd=1, cols = cols, main=F)
+itc.compare(itcs[c(5, 16)], noms = names, ylim=c(-0.85, 0.05), lwd=2, cols = cols, main=F, cex.axis=1)
 
-## ----itc.ca,  echo=F, tidy=TRUE, fig.height=4, fig.width=8, out.width='\\textwidth', dev='tikz', error=T----
+## ----itc.ca,  echo=F, tidy=TRUE, fig.height=2.25, fig.width=4, dev='tikz', error=T----
 load("../../statistics/data/WEB338.itc.Rda")
 cols <- c("black", "red")
 
 names <- c("PFOMT/\\cf{Mg^2+} vs caffeic acid/\\cf{Mg^2+}", "PFOMT/SAH/\\cf{Mg^2+} vs caffeic acid/\\cf{Mg^2+}")
-itc.compare(itcs[c(5,16)], ylim=c(-0.85, 0.05), lwd=1, noms = names, cols = cols, main=F)
+itc.compare(itcs[c(18,21)], ylim=c(-0.6, 0.05), xlim=c(0,1000),lwd=2, noms = names, cols = cols, main=F, cex.axis=1)
 
-## ----struct.compare,  echo=F, tidy=TRUE, fig.height=3, fig.width=8, out.width='\\textwidth', dev='tikz', error=T----
+## ----struct.compare,  echo=F, tidy=TRUE, fig.height=2, fig.width=5.6, out.width='\\textwidth', dev='tikz', error=T----
 load("../../statistics/data/structurecompare.Rda")
 
 geom_arrow <- function(label, start=1, end=4, y=2, width=1, a=NULL, b=NULL, fill){
@@ -233,7 +233,7 @@ ggplot() +
   geom_line(data=ss, aes(x=c(min(ss$start), max(ss$start)), y=top)) +
   geom_arrow(ss$ss.elem[!ss$helix], ss$start[!ss$helix], ss$stop[!ss$helix], y = top, width = width, fill="black") +
   geom_rect(data=ss[ss$helix,], aes(xmin=start, xmax=stop, ymin=top-width/2, ymax=top+width/2), fill="black") +
-  geom_text(data=ss, aes(x=start+(stop-start)/2, y=top+(top*0.07), label=latexannotation), size=3)+
+  geom_text(data=ss, aes(x=start+(stop-start)/2, y=top+(top*0.07), label=latexannotation), size=2.5)+
   theme(legend.position="none")
 
 

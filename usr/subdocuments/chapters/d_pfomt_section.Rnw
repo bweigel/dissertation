@@ -61,9 +61,16 @@ Functionalization/Detection of substrates could furthermore provide a means of f
 It was thus of interest, whether or not \gls{pfomt} would accept \gls{sam} analogues as alkyl donors.
 The already extensively studied \gls{pfomt} was the prime candidate, since the preparation and crystallizability were established and lots of substrates had already been described \citep{Vogt2004,Ibdah2003,Kopycki2008b,Brandt2015}.
 
-\section{\textit{In silico} docking studies using computational tools}
+%\section{\textit{In silico} docking studies using computational tools}
+% \bweigel{entweder noch machen oder raus damit}
+ 
+%Prior to any experimental techniques different known and potential substrates were docked to  using %molecular modelling.
 
-Prior to any experimental techniques different known and potential substrates were docked to \gls{pfomt} using molecular modelling.
+\section{Substrate binding studies using \glsentrytext{itc}}
+
+The binding of different substrates by \gls{pfomt} was examined by \gls{itc}.
+\gls{sah}, \gls{sam} and \gls{sae} were selected to study the influence of the alkyl chain length on binding (\autoref{fig_itc_substances}).
+Furthermore the binding of the substrate caffeic acid and the influence of \cf{Mg^2+} addition on substrate binding was investigated.
 
 \framedfigure[label = fig:d_itc_substances]{%
 \includegraphics{usr/graphics/static/itc-sam}
@@ -71,17 +78,22 @@ Prior to any experimental techniques different known and potential substrates we
    The binding of different \gls{sam} analogues was measured via \gls{itc}, but also calculated using molecular modelling techniques.%    
     }
 
-\section{Substrate binding studies using \glsentrytext{itc}}
-
-The binding of different substrates by \gls{pfomt} was examined by \gls{itc}.
-\gls{sah}, \gls{sam} and \gls{sae} were selected to study the influence of the alkyl chain length on binding.
-Furthermore the binding of the substrate caffeic acid and the influence of \cf{Mg^2+} addition on substrate binding was investigated.
-
-The $K_D$ values of \gls{sah}, \gls{sam} and \gls{sae} are in the low micromolar range, all around \SI{2}{\micro\molar}.
-However, the binding enthalpy clearly decreased with the length of the aliphatic chain connected to the sulfur atom (\autoref{fig:d_itc_substances}).
+The $K_D$ values of \gls{sah}, \gls{sam} and \gls{sae} were all in the low micromolar range, around \SI{2}{\micro\molar}.
+However, the binding enthalpy clearly decreased with the length of the aliphatic chain connected to the sulfur atom (\autoref{fig:itc.a}).
 The binding of \gls{sah}, gave off more heat than the binding of \gls{sam}, which in turn gave off more heat than the binding of \gls{sae}.
-Thus, the entropic influence must get larger with increasing chain length in order for (\ref{eq:gibbs1}) and (\ref{eq:gibbs2}) to still hold true (\autoref{tab:d-itc}).
-Indeed, the value for $\Delta S$ was negative for binding of \gls{sah} and got positive for the binding of \gls{sam} and \gls{sae}.
+Thus, the entropic influence must get larger with increasing chain length in order for (\ref{eq:gibbs1}) and (\ref{eq:gibbs2}) to still hold true.
+Indeed, the value for $\Delta S$ was negative for binding of \gls{sah} and got positive for the binding of \gls{sam} and \gls{sae} (\autoref{tab:ditc}). 
+This relationship between the change of entropy and the change of enthalpy has been found for many biological systems and is also called \gls{eec} \citep{Searle1995,Gilli1994,Dunitz1995}.
+The stoichiometry for the binding process is given by the parameter $N$ (\autoref{tab:ditc}).
+For all the ligands \gls{sah}, \gls{sam} and \gls{sae} this value was found to be about 0.5, which corresponds to one bound molecule ligand per dimer of \pfomt.
+
+Upon titration of caffeic acid to \pfomt small amounts of heat were given off by the system (\autoref{fig:itc.c}). 
+When the enzyme was incubated with \gls{sah} prior to addition of caffeic acid this heat increased slightly. The slope of the \gls{itc} profile also got steeper.
+However, the data obtained could not be fitted to afford a sensible solution.
+When caffeic acid and \cf{Mg^2+} were incubated with \pfomt prior to addition of \gls{sah}, the process of heat production as observed by \gls{itc} also had a steeper slope. 
+Nonetheless, the thermodynamic parameters did not differ significantly.
+On its own \cf{Mg^2+}, in the form of an \cf{MgCl2} solution, titrated to the enzyme solution did not cause signals during the \gls{itc} experiments.
+
 
 
 \begin{equation} \label{eq:gibbs1}
@@ -93,11 +105,6 @@ Indeed, the value for $\Delta S$ was negative for binding of \gls{sah} and got p
 \end{equation}
 
 
-%\framedfigure[label = fig:d_itc]{%
-
-%}{%
-%\gls{itc}-experiments using \gls{sah} (black), \gls{sam} (red) and \gls{sae} (blue).  
-%}
 
 \begin{figure}[htpb]
   \centering
@@ -105,18 +112,21 @@ Indeed, the value for $\Delta S$ was negative for binding of \gls{sah} and got p
     \begin{subfigure}{0.45\textwidth}
       \includegraphics[scale=0.25]{usr/graphics/static/itc_sah-sam-sae}
       \caption{}
+      \label{fig:itc.a}
     \end{subfigure}
     \begin{subfigure}{0.45\textwidth}
       \begin{subfigure}{\textwidth}
         <<itc.sah,  echo=F, tidy=TRUE, fig.height=4.5, fig.width=8, out.width='\\textwidth', dev='tikz', error=T>>=
         @
         \caption{}
+        \label{fig:itc.b}
       \end{subfigure}
      
       \begin{subfigure}{\textwidth}
-        <<itc.ca,  echo=F, tidy=TRUE, fig.height=4.5, fig.width=8, out.width='\\textwidth', dev='tikz', error=T>>=
+        <<itc.ca,  echo=F, tidy=TRUE, fig.height=4.5, fig.width=8, dev='tikz', error=T>>=
         @
         \caption{}
+        \label{fig:itc.c}
       \end{subfigure}
     \end{subfigure}
   \end{figureframe}
@@ -127,7 +137,7 @@ Indeed, the value for $\Delta S$ was negative for binding of \gls{sah} and got p
   \label{fig:d_itc.sah}
 \end{figure}
 
-\ostTableEnv[label = tab:d-itc]{%
+\ostTableEnv[label=tab:ditc]{%
   \begin{tabularx}{\textwidth}{Xrrrr}%
     \toprule
     & $K_D$ [\si{\micro\molar}]  & $\Delta H$ [\si[per-mode=reciprocal]{\cal\per\mole}] & $\Delta S$ [\si[per-mode=reciprocal]{\cal\per\mole\per\kelvin}] & N  \\
@@ -156,7 +166,7 @@ Residues that were exchanged were selected based upon their position in the acti
 Fortunately a crystal structure of \gls{pfomt} was available to help with the selection. \bweigel{Genauer zu den Resten...}
 
 \framedfigure[label = fig:d_activesite_resis]{%
-\includegraphics[width=\textwidth, trim=300 100 300 100, clip]{usr/graphics/static/d_activesite_resis}
+\includegraphics[width=0.5\textwidth, trim=300 100 300 100, clip]{usr/graphics/static/d_activesite_resis}
 }{%
    The active site of \gls{pfomt}. 
    The outline of the protein backbone is displayed, with active site residues portrayed as colored sticks (cyan -- F103, red -- F80, turqouise -- M52, yellow -- Y51, white -- F198, blue -- W184, orange -- N202, grey -- as labelled).
@@ -234,7 +244,7 @@ Several datasets were collected of crystals from high \cf{(NH4)2SO4}, since thes
 Most of the collected datasets were partly solved.
 As it turned out however the substrates were not co-crystallized.
 Rather, the \emph{apo}-form of \gls{pfomt} had been crystallized.
-Thus, one dataset was solved to completion to obtain a novel \gls{pfomt} structure with no substrate bound and a resolution of \SI{1.95}{\angstrom} (\autoref{tab:d-xtalstat}).
+Thus, one dataset was solved to completion to obtain a novel \gls{pfomt} structure with no substrate bound and a resolution of \SI{1.95}{\angstrom} (\autoref{tab:xtalstat}).
 The assymetric unit of \emph{apo}-\Gls{pfomt} contained two homodimers (4 monomers) (\autoref{fig:d_struct_a}), rather than just one homodimer (3C3Y).
 The active site of each monomer was found to be empty except for a sole sulfate ion, which was positioned where the amino- and carboxylate groups of the \gls{sah} reside in the 3C3Y structure (\autoref{fig:d_struct_b}).
 Shifts in the structure of some loops were observed and contrary to the previously published structure the entire N-terminus was resolved up to the His-tag.
@@ -269,7 +279,7 @@ An overview of the features in the \emph{apo}-\gls{pfomt} structure.
 \begin{figure}[htpb]
   \centering
   \begin{figureframe}
-    <<struct.compare,  echo=F, tidy=TRUE, fig.height=3, fig.width=8, out.width='\\textwidth', dev='tikz', error=T>>=
+    <<struct.compare,  echo=F, tidy=TRUE, fig.height=2, fig.width=5.6, out.width='\\textwidth', dev='tikz', error=T>>=
     @
   \end{figureframe}
     \caption{Positional differences between the individual residues of the solved \textit{apo}-PFOMT and the structure with bound \gls{sah} (pdb: 3C3Y). The \glsentryfirst{dpi} of the structures was \SIlist{0.137;0.064}{\angstrom} respectively.
@@ -283,5 +293,49 @@ An overview of the features in the \emph{apo}-\gls{pfomt} structure.
 
 \section{Conclusion/Discussion}
 
+\bweigel{mehr auf die aktuelle literatur eingehen...auch wenn sie sich i grenzen hält...}
+Whereas the binding of \gls{sah} was solely dependent on the large negative enthalpy, the binding of \gls{sae} was almost entirely driven by entropy, since $\Delta H$ was close to 0 (\ref{tab:ditc}).
+Entropy gain can be a major driving force for ligand-protein interactions and in some cases ligand binding can be entirely attributed this gain in entropy \citep{Li2008}.
+Displacement of protein-bound water molecules contributes strongly to the entropic gain.
+There were some waters present in the active site of \pfomt in the crystal structure developed herein.
+However, no metal ion was present in the active site in the \textit{apo}-\pfomt structure. 
+Furthermore \cf{Mg^2+} titration via \gls{itc} did not afford significant signals, suggesting the notion, that the metal is only bound along with the co-substrate (\autoref{fig:asite_waters})\bweigel{im buch nochmal bei comt nachlesen}. 
+It has been suggested, that the entropy cost to transfer one water molecule from bulk to the protein-bound state can be up to \SI[per-mode=reciprocal]{7}{\cal\per\mole\per\kelvin} \citep{Dunitz1994}.
+The replacement of ordered waters from the active site or from a hydrated metal ion by a growing aliphatic chain could therefore explain the gain in entropy, and \gls{sah} is positioned in a way to warrant exactly that (\autoref{fig:asite_waters}). 
+Also, the hydrogen and metal complexing bonds consequently lost could explain the less negative enthalpy.
+However, this is purely hypothetical since more evident data is missing.
+Additional insight might be gained by expanding the \gls{itc} experiments to even longer \gls{sam} analogues.
+The limited space in the active site, which forces the growing side chain to expel water might also be the reason for the inactivity of \pfomt towards \gls{sae}. 
+If the metal ion is blocked from complexing moieties, activation of the substrate hydroxyl would be hindered.
+
+Comparison of the novel \textit{apo}-\pfomt and the published structure suggests a lot of movement along multiple parts of the backbone all promixal to the active site pocket, upon ligand binding (\autoref{fig:d_struc.compare}).
+The N-terminus of \pfomt seems to acts as a lid, which is closed in the \textit{apo}-form, but highly flexible and therefore unresolved in the ligand bound form.
+Furthermore, the native enzyme has been shown to be truncated, starting only at residue 12 and being less catalytically efficient than the full length protein \cite{Vogt2004,Kopycki2008b}.
+The work presented here consequently supports the notion that the N-terminus plays an important role on the regulation of the enzymatic activity.
+
+The laid out findings provide novel hints for regions in the \pfomt structure that can be studied using site-directed mutagenesis approaches in order to work towards a variant that can in fact employ \gls{sae} for transalkylation reactions.
+Furthermore variation of these regions might provide enzymes with altered substrate specificities which are of high interest.
 
 
+
+
+%The existing crystal structure of \gls{pfomt} (pdb: 3c3y) shows 3 water molecules that could be disp%laced by a growing aliphatic chain (\autoref{fig:asite_waters}). 
+%All of these waters are complexing a \cf{Ca^2+} atom.
+
+
+
+
+
+\framedfigure[label = fig:asite_waters]{%
+\includegraphics[width=\textwidth]{usr/graphics/static/asite_compare.png}
+}{%
+Comparison of the active sites of the \textit{apo}-structure (left, green) and the ligand-bound structure (right, steelblue).
+Waters are represented as small red spheres, calcium as a green sphere (complexing bonds are dashed) and \gls{sah} is displayed as a white ball-and-stick model. 
+A possible hydrogen bond network (blue lines) for the ligand-bound state is displayed.
+}
+
+\framedfigure[label = fig:pfomt_vogt]{%
+\includegraphics[width=0.5\textwidth]{usr/graphics/static/pfomt_vogt.png}
+}{%
+from: Kopycki, J. G., Rauh, D., Chumanevich, A. a., Neumann, P., Vogt, T., \& Stubbs, M. T. (2008). Biochemical and Structural Analysis of Substrate Promiscuity in Plant Mg2+-Dependent O-Methyltransferases. Journal of Molecular Biology, 378(1), 154–164. http://doi.org/10.1016/j.jmb.2008.02.019
+}

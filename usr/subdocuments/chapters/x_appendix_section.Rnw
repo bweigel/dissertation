@@ -116,7 +116,7 @@ Overview over the contructs produced for the present thesis. Each step during th
 \end{lstTabularx}
 
 
-\ostTableEnv[label = tab:d-xtalstat]{%
+\ostTableEnv[label = tab:xxtalstat]{%
   \begin{tabularx}{\textwidth}{Xll}%
 % \caption{Crystallographic data, phasing and refinement statistics.} \\
 %  \label{tab:d-xtalstat}

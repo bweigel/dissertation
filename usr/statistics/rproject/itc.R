@@ -3,7 +3,7 @@ load("../../statistics/data/WEB338.itc.Rda")
 cols <- c("black", "red")
 
 names <- c("PFOMT/\\cf{Mg^2+} vs caffeic acid/\\cf{Mg^2+}", "PFOMT/SAH/\\cf{Mg^2+} vs caffeic acid/\\cf{Mg^2+}")
-itc.compare(itcs[c(18,21)], ylim=c(-0.85, 0.05), lwd=1, noms = names, cols = cols, main=F)
+itc.compare(itcs[c(18,21)], ylim=c(-0.6, 0.05), xlim=c(0,1000),lwd=2, noms = names, cols = cols, main=F, cex.axis=1)
 
 
 ## @knitr itc.sah
@@ -13,7 +13,7 @@ load("../../statistics/data/WEB338.itc.Rda")
 cols <- c("black", "red")
 
 names <- c("PFOMT vs. SAH", "PFOMT/caffeic acid/\\cf{Mg^2+} vs SAH/\\cf{Mg^2+}")
-itc.compare(itcs[c(5, 16)], noms = names, ylim=c(-0.85, 0.05), lwd=1, cols = cols, main=F)
+itc.compare(itcs[c(5, 16)], noms = names, ylim=c(-0.85, 0.05), lwd=2, cols = cols, main=F, cex.axis=1)
 
 ## @knitr itc.all
 #library(nwc.itc)

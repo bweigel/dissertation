@@ -7,6 +7,7 @@
 \makeglossaries
 
 % analytics
+\newacronym{eec}{EEC}{enthalpy-enthropy compensation}
 \newacronym{dpi}{DPI}{diffraction precision indicator \citep{DaresburyLaboratory1997}}
 \newacronym[plural={NRPS}]{nrps}{NRPS}{non-ribosomal peptide synthase}
 \newacronym{sar}{SAR}{structure activity relationship}

@@ -9,7 +9,7 @@
 \begin{figure}[htpb]
   \centering
   \begin{figureframe}
-    <<struct.compare.appendix,  echo=F, tidy=TRUE, fig.height=3, fig.width=8, out.width='\\textwidth', dev='tikz', error=T>>=
+    <<struct.compare.appendix,  echo=F, tidy=TRUE, fig.height=2, fig.width=5.6, out.width='\\textwidth', dev='tikz', error=T>>=
     @
   \end{figureframe}
   \caption{Differences in the dihedrals \textpsi~(red) and \textphi~(black) of the solved \textit{apo}-PFOMT and the structure with bound \gls{sah} (pdb: 3C3Y).
@@ -19,7 +19,16 @@
   The blue bar shows the region that was annotated as "insertion loop" in previous studies.}
   \label{fig:app_struc.compare}
 \end{figure}  
-  
+
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[]{usr/graphics/static/tmp_pca1}p
+  \end{figureframe}
+  \caption{\gls{pca} of \nico leaves infiltraded by \agro carrying different genes.}
+  \label{fig:x_pca}
+\end{figure}
+
 \chapter{Tables}
 
 %% Table of cloned constructs (appendix)
@@ -116,7 +125,7 @@ Overview over the contructs produced for the present thesis. Each step during th
 \end{lstTabularx}
 
 
-\ostTableEnv[label = tab:xxtalstat]{%
+\ostTableEnv[label = tab:xtalstat]{%
   \begin{tabularx}{\textwidth}{Xll}%
 % \caption{Crystallographic data, phasing and refinement statistics.} \\
 %  \label{tab:d-xtalstat}

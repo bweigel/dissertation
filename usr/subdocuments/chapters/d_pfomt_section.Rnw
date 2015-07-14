@@ -69,7 +69,7 @@ The already extensively studied \gls{pfomt} was the prime candidate, since the p
 \section{Substrate binding studies using \glsentrytext{itc}}
 
 The binding of different substrates by \gls{pfomt} was examined by \gls{itc}.
-\gls{sah}, \gls{sam} and \gls{sae} were selected to study the influence of the alkyl chain length on binding (\autoref{fig_itc_substances}).
+\gls{sah}, \gls{sam} and \gls{sae} were selected to study the influence of the alkyl chain length on binding (\autoref{fig:itc_substances}).
 Furthermore the binding of the substrate caffeic acid and the influence of \cf{Mg^2+} addition on substrate binding was investigated.
 
 \framedfigure[label = fig:d_itc_substances]{%
@@ -137,8 +137,11 @@ On its own \cf{Mg^2+}, in the form of an \cf{MgCl2} solution, titrated to the en
   \label{fig:d_itc.sah}
 \end{figure}
 
-\ostTableEnv[label=tab:ditc]{%
-  \begin{tabularx}{\textwidth}{Xrrrr}%
+%\ostTableEnv[label=tab:ditc]{%
+\begin{lstTabularx}[1]{\textwidth}{Xrrrr}%
+  \caption{Results of fitting a simple one-site binding model to the data obtained from \gls{itc} experiments.} \\
+  \label{tab:ditc}
+  \hfill \\
     \toprule
     & $K_D$ [\si{\micro\molar}]  & $\Delta H$ [\si[per-mode=reciprocal]{\cal\per\mole}] & $\Delta S$ [\si[per-mode=reciprocal]{\cal\per\mole\per\kelvin}] & N  \\
     \midrule
@@ -146,10 +149,10 @@ On its own \cf{Mg^2+}, in the form of an \cf{MgCl2} solution, titrated to the en
     SAM & \num[separate-uncertainty]{1.08(350)} &  \num[separate-uncertainty]{-4606(242)} & \num[separate-uncertainty]{11.6} & \num[separate-uncertainty]{0.492(18)} \\
     SAE & \num[separate-uncertainty]{2.22(379)} &  \num[separate-uncertainty]{-1338(190)} & \num[separate-uncertainty]{21.3} & \num[separate-uncertainty]{0.513(50)} \\
     \bottomrule
-  \end{tabularx}
-}{%
-Results of fitting a simple one-site binding model to the data obtained from \gls{itc} experiments.
-}
+\end{lstTabularx}
+%}{%
+%Results of fitting a simple one-site binding model to the data obtained from \gls{itc} experiments.
+%}
 
 \section{Study of variants for long-chain alkylations}
 

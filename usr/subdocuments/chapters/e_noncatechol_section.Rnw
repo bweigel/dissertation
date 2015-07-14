@@ -8,8 +8,106 @@
 Non-catechols in nature (biosynthesis, mode of action?), chemical methylation???
 
 \section{\glsentrytext{somt}}
+
+\somt was described in the literature to methylate naringenin at the 4'-position of the B-ring \citep{Kim2005c,Kim2005b} to produce ponciretin (also known as isosakuranetin).
+
+
+
 \subsection{In vivo methylation studies using \textit{N.\,benthamiana}}
-\subsection{In vivo studies in \textit{E.\,coli}}
+The group of Sylvestre Marillonet (IPB) established an efficient system to clone and assemble multi enzyme pathways in \nico, using a modular cloning toolbox, which has already been used to produce flavonoids \cite{Konig2014}.
+The group had already cloned all the enzymes required to establish the pathway up to naringenin in \nico (\autoref{fig:somtpathway}).
+However, the \textit{SOMT2} gene needed to be cloned into suitable vectors to be transiently expressed in \nico.
+The gene was first cloned into a level 0 module using BpiI and consequently subcloned into a level 1 module flanked by a promoter and a terminator using BsaI (\autoref{fig:cloning}).
+The 35S-promoter was used alonside the \gls{nos}-terminator to achieve the highest possible transcription rates. 
+
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \begin{tikzpicture}
+      \tikzstyle{cpd}=[rectangle, fill=blue!30]
+      \path 	(0,0) node[cpd] (a) {phenyl alanine} 
+      (3.5,0) node[cpd] (b) {cinnamic acid}
+      (7,0) node[cpd] (c) {coumaric acid}
+      (7, -2) node[cpd] (d) {coumaroyl CoA}
+      (4, -2.5) node (da) {3 x malonyl CoA}
+      (7, -4) node[cpd] (e) {naringenin chalcone}
+      (7, -6) node[cpd] (f) {naringenin}
+      (7, -8) node [draw=red, cpd] (g) {4'-O-methyl-naringenin};
+		
+      \draw[->] (a) -- node[above, gray] {PAL} (b);
+      \draw[->] (b) -- node[above] {C4H} (c);
+      \draw[->] (c) -- node[right] {4CL} (d);
+      \draw[->] (d) -- node[right, gray] {CHS} (e);
+      \draw[-] (da.east) .. controls +(right:1cm) and +(up:0.5cm) .. (e.north) ;
+      \draw[->] (e) -- node[right] {CHI} (f);
+      \draw[->] (f) -- node[right, red] {SOMT2} (g);
+    \end{tikzpicture}
+    \end{figureframe}
+    \caption{Semi-synthetic pathway to naringenin and 4'-O-methyl naringenin in \textit{N. benthamiana}. Enzymes not endogenous to \textit{N. benthamiana} are in gray. PAL - phenylalanine ammonia lyase, C4H - cinnamic acid 4-hydroxylase, 4CL - 4-coumaric acid:CoA ligase, CHS - chalcone synthase, CHI - chalcone isomerase, SOMT2 - soy O-methyl transferase 2}
+    \label{fig:somtpathway}
+\end{figure}
+
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[width=\textwidth]{usr/graphics/static/tmp_cloning}
+  \end{figureframe}
+  \caption{Cloning of \somt}
+  \label{fig:cloning}
+\end{figure}
+
+Both sides of \nico leaves were infiltrated with different samples.
+The left side was infiltrated with \agro cultures transformed with pAGM10733 (\gls{pal}), pAGM10406 (\gls{chs}) and pBEW107 (\somt).
+For the right side the \agro culture containing pBEW107 was replaced by a control: \agro transformed with the empty vector pICH75044. 
+After 7 days, the plant material was harvested.
+The average weight loss after freeze drying was \SI{87.5}{\percent}.
+
+The dried material was extracted and analyzed via \gls{hplc} to determine whether ponciretin or related compounds were produced (\autoref{tab:naringenin}).
+However, through comparison with authentic standards it was apparent, that none of the expected compounds were detected.
+This finding suggest, that neither naringenin, nor any resulting flavonoids (ponciretin, poncirin, didymin) were present in the plant tissue at the time of harvest.
+Although unlikely, it cannot be exluded that the compounds of interest were present at some point in the tissue.
+
+
+\begin{lstTabularx}[1]{\linewidth}{clll}
+  %\ostTableEnv[label=tab:naringenin]{%
+ %  \begin{tabularx}{\textwidth}{clll}%
+  \caption{4'-methylated naringenin derivatives} \\
+  \label{tab:naringenin}
+  \hfill \\
+    \toprule
+    \multirow{4}{*}{%
+      \includegraphics{usr/graphics/static/naringenin}%
+    }%
+    & R\textsuperscript{1} & R\textsuperscript{2} & name \\
+    \cmidrule{2-4}
+    & H & H & naringenin \\
+    & \cf{CH3} & H & ponciretin \\
+    & \cf{CH3} & rutinose \footnote{\textalpha -\textsc{l}-rhamnopyrasonyl-(1\ra6)-\textbeta -\textsc{d}-glucopyranose} & ponciretin \\
+    & \cf{CH3} & neohesperidose \footnote{\textalpha -\textsc{l}-rhamnopyrasonyl-(1\ra2)-\textbeta -\textsc{d}-glucopyranose} & didymine \\
+    \bottomrule
+ % \end{tabularx}
+\end{lstTabularx}
+%}{%
+%Naringenin derivatives.
+%}
+
+The \gls{hplc} chromatograms were analyzed by \gls{pca} after the data were aligned, centered and scaled, to assess whether the collected plant material samples were different from one another (\autoref{fig:e_pca} and \ref{fig:x_pca}).
+The plot shows that the samples of the different leaf sides do not separate, indicating no difference between infiltration with the \textit{SOMT} gene and vector control.
+However, there is a slight separation between top and bottom leaves in the second principal component and between plant 3 and plants 1/2 in the first principal component.
+This suggest, that the chemical composition as detected by \gls{hplc} is slightly different in the top and botton leaves, as well as between plants.
+
+
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[width=0.5\textwidth]{usr/graphics/static/tmp_pca2}
+  \end{figureframe}
+  \caption{\gls{pca} of leaf material. The samples are colored by leaf side.}
+  \label{fig:e_pca}
+\end{figure}
+
+
+\subsection{In vivo studies in \eco}
 \subsection{In vitro studies using recombinantly produced \glsentrytext{somt}}
 
 \section{\glsentrytext{pfomt}}

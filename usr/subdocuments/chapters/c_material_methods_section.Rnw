@@ -215,12 +215,20 @@ The pellet was resuspended in the remaining liquid, plated onto \gls{lb}-agar pl
 
 \section{Treatment of plant material}
 \subsection{Infiltration of \textit{Nicotiana benthamiana}}
-Before infiltration \nico plants were pruned, such that only leaves to be infiltrated remained with the plant.
+Before infiltration \nico plants were pruned, such that only leaves to be infiltrated remained with the plant (\autoref{fig:c.nico}).
 5\,ml cultures of transformed \agro in \gls{lb}-medium (with \ugperml{40} rifampicin and \ugperml{50} carbencillin) were grown over night at \degC{28} and 220\,rpm.
 \odx{600} of the culture was measured and adjusted to 0.2 by dilution with infiltration buffer (10\,mM \gls{mes}/\cf{NaOH}, 10\,mM \cf{MgSO4} pH 5.5).
 When multiple \agro transformed with different contructs/plasmids were used for infiltration, the cultures were mixed and diluted using infiltration buffer, such that \odx{600} of each culture in the mix was 0.2.
 The solution was infiltrated into the abaxial side of \nico leaves using a plastic syringe.
 The leaf material was harvested after 7 days.
+
+\begin{figure}[htpb]
+  \begin{figureframe}
+    \includegraphics[width=0.5\textwidth]{usr/graphics/static/nico2}
+  \end{figureframe}
+  \caption{Pruned \nico plant, with two bottom and one top leaf, ready to be infiltrated.}
+  \label{fig:c.nico}
+\end{figure}
 
 \subsection{Plant material harvest}
 Infiltrated/Infected areas of \nico leaf material were cut out and grouped by plant number, leaf position (top/bottom) and leaf side (right/left).

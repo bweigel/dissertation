@@ -6,7 +6,7 @@
 % \addcontentsline{toc}{chapter}{Bibliography}
 % \section*{Articles}
 % \addcontentsline{toc}{section}{Articles}
-\nocite{*} 
+%\nocite{*} 
 \printbibliography
 % \printbibliography[heading=bibempty]
 % \printbibliography[heading=bibempty,type=article]

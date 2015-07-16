@@ -1,8 +1,11 @@
+
 ## ----glossary_definitions, child='usr/subdocuments/options/open_science_glossary.Rnw', eval=T----
 
 
 
+
 ## ----chunk_global_r_options, child='usr/subdocuments/options/ost_global_r_options.Rnw', eval=T----
+
 
 ## ----ost_global_r_options, tidy=FALSE, highlight=FALSE, include=FALSE, cache=FALSE, eval=TRUE----
   ## Load packages 
@@ -103,13 +106,17 @@
 
 
 
+
+
 ## ----subdoc_content_scripts, eval=T, echo=F, cache=F---------------------
 read_chunk("usr/statistics/rproject/test.R")
 read_chunk("usr/statistics/rproject/litSAM.R")
 read_chunk("usr/statistics/rproject/struct.compare.R")
 read_chunk("usr/statistics/rproject/itc.R")
 
+
 ## ----subdoc_content_header, child='usr/subdocuments/chapters/x_header.Rnw', eval=T----
+
 
 
 
@@ -117,11 +124,14 @@ read_chunk("usr/statistics/rproject/itc.R")
 
 
 
+
 ## ----subdoc_content_introduction, child='usr/subdocuments/chapters/b_introduction_section.Rnw', eval=T----
 
 
 
+
 ## ----subdoc_content_material_methods, child='usr/subdocuments/chapters/c_material_methods_section.Rnw', eval=T----
+
 
 ## ----test, echo=F, tidy=TRUE, fig.height=3.25, fig.width=5.25, dev='tikz'----
 load("../../statistics/data/WEB338.fa-ca.calibration.Rda")
@@ -134,7 +144,10 @@ ggplot(cali.curve, aes(x=FA, y=value, shape=as.factor(pH), color=as.factor(DES),
 # rm(list = torm[!grepl(pattern = "(ost)", torm)])
 
 
+
+
 ## ----subdoc_content_results, child='usr/subdocuments/chapters/d_pfomt_section.Rnw', eval=T----
+
 
 ## ----litSAM, echo=F, tidy=TRUE, fig.height=5, fig.width=5, out.width='0.7\\textwidth', dev='pdf', error=T----
 load("../../statistics/data/litSAMder.Rda")
@@ -179,6 +192,7 @@ a
 # torm <- ls()
 # rm(list = torm[!grepl(pattern = "(ost)", torm)])
 
+
 ## ----itc.sah,  echo=F, tidy=TRUE, fig.height=4.5, fig.width=8, out.width='\\textwidth', dev='tikz', error=T----
 #library(nwc.itc)
 
@@ -188,12 +202,14 @@ cols <- c("black", "red")
 names <- c("PFOMT vs. SAH", "PFOMT/caffeic acid/\\cf{Mg^2+} vs SAH/\\cf{Mg^2+}")
 itc.compare(itcs[c(5, 16)], noms = names, ylim=c(-0.85, 0.05), lwd=2, cols = cols, main=F, cex.axis=1)
 
+
 ## ----itc.ca,  echo=F, tidy=TRUE, fig.height=4.5, fig.width=8, dev='tikz', error=T----
 load("../../statistics/data/WEB338.itc.Rda")
 cols <- c("black", "red")
 
 names <- c("PFOMT/\\cf{Mg^2+} vs caffeic acid/\\cf{Mg^2+}", "PFOMT/SAH/\\cf{Mg^2+} vs caffeic acid/\\cf{Mg^2+}")
 itc.compare(itcs[c(18,21)], ylim=c(-0.6, 0.05), xlim=c(0,1000),lwd=2, noms = names, cols = cols, main=F, cex.axis=1)
+
 
 ## ----struct.compare,  echo=F, tidy=TRUE, fig.height=2, fig.width=5.6, out.width='\\textwidth', dev='tikz', error=T----
 load("../../statistics/data/structurecompare.Rda")
@@ -237,7 +253,10 @@ ggplot() +
   theme(legend.position="none")
 
 
+
+
 ## ----subdoc_content_results, child='usr/subdocuments/chapters/e_noncatechol_section.Rnw', eval=T----
+
 
 
 
@@ -245,7 +264,9 @@ ggplot() +
 
 
 
+
 ## ----subdoc_content_results, child='usr/subdocuments/chapters/g_des_section.Rnw', eval=T----
+
 
 
 
@@ -253,7 +274,9 @@ ggplot() +
 
 
 
+
 ## ----subdoc_content_appendix, child='usr/subdocuments/chapters/x_appendix_section.Rnw', eval=T----
+
 
 ## ----struct.compare.appendix,  echo=F, tidy=TRUE, fig.height=2, fig.width=5.6, out.width='\\textwidth', dev='tikz', error=T----
 load("../../statistics/data/structurecompare.Rda")
@@ -295,7 +318,10 @@ ggplot() +
   theme(legend.position="none")
 
 
+
+
 ## ----subdoc_content_introduction, child='usr/subdocuments/chapters/x_affidavit_section.Rnw', eval=T----
+
 
 
 
@@ -303,7 +329,9 @@ ggplot() +
 
 
 
+
 ## ----body_mainmatter_chapter_one, child='usr/subdocuments/chapters/x_glossaries_section.Rnw', eval=T----
+
 
 
 

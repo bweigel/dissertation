@@ -3,3 +3,12 @@
 %%%-------------------------------------------------%%% 
 
 \maketitle
+
+{\null\vfill\raggedleft
+It is what it is. Accept it and move on. \\
+-- \textit{unknown} --
+}
+%{\null\vfill\raggedleft
+%\barquote[author=unknown]{It is what it is. Accept it and move on.}
+%}
+

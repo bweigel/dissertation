@@ -7,13 +7,23 @@
 \section{Introduction}
 Non-catechols in nature (biosynthesis, mode of action?), chemical methylation???
 
+phenol vs methoxyphenols vs catechols \\
+
+The 4'-hydroxyl of naringenin is non-catecholic in nature.
+However it is much more acidic than the 4'-hydroxyl of eriodictyol (pKa 9.8 vs 12.7) and thus about equally as acidic as the 3'-hydroxyl of eriodictyol (pKa 9.7) \footnote{pKa values were calculated using ChemAxon's MarvinBeans 15.2.16.0} \citep{Schweigert2001a}.
+
 \section{\glsentrytext{somt}}
 
-\somt was described in the literature to methylate naringenin at the 4'-position of the B-ring \citep{Kim2005c,Kim2005b} to produce ponciretin (also known as isosakuranetin).
+\somt has been described in the literature to methylate multiple flavonoids at the 4'-position of the B-ring \citep{Kim2005c,Kim2005b}.
+There it also showed the highest activity towards naringenin, to produce ponciretin (also known as isosakuranetin).
+%Non-chemical methylations of this nature are of great scientific and economic interest.
+Furthermore it has been the only characterized enzyme of this nature described in literature. \bweigel{is that true?}
+Thus, \somt was selected as a model candidate for enzymes that can methylate 4'-hydroxyls of non-catecholic flavonoids.
 
 
 
 \subsection{In vivo methylation studies using \textit{N.\,benthamiana}}
+\bweigel{eventuell weglassen? wo ist der mehrwert für die arbeit???}
 The group of Sylvestre Marillonet (IPB) established an efficient system to clone and assemble multi enzyme pathways in \nico, using a modular cloning toolbox, which has already been used to produce flavonoids \cite{Konig2014}.
 The group had already cloned all the enzymes required to establish the pathway up to naringenin in \nico (\autoref{fig:somtpathway}).
 However, the \textit{SOMT2} gene needed to be cloned into suitable vectors to be transiently expressed in \nico.
@@ -23,7 +33,7 @@ The 35S-promoter was used alonside the \gls{nos}-terminator to achieve the highe
 \begin{figure}[htpb]
   \centering
   \begin{figureframe}
-    \begin{tikzpicture}
+    \begin{tikzpicture}[scale=0.6, every node/.style={transform shape}]
       \tikzstyle{cpd}=[rectangle, fill=blue!30]
       \path 	(0,0) node[cpd] (a) {phenyl alanine} 
       (3.5,0) node[cpd] (b) {cinnamic acid}
@@ -71,7 +81,7 @@ Although unlikely, it cannot be exluded that the compounds of interest were pres
 \begin{lstTabularx}[1]{\linewidth}{clll}
   %\ostTableEnv[label=tab:naringenin]{%
  %  \begin{tabularx}{\textwidth}{clll}%
-  \caption{4'-methylated naringenin derivatives} \\
+  \caption{Naringenin and 4'-methylated derivatives.} \\
   \label{tab:naringenin}
   \hfill \\
     \toprule
@@ -82,7 +92,7 @@ Although unlikely, it cannot be exluded that the compounds of interest were pres
     \cmidrule{2-4}
     & H & H & naringenin \\
     & \cf{CH3} & H & ponciretin \\
-    & \cf{CH3} & rutinose \footnote{\textalpha -\textsc{l}-rhamnopyrasonyl-(1\ra6)-\textbeta -\textsc{d}-glucopyranose} & ponciretin \\
+    & \cf{CH3} & rutinose \footnote{\textalpha -\textsc{l}-rhamnopyrasonyl-(1\ra6)-\textbeta -\textsc{d}-glucopyranose} & poncirin \\
     & \cf{CH3} & neohesperidose \footnote{\textalpha -\textsc{l}-rhamnopyrasonyl-(1\ra2)-\textbeta -\textsc{d}-glucopyranose} & didymine \\
     \bottomrule
  % \end{tabularx}
@@ -91,8 +101,8 @@ Although unlikely, it cannot be exluded that the compounds of interest were pres
 %Naringenin derivatives.
 %}
 
-The \gls{hplc} chromatograms were analyzed by \gls{pca} after the data were aligned, centered and scaled, to assess whether the collected plant material samples were different from one another (\autoref{fig:e_pca} and \ref{fig:x_pca}).
-The plot shows that the samples of the different leaf sides do not separate, indicating no difference between infiltration with the \textit{SOMT} gene and vector control.
+The \gls{hplc} chromatograms were analyzed by \glsentryfirst{pca} after the data were aligned, centered and scaled, to assess whether the collected plant material samples were different from one another (\autoref{fig:e_pca} and \ref{fig:x_pca}).
+The \gls{pca}-plot shows that the samples of the different leaf sides do not separate, indicating no difference between infiltration with the \textit{SOMT} gene and vector control between the first two principal components, which account for \SI{80}{\percent} of the variance.
 However, there is a slight separation between top and bottom leaves in the second principal component and between plant 3 and plants 1/2 in the first principal component.
 This suggest, that the chemical composition as detected by \gls{hplc} is slightly different in the top and botton leaves, as well as between plants.
 
@@ -106,8 +116,8 @@ This suggest, that the chemical composition as detected by \gls{hplc} is slightl
   \label{fig:e_pca}
 \end{figure}
 
-
 \subsection{In vivo studies in \eco}
+
 \subsection{In vitro studies using recombinantly produced \glsentrytext{somt}}
 
 \section{\glsentrytext{pfomt}}
@@ -115,6 +125,6 @@ This suggest, that the chemical composition as detected by \gls{hplc} is slightl
 \subsection{pH-Profiles of \glsentrytext{pfomt}-catalysis}
 \subsection{Influence of \cf{Mg^2+} on \glsentrytext{pfomt} activity}
 
-\section{Consensus or Bioinformatic points-of-view (\glsentrytext{comt})???}
+%\section{Consensus or Bioinformatic points-of-view (\glsentrytext{comt})???}
 
 \section{Conclusion/Discussion}

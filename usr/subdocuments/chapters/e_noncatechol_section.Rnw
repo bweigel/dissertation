@@ -26,27 +26,27 @@ Thus, \somt was selected as a model candidate for enzymes that can methylate 4'-
 \bweigel{eventuell weglassen? wo ist der mehrwert für die arbeit???}
 The group of Sylvestre Marillonet (IPB) established an efficient system to clone and assemble multi enzyme pathways in \nico, using a modular cloning toolbox, which has already been used to produce flavonoids \cite{Konig2014}.
 The group had already cloned all the enzymes required to establish the pathway up to naringenin in \nico (\autoref{fig:somtpathway}).
-However, the \textit{SOMT2} gene needed to be cloned into suitable vectors to be transiently expressed in \nico.
+However, the \textit{SOMT2} gene needed to be cloned into suitable vectors to be transiently expressed by \nico.
 The gene was first cloned into a level 0 module using BpiI and consequently subcloned into a level 1 module flanked by a promoter and a terminator using BsaI (\autoref{fig:cloning}).
 The 35S-promoter was used alonside the \gls{nos}-terminator to achieve the highest possible transcription rates. 
 
 \begin{figure}[htpb]
   \centering
   \begin{figureframe}
-    \begin{tikzpicture}[scale=0.6, every node/.style={transform shape}]
+    \begin{tikzpicture}[scale=0.75, every node/.style={transform shape}]
       \tikzstyle{cpd}=[rectangle, fill=blue!30]
       \path 	(0,0) node[cpd] (a) {phenyl alanine} 
       (3.5,0) node[cpd] (b) {cinnamic acid}
       (7,0) node[cpd] (c) {coumaric acid}
-      (7, -2) node[cpd] (d) {coumaroyl CoA}
-      (4, -2.5) node (da) {3 x malonyl CoA}
-      (7, -4) node[cpd] (e) {naringenin chalcone}
-      (7, -6) node[cpd] (f) {naringenin}
-      (7, -8) node [draw=red, cpd] (g) {4'-O-methyl-naringenin};
+      (10.5, 0) node[cpd] (d) {coumaroyl CoA}
+      (7.5, -0.5) node (da) {3 x malonyl CoA}
+      (10.5, -2) node[cpd] (e) {naringenin chalcone}
+      (10.5, -4) node[cpd] (f) {naringenin}
+      (10.5, -6) node [draw=red, cpd] (g) {4'-O-methyl-naringenin};
 		
       \draw[->] (a) -- node[above, gray] {PAL} (b);
       \draw[->] (b) -- node[above] {C4H} (c);
-      \draw[->] (c) -- node[right] {4CL} (d);
+      \draw[->] (c) -- node[above] {4CL} (d);
       \draw[->] (d) -- node[right, gray] {CHS} (e);
       \draw[-] (da.east) .. controls +(right:1cm) and +(up:0.5cm) .. (e.north) ;
       \draw[->] (e) -- node[right] {CHI} (f);
@@ -74,8 +74,9 @@ The average weight loss after freeze drying was \SI{87.5}{\percent}.
 
 The dried material was extracted and analyzed via \gls{hplc} to determine whether ponciretin or related compounds were produced (\autoref{tab:naringenin}).
 However, through comparison with authentic standards it was apparent, that none of the expected compounds were detected.
-This finding suggest, that neither naringenin, nor any resulting flavonoids (ponciretin, poncirin, didymin) were present in the plant tissue at the time of harvest.
-Although unlikely, it cannot be exluded that the compounds of interest were present at some point in the tissue.
+This finding suggest, that neither naringenin, nor any resulting flavonoids (ponciretin, poncirin, didymin) were present in detectable amounts in the plant tissue at the time of harvest.
+Although unlikely, it cannot be exluded that higher amounts of the compounds of interest were present at some point in the tissue.
+Numerous more experiments were required to address the issue of non-detection, which however was outside the scope of this work.
 
 
 \begin{lstTabularx}[1]{\linewidth}{clll}
@@ -116,7 +117,49 @@ This suggest, that the chemical composition as detected by \gls{hplc} is slightl
   \label{fig:e_pca}
 \end{figure}
 
+
+
 \subsection{In vivo studies in \eco}
+
+Kim \etal already showed, that \somt could be used for the biotransformation of different flavonoids in \eco live cultures \citep{Kim2005b,Kim2005c}.
+Their technique was to be studied and expanded upon to gain additional insight into the enzyme.
+The \textit{\somt} gene was cloned into the pET28a(+) and pET41a(+) vectors, to obtain constructs for the production of \somt without and with a N-terminal \gls{gst}-tag, respectively since both have been used successfully by Kim \etal.
+However, methylated flavonoids were not detected  when biotransformations were prepared according to the methods of the aforementioned authors (\autoref{fig:e_invivomethod}). 
+
+Thus, the biotransformation medium was changed to auto-induction medium (\gls{zyp}) \citep{Studier2005}.
+\SI{0.05}{\percent} glucose were present in the medium.
+Growth curves were measured, alongside glucose depletion, to establish the time at which substrate addition would be most beneficial.
+Furthermore, \sdspage samples were prepared to observe protein accumulation.
+The glucose present in the medium was depleted after about 5\,hours into growth.
+At that time expression of the \textit{\somt} gene is expected to begin, because the catabolite repression on the \textit{lac}~promoter is relieved .
+
+Thus, \SI{0.1}{\milli\molar} flavonoid were added at 4\,hours to minimize its influence on growth and possible degradation.
+
+However, accumulating \somt could not be distinguished from endogenous \eco protein in the \sdspage gels (\autoref{fig:x_somtgel}).
+
+
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[width=0.75\textwidth]{usr/graphics/static/tmp_somt_invivo_method}
+  \end{figureframe}
+  \caption{Biotransformation methods as described by Kim \etal (left) and developed in this work (right).}
+  \label{fig:e_invivomethod}
+\end{figure}
+
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[width=0.75\textwidth]{usr/graphics/static/tmp_e_growthcurve}
+  \end{figureframe}
+  \caption{Growth curve of \eco BL21(DE3) expressing \textit{\somt} at \degC{37}. 
+  Glucose is depleted about 5\,hours into growth, at which point the start of \textit{\somt} expression is expected.
+  The \odx{600} after inoculation was about \num{0.1}.}
+  \label{fig:e_growthcurve}
+\end{figure}
+
+
+
 
 \subsection{In vitro studies using recombinantly produced \glsentrytext{somt}}
 

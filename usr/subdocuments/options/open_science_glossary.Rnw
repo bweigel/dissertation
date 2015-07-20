@@ -8,6 +8,7 @@
 
 % analytics
 \newacronym{pca}{PCA}{principal component analysis}
+\newacronym{gst}{GST}{Glutathion \textit{S}-transferase}
 \newacronym{pal}{PAL}{phenylalanine ammonia-lyase}
 \newacronym{chs}{CHS}{chalcone synthase}
 \newacronym{nos}{nos}{nopaline synthase}

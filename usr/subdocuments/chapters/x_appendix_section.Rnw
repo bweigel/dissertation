@@ -23,11 +23,23 @@
 \begin{figure}[htpb]
   \centering
   \begin{figureframe}
-    \includegraphics[]{usr/graphics/static/tmp_pca1}p
+    \includegraphics[width=\textwidth]{usr/graphics/static/tmp_pca1}
   \end{figureframe}
   \caption{\gls{pca} of \nico leaves infiltraded by \agro carrying different genes.}
   \label{fig:x_pca}
 \end{figure}
+
+
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[width=0.65\textwidth]{usr/graphics/static/sds_somt}
+  \end{figureframe}
+  \caption{\sdspage gel of samples aquired during growth curve measurements.}
+  \label{fig:x_somtgel}
+\end{figure}
+
+
 
 \chapter{Tables}
 

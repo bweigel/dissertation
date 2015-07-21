@@ -131,11 +131,11 @@ Thus, the biotransformation medium was changed to auto-induction medium (\gls{zy
 Growth curves were measured, alongside glucose depletion, to establish the time at which substrate addition would be most beneficial.
 Furthermore, \sdspage samples were prepared to observe protein accumulation.
 The glucose present in the medium was depleted after about 5\,hours into growth.
-At that time expression of the \textit{\somt} gene is expected to begin, because the catabolite repression on the \textit{lac}~promoter is relieved .
+At that time expression of the \textit{\somt} gene is expected to begin, because the catabolite repression on the \textit{lac}~promoter is relieved.
 
 Thus, \SI{0.1}{\milli\molar} flavonoid were added at 4\,hours to minimize its influence on growth and possible degradation.
-
-However, accumulating \somt could not be distinguished from endogenous \eco protein in the \sdspage gels (\autoref{fig:x_somtgel}).
+Although \sdspage samples were prepared throughout the course of the experiment, accumulating \somt could not be clearly distinguished from endogenous \eco protein in the \sdspage gels (\autoref{fig:x_somtgel}).
+Nonetheless, methylation of some of the tested substrates was observed over a course of 30\,hours (\autoref{tab:invivosomt}).
 
 
 \begin{figure}[htpb]
@@ -159,6 +159,68 @@ However, accumulating \somt could not be distinguished from endogenous \eco prot
 \end{figure}
 
 
+\gls{lcms} was employed to determine the site of methylation, since this method is highly sensitive and numerous structural studies on flavonoids using tandem-mass spectrometry experiments have highlighted the feasability of this approach  \citep{Fabre2001,Lee2005}.
+\Gls{cid} was used to obtain structural information about the target molecules, since soft ionization techniques (e.g. \gls{esi}) used in \gls{lcms} instruments primarily produce protonated and deprotonated molecular ions, but rarely yield fragments \citep{Sleno2004}.
+The \gls{cid} method collides the precursor ions with a neutral target gas while increasing the energy to induce fragmentation.
+The produced fragments vary depending on the energy chosen for fragmentation.
+Flavonoids follow certain different fragmentation pathways \citep{Fabre2001,Lee2005}. 
+The fragmentation of interest in this work, was the one along the C-ring, which produces two fragments (A- and B-ring) (\autoref{fig:e_MSscheme}).
+The mass of the A- and B-ring fragments gives strong evidence for the position (ring) at which methylation occured.
+Using the \gls{cid} technique, an energy of \SI{30}{\electronvolt} proved sufficient to fragment most flavonoids along the C-ring as is shown here for the methylated naringenin (\autoref{fig:e_LCMS_ponciretin}).
+
+Methylation occured exclusively at the 4'-hydroxyl, as the verification via \gls{lcms} suggests.
+A free 4'-hydroxyl is therefore nesseccary for a substance to be a substrate for \somt. 
+\somt acts on phenolic, catecholic as well as (4-hydroxy-3-methoxy-phenyl)-moeities, as is suggested by the assay results that showed methylation of naringenin, eriodictyol and homoeriodictyol respectively.
+
+\begin{lstTabularx}[1]{\linewidth}{XlllX}
+  %\ostTableEnv[label=tab:naringenin]{%
+ %  \begin{tabularx}{\textwidth}{clll}%
+  \caption{\textit{In vivo} biotransformation of different flavonoids, phenylpropanoids and anthraquinones by \somt in \eco} \\
+  \label{tab:invivosomt}
+  \small
+  \hfill \\
+    \toprule
+    substrate & class & 4'-OH & conversion\footnote{Calculation of conversion percentages are only rough estimates, because of the nature of crude medium extracts.} & product\footnote{as determined by \gls{lcms}} \\
+    \midrule
+    alizarin & anthraquinone & no & no & -- \\
+    purpurin & anthraquinone & no & no & -- \\
+    apigenin & flavone & yes & yes ($\geq$\SI{54}{\percent}) & 4'-\textit{O}-methyl apigenin \\  
+    chrysin & flavone & no & no & -- \\
+    genistein & isoflavone & yes & yes ($\leq$\SI{1}{\percent}) & Biochanin A\footnote{4'-\textit{O}-methyl genistein} \\
+    galangin & flavonol & no & no & -- \\ 
+    kaempferol & flavonol & yes & yes ($\geq$\SI{6}{\percent}) & kaempferide\footnote{4'-\textit{O}-methyl kaempferol} \\
+    naringenin & flavanone & yes & yes ($\geq$\SI{55}{\percent}) & ponciretin \\
+    eriodictyol & flavanone & yes & yes ($\geq$\SI{40}{\percent}) & hesperetin \\
+    homoeriodictyol & flavanone & yes & yes ($\geq$\SI{6}{\percent})& 3',4'-(\textit{O,O})-dimethyl eriodictyol\\
+    hesperetin & flavanone & no & no & -- \\
+    phloretin & chalcone & yes & no & -- \\
+    resveratrol & stilbene & yes & yes ($\geq$\SI{86}{\percent})& 4'-\textit{O}-methyl resveratrol \\
+    \textit{p}-coumaric acid & cinnamic acid & yes & no & -- \\ 
+    caffeic acid & cinnamic acid & yes & no & -- \\
+    reosmin & cinnamic acid\footnote{homo-dihydro cinnamic ketone} & yes & no & -- \\ 
+    \bottomrule
+ % \end{tabularx}
+\end{lstTabularx}
+
+
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \begin{subfigure}{\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_naringenin}
+      \caption{CID spectrum (\SI{30}{\electronvolt}) of methylated naringenin.}
+    \end{subfigure}
+    
+    \begin{subfigure}{\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_naringenin_scheme}
+      \caption{Scheme displaying the fragmentation of ponciretin.}
+      \label{fig:e_MSscheme}
+    \end{subfigure}
+%    
+  \end{figureframe}
+  \caption{The masses resulting from the fragmentation into A- and B-ring (\textbf{b}) are evidence, that the 4'-hydroxyl on the B-ring is methylated by \somt}
+  \label{fig:e_LCMS_ponciretin}
+\end{figure}
 
 
 \subsection{In vitro studies using recombinantly produced \glsentrytext{somt}}

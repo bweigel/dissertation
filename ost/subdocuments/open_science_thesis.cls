@@ -1109,7 +1109,7 @@
 %%% Typesetting of units %%%
 %%%-------------------------------------------------%%%
 
-\RequirePackage{siunitx}
+\RequirePackage[separate-uncertainty = true]{siunitx}
 
 % usage:
 %  \si{kg.m/s^2}

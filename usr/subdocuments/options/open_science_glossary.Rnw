@@ -7,6 +7,11 @@
 \makeglossaries
 
 % analytics
+\newacronym{esi}{ESI}{electrospray ionization}
+\newacronym{maldi}{MALDI}{matrix-assisted laser desorption/ionization}
+
+\newacronym{cid}{CID}{collsion induced dissociation}
+\newacronym{hcd}{HCD}{higher-energy collisional dissociation}
 \newacronym{pca}{PCA}{principal component analysis}
 \newacronym{gst}{GST}{Glutathion \textit{S}-transferase}
 \newacronym{pal}{PAL}{phenylalanine ammonia-lyase}

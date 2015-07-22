@@ -1083,7 +1083,7 @@
 %%% Bibliography %%%
 %%%-------------------------------------------------%%%
 
-\RequirePackage{biblatex}
+\RequirePackage[sortcites=true]{biblatex}
 
 \let\ostAddBibliography\addbibresource
 

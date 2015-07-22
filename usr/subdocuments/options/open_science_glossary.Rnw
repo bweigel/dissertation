@@ -7,9 +7,10 @@
 \makeglossaries
 
 % analytics
+\newacronym{msms}{MS/MS}{tandem mass-spectrometry}
 \newacronym{esi}{ESI}{electrospray ionization}
 \newacronym{maldi}{MALDI}{matrix-assisted laser desorption/ionization}
-
+\newacronym[nonumberlist]{mz}{\textit{m/z}}{mass-to-charge ratio}
 \newacronym{cid}{CID}{collsion induced dissociation}
 \newacronym{hcd}{HCD}{higher-energy collisional dissociation}
 \newacronym{pca}{PCA}{principal component analysis}
@@ -176,10 +177,10 @@
 	type        = \acronymtype,
 	name        = ITC,
 	text        = ITC,
-        symbol	    = Isothermal Titration Calorimetry,
-	first       = Isothermal Titration Calorimetry (ITC),
+        symbol	    = Isothermal Titration Calori\-metry,
+	first       = Isothermal Titration Calori\-metry (ITC),
 %	see         = [see also]{itc},
-	description = \glslink{itcg}{Isothermal Titration Calorimetry}
+	description = \glslink{itcg}{Isothermal Titration Calori\-metry}
 }
 
 \newglossaryentry{itcg}{
@@ -266,3 +267,29 @@
         }
 }
 
+\newglossaryentry{T7tag}{
+  name = T7-tag,
+  text = T7-tag,
+  first = T7-tag,
+  description = {%
+    Initial 11 amino acids of the T7 gene \textit{10} protein.%
+    }
+}
+
+\newglossaryentry{histag}{
+  name = His\textsubscript{6}-tag,
+  text = His\textsubscript{6}-tag,
+  first = His\textsubscript{6}-tag,
+  description = {%
+    Hexa-histidine tag commonly used for recombinant protein production.
+    }
+}
+
+\newglossaryentry{trx}{
+  name = Trx-tag,
+  text = Trx-tag,
+  first = Trx-tag,
+  description = {%
+    Thioredoxin tag used to increase solubility and stability of recombinantly expressed proteins.
+    }
+}

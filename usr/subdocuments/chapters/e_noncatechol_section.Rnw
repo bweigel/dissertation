@@ -22,7 +22,7 @@ Thus, \somt was selected as a model candidate for enzymes that can methylate 4'-
 
 
 
-\subsection{In vivo methylation studies using \textit{N.\,benthamiana}}
+\subsection{\textit{In vivo} biotransformation in \nico}
 \bweigel{eventuell weglassen? wo ist der mehrwert für die arbeit???}
 The group of Sylvestre Marillonet (IPB) established an efficient system to clone and assemble multi enzyme pathways in \nico, using a modular cloning toolbox, which has already been used to produce flavonoids \cite{Konig2014}.
 The group had already cloned all the enzymes required to establish the pathway up to naringenin in \nico (\autoref{fig:somtpathway}).
@@ -119,7 +119,7 @@ This suggest, that the chemical composition as detected by \gls{hplc} is slightl
 
 
 
-\subsection{In vivo studies in \eco}
+\subsection{\textit{In vivo} biotransformation in \eco}
 
 Kim \etal already showed, that \somt could be used for the biotransformation of different flavonoids in \eco live cultures \citep{Kim2005b,Kim2005c}.
 Their technique was to be studied and expanded upon to gain additional insight into the enzyme.
@@ -167,40 +167,9 @@ Flavonoids follow certain different fragmentation pathways \citep{Fabre2001,Lee2
 The fragmentation of interest in this work, was the one along the C-ring, which produces two fragments (A- and B-ring) (\autoref{fig:e_MSscheme}).
 The mass of the A- and B-ring fragments gives strong evidence for the position (ring) at which methylation occured.
 Using the \gls{cid} technique, an energy of \SI{30}{\electronvolt} proved sufficient to fragment most flavonoids along the C-ring as is shown here for the methylated naringenin (\autoref{fig:e_LCMS_ponciretin}).
-
-Methylation occured exclusively at the 4'-hydroxyl, as the verification via \gls{lcms} suggests.
-A free 4'-hydroxyl is therefore nesseccary for a substance to be a substrate for \somt. 
-\somt acts on phenolic, catecholic as well as (4-hydroxy-3-methoxy-phenyl)-moeities, as is suggested by the assay results that showed methylation of naringenin, eriodictyol and homoeriodictyol respectively.
-
-\begin{lstTabularx}[1]{\linewidth}{XlllX}
-  %\ostTableEnv[label=tab:naringenin]{%
- %  \begin{tabularx}{\textwidth}{clll}%
-  \caption{\textit{In vivo} biotransformation of different flavonoids, phenylpropanoids and anthraquinones by \somt in \eco} \\
-  \label{tab:invivosomt}
-  \small
-  \hfill \\
-    \toprule
-    substrate & class & 4'-OH & conversion\footnote{Calculation of conversion percentages are only rough estimates, because of the nature of crude medium extracts.} & product\footnote{as determined by \gls{lcms}} \\
-    \midrule
-    alizarin & anthraquinone & no & no & -- \\
-    purpurin & anthraquinone & no & no & -- \\
-    apigenin & flavone & yes & yes ($\geq$\SI{54}{\percent}) & 4'-\textit{O}-methyl apigenin \\  
-    chrysin & flavone & no & no & -- \\
-    genistein & isoflavone & yes & yes ($\leq$\SI{1}{\percent}) & Biochanin A\footnote{4'-\textit{O}-methyl genistein} \\
-    galangin & flavonol & no & no & -- \\ 
-    kaempferol & flavonol & yes & yes ($\geq$\SI{6}{\percent}) & kaempferide\footnote{4'-\textit{O}-methyl kaempferol} \\
-    naringenin & flavanone & yes & yes ($\geq$\SI{55}{\percent}) & ponciretin \\
-    eriodictyol & flavanone & yes & yes ($\geq$\SI{40}{\percent}) & hesperetin \\
-    homoeriodictyol & flavanone & yes & yes ($\geq$\SI{6}{\percent})& 3',4'-(\textit{O,O})-dimethyl eriodictyol\\
-    hesperetin & flavanone & no & no & -- \\
-    phloretin & chalcone & yes & no & -- \\
-    resveratrol & stilbene & yes & yes ($\geq$\SI{86}{\percent})& 4'-\textit{O}-methyl resveratrol \\
-    \textit{p}-coumaric acid & cinnamic acid & yes & no & -- \\ 
-    caffeic acid & cinnamic acid & yes & no & -- \\
-    reosmin & cinnamic acid\footnote{homo-dihydro cinnamic ketone} & yes & no & -- \\ 
-    \bottomrule
- % \end{tabularx}
-\end{lstTabularx}
+The molecular ion [M+H]\textsuperscript{+} of the methylated naringenin has a \gls{mz} of 287.092.
+The fragments helping to derive structural information are \mz{133} and \mz{153}, which can only be explained if the B-ring was methylated (\autoref{fig:e_MSscheme}).
+If the A-ring was methylated, the expected fragment ions of A and B-ring would have \gls{mz}-values of 167 and 119 respectively.
 
 
 \begin{figure}[htpb]
@@ -218,17 +187,98 @@ A free 4'-hydroxyl is therefore nesseccary for a substance to be a substrate for
     \end{subfigure}
 %    
   \end{figureframe}
-  \caption{The masses resulting from the fragmentation into A- and B-ring (\textbf{b}) are evidence, that the 4'-hydroxyl on the B-ring is methylated by \somt}
+  \caption{The masses resulting from the fragmentation into A- and B-ring along the C-ring (dashed line, \textbf{b}) are evidence, that the 4'-hydroxyl on the B-ring is methylated by \somt}
   \label{fig:e_LCMS_ponciretin}
 \end{figure}
 
 
-\subsection{In vitro studies using recombinantly produced \glsentrytext{somt}}
+The \gls{lcms} results suggest, that methylation occured exclusively at the 4'-hydroxyl.
+There was no conversion detected, when a 4'-hydroxyl was absent (\autoref{tab:invivosomt}).
+A free 4'-hydroxyl seems therefore necessary for a substance to be a substrate for \somt, which confirms the previous results by Kim \etal \citep{Kim2005b}. 
+Conversion was observed for flavonoids and the stilbene resveratrol, although conversion rates of the isoflavone genistein were very low.
+No conversion of anthraquinones, cinnamic acid derivates or chalcones was detected, which is also in accordance with previously published data.
+\somt acts on phenolic, catecholic as well as (4-hydroxy-3-methoxy-phenyl)-moeities, as is suggested by the assay results that showed methylation of naringenin, eriodictyol and homoeriodictyol respectively.
+The methylation of (4-hydroxy-3-methoxy-phenyl)-moiteties and of stilbenes are properties of \somt that have not been described before.
+
+The conversion ratios were assessed, but are beset with large errors due to the nature of \eco rich medium extracts.
+The highest conversions were observed for flavanones and flavones (up to $\geq$\SI{55}{\percent}). The tested isoflavones and flavonols showed much lesser conversion ratios (less then \SI{10}{\percent}).
+The conversion ratios of apigenin ($\geq$\SI{54}{\percent}) and naringenin ($\geq$\SI{55}{\percent}) are comparable to the ones published by Kim \etal.
+However, genistein only showed minute conversions, which is converse to the data published by their group \citep{Kim2005b}.
+Conversion of eriodictyol, homoeriodictyol and kaempferol were not reported before.
+
+The biotransformation of resveratrol to 3,5-dihydroxy-4'-methoxy-stilbene showed a conversion ratio of $\geq$\SI{86}{\percent} in 30 hours.
+This is roughly double the conversion which was recently reported for \invivo biotransformations using the specific resveratrol \gls{omt} sbCOM1, which only achieved \SI{42}{\percent} conversion in 36 hours \citep{Kang2014}.
+
+\begin{lstTabularx}[1]{\linewidth}{XlllX}
+  %\ostTableEnv[label=tab:naringenin]{%
+ %  \begin{tabularx}{\textwidth}{clll}%
+  \caption{\textit{In vivo} biotransformation of different flavonoids, phenylpropanoids and anthraquinones by \somt in \eco} \\
+  \label{tab:invivosomt}
+  \small
+  \hfill \\
+    \toprule
+    substrate & class & 4'-OH & conversion\footnote{Calculation of conversion percentages are only rough estimates, because of the nature of crude medium extracts.} & product\footnote{as determined by \gls{lcms}} \\
+    \midrule
+    alizarin & anthraquinone & no & no & -- \\
+    purpurin & anthraquinone & no & no & -- \\
+    apigenin & flavone & yes & yes ($\geq$\SI{54}{\percent}) & 4'-\textit{O}-methyl apigenin \\  
+    chrysin & flavone & no & no & -- \\
+    genistein & isoflavone & yes & yes ($<$\SI{1}{\percent}) & Biochanin A\footnote{4'-\textit{O}-methyl genistein} \\
+    galangin & flavonol & no & no & -- \\ 
+    kaempferol & flavonol & yes & yes ($\geq$\SI{6}{\percent}) & kaempferide\footnote{4'-\textit{O}-methyl kaempferol} \\
+    naringenin & flavanone & yes & yes ($\geq$\SI{55}{\percent}) & ponciretin \\
+    eriodictyol & flavanone & yes & yes ($\geq$\SI{40}{\percent}) & hesperetin \\
+    homoeriodictyol & flavanone & yes & yes ($>$\SI{6}{\percent})& 3',4'-(\textit{O,O})-dimethyl eriodictyol\\
+    hesperetin & flavanone & no & no & -- \\
+    phloretin & chalcone & yes & no & -- \\
+    resveratrol & stilbene & yes & yes ($\geq$\SI{86}{\percent})& 4'-\textit{O}-methyl resveratrol \\
+    \textit{p}-coumaric acid & cinnamic acid & yes & no & -- \\ 
+    caffeic acid & cinnamic acid & yes & no & -- \\
+    reosmin & cinnamic acid\footnote{homo-dihydro cinnamic ketone} & yes & no & -- \\ 
+    \bottomrule
+ % \end{tabularx}
+\end{lstTabularx}
+
+
+\subsection{\textit{In vitro} studies using recombinantly produced \glsentrytext{somt}}
+
+\textit{In vivo} biotransformations are an important tool for the primary characterization of enzymes.
+However, because live organisms are used and lots of variables are unknown, these systems can cause large errors and are not fit to thouroughly characterize an enzyme.
+Initially \somt was to be purified to homogeneity to be later thourougly characterized \invitro, since Kim \etal had showed the recombinant production of \somt in \eco as a fusion protein with an N-terminal \gls{T7tag}, but had missed to characterize the recombinant enzyme.
+
+Initial protein production tests were carried out using \textit{\somt} cloned into pET28a(+) with an N-terminal \gls{histag}.
+However, \somt was not produced in soluble form (\autoref{fig:e_somtgel_exp}).
+Numerous systems were tested for the expression of \textit{\somt}. 
+\eco strains used for the trials included BL21(DE3), Rosetta(DE3), Origami(DE3), C41(DE3), C43(DE3), C41(DE3) pLys, C43(DE3) pLys and DH5\textalpha. 
+The \textit{\somt} gene was cloned into multiple other vectors, inluding pET20b for periplasmic protein proiduction, pET32 for expression with an \gls{trx} and vectors that carry promoters for induction by rhamnose.
+Multiple media, including \gls{tb}, \gls{lb} and autoinductiuon media were used along with different inducers (e.g. lactose, rhamnose, \gls{iptg}) at different temperatures.
+Nonetheless \somt could not be produced in a soluble form and expression only resulted in \glspl{ib}.
+
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[scale=0.25]{usr/graphics/static/WEB214_SDSPAGE}
+  \end{figureframe}
+  \caption{\sdspage of pET28a(+) \textit{\somt} expressed in \eco BL21(DE3) in autoinduction medium at different temperatures (shown above). The insoluble fractions show a protein band the same height as the \SI{40}{\kilo\dalton}) marker band, which corresponds to the \somt protein (\SI{40425}{\dalton}). M -- protein size marker, S -- soluble fraction, I -- insoluble fraction}
+  \label{fig:e_somtgel_exp}
+\end{figure}
+
+Since the \somt protein could not be obtained in soluble formen, when recombinantly expressed in \eco, the \glspl{ib} were prepared and used for \invitro refolding studies.
+Protein refolding is no trivial task. 
+The refolding process competes with misfolding and aggregation processes and refolding buffers have to be optimized in order to obtain an efficient refolding system with the best possible results \cite{Willis2005,Yamaguchi2014,Rudolph1996}.
+Refolding efficiency is best measured via biological activity, but even with adequate assays refolding studies are a time-consuming process of trial-and-error.
+The number of experiments required to even test only four variables, for example pH, salt, temperature and protein concentration with 3 states each (e.g. low, medium, high) in all possible combinations results in $3^4=81$.
+An experimental setup, which accounts for all possible variable (factor) combinations is also called a \emph{full factorial design}.
+
+
+Refolding studies were performed using a \glsentryfirst{ffd}.
 
 \section{\glsentrytext{pfomt}}
 \subsection{Acidity and Nucleophilicity of phenolic hydroxyl-groups}
 \subsection{pH-Profiles of \glsentrytext{pfomt}-catalysis}
 \subsection{Influence of \cf{Mg^2+} on \glsentrytext{pfomt} activity}
+
+\section{Structural studies of flavonoids using \glsentryfirst{msms}}
 
 %\section{Consensus or Bioinformatic points-of-view (\glsentrytext{comt})???}
 

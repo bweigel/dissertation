@@ -67,11 +67,22 @@
 %%% Set lengths %%%
 %%%-------------------------------------------------%%%
 
+
+%%%-------------------------------------------------%%%
+%%% Footnote settings  %%%
+%%%-------------------------------------------------%%%
+
+\makeatletter\@addtoreset{footnote}{section}\makeatother %% uncomment for new numbering every section
+
+%\usepackage{perpage}\MakePerPage{footnote} %% uncomment for footnote numnering reset every page
+
+
 %%%-------------------------------------------------%%%
 %%% Set own commands %%%
 %%%-------------------------------------------------%%%
 
 %% Example:
+\newcommand{\mz}[1]{\textit{m/z}\,#1\xspace}
 \newcommand{\degC}[1]{\SI[mode=text]{#1}{\celsius}}
 \newcommand{\ul}[1]{\SI[mode=text]{#1}{\micro\litre}}
 \newcommand{\ml}[1]{\SI[mode=text]{#1}{\milli\litre}}
@@ -93,6 +104,7 @@
 % \newcommand{name}[number of parameters]{things to do}
 \newcommand{\etal}{\textit{et al.}\xspace}
 \newcommand{\invivo}{\textit{in vivo}\xspace}
+\newcommand{\invitro}{\textit{in vitro}\xspace}
 
 %%%-------------------------------------------------%%%
 %%% Set own environments %%%
@@ -190,7 +202,7 @@
 % \ostSetAdvisorOne{Advisor: Prof. Dr. Ludger A. Wessjohann\\ The Best\\ Telephone}
 % \ostSetAdvisorTwo{}
  
-\ostSetContent{Title}{Biotransformations from and to methylated flavonoids}
+\ostSetContent{Title}{Biotransformations from and to me\-thy\-la\-ted fla\-vo\-noids}
 \ostSetContent{Subtitle}{Subtitle}
 \ostSetContent{Authors}{Benjamin Weigel}
 \ostSetContent{Institution}{Leibniz-Institute of Plant Biochemistry \\ Department of Bioorganic Chemistry \\ Weinberg 3 \\ 06120 Halle(Saale)}

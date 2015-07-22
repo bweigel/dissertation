@@ -5,8 +5,8 @@
 \maketitle
 
 {\null\vfill\raggedleft
-It is what it is. Accept it and move on. \\
-\raggedleft -- \textit{unknown} --
+It is what it is. Accept it and move on. \hfill \\
+\hfill -- \textit{unknown} --
 }
 %{\null\vfill\raggedleft
 %\barquote[author=unknown]{It is what it is. Accept it and move on.}

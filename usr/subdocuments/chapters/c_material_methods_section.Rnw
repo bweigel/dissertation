@@ -390,7 +390,7 @@ Unspecifically bound proteins were washed away by increasing the amount of eluti
 Highly enriched and purified target protein was eluted with 6 to 10\,\gls{cv} of 100\,\% elution buffer. 
 
 \subsection{Refolding of \glsentrytext{somt} on a micro scale using \glsentryfirst{doe}}
-\Gls{doe} and \gls{ffd} have been successfully used to optimize the refolding conditions of several proteins \citep{Willis2005,Akbari2010,Benoit2007}.
+\Gls{doe} and \glsentryfirst{ffd} have been successfully used to optimize the refolding conditions of several proteins \citep{Willis2005,Akbari2010,Benoit2007}.
 Thus, an approach using \gls{ffd} was used to find optimal refolding conditions for \gls{somt}. \\
 Factors studied were pH (buffer), arginine, glycerol, divalent cations, ionic strength, redox system, cyclodextrin and co-factor addition.
 The experimental matrix was constructed using the \verb+FrF2+ package (\url{http://cran.r-project.org/web/packages/FrF2/index.html}) in the R software.

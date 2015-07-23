@@ -7,6 +7,8 @@
 \makeglossaries
 
 % analytics
+\newacronym{aov}{ANOVA}{\emph{An}alysis \emph{o}f \emph{Va}riance}
+\newacronym{meplot}{ME-plot}{main effects plot}
 \newacronym{msms}{MS/MS}{tandem mass-spectrometry}
 \newacronym{esi}{ESI}{electrospray ionization}
 \newacronym{maldi}{MALDI}{matrix-assisted laser desorption/ionization}
@@ -78,7 +80,7 @@
 \newacronym{iex}{IEX}{ion exchange chromatography}
 \newacronym{gfp}{GFP}{green fluorescent protein}
 \newacronym{doe}{DoE}{design of experiments}
-\newacronym{ffd}{FFD}{fractional factorial design}
+\newacronym{ffd}{FrFD}{fractional factorial design}
 \newacronym{hic}{HIC}{hydrophobic interaction chromatography}
 % substances
 \newacronym[first={glutathione (GSH)}]{gsh}{GSH}{glutathione, \textgamma-\textsc{l}-glutamyl-\textsc{l}-cysteinylglycine}

@@ -246,6 +246,7 @@ This is roughly double the conversion which was recently reported for \invivo bi
 However, because live organisms are used and lots of variables are unknown, these systems can cause large errors and are not fit to thouroughly characterize an enzyme.
 Initially \somt was to be purified to homogeneity to be later thourougly characterized \invitro, since Kim \etal had showed the recombinant production of \somt in \eco as a fusion protein with an N-terminal \gls{T7tag}, but had missed to characterize the recombinant enzyme.
 
+\subsubsection{Protein production test}
 Initial protein production tests were carried out using \textit{\somt} cloned into pET28a(+) with an N-terminal \gls{histag}.
 However, \somt was not produced in soluble form (\autoref{fig:e_somtgel_exp}).
 Numerous systems were tested for the expression of \textit{\somt}. 
@@ -262,6 +263,8 @@ Nonetheless \somt could not be produced in a soluble form and expression only re
   \caption{\sdspage of pET28a(+) \textit{\somt} expressed in \eco BL21(DE3) in autoinduction medium at different temperatures (shown above). The insoluble fractions show a protein band the same height as the \SI{40}{\kilo\dalton}) marker band, which corresponds to the \somt protein (\SI{40425}{\dalton}). M -- protein size marker, S -- soluble fraction, I -- insoluble fraction}
   \label{fig:e_somtgel_exp}
 \end{figure}
+
+\subsubsection{\textit{In vitro} protein refolding}
 
 Since the \somt protein could not be obtained in soluble formen, when recombinantly expressed in \eco, the \glspl{ib} were prepared and used for \invitro refolding studies.
 Protein refolding is no trivial task. 
@@ -297,32 +300,32 @@ The highest amount of soluble protein was present, when the refolding reaction t
 
 The common denominator of those buffers is that all of them contained arginine, whose addition has proven beneficial for many refolding applications \citep{Chen2008a,Tsumoto2004,Fujimoto2010}.
 \Glspl{meplot} illustrate the difference between level means for each factor.
-The \meplot for protein concentration shows, that arginine seems to be an important factor for the refolding of \somt (\autoref{fig:MEplot}).
+The \meplot for protein concentration shows, that arginine seems to be an important factor for the refolding of \somt (\autoref{fig:MEplot_BF}).
 Furthermore, the addition of \gls{sah} or glycerin and the pH seem to have an influence, whereas the other factors seem to play only a minor role for high protein concentrations after refolding.
 However, the \aov test suggests that only arginine addition has a significant influence on refolding, when the significance level is set to \SI{5}{\percent} ($p$-value \num{0.0158}).
 The other $p$-values are all higher, which suggests no influence. 
 Only the $p$-value for \gls{sah} addition (\num{0.0897}) would show significance, if the significance level was raised to \SI{10}{\percent}.
 
 
-\begin{figure}[htpb]
-  \centering
-  \begin{figureframe}
-    
-    \begin{subfigure}{0.8\textwidth}\centering
-      \includegraphics[width=\textwidth]{usr/graphics/static/e_refold_BF}
-      \caption{Protein concentration after rebuffering every refolding reaction.}
-    \end{subfigure}
-        
-    \begin{subfigure}{0.8\textwidth}\centering
-      \includegraphics[width=\textwidth]{usr/graphics/static/MEplot_BF}
-      \caption{Main effects plot.}
-      \label{fig:MEplot}
-    \end{subfigure}
-    
-  \end{figureframe}
-  \caption{}
-  \label{fig:refold_BF}
-\end{figure}
+%\begin{figure}[htpb]
+%  \centering
+%  \begin{figureframe}
+%    
+%    \begin{subfigure}{0.8\textwidth}\centering
+%      \includegraphics[width=\textwidth]{usr/graphics/static/e_refold_BF}
+%      \caption{Protein concentration after rebuffering every refolding reaction.}
+%    \end{subfigure}
+%        
+%    \begin{subfigure}{0.8\textwidth}\centering
+%      \includegraphics[width=\textwidth]{usr/graphics/static/MEplot_BF}
+%      \caption{Main effects plot.}
+%      \label{fig:MEplot}
+%    \end{subfigure}
+%    
+%  \end{figureframe}
+%  \caption{}
+%  \label{fig:refold_BF}
+%\end{figure}
 
 \begin{lstTabularx}[1]{\linewidth}{lrrrrrl}
 %
@@ -331,7 +334,7 @@ Only the $p$-value for \gls{sah} addition (\num{0.0897}) would show significance
   \small
   \hfill \\
     \toprule
-    & Df & Sum Sq & Mean Sq & F value & Pr($>$F) & \\ 
+    & df & Sum Sq & Mean Sq & F value & Pr($>$F) & \\ 
     \hline
     Arginine      & 1 & 3595.63 & 3595.63 & 24.56 & 0.0158 & * \\ 
     pH            & 1 & 529.87 & 529.87 & 3.62 & 0.1533 & \\ 
@@ -350,37 +353,56 @@ Activity tests were conducted with the refolded protein samples to check for nar
 The amount of produced ponciretin was determined relative to the internal standard \glsentryfirst{ac9}.
 The protein activity in the refolded samples was generally very low.
 The maximum conversion of about \SI{8.7}{\percent} was observed for the refolded protein sample 7.
-The activity of the samples did not correlate well with the amount soluble protein.
+The activity of the samples did not correlate well with the amount of soluble protein.
 This becomes clear from the samples 4 and 5, where the amount of soluble protein was high but the observed activity was at a baseline level.
-Instead, 
+The \meplot also suggests that the main effects have changed. 
+Most notably the redox state of the refolding reaction seemed to have a big influence on the protein activity.
+Indeed, the \aov test suggests that using reducing refolding conditions (\gls{dtt}) over a redox-shuffling system (GSH:GSSG, oxidizing) has a significant influence on methylation activity ($p-\mathrm{value} = 0.0210$). 
+However, there is the possibility for \somt to form intramolecular disulfide bridges, as the modelled structure suggests (\autoref{fig:x_somtmodel}).
+There are also reports, which showed that intermolecular disulfide bridges can contribute to the stability of, mainly archeal, \glspl{mt} and have no influence on the enzymatic activity \cite{Guelorget2010,Jorda2011,Gee2005}.
+Nevertheless most \glspl{mt} are only active under reducing conditions and literature suggests, that sometimes assays of \glspl{mt} are explicitly conducted under reducing conditions \cite{Ibdah2003,Zubieta2001a}.
+
+The $p$-value for arginine addition is 0.0649, which also suggests a significant contribution when using a significance level of \SI{10}{\percent}.
+This is plausible, since there cannot be any activity when no soluble protein is present.
+Judging from the \aov test, the remaining factors have no significant impact on the protein activity after refolding.
 
 \begin{figure}[htpb]
   \centering
   \begin{figureframe}
-    \begin{subfigure}{\textwidth}\centering
-      \includegraphics[width=0.75\textwidth]{usr/graphics/static/tmp_refold_hplc}
-      \caption{Relative conversion of naringenin to ponciretin by refolded \somt samples.}
+    
+    \begin{subfigure}{0.48\textwidth}\centering
+      \includegraphics[width=\textwidth]{usr/graphics/static/e_refold_BF}
+      \caption{Protein concentration after rebuffering every refolding reaction.}
+    \end{subfigure}%       
+    \begin{subfigure}{0.48\textwidth}\centering
+      \includegraphics[width=\textwidth]{usr/graphics/static/MEplot_BF}
+      \caption{\Glspl{meplot} for soluble protein.}
+      \label{fig:MEplot_BF}
     \end{subfigure}
     
-    \begin{subfigure}{0.8\textwidth}\centering
+    \begin{subfigure}{0.48\textwidth}\centering
+      \includegraphics[width=\textwidth]{usr/graphics/static/tmp_refold_hplc}
+      \caption{Relative conversion of naringenin to ponciretin by refolded \somt samples.}
+    \end{subfigure}%
+    \begin{subfigure}{0.48\textwidth}\centering
       \includegraphics[width=\textwidth]{usr/graphics/static/tmp_MEP_activity}
       \caption{\Glspl{meplot} for \somt activity.}
     \end{subfigure}
     
   \end{figureframe}
-  \caption{}
-  \label{fig:e_refold_activity}
+  \caption{Results of \invitro protein refolding trials.}
+  \label{fig:e_refolding_analysis}
 \end{figure}
 
 
 \begin{lstTabularx}[1]{\linewidth}{lrrrrrl}
 %
-  \caption{Results for the \aov of the main effects model describing protein activity. Significance codes: 0.05 (\textbf{*}), 0.1 (\textbf{.})} \\
+  \caption{Results for the \aov of the main effects model describing protein activity. Significance codes: 0.05 (\textbf{~*~}), 0.1 (\textbf{~.~})} \\
   \label{tab:aov_activity}
   \small
   \hfill \\
     \toprule
-    & Df & Sum Sq & Mean Sq & F value & Pr($>$F) &   \\ 
+    & df & Sum Sq & Mean Sq & F value & Pr($>$F) &   \\ 
     \midrule
     Arginine      & 1 & 0.03 & 0.03 & 8.14 & 0.0649 & .  \\ 
     pH            & 1 & 0.02 & 0.02 & 4.83 & 0.1153 &   \\ 
@@ -393,6 +415,24 @@ Instead,
     Residuals     & 3 & 0.01 & 0.00 &  &  &   \\ 
     \bottomrule
 \end{lstTabularx}
+
+\subsubsection{Scaleup of \invitro refolding reactions}
+
+Buffer 7 (\SI{50}{\milli\molar} borate/NaOH, \SI{0.5}{\molar} arginine, \SI{2}{\milli\molar} \cf{CaCl2}, \SI{2}{\milli\molar} \cf{MgCl2}, \SI{10}{\milli\molar} \cf{NaCl}, \SI{0.5}{\milli\molar} \cf{KCl}, \SI{30}{\milli\molar} \textalpha-cyclodextrin, \SI{5}{\milli\molar} \gls{dtt} pH 8.5) was used to scale up the refolding reaction from a total volume of \SI{1.05}{\milli\litre} to a volume of \SI{50}{\milli\litre}.
+After refolding and concentration the protein solution was analyzed by gel filtration, \gls{cd} spectrometry and activity tests were conducted.
+
+The retention time for \somt during the gel filtration run was 14.5\,min \bweigel{genau raussuchen} (\autoref{fig:x_somt_gefi}).
+From the gel filtration standard measurements, this corresponds to a molecular weight of approximatly \SI{57853}{\dalton}, which is roughly the weight of one \somt monomer (\SI{40}{\kilo\dalton}).
+The \gls{cd} spectrum  (\autoref{fig:x_somt_cd}) suggest, that the refolded \somt possesses a secondary structure and is not present as an unfolded random coil.
+The secondary structure was estimated from the measured \gls{cd}-spectrum by the K2D3 web service \cite{Louis-Jeune2012}.
+According to the calculations, the secondary structure elements consist of \SI{12.39}{\percent} \textalpha-helix and \SI{32.51}{\percent} \textbeta-sheet.
+However, the calculated protein model (\ref{fig:x_somtmodel}) suggests the helix content is much higher (\SI{52.3}{\percent}), whereas the sheet content is accordingly lower (\SI{15.4}{\percent}).
+This finding suggests, that the refolded protein is not in a native state.
+Also, the enzyme showed no activity for naringenin methylation, which was further evidence that the scaled-up refolding was unsuccessful.
+Even over the course of many trials a successful large scale refolding of \somt yielding active protein could not be achieved.
+
+These results display that \gls{doe} combined with \gls{ffd} can be a valueable tool for the identification of main factors during protein refolding.
+However, there still exists a discrepancy between small scale refolding reactions and the process of upscaling, which might not be trivial.
 
 \section{\glsentrytext{pfomt}}
 \subsection{Acidity and Nucleophilicity of phenolic hydroxyl-groups}

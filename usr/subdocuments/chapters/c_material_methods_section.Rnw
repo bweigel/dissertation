@@ -450,7 +450,7 @@ The experimental matrix was constructed using the \verb+FrF2+ package (\url{http
 \end{lstTabularx}
 
 The buffers were mixed from stock solutions and prepared in 1.5\,ml microcentrifuge tubes immediately prior to the experiment.
-\ul{50} of solubilized \gls{somt} (\SI{1}{\mg\per\ml}) in \gls{ib} solubilization buffer was added to each buffer followed by a short vortex boost for rapid mixing.
+\ul{50} of solubilized \gls{somt} (\SI{1}{\mg\per\ml}) in \gls{ib} solubilization buffer was added to \SI{1}{\milli\litre} of each buffer followed by a short vortex boost for rapid mixing.
 The final protein concentration in the refolding reaction was \ugperml{50}, whereas the remaining \gls{gua} concentration was $\approx$286\,mM.
 The refolding reactions were incubated at \gls{rt} for 1 hour, followed by an over night incubation at \degC{4}.
 After incubation the refolding reactions were centrifuged (\timesg{10000}, \degC{4}, 10\,min) to separate insoluble and soluble protein fractions.

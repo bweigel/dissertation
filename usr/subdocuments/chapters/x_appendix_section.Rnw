@@ -33,12 +33,40 @@
 \begin{figure}[htpb]
   \centering
   \begin{figureframe}
-    \includegraphics[width=0.65\textwidth]{usr/graphics/static/sds_somt}
+    \includegraphics[width=0.45\textwidth]{usr/graphics/static/sds_somt}
   \end{figureframe}
-  \caption{\sdspage gel of samples aquired during growth curve measurements.}
+  \caption{\sdspage gel of samples aquired during growth curve measurements. The arrow indicated the band that could correspond to the GST-tagged \somt protein.}
   \label{fig:x_somtgel}
 \end{figure}
 
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[width=0.85\textwidth]{usr/graphics/static/SOMT_SS-bridges}
+  \end{figureframe}
+  \caption{Graphical representation of a \somt model obtained from the PHYRE2 web portal (\url{http://www.sbg.bio.ic.ac.uk/phyre2/html/page.cgi?id=index}) \citep{Kelley2015}}
+  \label{fig:x_somtmodel}
+\end{figure}
+
+
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[width=0.75\textwidth]{usr/graphics/static/platzhalter}
+  \end{figureframe}
+  \caption{Chromatogram of the gel filtration analysis of refolded \somt.}
+  \label{fig:x_somt_gefi}
+\end{figure}
+
+
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[width=0.75\textwidth]{usr/graphics/static/CD_SOMT}
+  \end{figureframe}
+  \caption{CD-spectrum of refolded \somt (black) compared to the spectrum that was calculated by the K2D3 web service (\url{http://cbdm-01.zdv.uni-mainz.de/~andrade/k2d3//index.html}). Secondary structure estimates from the spectrum are \SI{12.39}{\percent} \textalpha-helix and \SI{32.51}{\percent} \textbeta-sheet.}
+  \label{fig:x_somt_cd}
+\end{figure}
 
 
 \chapter{Tables}

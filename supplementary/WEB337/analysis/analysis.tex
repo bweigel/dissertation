@@ -1,0 +1,14 @@
+
+
+
+
+library(ggplot2)
+library(dplyr)
+library(magrittr)
+df <- read.csv("IPB//Experimente//WEB337 - in vivo SOMT//RAW//results_area.csv")
+
+df %<>% filter(substrate != 17)
+df$area[is.na(df$area)] <- 0
+
+ggplot(data=df, aes(x=time, y=area, color=compound)) + geom_line() + facet_wrap(~substrate, ncol = 4, scales = "free_y")
+

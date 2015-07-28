@@ -1,0 +1,408 @@
+---
+title: "WEB348"
+author: "Benjamin Weigel"
+date: "July 28th, 2015"
+output: rmarkdown::tufte_handout
+---
+
+```{r knitr_options, cache=FALSE, echo=FALSE}
+knitr::opts_chunk$set(dev='tikz', error=T, warning=F, message=F, size='tiny', echo=F)
+```
+
+```{r}
+mf_labeller <- function(var, value){
+   value <- as.character(value)
+   if(var == "Mg"){
+       value[value == "TRUE"] <- "10 mM Mg"
+       value[value == "FALSE"] <- "no Mg"
+   }
+   if(var == "type"){
+       value[value == "CoP"] <- "SAH"
+       value[value == "CoS"] <- "SAM"
+       value[value == "S"] <- "Substrate"
+       value[value == "P"] <- "Product"
+   }
+   
+   return(value)
+}
+```
+
+# Introduction
+
+## Question
+
+What do pH profiles of the reaction velocities look like for three different substrates (eriodictyol, iso-ferulic acid and caffeic acid) under conditions where Mg is present and under no-Mg conditions?
+Is there an influence of magnesium on the catalysis?
+
+## Data
+
+```{r, results='asis'}
+library(dplyr)
+library(magrittr)
+library(xtable)
+library(ggplot2)
+options(xtable.comment = FALSE)
+options(xtable.booktabs = TRUE)
+
+samples <- data.frame(label = LETTERS[1:6], substrate = rep(c("eriodictyol", "iso-ferulic acid", "caffeic acid"), each=2), Mg = rep(c(F,T), 3))
+levtab <- xtable(samples, caption="Experiment key.")
+
+print(levtab, floating.environment='margintable')
+```
+
+HPLC profiles of the reactions were analyzed. Substrate and product-peaks were integrated and the initial velocities were calculated from the slopes. For the sake of uniformity the actual data that is being worked with here is only concerned with the appearance and dissappearence of SAM and SAH. These products are the same in every reaction. The other products (ferulic acid, homo-eriodictyol and dimethyl caffeic acid) have different molar extinction coefficients from each other. This adds bias to the analysis.
+
+
+```{r, results='asis'}
+load("velo.Rda")
+velo <- velo[,-c(2,5,6)]
+xtable(head(velo), caption = "The first rows of the velocities that were calculated from HPLC runs.")
+
+velo <- merge(velo, samples, by.x ="sample", by.y="label")
+velo %<>% filter(key == "SAH" | key =="SAM")
+xtable(head(velo[,-6]), caption = "Only the velocities of SAM-disappearance and SAH-appearence that were calculated from HPLC runs. Another column Mg was added to describe, whether Mg was added or not.")
+```
+
+## pH profiles
+
+The pH profiles show a clear pH-dependency of the PFOMT reaction.
+This is true for when magnedium is present or absent.
+The reaction is quick for the catecholic substrates caffeic acid and eriodictyol. However the reaction is slow for iso-ferulic acid (margin).
+
+```{r, fig.cap="pH-profiles for SAH production. Substrates: red -- caffeic acid, green -- eriodictyol, blue -- iso-ferulic acid"}
+velo %>% filter(key == "SAH") %>%
+    ggplot(data=., aes(x = pH, y = V_AUpermin, col=substrate), format(scientific=F)) +
+    geom_point() +
+    geom_line(aes(group=substrate)) +
+    geom_linerange(aes(ymin=V_AUpermin-sd_AUpermin, ymax=V_AUpermin+sd_AUpermin), 
+                   color="black") +
+    facet_grid(.~Mg, labeller=mf_labeller) +   
+    labs(y = "initial rate $\\Big[\\frac{AU}{min}\\Big]$", x="pH") +
+    theme_bw() +
+    theme(legend.position = "none")
+```
+
+Iso-ferulic acid is no catechol, rather it bears a (4'-O-methyl-3'-hydroxyl)-moiety. But clearly iso-ferulic acid is methylated at higher pH values, especially when Mg is present.
+
+```{r, fig.margin=T, fig.cap="pH-profiles for the substrate iso-ferulic acid. The reaction occurs much slower than for the catecholic substrates."}
+velo %>% filter(key == "SAH", substrate=="iso-ferulic acid") %>%
+    ggplot(data=., aes(x = pH, y = V_AUpermin, col=substrate), format(scientific=F)) +
+    geom_point(color="cornflowerblue") +
+    geom_line(aes(group=substrate), color="cornflowerblue") +
+    geom_linerange(aes(ymin=V_AUpermin-sd_AUpermin, ymax=V_AUpermin+sd_AUpermin), 
+                   color="black") +
+    facet_grid(.~Mg, labeller=mf_labeller) +   
+    labs(y = "initial rate $\\Big[\\frac{AU}{min}\\Big]$", x="pH") +
+    theme_bw() +
+    theme(legend.position = "none")
+```
+
+\newthought{The pH-optimum} of the enzyme seems to shift to lower pH-values with addition of Mg.
+When no Mg is added the initial velocity increases with pH. However, upon Mg addition the maximum is reached at a pH of around 6.8 for the catecholic derivatives. After that the rate drops drastically. 
+
+\newthought{For iso-ferulic acid} this effect is not present. The rates are much higher, when Mg is added. Even at high pH-values.
+When no Mg is added there is virtually no conversion at low pH values. Thisa could correlate with the pKa.
+
+## Regression tree
+
+```{r, dev='CairoPDF', fig.width=10, fig.height=8}
+library(rpart)
+library(rpart.plot)
+library(rattle)
+
+data.tree <- rpart(V_AUpermin~., data= (velo %>% filter(key == "SAH") %>% select(-c(sd_AUpermin, sample, key))),
+      control = c(minsplit = 3,
+                               minbucket = 3,
+                               cp = 0.001))
+fancyRpartPlot(data.tree, digits=3)
+```
+
+# Linear models
+
+The motif plays an important role for catalysis. Thus, the data set was split up into two separate ones. One including only iso-ferulic acid and one including the other two catecholic substrates.
+
+\newthought{Enzymatic reactionsa are hard to model} using simple linear models. This is due to the fact that enzymatic mechanisms are hardly linear. In fact enzymatic mechanisms are highly complex and non-linear. However for a close approximation it should do.
+
+## Iso-ferulic acid dataset
+
+93.55% of the variance in the data can be described by the model `rate~pH*Mg`, including both main effects and interaction terms.
+Both main effects (pH and Mg), as well as the interaction term seem to be significant, as suggestes by their p-values below 0.01 when compared by ANOVA.
+However, the model would deem the main effect of pH not significant (p-value 0.51).
+
+```{r, results='asis', fig.margin=T, fig.cap="pH profiles for iso-ferulic acid with predicted data from the model. The grey ribbon displays the 95\\% prediction interval."}
+mod.lm <- lm(V_AUpermin~pH*Mg, data=(velo %>% filter(key == "SAH", substrate == "iso-ferulic acid") %>% select(-c(sd_AUpermin, sample, key))))
+aov(mod.lm) %>% summary %>% xtable(., caption = "ANOVA-table for the simple model for iso-ferulic acid. The interaction term is included.")
+
+summary(mod.lm) %>% xtable(., caption="Model summary for the linear model (lm()).")
+
+newdat <- expand.grid(pH = seq(5,10,length.out = 20), Mg = c(T,F), substrate = c("eriodictyol", "caffeic acid", "iso-ferulic acid"))
+
+
+# predict dependent variable from ne dataset
+pred <- cbind(newdat %>% filter(substrate=="iso-ferulic acid"), ypred=predict(mod.lm, se.fit=T,interval="prediction", newdata = newdat %>% filter(substrate=="iso-ferulic acid")))
+
+tmp <- velo %>% filter(key == "SAH", substrate=="iso-ferulic acid")
+    
+ggplot(data=tmp) +
+    geom_point(aes(x = pH, y = V_AUpermin, group=substrate), size=3, color="black") +
+    geom_line(aes(x = pH, y = V_AUpermin, col=substrate)) +
+    geom_linerange(aes(x=pH, ymin=V_AUpermin-sd_AUpermin, ymax=V_AUpermin+sd_AUpermin), 
+                   color="black") +
+    geom_line(data=pred, aes(x=pH, y=ypred.fit.fit, group=substrate), color="blue", linetype=2) +
+    geom_ribbon(data=pred, aes(x=pH, ymax=ypred.fit.upr, ymin=ypred.fit.lwr, group=substrate), alpha=0.15) +
+    facet_grid(.~Mg, labeller=mf_labeller) +   
+  #  ylim(0, 1.8e5) +
+    labs(y = "initial rate $\\Big[\\frac{AU}{min}\\Big]$", x="pH") +
+    theme_bw() +
+    theme(legend.position = "none")
+```
+
+The model predicts the data sufficiently correct. Plus it is not the goal to make predictions, rather than draw inferences.
+
+## Catechols dataset
+
+The catecholic substrates were modelled accordingly. However, because the non-linear nature of the data a quadratic term was included in the model.  The model formula was `rate~Mg*pH+I(pH^2)`. The substrate was not inlcued in the model for the sake of simplicity, although it undoubtetly has an influence.
+
+```{r, results='asis', fig.margin=T, fig.cap="pH profiles for catecholic substrates with predictions and 95\\% prediction interval."}
+mod.lm <- lm(V_AUpermin~Mg*pH+I(pH^2)*Mg, data=(velo %>% filter(key == "SAH", substrate != "iso-ferulic acid") %>% select(-c(sd_AUpermin, sample, key))))
+aov(mod.lm) %>% summary %>% xtable(., caption = "ANOVA-table for the simple model foir iso-ferulic acid. The interaction term is included.")
+
+summary(mod.lm) %>% xtable(., caption="Model summary for the linear model (lm()).")
+
+newdat <- expand.grid(pH = seq(5,10,length.out = 20), Mg = c(T,F), substrate = c("eriodictyol", "caffeic acid", "iso-ferulic acid"))
+
+
+# predict dependent variable from ne dataset
+pred <- cbind(newdat %>% filter(substrate!="iso-ferulic acid"), ypred=predict(mod.lm, se.fit=T, interval="prediction", newdata = newdat %>% filter(substrate!="iso-ferulic acid")))
+
+tmp <- velo %>% filter(key == "SAH", substrate!="iso-ferulic acid")
+    
+ggplot(data=tmp) +
+    geom_point(aes(x = pH, y = V_AUpermin, col=substrate)) +
+    geom_line(aes(x = pH, y = V_AUpermin, col=substrate)) +
+    geom_linerange(aes(x=pH, ymin=V_AUpermin-sd_AUpermin, ymax=V_AUpermin+sd_AUpermin), 
+                   color="black") +
+    geom_line(data=pred, aes(x=pH, y=ypred.fit.fit, group=substrate), color="blue", linetype=2) +
+    geom_ribbon(data=pred, aes(x=pH, ymax=ypred.fit.upr, ymin=ypred.fit.lwr, group=substrate), alpha=0.15) +
+    facet_grid(.~Mg, labeller=mf_labeller) +   
+    #ylim(0, 1.8e5) +
+    labs(y = "initial rate $\\Big[\\frac{AU}{min}\\Big]$", x="pH") +
+    theme_bw() +
+    theme(legend.position = "none")
+```
+
+\newthought{The trend of the curve} is described by the model sufficiently correct. Together with the data from the ANOVA table, it can be concluded that there is an interaction effect between pH and Mg.
+However, the linear model is hardly sufficient to predict the correct curve. In fact it merely accounts for 68% of the variance (R\textsuperscript{2}=0.6855).
+
+# Cross validation lasso regression
+
+The split datasets were also modelled using lasso regression, together with a cross validation approach.
+
+## CV lasso on iso-ferulic acid
+
+Since only non-zero coefficients are shown, it can also be concluded here that pH and Mg display both main and an interaction effect for iso-ferulic acid.
+Diagnostic plots that show the optimization for the tuning parameter lambda are displayed on the margin. The final shrunken model includes only three variables (Mg, pH and Mg:pH interaction).
+
+
+```{r, fig.margin=T}
+library(glmnet)
+mod.form <- formula(V_AUpermin~pH*Mg)
+data <- velo %>% filter(key == "SAH", substrate=="iso-ferulic acid") %>% select(-c(sd_AUpermin, sample))
+
+# create model matrix for glmnet function
+# needs to be a sparse matrix because of mixed numerical and factor variables
+x <- sparse.model.matrix(mod.form, data = data)
+y <- data[,3]
+
+cv.lasso <- cv.glmnet(x,y,alpha=1,nfolds=5)
+bestlam <- cv.lasso$lambda.min
+lasso.coeff <- predict(cv.lasso, type="coefficients", s=bestlam)
+
+plot(cv.lasso)
+
+rm(levtab)
+plot(lasso.coeff)
+df <- data.frame(variable = dimnames(lasso.coeff)[[1]][summary(lasso.coeff)$i],
+           coefficient = summary(lasso.coeff)$x)
+
+newx <- sparse.model.matrix(mod.form, data = cbind(newdat %>% filter(substrate=="iso-ferulic acid"), V_AUpermin="fit"))
+
+pred <- cbind(newdat %>% filter(substrate=="iso-ferulic acid"), ypred=predict(cv.lasso, type="response", newx = newx, s=bestlam))
+
+names(pred)[4] <- "fit"
+
+tmp <- velo %>% filter(key == "SAH", substrate=="iso-ferulic acid")   
+ggplot(data=tmp) +
+    geom_point(aes(x = pH, y = V_AUpermin, group=substrate), size=3, color="black") +
+    geom_line(aes(x = pH, y = V_AUpermin, col=substrate)) +
+    geom_linerange(aes(x=pH, ymin=V_AUpermin-sd_AUpermin, ymax=V_AUpermin+sd_AUpermin), 
+                   color="black") +
+    geom_line(data=pred, aes(x=pH, y=fit, group=substrate), color="blue", linetype=2) +
+   # geom_ribbon(data=pred, aes(x=pH, ymax=ypred.fit.upr, ymin=ypred.fit.lwr, group=substrate), alpha=0.15) +
+    facet_grid(.~Mg, labeller=mf_labeller) +   
+  #  ylim(0, 1.8e5) +
+    labs(y = "initial rate $\\Big[\\frac{AU}{min}\\Big]$", x="pH") +
+    theme_bw() +
+    theme(legend.position = "none")
+```
+
+```{r, results='asis'}
+levtab<-xtable(df, caption="Variables and coefficients that were retained. Non-zero coefficients not shown.", digits = 4)
+print(levtab, floating.environment='margintable')
+```
+
+\newpage
+
+## CV lasso on catechols
+
+The same CV method was also applied for the catecholic substrate data. The model formular was `rate~pH*Mg*I(pH^2)`.
+After shrinkage the model still contained a lot of factors. All the main effects, as well as 2 two-way interaction and one 3-way interaction effect. This makes the model very complex. 
+However from the predicted curves it is clear that the model roughly describes the data. This can be seen as evidence that the relationhsip of pH and rate includes a quadratic term.
+
+
+```{r, fig.margin=T}
+rm(mod.form)
+mod.form <- formula(V_AUpermin~pH*Mg*I(pH^2))
+data <- velo %>% filter(key == "SAH", substrate!="iso-ferulic acid") %>% select(-c(sd_AUpermin, sample))
+
+# create model matrix for glmnet function
+# needs to be a sparse matrix because of mixed numerical and factor variables
+x <- sparse.model.matrix(mod.form, data = data)
+y <- data[,3]
+
+cv.lasso <- cv.glmnet(x,y,alpha=1,nfolds=5)
+bestlam <- cv.lasso$lambda.min
+lasso.coeff <- predict(cv.lasso, type="coefficients", s=bestlam)
+
+plot(cv.lasso)
+
+rm(levtab)
+plot(lasso.coeff)
+df <- data.frame(variable = dimnames(lasso.coeff)[[1]][summary(lasso.coeff)$i],
+           coefficient = summary(lasso.coeff)$x)
+
+newx <- sparse.model.matrix(mod.form, data = cbind(newdat %>% filter(substrate!="iso-ferulic acid"), V_AUpermin="fit"))
+
+pred <- cbind(newdat %>% filter(substrate!="iso-ferulic acid"), ypred=predict(cv.lasso, type="response", newx = newx, s=bestlam))
+
+names(pred)[4] <- "fit"
+
+tmp <- velo %>% filter(key == "SAH", substrate!="iso-ferulic acid")   
+ggplot(data=tmp) +
+    geom_point(aes(x = pH, y = V_AUpermin, group=substrate), size=3, color="black") +
+    geom_line(aes(x = pH, y = V_AUpermin, col=substrate)) +
+    geom_linerange(aes(x=pH, ymin=V_AUpermin-sd_AUpermin, ymax=V_AUpermin+sd_AUpermin), 
+                   color="black") +
+    geom_line(data=pred, aes(x=pH, y=fit, group=substrate), color="blue", linetype=2) +
+   # geom_ribbon(data=pred, aes(x=pH, ymax=ypred.fit.upr, ymin=ypred.fit.lwr, group=substrate), alpha=0.15) +
+    facet_grid(.~Mg, labeller=mf_labeller) +   
+  #  ylim(0, 1.8e5) +
+    labs(y = "initial rate $\\Big[\\frac{AU}{min}\\Big]$", x="pH") +
+    theme_bw() +
+    theme(legend.position = "none")
+```
+
+```{r, results='asis'}
+levtab <- xtable(df, caption="Variables and coefficients that were retained. Non-zero coefficients not shown.", digits = 4)
+print(levtab, floating.environment='margintable')
+```
+
+# Conclusion
+
+- big difdference in rate of catecholic and non-catecholic substrates
+- rate is influenced by pH, Mg 
+- pH and Mg have interaction effect
+- pH/rate relationship includes a quadratic term $\rightarrow$ common form for pH-profles of enzymes
+- Mg addition shifts pH optimum of enzyme to pH around 7 for catechols
+- Mg addition is beneficial for conversion of iso-ferulic acid
+
+# Specific activity
+
+The specific activity can be calculated. Therefore we approximate that the molar extinction coefficient for SAM and SAH are the same and the combined area-under-the-curve (AUC) of the SAM and SAH peak are 100% of substrate or 500 uM.
+The concentration for either one of SAM or SAH can then be estimated from that relationship. 
+
+\begin{marginfigure}
+$$A_\mathrm{SAM} + A_\mathrm{SAM} = 1 \approx 500 \mathrm{uM}$$
+$$x_\mathrm{SAH} = \frac{A_\mathrm{SAH}}{A_\mathrm{SAM} + A_\mathrm{SAM}}$$
+$$c_\mathrm{SAH} = x_\mathrm{SAH} \times 500 \mathrm{uM}$$
+$$n_\mathrm{SAH} = c_\mathrm{SAH} \times V^\mathrm{inject}$$
+\caption{Calculation of specific activity.}
+\end{marginfigure}
+
+From the concentration and the injection volume (10 uL) the amount (moles) of substrate or product can be estimated.
+From that the specific activity can be calculated from the slope of the P-t-diagram and the amount of enzyme used (0.2 ug/uL).
+First the above equations were employed to calculate the concentration of SAH and SAM in each sample.
+This was plotted against the area. The curve displays a linear relationship, although the errors seem to get larger with increasing area.
+The errors seem to be non-normally distributed. However as a rough estimation is will suffice.
+
+The data for each SAH and SAM were fitted with alinear model `concentration~area`.
+
+\begin{equation}
+c = \mathrm{a}\times A + \mathrm{b}
+\end{equation}
+
+For SAH the values for a and b were 1.272e-04 and 6.219e-02 respectively.
+
+```{r, results='asis', fig.margin=T, fig.cap="The calculated concentrations from the areas. The error looks as though it is not normally distributed."}
+load("flavon.Rda")
+
+## calculate the concentrations
+flavon %<>% filter(key == "SAH" | key == "SAM") %>% select(sample,pH, time, key, area)
+flavon.c <- reshape2::dcast(flavon, sample*time*pH ~ key, value.var="area", fill=0)
+flavon.c %<>% mutate(x.SAH = SAH/(SAH+SAM), 
+                     c.SAH = SAH/(SAH+SAM)*500,
+                     x.SAM = SAM/(SAH+SAM), 
+                     c.SAM = SAM/(SAH+SAM)*500)
+
+## rearrange data.frame for plotting in ggplot
+flavon.c <- tidyr::gather(flavon.c, key, area, SAH:SAM)
+flavon.c$c.SAM[with(flavon.c, which(key == "SAH"))] <- NA
+flavon.c$c.SAH[with(flavon.c, which(key == "SAM"))] <- NA
+flavon.c <- tidyr::gather(flavon.c, key2, concentration, c.SAH, c.SAM)
+
+## calcuate linear model for relationship concentration to area
+sah.lm <- lm(concentration~area, data=flavon.c %>% filter(key == "SAH"))
+#sam.lm <- glm(concentration~area, data=flavon.c %>% filter(key == "SAM"), family = gaussian(link = "log"))
+sam.lm <- lm(concentration~area, data=flavon.c %>% filter(key == "SAM"))
+## predict new data
+ypred <- data.frame(area=seq(0,4e6,length.out = 20))
+ypred <- cbind(ypred, sah=predict(sah.lm, type="response", interval="prediction", newdata=ypred))
+ypred <- cbind(ypred, sam=predict(sam.lm, type="response", interval="prediction", newdata=ypred))
+
+ggplot() +
+  theme_bw() +
+  geom_point(data=flavon.c, aes(x=area, y=concentration, shape=key), alpha=0.25, size=2) +
+  geom_line(data=ypred[ypred$area<3e6,], aes(x=area, y=sah.fit), color="blue", fill="blue", linetype=2) +
+  geom_ribbon(data=ypred[ypred$area<3e6,], aes(x=area, ymin=sah.lwr, ymax=sah.upr), alpha=0.1) +
+  geom_line(data=ypred[ypred$area>1.5e6,], aes(x=area, y=sam.fit), color="red", linetype=2) +
+  geom_ribbon(data=ypred[ypred$area>1.5e6,], aes(x=area, ymin=sam.lwr, ymax=sam.upr), fill="red", alpha=0.1)   +
+  labs(x = "area-under-curve [AU]", y = "concentration $[\\mu M]$")
+
+xtable(sah.lm, caption="Linear fit for SAH area and concentration.")
+
+
+A.sp <- reshape2::dcast(velo, sample*pH*Mg ~ key, value.var="V_AUpermin", fill=0)
+A.sp %<>% mutate(c.SAH = SAH*1.272e-04 + 6.219e-02,
+                n.SAH = c.SAH*0.00001*1000,
+                Asp.SAH =n.SAH/0.002,
+                Asp.pkat = Asp.SAH/60*1000) 
+A.sp.plot <- merge(A.sp, samples[,-3], by.x="sample", by.y="label")
+A.sp %<>%  group_by(sample) %>% summarise(max.U.mg = max(Asp.SAH), max.pkat.mg = max(Asp.pkat), at.pH = pH[which(Asp.SAH == max(Asp.SAH))])
+
+A.sp <- merge(A.sp, samples, by.x="sample", by.y="label")
+xtable(A.sp[,-1], caption="The maximal activities obtained for each sample (substrate/Mg combination). Activities are given in nmol min\\textsuperscript{-1} mg\\textsuperscript{-1}")
+```
+
+The maximum enzyme activities that were calculated here are comparable to the ones that were obtained previously (DIM paper PFOMT, wt(caffeic acid) $\approx$ 72 nmol min\textsuperscript{-1} mg\textsuperscript{-1}, Vogt (2003) nativ(6-OH-kaempferol) $\approx$ 830 pkat per mg).
+
+```{r, fig.margin=T, fig.cap="pH-profiles with specific activities."}
+A.sp.plot %>% 
+    ggplot(data=., aes(x = pH, y = Asp.SAH, col=substrate), format(scientific=F)) +
+    geom_point() +
+    geom_line(aes(group=substrate)) +
+    facet_grid(.~Mg, labeller=mf_labeller) +   
+    labs(y = "initial rate $\\Big[\\frac{\\mathrm{nmol}}{\\mathrm{min~mg}}\\Big]$", x="pH") +
+    theme_bw() +
+    theme(legend.position = "none")
+```
+

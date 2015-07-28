@@ -1,0 +1,71 @@
+
+---
+title: "WEB337 - HPLC analysis"
+author: "Benjamin Weigel"
+date: "07/21/2015"
+output: pdf_document
+number_sections: yes
+html_document: default
+fig_caption: yes
+---
+
+The area data, which was automatically aquired by the HPLC software and stored in ASCII files was transferred manually into a table and stored as a `csv` file.
+Were no area value was present the `NA` value was set to _0_.
+
+```{r cache=FALSE}
+knitr::opts_chunk$set(size='tiny')
+```
+
+
+```{r, message=FALSE, dev='tikz', fig.width=10, fig.height=7, fig.cap="Conversion of different substrates by SOMT in vivo."}
+library(ggplot2)
+library(dplyr)
+library(magrittr)
+df <- read.csv("~/IPB//Experimente//WEB337 - in vivo SOMT//RAW//results_area.csv")
+
+df %<>% filter(substrate.id != 17)
+df$area[is.na(df$area)] <- 0
+
+ggplot(data=df, aes(x=time, y=area, color=compound)) + 
+  geom_line() + 
+  facet_wrap(~substrate.name, ncol = 4, scales = "free_y") +
+  labs(x="time (h)", y="area (AU)")
+```
+
+Conversion can be observed with multiple substrates. 
+Coumaric acid derivatives (coumaric acid, caffeic acid and reosim), anthraquinones (alizarin, purpurin) are not converted.
+Only flavonoids with a free 4' hydroxyl are converted, as is evident by the non-conversion of hesperetin.
+
+```{r, size='scriptsize', message=FALSE, warning=FALSE, dev='pdf', fig.cap="The average conversions of substrates as determined by HPLC data. Method is only very crude!"}
+tmp <- df %>% filter((time == 4 & compound=="substrate") | (time == 30 & compound=="product"))
+
+tmp.a <- reshape2::melt(tmp, id.vars=c("compound", "substrate.id"), measure.vars="area") %>%
+  reshape2::dcast(formula = substrate.id ~ compound) %>% 
+  mutate(conversion.p = product/substrate)  %>% select(c(1,4))
+
+tmp <- df %>% filter((time == 4 & compound=="substrate") | (time == 30 & compound=="substrate"))
+tmp$time <- paste("t", tmp$time, sep=".")
+tmp.b <- reshape2::melt(tmp, id.vars=c("compound", "substrate.id", "time"), measure.vars="area") %>%
+  reshape2::dcast(formula = substrate.id ~ time) %>% 
+  mutate(conversion.s = 1-t.30/t.4) %>% select(c(1,4))
+
+tmp.b$conversion.s[which(tmp.b$conversion.s < 0)] <- as.numeric(!(tmp.b$conversion.s < 0))[which(tmp.b$conversion.s < 0)]
+
+tmp <- merge(x = tmp.a, y=tmp.b, by = "substrate.id") %>% 
+  tidyr::gather(key = type, value = conversion, -substrate.id) %>%
+  group_by(substrate.id) %>% summarize(mean = mean(conversion), sd = sd(conversion))
+
+ggplot(data=tmp, aes(x=substrate.id, y=mean)) + 
+  geom_bar(stat = "identity", aes(fill=sd)) +
+  labs(y="average conversion") +
+  geom_errorbar(aes(ymin = mean - sd, ymax=mean+sd)) +
+  scale_fill_gradient(low = "green", high = "red")
+```
+
+The conversions obtained by using the product area at 30 hours (a) or the substrate areas at 30 houzrs (b) and setting the substrate area at 4h as 100%.
+```{r, echo=FALSE, results='asis', message=FALSE}
+library(xtable)
+tmp.b <- merge(x = tmp.b, y=tmp, by = "substrate.id")
+print(xtable(merge(x = tmp.a, y=tmp.b, by = "substrate.id"), caption = "Crude calculated conversions of substrates by product or substrate."))
+```
+

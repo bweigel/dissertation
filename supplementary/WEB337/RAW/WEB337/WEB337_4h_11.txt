@@ -1,0 +1,19 @@
+Sample ID:	WEB337_4h_11		
+Data:	150213_042.dat		
+aquired:	42050,481666667		
+Method(original):	LCMS.met		
+Method(reintegrate):	WEB337_off.met		
+			
+			
+Retention Time	Area	Area%	Identified as
+12,293333943685	9106	0,34817692637444	 
+13,106667073568	23256	0,88921618461609	 
+13,406667073568	13956	0,53362149000168	 
+14,179999796549	15497	0,59254312515259	 
+0	0	0	Eriodyctiol
+0	0	0	Quercetin
+0	0	0	Naringenin
+17,613334147135	2553522	97,636444091797	Homoeriodyctiol
+0	0	0	Hesperetin
+0	0	0	Me-Quercetin?
+0	0	0	anthracene-9-carboxylic acid

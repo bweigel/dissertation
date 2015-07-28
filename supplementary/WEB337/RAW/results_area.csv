@@ -1,0 +1,137 @@
+no,time,compound,substrate.id,t.r,area,name,substrate.name
+1,4,substrate,1,19.3,1666206,alizarin,alizarin
+2,10,substrate,1,19.3,1464746,alizarin,alizarin
+3,20,substrate,1,19.3,1732002,alizarin,alizarin
+4,30,substrate,1,19.3,1743860,alizarin,alizarin
+5,4,product,1,,,,alizarin
+6,10,product,1,,,,alizarin
+7,20,product,1,,,,alizarin
+8,30,product,1,,,,alizarin
+9,4,substrate,2,20.49,1245983,purpurin,purpurin
+10,10,substrate,2,20.49,986039,purpurin,purpurin
+11,20,substrate,2,20.49,1060593,purpurin,purpurin
+12,30,substrate,2,20.49,1125827,purpurin,purpurin
+13,4,product,2,,,,purpurin
+14,10,product,2,,,,purpurin
+15,20,product,2,,,,purpurin
+16,30,product,2,,,,purpurin
+17,4,substrate,3,17.65,6684463,apigenin,apigenin
+18,10,substrate,3,17.65,2909902,apigenin,apigenin
+19,20,substrate,3,17.65,1918050,apigenin,apigenin
+20,30,substrate,3,17.65,1415943,apigenin,apigenin
+21,4,product,3,20.05,143312,unknown,apigenin
+22,10,product,3,20.05,887374,unknown,apigenin
+23,20,product,3,20.05,2973202,unknown,apigenin
+24,30,product,3,20.05,3601149,unknown,apigenin
+25,4,substrate,4,19.93,6805319,chrysin,chrysin
+26,10,substrate,4,19.93,4214491,chrysin,chrysin
+27,20,substrate,4,19.93,5812595,chrysin,chrysin
+28,30,substrate,4,19.93,5057961,chrysin,chrysin
+29,4,product,4,,,,chrysin
+30,10,product,4,,,,chrysin
+31,20,product,4,,,,chrysin
+32,30,product,4,,,,chrysin
+33,4,substrate,5,17.68,2615656,genistein,genistein
+34,10,substrate,5,17.68,2806723,genistein,genistein
+35,20,substrate,5,17.68,2939699,genistein,genistein
+36,30,substrate,5,17.68,2952681,genistein,genistein
+37,4,product,5,,,,genistein
+38,10,product,5,,,,genistein
+39,20,product,5,,,,genistein
+40,30,product,5,,,,genistein
+41,4,substrate,6,20.15,5481128,galangin,galangin
+42,10,substrate,6,20.15,4246191,galangin,galangin
+43,20,substrate,6,20.15,3898243,galangin,galangin
+44,30,substrate,6,20.15,3557820,galangin,galangin
+45,4,product,6,,,,galangin
+46,10,product,6,,,,galangin
+47,20,product,6,,,,galangin
+48,30,product,6,,,,galangin
+49,4,substrate,7,17.82,6216204,kaempferol,kaempferol
+50,10,substrate,7,17.82,5111206,kaempferol,kaempferol
+51,20,substrate,7,17.82,4467300,kaempferol,kaempferol
+52,30,substrate,7,17.82,3865997,kaempferol,kaempferol
+53,4,product,7,,,,kaempferol
+54,10,product,7,20.25,33041,,kaempferol
+55,20,product,7,20.24,158430,,kaempferol
+56,30,product,7,20.25,362119,,kaempferol
+57,4,substrate,8,,,reosmin,reosmin
+58,10,substrate,8,,,reosmin,reosmin
+59,20,substrate,8,,,reosmin,reosmin
+60,30,substrate,8,,,reosmin,reosmin
+61,4,product,8,,,,reosmin
+62,10,product,8,,,,reosmin
+63,20,product,8,,,,reosmin
+64,30,product,8,,,,reosmin
+65,4,substrate,9,17.51,2248076,naringenin,naringenin
+66,10,substrate,9,17.51,2011606,naringenin,naringenin
+67,20,substrate,9,17.51,1082196,naringenin,naringenin
+68,30,substrate,9,17.51,996343,naringenin,naringenin
+69,4,product,9,,,,naringenin
+70,10,product,9,19.84,237857,ponciretin,naringenin
+71,20,product,9,19.84,1243479,ponciretin,naringenin
+72,30,product,9,19.84,1274111,ponciretin,naringenin
+73,4,substrate,10,16.41,2231409,eriodictyol,eriodictyol
+74,10,substrate,10,16.41,1601687,eriodictyol,eriodictyol
+75,20,substrate,10,16.41,1138056,eriodictyol,eriodictyol
+76,30,substrate,10,16.41,841164,eriodictyol,eriodictyol
+77,4,product,10,17.81,8292,hesperetin,eriodictyol
+78,10,product,10,17.81,51439,hesperetin,eriodictyol
+79,20,product,10,17.81,664263,hesperetin,eriodictyol
+80,30,product,10,17.81,887000,hesperetin,eriodictyol
+81,4,substrate,11,17.61,2553522,homoeriodictyol,homoeriodictyol
+82,10,substrate,11,17.61,2331556,homoeriodictyol,homoeriodictyol
+83,20,substrate,11,17.61,2292786,homoeriodictyol,homoeriodictyol
+84,30,substrate,11,17.61,2392920,homoeriodictyol,homoeriodictyol
+85,4,product,11,,,,homoeriodictyol
+86,10,product,11,18.8,63732,dimethyleriodictyol,homoeriodictyol
+87,20,product,11,18.8,668866,dimethyleriodictyol,homoeriodictyol
+88,30,product,11,18.8,1055736,dimethyleriodictyol,homoeriodictyol
+89,4,substrate,12,17.82,2348767,hesperetin,hesperetin
+90,10,substrate,12,17.82,2422179,hesperetin,hesperetin
+91,20,substrate,12,17.82,2355532,hesperetin,hesperetin
+92,30,substrate,12,17.82,2682880,hesperetin,hesperetin
+93,4,product,12,,,,hesperetin
+94,10,product,12,,,,hesperetin
+95,20,product,12,,,,hesperetin
+96,30,product,12,,,,hesperetin
+97,4,substrate,13,17.37,1705122,phloretin,phloretin
+98,10,substrate,13,17.37,1194513,phloretin,phloretin
+99,20,substrate,13,17.37,856614,phloretin,phloretin
+100,30,substrate,13,17.37,484907,phloretin,phloretin
+101,4,product,13,,,,phloretin
+102,10,product,13,17.69,27127,,phloretin
+103,20,product,13,17.69,150210,,phloretin
+104,30,product,13,17.69,208478,,phloretin
+105,4,substrate,14,16.01,15351958,resveratrol,resveratrol
+106,10,substrate,14,16.01,12805238,resveratrol,resveratrol
+107,20,substrate,14,16.01,5064747,resveratrol,resveratrol
+108,30,substrate,14,16.01,2216914,resveratrol,resveratrol
+109,4,product,14,,,,resveratrol
+110,10,product,14,18.66,2043258,,resveratrol
+111,20,product,14,18.66,12778685,,resveratrol
+112,30,product,14,18.66,15564465,,resveratrol
+113,4,substrate,15,14.16,8918759,P-coumaric acid,P-coumaric acid
+114,10,substrate,15,14.16,8863164,P-coumaric acid,P-coumaric acid
+115,20,substrate,15,14.16,9086257,P-coumaric acid,P-coumaric acid
+116,30,substrate,15,14.16,8923989,P-coumaric acid,P-coumaric acid
+117,4,product,15,,,,P-coumaric acid
+118,10,product,15,,,,P-coumaric acid
+119,20,product,15,,,,P-coumaric acid
+120,30,product,15,,,,P-coumaric acid
+121,4,substrate,16,12.95,10065472,caffeic acid,caffeic acid
+122,10,substrate,16,12.95,8909464,caffeic acid,caffeic acid
+123,20,substrate,16,12.95,8083082,caffeic acid,caffeic acid
+124,30,substrate,16,12.95,7349650,caffeic acid,caffeic acid
+125,4,product,16,,,,caffeic acid
+126,10,product,16,,,,caffeic acid
+127,20,product,16,,,,caffeic acid
+128,30,product,16,,,,caffeic acid
+129,4,substrate,17,,,blank,blank
+130,10,substrate,17,,,blank,blank
+131,20,substrate,17,,,blank,blank
+132,30,substrate,17,,,blank,blank
+133,4,product,17,,,blank,blank
+134,10,product,17,,,blank,blank
+135,20,product,17,,,blank,blank
+136,30,product,17,,,blank,blank

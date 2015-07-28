@@ -1,0 +1,39 @@
+---
+title: "WEB273 - HPLC analysis of Refolding SOMT"
+author: "Benjamin Weigel"
+date: "07/24/2015"
+output:
+  pdf_document:
+    fig_caption: yes
+    number_sections: yes
+    toc: yes
+---
+
+```{r, cache=FALSE, echo=FALSE}
+knitr::opts_chunk$set(dev='tikz', error=T, warning=F, message=F, size='tiny', echo=F)
+```
+
+
+## Data ##
+
+```{r, results='asis'}
+library(ggplot2)
+library(dplyr)
+library(magrittr)
+
+data <- read.csv("/home/mori/IPB/Experimente/WEB273/hpldata.csv", header=T)
+data <- reshape2::dcast(data, sample~compound)
+data %<>% mutate(naringenin_AC9 = naringenin/`AC-9`,
+                ponc_AC9 = ponciretin/`AC-9`,
+                conversion = ponciretin/`AC-9` / (ponciretin/`AC-9` + naringenin/`AC-9`))
+
+data %>% xtable::xtable()
+```
+
+```{r}
+ggplot(data, aes(x=sample, y=conversion)) +   
+  geom_bar(stat="identity", fill="coral") +
+  labs(x="buffer", y="conversion") +
+  theme_bw()
+```
+

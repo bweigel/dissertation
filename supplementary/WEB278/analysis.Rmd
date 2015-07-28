@@ -1,0 +1,45 @@
+---
+title: "WEB278 - SOMT CD spectrum"
+author: "Benjamin Weigel"
+date: "07/24/2015"
+output:
+  pdf_document:
+    fig_caption: yes
+    number_sections: yes
+    toc: yes
+---
+
+```{r, cache=FALSE, echo=FALSE}
+knitr::opts_chunk$set(dev='tikz', error=T, warning=F, message=F, size='tiny', echo=F)
+```
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(magrittr)
+
+DATA <- read.csv("/home//mori/IPB//Experimente/WEB278/data.csv", header=T)
+
+DATA %<>% mutate(K2D3.predEll = K2D3.pred*3298)
+save(DATA, file="data.Rda")
+```
+
+
+```{r, echo=FALSE, fig.height=4, fig.cap="CD spectra of refolded SOMT (black) and the predicted spectra (red) from the K2D3 website."}
+ggplot(DATA, aes(x=nm, y=Ell)) + geom_line() +
+  geom_line(aes(y=K2D3.predEll), color="red") +
+  ylab("$\\theta~[\\mathrm{deg}~\\mathrm{cm}^2~\\mathrm{dmol}^{-1}]$")+
+  xlab("wavelength [nm]")+
+  theme_classic(base_size = 14, base_family = "Helvetica") +
+  theme(strip.background=element_rect(color="transparent", fill = "#E6E6E6", size = 0), 
+        strip.text.x = element_text(size = 14, hjust = 0.5, vjust = 0.5),
+        legend.key= element_rect(color="transparent"),
+        plot.title = element_text(vjust=2, size=16),
+        panel.grid.minor = element_blank(), 
+        panel.grid.major = element_blank(),
+        panel.background = element_blank(),
+        plot.background = element_blank(),
+        axis.text = element_text(size=10),
+        axis.title = element_text(size=14))
+```
+

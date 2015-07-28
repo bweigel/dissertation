@@ -431,15 +431,50 @@ This finding suggests, that the refolded protein is not in a native state.
 Also, the enzyme showed no activity for naringenin methylation, which was further evidence that the scaled-up refolding was unsuccessful.
 Even over the course of many trials a successful large scale refolding of \somt yielding active protein could not be achieved.
 
-These results display that \gls{doe} combined with \gls{ffd} can be a valueable tool for the identification of main factors during protein refolding.
+These results display that \gls{doe} combined with \gls{ffd} can be a valuable tool for the identification of main factors during protein refolding.
 However, there still exists a discrepancy between small scale refolding reactions and the process of upscaling, which might not be trivial.
 
 \section{\glsentrytext{pfomt}}
-\subsection{Acidity and Nucleophilicity of phenolic hydroxyl-groups}
-\subsection{pH-Profiles of \glsentrytext{pfomt}-catalysis}
-\subsection{Influence of \cf{Mg^2+} on \glsentrytext{pfomt} activity}
+\subsection{Phenolic hydroxyls}
 
-\section{Structural studies of flavonoids using \glsentryfirst{msms}}
+Phenolic hydroxyl groups have \pka-values of around 10 as demonstrated by four \textit{p}-cresole derivatives (\autoref{tab:pkaphenols}). 
+Catecholic systems have two \pka s. The 3-hydroxyl in this example has a much smaller \pka than the 4-hydroxyl. 
+This is in part due to the mesomeric (+M) and inductive (+I/-I) properties the substituents display.
+The M and I--effects let the 3-OH be deprotonated first, which in turn really lowers the acidity and thus inceases the \pka of the 4-OH.
+(4-hydroxy-3-methoxy)- and (3-hydroxy-4-methoxy)-derivatives again have a similar \pka, with the \textit{meta}-position slightly more acidic due to the +I--effect of the methyl substituent.
+The nucleophilicity of these phenolic groups happens to coincide with their \textsc{Br\o nsted} acidity.
+Chemically speaking the hydroxyl with the lower \pka always reacts first with an electrophile.
+      
+However, different enzymes are able to regioselectivly methylate the 3- or the 4-OH of such catecholic systems.  
+Enzyme's active sites create a ``microclimate'', which can selectively raise or lower the effective \pka of functional groups and allows for the efficient manipulation of the macroscopically observed regioselectivity.
+
+
+\begin{table}
+  \begin{tabularx}{\linewidth}{cllll}
+  \caption{\pka-values of phenolic hydroxyl groups examplified by \textit{p}-cresole derivatives. Substituent positions on the aromatic ring are arbitrary and do not reflect conventions of the \glsentryfirst{iupac}} \\
+  \label{tab:pkaphenols}
+  \hfill \\
+    \toprule
+    \multirow{5}{*}{%
+      \includegraphics{usr/graphics/static/phenols}%
+    }%
+    & R\textsuperscript{1} & R\textsuperscript{2} & pka\textsuperscript{-R\textsuperscript{1}} &  pka\textsuperscript{-R\textsuperscript{2}} \\
+    \cmidrule{2-5}
+    & OH & H & 10.36 & -- \\
+    & OH & OH & 13.1 & 9.55 \\
+    & OH & O-Me & 10.34 & -- \\
+    & O-Me & OH & -- & 10.08 \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\subsection{\glsentrytext{pfomt} pH-profiles are influenced by \cf{Mg^2+}}
+
+
+
+\subsection{Methylation of (3'-hydroxy-4-\textit{O}-methyl)-moieties}
+
+\section{Structural studies of flavonoids using \glsentryfirst{msms}}\bweigel{extra kapitel?}
 
 %\section{Consensus or Bioinformatic points-of-view (\glsentrytext{comt})???}
 

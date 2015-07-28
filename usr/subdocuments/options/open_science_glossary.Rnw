@@ -7,6 +7,7 @@
 \makeglossaries
 
 % analytics
+\newacronym{iupac}{IUPAC}{International Union of Pure and Applied Chemistry}
 \newacronym{aov}{ANOVA}{\emph{An}alysis \emph{o}f \emph{Va}riance}
 \newacronym{meplot}{ME-plot}{main effects plot}
 \newacronym{msms}{MS/MS}{tandem mass-spectrometry}

@@ -1,0 +1,357 @@
+---
+title: "WEB346"
+author: "Benjamin Weigel"
+date: "July 27th, 2015"
+output: rmarkdown::tufte_handout
+---
+
+```{r, cache=FALSE, echo=FALSE}
+knitr::opts_chunk$set(dev='tikz', error=T, warning=F, message=F, size='tiny', echo=F)
+```
+
+# Question
+
+Do Mg\textsuperscript{2+}, pH, chemical motif (e.g. catecholic, phenolic, 3'-OMe, 4'-OMe) and the choice of enzyme (WT or 4'-variant) influence the observed conversion of flavonoids and phenylpropanoids by the O-methyltransferase PFOMT?
+
+# Introduction
+
+17 different flavonoid and phenyl propanoid substrates were tested for methylation.
+These substrates can loosely be categorized into four groups by the chemical motif that is to be methylated (e.g. catecholic, phenolic, 3'-OMe, 4'-OMe).
+Three other factors are studied that might also influence the conversion. The addition of Mg\textsuperscript{2+}, high (8.6) or low (7.5) pH and the enzyme variant (WT or 3'-variant) that is used are also varied.
+
+\newthought{A total of 96 experiments} were conducted to cover each group at least with three independent observations. 
+
+\begin{marginfigure}
+$$\mathrm{Mg} \times \mathrm{pH} \times \mathrm{variant} \times \mathrm{motif} $$
+$$2 \times 2 \times 2 \times 4 = 32$$
+\caption{number of groups studied}
+\end{marginfigure}
+
+# Results
+
+## Data
+
+```{r, echo=F, message=FALSE, results='asis', fig.margin=T}
+library(magrittr)
+library(dplyr)
+library(FrF2)
+library(ggplot2)
+library(xtable)
+options(xtable.comment = FALSE)
+options(xtable.booktabs = TRUE)
+
+load("WEB346.results.rda")
+
+motif <- data.frame(substrate = 1:17, 
+                    motif = c(rep(c("phenolic", "catecholic", "4-O-Me", "3-O-Me"), 2), 
+                              rep("phenolic", 2),
+                              "phenolic", "catecholic", "4-O-Me", "3-O-Me", "phenolic", "catecholic", "catecholic"),
+                    select = c(rep(T, 9), rep(F, 2), rep(T, 3), rep(F, 3)))
+WEB346.results <- merge(WEB346.results, motif, by="substrate")
+WEB346.results$pH <- ifelse(WEB346.results$pH > 8, "high", "low")
+WEB346.results %<>% mutate(#pH = factor(pH, levels = c("low", "high"), ordered = T),
+                           Mg = as.factor(Mg),#
+                           motif = factor(motif, labels=c(LETTERS[1:4]) , levels=c("phenolic", "catecholic", "4-O-Me", "3-O-Me"))) 
+
+data.blank <- WEB346.results %>% filter(select == T) %>%
+  select(substrate, value, pH, Mg, variant, motif)
+
+WEB346.results %<>% filter(select == T, variant != "none") %>%
+  select(substrate, value, pH, Mg, variant, motif)
+rm(motif)
+
+xtable(head(WEB346.results), caption = "First rows of dataframe")
+```
+
+```{r, results='asis', fig.margin=TRUE}
+levtab <- xtable(data.frame(labels=c(LETTERS[1:4]) , motif=c("phenolic", "catecholic", "4-O-Me", "3-O-Me")), caption="Labels in the data.frame and their corresponding motif.")
+print(levtab, floating.environment='margintable')
+```
+
+## Significance no enzyme vs. enzyme
+
+Do the amounts of produced product vary significantly between treatments were no enzyme was added and trreatm,ents with enzyme?
+Only ran blanks at high pH with no magnesium added.
+Subset data to only include high pH, no Mg, no catechols. The catechols were removed to avoid the bias associated with an autocorrelation between product and catecholic moiety.
+
+\newthought{From the ANOVA table it is clear}, that conversion is not due to chance. The p-value for the variant factor is almost 0.
+This means, that we should be able to use the data for analyis.
+
+```{r ,fig.margin=F, out.width='0.2\\linewidth', fig.height=7, fig.width=7, fig.cap="Diagnostic plots of the ANOVA", results='asis', echo=1}
+lm(value~variant*motif, data = data.blank %>% filter(pH =="high", Mg == F, motif!="B")) %>% aov() %>% 
+  summary() %>% 
+  xtable(., caption="ANOVA table for comparison of blanks and samples. There is a stitistical significance between treatments, where o enzyme was added and treatments that contained enzymne (the wt).")
+
+par(mfrow=c(2,2))
+lm(value~variant*motif, data = data.blank %>% filter(pH =="high", Mg == F, motif!="B")) %>% aov() %>% plot()
+```
+
+```{r, fig.margin=T, fig.height=4, fig.cap="Main effects plot for factors that influence product amount."}
+data.blank %<>% filter(pH =="high", Mg == F,  motif!="B")
+
+a<-data.blank %>%
+  group_by(motif) %>%
+  summarise_each(funs(mean(., na.rm=TRUE)), value)
+names(a)[1] <- "state"
+a %<>% mutate(state = as.factor(state), ME = "motif")
+
+d<-data.blank %>%
+  group_by(variant) %>%
+  summarise_each(funs(mean(., na.rm=TRUE)), value)
+names(d)[1] <- "state"
+d %<>% mutate(state = as.factor(state), ME = "variant")
+
+MEgg <- rbind(a,d)
+
+ggplot(MEgg, aes(x=state, y=value)) + 
+  theme_bw() +
+  theme(axis.text.x=element_text(angle=90, vjust = 0),
+        axis.title.x=element_text(vjust = 0)) +
+  geom_line(aes(group = ME), color="cornflowerblue", size=1) +
+  geom_point(size=3) + 
+  facet_wrap(~ME, nrow=1, scales="free_x") +
+  labs(y="mean $\\frac{\\mathrm{SAH}}{\\mathrm{flavone}} (\\mathrm{AU})$", x="factor level") +
+  geom_hline(aes(yintercept=mean(MEgg$value)), linetype=2, size=1)
+```
+
+## Main effects plots
+
+The main effects plots (\ref{fig:mep}) give an overview of what happens. The motif clearly has the biggest influence on conversion. This makes sense, since PFOMT acts on catecholic moities.
+
+```{r MEP, fig.height=4, fig.width=6, fig.cap=c("Main effetcs plots for the factor variables. Clearly the motif seems to have the biggest impact. Catecholic moieties are converted most effectively.", "Main effects plot, when catecholic moieties factor is omitted. Phenolics are converted worst. The wildtype has the best activity.")}
+
+a<-WEB346.results %>%
+  group_by(motif) %>%
+  summarise_each(funs(mean(., na.rm=TRUE)), value)
+names(a)[1] <- "state"
+a %<>% mutate(state = as.factor(state), ME = "motif")
+
+b<-WEB346.results %>%
+  group_by(Mg) %>%
+  summarise_each(funs(mean(., na.rm=TRUE)), value)
+names(b)[1] <- "state"
+b%<>% mutate(state = as.factor(state), ME = "Mg")
+
+c<-WEB346.results %>%
+  group_by(pH) %>%
+  summarise_each(funs(mean(., na.rm=TRUE)), value)
+names(c)[1] <- "state"
+c %<>% mutate(state = as.factor(state), ME = "pH")
+
+d<-WEB346.results %>%
+  group_by(variant) %>%
+  summarise_each(funs(mean(., na.rm=TRUE)), value)
+names(d)[1] <- "state"
+d %<>% mutate(state = as.factor(state), ME = "variant")
+
+MEgg <- rbind(a,b,c, d)
+
+ggplot(MEgg, aes(x=state, y=value)) + 
+  theme_bw() +
+  theme(axis.text.x=element_text(angle=90, vjust = 0),
+        axis.title.x=element_text(vjust = 0)) +
+  geom_line(aes(group = ME), color="cornflowerblue", size=1) +
+  geom_point(size=3) + 
+  facet_wrap(~ME, nrow=1, scales="free_x") +
+  labs(y="mean $\\frac{\\mathrm{SAH}}{\\mathrm{flavone}} (\\mathrm{AU})$", x="factor level") +
+  geom_hline(aes(yintercept=mean(MEgg$value)), linetype=2, size=1)
+
+a<-WEB346.results %>% filter(motif != "B") %>%
+  group_by(motif) %>%
+  summarise_each(funs(mean(., na.rm=TRUE)), value)
+names(a)[1] <- "state"
+a %<>% mutate(state = as.factor(state), ME = "motif")
+
+b<-WEB346.results %>% filter(motif != "B") %>%
+  group_by(Mg) %>%
+  summarise_each(funs(mean(., na.rm=TRUE)), value)
+names(b)[1] <- "state"
+b%<>% mutate(state = as.factor(state), ME = "Mg")
+
+c<-WEB346.results %>% filter(motif != "B") %>%
+  group_by(pH) %>%
+  summarise_each(funs(mean(., na.rm=TRUE)), value)
+names(c)[1] <- "state"
+c %<>% mutate(state = as.factor(state), ME = "pH")
+
+d<-WEB346.results %>% filter(motif != "B") %>%
+  group_by(variant) %>%
+  summarise_each(funs(mean(., na.rm=TRUE)), value)
+names(d)[1] <- "state"
+d %<>% mutate(state = as.factor(state), ME = "variant")
+
+MEgg <- rbind(a,b,c, d)
+
+ggplot(MEgg, aes(x=state, y=value)) + 
+  theme_bw() +
+  theme(axis.text.x=element_text(angle=90, vjust = 0),
+        axis.title.x=element_text(vjust = 0)) +
+  geom_line(aes(group = ME), color="cornflowerblue", size=1) +
+  geom_point(size=3) + 
+  facet_wrap(~ME, nrow=1, scales="free_x") +
+  labs(y="mean $\\frac{\\mathrm{SAH}}{\\mathrm{flavone}} (\\mathrm{AU})$", x="factor level") +
+  geom_hline(aes(yintercept=mean(MEgg$value)), linetype=2, size=1)
+```
+
+```{r IAP, results='asis', fig.height=3, fig.width=2.5, fig.margin=T, fig.cap='Interaction plot for Mg and pH. The lines suggest an interaction between pH and Mg, but this is not enough evidence to say wether that interaction is significant. red -- no magnesium, blue -- magnesium added.'}
+d<-WEB346.results %>%
+  group_by(Mg,pH) %>%
+  summarise_each(funs(mean(., na.rm=TRUE), sd(., na.rm=TRUE)), value)
+
+ggplot(d, aes(x=pH, y=mean, group = Mg)) + 
+  theme_bw() +
+  theme(axis.text.x=element_text(angle=90, vjust = 0),
+        axis.title.x=element_text(vjust = 0),
+        legend.position="none") +
+  geom_line(aes(color = Mg), size=1) +
+  geom_point(size=3) +
+  labs(y="mean $\\frac{\\mathrm{SAH}}{\\mathrm{flavone}} (\\mathrm{AU})$", x="pH") +
+  geom_hline(aes(yintercept=mean(d$mean)), linetype=2, size=1)
+```
+
+\newthought{The interaction plot}(\ref{fig:IAP}) of Mg and pH displays an interaction. When magnesium is added the activity tends to be higher. This effect is more pronounced at low pH values. 
+It is not possible to say wether this effect is significant without the according satistical test.
+Indeed the ANOVA results suggest, that there is no significance. In fact there doesn't even seem to be a statistical significance from Mg addition or pH alone. 
+
+## Anova
+
+Two-way ANOVA test for simple models and more complex models were prepared.
+The p-values for the complex model are very low all over. However it is very likely that this is an overinterpretation of the data.
+The data/experiment might be too complex to derive anything of value from the information. 
+The use of more complex modelling techniques mnight shed some light.
+However, when the substrates with catecholic moieties are excluded from the results, there is statistical significance at leas for Mg and pH.
+
+```{r, results='asis', echo=TRUE}
+data.lm <- lm(value ~ pH*Mg, data=WEB346.results)
+summary(aov(data.lm)) %>% xtable(.,caption="ANOVA table.")
+
+data.lm <- lm(value ~ pH*Mg*motif*variant, data=WEB346.results)
+summary(aov(data.lm)) %>% xtable(.,caption="ANOVA table of the most complex model. Significance is everywhere ... :O")
+
+
+data.lm <- lm(value ~ pH*Mg+variant, data=WEB346.results %>% filter(motif != "B"))
+summary(aov(data.lm)) %>% xtable(.,caption="ANOVA table when catecholics are excluded. At least the data suggest significance for pH and Mg.")
+```
+
+
+## Regression Tree
+
+A regression tree can be built from the data. At first glance it shows, that the motif is especially important for conversion.
+This is trivial, since PFOMT is a 4'-OMT that acts on catecholic motifs. The substrates with catecholic motifs are thus converted more efficiently.
+
+\newthought{It seems as if the variant} is influenced by pH and metal addition more clearly thatn the wt-enzyme, since the tree splits up more.
+
+```{r, fig.margin = F, fig.cap="RegressionTree of the data built with the `rpart`-package. The motif effects the conversion most. It seems that only the variant is influenced by pH and Mg.", dev='CairoPDF', echo=F, fig.width=10, fig.height=8}
+library(rpart)
+library(rpart.plot)
+library(rattle)
+
+data.tree <- rpart(value ~ ., 
+                   data=WEB346.results %>% select(-c(substrate)),
+                   control = c(minsplit = 3,
+                               minbucket = 3,
+                               cp = 0.01))
+fancyRpartPlot(data.tree, digits=3)
+rm(data.tree)
+```
+
+## Linear Models
+
+At first it was checked, if pH and Mg have an influence on the conversion.
+It does not seem that Mg or pH have any influence on the conversion, as the p-values are much too high.
+This could be the result of the fact that the conversion reactions were incubated for 16 hours.
+Possible intricacies in the conversion (due to different reaction velocities) can not be distinguished from one another if the reaction time is so long that all substrate is used up.
+
+```{r, results='asis'}
+data.lm <- lm(value ~ pH*Mg, data=WEB346.results)
+summary(data.lm) %>% xtable(.,caption="A linear model with pH and Mg as factors is not a lot better than random guesses. p-values are very high. Thus this alone does not explain the variance.")
+```
+
+\newthought{However, when the catecholics are omitted} as a factor level it becomes clear that Mg and pH DO in fact influence the conversion.
+After backwards selection only the factors pH, Mg, variant and te interactions between variant and Mg and pH are retained.
+
+```{r, message=F, echo=c(1,2)}
+data.lm <- lm(value ~ pH*Mg*variant, data=WEB346.results %>% filter(motif != "B"))
+data.lm <- MASS::stepAIC(data.lm, direction = "backward")
+#summary(data.lm) %>% xtable(.,caption="When the motif is included the model describes the data much better. The low p-values even suggest, that there is an interaction effect between pH and substrates with catecholic motifs, as well as an interaction pH:Mg:Catechol.")
+```
+
+```{r, results='asis'}
+summary(aov(data.lm)) %>% xtable(., caption="When catecholics are omitted there is significance in the following terms: pH, Mg, variant, pH:variant, Mg:variant")
+```
+
+ \marginnote{This is a margin note.  Notice that there isn't a number preceding the note.}
+
+
+```{r, fig.margin = F, fig.cap="RegressionTree of the data of only substrates with phenolic, 3'-OMe and 4'-OMe moieties. Catecholic substrates are omitted.", dev='CairoPDF', fig.width=10, fig.height=8}
+data.tree <- rpart(value ~ ., 
+                   data=WEB346.results %>% filter(motif != "B") %>% select(-substrate),
+                   control = c(minsplit = 3,
+                               minbucket = 3,
+                               cp = 0.01))
+fancyRpartPlot(data.tree, digits=3)
+```
+
+## Model selection using lasso regression
+
+Lasso regression can shrink model coefficients to zero. This helps in variable selection.
+Variables that were shrunken to 0 tend to have little impact on the prediction capabilities of the model.
+
+```{r, fig.margin=TRUE, fig.cap="Lasso regression on the model."}
+library(glmnet)
+
+data <- WEB346.results# %>% filter(motif != "B")
+
+# create model matrix for glmnet function
+# needs to be a sparse matrix because of mixed numerical and factor variables
+x<-sparse.model.matrix(value~pH*Mg*variant*motif, data = data)
+y <- data[,2]
+
+grid <- 10^seq(10,-10,length.out = 100)
+lasso <- glmnet(x, y, family = "gaussian", alpha = 1, lambda=grid)
+plot(lasso)
+```
+
+
+## Cross-validation to select best model
+
+After cross-validation only 11 variuables have non-zero coefficients and are thus used during prediction.
+All other variabkes were shrunken to zero.
+
+```{r, eval=F, echo=T}
+cv.lasso <- cv.glmnet(x,y,alpha=1,nfolds=5)
+```
+
+
+```{r, results='asis', fig.margin=T, fig.cap=c("Cross validation results for lasso regression. The best model only needs around 10 variables to describe the data with low error.", "The variables that have non-zero coefficients.")}
+cv.lasso <- cv.glmnet(x,y,alpha=1,nfolds=5)
+bestlam <- cv.lasso$lambda.min
+lasso.coeff <- predict(cv.lasso, type="coefficients", s=bestlam)
+
+plot(cv.lasso)
+
+rm(levtab)
+plot(lasso.coeff)
+df <- data.frame(variable = dimnames(lasso.coeff)[[1]][summary(lasso.coeff)$i],
+           coefficient = summary(lasso.coeff)$x)
+```
+
+
+# Answer
+
+- the conversion is not by chance (significance between blank and enzyme treated groups)
+- The biggest influence on conversion has the presence of a catechgolic moiety (surprise, surprise !)
+- There is an effect of Mg and pH (main and interaction effect). 
+  However the statistical test don't support this notion.
+  $\rightarrow$ incubation time too large, this makes results badly interpretable !!!
+  $\rightarrow$ when catecholic moieties are excluded there is significance for Mg addition and possibly for pH; however no interaction
+- data is also very complex with possibly up to four factor interactions
+- regression tree used for interpretation
+  $\rightarrow$ pH and Mg can explain some of the variance
+
+
+
+```{r, results='asis'}
+xtable(df, caption="Variables and coefficients that were retained. Non-zero coefficients not shown.", digits = 4)
+```
+

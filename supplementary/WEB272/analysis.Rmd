@@ -1,0 +1,167 @@
+---
+title: "WEB272 -- SOMT Refolding"
+author: "Benjamin Weigel"
+date: "07/23/2015"
+output:
+  pdf_document:
+    number_sections: yes
+    toc: yes
+---
+
+After rebuffering protein concentrations were measured by Bradford:
+
+```{r, cache=FALSE, echo=FALSE}
+knitr::opts_chunk$set(dev='tikz', error=T, warning=F, message=F, size='tiny', echo=F)
+```
+
+# Protein concetration #
+```{r, fig.height=3}
+library(magrittr)
+library(dplyr)
+library(ggplot2)
+
+load("/media/mori/IPB/WEB272/140625_ResponseData.Rda")
+a <- 0.0055
+b <- 0.7114
+
+df <- SOMT2_140625[,1:20]
+df$BFmean <- c(14.81, -4.02, -2.26, 30.84, 62.27, 26.47, 66.65, 4.03, -2.93, -5.45, -6.27, 10.71)
+df$BFsd <- c(3.48, 3.91, 4.25, 3.22, 1.20, 5.02, 5.58, 5.07, 0.73, 2.06, 1.16, 0.60)
+
+df$BFmean[which(df$BFmean <= 0)] <- 0
+df$BFsd[which(df$BFmean <= 0)] <- 0
+
+df$sample <- as.factor(1:12)
+
+ggplot(df, aes(x=sample, y=BFmean)) +   
+  geom_bar(stat="identity", fill="coral") +
+  geom_errorbar(aes(ymin=BFmean-BFsd, ymax=BFmean+BFsd), width=0) +
+  labs(x="buffer", y="protein concentration $(\\frac{\\mu g}{ml})$") +
+  theme_bw()
+```
+
+## Regression tree ##
+Next we build a regression tree. To see, which factors have the most influence on the protein concentration.
+
+```{r, dev='CairoPDF', echo=c(4,5,6)}
+library(rpart)
+library(rpart.plot)
+library(rattle)
+
+somttree2 <- rpart(BFmean ~ ., 
+                data=df[,c(1:11,21)],
+                control = c(minsplit = 3,
+                            minbucket = 2,
+                            complexity = 0.001))
+fancyRpartPlot(somttree2, digits=3)
+```
+
+Arginine seems to have the biggest impact on refolding efficiency (Arginine addition is better). Then comes SAH (no SAH is better).
+
+## Main effects plot ##
+
+```{r, dev='CairoPDF'}
+library(FrF2)
+SOMT2_140625$BFmean <- df$BFmean
+
+RES <- response.names(SOMT2_140625)
+response.names(SOMT2_140625) <- c(RES, "BFmean")
+
+ME <- MEPlot(SOMT2_140625, abbrev=6, select=c(1:8), response="BFmean")
+
+MEgg <- tidyr::gather(cbind(as.data.frame(ME), state = rownames(ME)), key = ME, value = value, -state)
+```
+
+```{r, echo=F, fig.height=3}
+ggplot(MEgg, aes(x=state, y=value)) + 
+  theme_bw() +
+  geom_line(aes(group = ME), color="cornflowerblue", size=1) +
+  geom_point(size=3) + 
+  facet_wrap(~ME, nrow=1) +
+  labs(y="mean protein concentration $(\\frac{\\mu g}{ml})$", x="factor level") +
+  geom_hline(aes(yintercept=mean(MEgg$value)), linetype=2, size=1)
+```
+
+## Statistical test ##
+
+Test the statistical significance of main effects.
+Only Arginine is statistically significant to a p-value of 0.05. SAH to a p-value of 0.1.
+
+```{r, results='asis'}
+test.lm <- lm(BFmean ~ Arginine + pH + Glycerin + ionicStrength + divCations + redox + CycloDex + SAH, data=df[,c(1:11,21)])
+aov(test.lm) %>% summary %>% xtable::xtable()
+
+test.lm <- lm(BFmean ~ Arginine + pH + Glycerin + ionicStrength + divCations + redox + CycloDex + SAH + e1 +e2 + e3, data=df[,c(1:11,21)])
+LenthPlot(test.lm, alpha=0.05)
+```
+
+# Protein volume activity #
+```{r, fig.height=3}
+load("/media/mori/IPB/WEB272/HPLC.Rda")
+
+df <- SOMT2_140625[,c(1:11, 17)]
+df$sample <- as.factor(1:12)
+
+ggplot(df, aes(x=sample, y=P1_AC)) +   
+  geom_bar(stat="identity", fill="coral") +
+  labs(x="buffer", y="$\\frac{\\mathrm{ponciretin}}{\\mathrm{AC-9}} (\\mathrm{AU})$") +
+  theme_bw()
+
+ggplot(df, aes(x=sample, y=(INTDATA$Product_1 / INTDATA$'AC-9') / (INTDATA$Naringenin / INTDATA$'AC-9'))) +   
+  geom_bar(stat="identity", fill="coral") +
+  labs(x="buffer", y="$\\frac{\\mathrm{ponciretin}}{\\mathrm{AC-9}} (\\mathrm{AU})$") +
+  theme_bw()
+```
+
+## Regression tree ##
+Next we build a regression tree. To see, which factors have the most influence the SOMT activity.
+
+```{r, dev='CairoPDF', echo=c(4,5,6)}
+library(rpart)
+library(rpart.plot)
+library(rattle)
+
+somttree2 <- rpart(P1_AC ~ ., 
+                data=df[,c(1:8,12)],
+                control = c(minsplit = 3,
+                            minbucket = 2,
+                            complexity = 0.001))
+fancyRpartPlot(somttree2, digits=3)
+```
+
+The redox status seems to have the biggest impact on refolding efficiency measured by activity (reducing is better, DTT). Then comes arginine (arginine is better).
+
+## Main effects plot ##
+
+```{r, dev='CairoPDF'}
+library(FrF2)
+test.lm <- lm(P1_AC ~ pH + Arginine + Glycerin + ionicStrength + divCations + redox + CycloDex + SAH, data=df[,c(1:8,12)])
+ME <- MEPlot(test.lm, abbrev=6, select=c(1:8), response="P1_AC")
+
+MEgg <- tidyr::gather(cbind(as.data.frame(ME), state = rownames(ME)), key = ME, value = value, -state)
+```
+
+```{r, echo=F, fig.height=3}
+ggplot(MEgg, aes(x=state, y=value)) + 
+  theme_bw() +
+  geom_line(aes(group = ME), color="cornflowerblue", size=1) +
+  geom_point(size=3) + 
+  facet_wrap(~ME, nrow=1) +
+  labs(y="mean $\\frac{\\mathrm{ponciretin}}{\\mathrm{AC-9}} (\\mathrm{AU})$", x="factor level") +
+  geom_hline(aes(yintercept=mean(MEgg$value)), linetype=2, size=1)
+
+```
+
+## Statistical test ##
+
+Test the statistical significance of main effects.
+Only Arginine is statistically significant to a p-value of 0.05. SAH to a p-value of 0.1.
+
+```{r, results='asis'}
+aov(test.lm) %>% summary %>% xtable::xtable()
+
+test.lm <- lm(P1_AC ~ Arginine + pH + Glycerin + ionicStrength + divCations + redox + CycloDex + SAH + e1 +e2 + e3, data=df[,c(1:12)])
+LenthPlot(test.lm, alpha=0.05)
+```
+
+

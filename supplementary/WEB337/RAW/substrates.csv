@@ -1,0 +1,19 @@
+no,substrate,type,structure,exact.mass.methylated
+1,alizarin,anthrachinone,\chemfig[][scale=0.6]{*6(=-*6(-(=O)-*6(-=-(-OH)=(-OH)-=)--(=O)--)=-=-)},
+2,purpurin,anthrachinone,\chemfig[][scale=0.6]{*6(=-*6(-(=O)-*6(-(-OH)=-(-OH)=(-OH)-=)--(=O)--)=-=-)},
+3,apigenin,flavone,\chemfig[][scale=0.6]{*6(=(-OH)-*6(-(=O)-=(-*6(=-=(-OH)-=-))-O--)=-=(-OH)-)},284.07
+4,chrysin,flavone,\chemfig[][scale=0.6]{*6(=(-OH)-*6(-(=O)-=(-*6(=-=-=-))-O--)=-=(-OH)-)},
+5,genistein,isoflavone,\chemfig[][scale=0.6]{*6(=(-OH)-*6(-(=O)-(-*6(=-=(-OH)-=-))=-O--)=-=(-OH)-)},284.07
+6,galangin,flavonol,\chemfig[][scale=0.6]{*6(=(-OH)-*6(-(=O)-(-OH)=(-*6(=-=-=-))-O--)=-=(-OH)-)},
+7,kaempferol,flavonol,\chemfig[][scale=0.6]{*6(=(-OH)-*6(-(=O)-(-OH)=(-*6(=-=(-OH)-=-))-O--)=-=(-OH)-)},300.06
+\deleted{8},\deleted{quercetin},\deleted{flavonol},\chemfig[][scale=0.6]{*6(=(-OH)-*6(-(=O)-(-OH)=(-*6(=-(-OH)=(-OH)-=-))-O--)=-=(-OH)-)},
+8,reosmin,homo-dihydro cinnamic keton,\chemfig[][scale=0.6]{*6((-OH)=-=(--[::-60]-(=[::60]O)-[::-60])-=-)},
+9,naringenin,flavanon,\chemfig[][scale=0.6]{*6(=(-OH)-*6(-(=O)--(-*6(=-=(-OH)-=-))-O--)=-=(-OH)-)},286.08
+10,eriodictyol,flavanon,\chemfig[][scale=0.6]{*6(=(-OH)-*6(-(=O)--(-*6(=-(-OH)=(-OH)-=-))-O--)=-=(-OH)-)},302.08
+11,homoeriodictyol,flavanon,\chemfig[][scale=0.6]{*6(=(-OH)-*6(-(=O)--(-*6(=-(-O-[:30]CH_3)=(-OH)-=-))-O--)=-=(-OH)-)},316.09
+12,hesperetin,flavanon,\chemfig[][scale=0.6]{*6(=(-OH)-*6(-(=O)--(-*6(=-(-OH)=(-O-[:-30]CH_3)-=-))-O--)=-=(-OH)-)},316.09
+13,phloretin,chalcon,\chemfig[][scale=0.6]{*6(=(-OH)-(-(=[::-60]O)-[::60]-[::60](-[::-60]*6(=-=(-OH)-=-)))=(-OH)-=(-OH)-)},288.1
+14,resveratrol,stilbene,\chemfig[][scale=0.6]{*6(=(-OH)-=(-=[::-60]-(*6(-=-(-OH)=-=)))-=(-OH)-)},242.09
+15,\textit{p}-coumaric acid,cinnamic acid,\chemfig[][scale=0.6]{*6((-OH)=-=(-=[::-60]-COOH)-=-)},
+16,caffeic acid,cinnamic acid,\chemfig[][scale=0.6]{*6((-OH)=-=(-=[::-60]-COOH)-=(-OH)-)},
+17,none (blank),,,

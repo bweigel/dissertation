@@ -445,20 +445,20 @@ The M and I--effects let the 3-OH be deprotonated first, which in turn really lo
 The nucleophilicity of these phenolic groups happens to coincide with their \textsc{Br\o nsted} acidity.
 Chemically speaking the hydroxyl with the lower \pka always reacts first with an electrophile.
       
-However, different enzymes are able to regioselectivly methylate the 3- or the 4-OH of such catecholic systems.  
+However, different enzymes are able to regioselectivly methylate the 3- or the 4-OH of such catecholic systems. \bweigel{cite dippe et al 2015}
 Enzyme's active sites create a ``microclimate'', which can selectively raise or lower the effective \pka of functional groups and allows for the efficient manipulation of the macroscopically observed regioselectivity.
 
 
 \begin{table}
-  \begin{tabularx}{\linewidth}{cllll}
-  \caption{\pka-values of phenolic hydroxyl groups examplified by \textit{p}-cresole derivatives. Substituent positions on the aromatic ring are arbitrary and do not reflect conventions of the \glsentryfirst{iupac}} \\
+    \caption{\pka-values of phenolic hydroxyl groups examplified by \textit{p}-cresole derivatives. Substituent positions on the aromatic ring are arbitrary and do not reflect conventions of the \glsentryfirst{iupac}.} 
   \label{tab:pkaphenols}
-  \hfill \\
+  \centering\small
+  \begin{tabularx}{\linewidth}{cllll}
     \toprule
     \multirow{5}{*}{%
       \includegraphics{usr/graphics/static/phenols}%
     }%
-    & R\textsuperscript{1} & R\textsuperscript{2} & pka\textsuperscript{-R\textsuperscript{1}} &  pka\textsuperscript{-R\textsuperscript{2}} \\
+    & R\textsuperscript{1} & R\textsuperscript{2} & \pka\textsuperscript{-R\textsuperscript{1}} &  \pka\textsuperscript{-R\textsuperscript{2}} \\
     \cmidrule{2-5}
     & OH & H & 10.36 & -- \\
     & OH & OH & 13.1 & 9.55 \\
@@ -468,9 +468,122 @@ Enzyme's active sites create a ``microclimate'', which can selectively raise or 
   \end{tabularx}
 \end{table}
 
+Previous studies have established that \pfomt is a 3'-\textit{O}-methyl transferase, which is not able to methylate substrates that bear either phenolic (e.g. naringenin), (3'-hydroxy-4-methoxy)- (e.g. hesperetin) or (4'-hydroxy-3-methoxy)-moieties (e.g. homo-eriodictyol) \citep{Ibdah2003}.
+The reactions were all run under the same ``standard''  conditions.
+However, the reaction buffer/medium can have a tremendous impact on enzymes and their reactions. 
+Therefore reaction conditions require optimization, just as the enzymes themselves, to augment an enzymatic process \citep{Bornscheuer2012,Koeller2001}.
+
+Using \pfomt the reaction conditions were screened, to assess if any would promote the methylation of non-catecholic substrates.
+Changes in the pH of the medium effect enzymatic activity, especially if charged groups are part of the catalytic mechanism, which was proposed for \pfomt \citep{Brandt2015}.
+Furthermore, \pfomt is a magnesium dependent enzyme and the activity is effected by altering the concentration of \cf{Mg^2+}.
+Thus, the pH was chosen to be varied along with \cf{Mg^2+} concentration in order to study the influence of those two factors on the methylation reaction.
+
 \subsection{\glsentrytext{pfomt} pH-profiles are influenced by \cf{Mg^2+}}
 
+\pfomt was dialyzed extensively against buffer containing \SI{5}{\milli\molar} \gls{edta} to obtain enzyme that was virtually free of bound divalent cations.
+pH-profiles (pH 5.5 -- 9.5) of three different substrates (caffeic acid, \textit{iso}-ferulic acid, eriodictyol) were obtained.
+The pH-profiles were measured without and with the addition of \SI{10}{\milli\molar} \cf{MgCl2}.
 
+The catecholic substrates caffeic acid and eriodictyol were converted by \pfomt much more quickly than \ifa, which is a (3-hydroxy-4-methoxy)-substituted cinnamic acid (\autoref{fig:e_pHprofile}).
+The highest rate of \ifa conversion was two orders of magnitude lower than the highest rate for conversion of the other two substrates.
+Nonetheless conversion was observed for \ifa with increasing pH and even an influence of magnesium was observed.
+Addition of \SI{10}{\milli\molar} \cf{Mg^2+} increased the rate of \ifa conversion by 3-fold from \SI{7}{\pico\katal\per\milli\gram} to \SI{21}{\pico\katal\per\milli\gram} at pH 9.45 (\autoref{tab:specific.activity}).
+
+The specific activities observed for the conversion of caffeic acid are comparable to published data \citep{Dippe2015}.
+For the two catecholic substrates, the pH-optimum shifted from neutral to alkaline pHs, when \cf{Mg^2+} was omitted.
+However, the maximum activity remained roughly the same.
+This was not true for \ifa, which was hardly converted at all without the addition of \cf{Mg^2+}.
+
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[width=0.65\textwidth]{usr/graphics/static/tmp_pHprofile}
+  \end{figureframe}
+  \caption{Initial rate/pH-profiles for the conversion of three different substrates (red -- caffeic acid, green -- eriodictyol, blue -- \textit{iso}-ferulic acid) by \pfomt. The non-catecholic substrate \textit{iso}-ferulic acid is converted much less quickly than the catecholic substrates. \bweigel{evtl alles schwarz weiß mit anderen linien/symbolen?}}
+  \label{fig:e_pHprofile}
+\end{figure}
+
+\begin{table}[htpb]
+  \caption{Maximum specific activity for the conversion of three different substrates with and without addition of magnesium. The pH at which the maximal activity was reached is indicated.}
+  \label{tab:specific.activity}
+  \centering\small
+  \begin{tabularx}{\textwidth}{llrrr}
+    \toprule
+     substrate & \cf{Mg^2+} & pH & $A_\mathrm{sp} \big[\frac{\mathrm{U}}{\mathrm{mg}}\big]$ & $A_\mathrm{sp} \big[\frac{\mathrm{pkat}}{\mathrm{mg}}\big]$ \\ 
+    \midrule
+     caffeic acid & FALSE & 9.45 & 88 & 1466 \\ 
+     caffeic acid & TRUE & 6.50 & 94 & 1572 \\ 
+     eriodictyol & FALSE & 9.45 & 49 & 824 \\ 
+     eriodictyol & TRUE & 6.50 & 81 & 1354 \\ 
+     \ifa & FALSE & 9.45 & 0.4 & 7 \\ 
+     \ifa & TRUE & 9.45 & 1.2 & 21 \\ 
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+
+Linear regression models of the form
+\begin{equation}
+  Y =\beta_0 + \beta_1X_1 + \beta_2X_2 + \cdots + \beta_pX_p + \epsilon
+\end{equation}
+were fitted to the data in order to make statistically sound inferences regarding a relationship between activity and pH/\cf{Mg^2+} addition.
+However, to simplify this task two subsets were prepared first. 
+The subsets split the data into substrates with catecholic and substrates without catecholic motifs.
+The \ifa data was fit to the model
+\begin{equation}\label{eq:ifa}
+  activity = \beta_0 + \beta_1 \times \factor{Mg} + \beta_2 \times \factor{pH} + \beta_3 \times (\factor{Mg} \times \factor{pH}),
+\end{equation}
+which explains about \SI{93.5}{\percent} of the variance (\autoref{tab:lm-ifa}).
+The small p-values of the coefficients for \factorx{Mg} and \factorx{pH}$\times$\factorx{Mg} suggest that there is a strong interaction between \cf{Mg^2+} addition and pH.
+However, the pH as a main effect has little significance.
+
+The pH profile for the catecholic substrates shows that there might be a quadratic relationship between pH and activity. 
+This is true for most enzymatic reactions, where ionizable groups are involved the reaction.
+A quadratic term was thus included into the linear model to capture this relationship:
+\begin{equation}\label{eq:cat}
+    activity = \beta_0 + \beta_1 \times \factor{Mg} + \beta_2 \times \factor{pH} + \beta_3 \times (\factor{Mg} \times \factor{pH}) + \beta_4 \times \factor{pH^2} + \beta_4 \times (\factor{pH^2} \times \factor{Mg}),
+\end{equation}
+This model describes the actual data reasonable well, with about \SI{68.6}{\percent} of the variance explained (\autoref{fig:e_pHlm}).
+Also here the p-values suggest an interaction between \cf{Mg^2+} and pH (\autoref{tab:lm-cat}).
+In addition more complex linear models were prepared and shrunken via the Lasso method and 5-fold cross validation (see \autoref{tab:lasso-ifa} and \ref{tab:lasso-catechol}) \citep{Tibshirani1994}.
+The Lasso is a shrinkage method that can shrink coefficients to exactly zero and thus make a model more interpretable.
+The results of the the shrunken models match well with the results obtained by linear modelling and are further statistical evidence that pH and \cf{Mg^2+} show main effects and also interaction effects which seem to be associated with the activity towards \ifa and catechol (eriodictyol, caffeic acid) methylation by \pfomt.
+Nonetheless, all of these rather simple models can not reflect the reality of such complex systems as enzymes where lots of factors play important roles.
+However, the shown results are solely included for purposes of making statistics based inferences.
+
+
+\begin{table}[htpb]
+  \caption{Coefficients of the model (\ref{eq:ifa}) for activity of \ifa methylation. The factor $\factor{Mg}$ is a categorical variable (addition/no addition) and can therefore only be 0 or 1.}
+  \label{tab:lm-ifa}
+  \centering\small
+   \begin{tabularx}{\textwidth}{lrrrrr}
+     %1  & 2 & 3 & 4 & 5 & test \\
+    \toprule
+    & Estimate & Std. Error & t value & p-value &   \\ 
+    \midrule
+    $($Intercept) & -241.4238 & 420.1485 & -0.57 & 0.5864 &   \\ 
+    \factorx{pH} & 38.4239 & 54.9778 & 0.70 & 0.5108 &   \\ 
+    \factorx{Mg} & -2201.3084 & 594.1797 & -3.70 & 0.0100 & *  \\ 
+ \factorx{pH}$\times$\factorx{Mg} & 373.8131 & 77.7503 & 4.81 & 0.0030 &  ** \\ 
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/tmp_lm_ifa}
+      \caption{\ifa ($R^2=0.9355$)}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/tmp_lm_catechols}
+      \caption{Catecholic substrates ($R^2=0.6855$)}
+    \end{subfigure}
+  \end{figureframe}
+  \caption{pH-profiles of substrate conversion. The linear regression models (blue, dashed lines) grasp the general trend of the data reasonably well to draw inferences. \SI{95}{\percent} prediction intervals are displayed as shaded areas.}
+  \label{fig:e_pHlm}
+\end{figure}
 
 \subsection{Methylation of (3'-hydroxy-4-\textit{O}-methyl)-moieties}
 

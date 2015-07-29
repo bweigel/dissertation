@@ -45,7 +45,7 @@ load("WEB346.results.rda")
 motif <- data.frame(substrate = 1:17, 
                     motif = c(rep(c("phenolic", "catecholic", "4-O-Me", "3-O-Me"), 2), 
                               rep("phenolic", 2),
-                              "phenolic", "catecholic", "4-O-Me", "3-O-Me", "phenolic", "catecholic", "catecholic"),
+                              "phenolic", "catecholic", "3-O-Me", "4-O-Me", "phenolic", "catecholic", "catecholic"),
                     select = c(rep(T, 9), rep(F, 2), rep(T, 3), rep(F, 3)))
 WEB346.results <- merge(WEB346.results, motif, by="substrate")
 WEB346.results$pH <- ifelse(WEB346.results$pH > 8, "high", "low")
@@ -262,7 +262,7 @@ It does not seem that Mg or pH have any influence on the conversion, as the p-va
 This could be the result of the fact that the conversion reactions were incubated for 16 hours.
 Possible intricacies in the conversion (due to different reaction velocities) can not be distinguished from one another if the reaction time is so long that all substrate is used up.
 
-```{r, results='asis'}
+```{r linear.model1, results='asis'}
 data.lm <- lm(value ~ pH*Mg, data=WEB346.results)
 summary(data.lm) %>% xtable(.,caption="A linear model with pH and Mg as factors is not a lot better than random guesses. p-values are very high. Thus this alone does not explain the variance.")
 ```
@@ -270,7 +270,7 @@ summary(data.lm) %>% xtable(.,caption="A linear model with pH and Mg as factors 
 \newthought{However, when the catecholics are omitted} as a factor level it becomes clear that Mg and pH DO in fact influence the conversion.
 After backwards selection only the factors pH, Mg, variant and te interactions between variant and Mg and pH are retained.
 
-```{r, message=F, echo=c(1,2)}
+```{r linear.model2, message=F, echo=c(1,2)}
 data.lm <- lm(value ~ pH*Mg*variant, data=WEB346.results %>% filter(motif != "B"))
 data.lm <- MASS::stepAIC(data.lm, direction = "backward")
 #summary(data.lm) %>% xtable(.,caption="When the motif is included the model describes the data much better. The low p-values even suggest, that there is an interaction effect between pH and substrates with catecholic motifs, as well as an interaction pH:Mg:Catechol.")
@@ -283,7 +283,7 @@ summary(aov(data.lm)) %>% xtable(., caption="When catecholics are omitted there 
  \marginnote{This is a margin note.  Notice that there isn't a number preceding the note.}
 
 
-```{r, fig.margin = F, fig.cap="RegressionTree of the data of only substrates with phenolic, 3'-OMe and 4'-OMe moieties. Catecholic substrates are omitted.", dev='CairoPDF', fig.width=10, fig.height=8}
+```{r regression_tree, fig.margin = F, fig.cap="RegressionTree of the data of only substrates with phenolic, 3'-OMe and 4'-OMe moieties. Catecholic substrates are omitted.", dev='CairoPDF', fig.width=10, fig.height=8}
 data.tree <- rpart(value ~ ., 
                    data=WEB346.results %>% filter(motif != "B") %>% select(-substrate),
                    control = c(minsplit = 3,
@@ -297,7 +297,7 @@ fancyRpartPlot(data.tree, digits=3)
 Lasso regression can shrink model coefficients to zero. This helps in variable selection.
 Variables that were shrunken to 0 tend to have little impact on the prediction capabilities of the model.
 
-```{r, fig.margin=TRUE, fig.cap="Lasso regression on the model."}
+```{r lasso_sparse_matrix, fig.margin=TRUE, fig.cap="Lasso regression on the model."}
 library(glmnet)
 
 data <- WEB346.results# %>% filter(motif != "B")
@@ -318,12 +318,12 @@ plot(lasso)
 After cross-validation only 11 variuables have non-zero coefficients and are thus used during prediction.
 All other variabkes were shrunken to zero.
 
-```{r, eval=F, echo=T}
+```{r lasso1, eval=F, echo=T}
 cv.lasso <- cv.glmnet(x,y,alpha=1,nfolds=5)
 ```
 
 
-```{r, results='asis', fig.margin=T, fig.cap=c("Cross validation results for lasso regression. The best model only needs around 10 variables to describe the data with low error.", "The variables that have non-zero coefficients.")}
+```{r lasso2, results='asis', fig.margin=T, fig.cap=c("Cross validation results for lasso regression. The best model only needs around 10 variables to describe the data with low error.", "The variables that have non-zero coefficients.")}
 cv.lasso <- cv.glmnet(x,y,alpha=1,nfolds=5)
 bestlam <- cv.lasso$lambda.min
 lasso.coeff <- predict(cv.lasso, type="coefficients", s=bestlam)
@@ -355,3 +355,151 @@ df <- data.frame(variable = dimnames(lasso.coeff)[[1]][summary(lasso.coeff)$i],
 xtable(df, caption="Variables and coefficients that were retained. Non-zero coefficients not shown.", digits = 4)
 ```
 
+\newpage
+
+# Conversion of substrates
+
+The conversion of the substrate in % is of interest.
+
+## Calculation of SAH and SAM concentration
+
+The SAH and SAM concentration were estimated from the area-under-curve (AUC) of the SAM and SAH peaks.
+The displayed formula also already include the conversion. $x_\mathrm{SAH}$ is a direct measure for the conversion.
+
+\begin{marginfigure}
+$$A_\mathrm{SAM} + A_\mathrm{SAM} = 1 \approx 500 \mathrm{uM}$$
+$$x_\mathrm{SAH} = \frac{A_\mathrm{SAH}}{A_\mathrm{SAM} + A_\mathrm{SAM}}$$
+$$c_\mathrm{SAH} = x_\mathrm{SAH} \times 500 \mathrm{uM}$$
+\caption{Calculation of specific activity.}
+\end{marginfigure}
+
+0.4 mM substrate and 0.5 mM biologically active SAM were added.
+That means the substrate conversion can be estimated by $conversion = \frac{0.4\mathrm{mM}}{0.5\mathrm{mM} \times  x_\mathrm{SAH}}$.
+
+```{r concentration_estimation, fig.margin=T, fig.cap="Estimated SAH and SAM concentration plotted against the AUC. Linear best-fit models with 95\\% prediction intervals are included."}
+load("WEB346.results.rda")
+
+motif <- data.frame(substrate = 1:17, 
+                    motif = c(rep(c("phenolic", "catecholic", "4-O-Me", "3-O-Me"), 2), 
+                              rep("phenolic", 2),
+                              "phenolic", "catecholic", "3-O-Me", "4-O-Me", "phenolic", "catecholic", "catecholic"),
+                    select = c(rep(T, 9), rep(F, 2), rep(T, 3), rep(F, 3)),
+                    group = c(rep("flavanone", 4), rep("flavone", 4), rep("cinnamic acid", 6), rep("flavonole", 3)))
+
+WEB346.results <- merge(WEB346.results, motif, by="substrate")
+WEB346.results$pH <- ifelse(WEB346.results$pH > 8, "high", "low")
+WEB346.results %<>% mutate(pH = as.factor(pH),
+  Mg = as.factor(Mg),
+  motif = factor(motif))#, labels=c(LETTERS[1:4]) , levels=c("phenolic", "catecholic", "4-O-Me", "3-O-Me"))) 
+
+rm(motif)
+
+WEB346.results %<>% select(substrate, pH, Mg, variant, motif, select, SAH, SAM, flavon, group)
+
+# conversion is x.SAH
+WEB346.results %<>% mutate(x.SAH = (SAH/flavon)/((SAH/flavon)+(SAM/flavon)), 
+                     c.SAH = (x.SAH*500),
+                     x.SAM = (SAM/flavon)/((SAH/flavon)+(SAM/flavon)), 
+                     c.SAM = (x.SAM*500))
+
+## rearrange data.frame for plotting in ggplot
+WEB346.results <- tidyr::gather(WEB346.results, key, area, SAH:SAM)
+WEB346.results$c.SAM[with(WEB346.results, which(key == "SAH"))] <- NA
+WEB346.results$c.SAH[with(WEB346.results, which(key == "SAM"))] <- NA
+WEB346.results <- tidyr::gather(WEB346.results, key2, concentration, c.SAH, c.SAM)
+
+## calcuate linear model for relationship concentration to area
+sah.lm <- lm(concentration~area, data=WEB346.results %>% filter(key == "SAH"))
+#sam.lm <- glm(concentration~area, data=WEB346.results %>% filter(key == "SAM"), family = gaussian(link = "log"))
+sam.lm <- lm(concentration~area, data=WEB346.results %>% filter(key == "SAM"))
+## predict new data
+ypred <- data.frame(area=seq(0,4e6,length.out = 20))
+ypred <- cbind(ypred, sah=predict(sah.lm, type="response", interval="prediction", newdata=ypred))
+ypred <- cbind(ypred, sam=predict(sam.lm, type="response", interval="prediction", newdata=ypred))
+
+
+ggplot() +
+  theme_bw() +
+  geom_point(data=WEB346.results, aes(x=area, y=concentration, shape=key), alpha=0.25, size=2) +
+  geom_line(data=ypred[ypred$area<3e6,], aes(x=area, y=sah.fit), color="blue", fill="blue", linetype=2) +
+  geom_ribbon(data=ypred[ypred$area<3e6,], aes(x=area, ymin=sah.lwr, ymax=sah.upr), alpha=0.1) +
+  geom_line(data=ypred[ypred$area>1.5e6,], aes(x=area, y=sam.fit), color="red", linetype=2) +
+  geom_ribbon(data=ypred[ypred$area>1.5e6,], aes(x=area, ymin=sam.lwr, ymax=sam.upr), fill="red", alpha=0.1)   +
+  labs(x = "area-under-curve [AU]", y = "concentration $[\\mu M]$")
+
+```
+
+```{r mf.labeller}
+mf_labeller <- function(var, value){
+   value <- as.character(value)
+   if(var == "Mg"){
+       value[value == "TRUE"] <- "10 mM Mg"
+       value[value == "FALSE"] <- "no Mg"
+   }
+   if(var == "pH"){
+       value[value == "low"] <- "low pH"
+       value[value == "high"] <- "high pH"
+   }
+   
+   return(value)
+}
+```
+
+```{r, cache=FALSE, echo=FALSE}
+knitr::opts_chunk$set(fig.height=4)
+```
+
+# Phenolic substrates
+
+```{r plot_conversion_phenol, fig.margin=T, fig.cap="Comparison of conversion of phenolic substrates. dashed line -- 10 mM Mg, solid line -- no Mg"}
+#WEB346.results$motif <- with(WEB346.results, factor(motif, levels = c("phenolic", "catecholic", "4-O-Me", "3-O-Me")))
+#res.save <- WEB346.results
+#WEB346.results <- res.save
+themeweb <- list(theme(axis.text.x = element_text(angle=90),
+                       legend.position="none"),
+  facet_grid(variant~pH, labeller=mf_labeller),
+  geom_line(aes(group=Mg, linetype=Mg), color="black"),
+  labs(y="SAM-conversion"))
+
+WEB346.results %<>% filter(variant != "none") %>% group_by(group, motif, pH, Mg, variant) %>% summarise(mean=mean(x.SAH), sd=sd(x.SAH))
+WEB346.results %<>% ungroup %>% mutate(mean = mean/max(mean))
+WEB346.results$mean[with(WEB346.results, which(is.na(mean)))] <- 0
+WEB346.results$pH <- with(WEB346.results, factor(pH, levels = c("low", "high")))
+
+
+ggplot(WEB346.results %>% filter(group != "flavonole", motif == "phenolic"), aes(x=group, y=mean)) +
+  theme_bw() +  themeweb +
+  geom_point(color="black") +
+  geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd), width=0, color="black") 
+  
+```
+
+\newpage 
+
+# 3'-O-methyl substrates
+
+```{r plot_conversion_3Ome, fig.margin=T, fig.cap="Comparison of conversion of 3'-O-methyl substrates. dashed line -- 10 mM Mg, solid line -- no Mg"}
+ggplot(WEB346.results %>% filter(group != "flavonole", motif == "3-O-Me"), aes(x=group, y=mean, color=Mg)) +
+  theme_bw() +  themeweb +
+  geom_point(color="black") +
+  geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd), width=0, color="black") 
+  
+```
+
+# 4'-O-methyl substrates
+
+```{r plot_conversion_4Ome, fig.margin=T, fig.cap="Comparison of conversion of 4'-O-methyl substrates. dashed line -- 10 mM Mg, solid line -- no Mg"}
+ggplot(WEB346.results %>% filter(group != "flavonole", motif == "4-O-Me"), aes(x=group, y=mean, color=Mg)) +
+  theme_bw() +  themeweb +
+  geom_point(color="black") +
+  geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd), width=0, color="black") 
+```
+
+# catecholic substrates
+
+```{r plot_conversion_catechol, fig.margin=T, fig.cap="Comparison of conversion of catecholic substrates. dashed line -- 10 mM Mg, solid line -- no Mg"}
+ggplot(WEB346.results %>% filter(group != "flavonole", motif == "catecholic"), aes(x=group, y=mean, color=Mg)) +
+  theme_bw() +  themeweb +
+  geom_point(color="black") +
+  geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd), width=0, color="black") 
+```

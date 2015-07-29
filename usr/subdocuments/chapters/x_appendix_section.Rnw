@@ -212,3 +212,55 @@ Overview over the contructs produced for the present thesis. Each step during th
 }{%
 Crystallographic data, phasing and refinement statistics.
 }
+
+
+\begin{table}[htpb]
+  \caption{Coefficients of the model (\ref{eq:cat}) for activity of catecholic methylation. The factor $\factor{Mg}$ is a categorical variable (addition/no addition) and can therefore only be 0 or 1.}
+  \label{tab:lm-cat}
+  \centering\small
+  \begin{tabularx}{\textwidth}{lrrrrr}
+    \toprule
+    & Estimate & Std. Error & t value & p-value &  \\ 
+    \midrule
+    $($Intercept) & -421929.9946 & 356063.7085 & -1.18 & 0.2557 &  \\ 
+    \factorx{Mg} & -839999.8874 & 503550.1257 & -1.67 & 0.1175 &  \\ 
+    \factorx{pH} & 103271.3345 & 97739.1728 & 1.06 & 0.3086 &  \\ 
+    $\factor{pH^2}$ & -4977.7406 & 6512.6996 & -0.76 & 0.4574 &  \\ 
+    \factorx{Mg}$\times$\factorx{pH} & 266920.7964 & 138224.0638 & 1.93 & 0.0740 & . \\ 
+    \factorx{Mg}$\times\factor{pH^2}$ & -19830.2264 & 9210.3481 & -2.15 & 0.0492 & * \\ 
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\begin{table}
+  \caption{Coefficients obtained for linear regression model suing the \ifa subset after shrinkage using the Lasso method and 5-fold cross validation. Only non-zero coefficients (variables actually do have an effect) are retained during the Lasso. Seed was set to 1337.}
+  \label{tab:lasso-ifa}
+  \centering\small
+  \begin{tabularx}{\textwidth}{lr}
+    \toprule
+    variable & coefficient \\ 
+    \midrule
+    $($Intercept) & -509.8385 \\ 
+    \factorx{pH} & 73.4085 \\ 
+    \factorx{Mg} & -1606.1362 \\ 
+    \factorx{pH}$\times$\factorx{Mg} & 296.0753 \\ 
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\begin{table}
+  \caption{Coefficients obtained for linear regression model using the catechols subset after shrinkage using the Lasso method and 5-fold cross validation. Only non-zero coefficients (variables actually do have an effect) are retained during the Lasso. Seed was set to 1336.} 
+  \label{tab:lasso-catechol}
+  \centering\small
+  \begin{tabularx}{\textwidth}{lr}
+    \toprule
+    variable & coefficient \\ 
+    \midrule
+    $($Intercept) & -467632.3821 \\ 
+    \factorx{pH} & 94469.8366  \\ 
+    \factorx{pH}$\times$\factorx{Mg} & 19068.9540 \\ 
+    \factorx{pH}$\times\factor{pH^2}$ & -381.5863 \\ 
+    \factorx{pH}$\times$\factorx{Mg}$\times\factor{pH^2}$ & -292.3608 \\ 
+    \bottomrule
+  \end{tabularx}
+\end{table}

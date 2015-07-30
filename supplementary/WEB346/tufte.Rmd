@@ -398,9 +398,11 @@ WEB346.results %<>% select(substrate, pH, Mg, variant, motif, select, SAH, SAM, 
 
 # conversion is x.SAH
 WEB346.results %<>% mutate(x.SAH = (SAH/flavon)/((SAH/flavon)+(SAM/flavon)), 
-                     c.SAH = (x.SAH*500),
+                     c.SAH = (x.SAH*500/0.81),
                      x.SAM = (SAM/flavon)/((SAH/flavon)+(SAM/flavon)), 
-                     c.SAM = (x.SAM*500))
+                     c.SAM = (x.SAM*500/0.81))
+
+res.save <- WEB346.results
 
 ## rearrange data.frame for plotting in ggplot
 WEB346.results <- tidyr::gather(WEB346.results, key, area, SAH:SAM)
@@ -426,8 +428,64 @@ ggplot() +
   geom_line(data=ypred[ypred$area>1.5e6,], aes(x=area, y=sam.fit), color="red", linetype=2) +
   geom_ribbon(data=ypred[ypred$area>1.5e6,], aes(x=area, ymin=sam.lwr, ymax=sam.upr), fill="red", alpha=0.1)   +
   labs(x = "area-under-curve [AU]", y = "concentration $[\\mu M]$")
-
 ```
+
+```{r, results='asis'}
+xtable(summary(sah.lm), digits=-4)
+```
+
+
+
+\newpage
+## Calculation of the coefficients for concentration~area bay bootstrapping
+
+From the histogram of the coefficients obtained by the bootstrap it is clear that there is a non-gaussian distribution for the coefficients for SAM.
+This could be due to the fact that there is a huge amount of samples with high SAM concentrations, which produces bias.
+
+```{r, echo=c(6:13), fig.width=7, fig.height=7, fig.cap=c("Histogram of coefficient values obtained by bootstrap with n=1000", "Calculated data from the bootstrap.")}
+load("WEB346.CV.rda")
+
+library(boot)
+set.seed(23)
+
+boot.fn <- function(data, index){
+  data <- data[index,]
+  data %<>% mutate(x = (area/flavon)/((SAH/flavon)+(SAM/flavon)), 
+                   concentration = (x*500/0.81)) # the total concentration of SAm is needed (R+L) --> 0.81 of SAm is biologicalle active
+  return(coef(lm(concentration~area, data=data)))
+}
+
+
+lm.boot.sah <- boot(WEB346.CV %>% select(SAH, SAM, flavon) %>% mutate(area = SAH), boot.fn, 1000)
+lm.boot.sam <- boot(WEB346.CV %>% select(SAH, SAM, flavon) %>% mutate(area = SAM), boot.fn, 1000)
+
+pred.SAH <- data.frame(area =WEB346.CV$SAH, concentration=WEB346.CV$SAH*lm.boot.sah$t0[2]+lm.boot.sah$t0[1])
+pred.SAM <- data.frame(area =WEB346.CV$SAM, concentration=WEB346.CV$SAM*lm.boot.sam$t0[2]+lm.boot.sam$t0[1])
+
+par(mfrow=c(2,2))
+hist(lm.boot.sah$t[,1], xlab="beta0.sah", main="")
+hist(lm.boot.sah$t[,2], xlab="beta1.sah", main="")
+hist(lm.boot.sam$t[,1], xlab="beta0.sam", main="")
+hist(lm.boot.sam$t[,2], xlab="beta1.sam", main="")
+#title("histogram of coefficient values obtained by bootstrap with n=1000", line = -2, outer = TRUE)
+
+
+ggplot() +
+  theme_bw() +
+  geom_point(data=WEB346.results, aes(x=area, y=concentration, shape=key), alpha=0.25, size=2) +
+  geom_point(data=pred.SAH, aes(x=area, y=concentration), color="red") +
+  geom_point(data=pred.SAM, aes(x=area, y=concentration), color="blue") +
+  #geom_line(data=ypred[ypred$area<3e6,], aes(x=area, y=sah.fit), color="blue", fill="blue", linetype=2) +
+  #geom_ribbon(data=ypred[ypred$area<3e6,], aes(x=area, ymin=sah.lwr, ymax=sah.upr), alpha=0.1) +
+  #geom_line(data=ypred[ypred$area>1.5e6,], aes(x=area, y=sam.fit), color="red", linetype=2) +
+  #geom_ribbon(data=ypred[ypred$area>1.5e6,], aes(x=area, ymin=sam.lwr, ymax=sam.upr), fill="red", alpha=0.1)   +
+  labs(x = "area-under-curve [AU]", y = "concentration $[\\mu M]$")
+
+lm.boot.sah
+lm.boot.sam
+```
+
+\newpage
 
 ```{r mf.labeller}
 mf_labeller <- function(var, value){
@@ -463,6 +521,7 @@ themeweb <- list(theme(axis.text.x = element_text(angle=90),
 
 WEB346.results %<>% filter(variant != "none") %>% group_by(group, motif, pH, Mg, variant) %>% summarise(mean=mean(x.SAH), sd=sd(x.SAH))
 WEB346.results %<>% ungroup %>% mutate(mean = mean/max(mean))
+#EB346.results %<>% ungroup %>% mutate(mean = mean*(0.5/0.81)/0.4)
 WEB346.results$mean[with(WEB346.results, which(is.na(mean)))] <- 0
 WEB346.results$pH <- with(WEB346.results, factor(pH, levels = c("low", "high")))
 
@@ -473,8 +532,6 @@ ggplot(WEB346.results %>% filter(group != "flavonole", motif == "phenolic"), aes
   geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd), width=0, color="black") 
   
 ```
-
-\newpage 
 
 # 3'-O-methyl substrates
 
@@ -495,6 +552,8 @@ ggplot(WEB346.results %>% filter(group != "flavonole", motif == "4-O-Me"), aes(x
   geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd), width=0, color="black") 
 ```
 
+\newpage
+
 # catecholic substrates
 
 ```{r plot_conversion_catechol, fig.margin=T, fig.cap="Comparison of conversion of catecholic substrates. dashed line -- 10 mM Mg, solid line -- no Mg"}
@@ -503,3 +562,86 @@ ggplot(WEB346.results %>% filter(group != "flavonole", motif == "catecholic"), a
   geom_point(color="black") +
   geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd), width=0, color="black") 
 ```
+
+# Calculation of all conversions
+
+```{r, eval=T, echo=F, results='asis'}
+WEB346.results <- res.save
+
+max.nonmyr <- WEB346.results %>% filter(substrate != 17) %>% select(x.SAH) %>% max
+conversions <- WEB346.results %>% filter(variant != "none") %>%
+  mutate(conversion = x.SAH/max.nonmyr) %>% 
+  group_by(substrate, variant) %>%
+  summarise(max = {
+    if(max(conversion) > 0){
+      max(conversion)
+    } else {return(NA)}
+  }, 
+  at.pH = {
+    if(max(conversion) > 0){
+      pH[which(conversion == max(conversion))]
+    } else {return(NA)}
+  }, 
+  at.Mg = {
+    if(max(conversion) > 0){
+      Mg[which(conversion == max(conversion))]
+    } else {return(NA)}})
+
+conversions %>% filter(variant == "WT") %>% xtable
+conversions %>% filter(variant != "WT") %>% xtable
+```
+
+```{r, fig.width=4, fig.height=5, fig.cap=c("Wild-type conversions. colors from light to dark: low/no, low/yes, high/no, high/yes", "Same as above, but some data is omitted.","4'-selective variant conversions. colors from light to dark: low/no, low/yes, high/no, high/yes")}
+WEB346.results <- res.save
+
+max.nonmyr <- WEB346.results %>% filter(substrate != 17) %>% select(x.SAH) %>% max
+conversions <- WEB346.results %>% filter(variant != "none") %>%
+  mutate(conversion = x.SAH/max.nonmyr) 
+
+conversions$pH <- with(conversions, factor(pH, levels = c("low", "high")))
+
+web <-   list(geom_point(aes(x=pH, y=conversion, group=Mg, linetype=Mg)), 
+              geom_line(aes(x=pH, y=conversion, group=Mg, linetype=Mg)),
+              facet_wrap(~substrate, ncol = 4),
+              ylim(0,1.3),
+              theme(legend.position="none",
+                    axis.text.x = element_text(angle=90)))
+withingroup <- data.frame(substrate = 1:17, with.in = c(rep(c("phenolic", "catecholic", "3O4M", "4O3M"), 2), "phenolic", 
+                                                        "m-coumaric","o-coumaric", "catecholic","4O3M", "3O4M", "phenolic","catecholic","myricetin"))
+withingroup$with.in <- with(withingroup, factor(with.in, levels = c("phenolic", "catecholic", "3O4M", "4O3M", "m-coumaric","o-coumaric", "myricetin")))
+conversions <- merge(conversions, withingroup, by="substrate")
+#ggplot(data = conversions %>% filter(variant == "WT")) +
+#  web
+
+#ggplot(data = conversions %>% filter(variant != "WT"), aes(x=pH, y=conversion, group=Mg, linetype=Mg)) +
+#  web
+
+conversions %<>% mutate(condition=paste(pH, Mg, sep="."))
+conversions$condition <- with(conversions, factor(condition, levels = c("low.FALSE", "low.TRUE", "high.FALSE", "high.TRUE")))
+
+web <- list(  geom_bar(stat = "identity", position = "dodge", aes(fill=condition)),
+              facet_grid(group~., scale="free_x"),
+              labs(x="motif"),
+              scale_fill_grey(start=0.8, end=0.2),
+              #scale_fill_brewer(palette="Set1"),
+              theme_bw(),
+              theme(legend.position="none",
+                    axis.text.x = element_text(angle=90))
+              )
+
+ggplot(data = conversions %>% filter(variant == "WT"), aes(x=with.in, y=conversion)) +
+  web
+
+ggplot(data = conversions %>% filter(variant == "WT", with.in != "catecholic" & with.in != "myricetin"), aes(x=with.in, y=conversion)) +
+  web
+
+ggplot(data = conversions %>% filter(variant != "WT"), aes(x=with.in, y=conversion)) +
+  web
+
+
+ggplot(data = conversions %>% filter(variant == "WT", group != "flavonole", with.in!="catecholic"), aes(x=with.in, y=conversion)) +
+  web
+
+
+```
+

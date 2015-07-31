@@ -585,6 +585,16 @@ The shown results are solely included for purposes of making statistics based in
   \label{fig:e_pHlm}
 \end{figure}
 
+To the knowledge of the author, this is the first time the effects of \cf{Mg^2+} and pH on methyl transferase activity were systematically analyzed.
+It was shown, that catecholic and non-catecholic substrates could be activated sufficiently by \pfomt at high pHs without the addition of \cf{Mg^2+}. 
+It is improbable that, if the active site retained the same miromilieu under every reaction condition, an influence on the rate of reaction would be observed.
+This could be a hint, that the enzyme relays the chemical information of the environment directly to the substrate to aid in activation.
+
+Furthermore, omission of \cf{Mg^2+} shifts the pH-optimum of the reaction catalyzed by \pfomt to higher pH-values.
+Addition of \cf{Mg^2+}, seems to remedy the effect of high pHs on catalysis at least for caffeic acid, since the initial rates observed were not as high.
+It would be of interest to analyze this behavior with further systematic studies and multiple levels of \cf{Mg^2+} concentrations.
+
+
 \subsection{Methylation of different chemical motifs}
 
 The initial results, that showed the conversion of  non-catecholic \ifa by \pfomt promted additional experiments with other different non-catechols from multiple flavonoid subgroups (\autoref{tab:substitutions}, \autoref{fig:substitutions}).
@@ -639,15 +649,45 @@ There was almost complete conversion of the catecholic substrates under any cond
 This suggests, that the reaction period was chosen too long. 
 Effects on the conversion of catecholic substrates will therefore be disregarded or only discussed superficially.
 When the wild-type enzyme was employed conversion was observed for all substrates under at least one condition.  
-The highest conversion of non-catecholic substrates was observed at high pH and high \cf{Mg^2+} conditions (\autoref{fig:pfomt_conversiopn}).
+The highest conversion of non-catecholic substrates was observed at high pH and high \cf{Mg^2+} conditions (\autoref{fig:pfomt_conversion}).
 The trend in the data suggests, that methylation efficiency increases with pH, but especially when magnesium is also added.
+The \gls{meplot} and \gls{iaplot} suggest the same, however there is no statistical evidence to support this notion (see \autoref{fig:x_mep_pfomt}, \ref{fig:x_iap_pfomt} \bweigel{evtö hier noch ne tabelle von modelcoefficiebnts?}).
+Although the statistical tests performed on this data do not back the hypothesis, this does not rule out an influence of pH or \cf{Mg^2+}.
+It should be kept in mind, that enzymatic systems are quite complex and simple linear regression models that allow for inferences often cannot describe what is going on accurately and therefore fail.
+Furthermore this very complex dataset is limited to only about 150 observations.
+
 Overall, methylation of \gls{3o4m} motifs was highest, with observed conversions of close to \SI{25}{\percent} for the cinnamic acid and flavanone substrates (\ifa and hesperetin).
-For these substrates the conversion increases by almost 5-fold upon \cf{Mg^2+} addition, which is close to the observed increase of the initial rate of \ifa methylation (\ref{sec:pfomtph}).
+For these substrates the conversion increased by almost 5-fold upon \cf{Mg^2+} addition, which is close to the observed increase of the initial rate of \ifa methylation (\ref{sec:pfomtph}).
+Conversion of the somewhat more rigid flavone diosmetin was lower by at least factor two.
 At low pH-values and without addition of \cf{Mg^2+} barely any conversion of the non-catecholic substrates was observed.
+The fact, that conversion of \gls{3o4m}-moiety bearing substrates is greater than that of the 4'-phenolic and \gls{4o3m} substrates could be due to the fact that the wild-type of \pfomt by and large acts upon 3'-hydroxyls.
 
 The 4'-specific variant for the most part only showed conversion of the catecholic substrates, as expected.
 Only some conversion of homoeriodictyol ($\approx$\SI{4}{\percent}) and \ifa ($\approx$\SI{3}{\percent}) was observed under high pH/\cf{Mg^2+} conditions.
 However, for the catecholic substrates the same trend -- increasing pH/\cf{Mg^2+} increases activity -- as before holds true.
+Control experiments without enzyme at high pH and \SI{10}{\milli\molar} revealed, that no substrate conversion took place under these conditions.
+
+The site of methylation was studied by LC-\gls{msms}. 
+As expected, methylation only took place on the B-ring of the flavonoids.
+For a throughout discussion refer to \autoref{ch:MSMS}.
+
+
+\begin{figure}[htpb]
+  \begin{figureframe}
+    \begin{subfigure}{0.48\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/tmp_conversion_substrates_WT}
+      \caption{wild-type}
+    \end{subfigure}
+    \begin{subfigure}{0.48\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/tmp_conversion_substrates_variant}
+      \caption{4'-specific variant}
+    \end{subfigure}
+  \end{figureframe}
+  \caption{Conversion of multiple different substrates, catecholic and non catecholic, by \pfomt.
+ pH/\cf{Mg^2+} color coded from light to dark: \textglobfall/\xmark, \textglobfall/\cmark, \textglobrise/\xmark, \textglobrise/\cmark.}
+  \label{fig:pfomt_conversion}
+\end{figure}
+
 
 \begin{table}[htpb]
   \caption{Conversion of substrates after 16\,hours incubation. Only the maximum conversion is displayed, along with the conditions it was achieved under.
@@ -685,25 +725,12 @@ However, for the catecholic substrates the same trend -- increasing pH/\cf{Mg^2+
 \end{table}
 
 
-\begin{figure}[htpb]
-  \begin{figureframe}
-    \begin{subfigure}{0.48\textwidth}
-      \includegraphics[width=\textwidth]{usr/graphics/static/tmp_conversion_substrates_WT}
-      \caption{wild-type}
-    \end{subfigure}
-    \begin{subfigure}{0.48\textwidth}
-      \includegraphics[width=\textwidth]{usr/graphics/static/tmp_conversion_substrates_variant}
-      \caption{4'-specific variant}
-    \end{subfigure}
-  \end{figureframe}
-  \caption{Conversion of multiple different substrates, catecholic and non catecholic, by \pfomt.
- pH/\cf{Mg^2+} color coded from light to dark: \textglobfall/\xmark, \textglobfall/\cmark, \textglobrise/\xmark, \textglobrise/\cmark.}
-  \label{fig:pfomt_conversion}
-\end{figure}
+To the authors knowledge, this is the first time that methylation of a set of non-catecholic substrates was described for a class I magnesium dependent methyl transferase. \bweigel{vielleicht n bissl zu weitausm fenster...nochma literatur wälzen}
+Of the the two \pfomt enzymes, 4'-specific variant and wild-type, only the wild-type showed significant methylation of non-catecholic moieties. 
+These findings support the previous results, that could show a pH and magnesium-dependent rate of methylation of \ifa (\autoref{sec:pfomtph}).
+Although methylation of 3'-hydroxyl groups was preferred by the wild-type, a tendency to methylate 4'-hydroxyls, when these were the only ones present, could be demonstrated.
 
-\section{Structural studies of flavonoids using \glsentryfirst{msms}}
-\bweigel{extra kapitel?}
-
-%\section{Consensus or Bioinformatic points-of-view (\glsentrytext{comt})???}
 
 \section{Conclusion/Discussion}
+
+Two classes of methyl transferases.

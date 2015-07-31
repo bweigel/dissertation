@@ -7,11 +7,13 @@
 \makeglossaries
 
 % analytics
+\newacronym{auc}{AUC}{area under the curve}
 \newacronym{3o4m}{3O4M}{3'-hydroxy-4'-methoxy}
 \newacronym{4o3m}{4O3M}{4'-hydroxy-3'-methoxy}
 \newacronym{iupac}{IUPAC}{International Union of Pure and Applied Chemistry}
 \newacronym{aov}{ANOVA}{\emph{An}alysis \emph{o}f \emph{Va}riance}
 \newacronym{meplot}{ME-plot}{main effects plot}
+\newacronym{iaplot}{IAE-plot}{interaction effects plot}
 \newacronym{msms}{MS/MS}{tandem mass-spectrometry}
 \newacronym{esi}{ESI}{electrospray ionization}
 \newacronym{maldi}{MALDI}{matrix-assisted laser desorption/ionization}
@@ -32,7 +34,7 @@
 \newacronym{seam}{\protect\textit{Se}AM}{\protect\textit{Se}-adenosyl selenomethionine}
 \newacronym{cuaac}{CuAAC}{\cf{Cu^I}-catalyzed azide-alkyne 1,3-dipolar cycloaddition}
 \newacronym{dmso}{DMSO}{dimethyl sulfoxide}
-\newacronym{rna}{rna}{ribonucleic acid}
+\newacronym{rna}{RNA}{ribonucleic acid}
 \newacronym[plural={PKS}]{pks}{PKS}{poly ketide synthase}
 \newacronym{mt}{MT}{methyl transferase}
 \newacronym{pmt}{P-MT}{protein methyl transferase}

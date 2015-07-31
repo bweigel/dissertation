@@ -647,6 +647,24 @@ Standard reaction conditions were 50\,mM buffer, 0.4\,mM alkyl acceptor (e.g. ca
 \cf{MgCl2} was either omitted or added at \SI{10}{\milli\molar} to assess influences of divalent cations.
 Assays were stopped as described in \ref{sec:omtassay} and analyzed accordingly.
 
+\subsubsection{Estimation of product concentration}
+\label{ref:concestimation}
+
+Product concentrations were estimated from \gls{hplc} runs. 
+The automatically integrated peaks of \gls{sam} and \gls{sah} provided the \gls{auc}.
+From the \gls{auc} of both peaks the concentrations were estimated as follows.
+
+\begin{align*}
+  \intertext{Under the assumption, that}
+  AUC^\mathrm{SAH} + AUC^\mathrm{SAM} &= 1 \sim c_0^\mathrm{SAM},x \\
+  \intertext{the fraction and concentration of one (e.g. SAH) can be estimated by}
+  x^\mathrm{SAH} &= \frac{AUC^\mathrm{SAH}}{AUC^\mathrm{SAH} + AUC^\mathrm{SAM}} \\
+  \intertext{and}
+  c^\mathrm{SAH} &= x^\mathrm{SAH} \times  c_0^\mathrm{SAM}.
+\end{align*}
+
+Enzymatic activities can be calculated from the concentrations by standard procedures.
+
 \subsection{Photospectrometric assay for the methylation of catecholic moieties} 
 \label{sec:photoassay}
 Catecholic moieties can form stable complexes in the presence of heavy metals such as copper or iron \citep{Schweigert2001,Mentasti1973}.

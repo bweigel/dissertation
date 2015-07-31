@@ -58,7 +58,7 @@
   \label{fig:x_somt_gefi}
 \end{figure}
 
-
+%% CD spectrum of SOMT
 \begin{figure}[htpb]
   \centering
   \begin{figureframe}
@@ -67,6 +67,40 @@
   \caption{CD-spectrum of refolded \somt (black) compared to the spectrum that was calculated by the K2D3 web service (\url{http://cbdm-01.zdv.uni-mainz.de/~andrade/k2d3//index.html}). Secondary structure estimates from the spectrum are \SI{12.39}{\percent} \textalpha-helix and \SI{32.51}{\percent} \textbeta-sheet.}
   \label{fig:x_somt_cd}
 \end{figure}
+
+
+%% Main effects plot PFOMT conversion of non-catechols
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \begin{subfigure}{0.73\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/tmp_MEP_pfomt}
+      \caption{Main effects plot for PFOMT conversion of non-catechols. 
+        Phenolics (A) are converted worst and conversion of \gls{3o4m} is generally best.
+        There seem to be positive effects of \cf{Mg^2+} and pH.
+        The wild-type enzyme shows better conversion than the 4'-specific variant.}
+      \label{fig:x_mep_pfomt}
+    \end{subfigure}
+    %% Interaction plot Mg/pH
+    \begin{subfigure}{0.23\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/tmp_pfomt_MgpH}
+      \caption{Interaction plot of \cf{Mg^2+} and pH for the conversion of non-catechols and catechols by \pfomt.
+        There seems to be an interaction between \cf{Mg^2+} addition and pH. However, statistical tests suggest this interaction might not be significant.\\
+        blue -- \cf{Mg^2+} addition, red -- no \cf{Mg^2+}}
+      \label{fig:x_iap_pfomt}
+    \end{subfigure}
+  \end{figureframe}
+  \caption{}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% Tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \chapter{Tables}

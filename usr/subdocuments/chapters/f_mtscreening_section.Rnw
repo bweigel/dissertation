@@ -1,18 +1,17 @@
 %%%-------------------------------------------------%%%
-%%% Sub document MT Screening %%%
+%%% Sub document MS/MS studies of flavonoids %%%
 %%%-------------------------------------------------%%%
 
-\chapter{Development of an whole cell methyl transferase screening system}
+\chapter{Structural studies of flavonoids using \glsentryfirst{msms}}
+\label{ch:MSMS}
 
 \section{Introduction}
 
-\section{Theoretical considerations / design of system}
 
-\section{Detectability of \glsentryfirst{sah}}
+\section{section 1}
+\section{section 2}
+\section{section 3}
 
-\gls{sam}
-
-\section{Usage of the lsr-promoter for true autoinduction}
   
 \section{Conclusion/Discussion}
 

@@ -209,35 +209,32 @@ Conversion of eriodictyol, homoeriodictyol and kaempferol were not reported befo
 The biotransformation of resveratrol to 3,5-dihydroxy-4'-methoxy-stilbene showed a conversion ratio of $\geq$\SI{86}{\percent} in 30 hours.
 This is roughly double the conversion which was recently reported for \invivo biotransformations using the specific resveratrol \gls{omt} sbCOM1, which only achieved \SI{42}{\percent} conversion in 36 hours \citep{Kang2014}.
 
-\begin{lstTabularx}[1]{\linewidth}{XlllX}
-  %\ostTableEnv[label=tab:naringenin]{%
- %  \begin{tabularx}{\textwidth}{clll}%
-  \caption{\textit{In vivo} biotransformation of different flavonoids, phenylpropanoids and anthraquinones by \somt in \eco} \\
+\begin{table}
+  \caption{\textit{In vivo} biotransformation of different flavonoids, phenylpropanoids and anthraquinones by \somt in \eco}
   \label{tab:invivosomt}
-  \small
-  \hfill \\
-    \toprule
+  \begin{tabularx}{\linewidth}{XlllX}
+     \toprule\small
     substrate & class & 4'-OH & conversion\footnote{Calculation of conversion percentages are only rough estimates, because of the nature of crude medium extracts.} & product\footnote{as determined by \gls{lcms}} \\
     \midrule
-    alizarin & anthraquinone & no & no & -- \\
-    purpurin & anthraquinone & no & no & -- \\
-    apigenin & flavone & yes & yes ($\geq$\SI{54}{\percent}) & 4'-\textit{O}-methyl apigenin \\  
-    chrysin & flavone & no & no & -- \\
-    genistein & isoflavone & yes & yes ($<$\SI{1}{\percent}) & Biochanin A\footnote{4'-\textit{O}-methyl genistein} \\
-    galangin & flavonol & no & no & -- \\ 
-    kaempferol & flavonol & yes & yes ($\geq$\SI{6}{\percent}) & kaempferide\footnote{4'-\textit{O}-methyl kaempferol} \\
-    naringenin & flavanone & yes & yes ($\geq$\SI{55}{\percent}) & ponciretin \\
-    eriodictyol & flavanone & yes & yes ($\geq$\SI{40}{\percent}) & hesperetin \\
-    homoeriodictyol & flavanone & yes & yes ($>$\SI{6}{\percent})& 3',4'-(\textit{O,O})-dimethyl eriodictyol\\
-    hesperetin & flavanone & no & no & -- \\
-    phloretin & chalcone & yes & no & -- \\
-    resveratrol & stilbene & yes & yes ($\geq$\SI{86}{\percent})& 4'-\textit{O}-methyl resveratrol \\
-    \textit{p}-coumaric acid & cinnamic acid & yes & no & -- \\ 
-    caffeic acid & cinnamic acid & yes & no & -- \\
-    reosmin & cinnamic acid\footnote{homo-dihydro cinnamic ketone} & yes & no & -- \\ 
+    alizarin & anthraquinone & \xmark & \xmark & -- \\
+    purpurin & anthraquinone & \xmark & \xmark & -- \\
+    apigenin & flavone & \cmark & \cmark ($\geq$\SI{54}{\percent}) & 4'-\textit{O}-methyl apigenin \\  
+    chrysin & flavone & \xmark & \xmark & -- \\
+    genistein & isoflavone & \cmark & \cmark ($<$\SI{1}{\percent}) & Biochanin A\footnote{4'-\textit{O}-methyl genistein} \\
+    galangin & flavonol & \xmark & \xmark & -- \\ 
+    kaempferol & flavonol & \cmark & \cmark ($\geq$\SI{6}{\percent}) & kaempferide\footnote{4'-\textit{O}-methyl kaempferol} \\
+    naringenin & flavanone & \cmark & \cmark ($\geq$\SI{55}{\percent}) & ponciretin \\
+    eriodictyol & flavanone & \cmark & \cmark ($\geq$\SI{40}{\percent}) & hesperetin \\
+    homoeriodictyol & flavanone & \cmark & \cmark ($>$\SI{6}{\percent})& 3',4'-(\textit{O,O})-dimethyl eriodictyol\\
+    hesperetin & flavanone & \xmark & \xmark & -- \\
+    phloretin & chalcone & \cmark & \xmark & -- \\
+    resveratrol & stilbene & \cmark & \cmark ($\geq$\SI{86}{\percent})& 4'-\textit{O}-methyl resveratrol \\
+    \textit{p}-coumaric acid & cinnamic acid & \cmark & \xmark & -- \\ 
+    caffeic acid & cinnamic acid & \cmark & \xmark & -- \\
+    reosmin & cinnamic acid\footnote{homo-dihydro cinnamic ketone} & \cmark & \xmark & -- \\ 
     \bottomrule
- % \end{tabularx}
-\end{lstTabularx}
+  \end{tabularx}
+\end{table}
 
 
 \subsection{\textit{In vitro} studies using recombinantly produced \glsentrytext{somt}}
@@ -327,13 +324,11 @@ Only the $p$-value for \gls{sah} addition (\num{0.0897}) would show significance
 %  \label{fig:refold_BF}
 %\end{figure}
 
-\begin{lstTabularx}[1]{\linewidth}{lrrrrrl}
-%
-  \caption{Results for the \aov of the main effects model describing soluble protein. Significance codes: 0.05 (\textbf{~*~}), 0.1 (\textbf{~.~})} \\
+\begin{table}[htpb]
+  \caption{Results for the \aov of the main effects model describing soluble protein. Significance codes: 0.05 (\textbf{~*~}), 0.1 (\textbf{~.~})} 
   \label{tab:aov_BF}
-  \small
-  \hfill \\
-    \toprule
+\begin{tabularx}{\linewidth}{lrrrrrl}
+    \toprule\small
     & df & Sum Sq & Mean Sq & F value & Pr($>$F) & \\ 
     \hline
     Arginine      & 1 & 3595.63 & 3595.63 & 24.56 & 0.0158 & * \\ 
@@ -346,7 +341,8 @@ Only the $p$-value for \gls{sah} addition (\num{0.0897}) would show significance
     SAH           & 1 & 896.83 & 896.83 & 6.13 & 0.0897 & .\\ 
     Residuals     & 3 & 439.26 & 146.42 &  &  & \\ 
     \bottomrule
-\end{lstTabularx}
+\end{tabularx}
+\end{table}
 
 
 Activity tests were conducted with the refolded protein samples to check for naringenin conversion.
@@ -395,13 +391,11 @@ Judging from the \aov test, the remaining factors have no significant impact on 
 \end{figure}
 
 
-\begin{lstTabularx}[1]{\linewidth}{lrrrrrl}
-%
-  \caption{Results for the \aov of the main effects model describing protein activity. Significance codes: 0.05 (\textbf{~*~}), 0.1 (\textbf{~.~})} \\
+\begin{table}[htpb]
+  \caption{Results for the \aov of the main effects model describing protein activity. Significance codes: 0.05 (\textbf{~*~}), 0.1 (\textbf{~.~})} 
   \label{tab:aov_activity}
-  \small
-  \hfill \\
-    \toprule
+  \begin{tabularx}{\linewidth}{lrrrrrl}
+    \toprule\small
     & df & Sum Sq & Mean Sq & F value & Pr($>$F) &   \\ 
     \midrule
     Arginine      & 1 & 0.03 & 0.03 & 8.14 & 0.0649 & .  \\ 
@@ -414,7 +408,8 @@ Judging from the \aov test, the remaining factors have no significant impact on 
     SAH           & 1 & 0.00 & 0.00 & 0.13 & 0.7439 &   \\ 
     Residuals     & 3 & 0.01 & 0.00 &  &  &   \\ 
     \bottomrule
-\end{lstTabularx}
+  \end{tabularx}
+\end{table}
 
 \subsubsection{Scaleup of \invitro refolding reactions}
 
@@ -658,7 +653,8 @@ Furthermore this very complex dataset is limited to only about 150 observations.
 
 Overall, methylation of \gls{3o4m} motifs was highest, with observed conversions of close to \SI{25}{\percent} for the cinnamic acid and flavanone substrates (\ifa and hesperetin).
 For these substrates the conversion increased by almost 5-fold upon \cf{Mg^2+} addition, which is close to the observed increase of the initial rate of \ifa methylation (\ref{sec:pfomtph}).
-Conversion of the somewhat more rigid flavone diosmetin was lower by at least factor two.
+Similar results have been shown for SaOMT5, an \gls{omt} from \textit{Streptomyces avermitilis} \citep{Youngdae2010}.
+Conversion of the somewhat more rigid flavone diosmetin was lower by at least factor two compared to hespreretin and \ifa.
 At low pH-values and without addition of \cf{Mg^2+} barely any conversion of the non-catecholic substrates was observed.
 The fact, that conversion of \gls{3o4m}-moiety bearing substrates is greater than that of the 4'-phenolic and \gls{4o3m} substrates could be due to the fact that the wild-type of \pfomt by and large acts upon 3'-hydroxyls.
 
@@ -725,12 +721,49 @@ For a throughout discussion refer to \autoref{ch:MSMS}.
 \end{table}
 
 
-To the authors knowledge, this is the first time that methylation of a set of non-catecholic substrates was described for a class I magnesium dependent methyl transferase. \bweigel{vielleicht n bissl zu weitausm fenster...nochma literatur wälzen}
+To the authors knowledge, this is the first time that methylation of a diverse set of non-catecholic substrates was described for a class I magnesium-dependent methyl transferase. 
+A flavonoid-specific \gls{omt} from \textit{Catharanthus roseus} was described to methylate the 4'-position, when the substrates B-ring possessed a \gls{4o3m} substitution \citep{Schroder2004}. 
+However, said enzyme only showed marginal activities towards catechols and \gls{3o4m} derivatives.
+A class II \gls{omt} from wheat, named TaOMT2, is able to sequentially methylate the three hydroxyl-groups on the B-ring of tricetin, in the proposed order 3'-methyl \textrightarrow 3',5'-dimethyl \textrightarrow 3',4',5'-trimethyl \cite{Zhou2006}.
+Methylation of dihydroxy-derivatives such as luteolin and eriodictyol by TaOMT2 only gave rise to 3'-mono-methylated products, which is similar to \pfomt.
+However, there it was also demonstrated that TaOMT2 could methylate tamarixetin, the \gls{4o3m} derivative of quercetin, albeit at low activities.
+
 Of the the two \pfomt enzymes, 4'-specific variant and wild-type, only the wild-type showed significant methylation of non-catecholic moieties. 
 These findings support the previous results, that could show a pH and magnesium-dependent rate of methylation of \ifa (\autoref{sec:pfomtph}).
 Although methylation of 3'-hydroxyl groups was preferred by the wild-type, a tendency to methylate 4'-hydroxyls, when these were the only ones present, could be demonstrated.
 
+Whereas it is clear, that the N-terminus of \pfomt is important for the function of the enzyme, the role of it \invivo is still not fully understood \citep{Kopycki2008b,Vogt2004b,Ibdah2003}.
+However, it cannot be ruled out that acts as a signal sequence that can direct the enzyme to different compartments.
+The findings presented here might give some implications as to the regulation of \glspl{omt}, such as \pfomt, since the pH can be quite different in different cell compartments in plants \cite{Martiniere2013}.
 
 \section{Conclusion/Discussion}
 
-Two classes of methyl transferases.
+Enzymatic methylation of non-catecholic moieties, was studied using
+the two methyl transferases \pfomt and \somt, of classes I and II
+respectively.  Therefore multiple different flavonoid and
+phenylproanoid substrates, displaying either single phenolic,
+catecholic, \glsentrydesc{3o4m} or \glsentrydesc{4o3m} moieties, were tested. 
+Furthermore, the influence of pH and magnesium addition on \pfomt was systematically studied.
+
+In \invivo biotransformation experiments it could be shown, that the
+class II \glsentrydesc{omt} \somt is able to methylate flavonoids and stilbenes
+at the 4'-OH of the B-ring, regardless the exact moiety (phenolic,
+catecholic, \glsentrydesc{4o3m}).  Although over all the conversions were very
+low, the conversion of the stilbene resveratrol was superior over all
+other tested substrates ($\geq$\SI{86}{\percent} vs. $\geq$\SI{55}{\percent}).
+\somt exclusively methylated the 4'-OH.
+Unfortunately. these results are purely based on \invivo bitransformations carried out in \eco.
+\somt could not be obtained in pure, soluble form for \invitro characterization.
+Nonetheless, using \somt it was shown that \glsentrydesc{doe} and \glsentrydesc{ffd} can be valuable tools for the systematic determination of factors that influence refolding of \glspl{omt}.
+
+\textit{In vitro} experiments using the class I \glsentrydesc{omt} \pfomt, showed that non-catecholic substrates could be methylated.
+These findings are contrary to the belief, that \pfomt only acted on vicinal aromatic dihydroxyls that are present in compounds such as eriodictyol or caffeic acid.
+The best conversion of non-catechols was achieved for substrates with \glsentrydesc{3o4m}-moieties (e.g. hesperetin, \ifa), even though conversion was observed for phenolic (e.g. naringenin) and \glsentrydesc{4o3m}-substrates (e.g. homoeriodictyol), thus demosntrating the ability of \pfomt to methylate both 3'- and 4'-hydroxyls.
+The best conversions were obtained using the \pfomt wild-type at elevated pH and after \cf{Mg^2+} addition.
+Magnesium addition and pH displayed synergistic effects, meaning the effects of both are not just additive.
+pH optima shifted under conditions with and without addition of \cf{Mg^2+}.
+When magnesium was omitted, it seemed as though the chemical environment surronding the enzyme was relayed into the active site.
+Thus, non-catecholic substrates were methylated at high pH without magnesium, whereas they were hardly methylated at low pH.
+
+These findings show, that the linear stepwise optimization of reaction condions might not always yield the best overall results, when it comes to such complex systems as enzymes and that synergistic effects need to be considered when looking for the best working conditions.
+

@@ -1,0 +1,52 @@
+substrate;buffer;file;method;eV;precursor;type;name;formula;MW;scan;ok;comment;low.int;rt
+1;blank;WEB346_S_1_pMS2.mzXML;CID;45;273;S;naringenin;C15H12O5;272.0685;3474;T;;F;13.83
+1;blank;WEB346_S_1_pMS2.mzXML;CID;45;287;S.Me;ponciretin;C16H14O5;286.0841;3803;T;;F;15.12
+1;blank;WEB346_S_1_pMS2.mzXML;HCD;75;284;S.Me;ponciretin;C16H14O5;286.0841;3804;T;;F;15.12
+2;blank;WEB346_S_2_pMS2.mzXML;CID;45;289;S;eriodictyol;C15H12O6;288.0634;3314;T;;F;13.21
+2;blank;WEB346_S_2_pMS2.mzXML;CID;45;303;S.Me;hesperetin;C16H14O6;302.079;3515;T;;T;14
+2;blank;WEB346_S_2_pMS2.mzXML;HCD;75;303;S.Me;hesperetin;C16H14O6;302.079;3516;T;;T;14
+3;blank;WEB346_S_3_pMS2_303,317.mzXML;CID;45;303;S;hesperetin;C16H14O6;302.079;3518;T;;F;14.01
+3;blank;WEB346_S_3_pMS2_303,317.mzXML;CID;45;317;S.Me;Dimethyl-eriodictyol;C17H16O6;316.0947;3659;T;;T;14.55
+3;blank;WEB346_S_3_pMS2_303,317.mzXML;HCD;75;317;S.Me;Dimethyl-eriodictyol;C17H16O6;316.0947;NA;F;spectrum tic below treshold;T;NA
+4;blank;WEB346_S_4_pMS2_303,317.mzXML;CID;45;303;S;homoeriodictyol;C16H14O6;302.079;3494;T;;F;13.92
+4;blank;WEB346_S_4_pMS2_303,317.mzXML;CID;45;317;S.Me;Dimethyl-eriodictyol;C17H16O6;316.0947;3659;T;;T;14.56
+4;blank;WEB346_S_4_pMS2_303,317.mzXML;CID;45;317;S.Me;unknown from homoeriodictyol standard;C17H16O6;316.0947;3823;T;A-ring and B-ring methylated, /evtl. Coeluting cmpds;T;15.21
+4;blank;WEB346_S_4_pMS2_303,317.mzXML;HCD;75;317;S.Me;Dimethyl-eriodictyol;C17H16O6;316.0947;3660;T;;T;14.56
+5;blank;WEB346_S_5_pMS2.mzXML;CID;45;271;S;apigenin;C15H10O5;270.0528;3454;T;;F;13.78
+5;blank;WEB346_S_5_pMS2.mzXML;CID;45;271;S.Me;unknown from apigenion standard;NA;NA;3778;T;no idea wahst this is;F;15.05
+5;blank;WEB346_S_5_pMS2.mzXML;CID;45;285;S.Me;unknown from apigenion standard;NA;NA;3779;T;;F;15.06
+5;blank;WEB346_S_5_pMS2.mzXML;HCD;75;285;S.Me;unknown from apigenion standard;NA;NA;3780;T;;F;15.06
+6;blank;WEB346_S_6_pMS2.mzXML;CID;45;287;S;luteolin;C15H10O6;286.0477;3314;T;;F;13.22
+6;blank;WEB346_S_6_pMS2.mzXML;CID;45;301;S.Me;Me-luteolin;C16H12O6;300.0634;3483;T;;F;13.87
+6;blank;WEB346_S_6_pMS2.mzXML;HCD;75;301;S.Me;Me-luteolin;C16H12O6;300.0634;3484;T;important for comparison;F;13.88
+7;blank;WEB346_S_7_pMS2.mzXML;CID;45;301;S;diosmetin;C15H10O6;286.0477;3486;T;;F;13.88
+7;blank;WEB346_S_7_pMS2.mzXML;CID;45;315;NA;unknown from diosmetin standard;NA;NA;4175;T;;T;16.6
+7;blank;WEB346_S_7_pMS2.mzXML;HCD;75;315;NA;unknown from diosmetin standard;NA;NA;4180;F;;T;16.62
+8;blank;WEB346_S_8_pMS2.mzXML;CID;45;301;S;chrysoeriol;C15H10O6;286.0477;3482;T;;F;13.87
+8;blank;WEB346_S_8_pMS2.mzXML;CID;45;315;NA;unknown from chrysoeriol standard;NA;NA;NA;F;;T;NA
+8;blank;WEB346_S_8_pMS2.mzXML;HCD;75;315;NA;unknown from chrysoeriol standard;NA;NA;4176;F;;T;16.62
+9;blank;WEB346_S_9_nMS2_163,177.mzXML;CID;30;163;S;P-coumaric acid;C9H8O3;164.0473;2852;T;;F;11.17
+10;blank;WEB346_S_10_nMS2_163,177.mzXML;CID;30;163;S;m-coumaric acid;C9H8O3;164.0473;3059;T;;F;11.98
+11;blank;WEB346_S_11_nMS2_163,177.mzXML;CID;30;163;S;o-coumaric acid;C9H8O3;164.0473;3194;T;;F;12.5
+12;blank;WEB346_S_12_nMS2_179,193.mzXML;CID;30;179;S;caffeic acid;C9H8O4;180.0423;1880;T;Cis-trans-isomers?;F;7.37
+12;blank;WEB346_S_12_nMS2_179,193.mzXML;CID;30;179;S;caffeic acid;C9H8O4;180.0423;2483;T;Cis-trans-isomers?;F;9.73
+13;blank;WEB346_S_13_nMS2_193,207.mzXML;CID;30;193;S;ferulic acid;C10H10O4;194.0579;2960;T;Cis-trans-isomers?;F;11.7
+13;blank;WEB346_S_13_nMS2_193,207.mzXML;CID;30;193;S;ferulic acid;C10H10O4;194.0579;3029;T;Cis-trans-isomers?;F;11.98
+14;blank;WEB346_S_14_nMS2_193,207.mzXML;CID;30;193;S;Iso-ferulic acid;C10H10O4;194.0579;3041;T;;F;12.04
+14;blank;WEB346_S_14_nMS2_193,207.mzXML;CID;30;207;S;Dimethyl-caffeic acid;C11H12O4;208.0736;3720;T;;T;14.74
+15;blank;WEB346_S_15_pMS2_287,301.mzXML;CID;45;287;S;kaempferol;C15H10O6;286.0477;3482;T;;F;13.89
+15;blank;WEB346_S_15_pMS2_287,301.mzXML;CID;45;301;NA;unknown from kaempferol standard;NA;NA;NA;F;;F;NA
+15;blank;WEB346_S_15_pMS2_287,301.mzXML;HCD;75;301;NA;unknown from kaempferol standard;NA;NA;3324;F;;T;13.26
+15;blank;WEB346_S_15_pMS2_287,301.mzXML;HCD;75;301;S.Me;unknown from kaempferol standard;C16H12O6;300.06339;3820;T;possible methylation at A-ring;T;15.22
+16;blank;WEB346_S_16_pMS2.mzXML;CID;45;303;S;quercetin;C15H10O7;302.0427;3182;T;;F;13.24
+16;blank;WEB346_S_16_pMS2.mzXML;CID;45;317;NA;unknown from quercetin standard;NA;NA;3357;T;;F;13.96
+16;blank;WEB346_S_16_pMS2.mzXML;HCD;75;317;NA;unknown from quercetin standard;NA;NA;3358;T;153 fragment → could be methylated at B or C-ring;F;13.96
+16;blank;WEB346_S_16_pMS2.mzXML;CID;45;331;NA;unknown from quercetin standard;NA;NA;4595;F;;T;19.11
+16;blank;WEB346_S_16_pMS2.mzXML;HCD;75;331;NA;unknown from quercetin standard;NA;NA;4596;F;;T;19.11
+17;blank;WEB346_S_17_pMS2.mzXML;CID;45;319;S;myricetin;C15H10O8;318.0376;2930;T;;F;12.49
+17;blank;WEB346_S_17_pMS2.mzXML;CID;45;333;NA;unknown from myricetin standard;NA;NA;2947;F;;T;12.56
+17;blank;WEB346_S_17_pMS2.mzXML;HCD;75;333;NA;unknown from myricetin standard;NA;NA;2940;F;;T;12.54
+17;blank;WEB346_S_17_pMS2.mzXML;CID;45;347;NA;unknown from myricetin standard;NA;NA;4069;F;;T;17.34
+17;blank;WEB346_S_17_pMS2.mzXML;HCD;75;347;NA;unknown from myricetin standard;NA;NA;NA;F;;T;NA
+17;blank;WEB346_S_17_pMS2.mzXML;CID;45;361;NA;unknown from myricetin standard;NA;NA;4111;F;;T;17.52
+17;blank;WEB346_S_17_pMS2.mzXML;HCD;75;361;NA;unknown from myricetin standard;NA;NA;4944;F;;T;21.07

@@ -101,6 +101,7 @@
 \newcommand{\somt}{\gls{somt}\xspace}
 \newcommand{\pfomt}{\gls{pfomt}\xspace}
 
+\newcommand{\mesem}{\textit{M.\,crystallinum}\xspace}
 \newcommand{\agro}{\textit{A.\,tumefaciens}\xspace}
 \newcommand{\nico}{\textit{N.\,benthamiana}\xspace}
 \newcommand{\odx}[1]{OD$_{#1}$\xspace}
@@ -371,3 +372,58 @@ firstinits=false%
     \CF@arrow@display@label{#3}{0.5}-\CF@arrow@start@node{}{}{}\CF@arrow@end@node
 }
 \makeatother
+
+
+%%%%%%%%%%%%%% Chaptertitles 
+\newcommand{\ospSetFont}[2]{
+  \def#1{#2} 
+} 
+
+\newcommand{\ospFontTitle}{\normalfont\sffamily\Huge\bfseries}  
+
+
+\newlength{\ospLengthOfTitleBeforeReduceFontSize} 
+\setlength{\ospLengthOfTitleBeforeReduceFontSize}{0.6\textwidth} 
+
+
+\newcommand{\ospTitle}{The open science paper title} 
+\newlength{\LenghtTitle} 
+\newcommand{\ospSetTitle}[1]{%
+  \def\ospTitle{#1} 
+  \settowidth{\LenghtTitle}{#1}   
+
+  \ifdim\LenghtTitle>\ospLengthOfTitleBeforeReduceFontSize
+    % \ospSetFontTitle{\normalfont\sffamily\LARGE\bfseries} 
+    \ospSetFont{\ospFontTitle}{\normalfont\sffamily\LARGE\bfseries}
+  \else 
+    % \ospSetFontTitle{\normalfont\sffamily\Huge\bfseries}
+    \ospSetFont{\ospFontTitle}{\normalfont\sffamily\Huge\bfseries}
+  \fi 
+} 
+
+
+\newcommand{\ospAuthors}{Author one\textsuperscript{1,2,a}, Author two\textsuperscript{2}, \ldots} 
+\newcommand{\ospSetAuthors}[1]{\def\ospAuthors{#1}}
+
+\newcommand{\ospTitleKeywordContactName}{Corresponding:} 
+\newcommand{\ospSetTitleKeywordContactName}[1]{\gdef\ospTitleKeywordContactName{#1}}  
+
+\newcommand{\ospContacts}{foo@bar.com\textsuperscript{a}} 
+\newcommand{\ospSetContacts}[1]{\def\ospContacts{#1}}
+
+\newcommand{\ospAffiliations}{University of XY departement of Z\textsuperscript{1}, \ldots} 
+\newcommand{\ospSetAffiliations}[1]{\def\ospAffiliations{#1}}
+
+\newcommand{\ospKeywords}{Open Science, Git, R, Knitr, ggplot2, tikz}
+\newcommand{\ospSetKeywords}[1]{\def\ospKeywords{#1}}
+
+\newcommand{\ospTitleRule}{\textcolor{black}{\noindent\rule{\linewidth}{1.7pt}}}
+
+\newcommand{\ospTitleLogo}{\includegraphics[width=\textwidth]{usr/graphics/static/logo}} 
+\newcommand{\ospSetTitleLogo}[1]{\gdef\ospTitleLogo{#1}} 
+
+\newcommand{\ospTitleKeywordAffiliationName}{Affiliation:} 
+\newcommand{\ospSetTitleKeywordAffiliationName}[1]{\gdef\ospTitleKeywordAffiliationName{#1}} 
+
+\newcommand{\ospTitleKeywordName}{Keywords:} 
+\newcommand{\ospSetTitleKeywordName}[1]{\gdef\ospTitleKeywordName{#1}}  

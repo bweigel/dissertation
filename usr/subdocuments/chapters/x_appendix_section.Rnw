@@ -6,6 +6,20 @@
 
 \chapter{Figures}
 
+\section{Chapter 3}
+
+\framedfigure[label = fig:d_lit_sam]{%
+<<litSAM, echo=F, tidy=TRUE, fig.height=5, fig.width=5, out.width='0.7\\textwidth', dev='pdf', error=T>>=
+@ 
+}{%
+    Graphical representation of the work that has been done on \glspl{mt} in combination with \gls{sam} analogues.
+    The grey areas represent individual groups of \gls{sam} analogues (aliphatic, allylic, propargylic, aromatic, \gls{seam} analogues, nitrogen analogues and miscelaneous others). 
+    The height of the grey areas represents the number of times a member of the corresponding group has been described as tested in the \gls{mt} literature.
+    The height of the colored bars represents the times that individual substrate has been tested. The colors represent the different types of \gls{mt} (red -- \gls{dmt}, green -- \gls{pmt}, lilac -- small molecule \gls{mt}, blue -- \gls{rna} \gls{mt}).
+    The black dash across the bar shows the number of times this substrate was actually converted by either enzyme.%    
+    }
+
+
 \begin{figure}[htpb]
   \centering
   \begin{figureframe}
@@ -19,6 +33,8 @@
   The blue bar shows the region that was annotated as "insertion loop" in previous studies.}
   \label{fig:app_struc.compare}
 \end{figure}  
+
+\section{Chapter 4}
 
 \begin{figure}[htpb]
   \centering

@@ -4,6 +4,50 @@
 
 \chapter{Enzymatic methylation of Non-catechols}
 
+  
+\ospSetTitle{Enzymatic methylation of non-catecholic aromatic hydroxyls using class I and class II methyl transferases}
+\ospSetAuthors{\underline{Benjamin Weigel}\textsuperscript{1,a}, %
+  Martin Dippe, %
+  Annegret Laub\textsuperscript{1,b}, %
+  Ludger A. Wessjohann\textsuperscript{1,c}}
+\ospSetContacts{bweigel@ipb-halle.de\textsuperscript{a}, %
+  alaub@ipb-halle.de\textsuperscript{b}, %
+  law@ipb-halle.de\textsuperscript{c}}
+\ospSetAffiliations{Leibniz-Institute of Plant Biochemistry, Department of Bioorganic Chemistry\textsuperscript{1}}
+\ospSetKeywords{methyl transferase, SAM, biocatalysis}
+
+{
+\ospTitleRule\par\vspace{0pt}%
+         \begin{tabularx}{\textwidth}{p{0.2\textwidth}X}
+            \begin{minipage}{\linewidth}
+ \ospTitleLogo
+            \end{minipage}&	
+            \begin{minipage}{\linewidth} 
+               \vspace{\baselineskip}
+                  {\color{black}{{\ospFontTitle\ospTitle}}}\par
+                  {\begin{normalsize}\textbf{\ospAuthors}\end{normalsize}\par}
+                  {\begin{normalsize}\textbf{\ospTitleKeywordContactName} \ospContacts\end{normalsize}\par}
+                  {\begin{normalsize}\textbf{\ospTitleKeywordAffiliationName} \ospAffiliations\end{normalsize}\par}
+                  {\begin{normalsize}\textbf{\ospTitleKeywordName} \ospKeywords\end{normalsize}\par}
+            \end{minipage}
+         \end{tabularx}
+\par\vspace{5pt}
+
+\textbf{Abstract}
+
+\Gls{pfomt} and \somt are \gls{sam}-dependent \glspl{mt}, belonging to classes I  (23--27\,kDa, cation-dependent) 
+and II (38--43\,kDa, cation-independent) 
+respectively.
+Methylation of non-catecholic aromatic hydroxyls (phenolic, \gls{3o4m}, \gls{4o3m}) examplified by different compound classes was achieved by both enzymes, although this has never been described for \pfomt.
+Active \somt could not be obtained for \invitro experiments, although soluble enyzme was obtained by optimizing refolding conditions using \gls{ffd} and \gls{doe}.
+The activity of \pfomt towards non-catechols is increased at high pH.
+%\Gls{FrFD} and \gls{doe} can be used to efficiently optimize \invitro refolding conditions.
+Adjusting the pH to more basic conditions can also partly remedy the negative effect of missing \cf{Mg^2+} for class I enzyme \pfomt.
+
+
+\noindent\ospTitleRule
+}
+
 \section{Introduction}
 Non-catechols in nature (biosynthesis, mode of action?), chemical methylation???
 
@@ -78,14 +122,14 @@ This finding suggest, that neither naringenin, nor any resulting flavonoids (pon
 Although unlikely, it cannot be exluded that higher amounts of the compounds of interest were present at some point in the tissue.
 Numerous more experiments were required to address the issue of non-detection, which however was outside the scope of this work.
 
-
-\begin{lstTabularx}[1]{\linewidth}{clll}
+\begin{table}[htpb]\centering
   %\ostTableEnv[label=tab:naringenin]{%
  %  \begin{tabularx}{\textwidth}{clll}%
-  \caption{Naringenin and 4'-methylated derivatives.} \\
+  \caption{Naringenin and 4'-methylated derivatives.} 
   \label{tab:naringenin}
-  \hfill \\
-    \toprule
+  \begin{tabular}{clll}
+%  \hfill \\
+    \toprule\small
     \multirow{4}{*}{%
       \includegraphics{usr/graphics/static/naringenin}%
     }%
@@ -96,8 +140,8 @@ Numerous more experiments were required to address the issue of non-detection, w
     & \cf{CH3} & rutinose \footnote{\textalpha -\textsc{l}-rhamnopyrasonyl-(1\ra6)-\textbeta -\textsc{d}-glucopyranose} & poncirin \\
     & \cf{CH3} & neohesperidose \footnote{\textalpha -\textsc{l}-rhamnopyrasonyl-(1\ra2)-\textbeta -\textsc{d}-glucopyranose} & didymine \\
     \bottomrule
- % \end{tabularx}
-\end{lstTabularx}
+  \end{tabular}
+\end{table}
 %}{%
 %Naringenin derivatives.
 %}
@@ -324,10 +368,10 @@ Only the $p$-value for \gls{sah} addition (\num{0.0897}) would show significance
 %  \label{fig:refold_BF}
 %\end{figure}
 
-\begin{table}[htpb]
+\begin{table}[htpb]\centering
   \caption{Results for the \aov of the main effects model describing soluble protein. Significance codes: 0.05 (\textbf{~*~}), 0.1 (\textbf{~.~})} 
   \label{tab:aov_BF}
-\begin{tabularx}{\linewidth}{lrrrrrl}
+\begin{tabular}{lrrrrrl}
     \toprule\small
     & df & Sum Sq & Mean Sq & F value & Pr($>$F) & \\ 
     \hline
@@ -341,7 +385,7 @@ Only the $p$-value for \gls{sah} addition (\num{0.0897}) would show significance
     SAH           & 1 & 896.83 & 896.83 & 6.13 & 0.0897 & .\\ 
     Residuals     & 3 & 439.26 & 146.42 &  &  & \\ 
     \bottomrule
-\end{tabularx}
+\end{tabular}
 \end{table}
 
 
@@ -391,10 +435,10 @@ Judging from the \aov test, the remaining factors have no significant impact on 
 \end{figure}
 
 
-\begin{table}[htpb]
+\begin{table}[htpb]\centering
   \caption{Results for the \aov of the main effects model describing protein activity. Significance codes: 0.05 (\textbf{~*~}), 0.1 (\textbf{~.~})} 
   \label{tab:aov_activity}
-  \begin{tabularx}{\linewidth}{lrrrrrl}
+  \begin{tabular}{lrrrrrl}
     \toprule\small
     & df & Sum Sq & Mean Sq & F value & Pr($>$F) &   \\ 
     \midrule
@@ -408,7 +452,7 @@ Judging from the \aov test, the remaining factors have no significant impact on 
     SAH           & 1 & 0.00 & 0.00 & 0.13 & 0.7439 &   \\ 
     Residuals     & 3 & 0.01 & 0.00 &  &  &   \\ 
     \bottomrule
-  \end{tabularx}
+  \end{tabular}
 \end{table}
 
 \subsubsection{Scaleup of \invitro refolding reactions}
@@ -444,11 +488,11 @@ However, different enzymes are able to regioselectivly methylate the 3- or the 4
 Enzyme's active sites create a ``microclimate'', which can selectively raise or lower the effective \pka of functional groups and allows for the efficient manipulation of the macroscopically observed regioselectivity.
 
 
-\begin{table}
+\begin{table}[htpb]\centering
     \caption{\pka-values of phenolic hydroxyl groups examplified by \textit{p}-cresole derivatives. Substituent positions on the aromatic ring are arbitrary and do not reflect conventions of the \glsentryfirst{iupac}.} 
   \label{tab:pkaphenols}
   \centering\small
-  \begin{tabularx}{\linewidth}{cllll}
+  \begin{tabular}{cllll}
     \toprule
     \multirow{5}{*}{%
       \includegraphics{usr/graphics/static/phenols}%
@@ -460,7 +504,7 @@ Enzyme's active sites create a ``microclimate'', which can selectively raise or 
     & OH & O-Me & 10.34 & -- \\
     & O-Me & OH & -- & 10.08 \\
     \bottomrule
-  \end{tabularx}
+  \end{tabular}
 \end{table}
 
 Previous studies have established that \pfomt is a 3'-\textit{O}-methyl transferase, which is not able to methylate substrates that bear either phenolic (e.g. naringenin), (3'-hydroxy-4-methoxy)- (e.g. hesperetin) or (4'-hydroxy-3-methoxy)-moieties (e.g. homo-eriodictyol) \citep{Ibdah2003}.
@@ -499,11 +543,11 @@ This was not true for \ifa, which was hardly converted at all without the additi
   \label{fig:e_pHprofile}
 \end{figure}
 
-\begin{table}[htpb]
+\begin{table}[htpb]\centering
   \caption{Maximum specific activity for the conversion of three different substrates with and without addition of magnesium. The pH at which the maximal activity was reached is indicated.}
   \label{tab:specific.activity}
   \centering\small
-  \begin{tabularx}{\textwidth}{llrrr}
+  \begin{tabular}{llrrr}
     \toprule
      substrate & \cf{Mg^2+} & pH & $A_\mathrm{sp} \big[\frac{\mathrm{U}}{\mathrm{mg}}\big]$ & $A_\mathrm{sp} \big[\frac{\mathrm{pkat}}{\mathrm{mg}}\big]$ \\ 
     \midrule
@@ -514,7 +558,7 @@ This was not true for \ifa, which was hardly converted at all without the additi
      \ifa & FALSE & 9.45 & 0.4 & 7 \\ 
      \ifa & TRUE & 9.45 & 1.2 & 21 \\ 
     \bottomrule
-  \end{tabularx}
+  \end{tabular}
 \end{table}
 
 
@@ -548,11 +592,11 @@ Nonetheless, all of these rather simple models can not reflect the reality of su
 The shown results are solely included for purposes of making statistics based inferences in the context of domain knowledge.
 
 
-\begin{table}[htpb]
+\begin{table}[htpb]\centering
   \caption{Coefficients of the model (\ref{eq:ifa}) for activity of \ifa methylation. The factor $\factor{Mg}$ is a categorical variable (addition/no addition) and can therefore only be 0 or 1.}
   \label{tab:lm-ifa}
   \centering\small
-   \begin{tabularx}{\textwidth}{lrrrrr}
+   \begin{tabular}{lrrrrr}
     \toprule\small
     & Estimate & Std. Error & t value & p-value &   \\ 
     \midrule
@@ -561,7 +605,7 @@ The shown results are solely included for purposes of making statistics based in
     \factorx{Mg} & -2201.3084 & 594.1797 & -3.70 & 0.0100 & *  \\ 
  \factorx{pH}$\times$\factorx{Mg} & 373.8131 & 77.7503 & 4.81 & 0.0030 &  ** \\ 
     \bottomrule
-  \end{tabularx}
+  \end{tabular}
 \end{table}
 
 \begin{figure}[htpb]

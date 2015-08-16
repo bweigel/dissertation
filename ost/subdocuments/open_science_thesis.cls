@@ -2024,7 +2024,7 @@
     {\color{ostColorChapterHeaderNumber}\ostSizeChapterHeaderNumber\ostFontChapterHeaderNumber\thechapter}
     {0.5em}
     {\relax}
-    [\ifost@chapterwithtoc\vspace*{3pc}{\color{ostColorPartialToc}\ostSizeChapterPartialToc\ostFontChapterPartialToc \begin{ostPartialToc}\startcontents\printcontents{c-}{1}{}\end{ostPartialToc}}\fi \thispagestyle{pageStyleChapter}]
+    [\ifost@chapterwithtoc\vspace*{3pc}{\color{ostColorPartialToc}\ostSizeChapterPartialToc\ostFontChapterPartialToc \begin{ostPartialToc}\startcontents\printcontents{c-}{1}{}\end{ostPartialToc}}\fi \thispagestyle{pageStyleChapter}\glsresetall]
 
     \titlespacing*{\chapter}{0pt}{50pt}{40pt}
   \else%
@@ -2033,7 +2033,7 @@
     {\color{ostColorChapterHeaderNumber}\ostSizeChapterHeaderNumber\ostFontChapterHeaderNumber\thechapter}
     {0.5em}
     {\relax}
-    [\thispagestyle{pageStyleChapter}]
+    [\thispagestyle{pageStyleChapter}\glsresetall\newpage]
     \titlespacing*{\chapter}{0pt}{50pt}{40pt}
   \fi%
 
@@ -2078,7 +2078,7 @@
     {\color{ostColorChapterHeaderNumber}}
     {0em}
     {}
-    [\ifost@chapterwithtoc\vspace*{3pc}{\color{ostColorPartialToc}\ostSizeChapterPartialToc\ostFontChapterPartialToc \begin{ostPartialToc}\startcontents\printcontents{p-}{1}{}\end{ostPartialToc}} \fi \thispagestyle{pageStyleChapter}]
+    [\ifost@chapterwithtoc\vspace*{3pc}{\color{ostColorPartialToc}\ostSizeChapterPartialToc\ostFontChapterPartialToc \begin{ostPartialToc}\startcontents\printcontents{p-}{1}{}\end{ostPartialToc}} \fi \thispagestyle{pageStyleChapter}\glsresetall]
     \titlespacing*{\chapter}{0pt}{50pt}{40pt}
   \else%
     \titleformat{\chapter}
@@ -2086,7 +2086,7 @@
     {}
     {0em}
     {}
-    [\thispagestyle{pageStyleChapter}]
+    [\thispagestyle{pageStyleChapter}\glsresetall]
     \titlespacing*{\chapter}{0pt}{50pt}{40pt}
   \fi%
 

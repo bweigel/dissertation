@@ -13,22 +13,7 @@
 \ospSetAffiliations{Leibniz-Institute of Plant Biochemistry, Department of Bioorganic Chemistry\textsuperscript{1}}
 \ospSetKeywords{methyl transferase, pfomt, SAM}
 
-{
-\ospTitleRule\par\vspace{5pt}%
-         \begin{tabularx}{\textwidth}{p{0.2\textwidth}X}
-            \begin{minipage}{\linewidth}
- \ospTitleLogo
-            \end{minipage}&	
-            \begin{minipage}{\linewidth} 
-               \vspace{\baselineskip}
-                  {\color{black}{{\ospFontTitle\ospTitle}}}\par
-                  {\begin{normalsize}\textbf{\ospAuthors}\end{normalsize}\par}
-                  {\begin{normalsize}\textbf{\ospTitleKeywordContactName} \ospContacts\end{normalsize}\par}
-                  {\begin{normalsize}\textbf{\ospTitleKeywordAffiliationName} \ospAffiliations\end{normalsize}\par}
-                  {\begin{normalsize}\textbf{\ospTitleKeywordName} \ospKeywords\end{normalsize}\par}
-            \end{minipage}
-         \end{tabularx}
-\par\vspace{5pt}
+\WEBmakeTitle{%
 
 \textbf{Abstract}
 
@@ -36,8 +21,6 @@ The cation dependent \pfomt from the ice plant, \textit{Mesembryanthemum crystal
 A newly solved crystal structure of the protein without any bound ligand shows the fully resolved N-terminus, which acts as a lid to close off the active site.
 Binding of co-substrates (analogues) (e.g. \gls{sah}, \gls{sam}, \gls{sae}) is more entropically driven as the chain length increases.
 However, even though the ethyl-analogue of \gls{sam} -- \gls{sae} -- was shown to bind to the enzyme, no conversion of the model substrate caffeic acid was observed for the wild-type and several engineered variants.
-
-\noindent\ospTitleRule
 }
 
 \section{Introduction}
@@ -101,20 +84,25 @@ Although semi-rationally designed enzyme variants could not afford enzymatic eth
 
 
 \section{Crystallization of \glsentrytext{pfomt}}
-The binding of the non-natural substrate \gls{sae} to \gls{pfomt} could be shown.
-However, a transethylation reactivity was not observed.
-The question was to the chemical reasons behind these observations.
-Previous work on the crystal structure of \gls{pfomt} had been done, but only \gls{sah} could be co-crystallized \citep{Kopycki2008b}.
-But since the crystallizability of \gls{pfomt} had already been shown, this method was chosen to answer the aforementioned question.
 
-At first the already crystallization procedures were evaluated to start with \citep{Kopycki2008b}. 
-Albeit, reproduction of the results could not be accomplished and new crystallization conditions had to be found.
-This was done using commercially crystallization screening kits and a semi-automated pipetting robot along with an automated imaging system for the observation of the crystallization plates.
+The crystal structure of \pfomt was published in 2008, however binding of substrates could not be accomplished \citep{Kopycki2008b}.
+Nonetheless, the demethylated co-substrate \gls{sah} was cocrystallized.
+The first goal of this study was to crystallize the \textit{apo}-form of the enzyme, to obtain a system that allows for the soaking of substrates.
+At the same time, \pfomt was to be cocrystallized along with an acceptor substrate and the co-substrate analogs \gls{sae} and \gls{sah}.
 
-Each buffer solution was screened in combination with three different protein solutions (\textit{A} -- 0.25\,mM \gls{sah}, 0.25\,mM \cf{MgCl2}, 0.25\,mM ferulic acid, 0.262\,mM \gls{pfomt}; \textit{B} -- 0.25\,mM \gls{sae}, 0.25\,mM \cf{MgCl2}, 0.25\,mM eriodictyol, 0.262\,mM \gls{pfomt} and \textit{C} -- 0.25\,mM \gls{sah}, 0.25\,mM \cf{MgCl2}, 0.25\,mM ferulic acid, 0.219\,mM \gls{pfomt} Y51R N202W) to obtain protein crystals co-crystallized with the substrates. \\
-During the preparation of the protein solutions it was noted, that upon addition of the flavonoids or phenyl propanoids from \gls{dmso} stocks these tended to precipitate.
-Thechniques meant to circumvent this problem are discussed in \autoref{sec:des}. 
-Crystals began to appear in various wells after a few days and were observed for each tested protein solution at least once.
+%% The binding of the non-natural substrate \gls{sae} to \gls{pfomt} could be shown.
+%% However, a transethylation reactivity was not observed.
+%% The question was to the chemical reasons behind these observations.
+%% Previous work on the crystal structure of \gls{pfomt} had been done, but only \gls{sah} could be co-crystallized \citep{Kopycki2008b}.
+%% But since the crystallizability of \gls{pfomt} had already been shown, this method was chosen to answer the aforementioned question.
+
+At first the already available crystallization procedures were evaluated \citep{Kopycki2008b}. 
+However, reproduction of these results could not be accomplished and new crystallization conditions had to be found.
+%This was done using commercially crystallization screening kits and a semi-automated pipetting robot along with an automated imaging system for the observation of the crystallization plates.
+
+Several commercially available buffer solutions (see \autoref{sec:xraymethods}) were screened in combination with different protein solutions (e.g. solutions containing co-substrates and acceptor substrates or not) to obtain protein crystals co-crystallized with substrates or of the \textit{apo}-form.
+%During the preparation of the protein solutions it was noted, that upon addition of the flavonoids or phenyl propanoids from \gls{dmso} stocks these tended to precipitate.
+Crystals were obtained in various wells after a few days.
 The crystal shape varied from very smooth and almost cubic (high ammonium sulfate) over sphreulites and intergrown crystals (\cf{CaCl2}, PEG-4000) to brittle and ragged needles (\cf{LiCl}, PEG-6000)  (\autoref{fig:d_xtals}).
 
 \framedfigure[label = fig:d_xtals]{%
@@ -143,23 +131,24 @@ The crystal shape varied from very smooth and almost cubic (high ammonium sulfat
   a -- high \cf{(NH4)2SO4}, b-c -- \cf{CaCl2}, PEG-4000, e -- \cf{LiCl}, PEG-6000
 }
 
-Crystals that were large enough ($\geq$ \SI{50}{\micro\metre} \bweigel{wie groß?}), where screened for diffraction right away.
+Crystals that were large enough ($\geq$ \SI{50}{\micro\metre} \bweigel{wie groß?}), where screened for diffraction at the home-source after cryoprotection.
 A rough estimate of the resolution, cell parameters and the space group was aquired, if the diffraction images could be indexed.
-The screened crystals all had similar cell parameters and belonged to the same space group, $P2_12_12_1$.
-However, the unit cell of crystals that grew out of high ammonium sulfate concentrations ($\geq$\SI{1.8}{\molar}) was approximately four times as large as that of the published structure 3C3Y and crystrals that developed under different crystallization conditions.
+The screened crystals all had similar cell parameters and belonged to the same space group, $P2_12_12_1$, as the previously published structure (pdb: 3C3Y)\citep{Kopycki2008b}.
+However, the unit cell of crystals that grew out of high ammonium sulfate concentrations ($\geq$\SI{1.8}{\molar}) was approximately four times as large as that of the published structure. % and crystrals that developed under different crystallization conditions.
 %Consequently the assymetric unit consisted of 4, instead of 2 \gls{pfomt} monomers.
-Several datasets were collected of crystals from high \cf{(NH4)2SO4}, since these possessed different cell parameters than the previously reported structure and therefore seemed to be promising candidates for bound substrates.
+Several datasets were collected of crystals from high \cf{(NH4)2SO4}, since these seemed to be promising candidates to find differences in the bound substrates.
+Datasets of crystals that grew from other conditions were insufficient for structure solution.
 
 
 \subsubsection{The crystal structure of \textit{apo}-PFOMT}
 
-Most of the collected datasets were partly solved.
-As it turned out however the substrates were not co-crystallized.
-Rather, the \emph{apo}-form of \gls{pfomt} had been crystallized.
-Thus, one dataset was solved to completion to obtain a novel \gls{pfomt} structure with no substrate bound and a resolution of \SI{1.95}{\angstrom} (\autoref{tab:xtalstat}).
+%Most of the collected datasets were partly solved.
+%As it turned out however the substrates were not co-crystallized.
+\Gls{pfomt} crystallized without any bound substrates under conditions of high \cf{(NH4)2SO4}.
+One dataset was solved to completion to obtain a complete structure of this novel \textit{apo}-\gls{pfomt} at a resolution of \SI{1.95}{\angstrom} (\autoref{tab:xtalstat}).
 The assymetric unit of \emph{apo}-\Gls{pfomt} contained two homodimers (4 monomers) (\autoref{fig:d_struct_a}), rather than just one homodimer (3C3Y).
-The active site of each monomer was found to be empty except for a sole sulfate ion, which was positioned where the amino- and carboxylate groups of the \gls{sah} reside in the 3C3Y structure (\autoref{fig:d_struct_b}).
-Shifts in the structure of some loops were observed and contrary to the previously published structure the entire N-terminus was resolved up to the His-tag.
+The active site of each monomer was found to be empty except for a sole sulfate ion, which was positioned where the amino- and carboxylate groups of the \gls{sah} residue in the 3C3Y structure (\autoref{fig:d_struct_b}).
+Shifts in the structure of some loops were observed and contrary to the previously published structure the entire N-terminus was resolved up to and including the His-tag.
 
 The resolved N-terminus contained another N-terminal \textalpha-helix, which was positioned in a cleft on the surface, where substrates may be bound \citep{Kopycki2008b}.
 This interaction extends up to the His-tag.
@@ -171,21 +160,21 @@ However, all of the regions that moved are located at or near the active site.
 \framedfigure[label = fig:d_struct]{%
   \begin{subfigure}{\textwidth}\centering
     \includegraphics[scale=0.225, trim=0 0 0 0, clip]{usr/graphics/static/tetramer.png}
-    \caption{The assymetric unit of \textit{apo}-\gls{pfomt} consists of two homodimers (4 monomers). Individual monomers are rainbow colored from N- (blue) to C-terminus (red).}
+    \caption{}
     \label{fig:d_struct_a}
   \end{subfigure}
   
   \begin{subfigure}{\textwidth}\centering
     \includegraphics[scale=0.175, trim=0 0 0 0, clip]{usr/graphics/static/pfomt_monomer.png}
-    \caption{Comparison of 3C3Y (steelblue) and \emph{apo}-\gls{pfomt} (green). The N-terminus of \textit{apo}-\gls{pfomt} was resolved up to the N-terminus (red) and even the His-tag (red, transparent) was partly resolved.
-      The N-terminus fits into a cleft on the surface of the 3C3Y structure, shown as a surface model on the right.
-      \gls{sah} (white ball-and-sticks) and \cf{Ca^2+} (green sphere) are featured in the published structure, whereas a sulphate ion (red/yellow spheres) was bound in the newly solved structure.
-    }
+    \caption{}
     \label{fig:d_struct_b}
   \end{subfigure}
     
 }{%
-An overview of the features in the \emph{apo}-\gls{pfomt} structure.
+An overview of the features in the \emph{apo}-\gls{pfomt} structure. \textbf{\subref{fig:d_struct_a}} -- The assymetric unit of \textit{apo}-\gls{pfomt} consists of two homodimers (4 monomers). Individual monomers are rainbow colored from N- (blue) to C-terminus (red). %
+ \textbf{\subref{fig:d_struct_b}} -- Comparison of 3C3Y (steelblue) and \textit{apo}-\gls{pfomt} (green). The N-terminus of \textit{apo}-\gls{pfomt} was resolved up to the N-terminus (red) and even the His-tag (red, transparent) was partly resolved.
+      The N-terminus fits into a cleft on the surface of the 3C3Y structure, shown as a surface model on the right.
+      \gls{sah} (white ball-and-sticks) and \cf{Ca^2+} (green sphere) are featured in the published structure, whereas a sulphate ion (red/yellow spheres) was bound in the newly solved structure.
 }
 
 \begin{figure}[htpb]
@@ -203,44 +192,45 @@ An overview of the features in the \emph{apo}-\gls{pfomt} structure.
   \label{fig:d_struc.compare}
 \end{figure}
 
-
+Unfortunately soaking of these ``\textit{apo}''-crystals did not afford binding of substrates.
+\clearpage
 \section{Substrate binding studies using \glsentrytext{itc}}
 
-The binding of different substrates by \gls{pfomt} was examined by \gls{itc}.
-\gls{sah}, \gls{sam} and \gls{sae} were selected to study the influence of the alkyl chain length on binding (\autoref{fig:itc_substances}).
+The binding of different substrates to \gls{pfomt} was examined by \gls{itc}, to determine whether the enzyme can bind non-natural \gls{sam} analogues.
+The homologues \gls{sah}, \gls{sam} and \gls{sae} were selected to also study the influence of the alkyl chain length on binding (\autoref{fig:d_itc_substances}).
 Furthermore the binding of the substrate caffeic acid and the influence of \cf{Mg^2+} addition on substrate binding was investigated.
 
 \framedfigure[label = fig:d_itc_substances]{%
 \includegraphics{usr/graphics/static/itc-sam}
 }{%
-   The binding of different \gls{sam} analogues was measured via \gls{itc}, but also calculated using molecular modelling techniques.%    
+   The binding of different \gls{sam} analogues was measured via \gls{itc}.%, but also calculated using molecular modelling techniques.%    
     }
 
 The $K_D$ values of \gls{sah}, \gls{sam} and \gls{sae} were all in the low micromolar range, around \SI{2}{\micro\molar}.
 However, the binding enthalpy clearly decreased with the length of the aliphatic chain connected to the sulfur atom (\autoref{fig:itc.a}).
-The binding of \gls{sah}, gave off more heat than the binding of \gls{sam}, which in turn gave off more heat than the binding of \gls{sae}.
-Thus, the entropic influence must get larger with increasing chain length in order for (\ref{eq:gibbs1}) and (\ref{eq:gibbs2}) to still hold true.
-Indeed, the value for $\Delta S$ was negative for binding of \gls{sah} and got positive for the binding of \gls{sam} and \gls{sae} (\autoref{tab:ditc}). 
-This relationship between the change of entropy and the change of enthalpy has been found for many biological systems and is also called \gls{eec} \citep{Searle1995,Gilli1994,Dunitz1995}.
-The stoichiometry for the binding process is given by the parameter $N$ (\autoref{tab:ditc}).
-For all the ligands \gls{sah}, \gls{sam} and \gls{sae} this value was found to be about 0.5, which corresponds to one bound molecule ligand per dimer of \pfomt.
-
-Upon titration of caffeic acid to \pfomt small amounts of heat were given off by the system (\autoref{fig:itc.c}). 
-When the enzyme was incubated with \gls{sah} prior to addition of caffeic acid this heat increased slightly. The slope of the \gls{itc} profile also got steeper.
-However, the data obtained could not be fitted to afford a sensible solution.
-When caffeic acid and \cf{Mg^2+} were incubated with \pfomt prior to addition of \gls{sah}, the process of heat production as observed by \gls{itc} also had a steeper slope. 
-Nonetheless, the thermodynamic parameters did not differ significantly.
-On its own \cf{Mg^2+}, in the form of an \cf{MgCl2} solution, titrated to the enzyme solution did not cause signals during the \gls{itc} experiments.
-
-
+The binding of \gls{sah}, gave off more heat than the binding of \gls{sam}, which in turn gave off more heat than the binding of \gls{sae} (\autoref{tab:ditc}).
+Thus, the entropic influence must get larger with increasing chain length in order for equations \eqref{eq:gibbs1} and \eqref{eq:gibbs2} to still hold true.
 
 \begin{equation} \label{eq:gibbs1}
-  \Delta G = \Delta H - T \Delta S \\
+  \Delta G = \Delta H - T \Delta S 
 \end{equation}
 
 \begin{equation} \label{eq:gibbs2}
   \Delta G = \Delta G^0 - RT~\mathrm{ln}\,K 
 \end{equation}
+
+Indeed, the value for $\Delta S$ was negative for binding of \gls{sah}, but positive for the binding of \gls{sam} and \gls{sae} (\autoref{tab:ditc}). 
+This relationship between the change of entropy and the change of enthalpy has been found for many biological systems and is called \gls{eec} \citep{Searle1995,Gilli1994,Dunitz1995}.
+The stoichiometry for the binding process is given by the parameter $N$.
+For all the ligands \gls{sah}, \gls{sam} and \gls{sae} this value was found to be about 0.5, which corresponds to one bound molecule ligand per dimer of \pfomt (\autoref{tab:ditc}).
+
+Upon titration of caffeic acid to \pfomt small amounts of released heat were detected for the system (\autoref{fig:itc.c}). 
+When the enzyme was incubated with \gls{sah} prior to addition of caffeic acid the released heat was slightly increased.
+The slope of the \gls{itc} profile also got steeper.
+However, the data obtained could not be fitted to afford a sensible solution.
+When caffeic acid and \cf{Mg^2+} were incubated with \pfomt prior to addition of \gls{sah}, the process of heat production as observed by \gls{itc} had a steeper slope (\autoref{fig:itc.b}). 
+Nonetheless, the thermodynamic parameters did not differ significantly.
+\cf{Mg^2+}, in the form of an \cf{MgCl2} solution, titrated to the enzyme solution did not cause signals during the \gls{itc} experiments.
 
 
 
@@ -268,10 +258,10 @@ On its own \cf{Mg^2+}, in the form of an \cf{MgCl2} solution, titrated to the en
       \end{subfigure}
     \end{subfigure}
   \end{figureframe}
-    \caption{Examplary ITC measurements. \textbf{a} -- Binding of \gls{sah}, \gls{sam} and \gls{sae} to \gls{pfomt}. 
-      \textbf{b} -- SAH is injected into a \gls{pfomt} solution, with (red) or without (black) addition of \cf{Mg^2+} and caffeic acid. 
+    \caption{ITC measurements of \pfomt:effector binding. \textbf{\subref{fig:itc.a}} -- Binding of \gls{sah}, \gls{sam} and \gls{sae} to \gls{pfomt}. 
+      \textbf{\subref{fig:itc.b}} -- SAH is injected into a \gls{pfomt} solution, with (red) or without (black) addition of \cf{Mg^2+} and caffeic acid. 
           When \cf{Mg^2+} and caffeic acid were already present, the binding process seems to happen quicker, but is less enthalpic.
-          \textbf{c} -- Upon addition of caffeic acid to the protein heat is produced, however no sensible binding curve could be obtained.}
+          \textbf{\subref{fig:itc.c}} -- Upon addition of caffeic acid to the protein heat is produced, however no sensible binding curve could be obtained.}
   \label{fig:d_itc.sah}
 \end{figure}
 
@@ -294,41 +284,54 @@ On its own \cf{Mg^2+}, in the form of an \cf{MgCl2} solution, titrated to the en
 
 \section{Study of variants for long-chain alkylations}
 
-The work described in this section was done in cooperation with Dr. Martin Dippe. Dr. Dippe did most of the work on the \gls{pfomt} variants described herein. \\
-
-Since the ability to bind the enlongated analogue \gls{sae} was present in wildtype \gls{pfomt}, the activity of the \gls{pfomt} protein was tested.
+Since the ability to bind the enlongated analogue \gls{sae} was present in wild-type \gls{pfomt}, the activity of the \gls{pfomt} protein towards \gls{sae} was tested.
 Activity tests were performed with caffeic acid as substrate under standard reaction conditions.
-The wildtype of \gls{pfomt} was able to use \gls{sae} as a co-substrate for the ethylation of caffeic acid, albeit the amount of detected product was very minute. \bweigel{literaturvergleich der umsäzte?}
-The site of ethylation was determined by \gls{lcms} measurements. \bweigel{LCMS messungen?}
-It was found that ethylation occurs on the catecholic group, however it could not be determined whether at the 3- or 4-position.
-Nonetheless it is highly likely that ethylation occurs at the same position as methylation and thus the product was annotated as 3-ethoxy-4-hydroxy cinnamic acid. \\
-Enzyme variants were prepared to further test the ethylation reactivity of \gls{pfomt}, since a number of groups were able to accomplish transalkylation with larger substrates by expanding the available space in the active site \citep{Wang2011}.
+Unfortunately no ethylation of the substrate by \pfomt was observed, even after extended incubation times.
+%The wild-type of \gls{pfomt} was able to use \gls{sae} as a co-substrate for the ethylation of caffeic acid, albeit the amount of detected product was very minute. \bweigel{literaturvergleich der umsäzte?}
+%The site of ethylation was determined by \gls{lcms} measurements. \bweigel{LCMS messungen?}
+%It was found that ethylation occurs on the catecholic group, however it could not be determined whether at the 3- or 4-position.
+%Nonetheless it is highly likely that ethylation occurs at the same position as methylation and thus the product was annotated as 3-ethoxy-4-hydroxy cinnamic acid. 
+%Enzyme variants were prepared to further test the ethylation reactivity of \gls{pfomt}, since a number of groups were able to accomplish transalkylation with larger substrates by expanding the available space in the active site \citep{Wang2011}.
+
+Consequently enzyme variants were prepared to achieve a \pfomt variant with an ethylation activity, since a number of groups were able to accomplish transalkylation with larger substrates by expanding the available space in the active site \citep{Wang2011}.
+The available crystal structures of \pfomt were consulted to select suitable residues.
 Residues that were exchanged were selected based upon their position in the active site and in relation to the substrate(s) (\autoref{fig:d_activesite_resis}).
-Fortunately a crystal structure of \gls{pfomt} was available to help with the selection. \bweigel{Genauer zu den Resten...}
+The residues were exchanged to the non-spaceous alanine, as well as amino acids frequently observed at homologous positions in other class I \glspl{omt}.
+%Fortunately a crystal structure of \gls{pfomt} was available to help with the selection. \bweigel{Genauer zu den Resten...}
 
 \framedfigure[label = fig:d_activesite_resis]{%
 \includegraphics[width=0.5\textwidth, trim=300 100 300 100, clip]{usr/graphics/static/d_activesite_resis}
 }{%
-   The active site of \gls{pfomt}. 
+   The active site of \gls{pfomt} (pdb: 3C3Y). 
    The outline of the protein backbone is displayed, with active site residues portrayed as colored sticks (cyan -- F103, red -- F80, turqouise -- M52, yellow -- Y51, white -- F198, blue -- W184, orange -- N202, grey -- as labelled).
    The co-substrate \gls{sam} (ball-and-stick model) was docked into the structure. %    
     }
 
-Over 20 enzyme variants were prepared to assess, whether \gls{pfomt} ethylation activity would improve over the wildtype.
-Be that as is may, an improved ethylation activity was not observed. 
-Some of the new variants however displayed an increased methylation activity with the substrates caffeic acid and \gls{sam}.
-The methylation activity of some of the variants increased by over 4-fold \bweigel{grafik?}.
-Interestingly most amino acid substitutions proved as beneficial, rather than detrimental.\\
+Over 20 enzyme variants were prepared to assess, whether \gls{pfomt} ethylation activity would improve over the wild-type.
+However, no ethylation activity was observed for either variant.
+%Be that as is may, an improved ethylation activity was not observed. 
+Some of the new variants however displayed an increased methylation activity with the substrates caffeic acid and \gls{sam} (\autoref{fig:pfomt_DIM}).
+The methylation activity of some of the variants increased by over 4-fold.
+Interestingly most amino acid substitutions proved as beneficial.
+
 Methylation activity benifited greatly from the replacement of bulky hydrophobic residues by smaller and/or charged residues in the vicinity of the acceptor substrates (Tyr51, Trp184 and Phe198).
 However, this was not a general trend since the substitutions N202W and Y51W also improved methylation activity.
 Looking more closely at residue Tyr51, the activity enhancing effect was greatest, when the tyrosine was substituted by the basic amino acids lysine or arginine.
 In addition to an enhanced activity the selectivity for the hydroxyl position to be methylated was also altered in these variants.
 This was not apparent, when caffeic acid was used as a substrate. 
-However when a flavonoid, especially eriodictyol, was used not only the 3' hydroxyl, but to some extent the 4' hydroxyl was methylated.
+However when a flavonoid, especially eriodictyol, was used not only the 3' hydroxyl, but to some extent the 4' hydroxyl was methylated (\autoref{fig:app_pfomt_3to4}).
 This effect was improved in some double variants, where also position 202 was altered. 
-For example the variant Y51R N202W almost exclusively methylated flavonoid substrates at the 4' position \bweigel{grafik? \& paper}.
+For example the variant Y51R N202W almost exclusively methylated flavonoid substrates at the 4' position\bweigel{grafik? \& paper}.
 A detailed discussion of the results was published in a peer reviewed journal.
 
+\begin{figure}[htpb]
+  \begin{figureframe}
+    \includegraphics[width=\textwidth]{usr/graphics/static/pfomt_DIM}
+  \end{figureframe}
+  \caption{Activities of different \pfomt variants towards caffeic acid methylation.}
+  \label{fig:pfomt_DIM}
+\end{figure}
+  
 
 \section{Conclusion/Discussion}
 
@@ -378,3 +381,9 @@ A possible hydrogen bond network (blue lines) for the ligand-bound state is disp
 }{%
 from: Kopycki, J. G., Rauh, D., Chumanevich, A. a., Neumann, P., Vogt, T., \& Stubbs, M. T. (2008). Biochemical and Structural Analysis of Substrate Promiscuity in Plant Mg2+-Dependent O-Methyltransferases. Journal of Molecular Biology, 378(1), 154–164. http://doi.org/10.1016/j.jmb.2008.02.019
 }
+
+\section{Contributions}
+
+Benjamin Weigel wrote the manuscript, prepared figures, sub-cloned, produced and crystallized \pfomt, solved the \textit{apo}-structure and conducted the \gls{itc} experiments. 
+Dr. Martin Dippe prepared most of the \gls{pfomt} variants and ethylation activity tests.
+Dr. Christoph Partier (group of Prof. Dr. Milton T. Stubbs, \gls{mlu} Halle-Wittenberg) helped collect X-ray datasets.

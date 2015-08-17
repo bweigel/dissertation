@@ -405,7 +405,7 @@ firstinits=false%
 \newcommand{\ospAuthors}{Author one\textsuperscript{1,2,a}, Author two\textsuperscript{2}, \ldots} 
 \newcommand{\ospSetAuthors}[1]{\def\ospAuthors{#1}}
 
-\newcommand{\ospTitleKeywordContactName}{Corresponding:} 
+\newcommand{\ospTitleKeywordContactName}{Contact:} 
 \newcommand{\ospSetTitleKeywordContactName}[1]{\gdef\ospTitleKeywordContactName{#1}}  
 
 \newcommand{\ospContacts}{foo@bar.com\textsuperscript{a}} 
@@ -427,3 +427,25 @@ firstinits=false%
 
 \newcommand{\ospTitleKeywordName}{Keywords:} 
 \newcommand{\ospSetTitleKeywordName}[1]{\gdef\ospTitleKeywordName{#1}}  
+
+
+\newcommand{\WEBmakeTitle}[1]{%\relax
+\ospTitleRule\par\vspace{0pt}%
+%         \begin{tabularx}{\textwidth}{p{0.2\textwidth}X}
+%            \begin{minipage}{\linewidth}
+% \ospTitleLogo
+%            \end{minipage}&
+%\begin{tabular}{c}	
+\noindent\begin{minipage}{\textwidth} 
+               \vspace{\baselineskip}
+                  {\color{black}{{\ospFontTitle\ospTitle}}}\par
+                  {\begin{normalsize}\textbf{\ospAuthors}\end{normalsize}\par}
+                  {\begin{normalsize}\textbf{\ospTitleKeywordContactName} \ospContacts\end{normalsize}\par}
+                  {\begin{normalsize}\textbf{\ospTitleKeywordAffiliationName} \ospAffiliations\end{normalsize}\par}
+                  {\begin{normalsize}\textbf{\ospTitleKeywordName} \ospKeywords\end{normalsize}\par}
+            \end{minipage}
+ %        \end{tabular}
+\par\vspace{10pt}%
+{#1}
+\noindent\ospTitleRule
+}

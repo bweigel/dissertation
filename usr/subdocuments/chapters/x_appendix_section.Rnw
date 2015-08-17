@@ -8,16 +8,21 @@
 
 \section{Chapter 3}
 
-\framedfigure[label = fig:d_lit_sam]{%
-<<litSAM, echo=F, tidy=TRUE, fig.height=5, fig.width=5, out.width='0.7\\textwidth', dev='pdf', error=T>>=
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+<<litSAM, eval=T, echo=F, tidy=TRUE, fig.height=5, fig.width=5, out.width='0.7\\textwidth', dev='pdf', error=T, crop=T>>=
 @ 
-}{%
+  \end{figureframe}
+  \caption{%
     Graphical representation of the work that has been done on \glspl{mt} in combination with \gls{sam} analogues.
     The grey areas represent individual groups of \gls{sam} analogues (aliphatic, allylic, propargylic, aromatic, \gls{seam} analogues, nitrogen analogues and miscelaneous others). 
     The height of the grey areas represents the number of times a member of the corresponding group has been described as tested in the \gls{mt} literature.
     The height of the colored bars represents the times that individual substrate has been tested. The colors represent the different types of \gls{mt} (red -- \gls{dmt}, green -- \gls{pmt}, lilac -- small molecule \gls{mt}, blue -- \gls{rna} \gls{mt}).
     The black dash across the bar shows the number of times this substrate was actually converted by either enzyme.%    
-    }
+}
+  \label{fig:d_lit_sam}
+\end{figure}
 
 
 \begin{figure}[htpb]
@@ -34,12 +39,23 @@
   \label{fig:app_struc.compare}
 \end{figure}  
 
+
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[width=0.5\textwidth]{usr/graphics/static/pfomt_3to4_activities}
+  \end{figureframe}
+  \caption{Differences in the regioselectivity of some \pfomt variants. The products observed in \gls{hplc} and \gls{lcms} measurements switched from 3'-methylated (dark grey) to 4'-methylated (light grey) for the displayed variants.}
+  \label{fig:app_pfomt_3to4}
+\end{figure}  
+
+\clearpage
 \section{Chapter 4}
 
 \begin{figure}[htpb]
   \centering
   \begin{figureframe}
-    \includegraphics[width=\textwidth]{usr/graphics/static/tmp_pca1}
+    \includegraphics[width=0.9\textwidth]{usr/graphics/static/tmp_pca1}
   \end{figureframe}
   \caption{\gls{pca} of \nico leaves infiltraded by \agro carrying different genes.}
   \label{fig:x_pca}
@@ -215,8 +231,9 @@ Overview over the contructs produced for the present thesis. Each step during th
 \end{lstTabularx}
 
 
-\ostTableEnv[label = tab:xtalstat]{%
-  \begin{tabularx}{\textwidth}{Xll}%
+%\ostTableEnv[label = tab:xtalstat]{%
+\begin{table}[htpb]\centering
+\begin{tabular}{lll}%
 % \caption{Crystallographic data, phasing and refinement statistics.} \\
 %  \label{tab:d-xtalstat}
 %    \small
@@ -258,10 +275,12 @@ Overview over the contructs produced for the present thesis. Each step during th
     allowed & 2.38 & \\
     outliers & 0.8 & \\
     \bottomrule
-  \end{tabularx}
-}{%
+  \end{tabular}
+\caption{%
 Crystallographic data, phasing and refinement statistics.
 }
+\label{tab:xtalstat}
+\end{table}
 
 
 \begin{table}[htpb]

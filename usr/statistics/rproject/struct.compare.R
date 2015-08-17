@@ -43,6 +43,9 @@ ggplot() +
 ## @knitr struct.compare.appendix
 load("../../statistics/data/structurecompare.Rda")
 
+ss$helix <- grepl("a", ss$ss.elem)
+cols <- c("A"="palegreen", "B"="palegreen", "C"="plum2", "orange"="orange", "cornflowerblue"="cornflowerblue")
+
 geom_arrow <- function(label, start=1, end=4, y=2, width=1, a=NULL, b=NULL, fill){
   if(is.null(b)) b <- 0.45*width
   if(is.null(a)) a <- 2.4

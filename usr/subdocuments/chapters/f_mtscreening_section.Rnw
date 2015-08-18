@@ -5,17 +5,46 @@
 \chapter{Structural studies of flavonoids using \glsentryfirst{msms}}
 \label{ch:MSMS}
 
+  
+\ospSetTitle{Characterization of flavanoid aglycones and cinnamic acids by liquid chromatography coupled tandem mass spectrometry}
+\ospSetAuthors{\underline{Benjamin Weigel}\textsuperscript{1,a}, %
+  Annegret Laub\textsuperscript{1,b}, %
+  Jürgen Schmidt\textsuperscript{1,c}, %
+  Ludger A. Wessjohann\textsuperscript{1,d}}
+\ospSetContacts{bweigel@ipb-halle.de\textsuperscript{a}, alaub@ipb-halle.de\textsuperscript{b}, law@ipb-halle.de\textsuperscript{d}}
+\ospSetAffiliations{Leibniz-Institute of Plant Biochemistry, Department of Bioorganic Chemistry\textsuperscript{1}}
+\ospSetKeywords{tandem mass spectrometry, LCMS, flavonoids}
+
+\WEBmakeTitle{%
+
+\textbf{Abstract}
+
+}
+
+
 \section{Introduction}
 
 
-\section{section 1}
-\section{section 2}
-\section{section 3}
+\section{Fragmentation of flavanones}
+\section{Fragmentation of flavones}
+\section{Fragmentation of flavonols}
+\section{Fragmentation of cinnamic acids}
 
-  
 \section{Conclusion/Discussion}
 
+\begin{itemize}
+\item unmethylated compounds give better fragmentation (CID)
+\item HCD better for methylated flavonoids
+\item cinnamic acids: eV makes no difference (30 and 40 eV) give the same spectra
+\item cinnamic acids: dimethylcaffeic acid and isoferulic acid methyl ester differ in retention time (methyl ester is less polar and elutes later), fragmentation: meoh cleavage of ifa-mester, h2o cleavage of dimethylcaffeic acid
+  \item cinnamic acid: methyl esters do not ionize well in neg. mode
+    
+\end{itemize}
 
+\section{Contributions}
+
+Benjamin Weigel prepared substances, analyzed mass spectral data and prepared manuscript.
+Annegret Laub and Jürgen Schmidt conducted \gls{lcms} measurement runs.
 
 
 

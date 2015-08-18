@@ -133,7 +133,7 @@ The crystal shape varied from very smooth and almost cubic (high ammonium sulfat
 
 Crystals that were large enough ($\geq$ \SI{50}{\micro\metre} \bweigel{wie groß?}), where screened for diffraction at the home-source after cryoprotection.
 A rough estimate of the resolution, cell parameters and the space group was aquired, if the diffraction images could be indexed.
-The screened crystals all had similar cell parameters and belonged to the same space group, $P2_12_12_1$, as the previously published structure (pdb: 3C3Y)\citep{Kopycki2008b}.
+The screened crystals all had similar cell parameters and belonged to the same space group, $P2_12_12_1$, as the previously published structure (pdb: \href{http://www.rcsb.org/pdb/explore/explore.do?structureId=3c3y}{3C3Y})\citep{Kopycki2008b}.
 However, the unit cell of crystals that grew out of high ammonium sulfate concentrations ($\geq$\SI{1.8}{\molar}) was approximately four times as large as that of the published structure. % and crystrals that developed under different crystallization conditions.
 %Consequently the assymetric unit consisted of 4, instead of 2 \gls{pfomt} monomers.
 Several datasets were collected of crystals from high \cf{(NH4)2SO4}, since these seemed to be promising candidates to find differences in the bound substrates.
@@ -146,8 +146,8 @@ Datasets of crystals that grew from other conditions were insufficient for struc
 %As it turned out however the substrates were not co-crystallized.
 \Gls{pfomt} crystallized without any bound substrates under conditions of high \cf{(NH4)2SO4}.
 One dataset was solved to completion to obtain a complete structure of this novel \textit{apo}-\gls{pfomt} at a resolution of \SI{1.95}{\angstrom} (\autoref{tab:xtalstat}).
-The assymetric unit of \emph{apo}-\Gls{pfomt} contained two homodimers (4 monomers) (\autoref{fig:d_struct_a}), rather than just one homodimer (3C3Y).
-The active site of each monomer was found to be empty except for a sole sulfate ion, which was positioned where the amino- and carboxylate groups of the \gls{sah} residue in the 3C3Y structure (\autoref{fig:d_struct_b}).
+The assymetric unit of \emph{apo}-\Gls{pfomt} contained two homodimers (4 monomers) (\autoref{fig:d_struct_a}), rather than just one homodimer (\href{http://www.rcsb.org/pdb/explore/explore.do?structureId=3c3y}{3C3Y}).
+The active site of each monomer was found to be empty except for a sole sulfate ion, which was positioned where the amino- and carboxylate groups of the \gls{sah} residue in the \href{http://www.rcsb.org/pdb/explore/explore.do?structureId=3c3y}{3C3Y} structure (\autoref{fig:d_struct_b}).
 Shifts in the structure of some loops were observed and contrary to the previously published structure the entire N-terminus was resolved up to and including the His-tag.
 
 The resolved N-terminus contained another N-terminal \textalpha-helix, which was positioned in a cleft on the surface, where substrates may be bound \citep{Kopycki2008b}.
@@ -172,8 +172,8 @@ However, all of the regions that moved are located at or near the active site.
     
 }{%
 An overview of the features in the \emph{apo}-\gls{pfomt} structure. \textbf{\subref{fig:d_struct_a}} -- The assymetric unit of \textit{apo}-\gls{pfomt} consists of two homodimers (4 monomers). Individual monomers are rainbow colored from N- (blue) to C-terminus (red). %
- \textbf{\subref{fig:d_struct_b}} -- Comparison of 3C3Y (steelblue) and \textit{apo}-\gls{pfomt} (green). The N-terminus of \textit{apo}-\gls{pfomt} was resolved up to the N-terminus (red) and even the His-tag (red, transparent) was partly resolved.
-      The N-terminus fits into a cleft on the surface of the 3C3Y structure, shown as a surface model on the right.
+ \textbf{\subref{fig:d_struct_b}} -- Comparison of \href{http://www.rcsb.org/pdb/explore/explore.do?structureId=3c3y}{3C3Y} (steelblue) and \textit{apo}-\gls{pfomt} (green). The N-terminus of \textit{apo}-\gls{pfomt} was resolved up to the N-terminus (red) and even the His-tag (red, transparent) was partly resolved.
+      The N-terminus fits into a cleft on the surface of the \href{http://www.rcsb.org/pdb/explore/explore.do?structureId=3c3y}{3C3Y} structure, shown as a surface model on the right.
       \gls{sah} (white ball-and-sticks) and \cf{Ca^2+} (green sphere) are featured in the published structure, whereas a sulphate ion (red/yellow spheres) was bound in the newly solved structure.
 }
 
@@ -183,8 +183,8 @@ An overview of the features in the \emph{apo}-\gls{pfomt} structure. \textbf{\su
     <<struct.compare,  echo=F, tidy=TRUE, fig.height=2, fig.width=5.6, out.width='\\textwidth', dev='tikz', error=T>>=
     @
   \end{figureframe}
-    \caption{Positional differences between the individual residues of the solved \textit{apo}-PFOMT and the structure with bound \gls{sah} (pdb: 3C3Y). The \glsentryfirst{dpi} of the structures was \SIlist{0.137;0.064}{\angstrom} respectively.
-      The overall rmsd amounted to \SI{0.9034}{\angstrom}.
+    \caption{Positional differences between the individual residues of the solved \textit{apo}-PFOMT and the structure with bound \gls{sah} (pdb: \href{http://www.rcsb.org/pdb/explore/explore.do?structureId=3c3y}{3C3Y}). The \glsentryfirst{dpi} of the structures was \SIlist{0.137;0.064}{\angstrom} respectively.
+      The overall \gls{rmsd} amounted to \SI{0.9034}{\angstrom}.
   The secondary structure of apo-\gls{pfomt} is displayed at the top. Helices are displayed as rectangles and sheets are shown as arrows.
   Graphical background annotations are used to display the binding sites of \gls{sah} (green) and the metal ion (plum).
   The orange bars indicate regions, where much movement seems to happen upon binding or release of the co-substrate.
@@ -193,7 +193,8 @@ An overview of the features in the \emph{apo}-\gls{pfomt} structure. \textbf{\su
 \end{figure}
 
 Unfortunately soaking of these ``\textit{apo}''-crystals did not afford binding of substrates.
-\clearpage
+%\clearpage
+
 \section{Substrate binding studies using \glsentrytext{itc}}
 
 The binding of different substrates to \gls{pfomt} was examined by \gls{itc}, to determine whether the enzyme can bind non-natural \gls{sam} analogues.
@@ -214,7 +215,6 @@ Thus, the entropic influence must get larger with increasing chain length in ord
 \begin{equation} \label{eq:gibbs1}
   \Delta G = \Delta H - T \Delta S 
 \end{equation}
-
 \begin{equation} \label{eq:gibbs2}
   \Delta G = \Delta G^0 - RT~\mathrm{ln}\,K 
 \end{equation}
@@ -302,7 +302,7 @@ The residues were exchanged to the non-spaceous alanine, as well as amino acids 
 \framedfigure[label = fig:d_activesite_resis]{%
 \includegraphics[width=0.5\textwidth, trim=300 100 300 100, clip]{usr/graphics/static/d_activesite_resis}
 }{%
-   The active site of \gls{pfomt} (pdb: 3C3Y). 
+   The active site of \gls{pfomt} (pdb: \href{http://www.rcsb.org/pdb/explore/explore.do?structureId=3c3y}{3C3Y}). 
    The outline of the protein backbone is displayed, with active site residues portrayed as colored sticks (cyan -- F103, red -- F80, turqouise -- M52, yellow -- Y51, white -- F198, blue -- W184, orange -- N202, grey -- as labelled).
    The co-substrate \gls{sam} (ball-and-stick model) was docked into the structure. %    
     }
@@ -328,7 +328,7 @@ A detailed discussion of the results was published in a peer reviewed journal.
   \begin{figureframe}
     \includegraphics[width=\textwidth]{usr/graphics/static/pfomt_DIM}
   \end{figureframe}
-  \caption{Activities of different \pfomt variants towards caffeic acid methylation.}
+  \caption{Activities of different \pfomt variants towards caffeic acid methylation. Colorations correspond to the ones used in \autoref{fig:d_activesite_resis}.}
   \label{fig:pfomt_DIM}
 \end{figure}
   
@@ -336,7 +336,7 @@ A detailed discussion of the results was published in a peer reviewed journal.
 \section{Conclusion/Discussion}
 
 \bweigel{mehr auf die aktuelle literatur eingehen...auch wenn sie sich i grenzen hält...}
-Whereas the binding of \gls{sah} was solely dependent on the large negative enthalpy, the binding of \gls{sae} was almost entirely driven by entropy, since $\Delta H$ was close to 0 (\ref{tab:ditc}).
+Whereas the binding of \gls{sah} was solely dependent on the large negative enthalpy, the binding of \gls{sae} was almost entirely driven by entropy, since $\Delta H$ was close to 0 (\autoref{tab:ditc}).
 Entropy gain can be a major driving force for ligand-protein interactions and in some cases ligand binding can be entirely attributed this gain in entropy \citep{Li2008}.
 Displacement of protein-bound water molecules contributes strongly to the entropic gain.
 There were some waters present in the active site of \pfomt in the crystal structure developed herein.
@@ -347,16 +347,41 @@ The replacement of ordered waters from the active site or from a hydrated metal 
 Also, the hydrogen and metal complexing bonds consequently lost could explain the less negative enthalpy.
 However, this is purely hypothetical since more evident data is missing.
 Additional insight might be gained by expanding the \gls{itc} experiments to even longer \gls{sam} analogues.
-The limited space in the active site, which forces the growing side chain to expel water might also be the reason for the inactivity of \pfomt towards \gls{sae}. 
-If the metal ion is blocked from complexing moieties, activation of the substrate hydroxyl would be hindered.
+The limited space in the active site, which forces the growing side chain to expel water and possibly the metal ion might also be the reason for the inactivity of \pfomt towards \gls{sae}. 
+If the metal ion is blocked from its complexing moieties, activation of the substrate hydroxyl would be hindered.
 
-Comparison of the novel \textit{apo}-\pfomt and the published structure suggests a lot of movement along multiple parts of the backbone all promixal to the active site pocket, upon ligand binding (\autoref{fig:d_struc.compare}).
-The N-terminus of \pfomt seems to acts as a lid, which is closed in the \textit{apo}-form, but highly flexible and therefore unresolved in the ligand bound form.
+Comparison of the novel \textit{apo}-\pfomt and the published structure (pdb: \href{http://www.rcsb.org/pdb/explore/explore.do?structureId=3c3y}{3C3Y}) suggests that the movement (upon ligand binding) along multiple parts of the backbone promixal to the active site pocket is a main contributer to the overall \gls{rmsd} of \SI{0.9}{\angstrom} (\autoref{fig:d_struc.compare}).
+
+
+\begin{figure}[htpb]
+  \begin{figureframe}
+    \begin{subfigure}{0.48\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/apo_asite.png}
+      \caption{}
+      \label{fig:asite_waters_a}
+    \end{subfigure}
+    \begin{subfigure}{0.48\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/3c3y_asite.png}
+      \caption{}
+      \label{fig:asite_waters_b}
+    \end{subfigure}
+  \end{figureframe}
+\caption{Comparison of the active sites of \textbf{\subref{fig:asite_waters_a}} -- the solved \textit{apo}-structure (green) and \textbf{\subref{fig:asite_waters_b}} -- the ligand-bound structure (steelblue; pdb: \href{http://www.rcsb.org/pdb/explore/explore.do?structureId=3c3y}{3C3Y}).
+Waters are represented as small red spheres, calcium as a green sphere (complexing bonds are dashed) and \gls{sah} is displayed as a white ball-and-stick model. 
+A possible hydrogen bond network (blue lines) for the ligand-bound state is displayed.}
+\label{fig:asite_waters}
+\end{figure}
+
+
+The N-terminus of \pfomt seems to act as a lid, which is closed in the \textit{apo}-form, but highly flexible and therefore unresolved in the ligand bound form.
 Furthermore, the native enzyme has been shown to be truncated, starting only at residue 12 and being less catalytically efficient than the full length protein \cite{Vogt2004,Kopycki2008b}.
 The work presented here consequently supports the notion that the N-terminus plays an important role on the regulation of the enzymatic activity.
 
-The laid out findings provide novel hints for regions in the \pfomt structure that can be studied using site-directed mutagenesis approaches in order to work towards a variant that can in fact employ \gls{sae} for transalkylation reactions.
-Furthermore variation of these regions might provide enzymes with altered substrate specificities which are of high interest.
+During our studies, transethylation activities could not be observed for any of the prepared \pfomt variants.
+However, some of the variants showed higher methylation activities towards caffeic acid and even different regioselectivities (3'\textrightarrow 4') than the wild-type.
+
+Given the fact that only residues in the active site and therefore in direct contact with the substrates were prepared, the laid out findings provide novel hints for indirect proximal regions in the \pfomt structure that might be studied using site-directed mutagenesis, gene-shuffling or similar approaches in order to work towards a variant that can in fact employ \gls{sae} for transalkylation reactions.
+Furthermore variation of these regions might provide variants with altered substrate specificities which are of high interest.
 
 
 
@@ -364,23 +389,11 @@ Furthermore variation of these regions might provide enzymes with altered substr
 %The existing crystal structure of \gls{pfomt} (pdb: 3c3y) shows 3 water molecules that could be disp%laced by a growing aliphatic chain (\autoref{fig:asite_waters}). 
 %All of these waters are complexing a \cf{Ca^2+} atom.
 
-
-
-
-
-\framedfigure[label = fig:asite_waters]{%
-\includegraphics[width=\textwidth]{usr/graphics/static/asite_compare.png}
-}{%
-Comparison of the active sites of the \textit{apo}-structure (left, green) and the ligand-bound structure (right, steelblue).
-Waters are represented as small red spheres, calcium as a green sphere (complexing bonds are dashed) and \gls{sah} is displayed as a white ball-and-stick model. 
-A possible hydrogen bond network (blue lines) for the ligand-bound state is displayed.
-}
-
-\framedfigure[label = fig:pfomt_vogt]{%
-\includegraphics[width=0.5\textwidth]{usr/graphics/static/pfomt_vogt.png}
-}{%
-from: Kopycki, J. G., Rauh, D., Chumanevich, A. a., Neumann, P., Vogt, T., \& Stubbs, M. T. (2008). Biochemical and Structural Analysis of Substrate Promiscuity in Plant Mg2+-Dependent O-Methyltransferases. Journal of Molecular Biology, 378(1), 154–164. http://doi.org/10.1016/j.jmb.2008.02.019
-}
+%% \framedfigure[label = fig:pfomt_vogt]{%
+%% \includegraphics[width=0.5\textwidth]{usr/graphics/static/pfomt_vogt.png}
+%% }{%
+%% from: Kopycki, J. G., Rauh, D., Chumanevich, A. a., Neumann, P., Vogt, T., \& Stubbs, M. T. (2008). Biochemical and Structural Analysis of Substrate Promiscuity in Plant Mg2+-Dependent O-Methyltransferases. Journal of Molecular Biology, 378(1), 154–164. http://doi.org/10.1016/j.jmb.2008.02.019
+%%}
 
 \section{Contributions}
 

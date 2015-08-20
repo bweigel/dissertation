@@ -26,6 +26,51 @@
 
 
 \section{Fragmentation of flavanones}
+
+\begin{figure}[htpb]\centering
+  \begin{figureframe}
+    \includegraphics[scale=1]{usr/graphics/static/hesperetin_HCD}
+  \end{figureframe}
+  \caption{Major fragmentation pathways of hesperetin upon \gls{hcd} at \SI{75}{\electronvolt}}
+\end{figure}
+
+\begin{figure}[htpb]\centering
+  \begin{figureframe}  
+    \begin{subfigure}{\textwidth}\centering
+      \includegraphics[scale=1]{usr/graphics/static/hesperetin_HCD_1,3B}
+      \caption{}
+      \label{fig:HCD_hesperetin_1.3}
+    \end{subfigure}  
+    \begin{subfigure}{\textwidth}\centering
+      \includegraphics[scale=1]{usr/graphics/static/hesperetin_HCD_1,4B}
+      \caption{}
+      \label{fig:HCD_hesperetin_1.4}
+    \end{subfigure}
+  \end{figureframe}
+  \caption{Proposed mechanisms for the formation of \textbf{\subref{fig:HCD_hesperetin_1.3}} -- \frag{1,3}{B}{+} and \textbf{\subref{fig:HCD_hesperetin_1.4}} -- \frag{1,4}{B}{+} ions from hesperetin upon \gls{hcd}.}
+\end{figure}
+
+
+\begin{figure}[htpb]\centering
+  \begin{figureframe}
+   \includegraphics[scale=1]{usr/graphics/static/chrysoeriol_HCD}
+  \end{figureframe}
+  \caption{Major fragmentation pathways of chrysoeriol upon \gls{hcd} at \SI{100}{\electronvolt}}
+\end{figure}
+
+
+\begin{figure}[htpb]\centering
+  \begin{figureframe}
+   \includegraphics[scale=1]{usr/graphics/static/chrysoeriol_HCD_0,2B}
+  \end{figureframe}
+  \caption{Proposed mechanism for the formation of \frag{0,2}{B}{+} and resulting ions from the molecular ion of chrysoeriol under \gls{hcd} conditions.}
+\end{figure}
+
+
+
+
+
+
 \section{Fragmentation of flavones}
 \section{Fragmentation of flavonols}
 \section{Fragmentation of cinnamic acids}
@@ -37,8 +82,15 @@
 \item HCD better for methylated flavonoids
 \item cinnamic acids: eV makes no difference (30 and 40 eV) give the same spectra
 \item cinnamic acids: dimethylcaffeic acid and isoferulic acid methyl ester differ in retention time (methyl ester is less polar and elutes later), fragmentation: meoh cleavage of ifa-mester, h2o cleavage of dimethylcaffeic acid
-  \item cinnamic acid: methyl esters do not ionize well in neg. mode
-    
+\item cinnamic acid: methyl esters do not ionize well in neg. mode
+\item HCD: flavanes \textrightarrow mainly fragmentation first (e.g. \frag{1,2}{A}{+}, \frag{1,4}{B}{+}), then cleavages off the fragments ((\frag{1,3}{B}{+}-CO-CH3OH))
+\item HCD: flavones \textrightarrow higher energy (100 eV) increases ring fragmentation (main fragment \frag{1,3}{A}{+}), lower energy tends to show losses off [M+H]+ (e.g. [M+H-CH3]\textsuperscript{*+}, [M+H-CH3-CO]\textsuperscript{*+})
+\item HCD: flavonols \textrightarrow mainly losses off the [M+H]+ (e.g. [M+H-CH4]+, [M+H-CH3OH]+, etc.)
+\item most informative collision energy 30 eV \cite{Cuyckens2004}
+\item \frag{1,3}{A}{+} is usually most abundant and most readily formed \cite{Cuyckens2004} \textrightarrow originates from acetate–malonate pathway, therefore m/z 153; when 4-keto is missing e.g. flavanes flavanols m/z 139
+\item losses of small molecules and radicals common from [M+H]+; methyl ethers usually by loss of 15 u (CH3*) \cite{Cuyckens2004} \textrightarrow  not flavones!, there loss of water (18 u) or oxa-cyclopropene (C2H2O)
+\item[\textrightarrow] when methoxy substituent, the dominant ion is [M+H-CH3]\textsuperscript{+$\cdot$} \cite{Wolfender2000, Ma1997} (also in neg. mode \cite{Cuyckens2004}) \textrightarrow not for flavones
+  
 \end{itemize}
 
 \section{Contributions}

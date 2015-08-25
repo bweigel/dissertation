@@ -112,6 +112,30 @@
 \newcommand{\invivo}{\textit{in vivo}\xspace}
 \newcommand{\invitro}{\textit{in vitro}\xspace}
 \newcommand{\frag}[3]{\textsuperscript{#1}#2\textsuperscript{#3}\xspace}
+
+
+%%%-------------------------------------------------%%%
+%%% Automatic referencing with \molnum und \molref %%%
+%%%-------------------------------------------------%%%
+
+\newcounter{mol}
+\renewcommand*{\themol}{\arabic{mol}}
+\newcommand*{\molautorefname}{compound}
+\makeatletter
+\renewcommand*{\p@mol}{%
+  \expandafter\p@@mol
+}
+\newcommand*{\p@@mol}[1]{%
+  \textbf{#1}%
+}
+\makeatother
+
+\newcommand{\molnum}[2][]{%
+	\refstepcounter{mol}%
+\ifthenelse{\equal {#1} {}}{\textbf{\themol}}{#1\,(\textbf{\themol})}{\label{mol:#2}}} %% creates the anchor and label
+\newcommand{\molref}[1]{\ref{mol:#1}} %% calls the reference
+
+
 %%%-------------------------------------------------%%%
 %%% Set own environments %%%
 %%%-------------------------------------------------%%%

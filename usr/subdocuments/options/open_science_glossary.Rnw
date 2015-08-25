@@ -7,6 +7,13 @@
 \makeglossaries
 
 % analytics
+\newacronym{psd}{PSD}{post-source decay}
+\newacronym{sid}{SID}{surface-induced dissociation}
+\newacronym{ecd}{ECD}{electron capture dissociation}
+
+\newacronym{lc}{LC}{liquid chromatography}
+\newacronym{apci}{APCI}{atmospheric pressure chemical ionisation}
+\newacronym{ei}{EI}{electron impact}
 \newacronym{auc}{AUC}{area under the curve}
 \newacronym{3o4m}{3O4M}{3'-hydroxy-4'-methoxy}
 \newacronym{4o3m}{4O3M}{4'-hydroxy-3'-methoxy}
@@ -57,6 +64,7 @@
 \newacronym[symbol=FPLC]{fplc}{FPLC}{fast protein liquid chromatography}
 \newacronym[symbol=GC/MS]{gcms}{GC/MS}{gas chromatography coupled mass-spectrometry}
 \newacronym[symbol=LC/MS]{lcms}{LC/MS}{liquid chromatography coupled mass-spectrometry}
+\newacronym[symbol=LC-MS/MS]{lcmsms}{LC-MS/MS}{liquid chromatography-tandem mass spectrometry}
 \newacronym[first={rmsd}]{rmsd}{rmsd}{root mean squared deviation}
 \newacronym[symbol=HPLC]{hplc}{HPLC}{high-performance liquid chromatography}
 \newacronym[symbol=NMR]{nmr}{NMR}{nuclear magnetic resonance}

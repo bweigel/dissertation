@@ -10,6 +10,7 @@
 \newacronym{psd}{PSD}{post-source decay}
 \newacronym{sid}{SID}{surface-induced dissociation}
 \newacronym{ecd}{ECD}{electron capture dissociation}
+\newacronym{rda}{rDA}{retro-Diels-Alder}
 
 \newacronym{lc}{LC}{liquid chromatography}
 \newacronym{apci}{APCI}{atmospheric pressure chemical ionisation}

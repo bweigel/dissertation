@@ -2,11 +2,12 @@ library(mzR)
 library(data.table)
 library(magrittr)
 library(dplyr)
-source("~/Development/R/WEB346 - Spectra/spreadspec.R")
+source("/home/mori/IPB/thesis/supplementary/R scripts/WEB346 - Spectra/spreadspec.R")
 
 DIR <- "/media/mori/Stuff/LCMS/WEB2015-II/MzXML/"
+WD <- "/home/mori/IPB/thesis/supplementary/R scripts/WEB346 - Spectra/"
 
-load("peaks.Rda")
+load("/home/mori/IPB/thesis/supplementary/R scripts/WEB346 - Spectra/peaks.Rda")
 data <- rbindlist(data)
 scans <- rbind(expand.grid(file = "WEB346_B_16_pMS2_303,317,331.mzXML", scan=c(3362,3363,3364,3413,3414)),
                expand.grid(file = "WEB346_B_17_pMS2_319,333,347,361.mzXML", scan=c(3090,3091,3092,3309,3310,3479,3472)),
@@ -116,9 +117,9 @@ comparespec <- function(scans, filename, tresh=5, rnd=3, range=c(80,310), ...){
       
       AN <- which(y >= tresh) 
       if(length(list(...)) == 0){
-        text(x[AN], y[AN], labels = round(x[AN],rnd), cex=0.6, adj=c(0.5,0), srt=0, col="blue")
+        text(x[AN], y[AN], labels = paste(round(x[AN],rnd), " (", round(y[AN],1), ")", sep=""), cex=0.6, adj=c(0.5,0), srt=0, col="blue")
       } else {
-        text(x[AN], y[AN], labels = round(x[AN],rnd), cex=0.6, srt=0, col="blue", ...)
+        text(x[AN], y[AN], labels = paste(round(x[AN],rnd), " (", round(y[AN],1), ")", sep=""), cex=0.6, srt=0, col="blue", ...)
       }
     } 
   }
@@ -128,35 +129,35 @@ comparespec <- function(scans, filename, tresh=5, rnd=3, range=c(80,310), ...){
 
 scans <- data.frame(file = c("WEB346_E_5_pMS2,HCD_285,271.mzXML", "WEB346_E_7_pMS2,HCD_315,301.mzXML", "WEB346_E_8_pMS2,HCD_315,301.mzXML"),
                     scan = c(3139,3187,3171))
-comparespec(scans, file="Compare_apigenin,diosmetin,luteolin-chalcogens.pdf")
+comparespec(scans, file=paste(WD, "Compare_apigenin,diosmetin,luteolin-chalcogens.pdf", sep=""))
 
 scans <- data.frame(file = c("WEB346_E_5_pMS2,HCD_285,271.mzXML", "WEB346_E_7_pMS2,HCD_315,301.mzXML", "WEB346_E_8_pMS2,HCD_315,301.mzXML"),
                     scan = c(3760,3632,3636))
-comparespec(scans, file="Compare_apigenin,diosmetin,luteolin_products.pdf")
+comparespec(scans, file=paste(WD, "Compare_apigenin,diosmetin,luteolin_products.pdf", sep=""))
 
 
 scans <- data.frame(file = c("WEB346_S_1_pMS2.mzXML","WEB346_S_1_pMS2.mzXML", "WEB346_S_2_pMS2.mzXML", "WEB346_S_3_pMS2_303,317.mzXML", "WEB346_S_4_pMS2_303,317.mzXML", "WEB346_E_3_pMS2,HCD_317,303.mzXML"),
                     scan = c(3474, 3803, 3314, 3518, 3494, 3643))
-comparespec(scans, file="Compare_flavanes_CID45.pdf", tresh=1, range=c(80,320))
+comparespec(scans, file=paste(WD, "Compare_flavanones_CID45.pdf", sep=""), tresh=0.51, range=c(80,320))
 
 scans <- data.frame(file = c("WEB346_S_1_pMS2.mzXML", "WEB346_S_2_pMS2.mzXML","WEB346_E_3_pMS2,HCD_317,303.mzXML"),
                     scan = c(3804, 3516, 3644))
-comparespec(scans, file="Compare_flavanes_HCD75_100.pdf", tresh=2.5, range=c(50,320))
+comparespec(scans, file=paste(WD, "Compare_flavanons_HCD75_100.pdf", sep=""), tresh=2.5, range=c(50,320), srt=10, ajd=0)
 
 ##########################################
 
 scans <- data.frame(file = c("WEB346_S_5_pMS2.mzXML", "WEB346_S_6_pMS2.mzXML", "WEB346_S_7_pMS2.mzXML", "WEB346_S_8_pMS2.mzXML", "WEB346_E_7_pMS2,HCD_315,301.mzXML"),
                     scan = c(3454, 3314, 3486, 3482, 3631))
-comparespec(scans, file="Compare_flavones_CID45.pdf", tresh = 1, range=c(80,320))
+comparespec(scans, file=paste(WD, "Compare_flavones_CID45.pdf", sep=""), tresh = 1, range=c(80,320))
 
 scans <- data.frame(file = c("WEB346_S_5_pMS2.mzXML","WEB346_E_5_pMS2,HCD_285,271.mzXML", "WEB346_S_6_pMS2.mzXML", "WEB346_D_6_pMS2,HCD_301,287.mzXML", "WEB346_E_7_pMS2,HCD_315,301.mzXML"),
                     scan = c(3780, 3760, 3484, 3468, 3632))
-comparespec(scans, file="Compare_flavones_HCD75_100.pdf", tresh = 2.5, range=c(50,320), rnd=4, srt=90, adj=0)
+comparespec(scans, file=paste(WD, "Compare_flavones_HCD75_100.pdf", sep=""), tresh = 2.5, range=c(50,320), rnd=4, srt=90, adj=0)
 
 ##########################################
 scans <- data.frame(file = c("WEB346_S_15_pMS2_287,301.mzXML", "WEB346_S_16_pMS2.mzXML", "WEB346_S_17_pMS2.mzXML", "WEB346_E_16_pMS2_303,317,331.mzXML", "WEB346_B_16_pMS2_303,317,331.mzXML", "WEB346_B_17_pMS2_319,333,347,361.mzXML", "WEB346_B_17_pMS2_319,333,347,361.mzXML"),
                     scan = c(3482, 3182, 2930, 3363, 3413,3091, 3309))
-comparespec(scans, file="Compare_flavonoles_CID45.pdf", tresh = 1, range=c(80,350))
+comparespec(scans, file=paste(WD, "Compare_flavonoles_CID45.pdf", sep=""), tresh = 1, range=c(80,350))
 
 
 scans <- data.frame(file = c("WEB346_E_15_pMS2_287,301.mzXML", "WEB346_E_16_pMS2_303,317,331.mzXML", 
@@ -164,7 +165,7 @@ scans <- data.frame(file = c("WEB346_E_15_pMS2_287,301.mzXML", "WEB346_E_16_pMS2
                              "WEB346_E_17_pMS2_319,333,347,361.mzXML","WEB346_E_17_pMS2_319,333,347,361.mzXML",
                              "WEB346_B_17_pMS2_319,333,347,361.mzXML", "WEB346_B_17_pMS2_319,333,347,361.mzXML"),
                     scan = c(3536, 3364, 3364, 3414, 3092, 3294, 3092, 3310))
-comparespec(scans, file="Compare_flavonoles_HCD75_100.pdf", tresh = 2.5, range=c(50,350))
+comparespec(scans, file=paste(WD, "Compare_flavonoles_HCD75_100.pdf", sep=""), tresh = 2.5, range=c(50,350))
 
 
 ##########################################
@@ -172,13 +173,13 @@ scans <- data.frame(file = c("WEB346_S_9_nMS2_163,177.mzXML","WEB346_S_12_nMS2_1
                              "WEB346_S_12_nMS2_179,193.mzXML", "WEB346_S_13_nMS2_193,207.mzXML", 
                              "WEB346_S_13_nMS2_193,207.mzXML", "WEB346_S_14_nMS2_193,207.mzXML"),
                     scan = c(2852, 1880, 2483, 2960, 3029, 3041))
-comparespec(scans, file="Compare_cinnamicacids_negCID30.pdf", tresh = 1, range=c(50,210))
+comparespec(scans, file=paste(WD, "Compare_cinnamicacids_negCID30.pdf", sep=""), tresh = 1, range=c(50,210))
 
 scans <- data.frame(file = c("WEB346_H_9_pMS2_179,165.mzXML", "WEB346_G_11_pMS2_179,165.mzXML", 
                              "WEB346_G_13_pMS2_209,195.mzXML", "WEB346_G_14_pMS2_209,195.mzXML", "WEB346_G_14_pMS2_209,195.mzXML", 
                              "WEB346_G_14_pMS2_209,195.mzXML"),
                     scan = c(2706, 3014, 3038,3102, 3363, 3571))
-comparespec(scans, file="Compare_cinnamicacids_posCID40.pdf", tresh = 1, range=c(50,210))
+comparespec(scans, file=paste(WD, "Compare_cinnamicacids_posCID40.pdf", sep=""), tresh = 1, range=c(50,210))
 #rm(list = ls())
 
 

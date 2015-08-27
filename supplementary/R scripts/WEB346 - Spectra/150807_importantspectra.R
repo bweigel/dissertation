@@ -4,7 +4,8 @@ library(magrittr)
 library(dplyr)
 source("/home/mori/IPB/thesis/supplementary/R scripts/WEB346 - Spectra/spreadspec.R")
 
-DIR <- "/media/mori/Stuff/LCMS/WEB2015-II/MzXML/"
+#DIR <- "/media/mori/Stuff/LCMS/WEB2015-II/MzXML/"
+DIR <- "/media/bweigel/Stuff/LCMS/WEB2015-II/MzXML/"
 WD <- "/home/mori/IPB/thesis/supplementary/R scripts/WEB346 - Spectra/"
 
 load("/home/mori/IPB/thesis/supplementary/R scripts/WEB346 - Spectra/peaks.Rda")
@@ -142,17 +143,17 @@ comparespec(scans, file=paste(WD, "Compare_flavanones_CID45.pdf", sep=""), tresh
 
 scans <- data.frame(file = c("WEB346_S_1_pMS2.mzXML", "WEB346_S_2_pMS2.mzXML","WEB346_E_3_pMS2,HCD_317,303.mzXML"),
                     scan = c(3804, 3516, 3644))
-comparespec(scans, file=paste(WD, "Compare_flavanons_HCD75_100.pdf", sep=""), tresh=2.5, range=c(50,320), srt=10, ajd=0)
+comparespec(scans, file=paste(WD, "Compare_flavanons_HCD75_100.pdf", sep=""), tresh=2.5, range=c(50,320), srt=10, adj=0)
 
 ##########################################
 
 scans <- data.frame(file = c("WEB346_S_5_pMS2.mzXML", "WEB346_S_6_pMS2.mzXML", "WEB346_S_7_pMS2.mzXML", "WEB346_S_8_pMS2.mzXML", "WEB346_E_7_pMS2,HCD_315,301.mzXML"),
                     scan = c(3454, 3314, 3486, 3482, 3631))
-comparespec(scans, file=paste(WD, "Compare_flavones_CID45.pdf", sep=""), tresh = 1, range=c(80,320))
+comparespec(scans, file=paste(WD, "Compare_flavones_CID45.pdf", sep=""), tresh = 0.5, range=c(80,320), srt=0, adj=0)
 
 scans <- data.frame(file = c("WEB346_S_5_pMS2.mzXML","WEB346_E_5_pMS2,HCD_285,271.mzXML", "WEB346_S_6_pMS2.mzXML", "WEB346_D_6_pMS2,HCD_301,287.mzXML", "WEB346_E_7_pMS2,HCD_315,301.mzXML"),
                     scan = c(3780, 3760, 3484, 3468, 3632))
-comparespec(scans, file=paste(WD, "Compare_flavones_HCD75_100.pdf", sep=""), tresh = 2.5, range=c(50,320), rnd=4, srt=90, adj=0)
+comparespec(scans, file=paste(WD, "Compare_flavones_HCD75_100.pdf", sep=""), tresh = 0.5, range=c(50,320), rnd=4, srt=90, adj=0)
 
 ##########################################
 scans <- data.frame(file = c("WEB346_S_15_pMS2_287,301.mzXML", "WEB346_S_16_pMS2.mzXML", "WEB346_S_17_pMS2.mzXML", "WEB346_E_16_pMS2_303,317,331.mzXML", "WEB346_B_16_pMS2_303,317,331.mzXML", "WEB346_B_17_pMS2_319,333,347,361.mzXML", "WEB346_B_17_pMS2_319,333,347,361.mzXML"),

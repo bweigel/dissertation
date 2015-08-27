@@ -14,7 +14,7 @@ the.frags <- data.frame(fragment = c("CH3.", "CH4", "CO", "H", "CO2", "H2O", "CH
 library(dplyr)
 library(data.table)
 
-the.formulae <- expand.grid(O = 0:8, H=0:20, C=0:20)
+the.formulae <- expand.grid(O = 0:8, H=0:20, C=0:18)
 
 the.atoms %<>% data.table
 the.formulae %<>% mutate(mass = {O*the.atoms[atom == "O"]$mass+

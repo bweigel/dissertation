@@ -53,7 +53,7 @@ The labels \frag{\textit{i,j}}{A}{+} and \frag{\textit{i,j}}{B}{+} refer to frag
   \begin{figureframe}
     \includegraphics[scale=1]{usr/graphics/static/fragmentation_nomenclature2}
   \end{figureframe}
-  \caption{Ion fragment nomenclature of flavone aglycones as proposed by Ma \etal, illustrated on naringenin.}
+  \caption{Ion fragment nomenclature of flavonoid aglycones as proposed by Ma \etal, illustrated on naringenin.}
   \label{fig:ion_nomenclature}
 \end{figure}
 
@@ -84,10 +84,13 @@ In this work the complementarity of two activation methods, \gls{cid} and \gls{h
       \molnum{luteolin} &  luteolin & 287 & d & H & OH & OH & H \\
       \molnum{diosmetin} &  diosmetin & 301 & d & H & OH & OCH\textsubscript{3} & H \\
       \molnum{chrysoeriol} &  chrysoeriol & 301 & d & H & OH & OCH\textsubscript{3} & H \\
+      \molnum{dimethylluteolin} &  luteolin-3',4'-dimethylether & 301 & d & H & \cf{OCH3} & \cf{OCH3} & H \\
       \midrule
       \molnum{kaempferol} &  kaempferol & 287 & d & OH & H & OH & H \\
       \molnum{quercetin}  &  quercetin & 303 & d & OH & OH & OH & H \\
+      \molnum{isorhamnetin} & isorhamnetin & 317 & d & OH & \cf{OCH3} & OH & H \\
       \molnum{myricetin}  &  myricetin & 317 & d & OH & OH & OH & OH \\
+      \molnum{myricetin-mme}  &  myricetin-3'-methylether & 331 & d & OH & \cf{OCH3} & OH & OH \\
       \bottomrule
     \end{tabularx}
  % \end{subtable}%
@@ -103,21 +106,15 @@ Neutral losses of water and \cf{C2H2O} were common and the highest \gls{mz} obse
 The most prominent peaks in the \gls{cid} spectra stemmed from cleavages of the C-ring and matched the \frag{1,3}{A}{+} and (\frag{1,4}{B}{+}-2H) ions.
 
 \Gls{hcd}-spectra of \molref{ponciretin} and \molref{hesperetin} were recorded and turned out to be quite different from the corresponding \gls{cid}-spectra (\autoref{tab:cmp_flavanones}).
-The higher energy used for the \glsentrytext{hcd}-spectra shifts the recorded peaks to smaller \mz.
+The higher energy used for the activation via \glsentrytext{hcd} shifts the recorded peaks to smaller \mz.
 High-mass ions stemming from neutral losses were not observed in the \gls{hcd} spectra.
 Instead, \gls{hcd} seems to give rise to smaller ions that originate primarily from C-ring cleavage.
-The ion with \mz 153 was most abundant in \gls{hcd} spectra, as indicated by the corresponding peak at \SI{100}{\percent} relative intensity.
-
-Figure \ref{fig:hcd_frag_hesp} illustrates the major pathways suggested for the fragmentation of \molref{hesperetin} under \gls{hcd} conditions.
-The mechanisms proposed for the development of \frag{1,3}{B}{+} and \frag{1,4}{B}{+} respectively are shown by \autoref{fig:mechanism_hcd_hesp}.
-After protonation of \molref{hesperetin} to the molecular ion at the keto-group and a subsequent 1,3-hydride-shift, the C-ring can undergo a \gls{rda} reaction affording the \frag{1,3}{B}{+} ion, which can further undergo neutral losses.
-The generation of the \frag{1,4}{B}{+} ion involves multiple electron movements.
+The ion with \mz{153} was most abundant in \gls{hcd} spectra, as indicated by the corresponding peak with a relative intensity of \SI{100}{\percent}.
+This is notably different from the \gls{cid} spectra, where the \mz associated with the (\frag{1,4}{B}{+}-2H) ion is at \SI{100}{\percent}. 
 
 
 \begin{table}[htpb]\centering\small
-  \caption{Product ions formed from the protonated molecular ions [M+H]\textsuperscript{+} of the flavanones \molref{naringenin} -- \molref{hed} in \gls{cid} mode (\SI{45}{\electronvolt}). {\footnotesize
- \textsuperscript{\textdagger} cannot be distinguished from  (\frag{1,4}{B}{+}-2\,H-CO), 
- \textsuperscript{\textdaggerdbl} cannot be distinguished from (\frag{1,4}{B}{+}-2\,H-CO-\cf{CH3OH})}}
+  \caption{Product ions formed from the protonated molecular ions [M+H]\textsuperscript{+} of the flavanones \molref{naringenin} -- \molref{hed} in \gls{cid} mode (\SI{45}{\electronvolt}).}
   \label{tab:ions_flavanones}
   \begin{tabular}{>{\footnotesize}p{0.25\textwidth}ccccc}
     \toprule
@@ -143,7 +140,9 @@ The generation of the \frag{1,4}{B}{+} ion involves multiple electron movements.
 
 
 \begin{table}[htpb]\centering\small
-  \caption{Comparison of \gls{cid} (\SI{45}{\electronvolt}) and \gls{hcd}-spectra (\SI{75}{\electronvolt}) of ponciretin (\molref{ponciretin}) and hesperetin (\molref{hesperetin}). Activation via \gls{hcd} affords smaller fragments derived from an upstream C-ring cleavage.}
+  \caption{Comparison of \gls{cid} (\SI{45}{\electronvolt}) and \gls{hcd}-spectra (\SI{75}{\electronvolt}) of ponciretin (\molref{ponciretin}) and hesperetin (\molref{hesperetin}). Activation via \gls{hcd} affords smaller fragments derived from an upstream C-ring cleavage.  {\footnotesize
+ \textsuperscript{\textdagger} cannot be distinguished from  (\frag{1,4}{B}{+}-2\,H-CO), 
+ \textsuperscript{\textdaggerdbl} cannot be distinguished from (\frag{1,4}{B}{+}-2\,H-CO-\cf{CH3OH})}}
   \label{tab:cmp_flavanones}
   \begin{tabular}{p{0.25\textwidth}cccc}
     \toprule
@@ -159,9 +158,9 @@ The generation of the \frag{1,4}{B}{+} ion involves multiple electron movements.
     \frag{}{AC}{+}  &   5.4 &  27.9 &   &   \\
     \frag{1,3}{A}{+}  &   80.1 &  22.2 &  100 &  100 \\
     (\frag{1,4}{B}{+}-2H) & 100 & 100 &  9.9 &  4.3 \\
-    (\frag{1,3}{B}{+}-2H) &   4 &  & 35.8 &  14.3 \\
+    (\frag{1,3}{B}{+}-2H)\textsuperscript{\textdagger} &   4 &  & 35.8 &  14.3 \\
     (\frag{1,3}{B}{+}-2H-\cf{CH3}) &  &  & 10.2 &  10.2 \\
-    (\frag{1,3}{B}{+}-2H-\cf{CH3OH}) &  & &  &  16.7 \\
+    (\frag{1,3}{B}{+}-2H-\cf{CH3OH})\textsuperscript{\textdaggerdbl} &  & &  &  16.7 \\
     (\frag{1,3}{B}{+}-\cf{CO}-\cf{CH3OH}) &  &  &  &  29.7 \\
     \bottomrule
   \end{tabular}
@@ -197,6 +196,12 @@ The generation of the \frag{1,4}{B}{+} ion involves multiple electron movements.
 
 
 
+Figure \ref{fig:hcd_frag_hesp} illustrates the major pathways suggested for the fragmentation of \molref{hesperetin} under \gls{hcd} conditions.
+The mechanisms proposed for the development of \frag{1,3}{B}{+} and \frag{1,4}{B}{+} respectively are shown by \autoref{fig:mechanism_hcd_hesp}.
+After protonation of \molref{hesperetin} at the keto-group and a subsequent 1,3-hydride-shift, the C-ring can undergo a \gls{rda} reaction affording the \frag{1,3}{B}{+} ion, which can further undergo neutral losses.
+The generation of the \frag{1,4}{B}{+} ion involves multiple simultaneous electron movements.
+
+
 \begin{figure}[htpb]\centering
   \begin{figureframe}
  %   \begin{subfigure}{\textwidth}
@@ -209,7 +214,7 @@ The generation of the \frag{1,4}{B}{+} ion involves multiple electron movements.
     %  \caption{}\label{fig:hesp_cid}
     %\end{subfigure}%
   \end{figureframe}
-  \caption{Major fragmentation pathways of hesperetin upon activation using \textbf{\subref{fig:hesp_hcd}} \gls{hcd} at \SI{75}{\electronvolt} or \textbf{\subref{fig:hesp_cid}} \gls{cid} at \SI{45}{\electronvolt}.}
+  \caption{Major fragmentation pathways of hesperetin upon activation using \gls{hcd} conditions at \SI{75}{\electronvolt}}% or \textbf{\subref{fig:hesp_cid}} \gls{cid} at \SI{45}{\electronvolt}.}
   \label{fig:hcd_frag_hesp}
 \end{figure}
 
@@ -231,6 +236,71 @@ The generation of the \frag{1,4}{B}{+} ion involves multiple electron movements.
 \end{figure}
 
 
+
+
+\section{Fragmentation of flavones}
+
+The \gls{cid}-spectra of the flavones (\molref{apigenin} -- \molref{dimethylluteolin}) are summarized in \autoref{tab:ions_flavones}.
+The \mz{} of the molecular ions [M+H]\textsuperscript{+} were observed for the unmethylated compounds apigenin (\molref{apigenin}) and luteolin (\molref{luteolin}).
+Conversely the \mz{} corresponding to an ion after methyl loss [M+H-\cf{CH3}]\textsuperscript{+} was the largest observed for the methylated derivatives (\molref{diosmetin} -- \molref{dimethylluteolin}).
+The \mz{} of the [M+H-\cf{CH3}]\textsuperscript{+} ion was also the only one observed for the monomethyl derivatives (\molref{diosmetin}, \molref{chrysoeriol}).
+In earlier studies it was already shown, that flavones methylated at the B-ring have a low tedency for fragmentation in \gls{cid} experiments \citep{Ma1997}.
+In contrast to the monomethylated compounds \molref{diosmetin} and \molref{chrysoeriol}, the dimethylated luteolin-3',4'-dimethylether (\molref{dimethylluteolin}) also showed a loss of methane (\mz{16}) followed by further losses of water (\mz{18}) and \cf{CO} (\mz{28}).
+
+The unmethylated compounds \molref{apigenin} and \molref{luteolin} showed neutral losses of water, \cf{C2H2O}, \cf{C2H2} and carbon monoxide.
+The main peak in the spectra of these compounds was at \mz{153}, which corresponds to the \frag{1,3}{A}{+} ion.
+
+
+\begin{table}[htpb]\centering\small
+  \caption{Product ions formed from the protonated molecular ions [M+H]\textsuperscript{+} of the flavanones \molref{apigenin} -- \molref{dimethylluteolin} in \gls{cid} mode (\SI{45}{\electronvolt}).} 
+  \label{tab:ions_flavones}
+  \begin{tabular}{>{\footnotesize}p{0.25\textwidth}ccccc}
+    \toprule
+  ion  & \small \molref{apigenin} & \small \molref{luteolin} & \small \molref{diosmetin} & \small \molref{chrysoeriol} & \molref{dimethylluteolin} \\
+    \midrule
+    \protect[M+H]\textsuperscript{+} &  25.6  & 27.2  &   &  & \\
+    \protect[M+H-\cf{CH3}]\textsuperscript{+} &   &   & 100  & 100  & 100 \\
+    \protect[M+H-\cf{CH4}]\textsuperscript{+} &   &   &   &   & 87.4 \\
+    \protect[M+H-\cf{CH4}-CO]\textsuperscript{+} &   &   &   &   & 16.9 \\
+    \protect[M+H-\cf{CH4}-\cf{H2O}-CO]\textsuperscript{+} &   &   &   &   & 3.1 \\
+    \protect[M+H-\cf{H2O}]\textsuperscript{+} &   & 7.8  &   &  & \\
+   \protect[M+H-\cf{CHO}]\textsuperscript{+}  &  & 25.5 &  &  & \\
+   \protect[M+H-\cf{C2H2O}]\textsuperscript{+}  & 18.6  & 13.9  &  & &  \\
+   \protect[M+H-\cf{H2O}-CO]\textsuperscript{+}  & 10.6 & 13.4  &  &  &  \\
+   \protect[M+H-\cf{C2H2O}-\cf{C2H2}]\textsuperscript{+}  & 7 & 5.4 &   &  & \\
+    \frag{1,3}{A}{+}  & 100 & 100  &   &   &  \\
+    \frag{1,3}{B}{+}  & 13.3 & 11.7  &     &  & \\
+    \frag{0,2}{B}{+} & 5.1  & 10.4  &   &   &  \\
+    \frag{0,4}{B}{+}  & 5.2  & 7.1  &  &   & \\
+    (\frag{0,4}{B}{+}-\cf{H2O})  & 11.6  & 11.5  &  &  &  \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+\begin{table}[htpb]\centering\small
+  \caption{Comparison of \gls{cid} (\SI{45}{\electronvolt}) and \gls{hcd}-spectra (\SI{75}{\electronvolt} and \SI{100}{\electronvolt}) of chrysoeriol (\molref{chrysoeriol}) and luteolin-3',4'-dimethylether (\molref{dimethylluteolin}).}
+  \label{tab:cmp_flavones}
+  \begin{tabular}{p{0.3\textwidth}cccccc}
+    \toprule
+    \multirow{2}{*}{\small ion} & \multicolumn{2}{c}{\small \gls{cid}} & \multicolumn{2}{c}{\small \gls{hcd} (\SI{75}{\electronvolt})} & \multicolumn{2}{c}{\small \gls{hcd} (\SI{100}{\electronvolt})} \\
+    \cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+    &  \molref{chrysoeriol} & \molref{dimethylluteolin} &  \molref{chrysoeriol} & \molref{dimethylluteolin} & \molref{chrysoeriol} & \molref{dimethylluteolin} \\
+    \midrule
+    \protect[M+H-\cf{CH3}]\textsuperscript{+} & 100  & 100  & 19.1  &  & 0.7  &  \\
+    \protect[M+H-\cf{CH4}]\textsuperscript{+} &   & 87.4  &   &  &  & 24.8 \\
+    \protect[M+H-\cf{CH3}-CO]\textsuperscript{+} &   &   & 100  &  & 46.7  & \\
+    \protect[M+H-\cf{CH4}-CO]\textsuperscript{+} &   & 16.9  &   &  & 38.1  & 13.5 \\
+    \protect[M+H-\cf{CH4}-\cf{H2O}-CO]\textsuperscript{+} &   & 3.1 &   &  &  & 31.3 \\
+    \protect[M+H-\cf{H2O}-CO-\cf{C2H2}]\textsuperscript{+} &   &   & 12.5  &  & 73.7 &  \\
+    \frag{1,3}{A}{+} &   &   & 9.4  &  & 100 & 100 \\
+    (\frag{0,2}{B}{+}-\cf{H2O}-CO) &   &   &   &  & 4.3 & \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+
 \begin{figure}[htpb]\centering
   \begin{figureframe}
    \includegraphics[scale=1]{usr/graphics/static/chrysoeriol_HCD}
@@ -248,13 +318,36 @@ The generation of the \frag{1,4}{B}{+} ion involves multiple electron movements.
 
 
 
-
-
-
-
-\section{Fragmentation of flavones}
 \section{Fragmentation of flavonols}
-\section{Fragmentation of cinnamic acids}
+
+\begin{table}[htpb]\centering\small
+  \caption{Product ions formed from the protonated molecular ions [M+H]\textsuperscript{+} of the flavonols \molref{kaempferol} -- \molref{myricetin} in \gls{cid} mode (\SI{45}{\electronvolt}).}
+  \label{tab:ions_flavonols}
+  \begin{tabular}{>{\footnotesize}p{0.25\textwidth}cccc}
+    \toprule
+  ion  & \molref{kaempferol} & \molref{quercetin} & \molref{isorhamnetin} & \molref{myricetin}  \\
+    \midrule
+
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+\begin{table}[htpb]\centering\small
+  \caption{Comparison of \gls{cid} (\SI{45}{\electronvolt}) and \gls{hcd}-spectra (\SI{75}{\electronvolt}) of isorhamnetin (\molref{isorhamnetin}) and myricetin-3'-methylether (\molref{myricetin-mme}). Activation via \gls{hcd} affords smaller fragments derived from an upstream C-ring cleavage.}
+  \label{tab:cmp_flavonols}
+  \begin{tabular}{p{0.25\textwidth}cccc}
+    \toprule
+    \multirow{2}{*}{\small ion} & \multicolumn{2}{c}{\small \gls{cid}} & \multicolumn{2}{c}{\small \gls{hcd}} \\
+    \cmidrule(lr){2-3}\cmidrule(lr){4-5}
+    & \small \molref{isorhamnetin} & \molref{myricetin-mme} & \molref{isorhamnetin} & \molref{myricetin-mme} \\
+    \midrule
+ 
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+%\section{Fragmentation of cinnamic acids}
 
 \section{Conclusion/Discussion}
 

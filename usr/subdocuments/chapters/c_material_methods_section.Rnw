@@ -725,5 +725,14 @@ The acetonitrile content was increased to 100\,\% in 21\,min and was kept at 100
 %Beside the \gls{pda} data, four distinct traces (200, 220, 280 and 325\,nm) were also recorded.
 Peaks were integrated from the 280\,nm trace using the software provided by the manufacturer of the device.
 
-\subsection{\glsentryfirst{lcms} measurements}
+\subsection{\Glsentryfirst{lcmsms} measurements}
 
+The positive and negative ion high resolution \gls{esi} and \gls{cid} MSn spectra as well as \gls{hcd} MS/MS spectra were obtained from an Orbitrap Elite mass spectrometer (Thermo Fisher Scientific, Bremen, Germany) equipped with an \gls{hesi} ion source (positive spray voltage \SI{4.5}{\kilo\volt}, negative spray voltage \SI{3.5}{\kilo\volt}, capillary temperature \degC{275}, source heater temperature \degC{250}, \gls{ftms} \gls{rp} \num{30000}). 
+Nitrogen was used as sheath and auxiliary gas. 
+The MS system was coupled with an \gls{uhplc} system (Dionex UltiMate 3000, Thermo Fisher Scientific), equipped with a RP-C18 column (particle size \SI{1.9}{\micro\metre}, pore size \SI{175}{\angstrom}, 50\,x\,\SI{2.1}{\milli\metre} inner diameter, Hypersil GOLD, Thermo Fisher Scientific, column temperature \degC{30}) and a photodiode array detector (\SIrange{190}{400}{\nano\metre}, Thermofisher Scientific). 
+For the \gls{uhplc} a gradient system was used starting from \cf{H2O}:\cf{CH3CN} 95:5 (each containing \SI{0.2}{\percent} formic acid) raised to 0:100 within 10\,min and held at 0:100 for further 3\,min. 
+The flow rate was \SI{150}{\micro\litre\per\minute}. 
+
+The mass spectra (buffer gas: helium) were recorded using \glspl{nce} of \SIrange{30}{45}{\percent} and \SIrange{75}{100}{\percent} for \gls{cid} and \gls{hcd} mass spectra respectively (see Appendix).
+The instrument was externally calibrated using the Pierce\textsuperscript{\textregistered} LTQ Velos ESI positive ion calibration solution (product number 88323, Thermofisher Scientific, Rockford, IL, 61105 USA) and the Pierce\textsuperscript{\textregistered} LTQ Velos ESI negative ion calibration solution (product number 88324, Thermofisher Scientific, Rockford, IL, 61105 USA) for positive and negative ionization mode respectively.
+%The data were evaluated by the Xcalibur software 2.7 (Thermo Fisher Scientific). 

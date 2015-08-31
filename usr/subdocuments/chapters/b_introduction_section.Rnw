@@ -6,31 +6,24 @@
 
 \chapter{Introduction}\index{capital letters}
 
-\capital{S}ome introductionary text
+%\capital{S}ome introductionary text
 
 \section{Natural products and secondary metabolites} 
-\subsection{General}
-\subsection{Classes of natural products}
-\subsubsection{Terpenoids and Steroids} ... here is some text
-\subsubsection{Polyketides and non-ribosomal peptides} ... here is some text
-\subsubsection{Alkaloids} ... here is some text
-\subsubsection{Phenylpropanoids} ... here is some text
+
+\paragraph{Terpenoids and Steroids} ... here is some text
+\paragraph{Polyketides and non-ribosomal peptides} ... here is some text
+\paragraph{Alkaloids} ... here is some text
+\paragraph{Phenylpropanoids} ... here is some text
 Flavonoids and phenyl propanoids have important functions in nature and can function as protection against high UV-exposure, signaling molecules or transcriptional regulators \cite{Grotewold2006,Andersen2006}.
 
-\section{Alkylating reactions in nature}
-\subsection{Methylation}
-\subsection{Prenylation}
-\subsection{Glycosylation}
+\section{\Glsentryfirst{mt} as tailoring enzymes}
+
+
 
 \section{Usage and expansion of natures reaction toolbox}
 \subsection{Terpene synthases and elongases}
 \subsection{Methyl transferases}
 \subsection{Glycosyl transferases}
-\subsection{Other important enzymes in biotech research}
-\paragraph{BMVOs}
-\paragraph{Esterases/Lipases}
-\paragraph{Oxidases}
-\paragraph{Lyases}
-\paragraph{Transaminases}
+
 
 \section{Conclusion}

@@ -7,125 +7,129 @@
 \makeglossaries
 
 % analytics
-\newacronym{psd}{PSD}{post-source decay}
-\newacronym{sid}{SID}{surface-induced dissociation}
-\newacronym{ecd}{ECD}{electron capture dissociation}
-\newacronym{rda}{rDA}{retro-Diels-Alder}
-
-\newacronym{lc}{LC}{liquid chromatography}
-\newacronym{apci}{APCI}{atmospheric pressure chemical ionisation}
-\newacronym{ei}{EI}{electron impact}
-\newacronym{auc}{AUC}{area under the curve}
-\newacronym{3o4m}{3O4M}{3'-hydroxy-4'-methoxy}
-\newacronym{4o3m}{4O3M}{4'-hydroxy-3'-methoxy}
-\newacronym{iupac}{IUPAC}{International Union of Pure and Applied Chemistry}
-\newacronym{aov}{ANOVA}{\emph{An}alysis \emph{o}f \emph{Va}riance}
-\newacronym{meplot}{ME-plot}{main effects plot}
-\newacronym{iaplot}{IAE-plot}{interaction effects plot}
-\newacronym{msms}{MS/MS}{tandem mass-spectrometry}
-\newacronym{esi}{ESI}{electrospray ionization}
-\newacronym{maldi}{MALDI}{matrix-assisted laser desorption/ionization}
+\newacronym[nonumberlist]{psd}{PSD}{post-source decay}
+\newacronym[nonumberlist]{sid}{SID}{surface-induced dissociation}
+\newacronym[nonumberlist]{ecd}{ECD}{electron capture dissociation}
+\newacronym[nonumberlist]{rda}{rDA}{retro-Diels-Alder}
+\newacronym[nonumberlist]{hesi}{H-ESI}{heated-electrospray ionization}
+\newacronym[nonumberlist]{uhplc}{UHPLC}{ultra-high performance liquid chromatography}
+\newacronym[plural=NCE, nonumberlist, firstplural=normalized collision energies (NCE)]{nce}{NCE}{normalized collision energy}
+\newacronym[nonumberlist]{lc}{LC}{liquid chromatography}
+\newacronym[nonumberlist]{ftms}{FTMS}{fourier transform mass spectrometry}
+\newacronym[nonumberlist]{rp}{RP}{resolving power}
+\newacronym[nonumberlist]{apci}{APCI}{atmospheric pressure chemical ionisation}
+\newacronym[nonumberlist]{ei}{EI}{electron impact}
+\newacronym[nonumberlist]{auc}{AUC}{area under the curve}
+\newacronym[nonumberlist]{3o4m}{3O4M}{3'-hydroxy-4'-methoxy}
+\newacronym[nonumberlist]{4o3m}{4O3M}{4'-hydroxy-3'-methoxy}
+\newacronym[nonumberlist]{iupac}{IUPAC}{International Union of Pure and Applied Chemistry}
+\newacronym[nonumberlist]{aov}{ANOVA}{\emph{An}alysis \emph{o}f \emph{Va}riance}
+\newacronym[nonumberlist]{meplot}{ME-plot}{main effects plot}
+\newacronym[nonumberlist]{iaplot}{IAE-plot}{interaction effects plot}
+\newacronym[nonumberlist]{msms}{MS/MS}{tandem mass-spectrometry}
+\newacronym[nonumberlist]{esi}{ESI}{electrospray ionization}
+\newacronym[nonumberlist]{maldi}{MALDI}{matrix-assisted laser desorption/ionization}
 \newacronym[nonumberlist]{mz}{\textit{m/z}}{mass-to-charge ratio}
-\newacronym{cid}{CID}{collsion induced dissociation}
-\newacronym{hcd}{HCD}{higher-energy collisional dissociation}
-\newacronym{pca}{PCA}{principal component analysis}
-\newacronym{gst}{GST}{Glutathion \textit{S}-transferase}
-\newacronym{pal}{PAL}{phenylalanine ammonia-lyase}
-\newacronym{chs}{CHS}{chalcone synthase}
-\newacronym{nos}{nos}{nopaline synthase}
-\newacronym{eec}{EEC}{enthalpy-enthropy compensation}
-\newacronym{dpi}{DPI}{diffraction precision indicator \citep{DaresburyLaboratory1997}}
-\newacronym[plural={NRPS}]{nrps}{NRPS}{non-ribosomal peptide synthase}
-\newacronym{sar}{SAR}{structure activity relationship}
-\newacronym{qsar}{QSAR}{quantitative structure activity relationship}
-\newacronym{abpp}{ABPP}{activity based protein profiling}
-\newacronym{seam}{\protect\textit{Se}AM}{\protect\textit{Se}-adenosyl selenomethionine}
-\newacronym{cuaac}{CuAAC}{\cf{Cu^I}-catalyzed azide-alkyne 1,3-dipolar cycloaddition}
-\newacronym{dmso}{DMSO}{dimethyl sulfoxide}
-\newacronym{rna}{RNA}{ribonucleic acid}
-\newacronym[plural={PKS}]{pks}{PKS}{poly ketide synthase}
-\newacronym{mt}{MT}{methyl transferase}
-\newacronym{pmt}{P-MT}{protein methyl transferase}
+\newacronym[nonumberlist]{cid}{CID}{collsion induced dissociation}
+\newacronym[nonumberlist]{hcd}{HCD}{higher-energy collisional dissociation}
+\newacronym[nonumberlist]{pca}{PCA}{principal component analysis}
+\newacronym[nonumberlist]{gst}{GST}{Glutathion \textit{S}-transferase}
+\newacronym[nonumberlist]{pal}{PAL}{phenylalanine ammonia-lyase}
+\newacronym[nonumberlist]{chs}{CHS}{chalcone synthase}
+\newacronym[nonumberlist]{nos}{nos}{nopaline synthase}
+\newacronym[nonumberlist]{eec}{EEC}{enthalpy-enthropy compensation}
+\newacronym[nonumberlist]{dpi}{DPI}{diffraction precision indicator \citep{DaresburyLaboratory1997}}
+\newacronym[plural={NRPS}, nonumberlist]{nrps}{NRPS}{non-ribosomal peptide synthase}
+\newacronym[nonumberlist]{sar}{SAR}{structure activity relationship}
+\newacronym[nonumberlist]{qsar}{QSAR}{quantitative structure activity relationship}
+\newacronym[nonumberlist]{abpp}{ABPP}{activity based protein profiling}
+\newacronym[nonumberlist]{seam}{\protect\textit{Se}AM}{\protect\textit{Se}-adenosyl selenomethionine}
+\newacronym[nonumberlist]{cuaac}{CuAAC}{\cf{Cu^I}-catalyzed azide-alkyne 1,3-dipolar cycloaddition}
+\newacronym[nonumberlist]{dmso}{DMSO}{dimethyl sulfoxide}
+\newacronym[nonumberlist]{rna}{RNA}{ribonucleic acid}
+\newacronym[plural={PKS}, nonumberlist]{pks}{PKS}{poly ketide synthase}
+\newacronym[nonumberlist]{mt}{MT}{methyl transferase}
+\newacronym[nonumberlist]{pmt}{P-MT}{protein methyl transferase}
 \newacronym[nonumberlist, first={DNA}]{dna}{DNA}{desoxyribonucleic acid}
-\newacronym{dmt}{DNA MT}{DNA methyl transferase}
-\newacronym{omt}{\protect\textit{O}-MT}{\protect\textit{O}-methyl transferase}
-\newacronym{cmt}{\protect\textit{C}-MT}{\protect\textit{C}-methyl transferase}
-\newacronym{smt}{\protect\textit{S}-MT}{\protect\textit{S}-methyl transferase}
-\newacronym{nmt}{\protect\textit{N}-MT}{\protect\textit{N}-methyl transferase}
-\newacronym{pda}{PDA}{photo diode array}
-\newacronym[first={UV/VIS}]{uvvis}{UV/VIS}{ultra violet/visible (light spectrum)}
+\newacronym[nonumberlist]{dmt}{DNA MT}{DNA methyl transferase}
+\newacronym[nonumberlist]{omt}{\protect\textit{O}-MT}{\protect\textit{O}-methyl transferase}
+\newacronym[nonumberlist]{cmt}{\protect\textit{C}-MT}{\protect\textit{C}-methyl transferase}
+\newacronym[nonumberlist]{smt}{\protect\textit{S}-MT}{\protect\textit{S}-methyl transferase}
+\newacronym[nonumberlist]{nmt}{\protect\textit{N}-MT}{\protect\textit{N}-methyl transferase}
+\newacronym[nonumberlist]{pda}{PDA}{photo diode array}
+\newacronym[first={UV/VIS}, nonumberlist]{uvvis}{UV/VIS}{ultra violet/visible (light spectrum)}
 \newacronym[nonumberlist, first={\AA}]{a}{\AA}{\AA ngström, 0.1\,nm}
-\newacronym{phenix}{PHENIX}{\href{https://www.phenix-online.org/}{Phyton-based Hierarchial Environment for Integrated Xtallography}}
+\newacronym[nonumberlist]{phenix}{PHENIX}{\href{https://www.phenix-online.org/}{Phyton-based Hierarchial Environment for Integrated Xtallography}}
 \newacronym[first={PDB}]{pdb}{PDB}{Protein Data Base}
-\newacronym{coot}{\textit{Coot}}{\href{http://www2.mrc-lmb.cam.ac.uk/personal/pemsley/coot/}{Crystallographic Object-Oriented Toolkit}}
+\newacronym[nonumberlist]{coot}{\textit{Coot}}{\href{http://www2.mrc-lmb.cam.ac.uk/personal/pemsley/coot/}{Crystallographic Object-Oriented Toolkit}}
 \newacronym[nonumberlist]{mr}{MR}{molecular replacement}
-\newacronym{ccp4}{CCP4}{\href{http://www.ccp4.ac.uk/}{Collaborative Computational Project No. 4}}
-\newacronym[symbol=GC]{gc}{GC}{gas chromatography}
-\newacronym[symbol=CD]{cd}{CD}{circulary dichroism}
-\newacronym[symbol=FPLC]{fplc}{FPLC}{fast protein liquid chromatography}
-\newacronym[symbol=GC/MS]{gcms}{GC/MS}{gas chromatography coupled mass-spectrometry}
-\newacronym[symbol=LC/MS]{lcms}{LC/MS}{liquid chromatography coupled mass-spectrometry}
-\newacronym[symbol=LC-MS/MS]{lcmsms}{LC-MS/MS}{liquid chromatography-tandem mass spectrometry}
-\newacronym[first={rmsd}]{rmsd}{rmsd}{root mean squared deviation}
-\newacronym[symbol=HPLC]{hplc}{HPLC}{high-performance liquid chromatography}
-\newacronym[symbol=NMR]{nmr}{NMR}{nuclear magnetic resonance}
-\newacronym{hrp}{HRP}{horseradish peroxidase}
-\newacronym[symbol=HRMS]{hrms}{HRMS}{high resolution mass spectrometry}
-\newacronym{page}{PAGE}{polyacrylamide gel electrophoresis}
-\newacronym{sds}{SDS}{sodium dodecylsulfate}
-\newacronym{edta}{EDTA}{ethylenediaminetetraacetic acid}
+\newacronym[nonumberlist]{ccp4}{CCP4}{\href{http://www.ccp4.ac.uk/}{Collaborative Computational Project No. 4}}
+\newacronym[symbol=GC, nonumberlist]{gc}{GC}{gas chromatography}
+\newacronym[symbol=CD, nonumberlist]{cd}{CD}{circulary dichroism}
+\newacronym[symbol=FPLC, nonumberlist]{fplc}{FPLC}{fast protein liquid chromatography}
+\newacronym[symbol=GC/MS, nonumberlist]{gcms}{GC/MS}{gas chromatography coupled mass-spectrometry}
+\newacronym[symbol=LC/MS, nonumberlist]{lcms}{LC/MS}{liquid chromatography coupled mass-spectrometry}
+\newacronym[symbol=LC-MS/MS, nonumberlist]{lcmsms}{LC-MS/MS}{liquid chromatography-tandem mass spectrometry}
+\newacronym[first={rmsd}, nonumberlist]{rmsd}{rmsd}{root mean squared deviation}
+\newacronym[symbol=HPLC, nonumberlist]{hplc}{HPLC}{high-performance liquid chromatography}
+\newacronym[symbol=NMR, nonumberlist]{nmr}{NMR}{nuclear magnetic resonance}
+\newacronym[nonumberlist]{hrp}{HRP}{horseradish peroxidase}
+\newacronym[symbol=HRMS, nonumberlist]{hrms}{HRMS}{high resolution mass spectrometry}
+\newacronym[nonumberlist]{page}{PAGE}{polyacrylamide gel electrophoresis}
+\newacronym[nonumberlist]{sds}{SDS}{sodium dodecylsulfate}
+\newacronym[nonumberlist]{edta}{EDTA}{ethylenediaminetetraacetic acid}
 \newacronym[nonumberlist]{rt}{RT}{room temperature}
-\newacronym{aic}{AIC}{affinity interaction chromatography}
+\newacronym[nonumberlist]{aic}{AIC}{affinity interaction chromatography}
 % units
 \newacronym[nonumberlist=true, firstplural={minutes (min)}, plural={min}]{min}{min}{minute}
 \newacronym[nonumberlist=true]{v}{V}{volume}
 \newacronym[nonumberlist, first={U}]{u}{U}{enzyme unit; measure for enzymatic activity (1\,U = 1\,\textmu mole/min = 1/60 \textmu kat)}
 \newacronym[nonumberlist]{bper}{B-PER}{bacterial protein extraction reagent}
-%\newacronym{sdspage}{sodium dodecylsulfate-polyacrylamid gel elecrtophoresis}%
-%\newacronym{pcr}{PCR}{polymerase chain reaction}
+%\newacronym[nonumberlist]{sdspage}{sodium dodecylsulfate-polyacrylamid gel elecrtophoresis}%
+%\newacronym[nonumberlist]{pcr}{PCR}{polymerase chain reaction}
 % enzymes
-%newacronym{pfomt}{PFOMT}{phenylpropanoid and flavonoid O-methyl transferase}
-\newacronym{comt}{COMT}{catechol O-methyl transferase}
-\newacronym{somt}{SOMT-2}{soy O-methyl transferase}
-\newacronym{sams}{SAMS}{\protect\textit{S}-adenosylmethionine synthase}
-%\newacronym{des}{DES}{deep eutectic solvent, see also \gls{nades}}
-\newacronym{ft}{FT}{Fourier transformation}
-\newacronym{nades}{NADES}{natural deep eutectic solvent}
-\newacronym{iex}{IEX}{ion exchange chromatography}
-\newacronym{gfp}{GFP}{green fluorescent protein}
-\newacronym{doe}{DoE}{design of experiments}
-\newacronym{ffd}{FrFD}{fractional factorial design}
-\newacronym{hic}{HIC}{hydrophobic interaction chromatography}
+%newacronym[nonumberlist]{pfomt}{PFOMT}{phenylpropanoid and flavonoid O-methyl transferase}
+\newacronym[nonumberlist]{comt}{COMT}{catechol O-methyl transferase}
+\newacronym[nonumberlist]{somt}{SOMT-2}{soy O-methyl transferase}
+\newacronym[nonumberlist]{sams}{SAMS}{\protect\textit{S}-adenosylmethionine synthase}
+%\newacronym[nonumberlist]{des}{DES}{deep eutectic solvent, see also \gls{nades}}
+\newacronym[nonumberlist]{ft}{FT}{Fourier transformation}
+\newacronym[nonumberlist]{nades}{NADES}{natural deep eutectic solvent}
+\newacronym[nonumberlist]{iex}{IEX}{ion exchange chromatography}
+\newacronym[nonumberlist]{gfp}{GFP}{green fluorescent protein}
+\newacronym[nonumberlist]{doe}{DoE}{design of experiments}
+\newacronym[nonumberlist]{ffd}{FrFD}{fractional factorial design}
+\newacronym[nonumberlist]{hic}{HIC}{hydrophobic interaction chromatography}
 % substances
-\newacronym[first={glutathione (GSH)}]{gsh}{GSH}{glutathione, \textgamma-\textsc{l}-glutamyl-\textsc{l}-cysteinylglycine}
-\newacronym{gssg}{GSSG}{glutathione disulfide}
-\newacronym{lb}{LB}{lysogeny broth}
-\newacronym{tb}{TB}{terrific broth}
-\newacronym[first={inlusion bodies (IBs)}, plural={IBs}, longplural={inclusion bodies}]{ib}{IB}{inclusion body}
-\newacronym{mmt}{MMT}{\protect\textsc{l}-malic acid/\glslink{mes}{MES}/\glslink{tris}{Tris}}
-\newacronym{ssg}{SSG}{succinate/sodium phosphate/glycine}
-\newacronym{iptg}{IPTG}{isopropyl-\textsc{d}-thiogalactopyranosid}
-\newacronym{tca}{TCA}{trichloro acetic acid}
-\newacronym{atp}{ATP}{adenosine triphosphate}
-\newacronym{pbs}{PBS}{phosphate buffered saline}
-\newacronym{nta}{NTA}{nitrilo triacetic acid}
-\newacronym{mw}{MW}{molecular weight}
+\newacronym[first={glutathione (GSH)}, nonumberlist]{gsh}{GSH}{glutathione, \textgamma-\textsc{l}-glutamyl-\textsc{l}-cysteinylglycine}
+\newacronym[nonumberlist]{gssg}{GSSG}{glutathione disulfide}
+\newacronym[nonumberlist]{lb}{LB}{lysogeny broth}
+\newacronym[nonumberlist]{tb}{TB}{terrific broth}
+\newacronym[first={inlusion bodies (IBs)}, nonumberlist, plural={IBs}, longplural={inclusion bodies}]{ib}{IB}{inclusion body}
+\newacronym[nonumberlist]{mmt}{MMT}{\protect\textsc{l}-malic acid/\glslink{mes}{MES}/\glslink{tris}{Tris}}
+\newacronym[nonumberlist]{ssg}{SSG}{succinate/sodium phosphate/glycine}
+\newacronym[nonumberlist]{iptg}{IPTG}{isopropyl-\textsc{d}-thiogalactopyranosid}
+\newacronym[nonumberlist]{tca}{TCA}{trichloro acetic acid}
+\newacronym[nonumberlist]{atp}{ATP}{adenosine triphosphate}
+\newacronym[nonumberlist]{pbs}{PBS}{phosphate buffered saline}
+\newacronym[nonumberlist]{nta}{NTA}{nitrilo triacetic acid}
+\newacronym[nonumberlist]{mw}{MW}{molecular weight}
 \newacronym[nonumberlist]{imac}{IMAC}{immobilized metal affinity chromatography}
 \newacronym[nonumberlist]{ipb}{IPB}{Leibniz-Institute of Plant Biochemistry}
 \newacronym[nonumberlist]{cv}{CV}{column volumes}
 \newacronym[nonumberlist]{tris}{Tris}{tris(hydroxymethyl)-aminomethane}
 \newacronym[nonumberlist]{bistris}{BisTris}{2-[Bis(2-hydroxyethyl)amino]-2-(hydroxymethyl)propane-1,3-diol}
-\newacronym{ac9}{AC-9}{anthracene-9-carboxylic acid}
+\newacronym[nonumberlist]{ac9}{AC-9}{anthracene-9-carboxylic acid}
 \newacronym[first={GdmCl}, nonumberlist]{gua}{GdmCl}{guanidinium hydrochloride}
 \newacronym[nonumberlist]{mes}{MES}{2-(\textit{N}-morpholino)ethanesulfonic acid}
 \newacronym[nonumberlist]{nps}{NPS}{nitrogen, phosphate, sulfate buffer}
 \newacronym[nonumberlist]{hepes}{HEPES}{2-[4-(2-hydroxyethyl)piperazin-1-yl]ethanesulfonic acid}
 \newacronym[first={DTT}, nonumberlist]{dtt}{DTT}{dithiothreitol; (2\textit{S},3\textit{S})-1,4-bis(sulfanyl)butane-2,3-diol}
 \newacronym[nonumberlist]{pmsf}{PMSF}{phenylmethylsulfonylfluoride}
-\newacronym[first={PCH}]{pch}{PCH}{propane-1,2-diol/choline chloride,\gls{nades}-mixture}
-\newacronym[first={GCH}]{gch}{GCH}{\textsc{d}-glucose/choline chloride,\gls{nades}-mixture}
+\newacronym[first={PCH}, nonumberlist]{pch}{PCH}{propane-1,2-diol/choline chloride,\gls{nades}-mixture}
+\newacronym[first={GCH}, nonumberlist]{gch}{GCH}{\textsc{d}-glucose/choline chloride,\gls{nades}-mixture}
 \newacronym[nonumberlist, first={MWCO}]{mwco}{MWCO}{molecular weight cut-off}
-\newacronym[first={\textit{S}-adenosyl-\textsc{l}-ethionine (SAE)}]{sae}{SAE}{\textit{S}-adenosyl-\textsc{l}-ethionine, (2\textit{S})-2-amino-4-[[(2\textit{S},3\textit{S},4\textit{R},5\textit{R})-5-(6-aminopurin-9-yl)-3,4-dihydroxyoxolan-2-yl]methyl-ethylsulfonio]butanoat}%)]]
+\newacronym[first={\textit{S}-adenosyl-\textsc{l}-ethionine (SAE)}, nonumberlist]{sae}{SAE}{\textit{S}-adenosyl-\textsc{l}-ethionine, (2\textit{S})-2-amino-4-[[(2\textit{S},3\textit{S},4\textit{R},5\textit{R})-5-(6-aminopurin-9-yl)-3,4-dihydroxyoxolan-2-yl]methyl-ethylsulfonio]butanoat}%)]]
 
 \newacronym[first={MLU}, nonumberlist]{mlu}{MLU}{Martin-Luther-Universität}
 
@@ -137,6 +141,7 @@
   name	=	ZYP,
   text	=	ZYP-5052,
   symbol=	ZYP,
+  nonumberlist,
   first	=	{N-\emph{Z}-amine, \emph{y}east extract, \emph{p}hosphate (ZYP-5052)},
 % description = {N-Z-amine, yeast extract, phosphate}%
 %  description = {N-\emph{Z}-amine, \emph{y}east extract, \emph{p}hosphate}
@@ -145,6 +150,7 @@
 
 \newglossaryentry{zypg}{
    name	=	\glslink{zyp}{ZYP-5052},
+   nonumberlist,
    description = {%
      Autoinduction medium developed by Studier \citep{Studier2005}. The naming stems from the components N-\protect\emph{Z}-amine, \protect\emph{y}east extract and \protect\emph{p}hosphate. The numbering designates the composition; e.g. 5052 refers to 0.5\,\% glycerol, 0.05\,\% glucose and 0.2\,\% lactose.
    }
@@ -153,6 +159,7 @@
 \newglossaryentry{sah}{
   	type	= \acronymtype,
         name	= SAH,
+        nonumberlist,
         text	= SAH,
         symbol	= SAH,
         first   = {\protect\textit{S}-adenosyl-\protect\textsc{l}-homocysteine (SAH)},
@@ -164,6 +171,7 @@
   	type	= \acronymtype,
         name	= SAM,
         text	= SAM,
+        nonumberlist,
         symbol	= SAM,
         first	= \textit{S}-adenosyl-\textsc{l}-methionine (SAM),
         description	= \textit{S}-adenosyl-\textsc{l}-methionine%
@@ -172,6 +180,7 @@
 \newglossaryentry{pcr}{
   	type	= \acronymtype,
         name	= PCR,
+        nonumberlist,
         text	= PCR,
         symbol	= PCR,
         first	= polymerase chain reaction (PCR),
@@ -181,6 +190,7 @@
 \newglossaryentry{des}{
   	type	= \acronymtype,
         name	= DES,
+        nonumberlist,
         text	= DES,
         symbol	= DES,
         longplural	= deep eutectic solvents,
@@ -192,6 +202,7 @@
 \newglossaryentry{itc}{
 	type        = \acronymtype,
 	name        = ITC,
+        nonumberlist,
 	text        = ITC,
         symbol	    = Isothermal Titration Calori\-metry,
 	first       = Isothermal Titration Calori\-metry (ITC),
@@ -201,6 +212,7 @@
 
 \newglossaryentry{itcg}{
 	name        = \glslink{itc}{Isothermal Titration Calorimetry (ITC)},
+        nonumberlist,
 	description = {
 		Fill in description here%
 	}
@@ -218,6 +230,7 @@
 	type        = \acronymtype,
 	name        = PFOMT,
 	text        = PFOMT,
+        nonumberlist,
 	first       = phenylpropanoid and flavonoid O-methyl transferase (PFOMT),
 %	see         = [see also]{itc},
 	description = \glslink{pfomtg}{phenylpropanoid and flavonoid O-methyl transferase}
@@ -225,6 +238,7 @@
 
 \newglossaryentry{pfomtg}{
 	name        = \glslink{pfomt}{PFOMT},
+        nonumberlist,
 	description = {
 		Phenylpropanoid and flavonoid O-methyl transferase from \textit{Mesembryanthemum crystallinum}, which was first described by Ibdah et al. in 2003 \citep{Ibdah2003}%
         }
@@ -235,6 +249,7 @@
 	name        = MTP,
 	text        = MTP,
         plural	    = MTPs,
+        nonumberlist,
         longplural  = micro-titer plates,
 	first       = micro-titer plate (MTP),
 	description = \glslink{mtpg}{micro-titer plate}
@@ -243,6 +258,7 @@
 \newglossaryentry{mtpg}{
 	name        = \glslink{mtp}{MTP},
         plural      = MTPs,
+        nonumberlist,
         longplural  = micro-titer plates,
 	description = {
 		Micro-titer plate. Small format rectangular plastic plate containing wells to allow for storage of multiple small samples or the containment multiple simultaneous reactions. Typical sizes include 24, 96 and 384-wells%
@@ -254,6 +270,7 @@
 	name        = Ti-plasmid,
 	text        = Ti-plasmid,
         plural	    = Ti-plasmids,
+        nonumberlist,
         longplural  = tumor inducing plasmids,
 	first       = tumor inducing plasmid (Ti-plasmid),
 	description = \glslink{tipg}{tumor inducing plasmid}
@@ -262,6 +279,7 @@
 \newglossaryentry{tipg}{
 	name        = \glslink{tip}{Ti-plasmid},
         plural      = Ti-plasmids,
+                nonumberlist,
         longplural  = tumor inducing plasmids,
 	description = {
 		Commonly found plasmids in \textit{A.\,tumefaciens} and \textit{A.\,rhizogenes} that confer virulence%
@@ -271,6 +289,7 @@
 \newglossaryentry{god}{
 	type        = \acronymtype,
 	name        = GOD,
+        nonumberlist,
 	text        = GOD,
 	first       = glucose oxidase (GOD),
 	description = \glslink{godg}{glucose oxidase}
@@ -278,13 +297,15 @@
 
 \newglossaryentry{godg}{
 	name        = \glslink{god}{GOD},
-	description = {
+	nonumberlist,
+        description = {
 		Glucose oxidase is an enzyme....
         }
 }
 
 \newglossaryentry{T7tag}{
   name = T7-tag,
+  nonumberlist,
   text = T7-tag,
   first = T7-tag,
   description = {%
@@ -294,6 +315,7 @@
 
 \newglossaryentry{histag}{
   name = His\textsubscript{6}-tag,
+  nonumberlist,
   text = His\textsubscript{6}-tag,
   first = His\textsubscript{6}-tag,
   description = {%
@@ -304,6 +326,7 @@
 \newglossaryentry{trx}{
   name = Trx-tag,
   text = Trx-tag,
+  nonumberlist,
   first = Trx-tag,
   description = {%
     Thioredoxin tag used to increase solubility and stability of recombinantly expressed proteins.

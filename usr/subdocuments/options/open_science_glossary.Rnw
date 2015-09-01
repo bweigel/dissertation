@@ -51,12 +51,15 @@
 \newacronym[nonumberlist]{mt}{MT}{methyl transferase}
 \newacronym[nonumberlist]{pmt}{P-MT}{protein methyl transferase}
 \newacronym[nonumberlist, first={DNA}]{dna}{DNA}{desoxyribonucleic acid}
-\newacronym[nonumberlist]{dmt}{DNA MT}{DNA methyl transferase}
+\newacronym[nonumberlist]{dmt}{DNA-MT}{DNA methyl transferase}
+\newacronym[nonumberlist]{smmt}{\protect\textit{sm}MT}{small molecule methyl transferase}
 \newacronym[nonumberlist]{omt}{\protect\textit{O}-MT}{\protect\textit{O}-methyl transferase}
 \newacronym[nonumberlist]{cmt}{\protect\textit{C}-MT}{\protect\textit{C}-methyl transferase}
 \newacronym[nonumberlist]{smt}{\protect\textit{S}-MT}{\protect\textit{S}-methyl transferase}
 \newacronym[nonumberlist]{nmt}{\protect\textit{N}-MT}{\protect\textit{N}-methyl transferase}
 \newacronym[nonumberlist]{pda}{PDA}{photo diode array}
+\newacronym[nonumberlist]{ros}{ROS}{reactive oxygen species}
+\newacronym[nonumberlist]{uv}{UV}{ultra violet}
 \newacronym[first={UV/VIS}, nonumberlist]{uvvis}{UV/VIS}{ultra violet/visible (light spectrum)}
 \newacronym[nonumberlist, first={\AA}]{a}{\AA}{\AA ngström, 0.1\,nm}
 \newacronym[nonumberlist]{phenix}{PHENIX}{\href{https://www.phenix-online.org/}{Phyton-based Hierarchial Environment for Integrated Xtallography}}

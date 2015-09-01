@@ -180,8 +180,8 @@ read_chunk("usr/statistics/rproject/itc.R")
 %%% Include DES section %%%
 %%%-------------------------------------------------%%%
 
-<<subdoc_content_results, child='usr/subdocuments/chapters/g_des_section.Rnw', eval=T>>=
-@
+%%%<<subdoc_content_results, child='usr/subdocuments/chapters/g_des_section.Rnw', eval=T>>=
+%%%@
 
 %%%-------------------------------------------------%%%
 %%% Include acknowledgements %%%

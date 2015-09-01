@@ -8,22 +8,76 @@
 
 %\capital{S}ome introductionary text
 
-\section{Natural products and secondary metabolites} 
+\section{Flavonoids} 
 
-\paragraph{Terpenoids and Steroids} ... here is some text
-\paragraph{Polyketides and non-ribosomal peptides} ... here is some text
-\paragraph{Alkaloids} ... here is some text
-\paragraph{Phenylpropanoids} ... here is some text
-Flavonoids and phenyl propanoids have important functions in nature and can function as protection against high UV-exposure, signaling molecules or transcriptional regulators \cite{Grotewold2006,Andersen2006}.
+\subsection{General}
 
-\section{\Glsentryfirst{mt} as tailoring enzymes}
-
-
-
-\section{Usage and expansion of natures reaction toolbox}
-\subsection{Terpene synthases and elongases}
-\subsection{Methyl transferases}
-\subsection{Glycosyl transferases}
+Plant phenolic compounds account for more than \SI{40}{\percent} of the organic carbon in the biosphere and are essential for the survival of vascular plants.
+They are largely derived from the \emph {phenylpropanoid} and relating pathways and take on various structural (e.g. cell walls) and non-structural roles (e.g. plant defense, flower color) \cite{Croteau2000}.
+Flavonoids are a diverse subclass of these phenolic compounds comprising more than 4500 different compounds described thus far and their main structural feature is the central chromane (benzodihydropyran) moiety (\autoref{fig:b_flav_struc}).
+They consist of three rings named A, B and C.
+Ring A and B are of acetate and phenylpropanoid origin respectively. 
+Ring C is a result of the condensation of A and B.
 
 
-\section{Conclusion}
+\begin{figure}[htpb]
+  \begin{figureframe}
+    \begin{subfigure}{0.23\textwidth}\centering
+      \includegraphics[scale=1]{usr/graphics/static/flavonoid_structure}
+    \end{subfigure}
+    \begin{subfigure}{0.75\textwidth}\centering
+      \includegraphics[scale=0.833]{usr/graphics/static/flavonoid_structure2}
+    \end{subfigure}
+  \end{figureframe}
+  \caption{The central feature of the flavonoids is the chromane ring. 
+    The names of the different groups of flavonoids are derived from the substitution of this moiety.
+    From a biosynthetic point of view, flavonoids are built up from phenylpropanoid (blue) and acetate derived moieties (orange).}
+  \label{fig:b_flav_struc}
+\end{figure}
+
+Different types of flavonoids are named depending on the substitution pattern of the chromane ring.
+For example, a phenyl group at C-2 or C-3 gives flavonoids or isoflavonoids respectively,
+an unsubstituted C-4 means flavane, whereas a carbonyl group at C-4 indicates flavan\emph{on}es \textit{et cetera}.
+
+
+Flavonoids are usually poly-hydroxylated, but can also carry multiple other different substitutions.
+%The most common hydroxylations are at positions 5,7,3,3',4',5'.
+\textit{O}-methylations are common at all hydroxyl positions, but flavonoids can also be \textit{C}-methylated \cite{Barton1972}. 
+Other common derivatizations are (\textit{O} or \textit{C})-prenylation, (\textit{O} or \textit{C})-glycosylation, methylene-dioxy bridges (C-3'/C-4' or C-6/C-7) and various (\textit{O} or \textit{C})-acylations (aliphatic and aromatic acids) \cite{Dagne1990,Wollenweber1985,Simonsen2002,Harborne1988}.
+
+In plants flavonoids are usually produced to combat oxidative stress.
+They can absorb highly energetic \gls{uv} light, suppress the formation of, or scavange \gls{ros}, once formed \cite{Agati2012}.
+Furthermore, flavonoids can act as regulators during plant development \cite{Taylor2005}.
+
+A growing interest in flavonoids for the use in medicinal and nutritional applications has been spiked by their beneficial effects on health.
+Flavonoids possess a high antioxidant activity and also show protective effects against age-related ailments, such as cardiovascular diseases and cancers.
+Furthermore, they show anti-inflammatory, hepatoprotective, antimicrobial and  antiviral activities \cite{Kumar2013}.
+
+\subsection{The phenyl propanoid pathway}
+\subsection{Biological activity}
+%\paragraph{Terpenoids and Steroids} ... here is some text
+%\paragraph{Polyketides and non-ribosomal peptides} ... here is some text
+%\paragraph{Alkaloids} ... here is some text
+%\paragraph{Polyphenols} ... here is some text
+%Flavonoids and phenyl propanoids have important functions in nature and can function as protection against high UV-exposure, signaling molecules or transcriptional regulators \cite{Grotewold2006,Andersen2006}.
+%\paragraph{Others}
+
+\section{\Glsentryfirstplural{mt} as tailoring enzymes}
+\subsection{\Glsentryfirstplural{omt}}
+\subsection{\Glsentryfirstplural{cmt}}
+\subsection{Other \glsentryfirstplural{mt}}
+\paragraph{NMTs, SMTs}
+\paragraph{halogen MTs}
+\paragraph{radical chemistry}
+
+
+\section{\Glsentryfirstplural{mt} in biocatalysis}
+\subsection{\Glsentryfirstplural{pmt}}
+\subsection{\Glsentryfirstplural{dmt}}
+\subsection{\Glsentryfirstplural{smmt}}
+%\subsection{Terpene synthases and elongases}
+%\subsection{Methyl transferases}
+%\subsection{Glycosyl transferases}
+
+
+\section{Motivation}

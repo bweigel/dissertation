@@ -6,7 +6,18 @@
 % starts the glossary files creation
 \makeglossaries
 
-% analytics
+%\newacronym[nonumberlist]{pal}{PAL}{phenylalanine ammonia lyase}
+%\newacronym[nonumberlist]{chs}{CHS}{chalcone synthase}
+\newacronym[nonumberlist]{c4h}{C4H}{cinnamate-4-hydroxylase}
+\newacronym[nonumberlist]{4cl}{4CL}{4-coumarate:CoA ligase}
+\newacronym[nonumberlist]{coa}{CoA}{coenzyme A}
+\newacronym[nonumberlist]{chi}{CHI}{chalcone isomerase}
+\newacronym[nonumberlist]{f3h}{F3H}{flavanone-3-hydroxylase}
+\newacronym[nonumberlist]{fls}{FLS}{flavonol synthase}
+\newacronym[nonumberlist]{fns}{FNS}{flavone synthase}
+\newacronym[nonumberlist]{ifs}{IFS}{isoflavone synthase}
+
+% analytcs
 \newacronym[nonumberlist]{psd}{PSD}{post-source decay}
 \newacronym[nonumberlist]{sid}{SID}{surface-induced dissociation}
 \newacronym[nonumberlist]{ecd}{ECD}{electron capture dissociation}

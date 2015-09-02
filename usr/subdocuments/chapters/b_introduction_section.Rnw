@@ -14,10 +14,10 @@
 
 Plant phenolic compounds account for more than \SI{40}{\percent} of the organic carbon in the biosphere and are essential for the survival of vascular plants.
 They are largely derived from the \emph {phenylpropanoid} and relating pathways and take on various structural (e.g. cell walls) and non-structural roles (e.g. plant defense, flower color) \cite{Croteau2000}.
-Flavonoids are a diverse subclass of these phenolic compounds comprising more than 4500 different compounds described thus far and their main structural feature is the central chromane (benzodihydropyran) moiety (\autoref{fig:b_flav_struc}).
+The name \emph{phenylpropanoid} describes the aromatic phenyl connected to a three-carbon chain, which biosynthetically originates from phenylalanine.
+Flavonoids, from the Latin \emph{flavus} (yellow), are a diverse subclass of these phenolic compounds comprising more than 4500 different compounds described thus far and their main structural feature is the central chromane (benzodihydropyran) moiety (\autoref{fig:b_flav_struc}).
 They consist of three rings named A, B and C.
-Ring A and B are of acetate and phenylpropanoid origin respectively. 
-Ring C is a result of the condensation of A and B.
+Ring A and B are of acetate and phenylpropanoid origin respectively, whereas ring C is a result of the condensation of the former.
 
 
 \begin{figure}[htpb]
@@ -38,29 +38,56 @@ Ring C is a result of the condensation of A and B.
 Different types of flavonoids are named depending on the substitution pattern of the chromane ring.
 For example, a phenyl group at C-2 or C-3 gives flavonoids or isoflavonoids respectively,
 an unsubstituted C-4 means flavane, whereas a carbonyl group at C-4 indicates flavan\emph{on}es \textit{et cetera}.
-
-
 Flavonoids are usually poly-hydroxylated, but can also carry multiple other different substitutions.
 %The most common hydroxylations are at positions 5,7,3,3',4',5'.
 \textit{O}-methylations are common at all hydroxyl positions, but flavonoids can also be \textit{C}-methylated \cite{Barton1972}. 
 Other common derivatizations are (\textit{O} or \textit{C})-prenylation, (\textit{O} or \textit{C})-glycosylation, methylene-dioxy bridges (C-3'/C-4' or C-6/C-7) and various (\textit{O} or \textit{C})-acylations (aliphatic and aromatic acids) \cite{Dagne1990,Wollenweber1985,Simonsen2002,Harborne1988}.
 
-In plants flavonoids are usually produced to combat oxidative stress.
+In plants flavonoids are usually produced to combat biotic or abiotic stresses.
 They can absorb highly energetic \gls{uv} light, suppress the formation of, or scavange \gls{ros}, once formed \cite{Agati2012}.
 Furthermore, flavonoids can act as regulators during plant development \cite{Taylor2005}.
-
 A growing interest in flavonoids for the use in medicinal and nutritional applications has been spiked by their beneficial effects on health.
 Flavonoids possess a high antioxidant activity and also show protective effects against age-related ailments, such as cardiovascular diseases and cancers.
 Furthermore, they show anti-inflammatory, hepatoprotective, antimicrobial and  antiviral activities \cite{Kumar2013}.
 
+A number of flavonoids are produced by the valorization of wastes and by-products of the food industry. 
+Citrus and olive processing byproducts are especially rich in polyphenols \cite{Goodrich2006,Mulinacci2001,Ouallagui2012}.
+However, many flavonoids are scarce in nature and/or the production from by-products is not enough to saturate the market demand, thus requiring different approaches for production.
+Recent developments in the field of metabolic engineering allowed for the high-level production of many flavonoids in microbial hosts, such as \textit{Escherichia coli} or \textit{Saccharomyces cerevisiae} \cite{Trantas2015}.
+For example, eriodictyol was produced from tyrosine in metabolically engineered \eco at levels of up to \SI{107}{\milli\gram\per\milli\litre} \cite{Zhu2014}, whereas naringenin was produced in \scer from glucose at levels of \SI{109}{\milli\gram\per\milli\litre} \cite{Koopman2012}.
+
+
 \subsection{The phenyl propanoid pathway}
+
+Biosynthesis of flavonoids via the phenylpropanoid pathway starts from phenylalanine, which is non-oxidatively deaminated by \gls{pal} to yield cinnamic acid (\autoref{fig:b_flav_prod}) \cite{Louie2006,Grotewold2006}.
+\Gls{c4h}, a P450 monooxygenase, hydroxylates the cinnamic acid at the \textit{para}-position and \gls{4cl} convertes the \textit{p}-coumaric acid to its corresponding \gls{coa}-ester \cite{Urban1994,Hu2010}.
+\Gls{chs} uses 3 molecules of malonyl-CoA (produced from acetyl-\gls{coa} by acetyl-\gls{coa} carboxylase) to produce naringenin chalcone from \textit{p}-coumaryl-\gls{coa} \cite{Ferrer1999}.
+%The malonyl-\gls{coa} is produced from acetyl-\gls{coa} by acetyl-\gls{coa} carboxylase.
+Next, the linear chalcone can cyclize spontaneously or catalyzed by \gls{chi} via a \textsc{Michael}-type addition to afford the flavanone naringenin \cite{Jez2000}.
+
+\begin{figure}[htpb]
+  \begin{figureframe}
+    \includegraphics[scale=1]{usr/graphics/static/flavonoid_production}
+  \end{figureframe}
+  \caption{General pathways in the biosynthesis of flavonoids. PAL -- phenylalanin ammonia lyase, C4H -- cinnamate-4-hydroxylase, 4CL -- 4-coumarate:CoA ligase, CHS -- chalcone synthase, CHI -- chalcone isomerase, F3H -- flavanone-3-hydroxylase, FLS -- flavonol synthase, FNS -- flavone synthase, IFS -- isoflavone synthase.}
+  \label{fig:b_flav_prod}
+\end{figure}
+
+Naringenin can serve as substrate for numerous enzymes such as \gls{f3h}, \gls{fns} or \gls{ifs} to afford dihydroflavonols, flavones or 2-hydroxyisoflavones respectively \cite{Gholami2014}.
+Dihydroflavonols are again precursors for the biosynthesis flavonols, flavanols and anthocyani(di)nes.
+
 \subsection{Biological activity}
-%\paragraph{Terpenoids and Steroids} ... here is some text
-%\paragraph{Polyketides and non-ribosomal peptides} ... here is some text
-%\paragraph{Alkaloids} ... here is some text
-%\paragraph{Polyphenols} ... here is some text
-%Flavonoids and phenyl propanoids have important functions in nature and can function as protection against high UV-exposure, signaling molecules or transcriptional regulators \cite{Grotewold2006,Andersen2006}.
-%\paragraph{Others}
+
+Flavonoids possess many properties associated with a healthy diet.
+They act as antioxidants and can help reduce oxidative stress. %eliminate \gls{ros} in the body.
+Several mechanisms that might be involveded in the antioxidant activity of flavonoids are currently discussed.
+They can act as scavangers for free \gls{ros} and mask metal ions by chelating them .
+The substitution pattern plays an important role in the antioxidant activity.
+Generally, the more free hydroxyls are present, the stronger the antioxidant activity of the flavonoid is.
+Hydroxyls can donate a hydrogen radical to free \gls{ros} to inactive such molecules.
+The resulting flavonoid radicals are stabilized by resonance.
+Flavonoids containing catecholic hydroxyls at the B-ring are even better antioxidants, because they  can donate two hydrogen radicals and be converted into stable 1,2-benzoquinones.
+
 
 \section{\Glsentryfirstplural{mt} as tailoring enzymes}
 \subsection{\Glsentryfirstplural{omt}}

@@ -68,6 +68,7 @@
 %%%-------------------------------------------------%%%
 
 \DeclareUnicodeCharacter{2032}{′}
+\DeclareUnicodeCharacter{2011}{‑}
 
 %%%-------------------------------------------------%%%
 %%% Footnote settings  %%%
@@ -89,6 +90,11 @@
 \newcommand{\mz}[1]{%
 \ifthenelse{\equal {#1} {}}{\gls{mz}}{\textit{m/z}\,#1\xspace}%
 }
+
+\newcommand{\mts}{%
+\glspl{mt}\xspace
+}
+\newcommand{\sam}{\gls{sam}\xspace}
 \newcommand{\degC}[1]{\SI[mode=text]{#1}{\celsius}}
 \newcommand{\ul}[1]{\SI[mode=text]{#1}{\micro\litre}}
 \newcommand{\ml}[1]{\SI[mode=text]{#1}{\milli\litre}}

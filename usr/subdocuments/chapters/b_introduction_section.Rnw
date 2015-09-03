@@ -80,17 +80,58 @@ Dihydroflavonols are again precursors for the biosynthesis flavonols, flavanols 
 
 Flavonoids possess many properties associated with a healthy diet.
 They act as antioxidants and can help reduce oxidative stress. %eliminate \gls{ros} in the body.
-Several mechanisms that might be involveded in the antioxidant activity of flavonoids are currently discussed.
-They can act as scavangers for free \gls{ros} and mask metal ions by chelating them .
+Several mechanisms that might be involved in the antioxidant activity of flavonoids are currently discussed.
+They can act as scavangers for free \gls{ros} or mask metal ions by chelation to suppress the production of radicals \cite{Cao1997,Leopoldini2006}.
 The substitution pattern plays an important role in the antioxidant activity.
-Generally, the more free hydroxyls are present, the stronger the antioxidant activity of the flavonoid is.
-Hydroxyls can donate a hydrogen radical to free \gls{ros} to inactive such molecules.
-The resulting flavonoid radicals are stabilized by resonance.
-Flavonoids containing catecholic hydroxyls at the B-ring are even better antioxidants, because they  can donate two hydrogen radicals and be converted into stable 1,2-benzoquinones.
+Generally, the more free hydroxyls are present, the stronger the antioxidant activity of the flavonoid is \cite{Cao1997}.
+Hydroxyls can donate an electron, or a hydrogen atom to free \gls{ros} to inactive such molecules.
+The resulting flavonoid radicals are stabilized by resonance, however possess prooxidant properties \cite{Metodiewa1999}.
+%Flavonoids containing catecholic hydroxyls at the B-ring are even better antioxidants, because they  can donate two hydrogen radicals and be converted into stable 1,2-benzoquinones.
+
+Numerous flavonoids possess antimicrobial activities \cite{Cushnie2005}.
+For example, catechins from green and black teas have been shown to be effective against \textit{Bacillus cereus} at nanomolar concentrations \cite{Friedman2006}.
+The mechanisms of action can be the inactivation of enzymes, binding of adhesins, membrane disruption or cell wall complexation \cite{Cowan1999}.
+
+\bweigel{ist es sinnvoll hier noch mehr zu schreiben????}
+
+\section{\Glsentryfirstplural{mt}}
+
+\subsection{General}
+\Gls{sam}-dependent \mts transfer the methyl group of \sam to an activated atom of an acceptor molecule.
+\Gls{sam} is converted to \gls{sah}, the co-product of the reaction, in the process.
+Transfer of the methyl group to oxygen and nitrogen atoms is most common, but carbon, sulfur, selenium, arsenic atoms and even halide ions can be methylated \cite{Thomas2007,Schmidberger2010}.
+Acceptor molecules are diverse and range from relatively small natural products (e.g. flavonoids) to bio-macromolecules such as nucleic acids or proteins.
+In fact, \glspl{mt} are key-tailoring enzymes for many natural products of all groups (e.g. flavonoids, alkaloids or non-ribosomal peptides) \cite{Kim2010,Kopycki2008b,Struck2012,Wessjohann2013}.
+These \glspl{smmt} account for a significant part of the diversity present in natural products.
+
+Other \glspl{mt}, such as \glspl{pmt}, \glspl{dmt} and \glspl{rmt} methylate proteins and nucleic acids respectively.
+In eukaryotes, \glspl{dmt} and \glspl{pmt} play important roles in the epigentic regulation of gene expression and have been associated with a number of cancers and other diseases \cite{Copeland2013,Robertson2001,Robertson2005}.
+In bacteria, \glspl{dmt} are an essential part of the restriction modification system \cite{McClelland1994}.
+
+According to their structure, \glspl{mt} can be classified into five main groups (I--V) (\autoref{fig:b_mtclasses})\cite{Schubert2003}.
+Class I \glspl{mt} are the largest group of \glspl{mt} and are characterized by a central Rossmann-like \textalpha\textbeta\textalpha~sandwich, consisting of a seven-stranded \textbeta-sheet flanked by \textalpha-helices.
+Most \glspl{smmt}, \glspl{dmt} and some \glspl{pmt} belong to class I \mts.
+Even though some of the enzymes belonging to class I share as little as \SI{10}{\percent} sequence similarity, there is a pronounced structural conservation \cite{Schubert2003}.
+Class II \glspl{mt} comprise a long anti-parallel \textbeta-sheet encompassed by numerous \textalpha-helices \cite{Dixon1996}.
+In class III \mts the \gls{sam} binding site is located between two \textalpha\textbeta\textalpha~domains \cite{Schubert1998}.
+A knot structure at the C-terminus contributes to \sam binding in the \gls{spout} family of class IV \glspl{rmt} \cite{Michel2002}.
+Protein lysine \mts make up the largest part of \glspl{pmt} and structurally belong to class V \glspl{mt} containing a \gls{set} domain \cite{Xiao2003}.
+
+\begin{figure}[htpb]
+  \begin{figureframe}
+    \includegraphics[width=\textwidth]{usr/graphics/static/mtclasses}
+  \end{figureframe}
+  \caption{Topology plots of structural classes of \glspl{mt} (from Schubert \etal \cite{Schubert2003}). Helices are depicted as circles and \textbeta-strands as triangles. The \sam binding site is depicted as a flag.}
+  \label{fig:b_mtclasses}
+\end{figure}
+
+\Glspl{rsmt} comprise a sixth class of \glspl{mt} that methylate unreactive centers through a radical mechanism \cite{Werner2011}.
+Structural evidence suggests, that the radical mechanism can be initiated by reductive cleavage of \sam by an [4Fe-4S] cluster \cite{Boal2011,Broderick2014}. 
 
 
-\section{\Glsentryfirstplural{mt} as tailoring enzymes}
 \subsection{\Glsentryfirstplural{omt}}
+
+
 \subsection{\Glsentryfirstplural{cmt}}
 \subsection{Other \glsentryfirstplural{mt}}
 \paragraph{NMTs, SMTs}

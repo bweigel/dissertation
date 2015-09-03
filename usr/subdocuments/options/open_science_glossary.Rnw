@@ -16,7 +16,10 @@
 \newacronym[nonumberlist]{fls}{FLS}{flavonol synthase}
 \newacronym[nonumberlist]{fns}{FNS}{flavone synthase}
 \newacronym[nonumberlist]{ifs}{IFS}{isoflavone synthase}
+\newacronym[nonumberlist]{rsmt}{RSMT}{radical SAM methyl transferase}
+\newacronym[nonumberlist]{set}{SET}{\textit{s}uvar3-9, \textit{e}nhancer-of-zeste, \textit{t}rithorax}
 
+\newacronym[nonumberlist]{spout}{SPOUT}{\textit{SpoU}-\textit{T}rmD}
 % analytcs
 \newacronym[nonumberlist]{psd}{PSD}{post-source decay}
 \newacronym[nonumberlist]{sid}{SID}{surface-induced dissociation}
@@ -63,6 +66,7 @@
 \newacronym[nonumberlist]{pmt}{P-MT}{protein methyl transferase}
 \newacronym[nonumberlist, first={DNA}]{dna}{DNA}{desoxyribonucleic acid}
 \newacronym[nonumberlist]{dmt}{DNA-MT}{DNA methyl transferase}
+\newacronym[nonumberlist]{rmt}{RNA-MT}{RNA methyl transferase}
 \newacronym[nonumberlist]{smmt}{\protect\textit{sm}MT}{small molecule methyl transferase}
 \newacronym[nonumberlist]{omt}{\protect\textit{O}-MT}{\protect\textit{O}-methyl transferase}
 \newacronym[nonumberlist]{cmt}{\protect\textit{C}-MT}{\protect\textit{C}-methyl transferase}

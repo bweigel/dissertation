@@ -8,6 +8,7 @@
 
 %\newacronym[nonumberlist]{pal}{PAL}{phenylalanine ammonia lyase}
 %\newacronym[nonumberlist]{chs}{CHS}{chalcone synthase}
+\newacronym[nonumberlist]{ccoaomt}{CCoAOMT}{caffeoyl CoA dependent \textit{O}-methyltransferase}
 \newacronym[nonumberlist]{c4h}{C4H}{cinnamate-4-hydroxylase}
 \newacronym[nonumberlist]{4cl}{4CL}{4-coumarate:CoA ligase}
 \newacronym[nonumberlist]{coa}{CoA}{coenzyme A}
@@ -107,6 +108,7 @@
 %\newacronym[nonumberlist]{pcr}{PCR}{polymerase chain reaction}
 % enzymes
 %newacronym[nonumberlist]{pfomt}{PFOMT}{phenylpropanoid and flavonoid O-methyl transferase}
+\newacronym[nonumberlist,  first={catechol O-methyl transferase (COMT, EC 2.1.1.6)}]{mcomt}{COMT}{catechol O-methyl transferase}
 \newacronym[nonumberlist]{comt}{COMT}{catechol O-methyl transferase}
 \newacronym[nonumberlist]{somt}{SOMT-2}{soy O-methyl transferase}
 \newacronym[nonumberlist]{sams}{SAMS}{\protect\textit{S}-adenosylmethionine synthase}

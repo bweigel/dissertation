@@ -185,8 +185,9 @@
 \newif\ifost@floatbarrierpart%
 \newif\ifost@floatbarrierchapter%
 \newif\ifost@floatbarriersection%
+\newif\ifost@floatbarriersubsection%
 
-\define@choicekey*[KV]{open-science-thesis}{addfloatbarrierto}[\val\nr]{part, chapter, section}{%
+\define@choicekey*[KV]{open-science-thesis}{addfloatbarrierto}[\val\nr]{part, chapter, section, subsection}{%
   \ifcase\nr\relax%
     \ost@floatbarrierparttrue%
     \ost@floatbarriertrue%
@@ -195,6 +196,9 @@
     \ost@floatbarriertrue%
   \or%
     \ost@floatbarriersectiontrue%
+    \ost@floatbarriertrue%
+  \or%
+    \ost@floatbarriersubsectiontrue%
     \ost@floatbarriertrue%
   \fi%
 }
@@ -2126,6 +2130,12 @@
 
 \ifost@floatbarriersection
   \preto{\section}{%
+    \FloatBarrier
+  }  
+\fi
+
+\ifost@floatbarriersubsection
+  \preto{\subsection}{%
     \FloatBarrier
   }  
 \fi

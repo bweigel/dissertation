@@ -18,8 +18,8 @@ The name \emph{phenylpropanoid} describes the aromatic phenyl connected to a thr
 Flavonoids, from the Latin \emph{flavus} (yellow), are a diverse subclass of these phenolic compounds comprising more than 4500 different compounds described thus far and their main structural feature is the central chromane (benzodihydropyran) moiety (\autoref{fig:b_flav_struc}).
 They consist of three rings named A, B and C.
 Ring A and B are of acetate and phenylpropanoid origin respectively, whereas ring C is a result of the condensation of the former.
-
-
+%
+%
 \begin{figure}[htpb]
   \begin{figureframe}
     \begin{subfigure}{0.23\textwidth}\centering
@@ -34,6 +34,7 @@ Ring A and B are of acetate and phenylpropanoid origin respectively, whereas rin
     From a biosynthetic point of view, flavonoids are built up from phenylpropanoid (blue) and acetate derived moieties (orange).}
   \label{fig:b_flav_struc}
 \end{figure}
+%
 
 Different types of flavonoids are named depending on the substitution pattern of the chromane ring.
 For example, a phenyl group at C-2 or C-3 gives flavonoids or isoflavonoids respectively,
@@ -64,7 +65,7 @@ Biosynthesis of flavonoids via the phenylpropanoid pathway starts from phenylala
 \Gls{chs} uses 3 molecules of malonyl-CoA (produced from acetyl-\gls{coa} by acetyl-\gls{coa} carboxylase) to produce naringenin chalcone from \textit{p}-coumaryl-\gls{coa} \cite{Ferrer1999}.
 %The malonyl-\gls{coa} is produced from acetyl-\gls{coa} by acetyl-\gls{coa} carboxylase.
 Next, the linear chalcone can cyclize spontaneously or catalyzed by \gls{chi} via a \textsc{Michael}-type addition to afford the flavanone naringenin \cite{Jez2000}.
-
+%
 \begin{figure}[htpb]
   \begin{figureframe}
     \includegraphics[scale=1]{usr/graphics/static/flavonoid_production}
@@ -72,7 +73,7 @@ Next, the linear chalcone can cyclize spontaneously or catalyzed by \gls{chi} vi
   \caption{General pathways in the biosynthesis of flavonoids. PAL -- phenylalanin ammonia lyase, C4H -- cinnamate-4-hydroxylase, 4CL -- 4-coumarate:CoA ligase, CHS -- chalcone synthase, CHI -- chalcone isomerase, F3H -- flavanone-3-hydroxylase, FLS -- flavonol synthase, FNS -- flavone synthase, IFS -- isoflavone synthase.}
   \label{fig:b_flav_prod}
 \end{figure}
-
+%
 Naringenin can serve as substrate for numerous enzymes such as \gls{f3h}, \gls{fns} or \gls{ifs} to afford dihydroflavonols, flavones or 2-hydroxyisoflavones respectively \cite{Gholami2014}.
 Dihydroflavonols are again precursors for the biosynthesis flavonols, flavanols and anthocyani(di)nes.
 
@@ -94,11 +95,15 @@ The mechanisms of action can be the inactivation of enzymes, binding of adhesins
 
 \bweigel{ist es sinnvoll hier noch mehr zu schreiben????}
 
+\subsection{Analysis of flavonoids}
+
 \section{Methyl transferases (MTs)}
 
 \subsection{General}
-\Gls{sam}-dependent \mts transfer the methyl group of \sam to an activated atom of an acceptor molecule, via an S\textsubscript{N}2 displacement mechanism.
+
+\Gls{sam}-dependent \mts (EC 2.1.1.x) transfer the methyl group of \sam to an activated atom of an acceptor molecule, via an S\textsubscript{N}2 displacement mechanism.  
 \Gls{sam} is converted to \gls{sah}, the co-product of the reaction, in the process.
+There are currently over 300 manually annotated \mts, each catalyzing a different reaction, included in the UniProtKB/Swiss-Prot (\url{http://www.uniprot.org}) database. 
 Transfer of the methyl group to oxygen and nitrogen atoms is most common, but carbon, sulfur, selenium, arsenic atoms and even halide ions can be methylated (\autoref{fig:b_methyltransferases})\cite{Thomas2007,Schmidberger2010}.
 Acceptor molecules are diverse and range from relatively small natural products (e.g. flavonoids) to bio-macromolecules such as nucleic acids or proteins.
 In fact, \glspl{mt} are key-tailoring enzymes for many natural products of all groups (e.g. flavonoids, alkaloids or non-ribosomal peptides) \cite{Kim2010,Kopycki2008b,Struck2012,Wessjohann2013}.
@@ -116,7 +121,7 @@ Class II \glspl{mt} comprise a long anti-parallel \textbeta-sheet encompassed by
 In class III \mts the \gls{sam} binding site is located between two \textalpha\textbeta\textalpha~domains \cite{Schubert1998}.
 A knot structure at the C-terminus contributes to \sam binding in the \gls{spout} family of class IV \glspl{rmt} \cite{Michel2002}.
 Protein lysine \mts make up the largest part of \glspl{pmt} and structurally belong to class V \glspl{mt} containing a \gls{set} domain \cite{Xiao2003}.
-
+%
 \begin{figure}[htpb]
   \begin{figureframe}
     \begin{subfigure}{\textwidth}\centering
@@ -129,14 +134,14 @@ Protein lysine \mts make up the largest part of \glspl{pmt} and structurally bel
   \caption{Topology plots of the five major structural classes of \glspl{mt} and \glsentryfirstplural{rsmt} (modified and extended from Schubert \etal \cite{Schubert2003}). Helices are depicted as circles and \textbeta-strands as triangles. The \sam binding site is depicted as a flag. \Glspl{rsmt} all share a common ``radical SAM''-domain, which cotains the iron sulfur cluster (red checker). The individual \gls{rsmt} classes are differentiated according to the other domains they contain. }
   \label{fig:b_mtclasses}
 \end{figure}
-
+%
 Interestingly, a recent study of the methyltransferome of baker's yeast (\textit{S. cerevisiae}) argues, that there are four more different classes of \glspl{mt} \cite{Wlodarski2011}.
 Opposite to the studies by Schubert \etal, this work mainly relied on bioinformatical methods for structural information.
 83 out of 86 \gls{mt} structures in total were homology-modelled.
 It was shown, that two thirds of the reviewed yeast \glspl{mt} belonged to class I.
 However, four new folding architectures, namely SSo0622-like, all-\textbeta, all-\textalpha~(RNA/DNA 3-helical bundle) and transmembrane, were postulated.
-
-
+%
+%
 \begin{figure}[htpb]
   \begin{figureframe}
     \includegraphics[scale=1]{usr/graphics/static/methyl_transferases}
@@ -144,12 +149,12 @@ However, four new folding architectures, namely SSo0622-like, all-\textbeta, all
   \caption{Reactions catalyzed by \glsentryfirstplural{mt}. Different shades of grey were used to differantiate between different groups of compounds and \glspl{mt}. In contrast to other \glspl{mt}, the group of \glspl{rsmt} also requires additional co-factors to \gls{sam}.}
   \label{fig:b_methyltransferases}
 \end{figure}
-
-
+%
+%
 \Glsentryfirstplural{rsmt} comprise another class of resently discovered \glspl{mt} that contain an iron-sulfur ([4Fe-4S])-cluster coordinated by a three cysteine CxxxCxxC motif. \Glspl{rsmt} methylate unreactive centers through a radical mechanism \cite{Werner2011}.
 Structural evidence suggests, that the mechanism is initiated by reductive cleavage of \sam into a reactive \gls{dado} radical by the [4Fe-4S] cluster \cite{Boal2011,Broderick2014}. 
 Three distinct classes (A, B, C) with distinct structural and mechanistic characteristics have been recognized within the \glspl{rsmt} \cite{Zhang2012a}.
-The centerpiece of \glspl{rsmt} is the \emph{radical SAM} domain, whose structure was first described in the \gls{rrna} methyl transferase RlmN of \eco \cite{Boal2011a}.
+The centerpiece of \glspl{rsmt} is the \emph{radical SAM} domain, whose structure was first described in the \gls{rrna} methyl transferase RlmN of \eco \cite{Boal2011}.
 This domain consists of an \textalpha\textsubscript{6}/\textbeta\textsubscript{6} partial barrel and contains the [4Fe-4S] cluster, as well as the \gls{sam} binding site ({\autoref{fig:b_mtclasses}).
 Class A only contains the radical \gls{sam} domain and includes mainly \gls{rrna} methyl transferases. 
 In addition to the radical SAM domain, an N-terminal \gls{cbd} is proposed to be contained in \glspl{rsmt} of class B.
@@ -160,7 +165,64 @@ Class C enzymes methylate aromatic heterocycles.
 Radical \gls{sam} chemistry within enzymes is not confined to just methyl transfer. 
 Instead, it has been shown that this type of chemistry is important for a number of rearrangement, cyclization, dehydrogenation, bond-formation and bond-cleavage reactions in nature \cite{Broderick2014}.
 
+\subsection{\textit{S}-Adenosyl-\textsc{l}-methionine}
+
+\Glsentryfirst{sam} is the universal co-substrate for all \gls{sam} dependent methyl transferases.
+However, it is not only involved in methyl transfer, but is essential for a myriad of other reactions \cite{Broderick2014}.
+This makes \gls{sam} the second most ubiquitous co-substrate after \gls{atp}.
+Nucleophilic transfer of the methyl group of \sam is thermodynamically highly favoured ($\Delta G^0 \approx$ \SI{-70}{\kilo\joule\per\mole} for SAM + homocysteine \textrightarrow~SAH + methionine) and therefore allows the rapid and selective methylation of a range of substrates \cite{Schubert2003}.
+\sam is produced by the enzyme \sam synthetase (EC 2.5.1.6) from methionine and \gls{atp} in a two step reaction.
+At first \sam is formed and the triphosphate group of \gls{atp} is cleaved off. 
+Then, the inorganic triphosphate is hydrolyzed to monophosphate and diphosphate after which the products are released \cite{Takusagawa1996}.
+The demethylated \gls{sam} is called \gls{sah}. 
+\Gls{sah} is a common side product of all \sam dependent \glspl{mt} and can be further cleaved by \gls{sah} hydrolase (EC 3.3.1.1) to afford homocysteine and adenosine \cite{Lozada-Ramirez2008a}.
+The cobalamine (vitamin B\textsubscript{12}) dependent methionine synthase (EC 2.1.1.13) can remethylate homocysteine to methionine using N\textsuperscript{5}-methyltetrahydrofolate as a methyl donor \cite{Banerjee1990}. 
+Taken together, these reactions leading from and to \sam are commonly called the activated methyl cycle.
+
 \subsection{Methyl transferase mechanisms}
+
+Non-radical \gls{sam}-dependent \glspl{mt} catalyze the transfer of the methyl group of \gls{sam} to an activated nucleophile.
+This reaction proceeds via an S\textsubscript{N}2 mechanism (\autoref{fig:b_methyl_transfer}).%, with \gls{sah} being a very good leaving group.
+The methyl group of \gls{sam} is located at a positively charged sulfonium center and is in consequence partially positively charged itself.
+This increases the electrophilicity of the methyl group and makes it a strong alkylation agent. 
+However, \gls{sam} is still quite stable at physiological conditions compared to other sulfonium species like the trimethylsulfonium ion, which quickly reacts with nucleophiles and is often used for derivatization prior to GC analytics \cite{Butte1983}.
+%Disregarding nucleophile and leaving group, the transfer of a methyl group is the kinetically most farourable \sntwo reaction.
+The fact, that the methyl group is the least sterically hindered of all transferable carbon groups makes a methyl transfer the kinetically most favourable \sntwo reaction (disregarding nucleophile and leaving group).
+%
+\begin{figure}[htpb]\centering
+  \begin{figureframe}
+    \includegraphics[scale=1]{usr/graphics/static/methyl_transfer}
+  \end{figureframe}
+  \caption{Top: Non-radical \gls{sam} dependent methyl transferases catalyze the nucleophilic transfer of a methyl group from the donor \gls{sam} to a nucleophile (Nu; e.g. O,N,C,S). A proton (\cf{H+}) is usually abstracted through a general base (B), to achieve activation of the nucleophile. The proton is later transferred to the aqueous medium. %
+  Bottom: The \sntwo reaction proceeds via a single transition state, during which the methyl-carbon is sp\textsuperscript{2} hybridzed. After transfer of the methyl to the nucleophile the now sp\textsuperscript{3} hybridized carbon's configuration is inverted.}
+  \label{fig:b_methyl_transfer}
+\end{figure}
+%
+The \sntwo mechanism was proposed early on \cite{Gray1979,Mihel1979}, but only with the development of the chiral methyl group methodology extended mechanistic studies were made possible \cite{Floss1993,Floss1979}.
+An elegant method for the synthesis of chiral acetate made use of glycolytic enzymes to convert glucose via its glycolysis intermediates to [3-\textsuperscript{2}H,\textsuperscript{3}H]-lactate, which is subsequently oxidized by chromiumtrioxide (\autoref{fig:b_chiralacetate}) \cite{Woodard1980}.
+The chirality of the resulting acetate can be controlled by the solvents (\cf{D2O} or \cf{H2O}) used during the enzymatic reactions. 
+%
+\begin{figure}[htpb]
+  \begin{figureframe}
+    \includegraphics[width=\textwidth]{usr/graphics/static/chiral_methyl}
+  \end{figureframe}
+  \caption{Bioenzymatic synthesis of chiral acetate, the precursor for the synthesis of \gls{sam} carrying an assymetrical methyl, as used by Woodward \etal \cite{Woodard1980}. Ring hydroxyls of hexoses and pentoses are omitted for easier reading.  HK -- hexokinase, PGI -- phosphoglucose isomerase, PFK -- phosphofructokinase, ALD -- aldolase, TIM --triose phosphate isomerase, G3PDH -- glycerinaldehyde-3-phosphate dehydrogenase, PGM -- phosphoglycerate mutase, ENO -- enolase, Glu -- glucose, F1,6BP -- fructose-1,6-bisphosphate, 3PG -- 3-phosphoglycerate, PEP -- phosphoenol pyruvate}
+  \label{fig:b_chiralacetate}
+\end{figure}
+%
+
+In 1980, Woodward \etal fed \textit{R}- and \textit{S}-methionine containing an assymetrical methyl group to cultures of \textit{Streptomyces griseus} and found, that the enzymatic transfer of two methyl groups (\textit{N} and \textit{C}-methylation) during the indolmycin biosynthesis proceeded with inversion of the configuration, strongly implying an \sntwo mechanism \cite{Woodard1980}.
+This experiment also demonstrated that, [\textit{methyl}-\textsuperscript{2}H,\textsuperscript{3}H]-methionine is converted to [\textit{methyl}-\textsuperscript{2}H,\textsuperscript{3}H]-\gls{sam} before the methyl group is transferred by a \gls{mt}.
+\textit{In vitro} experiments that were conducted using \gls{comt} further supported the hypothesis of an \sntwo mechanism \cite{Woodard1980a}.
+Since the reaction catalyzed my \glspl{mt} is a two substrate reaction, kinetics-driven mechanistic studies have been done on a number of different \glspl{mt} to show the binding mode of the substrates.
+It turns out, that the reaction mechanism varies for \glspl{mt} from different organisms and classes.
+There is no one mechanism that discribes every \gls{mt}.
+A random bi-bi binding mechanism is for example exhibited by rat liver \gls{comt} \cite{Coward1973}, CheR protein-\textsc{l}-glutamate \textit{O}-\gls{mt} from \textit{Salmonealla typhimurium} \cite{Simms1991} and the protoporphyrin IX \textit{O}-\gls{mt} of \textit{Rhodobacter capsulatus} \cite{Sawicki2007}. 
+The protoporphyrin IX \gls{mt} from etiolated wheat \textit{Triticum aestivum} on the other hand shows a ping-pong bi-bi mechanism \cite{Yee1989}, whereas ordered bi-bi mechanisms were shown for the cytosine \gls{dmt} MSpI and isoprenylated \gls{pmt} \cite{Bhattacharya1999,Shi1992}.
+Meanwhile, the enzymes exhibiting ordered bi-bi mechanisms were different in that one bound \gls{sam} first and released \gls{sah} last \cite{Shi1992}, whereas the other one bound the acceptor molecule first \cite{Bhattacharya1999}.
+ 
+
+
 
 \subsection{Plant \glsentryfirstplural{omt}}
 
@@ -175,7 +237,7 @@ In contrast to group II, group I \pomts require \cf{Mg^2+} for activity. Overall
 Group II \pomts can methylate a variety of substrates, whereas group I \pomts are usually very strict in their substrate scope utilizing only a couple of substrates.
 However, some enzymes from group I are much more relaxed with their acceptance of substrates.
 For example, \gls{pfomt} from the ice-plant \textit{Mesembryanthemum crystallinum} and an \gls{omt} from chickweed \textit{Stellaria longipes} can utilize several substrates \cite{Zhang1997,Ibdah2003}.
-
+%
 \begin{table}[htpb]\centering\small
   \caption{Defining motifs of \pomts as described by Joshi \etal \cite{Joshi1998}.}
   \label{tab:b_plomts}

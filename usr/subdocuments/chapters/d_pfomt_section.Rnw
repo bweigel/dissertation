@@ -39,32 +39,9 @@ Between the highly complex core structures of natural products, which are produc
 Thus, natural products containing longer chain alkyl modifications like ethyl or propyl moieties on O, N or S-centers have rarely, if ever been observed.\footnote{Reaxys searches for natural product isolates with a molecular mass between (150 and 1500) containing the substructures methyl, ethyl or propyl connected to a heteroatom return 66759, 2797 and 52 results respectively. However, it stands to note that 70\,\% of the propyl results were either esters or otherwise activated moieties. \citep{Elsevier}}
 
 It has recently been shown however, that a wide array of \gls{sam} analogues are used as co-substrates by a variety of \glspl{mt} \citep{Struck2012}.  
-The majority of the work so far has been done on \glspl{pmt} and \glspl{dmt} (\autoref{fig:d_lit_sam}), since epi-genetics and finding regions of gene-reulation is of great interest. 
-There have been a great many of \gls{sam} analogues synthesized, both chemically and with the help of enzymes \citep{Dalhoff2006,Singh2014}.
-
-However, the first description of novel synthetic \gls{sam} analogues with extended carbon chains, including \gls{sae}, allyl and propargyl derivatives, that were also shown to be useful in modifying \gls{dna} via the action of several \glspl{dmt} was provided by Dalhoff, \etal \citep{Dalhoff2006,Dalhoff2006a}. 
-%It was also noted, that allyl transalkylation reactions proceeded much faster than ethyl- or propyl transfers possibly due to conjugative stabilization of the transition state \citep{Dalhoff2006}.
-A whole variety of allyl derivatives was examined by different researchers and site-specific introductions of allyl, pent-2-en-4-ynyl and even 4-propargyloxy-but-2-enyl moieties into proteins (i.e. histones) was demonstrated using \glspl{pmt} \citep{Wang2011,Peters2010}.
-However, the larger substrate analogues were not neccesarily accomodated by the native \glspl{pmt} making engineering efforts for the accomodation of larger substrates inevitable \cite{Wang2011}.
-The specific introduction of alkine functionalized groups made it then possible to use click chemistry for further functionalization and/or detection of the labelled proteins, DNA or RNA (\autoref{fig:d_cuaac}) \citep{Wang2011,Peters2010, Motorin2011, Willnow2012,Schulz2013}.
-
-In 2012 Bothwell and Luo even described the exchange of the sulfonium with a selenonium center, which afforded \gls{seam} analogues that have since then been described as substrates for several \glspl{pmt} \citep{Bothwell2012,Bothwell2014}.
-\gls{seam} analogues have the advantage of being more resistant to chemical decomposition than their sulfur counterparts, but also show enhanced transmethylation reactivity \citep{Bothwell2014}.
-
-\framedfigure[label = fig:d_cuaac]{%
-  \includegraphics{usr/graphics/static/CuAAC}
-}{%
-   Labelling of macromolecules by using a combination of novel alkine-derivatized \gls{sam} analogues and \glsentryfirst{cuaac}.
-   Depending on the type of label used, it can be employed for detection (e.g. through fluorophores, coupled assays) or affinity purification (e.g. biotin).
-   This technique is also feasable for use in \glsentryfirst{abpp} approaches.%    
-    }
-  
-There have been some reports on the use of \gls{sam} analogues by small molecule \glspl{mt}.
-In 2009 Stecher \etal reported the use of the \glspl{cmt} NovO and CouO along with synthetic \gls{sam} analogues to accomplish biocatalytic Friedel-Crafts alkyations of some aminocoumarine antibiotics \citep{Stecher2009}.
-Lee \etal were the first ones to describe the transfer of a keto-group from an \gls{sam} derivative by means of the small molecule \glspl{mt} catechol \textit{O}-methyl transferase (EC 2.1.1.6) and thiopurine \textit{S}-methyl transferase (EC 2.1.1.67) \citep{Lee2010}.
-Furthermore the work done on the \glspl{omt} RebM and RapM, which modify the antitumor active natural products rebeccamycin and rapamycin respectively, shows the general feasability of using \gls{sam} analogues in combination with \glspl{mt} to modify small molecules \cite{Law2015,Singh2014,Zhang2006}.
-%In all of these reports the specificity of the group transfer is retained despite the fact that \gls{sam} analogues are employed as substrates. 
-However, no bioactivity data has been reported that shows the biological activity of the newly produced compounds.
+The majority of the work so far has been done on \glspl{pmt} and \glspl{dmt} (\autoref{fig:d_lit_sam}), since epi-genetics and finding regions of gene-regulation is of great interest. 
+However, \glspl{smmt} have also been shown to accept different \gls{sam} analogues \cite{Stecher2009,Lee2010,Law2015,Singh2014,Zhang2006}.
+There have been a great many of \gls{sam} analogues synthesized, both chemically and enzymatically, that were consequently studied with the help of \glspl{mt} \citep{Struck2012,Dalhoff2006,Singh2014}.
 
 The \gls{omt} \gls{pfomt} is a highly promiscuous enzyme with regards to its flavonoid substrates and has extensively been characterized \citep{Vogt2004,Ibdah2003,Kopycki2008b,Brandt2015}.
 However, the promiscuity towards different \gls{sam} analogues has net yet been described.

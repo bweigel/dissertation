@@ -95,7 +95,7 @@ The mechanisms of action can be the inactivation of enzymes, binding of adhesins
 
 \bweigel{ist es sinnvoll hier noch mehr zu schreiben????}
 
-\subsection{Analysis of flavonoids}
+%\subsection{Analysis of flavonoids}
 
 \section{Methyl transferases (MTs)}
 
@@ -167,27 +167,33 @@ Instead, it has been shown that this type of chemistry is important for a number
 
 \subsection{\textit{S}-Adenosyl-\textsc{l}-methionine}
 
-\Glsentryfirst{sam} is the universal co-substrate for all \gls{sam} dependent methyl transferases.
+\Glsentryfirst{sam}, first described in 1953 \cite{Cantoni1953}, is the universal co-substrate for all \gls{sam} dependent methyl transferases.
 However, it is not only involved in methyl transfer, but is essential for a myriad of other reactions \cite{Broderick2014}.
 This makes \gls{sam} the second most ubiquitous co-substrate after \gls{atp}.
-Nucleophilic transfer of the methyl group of \sam is thermodynamically highly favoured ($\Delta G^0 \approx$ \SI{-70}{\kilo\joule\per\mole} for SAM + homocysteine \textrightarrow~SAH + methionine) and therefore allows the rapid and selective methylation of a range of substrates \cite{Schubert2003}.
-\sam is produced by the enzyme \sam synthetase (EC 2.5.1.6) from methionine and \gls{atp} in a two step reaction.
+
+The methyl group of \gls{sam} is partially positively charged due to its position at the sulfonium center and is in consequence highly activated.
+The increased electrophilicity of the methyl group makes it a strong alkylation agent. 
+Furthermore, \gls{sah} is a good leaving group.
+Therefore, nucleophilic transfer of the methyl group of \sam is thermodynamically highly favoured ($\Delta G^0 \approx$ \SI{-70}{\kilo\joule\per\mole} for SAM + homocysteine \textrightarrow~SAH + methionine) and allows the rapid and selective methylation of a range of substrates \cite{Schubert2003}.
+The fact that the methyl group is the least sterically hindered of all transferable carbon groups makes a methyl transfer the kinetically most favourable \sntwo reaction (disregarding nucleophile and leaving group).
+%
+Despite its apparent reactiveness, \gls{sam} is still quite stable at physiological conditions compared to other sulfonium species like the trimethylsulfonium ion, which quickly reacts with nucleophiles and is often used for derivatization prior to GC analytics \cite{Butte1983}.
+Meanwhile, \sam is readily cleaved into adenine and \textit{S}-ribosylmethionine under alkaline conditions \cite{Borchardt1979} and other deteriorating processes such as racemization and intramolecular cleavage are to be reckoned with \cite{Hoffman1986}.
+%Disregarding nucleophile and leaving group, the transfer of a methyl group is the kinetically most farourable \sntwo reaction.
+
+
+\sam is produced by the enzyme \sam synthetase (EC 2.5.1.6) from methionine and \gls{atp} in a two step reaction \cite{Takusagawa1996}.
 At first \sam is formed and the triphosphate group of \gls{atp} is cleaved off. 
-Then, the inorganic triphosphate is hydrolyzed to monophosphate and diphosphate after which the products are released \cite{Takusagawa1996}.
-The demethylated \gls{sam} is called \gls{sah}. 
+Then, the inorganic triphosphate is hydrolyzed to monophosphate and diphosphate after which the products are released.
+The demethylated \gls{sam} is called \glsentryfirst{sah}. 
 \Gls{sah} is a common side product of all \sam dependent \glspl{mt} and can be further cleaved by \gls{sah} hydrolase (EC 3.3.1.1) to afford homocysteine and adenosine \cite{Lozada-Ramirez2008a}.
 The cobalamine (vitamin B\textsubscript{12}) dependent methionine synthase (EC 2.1.1.13) can remethylate homocysteine to methionine using N\textsuperscript{5}-methyltetrahydrofolate as a methyl donor \cite{Banerjee1990}. 
-Taken together, these reactions leading from and to \sam are commonly called the activated methyl cycle.
+Taken together, reactions leading from and to \sam are commonly called the activated methyl cycle.
 
 \subsection{Methyl transferase mechanisms}
 
 Non-radical \gls{sam}-dependent \glspl{mt} catalyze the transfer of the methyl group of \gls{sam} to an activated nucleophile.
-This reaction proceeds via an S\textsubscript{N}2 mechanism (\autoref{fig:b_methyl_transfer}).%, with \gls{sah} being a very good leaving group.
-The methyl group of \gls{sam} is located at a positively charged sulfonium center and is in consequence partially positively charged itself.
-This increases the electrophilicity of the methyl group and makes it a strong alkylation agent. 
-However, \gls{sam} is still quite stable at physiological conditions compared to other sulfonium species like the trimethylsulfonium ion, which quickly reacts with nucleophiles and is often used for derivatization prior to GC analytics \cite{Butte1983}.
-%Disregarding nucleophile and leaving group, the transfer of a methyl group is the kinetically most farourable \sntwo reaction.
-The fact, that the methyl group is the least sterically hindered of all transferable carbon groups makes a methyl transfer the kinetically most favourable \sntwo reaction (disregarding nucleophile and leaving group).
+The methylation reaction proceeds via a single displacement S\textsubscript{N}2 mechanism, through an sp\textsuperscript{2} hybridized transition state and results in the inversion of configuration (\autoref{fig:b_methyl_transfer}).%, with \gls{sah} being a very good leaving group.
 %
 \begin{figure}[htpb]\centering
   \begin{figureframe}
@@ -199,8 +205,9 @@ The fact, that the methyl group is the least sterically hindered of all transfer
 \end{figure}
 %
 The \sntwo mechanism was proposed early on \cite{Gray1979,Mihel1979}, but only with the development of the chiral methyl group methodology extended mechanistic studies were made possible \cite{Floss1993,Floss1979}.
-An elegant method for the synthesis of chiral acetate made use of glycolytic enzymes to convert glucose via its glycolysis intermediates to [3-\textsuperscript{2}H,\textsuperscript{3}H]-lactate, which is subsequently oxidized by chromiumtrioxide (\autoref{fig:b_chiralacetate}) \cite{Woodard1980}.
+An elegant method for the synthesis of chiral acetate made use of glycolytic enzymes to convert [1-\textsuperscript{3}H]-glucose via its glycolysis intermediates to [3-\textsuperscript{2}H,\textsuperscript{3}H]-lactate, which is subsequently oxidized by chromiumtrioxide (\autoref{fig:b_chiralacetate}) \cite{Woodard1980}.
 The chirality of the resulting acetate can be controlled by the solvents (\cf{D2O} or \cf{H2O}) used during the enzymatic reactions. 
+The chiral acetate can be used for the synthesis of e.g. [\textit{methyl}-\textsuperscript{2}H,\textsuperscript{3}H]-methionine.
 %
 \begin{figure}[htpb]
   \begin{figureframe}
@@ -212,31 +219,41 @@ The chirality of the resulting acetate can be controlled by the solvents (\cf{D2
 %
 
 In 1980, Woodward \etal fed \textit{R}- and \textit{S}-methionine containing an assymetrical methyl group to cultures of \textit{Streptomyces griseus} and found, that the enzymatic transfer of two methyl groups (\textit{N} and \textit{C}-methylation) during the indolmycin biosynthesis proceeded with inversion of the configuration, strongly implying an \sntwo mechanism \cite{Woodard1980}.
-This experiment also demonstrated that, [\textit{methyl}-\textsuperscript{2}H,\textsuperscript{3}H]-methionine is converted to [\textit{methyl}-\textsuperscript{2}H,\textsuperscript{3}H]-\gls{sam} before the methyl group is transferred by a \gls{mt}.
+This experiment also demonstrated that, \invivo, [\textit{methyl}-\textsuperscript{2}H,\textsuperscript{3}H]-methionine is converted to [\textit{methyl}-\textsuperscript{2}H,\textsuperscript{3}H]-\gls{sam} before the methyl group is transferred by a \gls{mt}.
 \textit{In vitro} experiments that were conducted using \gls{comt} further supported the hypothesis of an \sntwo mechanism \cite{Woodard1980a}.
+
+The nucleophile attacking the methyl group of \sam is usually activated by abstraction of a proton through a general base (e.g. histidine, lysine) \cite{Zubieta2002,Zubieta2001a,Brandt2015} and/or with the help of a lewis acid such as complexed \cf{Mg^2+} \cite{Vidgren1994,Kopycki2008b}.
+In a bimolecular reaction, the rate is highly dependent on the concentration of both compounds.
+\begin{equation*}
+  rate = k[A][B]
+\end {equation*}
+Low concentrations mean a low rate.
+This is in part due to the fact, that bimolecular reactions are entropically disfavoured.
+%The combining of two molecules leads to a loss in rotational and translational entropies. 
+\Glspl{mt} (and enzymes in general) strongly increase the effective concentration of each compound and thereby decrease entropy, in that methyl donor and acceptor are bound (immobilized) in close proximity to each other in the active site \cite{Fersht1999}.
+The right positioning of the substrates is a major factor for efficient catalysis and enzymes go through great lengths to achieve optimal alignment of substrates.
+One remarkable example are \glspl{dmt}, which can flip the target nucleotide out of the DNA-helix to provide the best orientation of \gls{sam} and the acceptor nucleophile \cite{Klimasauskas1994}.
+
 Since the reaction catalyzed my \glspl{mt} is a two substrate reaction, kinetics-driven mechanistic studies have been done on a number of different \glspl{mt} to show the binding mode of the substrates.
 It turns out, that the reaction mechanism varies for \glspl{mt} from different organisms and classes.
-There is no one mechanism that discribes every \gls{mt}.
+There is no one mechanism that describes every \gls{mt}.
 A random bi-bi binding mechanism is for example exhibited by rat liver \gls{comt} \cite{Coward1973}, CheR protein-\textsc{l}-glutamate \textit{O}-\gls{mt} from \textit{Salmonealla typhimurium} \cite{Simms1991} and the protoporphyrin IX \textit{O}-\gls{mt} of \textit{Rhodobacter capsulatus} \cite{Sawicki2007}. 
 The protoporphyrin IX \gls{mt} from etiolated wheat \textit{Triticum aestivum} on the other hand shows a ping-pong bi-bi mechanism \cite{Yee1989}, whereas ordered bi-bi mechanisms were shown for the cytosine \gls{dmt} MSpI and isoprenylated \gls{pmt} \cite{Bhattacharya1999,Shi1992}.
 Meanwhile, the enzymes exhibiting ordered bi-bi mechanisms were different in that one bound \gls{sam} first and released \gls{sah} last \cite{Shi1992}, whereas the other one bound the acceptor molecule first \cite{Bhattacharya1999}.
+Competetive product inhibition, especially by \gls{sah}, is commonly observed for \mts \cite{Ball1972,Simms1991,Shi1992,Bhattacharya1999}.
  
-
+The mechanisms of \glspl{rsmt} are outside the scope of this work, but the interested reader is instead referred to current reviews on the topic \cite{Zhang2012a,Broderick2014}.
 
 
 \subsection{Plant \glsentryfirstplural{omt}}
 
 %Historically, research on \glspl{omt} has been focused on mammalian \gls{mcomt}, which was the first \gls{omt} described (1958) and structurally characterized (1994) \cite{Vidgren1994,Axelrod1958}.
-Plant \glspl{omt} represent a large group of plant enzymes that catalyze the transfer of a methyl group to a hydroxyl or carboxyl group of phenylpropanoids, flavonoids or alkaloids.
+Plant \glspl{omt} were the prime interest of this work.
+As such, plant \glspl{omt} represent a large group of plant enzymes that catalyze the transfer of a methyl group to a hydroxyl or carboxyl group of phenylpropanoids, flavonoids or alkaloids.
 \textit{O}-methylation greatly effects the (bio)-chemical properties of a compound and can for example have profound influences on reactivity, solubility, bioavailability, antimicrobial or antioxidant activities.
 
 \Pomts are subdivided into two groups according to their size and the spatial relationship between three highly preserved motifs (\autoref{tab:b_plomts})  \cite{Joshi1998}.
 Group I members, containing \gls{ccoaomt}-like representatives, are usually between 110 and 140 amino acid residues shorter than group II members ($\approx$340--390 amino acids).
-The distance between motifs A and B, and between B and C is also shorter in group I members, than in group II members.% (\autoref{tab:b_plomts}).
-In contrast to group II, group I \pomts require \cf{Mg^2+} for activity. Overall, they are fairly similar to mammalian \glspl{comt} \cite{Joshi1998}.
-Group II \pomts can methylate a variety of substrates, whereas group I \pomts are usually very strict in their substrate scope utilizing only a couple of substrates.
-However, some enzymes from group I are much more relaxed with their acceptance of substrates.
-For example, \gls{pfomt} from the ice-plant \textit{Mesembryanthemum crystallinum} and an \gls{omt} from chickweed \textit{Stellaria longipes} can utilize several substrates \cite{Zhang1997,Ibdah2003}.
 %
 \begin{table}[htpb]\centering\small
   \caption{Defining motifs of \pomts as described by Joshi \etal \cite{Joshi1998}.}
@@ -253,29 +270,97 @@ For example, \gls{pfomt} from the ice-plant \textit{Mesembryanthemum crystallinu
     \bottomrule
   \end{tabular}
 \end{table}
+%
+The distance between motifs A and B, and between B and C is also shorter in group I members, than in group II members. % (\autoref{tab:b_plomts}).
+In contrast to group II, group I \pomts require \cf{Mg^2+} for activity. Overall, they are fairly similar to mammalian \glspl{comt} \cite{Joshi1998}.
+Group II \pomts can methylate a variety of substrates, whereas group I \pomts are usually very strict in their substrate scope utilizing only a couple of substrates.
+However, some enzymes from group I are much more relaxed with their acceptance of substrates.
+For example, \gls{pfomt} from the ice-plant \textit{Mesembryanthemum crystallinum} and an \gls{omt} from chickweed \textit{Stellaria longipes} can utilize several substrates \cite{Zhang1997,Ibdah2003}.
 
+%In the following paragraphs one enzyme of each class of plant \glspl{omt}  
+\paragraph{\protect\Glsentryfirst{pfomt}} is a \cf{Mg^2+}-dependent class I plant \gls{omt} from the ice plant \mesem and was first described in 2003 by Ibdah \etal \cite{Ibdah2003}.
+\pfomt was the first class I \gls{mt} that provided evidence showing, that methylation of flavonoids is not only restricted to class II plant \glspl{omt}.
+It belongs to a subgroup of class I plant \glspl{omt}, that is distinguished from \glsentryfirst{ccoaomt} by a lower sequence homology and a broader substrate promiscuity and regiospecificity.
+\pfomt methylates a number of flavonoids and phenyl propanoids, preferably at the \textit{meta}-position, provided a catecholic moiety is present.
+Enzyme purified from its native source \mesem is truncated N-terminally by 11 amino acids, although there is no known signaling sequence \cite{Vogt2004}.
+This truncation has deleterious effects on the catalytic efficiency, especially towards substrates such as caffeoyl glucose and caffeoyl-CoA, but also influences the regioselectivity.
+There is only speculation as to the purpose of this N-terminal truncation \invivo, but metabolic regulation is plausible.
+%The truncated and non-truncated enzymes differ in their temperature optimum, which is located at \SIrange{37}{40}{\celsius} and \SIrange{45}{5}{\celsius} respectively.
+%For the native (truncated) \pfomt, the maximal activity is \SI{150}{\micro\molar} \cf{Mg^2+}.
 
+The three dimensonal structure of \pfomt shows a dimeric protein (pdb: 3C3Y) \cite{Kopycki2008b}.
+Each monomer exhibits a Rossmann \textalpha/\textbeta-fold consisting of 8 \textalpha-helices and 8 \textbeta-strands.
+The catalytically important N-terminus is not resolved in the structure.
+\Gls{sah} and \cf{Ca^2+} were cocrystallized and appear bound in the active site. 
+\cf{Ca^2+} is complexed by two aspartate and one asparagin residues with the rest of the coordination spaces occupied by waters.
 
-\paragraph{PFOMT}
 
 \paragraph{SOMT}
 
 
 %\subsection{\Glsentryfirstplural{cmt}}
-\subsection{Other \glsentryfirstplural{mt}}
-\paragraph{CMTs, NMTs, SMTs}
-\paragraph{halogen MTs}
-\paragraph{radical chemistry}
+%\subsection{Other \glsentryfirstplural{mt}}
+%\paragraph{CMTs, NMTs, SMTs}
+%\paragraph{halogen MTs}
+%\paragraph{radical chemistry}
 
-\section{Activated methyl cycle?}
+%\section{Activated methyl cycle?}
 
-\section{\Glsentryfirstplural{mt} in biocatalysis}
+\section{Alkylations and chemoenzymatics}
 
-The ``methyl effect''.
+Alkylation reactions are a crucial factor helping nature create highly diverse natural products from a limited number of precursors and as such, these reactions are becoming more and more important in biocatalysis.
+Methylation, prenylation and glycosylation constitute the major alkylation reactions in nature and can largely influence the (bio)chemical characteristics of a compound.
+Intra- and intermolecular prenylation is achieved by prenyl transferases, which employ mono- and oligo-prenyl diphosphates and are mainly responsible for the over \num{70000} terpenoids described today \cite{Brandt2009a}.
+Glycosyl transferases catalyze the formation of a glycosidic bond using nucleotide- or lipid phospho-sugars (e.g. \gls{udp}-glucose, dolichol phosphate oligosaccharides) as sugar donoting substrates \cite{Lairson2008}.
+Methylation reactions are catalyzed by \glspl{mt} using \gls{sam} as methyl donor and will be the focus of this section.
 
-\subsection{\Glsentryfirstplural{pmt}}
-\subsection{\Glsentryfirstplural{dmt}}
-\subsection{\Glsentryfirstplural{smmt}}
+The introduction of a methyl group ($\approx$\SI{20}{\cubed\angstrom}) for a hydrogen ($\approx$\SI{5}{\cubed\angstrom}) can have different effects, chemically and biologically.
+Polar groups (e.g. hydroxyl, amine, carboxyl) are masked by methylation, which majorly alters their chemistry.
+Possible hydrogen donors are lost and the lipophilicity is increased.
+The methylation can act as a molecular signal, which might be specifically recognized by other enzymes than the original more polar, hydrogen donating group.
+This can in turn have dramatic physiological consequences in an organism.
+
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+% add stuff from alkylating enzymes review
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+
+%
+\paragraph{Artificial SAM-analogues} have shown tremendous potential in biocatalytic applications.
+The first description of novel synthetic \gls{sam} analogues with extended carbon chains, including \gls{sae}, allyl and propargyl derivatives, that were also shown to be useful in modifying \gls{dna} via the action of several \glspl{dmt} was provided by Dalhoff, \etal \citep{Dalhoff2006,Dalhoff2006a}. 
+%It was also noted, that allyl transalkylation reactions proceeded much faster than ethyl- or propyl transfers possibly due to conjugative stabilization of the transition state \citep{Dalhoff2006}.
+A whole variety of allyl derivatives was examined by different researchers and site-specific introductions of allyl, pent-2-en-4-ynyl and even 4-propargyloxy-but-2-enyl moieties into proteins (i.e. histones) was demonstrated using \glspl{pmt} \citep{Wang2011,Peters2010}.
+However, the larger substrate analogues were not neccesarily accomodated by the native \glspl{pmt} making engineering efforts for the accomodation of larger substrates inevitable \cite{Wang2011}.
+The specific introduction of alkine functionalized groups made it then possible to use click chemistry for further functionalization and/or detection of the labelled proteins, DNA or RNA (\autoref{fig:d_cuaac}) \citep{Wang2011,Peters2010, Motorin2011, Willnow2012,Schulz2013}.
+
+In 2012 Bothwell and Luo even described the exchange of the sulfonium with a selenonium center, which afforded \gls{seam} analogues that have since then been described as substrates for several \glspl{pmt} \citep{Bothwell2012,Bothwell2014}.
+\gls{seam} analogues have the advantage of being more resistant to chemical decomposition than their sulfur counterparts, but also show enhanced transmethylation reactivity \citep{Bothwell2014}.
+
+\framedfigure[label = fig:d_cuaac]{%
+  \includegraphics{usr/graphics/static/CuAAC}
+}{%
+   Labelling of macromolecules by using a combination of novel alkine-derivatized \gls{sam} analogues and \glsentryfirst{cuaac}.
+   Depending on the type of label used, it can be employed for detection (e.g. through fluorophores, coupled assays) or affinity purification (e.g. biotin).
+   This technique is also feasable for use in \glsentryfirst{abpp} approaches.%    
+    }
+  
+There have been some reports on the use of \gls{sam} analogues by small molecule \glspl{mt}.
+In 2009 Stecher \etal reported the use of the \glspl{cmt} NovO and CouO along with synthetic \gls{sam} analogues to accomplish biocatalytic Friedel-Crafts alkyations of some aminocoumarine antibiotics \citep{Stecher2009}.
+Lee \etal were the first ones to describe the transfer of a keto-group from an \gls{sam} derivative by means of the small molecule \glspl{mt} catechol \textit{O}-methyl transferase (EC 2.1.1.6) and thiopurine \textit{S}-methyl transferase (EC 2.1.1.67) \citep{Lee2010}.
+Furthermore the work done on the \glspl{omt} RebM and RapM, which modify the antitumor active natural products rebeccamycin and rapamycin respectively, shows the general feasability of using \gls{sam} analogues in combination with \glspl{mt} to modify small molecules \cite{Law2015,Singh2014,Zhang2006}.
+%In all of these reports the specificity of the group transfer is retained despite the fact that \gls{sam} analogues are employed as substrates. 
+However, no bioactivity data has been reported that shows the biological activity of the newly produced compounds.
+
+
+%kurz glycosylation und prenylation
+%The ``methyl effect''.
+
+%\subsection{\Glsentryfirstplural{pmt}}
+%\subsection{\Glsentryfirstplural{dmt}}
+%\subsection{\Glsentryfirstplural{smmt}}
 %\subsection{Terpene synthases and elongases}
 %\subsection{Methyl transferases}
 %\subsection{Glycosyl transferases}

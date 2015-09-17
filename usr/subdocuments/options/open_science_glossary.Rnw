@@ -9,6 +9,7 @@
 %\newacronym[nonumberlist]{pal}{PAL}{phenylalanine ammonia lyase}
 %\newacronym[nonumberlist]{chs}{CHS}{chalcone synthase}
 \newacronym[nonumberlist]{cbd}{CBD}{cobalamin binding domain}
+\newacronym[nonumberlist]{udp}{UDP}{uridine diphosphate}
 \newacronym[nonumberlist]{dado}{dAdo}{5'-deoxyadenosyl}
 \newacronym[nonumberlist]{ccoaomt}{CCoAOMT}{caffeoyl CoA dependent \textit{O}-methyltransferase}
 \newacronym[nonumberlist]{c4h}{C4H}{cinnamate-4-hydroxylase}

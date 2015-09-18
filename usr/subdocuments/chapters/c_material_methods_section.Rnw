@@ -1,7 +1,7 @@
 %%%-------------------------------------------------%%%
 %%% Sub document for material and methods %%%
 %%%-------------------------------------------------%%%
-c
+
 \chapter{Material And Methods}
 Within this section percentages refer to volume per volume (v/v) percentages unless otherwise specified.
 %%%% materials (chemicals, inbstrumenmts, software etc)

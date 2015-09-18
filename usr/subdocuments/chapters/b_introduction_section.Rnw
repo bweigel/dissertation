@@ -6,7 +6,11 @@
 
 \chapter{Introduction}\index{capital letters}
 
-%\capital{S}ome introductionary text
+\capital{S}econdary metabolites comprise a vast collection of organic compounds produced in nature, that do not directly parttake in the growth and development of an organism.
+Many functions of these natural products are unknown and remain to be elucidated, but it has been shown that they can used for gene regulation, defense against biotic and abiotic stresses, (pollinator) attractant, communication and others.
+Natural compounds can be quite complex and show remarkable biological activities.
+The major classes of secondary compounds are terpenoids, alkaloids, phenylpropanoids including lignans/lignins, flavonoids and polyketides.
+This work is largely concerned about phenyl propanoids and flavonoids, as well as their modification, and will therefore mainly focus on these compounds.
 
 \section{Flavonoids} 
 
@@ -306,7 +310,7 @@ The catalytically important N-terminus is not resolved in the structure.
 
 %\section{Activated methyl cycle?}
 
-\section{Alkylations and chemoenzymatics}
+\section{Alkylations and biotransformations}
 
 Alkylation reactions are a crucial factor helping nature create highly diverse natural products from a limited number of precursors and as such, these reactions are becoming more and more important in biocatalysis.
 Methylation, prenylation and glycosylation constitute the major alkylation reactions in nature and can largely influence the (bio)chemical characteristics of a compound.
@@ -324,12 +328,41 @@ This can in turn have dramatic physiological consequences in an organism.
 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 % add stuff from alkylating enzymes review
+\paragraph{The industrial potential of methyl transferases} has been demonstrated by several studies \cite{Wessjohann2013}.
+Li and Frost \cite{Li1998} presented an environmentally friendly method to produce vanillin from glucose by genetically modified \eco cells. During the fermentation, methyl transfer was achieved by recombinantly expressed \gls{comt}.
+Recent developments mainly focus on the synthesis of structurally more complex and highly valuable compounds, especially flavonoids, due to their manifold biological effects (\autoref{fig:b_review}). 
+For example, \molnum[ermanine]{ermanine} with a claimed anti-inflammatory and antiviral activity, can be synthesized from its inactive precursor kaempferol (5,7-dihydroxy-3,4'-dimethoxyflavone) by whole-cell biotransformation \cite{Bong2006}. 
+Sequential introduction of the two methyl groups was performed by OMT-9 from rice (ROMT-9) and OMT-2 from soybean and resulted in almost quantitative conversion of the substrate. 
+Similarly, transformation of kaempferol and quercetin by an engineered variant of the OMT-7 from \textit{Populus deltoides} gave the 3,7-di-O-methyl products in \SI{58}{\percent} and \SI{70}{\percent} yield, respectively \cite{Joe2010}. 
+The conversion of naringenin (4',5,7-trihydroxyflavanone) to 3-O-methylkaempferol was per- formed as an enzymatic two-step process involving initial oxidation by flavonol synthase and methylation of the intermediate by ROMT-9 \cite{Eun2010}.
+
+\begin{figure}[htpb]
+  \begin{figureframe}
+    \includegraphics[width=\textwidth]{usr/graphics/static/review_structures}
+  \end{figureframe}
+  \caption{Natural productes synthesized with the help of methyl transferases. \Glspl{omt} were used for the synthesis of ermanine \molref{ermanine}, 7-\textit{O}-methyl-aromadendrin \molref{Mearomadendrin} and 3,5-dimethoxy-4'-fluorostilbene \molref{dimethylfluorstilben}. \Gls{nmt} catalyze the production of epinephrine \molref{epinephrin} and \textit{N}-methyltetrahydroisoquinoline \molref{isoquinoline}, whereas 3-(benzoylamino)-8-methylumbelliferone \molref{umbelliferone} and furfuryl-methyl-sulfide \molref{methylsulfide} can be produced by \gls{cmt} and \gls{smt}}
+  \label{fig:b_review}
+\end{figure}
+
+The most promising approach for the chemoenzymatic production of flavonoids remains the \textit{de novo} synthesis from inexpensive biosynthetic precursors such as p-coumaric acid, which is initially processed into non-methylated flavonoids and subsequently modified by \gls{omt} reactions. 
+This way, \molnum[7-\textit{O}-methyl-aromadendrin]{Mearomadendrin} and the corresponding flavone genkwanin were obtained from recombinant \eco in yields of \SI{2.7}{\milli\gram\per\litre} and \SI{0.2}{\milli\gram\per\litre}, respectively \cite{Leonard2006c,Malla2012c}.
+Similarly, several non-natural (e.g. fluorinated) cinnamic acids can be converted to mono- and dimethylated stilbenes such as \molnum[3,5-dimethoxy-4'-fluorostilbene]{dimethylfluorstilben} using a reconstructued plant pathway in \eco.
+
+\textit{N}-, \textit{C}- and \textit{S}-methyl transferases have also been successfully used in biocatalytical applications.
+For example, \molnum[epinephrine]{epinephrin} and \molnum[\textit{N}-methyltetrahydroisoquinoline]{isoquinoline} were obtained by \invitro and \invivo biotransformations of their respective precursors \cite{MORISHIGE2014,Markoglou2002a}.
+Furthermore, a number of studies describe the production of several other \textit{N}-methylated alkaloid and non-alkaloid compounds \cite{Palazon2008a,Rigbers2008a,Zhang2012b}.
+\textit{C}-methyl transferases have been used biocatalytically to modify different phenols \cite{Crnovcic2010a} and coumarin derivatives, to obtain compounds such as \molnum[3-(benzoylamino)-8-methylumbelliferone]{umbelliferone} \cite{Stecher2009}.
+Also, the composition of the main tocopherol species in plants could be tuned by the introduction of bacterial \glspl{cmt} \cite{Hunter2007a}.
+\textit{S}-methyl tranferases have only seen a limited number of biocatalytic applications, but a candidate from \textit{Catharanthus roseus} shows some promiscuous activity towards small aliphatic and aromatic thiols (\molnum[furfuryl-methyl-sulfide]{methylsulfide}) \cite{Coiner2006}. 
 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 
+\textit{In vivo} biotransformations for the high-yield methylation of compounds is a feasable method, especially since \gls{sam} is a rather expensive cofactor (\num{3000} to \num{15000} \texteuro/g). 
+However, \gls{sam} cannot be easily substituted for artificial analogues \invivo.
+
 %
-\paragraph{Artificial SAM-analogues} have shown tremendous potential in biocatalytic applications.
+\paragraph{Artificial SAM-analogues} have shown tremendous potential in \invitro biocatalytic applications.
 The first description of novel synthetic \gls{sam} analogues with extended carbon chains, including \gls{sae}, allyl and propargyl derivatives, that were also shown to be useful in modifying \gls{dna} via the action of several \glspl{dmt} was provided by Dalhoff, \etal \citep{Dalhoff2006,Dalhoff2006a}. 
 %It was also noted, that allyl transalkylation reactions proceeded much faster than ethyl- or propyl transfers possibly due to conjugative stabilization of the transition state \citep{Dalhoff2006}.
 A whole variety of allyl derivatives was examined by different researchers and site-specific introductions of allyl, pent-2-en-4-ynyl and even 4-propargyloxy-but-2-enyl moieties into proteins (i.e. histones) was demonstrated using \glspl{pmt} \citep{Wang2011,Peters2010}.
@@ -367,3 +400,5 @@ However, no bioactivity data has been reported that shows the biological activit
 
 
 \section{Motivation}
+
+Hier muss noch was geschehen!

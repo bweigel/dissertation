@@ -6,8 +6,11 @@ library(data.table)
 library(magrittr)
 library(dplyr)
 
-load("spectra.Rda")
-load("peaks.Rda")
+load("spectra.Rda") #spread spectra (spec) list with scans (x/y)
+load("peaks.Rda") ## (data) - peaklist
+
+load("IPB/thesis/supplementary/R scripts/WEB350/peaks_WEB350.Rda")
+load("IPB/thesis/supplementary/R scripts/WEB350/spectra_WEB350.Rda")
 
 #### dictionary
 
@@ -106,17 +109,20 @@ for(i in 1:length(spec)){
 }
 
 msp <- str_c(msp, collapse = "\n")
-cat(msp, file="~/.wine//drive_c//NISTDEMO//MSSEARCH/WEB346_flavonoids.msp")
+#cat(msp, file="~/.wine//drive_c//NISTDEMO//MSSEARCH/WEB346_flavonoids.msp")
+cat(msp, file="~/.wine//drive_c//NISTDEMO//MSSEARCH/WEB350_flavonoid_standards.msp")
 
 ##############################################################
 ## Use only spectra that we have identofied
 ##############################################################
 library(mzR)
 
-what <- read.csv("~/IPB/thesis/supplementary/WEB346_LCMS.csv", sep=";", stringsAsFactors=F)
+#what <- read.csv("~/IPB/thesis/supplementary/WEB346_LCMS.csv", sep=";", stringsAsFactors=F)
+what <- read.csv("~/IPB/thesis/supplementary/WEB350_LCMS.csv", sep=";", stringsAsFactors=F)
 what %<>% filter(ok) %>% filter(!is.na(scan))
 
-DIR <- "/media/mori/Stuff/LCMS/WEB2015-II/MzXML/"
+#DIR <- "/media/mori/Stuff/LCMS/WEB2015-II/MzXML/"
+DIR <- "/media/mori/Stuff/LCMS/WEB2015-III/mzXML/"
 
 spec <- vector("list", length = 0)
 for(fil in unique(what$file)){
@@ -157,5 +163,5 @@ for(i in 1:length(spec)){
 }
 
 msp <- str_c(msp, collapse = "\n")
-#cat(msp, file="~/.wine//drive_c//NISTDEMO//MSSEARCH/WEB346_flavonoid_standards.msp")
+cat(msp, file="~/.wine//drive_c//NISTDEMO//MSSEARCH/WEB350_flavonoid_standards.msp")
 rm(list=ls())

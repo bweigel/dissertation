@@ -1,6 +1,7 @@
 library(mzR)
 library(dplyr)
-load("peaks.Rda")
+library(data.table)
+#load("peaks.Rda")
 
 spreadSpec <- function(spectra, cuts=0.001, cutoff=1000){
   ## calculate bins freom spectra and cutsize

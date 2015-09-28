@@ -1,11 +1,13 @@
 library(readMzXmlData)
 library(MSnSpec)
+library(Rcpp)
 
 
 ######################################################
 ############## LCMS Sample runs
 ######################################################
-DIR <- "/media/mori/Stuff/LCMS/WEB2015-II/MzXML/"
+#DIR <- "/media/mori/Stuff/LCMS/WEB2015-II/MzXML/"
+DIR <- "/media/mori/Stuff/LCMS/WEB2015-III/mzXML/"
 #files <- dir("/media/mori/Stuff/LCMS/WEB2015-II/MzXML", pattern = "(mzXML)$")
 
 files <- dir(DIR, pattern = "(mzXML)$")
@@ -13,7 +15,7 @@ files <- dir(DIR, pattern = "(mzXML)$")
 data <- vector("list", length = 0)
 traces <- vector("list", length = 0)
 pb <- txtProgressBar(min = 0, max = length(files), style = 3)
-#pdf("WEB346_Chromatograms.pdf", paper = "a4", width = 10, height = 14.1)
+#pdf("~/IPB/thesis/supplementary/WEB350_Chromatograms.pdf", paper = "a4", width = 10, height = 14.1)
 i <- 0
 for(file in files[]){
   setTxtProgressBar(pb, i)
@@ -35,7 +37,7 @@ for(file in files[]){
   rm(tmp)
   i <- i + 1
 }
-dev.off()
+#dev.off()
 
 rm(files)
 

@@ -1,0 +1,92 @@
+---
+title: "WEB350"
+author: "Benjamin Weigel"
+date: "10/01/2015"
+output: 
+   pdf_document:
+        includes:
+            in_header: mystyles.sty
+---
+
+```{r prereq, echo=FALSE, message=FALSE, warning=FALSE}
+library(magrittr)
+library(nwc.chemsupport)
+library(dplyr)
+library(Rcpp)
+library(xtable)
+
+options(xtable.comment = FALSE)
+options(xtable.booktabs = TRUE)
+```
+
+```{r, results='asis', echo=FALSE}
+cat("\\tableofcontents\\clearpage")
+```
+
+```{r, echo=FALSE, cache=F, message=FALSE, results='asis', warning=FALSE, error=TRUE}
+substances <- read.table("~/IPB/thesis/supplementary/WEB350/substances.csv", stringsAsFactors = F, sep = ",", header=T)
+v.molmass <- Vectorize(function(x)list(mol.mass(x)$mass))
+
+substances %<>% group_by(name) %>% mutate(formula=toupper(formula), MW=mol.mass(formula)$mass)
+
+dat <- read.csv("~/IPB/thesis/supplementary/fragment.table.csv")
+frags <- dat %>% filter(!individual) %>% select(fragment) %>% unlist
+indi <- dat %>% filter(individual == T) %>% select(fragment, ring.cleave, mass, substance)
+
+indi[!indi$ring.cleave,3] <- v.molmass(indi[!indi$ring.cleave,1]) %>% unlist
+
+indi %<>% mutate(formula = NA, MW=NA, mz=mass) %>% select(-mass,-ring.cleave)
+data <- expand.grid(fragment=frags, substance=substances$name)
+
+data <- merge(data, substances, by.x="substance", by.y="name") %>% 
+  group_by(substance, fragment) %>% 
+  mutate(mz = frag.mass(fragment, MW))
+        
+data<-merge(data, indi, all = T)
+xtable(head(data))
+```
+
+# Automatic annotation of MS spectra #
+
+```{r, echo=FALSE, results='asis', fig.width=12, fig.height=5, out.width="\\textwidth"}
+data.sp <-read.table("~/IPB/thesis/supplementary/WEB350_LCMS.csv", stringsAsFactors = F, sep = ";", header=T)
+
+DIR <- "/media/mori/Stuff/LCMS/WEB2015-III/mzXML/"
+#for(i in 1:nrow(data.sp)){
+# for(i in 1:5){
+#   tmp <- data.sp[i,]
+#   mss <- getMSSpec(paste(DIR, tmp$file, sep=""), tmp$scan) 
+# 
+#   tmp.mm <- data %>% ungroup %>% filter(substance == tmp$name) %>% select(fragment, mz)
+#   mm <- massmatch(tmp.mm$mz, mss, tmp.mm$fragment, ppm.in = 10)
+#   
+#   if(nrow(mm$df)>0){
+#     plotSpec(mss, title = paste(tmp$file, ", Compound: ", tmp$name, "\n",
+#                                 tmp$method, ".",
+#                                 tmp$eV, ".eV, scan ",
+#                                 tmp$scan, sep=""), ymax=0.1, relative=T, srt=90)
+#     plotANN(mm, adjust = 0.95, relative = T, srt=0)
+#     xtable(mm$df, digits = 2) %>% print
+#   }
+# }
+for(i in 1:nrow(data.sp)){
+  tmp <- data.sp[i,]
+  mss <- getMSSpec(paste(DIR, tmp$file, sep=""), tmp$scan) 
+
+
+  tmp.mm <- data %>% ungroup %>% filter(substance == tmp$name | is.na(substance)) %>% select(fragment, mz)
+  mm <- massmatch(tmp.mm$mz, mss, tmp.mm$fragment, ppm.in = 10, thresh = 1)
+  
+  if(nrow(mm$df)>0){
+    cat(paste("\\subsection{",tmp$name,".",tmp$method,".",tmp$eV,"eV}",sep=""))
+    plotSpec(mss, title = paste(tmp$file, ", Compound: ", tmp$name, "\n",
+                                tmp$method, ".",
+                                tmp$eV, ".eV, scan ",
+                                tmp$scan, sep=""), relative=T, srt=90, adj=c(0,0.5), yrange=c(-50, 140))
+    plotANN(mm, adjust = -0.05, relative = T, lines=T, below=-5, srt=40, adj=c(1,1))
+    xtable(mm$df %>% mutate(int=int/mm$maxy*100), digits = c(0,2,1,2,0)) %>% print
+    cat("\\clearpage")
+  }
+}
+```
+

@@ -364,7 +364,8 @@ The main peak in the spectra of these compounds was at \mz{153}, which correspon
 \item \frag{1,3}{A}{+} is usually most abundant and most readily formed \cite{Cuyckens2004} \textrightarrow originates from acetate–malonate pathway, therefore m/z 153; when 4-keto is missing e.g. flavanes flavanols m/z 139
 \item losses of small molecules and radicals common from [M+H]+; methyl ethers usually by loss of 15 u (CH3*) \cite{Cuyckens2004} \textrightarrow  not flavones!, there loss of water (18 u) or oxa-cyclopropene (C2H2O)
 \item[\textrightarrow] when methoxy substituent, the dominant ion is [M+H-CH3]\textsuperscript{+$\cdot$} \cite{Wolfender2000, Ma1997} (also in neg. mode \cite{Cuyckens2004}) \textrightarrow not for flavones
-  
+\item ONLY methylated flavones and flavonoles (kaempferide, isorhamnetin, acacetin, chrysoeriol,diosmetin) show loss of m/z 44.02622 under HCD conditions (more in 100eV energy mode) \textrightarrow subsequent loss of CH4 and CO 
+\item flavones and flavonoles (kaempferide, isorhamnetin, myricetin, quercetin, kaempferol,luteolin, apigenin) also show loss of m/z 29.00274 \textrightarrow CHO? formyl radical?
 \end{itemize}
 
 \section{Contributions}

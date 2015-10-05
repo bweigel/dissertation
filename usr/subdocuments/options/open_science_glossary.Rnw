@@ -5,7 +5,7 @@
 
 % starts the glossary files creation
 \makeglossaries
-
+%\newacronym[nonumberlist]{nce}{NCE}{normalized collision energy}
 %\newacronym[nonumberlist]{pal}{PAL}{phenylalanine ammonia lyase}
 %\newacronym[nonumberlist]{chs}{CHS}{chalcone synthase}
 \newacronym[nonumberlist]{cbd}{CBD}{cobalamin binding domain}

@@ -2,10 +2,11 @@
 title: "WEB350"
 author: "Benjamin Weigel"
 date: "10/01/2015"
-output: 
-   pdf_document:
-        includes:
-            in_header: mystyles.sty
+output:
+  pdf_document:
+    includes:
+      in_header: mystyles.sty
+    keep_tex: yes
 ---
 
 ```{r prereq, echo=FALSE, message=FALSE, warning=FALSE}
@@ -13,6 +14,7 @@ library(magrittr)
 library(nwc.chemsupport)
 library(dplyr)
 library(Rcpp)
+library(stringr)
 library(xtable)
 
 options(xtable.comment = FALSE)
@@ -48,7 +50,7 @@ xtable(head(data))
 
 # Automatic annotation of MS spectra #
 
-```{r, echo=FALSE, results='asis', fig.width=12, fig.height=5, out.width="\\textwidth"}
+```{r, echo=FALSE, results='asis', dev='tikz', fig.width=12, fig.height=5, out.width="\\textwidth"}
 data.sp <-read.table("~/IPB/thesis/supplementary/WEB350_LCMS.csv", stringsAsFactors = F, sep = ",", header=T)
 
 DIR <- "/media/mori/Stuff/LCMS/WEB2015-III/mzXML/"
@@ -80,7 +82,7 @@ for(i in 1:nrow(data.sp)){
   
   if(nrow(mm$df)>0){
     cat(paste("\\subsection{",tmp$name,".",tmp$method,".",tmp$eV,"eV}",sep=""))
-    plotSpec(mss, title = paste(tmp$file, ", Compound: ", tmp$name, "\n",
+    plotSpec(mss, title = paste(tmp$file %>% str_replace_all(., pattern = "\\_", "\\\\_"), ", Compound: ", tmp$name, "\n",
                                 tmp$method, ".",
                                 tmp$eV, ".eV, scan ",
                                 tmp$scan, sep=""), relative=T, srt=90, adj=c(0,0.5), yrange=c(-50, 140), rnd=3)
@@ -131,7 +133,7 @@ dat <- dat[order(dat$delM),]
 dat$fragment <- factor(dat$fragment, levels = dat$fragment, ordered = T)
 
 frags <- c("AC+", "0,2A+", "0,2A+-CO", "0,2B+", "0,3A+", "0,3A++2H", "0,4A++2H", "0,4B+", "0,4B+-H2O", 
-  "1,3A+", "1,3A+-C2H2O", "1,3B+", "1,3B+-2H", "1,4A++2H", "1,4A.+", "1,4A+",
+  "1,3A+", "1,3A+-CO","1,3A+-C2H2O",  "1,3A+-2CO","1,3A+-2CO-C2H4", "1,3B+", "1,3B+-2H", "1,4A++2H", "1,4A.+", "1,4A+",
   "1,4B++2H", "1,4B+-2H", "1,4B++2H-H2O", "1,4B+-2H-H2O", "1,4B+-2H-CO", "1,4B+-2H-CH3-CO", "1,4B+-2H-CO-CH3", "1,4B+-2H-CO-CH2O", "1,4B+-2H-2CO", "1,4B+-2H-2CO-CH3", "1,4B+-2H-C2H2O-H2O",
    "1,4B+-2H-2CO-CH2O", "1,4B+-2H-H2O-CO", "C7H6O5+", "C7H7+", "C7H5+", "C5H5O+", "C3HO2+")
 

@@ -253,6 +253,8 @@
   fancylist=true,
   natbib=true,
   backend=biber,
+%ibencoding=utf8,
+%exencoding=ascii,
   %style=authoryear,
 % options include authoryear, numeric, numeric-comp, numeric-verb, alphabetic, authoryear, authortitle
   style=numeric,

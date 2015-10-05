@@ -7,6 +7,37 @@
 %%%------------------------------------------------------------------------------------%%
 
 %%%-------------------------------------------------%%%
+%%% Macro to show missing unicode characters %%%
+%%%-------------------------------------------------%%%
+
+\usepackage{stringenc}
+\usepackage{pdfescape}
+
+\makeatletter
+\renewcommand*{\UTFviii@defined}[1]{%
+  \ifx#1\relax
+    \begingroup
+      % Remove prefix "\u8:"
+      \def\x##1:{}%
+      % Extract Unicode char from command name
+      % (utf8.def does not support surrogates)
+      \edef\x{\expandafter\x\string#1}%
+      \StringEncodingConvert\x\x{utf8}{utf16be}% convert to UTF-16BE
+      % Hexadecimal representation
+      \EdefEscapeHex\x\x
+      % Enhanced error message
+      \PackageError{inputenc}{Unicode\space char\space \string#1\space
+                              (U+\x)\MessageBreak
+                              not\space set\space up\space
+                              for\space use\space with\space LaTeX}\@eha
+    \endgroup
+  \else\expandafter
+    #1%
+  \fi
+}
+\makeatother
+
+%%%-------------------------------------------------%%%
 %%% Set your geometry %%%
 %%%-------------------------------------------------%%%
 
@@ -69,6 +100,8 @@
 
 \DeclareUnicodeCharacter{2032}{′}
 \DeclareUnicodeCharacter{2011}{‑}
+%\DeclareUnicodeCharacter{0131}{í}
+%\DeclareUnicodeCharacter{0301}{}
 
 %%%-------------------------------------------------%%%
 %%% Footnote settings  %%%
@@ -84,6 +117,7 @@
 %%%-------------------------------------------------%%%
 
 %% Example:
+%\newcommand{\ra}{\textrightarrow\xspace}
 \newcommand{\sntwo}{S\textsubscript{N}2\xspace}
 \newcommand{\pomt}{plant \gls{omt}\xspace}
 \newcommand{\pomts}{plant \glspl{omt}\xspace}
@@ -106,7 +140,7 @@
 \newcommand{\ugperml}[1]{\SI[mode=text]{#1}{\micro\gram\per\milli\litre}}
 \newcommand{\uM}[1]{\SI[mode=text]{#1}{\micro\molar}}
 \newcommand{\mM}[1]{\SI[mode=text]{#1}{\milli\molar}}
-\newcommand{\ra}{$\rightarrow$\xspace}
+\newcommand{\ra}{\textrightarrow\xspace}
 \newcommand{\scer}{\textit{S.\,cerevisiae}\xspace}
 \newcommand{\eco}{\textit{E.\,coli}\xspace}
 \newcommand{\ifa}{\textit{iso}-ferulic acid\xspace}
@@ -149,6 +183,7 @@
 	\refstepcounter{mol}%
 \ifthenelse{\equal {#1} {}}{\textbf{\themol}}{{\protect#1}\,(\textbf{\themol})}{\label{mol:#2}}} %% creates the anchor and label
 \newcommand{\molref}[1]{(\ref{mol:#1})} %% calls the reference
+\WithSuffix\newcommand\molref*[1]{\ref{mol:#1}} %% calls the reference
 
 \usepackage{chngcntr}
 
@@ -338,6 +373,7 @@
 bibencoding=utf8,%
 hyperref=true,%
 url=false,%
+%backend=biber%
 isbn=false,%
 doi=false,%
 firstinits=false%

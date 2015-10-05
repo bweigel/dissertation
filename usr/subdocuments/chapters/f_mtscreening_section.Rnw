@@ -48,7 +48,7 @@ However, it was found that the cleavage of the C-ring is less commonly observed 
 
 Fragments of flavonoid aglycones can be represented by a systematic nomenclature first proposed by Ma \etal \cite{Ma1997}.
 The labels \frag{\textit{i,j}}{A}{+} and \frag{\textit{i,j}}{B}{+} refer to fragments containing an intact A or B ring, with the superscripts \textit{i} and \textit{j} denoting the bonds of the C-ring that were broken (\autoref{fig:ion_nomenclature}).
-
+%
 \begin{figure}[htpb]\centering
   \begin{figureframe}
     \includegraphics[scale=1]{usr/graphics/static/fragmentation_nomenclature2}
@@ -56,13 +56,13 @@ The labels \frag{\textit{i,j}}{A}{+} and \frag{\textit{i,j}}{B}{+} refer to frag
   \caption{Ion fragment nomenclature of flavonoid aglycones as proposed by Ma \etal, illustrated on naringenin.}
   \label{fig:ion_nomenclature}
 \end{figure}
-
+%
 In this work the complementarity of two activation methods, \gls{cid} and \gls{hcd}, for the structural characterization of flavonoids, especially those methylated at the B-ring, in positive ionization mode was evaluated.
 %The main focus of this study were flavonoids methylated at the B-ring.
 
 \begin{table}[htpb]\centering\small
   \begin{minipage}{0.7\textwidth}
-    \captionof{table}[]{Substrates studied in this work. Three classes of flavonoids were tested: flavanones (\molref{naringenin}-\molref{hed}), flavones (\molref{apigenin}-\molref{chrysoeriol}) and flavonols (\molref{kaempferol}-\molref{myricetin}). The topology of the bond in the C-ring specifying flavanones or flavones/flavonols is denoted with \textbf{s} (single) or \textbf{d} (double), respectively.}
+    \captionof{table}[]{Substrates studied in this work. Three classes of flavonoids were tested: flavanones (\molref*{naringenin}-\molref*{hed}), flavones (\molref*{apigenin}-\molref*{chrysoeriol}) and flavonols (\molref*{kaempferol}-\molref*{myricetin}). The topology of the bond in the C-ring specifying flavanones or flavones/flavonols is denoted with \textbf{s} (single) or \textbf{d} (double), respectively.}
         \label{tab:LCMSsubstrates}
   \end{minipage}%
   \begin{minipage}{0.29\textwidth}
@@ -75,22 +75,25 @@ In this work the complementarity of two activation methods, \gls{cid} and \gls{h
       &  name & [M+H]\textsuperscript{+} & s/d & R\textsuperscript{1} & R\textsuperscript{2} & R\textsuperscript{3} & R\textsuperscript{4} \\
       \midrule
       \molnum{naringenin} &  naringenin & 273 & s & H & H & OH & H \\
-      \molnum{ponciretin} &  ponciretin & 287 & s & H & H & \cf{OCH3} & H \\
       \molnum{ed} &  eriodictyol & 289 & s & H & OH & OH & H \\
-      \molnum{hesperetin} &  hesperetin & 303 & s & H & OH & OCH\textsubscript{3} & H \\
-      \molnum{hed} &  homoeriodictyol & 303 & s & H & OCH\textsubscript{3} & OH & H \\
+      \molnum{ponciretin} &  ponciretin & 287 & s & H & H & \cf{OCH3} & H \\
+      \molnum{hesperetin} &  hesperetin & 303 & s & H & OH & \cf{OCH3} & H \\
+      \molnum{hed} &  homoeriodictyol & 303 & s & H & \cf{OCH3} & OH & H \\
       \midrule
       \molnum{apigenin} &  apigenin & 271 & d & H & H & OH & H \\
       \molnum{luteolin} &  luteolin & 287 & d & H & OH & OH & H \\
-      \molnum{diosmetin} &  diosmetin & 301 & d & H & OH & OCH\textsubscript{3} & H \\
-      \molnum{chrysoeriol} &  chrysoeriol & 301 & d & H & OH & OCH\textsubscript{3} & H \\
-      \molnum{dimethylluteolin} &  luteolin-3',4'-dimethylether & 301 & d & H & \cf{OCH3} & \cf{OCH3} & H \\
+      \molnum{acacetin} & acacetin & 285 & d & H & H & \cf{OCH3} &  H \\
+      \molnum{diosmetin} &  diosmetin & 301 & d & H & OH & \cf{OCH3} & H \\
+      \molnum{chrysoeriol} &  chrysoeriol & 301 & d & H & \cf{OCH3} & OH & H \\
+%      \molnum{dimethylluteolin} &  luteolin-3',4'-dimethylether & 301 & d & H & \cf{OCH3} & \cf{OCH3} & H \\
       \midrule
       \molnum{kaempferol} &  kaempferol & 287 & d & OH & H & OH & H \\
       \molnum{quercetin}  &  quercetin & 303 & d & OH & OH & OH & H \\
-      \molnum{isorhamnetin} & isorhamnetin & 317 & d & OH & \cf{OCH3} & OH & H \\
       \molnum{myricetin}  &  myricetin & 317 & d & OH & OH & OH & OH \\
-      \molnum{myricetin-mme}  &  myricetin-3'-methylether & 331 & d & OH & \cf{OCH3} & OH & OH \\
+      \molnum{kaempferide} & kaempferide & 301 & d & OH & H & \cf{OCH3} & H \\
+      \molnum{isorhamnetin} & isorhamnetin & 317 & d & OH & \cf{OCH3} & OH & H \\
+      
+ %     \molnum{myricetin-mme}  &  myricetin-3'-methylether & 331 & d & OH & \cf{OCH3} & OH & OH \\
       \bottomrule
     \end{tabularx}
  % \end{subtable}%
@@ -365,7 +368,9 @@ The main peak in the spectra of these compounds was at \mz{153}, which correspon
 \item losses of small molecules and radicals common from [M+H]+; methyl ethers usually by loss of 15 u (CH3*) \cite{Cuyckens2004} \textrightarrow  not flavones!, there loss of water (18 u) or oxa-cyclopropene (C2H2O)
 \item[\textrightarrow] when methoxy substituent, the dominant ion is [M+H-CH3]\textsuperscript{+$\cdot$} \cite{Wolfender2000, Ma1997} (also in neg. mode \cite{Cuyckens2004}) \textrightarrow not for flavones
 \item ONLY methylated flavones and flavonoles (kaempferide, isorhamnetin, acacetin, chrysoeriol,diosmetin) show loss of m/z 44.02622 under HCD conditions (more in 100eV energy mode) \textrightarrow subsequent loss of CH4 and CO 
+  \item \mz{170} (C7H6O5) fragment in HCD spectra of methylated flavonols and flavones and myricetin
 \item flavones and flavonoles (kaempferide, isorhamnetin, myricetin, quercetin, kaempferol,luteolin, apigenin) also show loss of m/z 29.00274 \textrightarrow CHO? formyl radical?
+  \item \mz{153} (1,3A+) \ra neutral losses of two CO and C2H4 \ra \mz{69} \ra implications for methylation on A ring?
 \end{itemize}
 
 \section{Contributions}
@@ -374,5 +379,5 @@ Benjamin Weigel prepared substances, analyzed mass spectral data and prepared ma
 Annegret Laub and Jürgen Schmidt conducted \gls{lcms} measurement runs.
 
 
-
+\'{\i}
 

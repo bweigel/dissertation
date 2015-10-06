@@ -1,0 +1,28 @@
+---
+title: "Untitled"
+author: "Benjamin Weigel"
+date: "10/06/2015"
+output: pdf_document
+---
+
+
+```{r}
+library(rpart)
+library(rpart.plot)
+library(rattle)
+library(dplyr)
+library(data.table)
+
+load("IPB/thesis/supplementary/WEB350/001_test.Rda")
+data <- comp 
+
+data.tree <- rpart(substance~., data= data %>% select(-type), method="class")
+#       control = c(minsplit = 3,
+#                                minbucket = 3,
+#                                cp = 0.001))
+fancyRpartPlot(data.tree, digits=3)
+
+
+```
+
+

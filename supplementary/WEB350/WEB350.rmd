@@ -50,7 +50,7 @@ xtable(head(data))
 
 # Automatic annotation of MS spectra #
 
-```{r, echo=FALSE, results='asis', dev='tikz', fig.width=12, fig.height=5, out.width="\\textwidth"}
+```{r, echo=FALSE, results='asis', dev='pdf', fig.width=12, fig.height=5, out.width="\\textwidth"}
 data.sp <-read.table("~/IPB/thesis/supplementary/WEB350_LCMS.csv", stringsAsFactors = F, sep = ",", header=T)
 
 DIR <- "/media/mori/Stuff/LCMS/WEB2015-III/mzXML/"
@@ -119,10 +119,10 @@ comp$substance <- factor(comp$substance, levels = c("naringenin", "eriodictyol",
 comp$method <- factor(comp$method, levels = c("CID.45", "HCD.75", "HCD.100"), ordered = T)
 
 library(tidyr)
-
+save(comp,file="001_test.Rda")
 comp %<>% group_by(fragment, substance, method) %>% #separate(method, into=c("method", "eV"), sep="[.]") %>%  
   mutate(mz.int = if(round(int) == 0)  NA else paste(round(mz), "\\,(", round(int), ")", sep="")) %>% ungroup%>%
-  select(fragment, substance, method, mz.int)
+  select(fragment, substance, method, mz.int, type)
 
 ## load fragment table and calculate masses of fragments
 dat <- read.csv("~/IPB/thesis/supplementary/fragment.table.csv")
@@ -141,7 +141,7 @@ frags <- c("AC+", "0,2A+", "0,2A+-CO", "0,2B+", "0,3A+", "0,3A++2H", "0,4A++2H",
 frags <- c(as.character(dat$fragment), frags)
 #frags <- factor(frags, levels = frags, ordered = T)
 
-x <- comp %>% ungroup %>% spread(substance, value = mz.int, fill = NA)
+x <- comp %>% select(-type) %>% ungroup %>% spread(substance, value = mz.int, fill = NA)
 x$method <- factor(x$method, levels = c("CID.45", "HCD.75", "HCD.100"), ordered = T)
 
 x <- x[order(x$method),]
@@ -170,5 +170,53 @@ for(i in unique(x$method)){
 }
 
 
+```
+
+
+```{r tab.by.type, results='asis', echo=FALSE}
+x <- comp %>% ungroup 
+
+x$fragment <- factor(x$fragment, levels = frags, ordered = T)
+x <- x[with(x, order(substance,method,fragment)),] 
+#x %<>% unite(., sub.type, substance, method, sep="_") %>% spread(sub.type, value = mz.int, fill=NA)
+#x %<>% spread(substance, value = mz.int, fill=NA)
+## convert the fragments
+
+#x$fragment <- paste("$",x$fragment, "$", sep="")
+###################################
+#x <- x[,c(1,2,39,41,40,15,17,16,42,44,43,18,20,19,21,23,22,6,8,7,33,35,34,3,5,4,12,14,13,9,11,10,30,32,31,45,47,46,36,38,37,27,29,28,24,26,25), with=F]
+
+cat("\\setlength\\tabcolsep{1.5pt}")
+ORD <- vector("list", 3)
+names(ORD) <- unique(x$type)
+ORD[[1]] <- c(10,1,13,4,7,12,3,15,6,9,11,2,14,5,8)+1
+#ORD[[2]] <- c(4,6,5,13,15,14,1,3,2,10,12,11,7,9,8)+1
+ORD[[2]] <- c(4,13,1,10,7,6,15,3,12,9,5,14,2,11,8)+1
+#ORD[[3]] <- c(7,9,8,13,15,14,10,12,11,4,6,5,1,3,2)+1
+ORD[[3]] <- c(7,13,10,4,1,9,15,12,6,3,8,14,11,5,2)+1
+for(i in unique(x$type)){
+  tmp <- x %>% filter(type==i)  %>% 
+    select(-type) %>% 
+    unite(., sub.method, substance, method, sep="\\_") %>% 
+    spread(sub.method, value = mz.int, fill=NA)
+  tmp <- tmp[,c(1,ORD[[i]]), with=F] 
+  
+  tmp <- tmp[with(tmp, order(fragment)),] 
+  tmp$fragment %<>% str_replace(., "(\\.\\+)$", "\\^{\\\\bullet\\+}") %>% 
+    str_replace(., "[+]$", "\\^\\+") %>% str_replace_all(., c("[A][+]"="A\\^\\+", "[B][+]"="B\\^\\+")) %>%
+    str_replace_all(., "([HCO])([[:digit:]]+)", "\\1\\_{\\2}") %>%
+    #str_replace_all(., "([HCOM[:digit:]+-])([+-])([[:digit:]HCO])", "\\1{\\2}\\3")
+    str_replace_all(., "([+-])([[:digit:]HCO])", "{\\1}\\2") %>%
+    str_replace_all(., "([,])", "{\\1}")
+  
+  tmp$fragment <- paste("$\\mathrm{",tmp$fragment, "}$", sep="")
+  
+  cat("\\begin{sidewaystable}\\caption{Fragment table for type \\textit{", i,"}}", sep="")
+  
+  #tmp[-(rowSums(!is.na(tmp[,-1,with=F])) == 0),]
+  tab<-xtable(tmp, align=c("l", "l|", rep("c", 4), "c|", rep("c", 4), "c|", rep("c", 5)), caption = paste("Fragment table for method:", i))  
+  print.xtable(tab, size="\\scriptsize", floating=F, tabular.environment="tabular", include.rownames=T, rotate.colnames = T, booktabs=T, sanitize.text.function = function(x){x}, caption.placement = "top")
+  cat("\\end{sidewaystable}")
+  }
 ```
 

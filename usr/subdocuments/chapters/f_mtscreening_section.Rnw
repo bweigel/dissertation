@@ -103,46 +103,88 @@ In this work the complementarity of two activation methods, \gls{cid} and \gls{h
 
 \section{Fragmentation of flavanones}
 
-The \gls{cid}-spectra of the fragmentation of the different flavanones are summarized in \autoref{tab:ions_flavanones}.
-The molecular ion of either compound was never observed (rel. intensity $<$ 0.5).
-Neutral losses of water and \cf{C2H2O} were common and the highest \gls{mz} observed always corresponded to the [M+H-\cf{H2O}]\textsuperscript{+} ion.
-The most prominent peaks in the \gls{cid} spectra stemmed from cleavages of the C-ring and matched the \frag{1,3}{A}{+} and (\frag{1,4}{B}{+}-2H) ions.
+Positive ionization MS\tup{2} spectra of flavanones are mostly characterized by a base peak at \mz{153}, which corresponds to the A-ring of the flavonoid skeleton (\autoref{tab:x_flavonesFrag} and \autoref{fig:flavanone_genfrag}).
+Even when \mz{153} was not the base peak, it was still dominant in the spectrum with intensities ranging between \SI{20}{\percent} and \SI{77}{\percent}.
+Peaks corresponding to the  molecular ions [M+H]\tup{+} were not observed for any of the flavanones.
+The structure of the  ion \frag{1,3}{A}{+} corresponding to \mz{153} is the same for all compounds \molref{naringenin} to \molref{hed} (\autoref{fig:flavanone_genfrag}).
+Peaks corresponding to \mz{} values of the respective (\frag{1,4}{B}{+}-2H) ions are also present in the mass spectra of each flavanone.
+Apart from the ions \frag{1,3}{A}{+} and (\frag{1,4}{B}{+}-2H), the \gls{cid}- and \gls{hcd}-mass spectra of the flavanones differ significantly.
+\Gls{cid} mainly triggers neutral losses directly from the molecular ion. 
+Losses of water (\SI{18}{\dalton}) and one or two ketene units (\cf{C2H2O}, \SI{42}{\dalton}) are predominant and afford ions of relatively high masses.
 
-\Gls{hcd}-spectra of \molref{ponciretin} and \molref{hesperetin} were recorded and turned out to be quite different from the corresponding \gls{cid}-spectra (\autoref{tab:cmp_flavanones}).
-The higher energy used for the activation via \glsentrytext{hcd} shifts the recorded peaks to smaller \mz.
-High-mass ions stemming from neutral losses were not observed in the \gls{hcd} spectra.
-Instead, \gls{hcd} seems to give rise to smaller ions that originate primarily from C-ring cleavage.
-The ion with \mz{153} was most abundant in \gls{hcd} spectra, as indicated by the corresponding peak with a relative intensity of \SI{100}{\percent}.
-This is notably different from the \gls{cid} spectra, where the \mz associated with the (\frag{1,4}{B}{+}-2H) ion is at \SI{100}{\percent}. 
+Fragment ions from cleavage of the C-ring (\frag{1,3}{A}{+} and (\frag{1,4}{B}{+}-2H)) further decomposed under the higher energy conditions in \gls{hcd} experiments.
+Thus, the resulting \gls{hcd} spectra generally display smaller \mz{} than the \gls{cid} spectrum.
+%
+\begin{figure}[htpb]\centering
+  \begin{figureframe}
+      \includegraphics[scale=1]{usr/graphics/static/flavanone_genfrag}
+  \end{figureframe}
+  \caption{Major fragmentation pathways of flavanones.  Activation using \gls{cid} conditions at \SI{45}{\percent} \gls{nce} mainly results in neutral losses of \cf{H2O} and ketene (\cf{C2H2O}) from the molecular ion [M+H]\textsuperscript{+} (bold frame).
+    These neutral losses are scarcely observed when \gls{hcd} with a \gls{nce} of \SI{75}{\percent} or \SI{100}{\percent} is used for activation. 
+    Here, C-ring cleavages followed by neutral losses from the cleavage fragments are dominant.%    
+  }
+  \label{fig:flavanone_genfrag}
+\end{figure}
+%
+Further fragmentation of ion (\frag{1,4}{B}{+}-2H) seems to depend on the substituents of the B-ring.
+Only (\frag{1,4}{B}{+}-2H) from eriodictyol \molref{ed} loses a water, as suggested by the peak at \mz{145}.
+However, the loss of \cf{CO} is the most prominent decomposition of (\frag{1,4}{B}{+}-2H).
+The intensities of the peaks corresponding to the (\frag{1,4}{B}{+}-2H-CO) fragment were as high as \SI{36}{\percent} in \gls{hcd} experiments.
+Naringenin \molref{naringenin} seems to sequentially lose two \cf{CO} to afford \mz{91}, which suggests a benzylium or tropylium cation.
+Methylated flavanones \molref{ponciretin}, \molref{hesperetin} and \molref{hed} show a loss of \cf{CO} followed by a loss of a methyl radical (\frag{1,4}{B}{+}-2H-CO-CH3$\mathrm{^\cdot}$), as suggested by the respective \mz{} values  of 118 and 134.
+Another \cf{CO} loss from this fragment is possible for ponciretin \molref{ponciretin} to produce an ion \mz{90}.
+The evidence suggests, that this ion's structure is best described by a benzylium/tropylium radical cation (\autoref{fig:flavanone_genfrag}).
+%
+It is proposed, that ion \frag{1,3}{A}{+} can decompose via two different pathways under \gls{hcd} conditions (\autoref{fig:ms2_13A}).
+A loss of ketene from \frag{1,3}{A}{+} results in \mz{111}.
+Pyranone (\molnum{pyranone}) is suggested as a structure for this ion. 
+Sequential losses of two \cf{CO} and a \cf{C2H4} could afford ion (\molnum{propanedion}).
+However, further MS\tup{n} experiments are necessary to confirm these proposals.
+
+
+
+
+
+%% The \gls{cid}-spectra of the fragmentation of the different flavanones are summarized in \autoref{tab:ions_flavanones}.
+%% The molecular ion of either compound was never observed (rel. intensity $<$ 0.5).
+%% Neutral losses of water and \cf{C2H2O} were common and the highest \gls{mz} observed always corresponded to the [M+H-\cf{H2O}]\textsuperscript{+} ion.
+%% The most prominent peaks in the \gls{cid} spectra stemmed from cleavages of the C-ring and matched the \frag{1,3}{A}{+} and (\frag{1,4}{B}{+}-2H) ions.
+
+%% \Gls{hcd}-spectra of \molref{ponciretin} and \molref{hesperetin} were recorded and turned out to be quite different from the corresponding \gls{cid}-spectra (\autoref{tab:cmp_flavanones}).
+%% The higher energy used for the activation via \glsentrytext{hcd} shifts the recorded peaks to smaller \mz.
+%% High-mass ions stemming from neutral losses were not observed in the \gls{hcd} spectra.
+%% Instead, \gls{hcd} seems to give rise to smaller ions that originate primarily from C-ring cleavage.
+%% The ion with \mz{153} was most abundant in \gls{hcd} spectra, as indicated by the corresponding peak with a relative intensity of \SI{100}{\percent}.
+%% This is notably different from the \gls{cid} spectra, where the \mz associated with the (\frag{1,4}{B}{+}-2H) ion is at \SI{100}{\percent}. 
 %
 %
 %
-\begin{table}[htpb]\centering\small
-  \caption{Comparison of \gls{cid} (\SI{45}{\electronvolt}) and \gls{hcd}-spectra (\SI{75}{\electronvolt}) of ponciretin \molref{ponciretin} and hesperetin \molref{hesperetin}. Activation via \gls{hcd} affords smaller fragments derived from an upstream C-ring cleavage.  {\footnotesize
- \textsuperscript{\textdagger} cannot be distinguished from  (\frag{1,4}{B}{+}-2\,H-CO), 
- \textsuperscript{\textdaggerdbl} cannot be distinguished from (\frag{1,4}{B}{+}-2\,H-CO-\cf{CH3OH})}}
-  \label{tab:cmp_flavanones}
-  \begin{tabular}{p{0.25\textwidth}cccc}
-    \toprule
-    \multirow{2}{*}{\small ion} & \multicolumn{2}{c}{\small \gls{cid}} & \multicolumn{2}{c}{\small \gls{hcd}} \\
-    \cmidrule(lr){2-3}\cmidrule(lr){4-5}
-    & \small \molref{ponciretin} & \molref{hesperetin} & \molref{ponciretin} & \molref{hesperetin} \\
-    \midrule
-   \protect[M+H-\cf{H2O}]\textsuperscript{+}  &  1 & 9.8 &   &    \\
-   \protect[M+H-2\cf{H2O}]\textsuperscript{+}  &  &  0.8 &   &  \\
-   \protect[M+H-\cf{C2H2O}]\textsuperscript{+} &  2.7 & 2.2 &  &  \\
-   \protect[M+H-2\cf{C2H2O}]\textsuperscript{+}  &  3.1 & 2.5 &  &  \\
- %  \protect[M+H-2\cf{C2H2O}-\cf{H2O}]\textsuperscript{+}   &  &  &  &  \\
-    \frag{}{AC}{+}  &   5.4 &  27.9 &   &   \\
-    \frag{1,3}{A}{+}  &   80.1 &  22.2 &  100 &  100 \\
-    (\frag{1,4}{B}{+}-2H) & 100 & 100 &  9.9 &  4.3 \\
-    (\frag{1,3}{B}{+}-2H)\textsuperscript{\textdagger} &   4 &  & 35.8 &  14.3 \\
-    (\frag{1,3}{B}{+}-2H-\cf{CH3}) &  &  & 10.2 &  10.2 \\
-    (\frag{1,3}{B}{+}-2H-\cf{CH3OH})\textsuperscript{\textdaggerdbl} &  & &  &  16.7 \\
-    (\frag{1,3}{B}{+}-\cf{CO}-\cf{CH3OH}) &  &  &  &  29.7 \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+%% \begin{table}[htpb]\centering\small
+%%   \caption{Comparison of \gls{cid} (\SI{45}{\electronvolt}) and \gls{hcd}-spectra (\SI{75}{\electronvolt}) of ponciretin \molref{ponciretin} and hesperetin \molref{hesperetin}. Activation via \gls{hcd} affords smaller fragments derived from an upstream C-ring cleavage.  {\footnotesize
+%%  \textsuperscript{\textdagger} cannot be distinguished from  (\frag{1,4}{B}{+}-2\,H-CO), 
+%%  \textsuperscript{\textdaggerdbl} cannot be distinguished from (\frag{1,4}{B}{+}-2\,H-CO-\cf{CH3OH})}}
+%%   \label{tab:cmp_flavanones}
+%%   \begin{tabular}{p{0.25\textwidth}cccc}
+%%     \toprule
+%%     \multirow{2}{*}{\small ion} & \multicolumn{2}{c}{\small \gls{cid}} & \multicolumn{2}{c}{\small \gls{hcd}} \\
+%%     \cmidrule(lr){2-3}\cmidrule(lr){4-5}
+%%     & \small \molref{ponciretin} & \molref{hesperetin} & \molref{ponciretin} & \molref{hesperetin} \\
+%%     \midrule
+%%    \protect[M+H-\cf{H2O}]\textsuperscript{+}  &  1 & 9.8 &   &    \\
+%%    \protect[M+H-2\cf{H2O}]\textsuperscript{+}  &  &  0.8 &   &  \\
+%%    \protect[M+H-\cf{C2H2O}]\textsuperscript{+} &  2.7 & 2.2 &  &  \\
+%%    \protect[M+H-2\cf{C2H2O}]\textsuperscript{+}  &  3.1 & 2.5 &  &  \\
+%%  %  \protect[M+H-2\cf{C2H2O}-\cf{H2O}]\textsuperscript{+}   &  &  &  &  \\
+%%     \frag{}{AC}{+}  &   5.4 &  27.9 &   &   \\
+%%     \frag{1,3}{A}{+}  &   80.1 &  22.2 &  100 &  100 \\
+%%     (\frag{1,4}{B}{+}-2H) & 100 & 100 &  9.9 &  4.3 \\
+%%     (\frag{1,3}{B}{+}-2H)\textsuperscript{\textdagger} &   4 &  & 35.8 &  14.3 \\
+%%     (\frag{1,3}{B}{+}-2H-\cf{CH3}) &  &  & 10.2 &  10.2 \\
+%%     (\frag{1,3}{B}{+}-2H-\cf{CH3OH})\textsuperscript{\textdaggerdbl} &  & &  &  16.7 \\
+%%     (\frag{1,3}{B}{+}-\cf{CO}-\cf{CH3OH}) &  &  &  &  29.7 \\
+%%     \bottomrule
+%%   \end{tabular}
+%% \end{table}
 %
 %
 %% \begin{table}[htpb]\centering\footnotesize
@@ -174,21 +216,12 @@ This is notably different from the \gls{cid} spectra, where the \mz associated w
 %
 %
 %%
-Figure \ref{fig:hcd_frag_hesp} illustrates the major pathways suggested for the fragmentation of \molref{hesperetin} under \gls{hcd} conditions.
-The mechanisms proposed for the development of \frag{1,3}{B}{+} and \frag{1,4}{B}{+} respectively are shown by \autoref{fig:mechanism_hcd_hesp}.
-After protonation of \molref{hesperetin} at the keto-group and a subsequent 1,3-hydride-shift, the C-ring can undergo a \gls{rda} reaction affording the \frag{1,3}{B}{+} ion, which can further undergo neutral losses.
-The generation of the \frag{1,4}{B}{+} ion involves multiple simultaneous electron movements.
+%% Figure \ref{fig:hcd_frag_hesp} illustrates the major pathways suggested for the fragmentation of \molref{hesperetin} under \gls{hcd} conditions.
+%% The mechanisms proposed for the development of \frag{1,3}{B}{+} and \frag{1,4}{B}{+} respectively are shown by \autoref{fig:mechanism_hcd_hesp}.
+%% After protonation of \molref{hesperetin} at the keto-group and a subsequent 1,3-hydride-shift, the C-ring can undergo a \gls{rda} reaction affording the \frag{1,3}{B}{+} ion, which can further undergo neutral losses.
+%% The generation of the \frag{1,4}{B}{+} ion involves multiple simultaneous electron movements.
 %
-\begin{figure}[htpb]\centering
-  \begin{figureframe}
-      \includegraphics[scale=1]{usr/graphics/static/flavanone_genfrag}
-  \end{figureframe}
-  \caption{Major fragmentation pathways of flavanones.  Activation using \gls{cid} conditions at \SI{45}{\percent} \gls{nce} mainly results in neutral losses of \cf{H2O} and ketene (\cf{C2H2O}) from the molecular ion [M+H]\textsuperscript{+} (bold frame).
-    These neutral losses are scarcely observed when \gls{hcd} with a \gls{nce} of \SI{75}{\percent} or \SI{100}{\percent} is used for activation. 
-    Here, C-ring cleavages followed by neutral losses from the cleavage fragments are dominant.%    
-  }
-  \label{fig:flavanone_genfrag}
-\end{figure}
+
 
 \begin{figure}[htpb]\centering
   \begin{figureframe}
@@ -202,6 +235,8 @@ The generation of the \frag{1,4}{B}{+} ion involves multiple simultaneous electr
 
 
 \section{Fragmentation of flavones}
+
+\footnote{A general fragmentation scheme for flavones is not as easily constructable as for flavanones. Important observeations in general: 1. methylated flavones hardly fragment in CID mode, rather only [M+H-CH3]+ is observed. 2. Fragmentation can be achieved in HCD mode (m/z 153). 3. When fraghmented, methylated and unmethylated flavones show completely different fragments.}
 
 The \gls{cid}-spectra of the flavones (\molref{apigenin} -- \molref{dimethylluteolin}) are summarized in \autoref{tab:ions_flavones}.
 The \mz{} of the molecular ions [M+H]\textsuperscript{+} were observed for the unmethylated compounds apigenin (\molref{apigenin}) and luteolin (\molref{luteolin}).

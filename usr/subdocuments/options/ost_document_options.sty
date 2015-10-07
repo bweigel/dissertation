@@ -118,6 +118,7 @@
 
 %% Example:
 %\newcommand{\ra}{\textrightarrow\xspace}
+\newcommand{\tup}[1]{\textsuperscript{#1}\xspace}
 \newcommand{\sntwo}{S\textsubscript{N}2\xspace}
 \newcommand{\pomt}{plant \gls{omt}\xspace}
 \newcommand{\pomts}{plant \glspl{omt}\xspace}
@@ -182,12 +183,19 @@
 \newcommand{\molnum}[2][]{%
 	\refstepcounter{mol}%
 \ifthenelse{\equal {#1} {}}{\textbf{\themol}}{{\protect#1}\,(\textbf{\themol})}{\label{mol:#2}}} %% creates the anchor and label
+%\WithSuffix\newcommand\molref*[1]{\ref{mol:#1}} %% calls the reference
+
+
+
 \newcommand{\molref}[1]{(\ref{mol:#1})} %% calls the reference
-\WithSuffix\newcommand\molref*[1]{\ref{mol:#1}} %% calls the reference
+\WithSuffix\newcommand\molnum*[1]{\ref{mol:#1}} %% calls the reference
+
+
+
 
 \usepackage{chngcntr}
 
-\counterwithin*{mol}{section}
+\counterwithin*{mol}{chapter}
 %%%-------------------------------------------------%%%
 %%% Set own environments %%%
 %%%-------------------------------------------------%%%

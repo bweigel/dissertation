@@ -549,3 +549,14 @@ Crystallographic data, phasing and refinement statistics.
   \caption{Proposed mechanisms for the formation of \textbf{\subref{fig:HCD_hesperetin_1.3}} -- \frag{1,3}{B}{+} and \textbf{\subref{fig:HCD_hesperetin_1.4}} -- \frag{1,4}{B}{+} ions from hesperetin upon \gls{hcd}.}
   \label{fig:mechanism_hcd_hesp}
 \end{figure}
+
+
+
+
+\begin{figure}[htpb]\centering
+  \begin{figureframe}
+   \includegraphics[scale=1]{usr/graphics/static/chrysoeriol_HCD_0,2B}
+  \end{figureframe}
+  \caption{Proposed mechanism for the formation of \frag{0,2}{B}{+} and resulting ions from the molecular ion of chrysoeriol under \gls{hcd} conditions.}
+\end{figure}
+

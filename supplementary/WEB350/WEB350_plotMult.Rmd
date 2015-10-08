@@ -1,0 +1,163 @@
+---
+title: "WEB350_plotSpecs"
+author: "Benjamin Weigel"
+date: "10/08/2015"
+output:
+  pdf_document:
+    includes:
+      in_header: mystyles.sty
+    keep_tex: yes
+---
+
+# Plot multiple MS spectra #
+
+```{r prerequ, echo=FALSE, message=FALSE}
+library(data.table)
+library(dplyr)
+library(nwc.chemsupport)
+```
+
+```{r functions, echo=FALSE, message=FALSE}
+plotmult <-function(msspecs){
+  if(!is.list(msspecs)) stop("Supply a list with xy spectra!")
+  msspecs <- lapply(msspecs, function(x){ 
+    x[,2] <- x[,2]/max(x[,2])
+    return(x)
+    }) 
+  plot(msspecs[[1]], type="h", xlab="m/z", ylab="rel. intensity")
+  cols <- rainbow(length(msspecs)-1)
+  mapply(function(x, col) {
+    lines(x=x[,1]+0.5, y=x[,2], type="h", col=col)
+    return(NULL)}, msspecs[2:length(msspecs)], cols)
+}
+
+plotmult2 <-function(msspecs, names, tr, ANN=NULL, ...){
+  if(!is.list(msspecs)) stop("Supply a list with xy spectra!")
+  
+  if(!is.null(ANN)){
+    masses <- ANN$mass
+    labs <- ANN$fragment
+  }
+  
+  layout(matrix(c(1,2,3,4), 4, 1, byrow = TRUE))
+  par(mar=c(2, 4, 1, 2), mgp=c(1.2,0.5,0))
+  #par(mfrow=c(length(msspecs), 1))
+  
+  names <- factor(names, names[3:1], ordered = T)
+  #names <- factor(names, names[order(names, decreasing = T)], names[order(names, decreasing = T)], ordered = T)
+  msspecs <- lapply(msspecs, function(x){ 
+    x[,2] <- x[,2]/max(x[,2])
+    return(x)
+  }) 
+ 
+  tmp <- rbindlist(
+            mapply(FUN=function(xy, nom){list(cbind(data.frame(X=xy[,1], Y=xy[,2]/max(xy[,2])), id=nom))}, xy=msspecs, nom=names)) 
+  xminmax <- c(min(tmp[,1,with=F]), max(tmp[,1,with=F]))
+  
+  cols <- rainbow(length(msspecs))
+  mapply(FUN=function(xy, names){
+    plot(x=xy[,1], y=xy[,2], type="h", xlab="m/z", ylab="rel. intensity", xlim=xminmax, yaxt="n", ...)
+    ########################
+    if(!is.null(ANN)){
+      mm <- massmatch(masses, xy, labs, ppm.in = 100, thresh = 0.1)
+      #print(mm)
+      plotANN(mm, tresh = 50, adjust = 0, relative = F, lines=F, ppm=F, col="grey20", adj=c(0,0.5), srt=0)
+    }
+    ########################
+    axis(2, labels = c(0,1), at=c(0,1), las=2)
+    text(xminmax[1], 1, labels=names, cex=1.2, adj=c(0,1), srt=0)
+
+    invisible(NULL)}, xy=msspecs, names=names)
+  
+  tmp <- tmp[which(tmp$Y>=tr/100),] 
+  boxplot(X~id, data=tmp, horizontal = T, par=list(labels=F), ylim=xminmax, yaxt = "n",  ylab = "", xlab="m/z")
+  text(xminmax[1], 3, labels="D", cex=1.2, adj=c(0,0), srt=0)
+  axis(2, labels = tolower(names[order(names,decreasing = F)]), at=1:length(names), las=2)
+
+  invisible(NULL)
+}
+
+```
+
+```{r, cache=FALSE}
+library(knitr)
+opts_chunk$set(dev='pdf')
+```
+
+## Naringenin ##
+
+```{r naringenin, echo=FALSE, message=FALSE, fig.height=5, fig.width=4, out.width='0.4\\textwidth'}
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-III/mzXML/WEB350_1_pMS2,HCD_273.mzXML", scan = c(3454,3459,3456))
+
+  
+ANN <- data.frame(mass=c(153.01839, 147.044,  91.054, 119.049), fragment=c("1,3A+", "1,4B+-2H", "C7H7+", "1,4B+-2H-CO"))
+#plotmult2(mssy, c("CID@45\\%", "HCD@75\\%", "HCD@100\\%"), tr=1, ANN=ANN)
+plotmult2(mssy,LETTERS[1:3], tr=1, ANN=ANN)
+```
+
+
+## Eriodictyol ##
+
+```{r ed, echo=FALSE, message=FALSE, fig.height=5, fig.width=4, out.width='0.4\\textwidth'}
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-III/mzXML/WEB350_2_pMS2,HCD_289.mzXML", scan = c(3302,3303,3304))
+
+  
+ANN <- data.frame(mass=c(153.01839, 163.039,  89.038,135.044), fragment=c("1,3A+", "1,4B+-2H", "C7H5+","1,4B+-2H-CO"))
+#plotmult2(mssy, c("CID@45\\%", "HCD@75\\%", "HCD@100\\%"), tr=1, ANN=ANN)
+plotmult2(mssy,LETTERS[1:3], tr=1, ANN=ANN)
+
+```
+
+```{r, echo=F, fig.width=2.25, fig.height=6, out.width='0.2\\textwidth'}
+load("001_test.Rda")
+library(ggplot2)
+library(grid)
+library(dplyr)
+
+logic <- expression(type == "flavanon" & (substance != "homoeriodictyol") & (fragment == "1,3A+" | 
+                                            fragment == "1,4B+-2H" | 
+                                            fragment == "C7H5+" | 
+                                            fragment == "1,4B+-2H-CO" 
+                                          ))
+
+logic2 <- expression((substance == "eriodictyol" |
+                       substance == "naringenin") & 
+                      (fragment == "1,3A+" | 
+                         fragment == "1,4B+-2H" | 
+                         fragment == "C7H5+" | 
+                         fragment == "1,4B+-2H-CO" 
+                       ))
+
+comp$substance <- factor(comp$substance, levels = c("naringenin", "ponciretin",  "eriodictyol", "hesperetin", "homoeriodictyol",
+                                                 "apigenin", "luteolin", "acacetin", "diosmetin", "chrysoeriol",
+                                                 "kaempferol", "quercetin", "myricetin", "kaempferide", "isorhamnetin"), ordered = T)
+
+ggplot(comp %>% filter(eval(logic)), aes(x=method, y=int/100)) +
+  geom_line(aes(group=fragment), col="grey50", size=0.1) + 
+  geom_point(aes(shape=fragment), size=2) + 
+  theme_minimal() +
+  theme(legend.position="none", 
+        panel.grid = element_blank(),
+        panel.border = element_rect(fill = NA, 
+                colour = "black"),
+        axis.text.x = element_text(angle = 30, hjust = 0.5, vjust = 0.5),
+        legend.key.size = unit(0.5, units = "cm"),
+        legend.direction = "vertical",
+        strip.background = element_rect(color="black", fill = "grey80", size=0.1),
+        axis.title.x = element_blank()) +
+  labs(y="rel. intensity") +
+  scale_y_continuous(breaks=c(0,1)) +
+  scale_x_discrete(labels=c("CID 45%", "HCD 75%", "HCD 100%")) +
+  scale_shape(name=element_blank()) +
+  facet_wrap(~substance, ncol = 1)
+```
+
+## HED ##
+
+```{r hed, echo=FALSE, message=FALSE, fig.height=5, fig.width=4, out.width='0.4\\textwidth'}
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-III/mzXML/WEB350_4_pMS2,HCD_303.mzXML", scan = c(3486,3487,3488))
+
+ANN <- data.frame(mass=c(153.01839, 177.055, 89.038, 149.06), fragment=c("1,3A+", "1,4B+-2H", "C7H5+", "1,4B+-2H-CO"))
+plotmult2(mssy, c(LETTERS[1:3]), tr=1, ANN=ANN)
+```
+

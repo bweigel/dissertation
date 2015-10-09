@@ -103,7 +103,7 @@ In this work the complementarity of two activation methods, \gls{cid} and \gls{h
 
 \section{Fragmentation of flavanones}
 
-Positive ionization MS\tup{2} spectra of flavanones are mostly characterized by a base peak at \mz{153}, which corresponds to the A-ring of the flavonoid skeleton (\autoref{tab:x_flavonesFrag} and \autoref{fig:flavanone_genfrag}).
+Positive ionization MS\tup{2} spectra of flavanones (\autoref{tab:x_flavanonfrag}) are mostly characterized by a base peak at \mz{153}, which corresponds to the A-ring of the flavonoid skeleton (\autoref{fig:flavanone_genfrag}).
 Even when \mz{153} was not the base peak, it was still dominant in the spectrum with intensities ranging between \SI{20}{\percent} and \SI{77}{\percent}.
 Peaks corresponding to the  molecular ions [M+H]\tup{+} were not observed for any of the flavanones.
 The structure of the  ion \frag{1,3}{A}{+} corresponding to \mz{153} is the same for all compounds \molref{naringenin} to \molref{hed} (\autoref{fig:flavanone_genfrag}).
@@ -119,7 +119,7 @@ This is made clear by the increasing intensities of smaller fragments upon raisi
 %
 \begin{figure}[htpb]\centering
   \begin{figureframe}
-      \includegraphics[scale=1]{usr/graphics/static/flavanone_genfrag}
+      \includegraphics[width=\textwidth]{usr/graphics/static/flavanone_genfrag}
   \end{figureframe}
   \caption{Major fragmentation pathways of flavanones.  Activation using \gls{cid} conditions at \SI{45}{\percent} \gls{nce} mainly results in neutral losses of \cf{H2O} and ketene (\cf{C2H2O}) from the molecular ion [M+H]\textsuperscript{+} (bold frame).
     These neutral losses are scarcely observed when \gls{hcd} with a \gls{nce} of \SI{75}{\percent} or \SI{100}{\percent} is used for activation. 
@@ -130,7 +130,7 @@ This is made clear by the increasing intensities of smaller fragments upon raisi
 %
 \begin{figure}[htpb]\centering
   \begin{figureframe}
-      \includegraphics[scale=1]{usr/graphics/static/1,3A_fragmentation}
+      \includegraphics[width=\textwidth]{usr/graphics/static/1,3A_fragmentation}
   \end{figureframe}
   \caption{Proposed MS\textsuperscript{2} fragmentation of \frag{1,3}{A}{+} after \gls{hcd} activation.%
   }
@@ -256,32 +256,66 @@ However, further MS\tup{n} experiments are necessary to confirm these proposals.
 
 \section{Fragmentation of flavones}\footnote{A general fragmentation scheme for flavones is not as easily constructable as for flavanones. Important observeations in general: 1. methylated flavones hardly fragment in CID mode, rather only [M+H-CH3]+ is observed. 2. Fragmentation can be achieved in HCD mode (m/z 153). 3. When fraghmented, methylated and unmethylated flavones show completely different fragments.}
 
+The principle fragmentation of flavone aglycones in positive mode \gls{cid} tandem mass spectrometry was discussed previously \cite{Ma1997,Kuhn2003}.
+Non-methylated (\molref*{apigenin}, \molref*{luteolin}) and methylated flavones (\molref*{acacetin} -- \molref*{diosmetin}) show significantly different MS\tup{2} spectra (\autoref{tab:x_flavonfrag}).
+Most noteable is the lack of almost any fragmentation of the methylated representatives other than a methyl loss, in \gls{cid} mode (\autoref{fig:chrysoeriol_msspec}).
+After the loss of a methyl group a relatively stable radical cation is formed, due to the fact that the whole system is essentially conjugated (\autoref{fig:meflavon_stability}).
+%
+\begin{figure}[htpb]\centering
+  \begin{figureframe}
+      \includegraphics[scale=0.75]{usr/graphics/static/me_flavone_stability}
+  \end{figureframe}
+  \caption{The [M+H-\cf{CH3}]\tup{\textbullet+} ion of methylated flavones like diosmetin is highly stabilized by resonance, explaining the high intensity of the corresponding peak and limiting its fragmentation at low activation energies. %
+  }
+  \label{fig:meflavon_stability}
+\end{figure}
+%
 
 \begin{figure}[htpb]\centering
   \begin{figureframe}
     \begin{subfigure}{\textwidth}
-      \includegraphics[scale=1]{usr/graphics/static/deme_flavone_genfrag}
+      \includegraphics[width=\textwidth]{usr/graphics/static/deme_flavone_genfrag}
+      \caption{Unmethylated flavones}
     \end{subfigure}
     
     \begin{subfigure}{\textwidth}
-%      \includegraphics[scale=1]{usr/graphics/static/flavanone_genfrag}
-    \end{subfigure}  
-  \end{figureframe}
-  \caption{Major fragmentation pathways of unmethylated flavones \molref{apigenin} and \molref{luteolin}. %
-  }
+      \includegraphics[width=\textwidth]{usr/graphics/static/me_flavone_genfrag}
+      \caption{Methylated flavones}
+    \end{subfigure}
+ \end{figureframe}
+  \caption{Major fragmentation pathways of unmethylated and methylated flavones.%
+    }
   \label{fig:flavone_genfrag}
 \end{figure}
 
-The \gls{cid}-spectra of the flavones (\molref{apigenin} -- \molref{dimethylluteolin}) are summarized in \autoref{tab:ions_flavones}.
-The \mz{} of the molecular ions [M+H]\textsuperscript{+} were observed for the unmethylated compounds apigenin (\molref{apigenin}) and luteolin (\molref{luteolin}).
-Conversely the \mz{} corresponding to an ion after methyl loss [M+H-\cf{CH3}]\textsuperscript{+} was the largest observed for the methylated derivatives (\molref{diosmetin} -- \molref{dimethylluteolin}).
-The \mz{} of the [M+H-\cf{CH3}]\textsuperscript{+} ion was also the only one observed for the monomethyl derivatives (\molref{diosmetin}, \molref{chrysoeriol}).
-In earlier studies it was already shown, that flavones methylated at the B-ring have a low tedency for fragmentation in \gls{cid} experiments \citep{Ma1997}.
-In contrast to the monomethylated compounds \molref{diosmetin} and \molref{chrysoeriol}, the dimethylated luteolin-3',4'-dimethylether (\molref{dimethylluteolin}) also showed a loss of methane (\mz{16}) followed by further losses of water (\mz{18}) and \cf{CO} (\mz{28}).
+\begin{figure}[htpb]\centering
+  \begin{figureframe}
+      \includegraphics[scale=1]{usr/graphics/static/chrysoeriol_fragmentation}
+ \end{figureframe}
+  \caption{ Fragmentation of \molref{chrysoeriol} after \gls{hcd} activation. %
+  }
+  \label{fig:chrys_frag}
+\end{figure}
 
-The unmethylated compounds \molref{apigenin} and \molref{luteolin} showed neutral losses of water, \cf{C2H2O}, \cf{C2H2} and carbon monoxide.
-The main peak in the spectra of these compounds was at \mz{153}, which corresponds to the \frag{1,3}{A}{+} ion.
-
+\begin{figure}[htpb]\centering
+  \begin{figureframe}
+    \begin{subfigure}{0.6\textwidth}\centering
+      \includegraphics[width=\textwidth]{usr/graphics/static/chrysoeriol_msspectra}
+    \end{subfigure}
+    \begin{subfigure}{0.38\textwidth}\centering
+      \adjustbox{trim=0 {.20\height} 0 0,clip}%
+                {\includegraphics[width=0.7\textwidth]{usr/graphics/static/me-flavones_msint}}
+    \end{subfigure}
+  \end{figureframe}
+  \caption{Comparison of \gls{cid} and \gls{hcd} MS\tup{2} spectra of chrysoeriol \molref{chrysoeriol}. 
+    \textbf{A} -- \gls{cid} at \SI{45}{\percent} \gls{nce}. 
+    \textbf{B} -- \gls{hcd} at \SI{75}{\percent} \gls{nce}. 
+    \textbf{C} -- \gls{hcd} at \SI{100}{\percent} \gls{nce}. 
+    Four different prominent peaks are annotated in each spectrum. \textbf{D} -- The shift to smaller masses in \gls{hcd} spectra and  with increasing \gls{nce} is illustrated by the boxplot of the distribution of peaks with relative intensities above \SI{1}{\percent} in each of the above spectra.
+    \textbf{E} -- Relationship between the activation method and the intensity of four fragments (\textfilledpoint~~ \frag{1,3}{A}{+}, \filledtriangleup~~[M+H-\cf{CH3}]\tup{\textbullet+}, \textfilledsquare~~[M+H-\cf{CH3}-CO]\tup{\textbullet+}, {\LARGE +}~~[M+H-\cf{CH4}-CO]\tup{+}) of the studied methylated flavones.%
+  }
+  \label{fig:chrysoeriol_msspec}
+\end{figure}
 
 %% \begin{table}[htpb]\centering\small
 %%   \caption{Product ions formed from the protonated molecular ions [M+H]\textsuperscript{+} of the flavanones \molref{apigenin} -- \molref{dimethylluteolin} in \gls{cid} mode (\SI{45}{\electronvolt}).} 
@@ -331,41 +365,9 @@ The main peak in the spectra of these compounds was at \mz{153}, which correspon
 %%   \end{tabular}
 %% \end{table}
 
-\begin{figure}[htpb]\centering
-  \begin{figureframe}
-   \includegraphics[scale=1]{usr/graphics/static/chrysoeriol_HCD}
-  \end{figureframe}
-  \caption{Major fragmentation pathways of chrysoeriol upon \gls{hcd} at \SI{100}{\electronvolt}}
-\end{figure}
 
 \section{Fragmentation of flavonols}
 
-\begin{table}[htpb]\centering\small
-  \caption{Product ions formed from the protonated molecular ions [M+H]\textsuperscript{+} of the flavonols \molref{kaempferol} -- \molref{myricetin} in \gls{cid} mode (\SI{45}{\electronvolt}).}
-  \label{tab:ions_flavonols}
-  \begin{tabular}{>{\footnotesize}p{0.25\textwidth}cccc}
-    \toprule
-  ion  & \molref{kaempferol} & \molref{quercetin} & \molref{isorhamnetin} & \molref{myricetin}  \\
-    \midrule
-
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-
-\begin{table}[htpb]\centering\small
-  \caption{Comparison of \gls{cid} (\SI{45}{\electronvolt}) and \gls{hcd}-spectra (\SI{75}{\electronvolt}) of isorhamnetin (\molref{isorhamnetin}) and myricetin-3'-methylether (\molref{myricetin-mme}). Activation via \gls{hcd} affords smaller fragments derived from an upstream C-ring cleavage.}
-  \label{tab:cmp_flavonols}
-  \begin{tabular}{p{0.25\textwidth}cccc}
-    \toprule
-    \multirow{2}{*}{\small ion} & \multicolumn{2}{c}{\small \gls{cid}} & \multicolumn{2}{c}{\small \gls{hcd}} \\
-    \cmidrule(lr){2-3}\cmidrule(lr){4-5}
-    & \small \molref{isorhamnetin} & \molref{myricetin-mme} & \molref{isorhamnetin} & \molref{myricetin-mme} \\
-    \midrule
- 
-    \bottomrule
-  \end{tabular}
-\end{table}
 
 %\section{Fragmentation of cinnamic acids}
 

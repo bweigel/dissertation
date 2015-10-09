@@ -9,7 +9,7 @@
 %%%-------------------------------------------------%%%
 %%% Macro to show missing unicode characters %%%
 %%%-------------------------------------------------%%%
-
+\usepackage{adjustbox}
 \usepackage{stringenc}
 \usepackage{pdfescape}
 
@@ -188,7 +188,7 @@
 
 
 \newcommand{\molref}[1]{(\ref{mol:#1})} %% calls the reference
-\WithSuffix\newcommand\molnum*[1]{\ref{mol:#1}} %% calls the reference
+\WithSuffix\newcommand\molref*[1]{\ref{mol:#1}} %% calls the reference
 
 
 

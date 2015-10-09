@@ -81,7 +81,7 @@ plotmult2 <-function(msspecs, names, tr, ANN=NULL, ...){
 
 ```{r, cache=FALSE}
 library(knitr)
-opts_chunk$set(dev='pdf')
+opts_chunk$set(dev='svg')
 ```
 
 ## Naringenin ##
@@ -120,16 +120,14 @@ logic <- expression(type == "flavanon" & (substance != "homoeriodictyol") & (fra
                                             fragment == "1,4B+-2H-CO" 
                                           ))
 
-logic2 <- expression((substance == "eriodictyol" |
-                       substance == "naringenin") & 
-                      (fragment == "1,3A+" | 
-                         fragment == "1,4B+-2H" | 
-                         fragment == "C7H5+" | 
-                         fragment == "1,4B+-2H-CO" 
-                       ))
+logic2 <- expression(type == "flavone" & (substance != "diosmetin") & (fragment == "1,3A+" | 
+                                            fragment == "[M+H-CH3]+" | 
+                                            fragment == "[M+H-CH3-CO].+" | 
+                                            fragment == "[M+H-CH4-CO]+" 
+                                          ))
 
 comp$substance <- factor(comp$substance, levels = c("naringenin", "ponciretin",  "eriodictyol", "hesperetin", "homoeriodictyol",
-                                                 "apigenin", "luteolin", "acacetin", "diosmetin", "chrysoeriol",
+                                                 "apigenin", "acacetin", "luteolin",  "diosmetin", "chrysoeriol",
                                                  "kaempferol", "quercetin", "myricetin", "kaempferide", "isorhamnetin"), ordered = T)
 
 ggplot(comp %>% filter(eval(logic)), aes(x=method, y=int/100)) +
@@ -161,3 +159,50 @@ ANN <- data.frame(mass=c(153.01839, 177.055, 89.038, 149.06), fragment=c("1,3A+"
 plotmult2(mssy, c(LETTERS[1:3]), tr=1, ANN=ANN)
 ```
 
+## Chrysoeriol ##
+
+```{r chrysoeriol, echo=FALSE, message=FALSE, fig.height=5, fig.width=4, out.width='0.4\\textwidth'}
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-III/mzXML/WEB350_8_pMS2,HCD_301.mzXML", scan = c(3478,3479,3480))
+
+  
+ANN <- data.frame(mass=c(153.01839, 286.047, 258.052, 257.045, 229.05, 203.034), fragment=c("1,3A+", "[M+H-CH3].+", "[M+H-CH3-CO].+","[M+H-CH4-CO]+","[M+H-CH4-2CO]+", "[M+H-CH4-2CO-C2H2]+"))
+#plotmult2(mssy, c("CID@45\\%", "HCD@75\\%", "HCD@100\\%"), tr=1, ANN=ANN)
+plotmult2(mssy,LETTERS[1:3], tr=1, ANN=ANN)
+
+```
+
+```{r, echo=F, fig.width=2.25, fig.height=6, out.width='0.2\\textwidth'}
+load("001_test.Rda")
+library(ggplot2)
+library(grid)
+library(dplyr)
+
+logic <- expression(type == "flavone" & (substance != "apigenin")  & (substance != "luteolin") & (fragment == "1,3A+" | 
+                                            fragment == "[M+H-CH3].+" | 
+                                            fragment == "[M+H-CH3-CO].+" | 
+                                            fragment == "[M+H-CH4-CO]+" 
+                                          ))
+
+comp$substance <- factor(comp$substance, levels = c("naringenin", "ponciretin",  "eriodictyol", "hesperetin", "homoeriodictyol",
+                                                 "apigenin", "acacetin", "luteolin",  "diosmetin", "chrysoeriol",
+                                                 "kaempferol", "quercetin", "myricetin", "kaempferide", "isorhamnetin"), ordered = T)
+
+ggplot(comp %>% filter(eval(logic)), aes(x=method, y=int/100)) +
+  geom_line(aes(group=fragment), col="grey50", size=0.1) + 
+  geom_point(aes(shape=fragment), size=2) + 
+  theme_minimal() +
+  theme(legend.position="bottom", 
+        panel.grid = element_blank(),
+        panel.border = element_rect(fill = NA, 
+                colour = "black"),
+        axis.text.x = element_text(angle = 30, hjust = 0.5, vjust = 0.5),
+        legend.key.size = unit(0.5, units = "cm"),
+        legend.direction = "vertical",
+        strip.background = element_rect(color="black", fill = "grey80", size=0.1),
+        axis.title.x = element_blank()) +
+  labs(y="rel. intensity") +
+  scale_y_continuous(breaks=c(0,1)) +
+  scale_x_discrete(labels=c("CID 45%", "HCD 75%", "HCD 100%")) +
+  scale_shape(name=element_blank()) +
+  facet_wrap(~substance, ncol = 1)
+```

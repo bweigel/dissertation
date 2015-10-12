@@ -254,22 +254,20 @@ However, further MS\tup{n} experiments are necessary to confirm these proposals.
 %
 
 
-\section{Fragmentation of flavones}\footnote{A general fragmentation scheme for flavones is not as easily constructable as for flavanones. Important observeations in general: 1. methylated flavones hardly fragment in CID mode, rather only [M+H-CH3]+ is observed. 2. Fragmentation can be achieved in HCD mode (m/z 153). 3. When fraghmented, methylated and unmethylated flavones show completely different fragments.}
+\section{Fragmentation of flavones}%\footnote{A general fragmentation scheme for flavones is not as easily constructable as for flavanones. Important observeations in general: 1. methylated flavones hardly fragment in CID mode, rather only [M+H-CH3]+ is observed. 2. Fragmentation can be achieved in HCD mode (m/z 153). 3. When fraghmented, methylated and unmethylated flavones show completely different fragments.}
 
 The principle fragmentation of flavone aglycones in positive mode \gls{cid} tandem mass spectrometry was discussed previously \cite{Ma1997,Kuhn2003}.
-Non-methylated (\molref*{apigenin}, \molref*{luteolin}) and methylated flavones (\molref*{acacetin} -- \molref*{diosmetin}) show significantly different MS\tup{2} spectra (\autoref{tab:x_flavonfrag}).
-Most noteable is the lack of almost any fragmentation of the methylated representatives other than a methyl loss, in \gls{cid} mode (\autoref{fig:chrysoeriol_msspec}).
-After the loss of a methyl group a relatively stable radical cation is formed, due to the fact that the whole system is essentially conjugated (\autoref{fig:meflavon_stability}).
-%
-\begin{figure}[htpb]\centering
-  \begin{figureframe}
-      \includegraphics[scale=0.75]{usr/graphics/static/me_flavone_stability}
-  \end{figureframe}
-  \caption{The [M+H-\cf{CH3}]\tup{\textbullet+} ion of methylated flavones like diosmetin is highly stabilized by resonance, explaining the high intensity of the corresponding peak and limiting its fragmentation at low activation energies. %
-  }
-  \label{fig:meflavon_stability}
-\end{figure}
-%
+Non-methylated (\molref*{apigenin}, \molref*{luteolin}) and methylated flavones (\molref*{acacetin} -- \molref*{chrysoeriol}) show significantly different MS\tup{2} spectra (\autoref{tab:x_flavonfrag}).
+Apigenín \molref{apigenin} and luteolin \molref{luteolin} MS\tup{2} spectra show a characteristic \mz{153}, corresponding to the \frag{1,3}{A}{+} ion, as a base peak in \gls{cid} mode and at low activation energies in \gls{hcd} mode (\autoref{fig:flavone_genfrag}).
+Contrary to the flavanones, the MS\tup{2} of unmethylated flavones show the peak corresponding to the molecular ion [M+H]\tup{+}, which is strongest in \gls{hcd} at \gls{nce} of \SI{75}{\percent}.
+Characteristic neutral losses of water, \cf{CO} and ketene (\cf{C2H2O}) were also observed for \molref{apigenin} and \molref{luteolin} (\autoref{fig:flavone_genfrag}, \autoref{tab:x_flavonfrag}).
+MS-peaks corresponding to a loss of a formyl radical, resulting in [M+H-CHO]\tup{\textbullet+} were also observed for \molref{apigenin} and \molref{luteolin}.
+Loss of ketene is proposed to proceed via two different pathways, such that further neutral losses of another ketene, or \cf{C2H2} might be explained (\autoref{fig:flavone_genfrag}).
+Besides the characteristic \frag{1,3}{A}{+} fragment, apigenin \molref{apigenin} and luteolin \molref{luteolin} MS\tup{2} spectra also present peaks corresponding to the B-ring fragments \frag{1,3}{B}{+} (\mz{119} and 135) and \frag{0,4}{B}{+} (\mz{163} and 179).
+From the mass differences of these fragments, the substitution on the B-ring can be deduced.
+The \frag{0,4}{B}{+} ion might further degrade by neutral losses of ketene (\SI{32}{\dalton}) or water (\SI{18}{\dalton}).
+The base peaks at a \gls{nce} of \SI{100}{\percent} in \gls{hcd}, \mz{91} \molref{apigenin} and \mz{89} \molref{luteolin}, are most likely due to a further decomposition of \frag{1,3}{B}{+} in a fashion similar to the flavanones to afford a benzylium or bicycloheptatrienyl cation respectively (\autoref{fig:flavone_genfrag}). 
+
 
 \begin{figure}[htpb]\centering
   \begin{figureframe}
@@ -288,15 +286,38 @@ After the loss of a methyl group a relatively stable radical cation is formed, d
   \label{fig:flavone_genfrag}
 \end{figure}
 
+
+The most noteable difference between the methylated and unmethylated representatives is the almost complete lack of any fragmentation of the methylated flavones other than a methyl loss, in \gls{cid} experiments (\autoref{tab:x_flavonfrag}, \autoref{fig:chrysoeriol_msspec}).
+A relatively stable radical cation is formed after the loss of a methyl group, due to the fact that the whole system is essentially conjugated (\autoref{fig:meflavon_stability}).
+%
+\begin{figure}[htpb]\centering
+  \begin{figureframe}
+      \includegraphics[scale=0.75]{usr/graphics/static/me_flavone_stability}
+  \end{figureframe}
+  \caption{The [M+H-\cf{CH3}]\tup{\textbullet+} ion of methylated flavones like diosmetin is highly stabilized by resonance, explaining the high intensity of the corresponding peak and limiting its fragmentation at low activation energies. %
+  }
+  \label{fig:meflavon_stability}
+\end{figure}
+%
+Any other loss would break this conjugation and therefore requires a higher activation energy. 
+\Gls{hcd} experiments at \glspl{nce} of \SIrange{75}{100}{\percent} were suitable to fragment the methylated flavones (\molref*{acacetin}--\molref*{chrysoeriol}).
+The base peak in the \gls{hcd} spectra of \molref{acacetin} (\mz{242}) and (\molref*{diosmetin}, \molref*{chrysoeriol}) (\mz{257}) at \SI{75}{\percent} \gls{nce} was attributed to another loss of \cf{CO} from the [M+H-\cf{CH3}]\tup{\textbullet+} ion, while the base peak \mz{153} at \SI{100}{\percent} \gls{nce} likely corresponds to the \frag{1,3}{A}{+} ion (\autoref{fig:chrysoeriol_msspec}).
+%
 \begin{figure}[htpb]\centering
   \begin{figureframe}
       \includegraphics[scale=1]{usr/graphics/static/chrysoeriol_fragmentation}
  \end{figureframe}
-  \caption{ Fragmentation of \molref{chrysoeriol} after \gls{hcd} activation. %
+  \caption{Proposed pathway of fragmentation of \molref{chrysoeriol} after \gls{hcd} activation.%
   }
   \label{fig:chrys_frag}
 \end{figure}
-
+%
+Further losses from [M+H-\cf{CH3}-\cf{CO}]\tup{\textbullet+}, with the proposed structure of a benzochromenylium radical (\molnum{benzochromenylium}), were not observed (\autoref{fig:flavone_genfrag}, \autoref{tab:x_flavonfrag}).
+Mass-to-charge ratios of 241 \molref{acacetin} and 257 (\molref*{diosmetin}, \molref*{chrysoeriol}) were attributed to a neutral loss of methane (\cf{CH4}), followed by a loss of \cf{CO} (\autoref{fig:flavone_genfrag}, \autoref{fig:chrys_frag}).
+Interestingly, the abundance of a peak corresponding to a [M+H-\cf{CH4}]\tup{+} ion was below \SI{1}{\percent} in all spectra, illustrating its susceptibility for additional losses.
+The fragment [M+H-\cf{CH4}-\cf{CO}]\tup{+} on the other hand might undergo further neutral losses of up to three \cf{CO} (compounds \molref*{chrysoeriol} and \molref*{diosmetin}) as is illustrated for chrysoeriol in \autoref{fig:chrys_frag}.
+However, instead of additional \cf{CO} losses, fragment [M+H-\cf{CH3}-2\cf{CO}]\tup{\textbullet+} of \molref{chrysoeriol} or \molref{diosmetin} might as well loose a \cf{C2H2} (\autoref{fig:chrys_frag}), as suggested by the MS\tup{2} spectra (\autoref{tab:x_flavonfrag}).
+%
 \begin{figure}[htpb]\centering
   \begin{figureframe}
     \begin{subfigure}{0.6\textwidth}\centering
@@ -316,6 +337,14 @@ After the loss of a methyl group a relatively stable radical cation is formed, d
   }
   \label{fig:chrysoeriol_msspec}
 \end{figure}
+%
+The only C-ring fragmentation of the methylated flavones (\molref*{acacetin}--\molref*{chrysoeriol}) occurs at 1/3, as the observed \mz{153} (\frag{1,3}{A}{+}) suggests.
+Numerous minor peaks in the MS\tup{2} \gls{hcd} spectra of compounds (\molref*{acacetin}--\molref*{chrysoeriol}) could not be assigned a fragment or structure, but many even numbered \mz{} values suggest quite complex rearrangements.
+
+The general trend of smaller sized fragments at higher activation energies is also true for flavones (\autoref{fig:chrysoeriol_msspec}).
+
+
+
 
 %% \begin{table}[htpb]\centering\small
 %%   \caption{Product ions formed from the protonated molecular ions [M+H]\textsuperscript{+} of the flavanones \molref{apigenin} -- \molref{dimethylluteolin} in \gls{cid} mode (\SI{45}{\electronvolt}).} 

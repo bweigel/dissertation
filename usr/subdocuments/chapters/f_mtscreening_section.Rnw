@@ -338,7 +338,8 @@ However, instead of additional \cf{CO} losses, fragment [M+H-\cf{CH3}-2\cf{CO}]\
   \label{fig:chrysoeriol_msspec}
 \end{figure}
 %
-The only C-ring fragmentation of the methylated flavones (\molref*{acacetin}--\molref*{chrysoeriol}) occurs at 1/3, as the observed \mz{153} (\frag{1,3}{A}{+}) suggests.
+The only C-ring fragmentation of the methylated flavones (\molref*{acacetin}--\molref*{chrysoeriol}) occurs at positions 1/3, as the observed \mz{153} (\frag{1,3}{A}{+}) suggests.
+The higher energy MS\tup{2} spectra suggest, that the \frag{1,3}{A}{+} fragment might deteriorate further in the same manner as described for the flavanones (\autoref{fig:ms2_13A}). 
 Numerous minor peaks in the MS\tup{2} \gls{hcd} spectra of compounds (\molref*{acacetin}--\molref*{chrysoeriol}) could not be assigned a fragment or structure, but many even numbered \mz{} values suggest quite complex rearrangements.
 
 The general trend of smaller sized fragments at higher activation energies is also true for flavones (\autoref{fig:chrysoeriol_msspec}).

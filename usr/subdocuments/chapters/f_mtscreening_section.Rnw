@@ -398,6 +398,55 @@ The general trend of smaller sized fragments at higher activation energies is al
 
 \section{Fragmentation of flavonols}
 
+\cite{Wolfender2000,Ma1997}
+
+\begin{figure}[htpb]\centering
+  \begin{figureframe}
+    \begin{subfigure}{\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/flavonole_genfrag}
+      \caption{All flavonoles}
+    \end{subfigure}
+    
+    \begin{subfigure}{\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/me_flavonole_genfrag}
+      \caption{Methylated flavonoles}
+    \end{subfigure}
+ \end{figureframe}
+  \caption{Major fragmentation pathways flavonoles. n/o -- not observed (relative intensity \textless \SI{1}{\percent}).%
+    }
+  \label{fig:flavonole_genfrag}
+\end{figure}
+
+
+\begin{figure}[htpb]\centering
+  \begin{figureframe}
+      \includegraphics[width=\textwidth]{usr/graphics/static/isorhamnetin_frag}
+ \end{figureframe}
+  \caption{Proposed pathway of fragmentation of \molref{isorhamnetin} after methyl, methane or methanol cleavage upon activation. Some fragmentations were observed in \gls{hcd} mode only (box).%
+  }
+  \label{fig:chrys_frag}
+\end{figure}
+
+%
+\begin{figure}[htpb]\centering
+  \begin{figureframe}
+    \begin{subfigure}{0.6\textwidth}\centering
+      \includegraphics[width=\textwidth]{usr/graphics/static/isorhamnetin_msspectra}
+    \end{subfigure}
+    \begin{subfigure}{0.38\textwidth}\centering
+                \includegraphics[width=0.7\textwidth]{usr/graphics/static/flavonols_msint}
+    \end{subfigure}
+  \end{figureframe}
+  \caption{Comparison of \gls{cid} and \gls{hcd} MS\tup{2} spectra of isorhamnetin \molref{isorhamnetin}. 
+    \textbf{A} -- \gls{cid} at \SI{45}{\percent} \gls{nce}. 
+    \textbf{B} -- \gls{hcd} at \SI{75}{\percent} \gls{nce}. 
+    \textbf{C} -- \gls{hcd} at \SI{100}{\percent} \gls{nce}. 
+    Four different prominent peaks are annotated in each spectrum. \textbf{D} -- The shift to smaller masses in \gls{hcd} spectra and  with increasing \gls{nce} is illustrated by the boxplot of the distribution of peaks with relative intensities above \SI{1}{\percent} in each of the above spectra.
+    \textbf{E} -- Relationship between the activation method and the intensity of four fragments (\textfilledpoint~~\frag{1,3}{A}{+}, \filledtriangleup~~\frag{0,2}{A}{+}, \textfilledsquare~~[M+H-\cf{CH3}]\tup{\textbullet+}, {\LARGE +}~~[M+H-\cf{CH4}-3CO]\tup{+}) of the studied methylated flavones.%
+  }
+  \label{fig:isorhamnetin_msspec}
+\end{figure}
+%
 
 %\section{Fragmentation of cinnamic acids}
 

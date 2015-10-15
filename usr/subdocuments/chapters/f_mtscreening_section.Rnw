@@ -110,7 +110,7 @@ The structure of the  ion \frag{1,3}{A}{+} corresponding to \mz{153} is the same
 Peaks corresponding to \mz{} values of the respective (\frag{1,4}{B}{+}-2H) ions are also present in the mass spectra of each flavanone.
 Apart from the ions \frag{1,3}{A}{+} and (\frag{1,4}{B}{+}-2H), the \gls{cid}- and \gls{hcd}-mass spectra of the flavanones differ significantly.
 \Gls{cid} mainly triggers neutral losses directly from the molecular ion. 
-Losses of water (\SI{18}{\dalton}) and one or two ketene units (\cf{C2H2O}, \SI{42}{\dalton}) are predominant and afford ions of relatively high masses (\autoref{fig:flavanone_genfrag}).
+Losses of water (\SI{18}{\dalton}) and one or two ketene units (\cf{C2H2O}, \SI{42}{\dalton}) are predominant and afford ions of relatively high masses (\autoref{fig:flavanone_genfrag}) \cite{Kang2007}.
 
 Fragment ions from cleavage of the C-ring (\frag{1,3}{A}{+} and (\frag{1,4}{B}{+}-2H)) further decomposed under the higher energy conditions in \gls{hcd} experiments.
 Thus, the resulting \gls{hcd} spectra generally display smaller \mz{} than the \gls{cid} spectrum (\autoref{fig:ed_msspec}).
@@ -256,7 +256,7 @@ However, further MS\tup{n} experiments are necessary to confirm these proposals.
 
 \section{Fragmentation of flavones}%\footnote{A general fragmentation scheme for flavones is not as easily constructable as for flavanones. Important observeations in general: 1. methylated flavones hardly fragment in CID mode, rather only [M+H-CH3]+ is observed. 2. Fragmentation can be achieved in HCD mode (m/z 153). 3. When fraghmented, methylated and unmethylated flavones show completely different fragments.}
 
-The principle fragmentation of flavone aglycones in positive mode \gls{cid} tandem mass spectrometry was discussed previously \cite{Ma1997,Kuhn2003}.
+The principle fragmentation of flavone aglycones apigenin \molref{apigenin}, luteolin \molref{luteolin}, acacetin \molref{acacetin} and chrysoeriol \molref{chrysoeriol} in positive mode \gls{cid} tandem mass spectrometry was discussed previously \cite{Ma1997,Kuhn2003}.
 Non-methylated (\molref*{apigenin}, \molref*{luteolin}) and methylated flavones (\molref*{acacetin} -- \molref*{chrysoeriol}) show significantly different MS\tup{2} spectra (\autoref{tab:x_flavonfrag}).
 Apigenín \molref{apigenin} and luteolin \molref{luteolin} MS\tup{2} spectra show a characteristic \mz{153}, corresponding to the \frag{1,3}{A}{+} ion, as a base peak in \gls{cid} mode and at low activation energies in \gls{hcd} mode (\autoref{fig:flavone_genfrag}).
 Contrary to the flavanones, the MS\tup{2} of unmethylated flavones show the peak corresponding to the molecular ion [M+H]\tup{+}, which is strongest in \gls{hcd} at \gls{nce} of \SI{75}{\percent}.
@@ -299,24 +299,6 @@ A relatively stable radical cation is formed after the loss of a methyl group, d
   \label{fig:meflavon_stability}
 \end{figure}
 %
-Any other loss would break this conjugation and therefore requires a higher activation energy. 
-\Gls{hcd} experiments at \glspl{nce} of \SIrange{75}{100}{\percent} were suitable to fragment the methylated flavones (\molref*{acacetin}--\molref*{chrysoeriol}).
-The base peak in the \gls{hcd} spectra of \molref{acacetin} (\mz{242}) and (\molref*{diosmetin}, \molref*{chrysoeriol}) (\mz{257}) at \SI{75}{\percent} \gls{nce} was attributed to another loss of \cf{CO} from the [M+H-\cf{CH3}]\tup{\textbullet+} ion, while the base peak \mz{153} at \SI{100}{\percent} \gls{nce} likely corresponds to the \frag{1,3}{A}{+} ion (\autoref{fig:chrysoeriol_msspec}).
-%
-\begin{figure}[htpb]\centering
-  \begin{figureframe}
-      \includegraphics[scale=1]{usr/graphics/static/chrysoeriol_fragmentation}
- \end{figureframe}
-  \caption{Proposed pathway of fragmentation of \molref{chrysoeriol} after \gls{hcd} activation.%
-  }
-  \label{fig:chrys_frag}
-\end{figure}
-%
-Further losses from [M+H-\cf{CH3}-\cf{CO}]\tup{\textbullet+}, with the proposed structure of a benzochromenylium radical (\molnum{benzochromenylium}), were not observed (\autoref{fig:flavone_genfrag}, \autoref{tab:x_flavonfrag}).
-Mass-to-charge ratios of 241 \molref{acacetin} and 257 (\molref*{diosmetin}, \molref*{chrysoeriol}) were attributed to a neutral loss of methane (\cf{CH4}), followed by a loss of \cf{CO} (\autoref{fig:flavone_genfrag}, \autoref{fig:chrys_frag}).
-Interestingly, the abundance of a peak corresponding to a [M+H-\cf{CH4}]\tup{+} ion was below \SI{1}{\percent} in all spectra, illustrating its susceptibility for additional losses.
-The fragment [M+H-\cf{CH4}-\cf{CO}]\tup{+} on the other hand might undergo further neutral losses of up to three \cf{CO} (compounds \molref*{chrysoeriol} and \molref*{diosmetin}) as is illustrated for chrysoeriol in \autoref{fig:chrys_frag}.
-However, instead of additional \cf{CO} losses, fragment [M+H-\cf{CH3}-2\cf{CO}]\tup{\textbullet+} of \molref{chrysoeriol} or \molref{diosmetin} might as well loose a \cf{C2H2} (\autoref{fig:chrys_frag}), as suggested by the MS\tup{2} spectra (\autoref{tab:x_flavonfrag}).
 %
 \begin{figure}[htpb]\centering
   \begin{figureframe}
@@ -337,6 +319,25 @@ However, instead of additional \cf{CO} losses, fragment [M+H-\cf{CH3}-2\cf{CO}]\
   }
   \label{fig:chrysoeriol_msspec}
 \end{figure}
+%
+Any other loss would break this conjugation and therefore requires a higher activation energy. 
+\Gls{hcd} experiments at \glspl{nce} of \SIrange{75}{100}{\percent} were suitable to fragment the methylated flavones (\molref*{acacetin}--\molref*{chrysoeriol}).
+The base peak in the \gls{hcd} spectra of \molref{acacetin} (\mz{242}) and (\molref*{diosmetin}, \molref*{chrysoeriol}) (\mz{257}) at \SI{75}{\percent} \gls{nce} was attributed to another loss of \cf{CO} from the [M+H-\cf{CH3}]\tup{\textbullet+} ion, while the base peak \mz{153} at \SI{100}{\percent} \gls{nce} likely corresponds to the \frag{1,3}{A}{+} ion (\autoref{fig:chrysoeriol_msspec}).
+%
+\begin{figure}[htpb]\centering
+  \begin{figureframe}
+      \includegraphics[scale=1]{usr/graphics/static/chrysoeriol_fragmentation}
+ \end{figureframe}
+  \caption{Proposed pathway of fragmentation of \molref{chrysoeriol} after \gls{hcd} activation.%
+  }
+  \label{fig:chrys_frag}
+\end{figure}
+%
+Further losses from [M+H-\cf{CH3}-\cf{CO}]\tup{\textbullet+}, with the proposed structure of a benzochromenylium radical (\molnum{benzochromenylium}), were not observed (\autoref{fig:flavone_genfrag}, \autoref{tab:x_flavonfrag}).
+Mass-to-charge ratios of 241 \molref{acacetin} and 257 (\molref*{diosmetin}, \molref*{chrysoeriol}) were attributed to a neutral loss of methane (\cf{CH4}), followed by a loss of \cf{CO} (\autoref{fig:flavone_genfrag}, \autoref{fig:chrys_frag}).
+Interestingly, the abundance of a peak corresponding to a [M+H-\cf{CH4}]\tup{+} ion was below \SI{1}{\percent} in all spectra, illustrating its susceptibility for additional losses.
+The fragment [M+H-\cf{CH4}-\cf{CO}]\tup{+} on the other hand might undergo further neutral losses of up to three \cf{CO} (compounds \molref*{chrysoeriol} and \molref*{diosmetin}) as is illustrated for chrysoeriol in \autoref{fig:chrys_frag}.
+However, instead of additional \cf{CO} losses, fragment [M+H-\cf{CH3}-2\cf{CO}]\tup{\textbullet+} of \molref{chrysoeriol} or \molref{diosmetin} might as well loose a \cf{C2H2} (\autoref{fig:chrys_frag}), as suggested by the MS\tup{2} spectra (\autoref{tab:x_flavonfrag}).
 %
 The only C-ring fragmentation of the methylated flavones (\molref*{acacetin}--\molref*{chrysoeriol}) occurs at positions 1/3, as the observed \mz{153} (\frag{1,3}{A}{+}) suggests.
 The higher energy MS\tup{2} spectra suggest, that the \frag{1,3}{A}{+} fragment might deteriorate further in the same manner as described for the flavanones (\autoref{fig:ms2_13A}). 
@@ -398,35 +399,55 @@ The general trend of smaller sized fragments at higher activation energies is al
 
 \section{Fragmentation of flavonols}
 
-\cite{Wolfender2000,Ma1997}
+The principle fragmentation pathways of kaempferol \molref{kaempferol}, quercetin \molref{quercetin}, myricetin \molref{myricetin} and isorhamnetin \molref{isorhamnetin} in \gls{cid} tandem mass spectrometry have been previously reported \cite{Wolfender2000,Ma1997,March2004}.
+Other than flavones, methylated and non-methylated flavonols share similar fragment(ation)s.
+Whereas in \gls{cid} methylated flavons hardly showed any fragmentation beyond a methyl loss, methylated flavonoles kaempferide \molref{kaempferide} and isorhamnetin \molref{isorhamnetin} exhibited the same losses as their unmethylated couterparts, albeit at a much lower level (\autoref{tab:x_flavonolfrag}, \autoref{fig:flavonole_genfrag} and \ref{fig:isorhamnetin_msspec}).
+These observations are in full agreement with previous reports \cite{Ma1997} and hold true in \gls{cid} as well as \gls{hcd} measurements.
+The observed losses from the molecular ion [M+H]\tup{+} are essentially the same as those that were described for the flavones (\molref*{apigenin}, \molref*{luteolin}) (compare \autoref{fig:flavonole_genfrag} and \ref{fig:flavone_genfrag}).
+Lots of high intensity peaks presented in the MS\tup{2} spectra of flavonoles and the base peaks changed between compounds.
+The base peak of \molref{kaempferol} in the \gls{cid} spectra was at \mz{165}, which corresponds to the \frag{0,2}{A}{+} fragment (\autoref{fig:flavonole_genfrag}).
+The signals \mz{257} and 273 corresponding to the [M+H-\cf{H2O}]\tup{+} ions were the base peak in the \gls{cid}-MS\tup{2} spectra of \molref{quercetin} and \molref{myricetin} respectively.
+%However the signal corresponding to the [M+H-\cf{H2O}]\tup{+} ion
+The [M+H-\cf{CH3}]\tup{\textbullet+} ions were highly abundant in the \gls{cid} experiments of \molref{kaempferide} and \molref{isorhamnetin}.
+The base peak of \molref{isorhamnetin} \mz{302}  corresponds to this fragment.
+Fragment (\frag{0,3}{A}{+}+2H) fits the \mz{139}, which was the base peak in the \gls{cid} spectrum of \molref{kaempferide}.
+The MS signal \mz{153} corresponding to fragment \frag{1,3}{A}{+} was at low abundance in \gls{cid} spectra, especially for the methylated falvonols (\autoref{fig:isorhamnetin_msspec}).
+However, in \gls{hcd} experiments \mz{153} was the base peak of all flavonols, except kaempferide \molref{kaempferide} where \mz{229} was at \SI{100}{\percent} relative intensity.
 
+Neutral losses of \cf{CO}, water or a formyl radical are suggested by the collected spectra (\autoref{fig:flavonole_genfrag}, \autoref{tab:x_flavonolfrag}).
+Only for kaempferol \molref{kaempferol}, a neutral loss of \SI{42}{\dalton} corresponding ketene was observed.
+%
 \begin{figure}[htpb]\centering
   \begin{figureframe}
     \begin{subfigure}{\textwidth}
       \includegraphics[width=\textwidth]{usr/graphics/static/flavonole_genfrag}
-      \caption{All flavonoles}
+      \caption{Fragments characteristic for all studied flavonoles.}
     \end{subfigure}
     
     \begin{subfigure}{\textwidth}
       \includegraphics[width=\textwidth]{usr/graphics/static/me_flavonole_genfrag}
-      \caption{Methylated flavonoles}
+      \caption{Characteristic fragments of methylated flavonoles.}
     \end{subfigure}
  \end{figureframe}
-  \caption{Major fragmentation pathways flavonoles. n/o -- not observed (relative intensity \textless \SI{1}{\percent}).%
+  \caption{Major fragmentation pathways of flavonoles. n/o -- not observed (relative intensity \textless \SI{1}{\percent}).%
     }
   \label{fig:flavonole_genfrag}
 \end{figure}
+%
+However, MS\tup{2} spectra of all flavonols, except \molref{isorhamnetin}, contained signals that could be assigned to the ion [M+H-2\cf{C2H2O}]\tup{+}, suggesting a loss of two ketene units.
+This advocates the notion that the [M+H-\cf{C2H2O}]\tup{+} ion of flavonols might be highly unstable.
+Other than the flavones, flavonoles can loose two sequential \cf{CO} and another \cf{C4H4O2}, confirming previously published data \cite{Ma1997}.
+The spectra furthermore suggest, that the [M+H-\cf{H2O}-\cf{CO}]\tup{+} fragment of flavonols can loose another \SI{42}{\dalton} (\cf{C2H2O}), which was not spotted previously.
+The data also clearly show, that neutral losses off of the molecular ion are most abundant in \gls{cid} experiments, whereas the shift to smaller masses in \gls{hcd} experiments is obvious (\autoref{tab:x_flavonolfrag}, \autoref{fig:isorhamnetin_msspec}).
 
+The studied flavonoles all displayed an MS signal at \mz{153} corresponding to the \frag{1,3}{A}{+} fragment, just as the flavanones and flavones with a 5,7-dihydroxy-substitution of the A-ring did.
+This further highlights the diagnostic nature of the \frag{1,3}{A}{+} fragment of flavonoids in \gls{msms} spectra.
+At higher energies, \frag{1,3}{A}{+} can further decompose in a manner discussed in the previous sections (\autoref{fig:ms2_13A}). 
+Characteristic ring cleavage fragments of flavonols include \frag{0,2}{A}{+}, \frag{0,2}{B}{+} and \frag{1,3}{B}{+}-2H \cite{Ma1997,March2004}, all of which were confirmed in the present study.
+Overall, the intensity of the \frag{0,2}{A}{+} and \frag{1,3}{B}{+}-2H fragments decreased in \gls{hcd} over \gls{cid} experiments, whereas the intesity of ions \frag{0,2}{A}{+}-CO, \frag{0,2}{B}{+} and \frag{1,3}{A}{+} increased (\autoref{fig:isorhamnetin_msspec}).
+%An interesting trend was observed for the \frag{0,2}{A}{+} fragment in \gls{cid} experiments: increasing substitution on the B-ring correlates with a decrease in ion abundance.
 
-\begin{figure}[htpb]\centering
-  \begin{figureframe}
-      \includegraphics[width=\textwidth]{usr/graphics/static/isorhamnetin_frag}
- \end{figureframe}
-  \caption{Proposed pathway of fragmentation of \molref{isorhamnetin} after methyl, methane or methanol cleavage upon activation. Some fragmentations were observed in \gls{hcd} mode only (box).%
-  }
-  \label{fig:chrys_frag}
-\end{figure}
-
+Apart from the discussed fragmentations, MS\tup{2} spectra of the methylated flavonols \molref{kaempferide} and \molref{isorhamnetin} also showed fragmentations typical of methyl esters, namely methyl, methane and methanol loss.
 %
 \begin{figure}[htpb]\centering
   \begin{figureframe}
@@ -442,46 +463,68 @@ The general trend of smaller sized fragments at higher activation energies is al
     \textbf{B} -- \gls{hcd} at \SI{75}{\percent} \gls{nce}. 
     \textbf{C} -- \gls{hcd} at \SI{100}{\percent} \gls{nce}. 
     Four different prominent peaks are annotated in each spectrum. \textbf{D} -- The shift to smaller masses in \gls{hcd} spectra and  with increasing \gls{nce} is illustrated by the boxplot of the distribution of peaks with relative intensities above \SI{1}{\percent} in each of the above spectra.
-    \textbf{E} -- Relationship between the activation method and the intensity of four fragments (\textfilledpoint~~\frag{1,3}{A}{+}, \filledtriangleup~~\frag{0,2}{A}{+}, \textfilledsquare~~[M+H-\cf{CH3}]\tup{\textbullet+}, {\LARGE +}~~[M+H-\cf{CH4}-3CO]\tup{+}) of the studied methylated flavones.%
+    \textbf{E} -- Relationship between the activation method and the intensity of four fragments (\textfilledpoint~~\frag{0,2}{A}{+}, \filledtriangleup~~\frag{1,3}{A}{+}, \textfilledsquare~~[M+H-\cf{CH3}]\tup{\textbullet+}, {\LARGE +}~~[M+H-\cf{CH4}-3CO]\tup{+}) of the studied methylated flavones.%
   }
   \label{fig:isorhamnetin_msspec}
 \end{figure}
 %
+Methyl and methane loss followed by sequential losses of carbon monoxide were already shown for flavones (\molref*{acacetin}--\molref*{chrysoeriol}) and are postulated to proceed in a similar manner in flavonols \molref{kaempferide} and \molref{isorhamnetin} (\autoref{fig:isorhamnetin_frag}).
+Because of the extra hydroxyl at the C-ring, methylated flavonols such as isorhamnetin can loose two \cf{CO} instead of just one after loss of a methyl radical (compare \autoref{fig:isorhamnetin_frag} and (\autoref{fig:chrys_frag})).
+Other than flavones, spectra of methylated flavonols \molref{kaempferide} and \molref{isorhamnetin} also showed signals (\mz{269} and  \mz{285}) corresponding to a loss of methanol.
+The data suggests, that these [M+H-\cf{CH3OH}]\tup{+} fragments can loose up to two \cf{CO}, similar to the loss of water and \cf{CO} (\autoref{fig:isorhamnetin_frag} and \ref{fig:flavonole_genfrag}).
+%
+\begin{figure}[htpb]\centering
+  \begin{figureframe}
+      \includegraphics[width=\textwidth]{usr/graphics/static/isorhamnetin_frag}
+ \end{figureframe}
+  \caption{Proposed pathway of fragmentation of \molref{isorhamnetin} after methyl, methane or methanol cleavage upon activation. Some fragmentations were observed in \gls{hcd} mode only (box).%
+  }
+  \label{fig:isorhamnetin_frag}
+\end{figure}
+%
+The peaks with \mz{301}, 273, 245, 217 and 189 in the \gls{hcd} spectra of isorhamnetin \molref{isorhamnetin}, suggest a loss of up to four \cf{CO} after the inital loss of methane (\autoref{fig:isorhamnetin_frag}).
+As mentioned before, the smaller mass fragments corresponding to multiple neutral losses are more pronounced at higher activation energies and were thus limited to \gls{hcd} experiments at a \gls{nce} of \SI{100}{\percent} (\autoref{fig:isorhamnetin_msspec}, \autoref{fig:isorhamnetin_frag}).
 
-%\section{Fragmentation of cinnamic acids}
+
 
 \section{Conclusion/Discussion}
 
-\begin{itemize}
-\item unmethylated compounds give better fragmentation (CID)
-\item HCD better for methylated flavonoids
-\item cinnamic acids: eV makes no difference (30 and 40 eV) give the same spectra
-\item cinnamic acids: dimethylcaffeic acid and isoferulic acid methyl ester differ in retention time (methyl ester is less polar and elutes later), fragmentation: meoh cleavage of ifa-mester, h2o cleavage of dimethylcaffeic acid
-\item cinnamic acid: methyl esters do not ionize well in neg. mode
-\item HCD: flavanes \textrightarrow mainly fragmentation first (e.g. \frag{1,2}{A}{+}, \frag{1,4}{B}{+}), then cleavages off the fragments ((\frag{1,3}{B}{+}-CO-CH3OH))
-\item HCD: flavones \textrightarrow higher energy (100 eV) increases ring fragmentation (main fragment \frag{1,3}{A}{+}), lower energy tends to show losses off [M+H]+ (e.g. [M+H-CH3]\textsuperscript{*+}, [M+H-CH3-CO]\textsuperscript{*+})
-\item HCD: flavonols \textrightarrow mainly losses off the [M+H]+ (e.g. [M+H-CH4]+, [M+H-CH3OH]+, etc.)
-\item most informative collision energy 30 eV \cite{Cuyckens2004}
-\item \frag{1,3}{A}{+} is usually most abundant and most readily formed \cite{Cuyckens2004} \textrightarrow originates from acetate–malonate pathway, therefore m/z 153; when 4-keto is missing e.g. flavanes flavanols m/z 139
-\item losses of small molecules and radicals common from [M+H]+; methyl ethers usually by loss of 15 u (CH3*) \cite{Cuyckens2004} \textrightarrow  not flavones!, there loss of water (18 u) or oxa-cyclopropene (C2H2O)
-\item[\textrightarrow] when methoxy substituent, the dominant ion is [M+H-CH3]\textsuperscript{+$\cdot$} \cite{Wolfender2000, Ma1997} (also in neg. mode \cite{Cuyckens2004}) \textrightarrow not for flavones
-\item ONLY methylated flavones and flavonoles (kaempferide, isorhamnetin, acacetin, chrysoeriol,diosmetin) show loss of m/z 44.02622 under HCD conditions (more in 100eV energy mode) \textrightarrow subsequent loss of CH4 and CO 
-  \item \mz{170} (C7H6O5) fragment in HCD spectra of methylated flavonols and flavones and myricetin
-\item flavones and flavonoles (kaempferide, isorhamnetin, myricetin, quercetin, kaempferol,luteolin, apigenin) also show loss of m/z 29.00274 \textrightarrow CHO? formyl radical?
-  \item \mz{153} (1,3A+) \ra neutral losses of two CO and C2H4 \ra \mz{69} \ra implications for methylation on A ring?
-    \item differentiate between para-monohydroxylated and para/meta-dihydroxylated B-rings in flavanones and flavones by \mz{91} and \mz{89} respectively
-\end{itemize}
+It could be comprehensively shown that, taken together, data from \gls{cid} and \gls{hcd} experiments can complement each other to give a much deeper understanding of structural features of flavonoids.
+Especially in the case of the B-ring methylated flavones \molref{chrysoeriol} and \molref{diosmetin}, the method of \gls{hcd} enabled a much better fragmentation and a higher signal-to-noise ration of the fragments, which can be crucial for identifying such compounds.
+It was furthermore demonstrated, that flavones and flavonols share similar patterns of fragmentation.
+However, distinguishing features between the MS\tup{2} spectra of two analogous representatives (e.g. kaempferol and apigenin) do exist.
 
-\subsection{flavanones}
-\begin{itemize}
-  \item ketene (C2H2O) elimination from ring A or C \cite{Kang2007}
+The mass errors were calculated for each postulated fragment and ranged from \SIrange{0.4}{10}{\ppm} (not shown).
+This highlights the high accuracy of the instrument which also allowed for the accurate determination of sum formulas from MS peaks.
+
+%% \begin{itemize}
+%% \item unmethylated compounds give better fragmentation (CID)
+%% \item HCD better for methylated flavonoids
+%% \item cinnamic acids: eV makes no difference (30 and 40 eV) give the same spectra
+%% \item cinnamic acids: dimethylcaffeic acid and isoferulic acid methyl ester differ in retention time (methyl ester is less polar and elutes later), fragmentation: meoh cleavage of ifa-mester, h2o cleavage of dimethylcaffeic acid
+%% \item cinnamic acid: methyl esters do not ionize well in neg. mode
+%% \item HCD: flavanes \textrightarrow mainly fragmentation first (e.g. \frag{1,2}{A}{+}, \frag{1,4}{B}{+}), then cleavages off the fragments ((\frag{1,3}{B}{+}-CO-CH3OH))
+%% \item HCD: flavones \textrightarrow higher energy (100 eV) increases ring fragmentation (main fragment \frag{1,3}{A}{+}), lower energy tends to show losses off [M+H]+ (e.g. [M+H-CH3]\textsuperscript{*+}, [M+H-CH3-CO]\textsuperscript{*+})
+%% \item HCD: flavonols \textrightarrow mainly losses off the [M+H]+ (e.g. [M+H-CH4]+, [M+H-CH3OH]+, etc.)
+%% \item most informative collision energy 30 eV \cite{Cuyckens2004}
+%% \item \frag{1,3}{A}{+} is usually most abundant and most readily formed \cite{Cuyckens2004} \textrightarrow originates from acetate–malonate pathway, therefore m/z 153; when 4-keto is missing e.g. flavanes flavanols m/z 139
+%% \item losses of small molecules and radicals common from [M+H]+; methyl ethers usually by loss of 15 u (CH3*) \cite{Cuyckens2004} \textrightarrow  not flavones!, there loss of water (18 u) or oxa-cyclopropene (C2H2O)
+%% \item[\textrightarrow] when methoxy substituent, the dominant ion is [M+H-CH3]\textsuperscript{+$\cdot$} \cite{Wolfender2000, Ma1997} (also in neg. mode \cite{Cuyckens2004}) \textrightarrow not for flavones
+%% \item ONLY methylated flavones and flavonoles (kaempferide, isorhamnetin, acacetin, chrysoeriol,diosmetin) show loss of m/z 44.02622 under HCD conditions (more in 100eV energy mode) \textrightarrow subsequent loss of CH4 and CO 
+%%   \item \mz{170} (C7H6O5) fragment in HCD spectra of methylated flavonols and flavones and myricetin
+%% \item flavones and flavonoles (kaempferide, isorhamnetin, myricetin, quercetin, kaempferol,luteolin, apigenin) also show loss of m/z 29.00274 \textrightarrow CHO? formyl radical?
+%%   \item \mz{153} (1,3A+) \ra neutral losses of two CO and C2H4 \ra \mz{69} \ra implications for methylation on A ring?
+%%     \item differentiate between para-monohydroxylated and para/meta-dihydroxylated B-rings in flavanones and flavones by \mz{91} and \mz{89} respectively
+%% \end{itemize}
+
+%% \subsection{flavanones}
+%% \begin{itemize}
+%%   \item ketene (C2H2O) elimination from ring A or C 
     
-\end{itemize}
+%% \end{itemize}
 \section{Contributions}
 
 Benjamin Weigel prepared substances, analyzed mass spectral data and prepared manuscript.
 Annegret Laub and Jürgen Schmidt conducted \gls{lcms} measurement runs.
 
-
-\'{\i}
 

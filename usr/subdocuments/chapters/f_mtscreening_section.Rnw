@@ -2,11 +2,11 @@
 %%% Sub document MS/MS studies of flavonoids %%%
 %%%-------------------------------------------------%%%
 
-\chapter{Structural studies of flavonoids using \glsentryfirst{msms}}
+\chapter{Tandem mass-spectrometry studies of flavonoids}
 \label{ch:MSMS}
 
   
-\ospSetTitle{Characterization of flavanoid aglycones and cinnamic acids by liquid chromatography coupled tandem mass spectrometry}
+\ospSetTitle{Comparative \gls{cid} and \gls{hcd} \gls{msms} studies for the characterization of flavanoid aglycones}
 \ospSetAuthors{\underline{Benjamin Weigel}\textsuperscript{1,a}, %
   Annegret Laub\textsuperscript{1,b}, %
   Jürgen Schmidt\textsuperscript{1,c}, %
@@ -49,7 +49,7 @@ However, it was found that the cleavage of the C-ring is less commonly observed 
 Fragments of flavonoid aglycones can be represented by a systematic nomenclature first proposed by Ma \etal \cite{Ma1997}.
 The labels \frag{\textit{i,j}}{A}{+} and \frag{\textit{i,j}}{B}{+} refer to fragments containing an intact A or B ring, with the superscripts \textit{i} and \textit{j} denoting the bonds of the C-ring that were broken (\autoref{fig:ion_nomenclature}).
 %
-\begin{figure}[htpb]\centering
+\begin{figure}[!htb]\centering
   \begin{figureframe}
     \includegraphics[scale=1]{usr/graphics/static/fragmentation_nomenclature2}
   \end{figureframe}
@@ -57,7 +57,7 @@ The labels \frag{\textit{i,j}}{A}{+} and \frag{\textit{i,j}}{B}{+} refer to frag
   \label{fig:ion_nomenclature}
 \end{figure}
 %
-In this work the complementarity of two activation methods, \gls{cid} and \gls{hcd}, for the structural characterization of flavonoids, especially those methylated at the B-ring, in positive ionization mode was evaluated.
+In this work the complementarity of two activation methods, \gls{cid} and \gls{hcd}, for the structural characterization of flavonoids (\autoref{tab:LCMSsubstrates}), especially those methylated at the B-ring, in positive ionization mode was evaluated.
 %The main focus of this study were flavonoids methylated at the B-ring.
 
 \begin{table}[htpb]\centering\small
@@ -117,7 +117,7 @@ Thus, the resulting \gls{hcd} spectra generally display smaller \mz{} than the \
 Increasing the \gls{nce} from \num{75} to \SI{100}{\percent} in \gls{hcd} experiments further increased fragmentation.
 This is made clear by the increasing intensities of smaller fragments upon raising the \gls{nce} (\autoref{fig:ed_msspec}).
 %
-\begin{figure}[htpb]\centering
+\begin{figure}[!htb]\centering
   \begin{figureframe}
       \includegraphics[width=\textwidth]{usr/graphics/static/flavanone_genfrag}
   \end{figureframe}
@@ -128,7 +128,7 @@ This is made clear by the increasing intensities of smaller fragments upon raisi
   \label{fig:flavanone_genfrag}
 \end{figure}
 %
-\begin{figure}[htpb]\centering
+\begin{figure}[!htb]\centering
   \begin{figureframe}
       \includegraphics[width=\textwidth]{usr/graphics/static/1,3A_fragmentation}
   \end{figureframe}
@@ -158,8 +158,12 @@ However, further MS\tup{n} experiments are necessary to confirm these proposals.
   \begin{figureframe}
     \begin{subfigure}{0.6\textwidth}\centering
       \includegraphics[width=\textwidth]{usr/graphics/static/ed_msspectra}
+    \phantomsubcaption\phantomsubcaption\phantomsubcaption\phantomsubcaption
     \end{subfigure}
     \begin{subfigure}{0.38\textwidth}\centering
+           {\captionsetup{labelformat=web-subcap, justification=raggedright, singlelinecheck=false, font=bf}
+    \renewcommand{\thesubfigure}{\Alph{subfigure}}
+    \subcaption{}}
       \includegraphics[width=0.7 \textwidth]{usr/graphics/static/flavanones_msint}
     \end{subfigure}
   \end{figureframe}
@@ -269,16 +273,16 @@ The \frag{0,4}{B}{+} ion might further degrade by neutral losses of ketene (\SI{
 The base peaks at a \gls{nce} of \SI{100}{\percent} in \gls{hcd}, \mz{91} \molref{apigenin} and \mz{89} \molref{luteolin}, are most likely due to a further decomposition of \frag{1,3}{B}{+} in a fashion similar to the flavanones to afford a benzylium or bicycloheptatrienyl cation respectively (\autoref{fig:flavone_genfrag}). 
 
 
-\begin{figure}[htpb]\centering
+\begin{figure}[htbp]\centering
   \begin{figureframe}
     \begin{subfigure}{\textwidth}
       \includegraphics[width=\textwidth]{usr/graphics/static/deme_flavone_genfrag}
-      \caption{Unmethylated flavones}
+      \caption{Fragments characteristic for unmethylated flavones.}
     \end{subfigure}
     
     \begin{subfigure}{\textwidth}
       \includegraphics[width=\textwidth]{usr/graphics/static/me_flavone_genfrag}
-      \caption{Methylated flavones}
+      \caption{Fragments characteristic for methylated flavones.}
     \end{subfigure}
  \end{figureframe}
   \caption{Major fragmentation pathways of unmethylated and methylated flavones.%
@@ -290,7 +294,7 @@ The base peaks at a \gls{nce} of \SI{100}{\percent} in \gls{hcd}, \mz{91} \molre
 The most noteable difference between the methylated and unmethylated representatives is the almost complete lack of any fragmentation of the methylated flavones other than a methyl loss, in \gls{cid} experiments (\autoref{tab:x_flavonfrag}, \autoref{fig:chrysoeriol_msspec}).
 A relatively stable radical cation is formed after the loss of a methyl group, due to the fact that the whole system is essentially conjugated (\autoref{fig:meflavon_stability}).
 %
-\begin{figure}[htpb]\centering
+\begin{figure}[!htb]\centering
   \begin{figureframe}
       \includegraphics[scale=0.75]{usr/graphics/static/me_flavone_stability}
   \end{figureframe}
@@ -304,10 +308,15 @@ A relatively stable radical cation is formed after the loss of a methyl group, d
   \begin{figureframe}
     \begin{subfigure}{0.6\textwidth}\centering
       \includegraphics[width=\textwidth]{usr/graphics/static/chrysoeriol_msspectra}
+      \phantomsubcaption\phantomsubcaption\phantomsubcaption\phantomsubcaption
     \end{subfigure}
     \begin{subfigure}{0.38\textwidth}\centering
+     {\captionsetup{labelformat=web-subcap, justification=raggedright, singlelinecheck=false, font=bf}
+    \renewcommand{\thesubfigure}{\Alph{subfigure}}
+    \subcaption{}}
       \adjustbox{trim=0 {.20\height} 0 0,clip}%
                 {\includegraphics[width=0.7\textwidth]{usr/graphics/static/me-flavones_msint}}
+                \phantomsubcaption\label{fig:flavones_msint}
     \end{subfigure}
   \end{figureframe}
   \caption{Comparison of \gls{cid} and \gls{hcd} MS\tup{2} spectra of chrysoeriol \molref{chrysoeriol}. 
@@ -453,8 +462,12 @@ Apart from the discussed fragmentations, MS\tup{2} spectra of the methylated fla
   \begin{figureframe}
     \begin{subfigure}{0.6\textwidth}\centering
       \includegraphics[width=\textwidth]{usr/graphics/static/isorhamnetin_msspectra}
+    \phantomsubcaption\phantomsubcaption\phantomsubcaption\phantomsubcaption
     \end{subfigure}
     \begin{subfigure}{0.38\textwidth}\centering
+           {\captionsetup{labelformat=web-subcap, justification=raggedright, singlelinecheck=false, font=bf}
+    \renewcommand{\thesubfigure}{\Alph{subfigure}}
+    \subcaption{}}
                 \includegraphics[width=0.7\textwidth]{usr/graphics/static/flavonols_msint}
     \end{subfigure}
   \end{figureframe}
@@ -487,15 +500,32 @@ As mentioned before, the smaller mass fragments corresponding to multiple neutra
 
 
 
-\section{Conclusion/Discussion}
+\section{Conclusions and Discussion}
 
-It could be comprehensively shown that, taken together, data from \gls{cid} and \gls{hcd} experiments can complement each other to give a much deeper understanding of structural features of flavonoids.
-Especially in the case of the B-ring methylated flavones \molref{chrysoeriol} and \molref{diosmetin}, the method of \gls{hcd} enabled a much better fragmentation and a higher signal-to-noise ration of the fragments, which can be crucial for identifying such compounds.
-It was furthermore demonstrated, that flavones and flavonols share similar patterns of fragmentation.
-However, distinguishing features between the MS\tup{2} spectra of two analogous representatives (e.g. kaempferol and apigenin) do exist.
+This comprehensive study shows that, taken together, data from \gls{cid} and \gls{hcd} experiments can be complementary to give a much deeper understanding of structural features of flavonoids.
+Mass errors were calculated for each postulated fragment and ranged from \SIrange{0.4}{10}{\ppm} (not shown), highlighting the accuracy of the instrument which also allowed for the accurate determination of molecular formulas from MS signals.
 
-The mass errors were calculated for each postulated fragment and ranged from \SIrange{0.4}{10}{\ppm} (not shown).
-This highlights the high accuracy of the instrument which also allowed for the accurate determination of sum formulas from MS peaks.
+The complementary of \gls{cid} and \gls{hcd} is especially stricking, when comparing spectra of \molref{diosmetin} and \molref{chrysoeriol}.
+\Gls{cid} fragmentation of these B-ring methylated flavones afforded MS spectra, where a methyl loss was by far the dominant fragmentation.
+\Gls{hcd} on the other hand provided higher order fragmentations combined with a higher signal-to-noise ratio, for a deeper insight into structural features.
+These higher order fragmentations were accelerated by increasing the activation energy, but interpretability of the corresponding spectra was limited.
+However, with the help of \textit{in silico} methods for the interpretation of \gls{msms} spectra \cite{Bocker2008,Wolf2010} and the computing power available today, the information contained in highly complex spectra might become more easily accecible.
+Nonetheless, fine-tuning of the activation energy is an option to optimize fragmentation intensities, especially of the C-ring fragmentations.
+
+Flavones and flavonols share similar patterns of fragmentation and display a loss of a \cf{CHO} radical, which distinguishes their MS\tup{2} spectra from those of the flavanones.
+Distinguishing characteristics between MS\tup{2} spectra of flavones and flavonols are the C-ring fragmentations, where the \frag{0,4}{B}{+} fragment was typically limited to flavones, whereas a (strong) \frag{0,2}{A}{+} fragment was only observed for (unmethylated) flavonols.
+While methylated flavanones did not differ in their fragmentations from their non-methylated analogues, MS spectra of methylated and non-methylated flavones and flavonols showed significant differences.
+Noticable loss of \cf{CH3}\tup{\textbullet} or \cf{CH4}, followed by losses of \cf{CO} were typical signs of methylated flavones or flavonols.
+Loss of methanol was observed in methylated flavonols and in small amounts at \SI{100}{\percent} \gls{nce} in flavones, not however in the MS\tup{2} spectra of flavanones.
+Under the right conditions, all of the studied 5,7-dihydroxy substituted flavonoids presented a \frag{1,3}{A}{+} ion, with a characteristic \mz{153}.
+This information might be of value for studies that want to determine the position of a derivatization of the flavonoid core.
+To the authors knowledge, a pathway for the decomposition of \frag{1,3}{A}{+} at high activation energies was proposed for the first time in this work and is universal for all studied compounds.
+A signal \mz{91}, stemming from the decay of the \frag{1,4}{B}{+} or \frag{1,3}{B}{+} ion, might be a hint for a \textit{para}-monohydroxylated B-ring on flavanones and flavones respectively.
+Conversely, a peak \mz{89} can point in the direction of multiple substitutions on the B-ring.
+
+In summary, the complementary nature of the studied activation methods \gls{cid} and \gls{hcd} provides more thourough data for the study of flavonoids.
+Key ions might only present themselves in the spectra of either method, and together with differences and similarities in the \gls{msms} spectra, can be used to gain additional insights into the structural characteristics of a studied compound.
+
 
 %% \begin{itemize}
 %% \item unmethylated compounds give better fragmentation (CID)

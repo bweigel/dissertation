@@ -70,7 +70,7 @@ Biosynthesis of flavonoids via the phenylpropanoid pathway starts from phenylala
 %The malonyl-\gls{coa} is produced from acetyl-\gls{coa} by acetyl-\gls{coa} carboxylase.
 Next, the linear chalcone can cyclize spontaneously or catalyzed by \gls{chi} via a \textsc{Michael}-type addition to afford the flavanone naringenin \cite{Jez2000}.
 %
-\begin{figure}[htpb]
+\begin{figure}[!htb]
   \begin{figureframe}
     \includegraphics[scale=1]{usr/graphics/static/flavonoid_production}
   \end{figureframe}

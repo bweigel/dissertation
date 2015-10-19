@@ -208,11 +208,11 @@ names <- c("PFOMT/\\cf{Mg^2+} vs caffeic acid/\\cf{Mg^2+}", "PFOMT/SAH/\\cf{Mg^2
 itc.compare(itcs[c(18,21)], ylim=c(-0.6, 0.05), xlim=c(0,1000),lwd=2, noms = names, cols = cols, main=F, cex.axis=1)
 
 
-## ----subdoc_content_results, child='usr/subdocuments/chapters/e_noncatechol_section.Rnw', eval=T----
-
-
-
 ## ----subdoc_content_results, child='usr/subdocuments/chapters/f_mtscreening_section.Rnw', eval=T----
+
+
+
+## ----subdoc_content_results, child='usr/subdocuments/chapters/e_noncatechol_section.Rnw', eval=T----
 
 
 

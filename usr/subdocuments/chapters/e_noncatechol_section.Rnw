@@ -5,64 +5,89 @@
 \chapter{Enzymatic methylation of Non-catechols}
 
   
+%% \ospSetTitle{Enzymatic methylation of non-catecholic aromatic hydroxyls using class I and class II methyl transferases}
+%% \ospSetAuthors{\underline{Benjamin Weigel}\textsuperscript{1,a}, %
+%%   Martin Dippe, %
+%%   Annegret Laub\textsuperscript{1,b}, %
+%%   Ludger A. Wessjohann\textsuperscript{1,c}}
+%% \ospSetContacts{bweigel@ipb-halle.de\textsuperscript{a}, %
+%%   alaub@ipb-halle.de\textsuperscript{b}, %
+%%   law@ipb-halle.de\textsuperscript{c}}
+%% \ospSetAffiliations{Leibniz-Institute of Plant Biochemistry, Department of Bioorganic Chemistry\textsuperscript{1}}
+%% \ospSetKeywords{methyl transferase, SAM, biocatalysis}
+
+%% {
+%% \ospTitleRule\par\vspace{0pt}%
+%%          \begin{tabularx}{\textwidth}{p{0.2\textwidth}X}
+%%             \begin{minipage}{\linewidth}
+%%  \ospTitleLogo
+%%             \end{minipage}&	
+%%             \begin{minipage}{\linewidth} 
+%%                \vspace{\baselineskip}
+%%                   {\color{black}{{\ospFontTitle\ospTitle}}}\par
+%%                   {\begin{normalsize}\textbf{\ospAuthors}\end{normalsize}\par}
+%%                   {\begin{normalsize}\textbf{\ospTitleKeywordContactName} \ospContacts\end{normalsize}\par}
+%%                   {\begin{normalsize}\textbf{\ospTitleKeywordAffiliationName} \ospAffiliations\end{normalsize}\par}
+%%                   {\begin{normalsize}\textbf{\ospTitleKeywordName} \ospKeywords\end{normalsize}\par}
+%%             \end{minipage}
+%%          \end{tabularx}
+%% \par\vspace{5pt}
+
+%% \textbf{Abstract}
+
+%% \Gls{pfomt} and \somt are \gls{sam}-dependent \glspl{mt}, belonging to classes I  (23--27\,kDa, cation-dependent) 
+%% and II (38--43\,kDa, cation-independent) 
+%% respectively.
+%% Methylation of non-catecholic aromatic hydroxyls (phenolic, \gls{3o4m}, \gls{4o3m}) examplified by different compound classes was achieved by both enzymes, although this has never been described for \pfomt.
+%% Active \somt could not be obtained for \invitro experiments, although soluble enyzme was obtained by optimizing refolding conditions using \gls{ffd} and \gls{doe}.
+%% The activity of \pfomt towards non-catechols is increased at high pH.
+%% %\Gls{FrFD} and \gls{doe} can be used to efficiently optimize \invitro refolding conditions.
+%% Adjusting the pH to more basic conditions can also partly remedy the negative effect of missing \cf{Mg^2+} for class I enzyme \pfomt.
+
+
+%% \noindent\ospTitleRule
+%% }
+
 \ospSetTitle{Enzymatic methylation of non-catecholic aromatic hydroxyls using class I and class II methyl transferases}
 \ospSetAuthors{\underline{Benjamin Weigel}\textsuperscript{1,a}, %
-  Martin Dippe, %
+  Martin Dippe\textsuperscript{2,b}, %
   Annegret Laub\textsuperscript{1,b}, %
-  Ludger A. Wessjohann\textsuperscript{1,c}}
-\ospSetContacts{bweigel@ipb-halle.de\textsuperscript{a}, %
-  alaub@ipb-halle.de\textsuperscript{b}, %
-  law@ipb-halle.de\textsuperscript{c}}
+  Ludger A. Wessjohann\textsuperscript{1,d}}
+\ospSetContacts{bweigel@ipb-halle.de\textsuperscript{a}, mdippe@ipb-halle.de\textsuperscript{b}, alaub@ipb-halle.de\textsuperscript{c}, law@ipb-halle.de\textsuperscript{d}}
 \ospSetAffiliations{Leibniz-Institute of Plant Biochemistry, Department of Bioorganic Chemistry\textsuperscript{1}}
 \ospSetKeywords{methyl transferase, SAM, biocatalysis}
 
-{
-\ospTitleRule\par\vspace{0pt}%
-         \begin{tabularx}{\textwidth}{p{0.2\textwidth}X}
-            \begin{minipage}{\linewidth}
- \ospTitleLogo
-            \end{minipage}&	
-            \begin{minipage}{\linewidth} 
-               \vspace{\baselineskip}
-                  {\color{black}{{\ospFontTitle\ospTitle}}}\par
-                  {\begin{normalsize}\textbf{\ospAuthors}\end{normalsize}\par}
-                  {\begin{normalsize}\textbf{\ospTitleKeywordContactName} \ospContacts\end{normalsize}\par}
-                  {\begin{normalsize}\textbf{\ospTitleKeywordAffiliationName} \ospAffiliations\end{normalsize}\par}
-                  {\begin{normalsize}\textbf{\ospTitleKeywordName} \ospKeywords\end{normalsize}\par}
-            \end{minipage}
-         \end{tabularx}
-\par\vspace{5pt}
+\WEBmakeTitle{%
 
 \textbf{Abstract}
 
-\Gls{pfomt} and \somt are \gls{sam}-dependent \glspl{mt}, belonging to classes I  (23--27\,kDa, cation-dependent) 
-and II (38--43\,kDa, cation-independent) 
-respectively.
-Methylation of non-catecholic aromatic hydroxyls (phenolic, \gls{3o4m}, \gls{4o3m}) examplified by different compound classes was achieved by both enzymes, although this has never been described for \pfomt.
-Active \somt could not be obtained for \invitro experiments, although soluble enyzme was obtained by optimizing refolding conditions using \gls{ffd} and \gls{doe}.
-The activity of \pfomt towards non-catechols is increased at high pH.
-%\Gls{FrFD} and \gls{doe} can be used to efficiently optimize \invitro refolding conditions.
-Adjusting the pH to more basic conditions can also partly remedy the negative effect of missing \cf{Mg^2+} for class I enzyme \pfomt.
-
-
-\noindent\ospTitleRule
+ \Gls{pfomt} and \somt are \gls{sam}-dependent \glspl{mt}, belonging to classes I  (23--27\,kDa, cation-dependent) 
+ and II (38--43\,kDa, cation-independent) 
+ respectively.
+ Methylation of non-catecholic aromatic hydroxyls (phenolic, \gls{3o4m}, \gls{4o3m}) examplified by different compound classes was achieved by both enzymes, although this has never been described for \pfomt.
+ Active \somt could not be obtained for \invitro experiments, although soluble enyzme was obtained by optimizing refolding conditions using \gls{ffd} and \gls{doe}.
+ The activity of \pfomt towards non-catechols is increased at high pH.
+ %\Gls{FrFD} and \gls{doe} can be used to efficiently optimize \invitro refolding conditions.
+ Adjusting the pH to more basic conditions can also partly remedy the negative effect of missing \cf{Mg^2+} for class I enzyme \pfomt.
 }
+
+
 
 \section{Introduction}
 Non-catechols in nature (biosynthesis, mode of action?), chemical methylation???
 
-phenol vs methoxyphenols vs catechols \\
+phenol vs methoxyphenols vs catechols 
 
 The 4'-hydroxyl of naringenin is non-catecholic in nature.
 However it is much more acidic than the 4'-hydroxyl of eriodictyol (pKa 9.8 vs 12.7) and thus about equally as acidic as the 3'-hydroxyl of eriodictyol (pKa 9.7) \footnote{pKa values were calculated using ChemAxon's MarvinBeans 15.2.16.0} \citep{Schweigert2001a}.
 
 \section{\glsentrytext{somt}}
 
-\somt has been described in the literature to methylate multiple flavonoids at the 4'-position of the B-ring \citep{Kim2005c,Kim2005b}.
-There it also showed the highest activity towards naringenin, to produce ponciretin (also known as isosakuranetin).
+\somt has been described in the literature to methylate multiple flavonoids at the 4'-position of the B-ring \citep{Kim2005c,Kim2005b,Kim2013}.
+It has the highest activity towards naringenin, to produce ponciretin (also known as isosakuranetin).
 %Non-chemical methylations of this nature are of great scientific and economic interest.
-Furthermore it has been the only characterized enzyme of this nature described in literature. \bweigel{is that true?}
-Thus, \somt was selected as a model candidate for enzymes that can methylate 4'-hydroxyls of non-catecholic flavonoids.
+Enzymes that methylate a \textit{para}-monohydroxylated B ring of flavonoids either seem to be a rare occurance or fairly inactive, since descriptions of characterized representatives are scarce in the literature and are only limited to a couple of enzymes \cite{Schroder2004,Deavours2006}. \bweigel{is that true?}
+Because \somt was already well characterized in the literature and acted on flavonoids as well as isoflavonoids, it was selected as a model candidate for enzymes that can methylate 4'-hydroxyls of non-catecholic flavonoids.
 
 
 

@@ -163,17 +163,17 @@ read_chunk("usr/statistics/rproject/itc.R")
 @
 
 %%%-------------------------------------------------%%%
+%%% Include LCMSMS section %%%
+%%%-------------------------------------------------%%%
+
+<<subdoc_content_results, child='usr/subdocuments/chapters/f_mtscreening_section.Rnw', eval=T>>=
+@
+
+%%%-------------------------------------------------%%%
 %%% Include Non-Catecholic methylation section (SOMT/PFOMT Mg/ COMT??) %%%
 %%%-------------------------------------------------%%%
 
 <<subdoc_content_results, child='usr/subdocuments/chapters/e_noncatechol_section.Rnw', eval=T>>=
-@
-
-%%%-------------------------------------------------%%%
-%%% Include MT whole cell screening section %%%
-%%%-------------------------------------------------%%%
-
-<<subdoc_content_results, child='usr/subdocuments/chapters/f_mtscreening_section.Rnw', eval=T>>=
 @
 
 %%%-------------------------------------------------%%%

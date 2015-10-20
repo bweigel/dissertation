@@ -4,49 +4,6 @@
 
 \chapter{Enzymatic methylation of Non-catechols}
 
-  
-%% \ospSetTitle{Enzymatic methylation of non-catecholic aromatic hydroxyls using class I and class II methyl transferases}
-%% \ospSetAuthors{\underline{Benjamin Weigel}\textsuperscript{1,a}, %
-%%   Martin Dippe, %
-%%   Annegret Laub\textsuperscript{1,b}, %
-%%   Ludger A. Wessjohann\textsuperscript{1,c}}
-%% \ospSetContacts{bweigel@ipb-halle.de\textsuperscript{a}, %
-%%   alaub@ipb-halle.de\textsuperscript{b}, %
-%%   law@ipb-halle.de\textsuperscript{c}}
-%% \ospSetAffiliations{Leibniz-Institute of Plant Biochemistry, Department of Bioorganic Chemistry\textsuperscript{1}}
-%% \ospSetKeywords{methyl transferase, SAM, biocatalysis}
-
-%% {
-%% \ospTitleRule\par\vspace{0pt}%
-%%          \begin{tabularx}{\textwidth}{p{0.2\textwidth}X}
-%%             \begin{minipage}{\linewidth}
-%%  \ospTitleLogo
-%%             \end{minipage}&	
-%%             \begin{minipage}{\linewidth} 
-%%                \vspace{\baselineskip}
-%%                   {\color{black}{{\ospFontTitle\ospTitle}}}\par
-%%                   {\begin{normalsize}\textbf{\ospAuthors}\end{normalsize}\par}
-%%                   {\begin{normalsize}\textbf{\ospTitleKeywordContactName} \ospContacts\end{normalsize}\par}
-%%                   {\begin{normalsize}\textbf{\ospTitleKeywordAffiliationName} \ospAffiliations\end{normalsize}\par}
-%%                   {\begin{normalsize}\textbf{\ospTitleKeywordName} \ospKeywords\end{normalsize}\par}
-%%             \end{minipage}
-%%          \end{tabularx}
-%% \par\vspace{5pt}
-
-%% \textbf{Abstract}
-
-%% \Gls{pfomt} and \somt are \gls{sam}-dependent \glspl{mt}, belonging to classes I  (23--27\,kDa, cation-dependent) 
-%% and II (38--43\,kDa, cation-independent) 
-%% respectively.
-%% Methylation of non-catecholic aromatic hydroxyls (phenolic, \gls{3o4m}, \gls{4o3m}) examplified by different compound classes was achieved by both enzymes, although this has never been described for \pfomt.
-%% Active \somt could not be obtained for \invitro experiments, although soluble enyzme was obtained by optimizing refolding conditions using \gls{ffd} and \gls{doe}.
-%% The activity of \pfomt towards non-catechols is increased at high pH.
-%% %\Gls{FrFD} and \gls{doe} can be used to efficiently optimize \invitro refolding conditions.
-%% Adjusting the pH to more basic conditions can also partly remedy the negative effect of missing \cf{Mg^2+} for class I enzyme \pfomt.
-
-
-%% \noindent\ospTitleRule
-%% }
 
 \ospSetTitle{Enzymatic methylation of non-catecholic aromatic hydroxyls using class I and class II methyl transferases}
 \ospSetAuthors{\underline{Benjamin Weigel}\textsuperscript{1,a}, %
@@ -81,24 +38,19 @@ phenol vs methoxyphenols vs catechols
 The 4'-hydroxyl of naringenin is non-catecholic in nature.
 However it is much more acidic than the 4'-hydroxyl of eriodictyol (pKa 9.8 vs 12.7) and thus about equally as acidic as the 3'-hydroxyl of eriodictyol (pKa 9.7) \footnote{pKa values were calculated using ChemAxon's MarvinBeans 15.2.16.0} \citep{Schweigert2001a}.
 
-\section{\glsentrytext{somt}}
-
-\somt has been described in the literature to methylate multiple flavonoids at the 4'-position of the B-ring \citep{Kim2005c,Kim2005b,Kim2013}.
-It has the highest activity towards naringenin, to produce ponciretin (also known as isosakuranetin).
-%Non-chemical methylations of this nature are of great scientific and economic interest.
-Enzymes that methylate a \textit{para}-monohydroxylated B ring of flavonoids either seem to be a rare occurance or fairly inactive, since descriptions of characterized representatives are scarce in the literature and are only limited to a couple of enzymes \cite{Schroder2004,Deavours2006}. \bweigel{is that true?}
 Because \somt was already well characterized in the literature and acted on flavonoids as well as isoflavonoids, it was selected as a model candidate for enzymes that can methylate 4'-hydroxyls of non-catecholic flavonoids.
 
+\section{\glsentrytext{somt}}
 
 
-\subsection{\textit{In vivo} biotransformation in \nico}
+\subsection{\textit{In vivo} biotransformation in \textit{Nicotiana benthamiana}}
 \bweigel{eventuell weglassen? wo ist der mehrwert für die arbeit???}
-The group of Sylvestre Marillonet (IPB) established an efficient system to clone and assemble multi enzyme pathways in \nico, using a modular cloning toolbox, which has already been used to produce flavonoids \cite{Konig2014}.
-The group had already cloned all the enzymes required to establish the pathway up to naringenin in \nico (\autoref{fig:somtpathway}).
-However, the \textit{SOMT2} gene needed to be cloned into suitable vectors to be transiently expressed by \nico.
-The gene was first cloned into a level 0 module using BpiI and consequently subcloned into a level 1 module flanked by a promoter and a terminator using BsaI (\autoref{fig:cloning}).
-The 35S-promoter was used alonside the \gls{nos}-terminator to achieve the highest possible transcription rates. 
-
+The group of Sylvestre Marillonet (IPB) established an efficient system to clone and assemble multi enzyme pathways in \textit{Nicotiana benthamiana}, using a modular cloning toolbox, which has already been used to produce flavonoids \cite{Konig2014}.
+All the genes required to establish the pathway up to naringenin in \nico in theory had been cloned previously (\autoref{fig:somtpathway}).
+Only the \textit{SOMT2} gene needed to be cloned into a suitable vector to be transiently expressed in \nico.
+%The gene was first cloned into a level 0 module using BpiI and consequently subcloned into a level 1 module flanked by a promoter and a terminator using BsaI (\autoref{fig:cloning}).
+%The 35S-promoter was used alonside the \gls{nos}-terminator to achieve the highest possible transcription rates. 
+%
 \begin{figure}[htpb]
   \centering
   \begin{figureframe}
@@ -125,32 +77,21 @@ The 35S-promoter was used alonside the \gls{nos}-terminator to achieve the highe
     \caption{Semi-synthetic pathway to naringenin and 4'-O-methyl naringenin in \textit{N. benthamiana}. Enzymes not endogenous to \textit{N. benthamiana} are in gray. PAL - phenylalanine ammonia lyase, C4H - cinnamic acid 4-hydroxylase, 4CL - 4-coumaric acid:CoA ligase, CHS - chalcone synthase, CHI - chalcone isomerase, SOMT2 - soy O-methyl transferase 2}
     \label{fig:somtpathway}
 \end{figure}
-
-\begin{figure}[htpb]
-  \centering
-  \begin{figureframe}
-    \includegraphics[width=\textwidth]{usr/graphics/static/tmp_cloning}
-  \end{figureframe}
-  \caption{Cloning of \somt}
-  \label{fig:cloning}
-\end{figure}
-
-Both sides of \nico leaves were infiltrated with different samples.
-The left side was infiltrated with \agro cultures transformed with pAGM10733 (\gls{pal}), pAGM10406 (\gls{chs}) and pBEW107 (\somt).
-For the right side the \agro culture containing pBEW107 was replaced by a control: \agro transformed with the empty vector pICH75044. 
-After 7 days, the plant material was harvested.
+%
+%The \nico plants were infiltrated with transformed \agro (\autoref{sec:agronico}).
+Infiltrated plants were harvested after 7 days (see \autoref{sec:agronico}).
 The average weight loss after freeze drying was \SI{87.5}{\percent}.
 
-The dried material was extracted and analyzed via \gls{hplc} to determine whether ponciretin or related compounds were produced (\autoref{tab:naringenin}).
+The dried material was extracted and analyzed via \gls{hplc} to determine whether ponciretin or the ``down-stream'' glycosylated products (poncirin, didymine) were produced (\autoref{tab:naringenin}).
 However, through comparison with authentic standards it was apparent, that none of the expected compounds were detected.
-This finding suggest, that neither naringenin, nor any resulting flavonoids (ponciretin, poncirin, didymin) were present in detectable amounts in the plant tissue at the time of harvest.
+This finding suggest, that neither naringenin, nor any ``down-stream'' flavonoids (ponciretin, poncirin, didymin) were present in detectable amounts in the plant tissue at the time of harvest.
 Although unlikely, it cannot be exluded that higher amounts of the compounds of interest were present at some point in the tissue.
-Numerous more experiments were required to address the issue of non-detection, which however was outside the scope of this work.
+%Addressing the issue of non-detection, however was outside the scope of this work.
 
 \begin{table}[htpb]\centering
   %\ostTableEnv[label=tab:naringenin]{%
  %  \begin{tabularx}{\textwidth}{clll}%
-  \caption{Naringenin and 4'-methylated derivatives.} 
+  \caption{Naringenin and 4'-methylated derivatives that were inquired for in the plant samples via \gls{hplc}. The core structure of the compounds is displayed on the left.} 
   \label{tab:naringenin}
   \begin{tabular}{clll}
 %  \hfill \\
@@ -170,65 +111,82 @@ Numerous more experiments were required to address the issue of non-detection, w
 %}{%
 %Naringenin derivatives.
 %}
-
-The \gls{hplc} chromatograms were analyzed by \glsentryfirst{pca} after the data were aligned, centered and scaled, to assess whether the collected plant material samples were different from one another (\autoref{fig:e_pca} and \ref{fig:x_pca}).
+The \gls{hplc} chromatograms were analyzed by \gls{pca} after the data were aligned, centered and scaled, to assess whether the collected plant material samples were different from one another (\autoref{fig:e_pca} and \ref{fig:x_pca}).
 The \gls{pca}-plot shows that the samples of the different leaf sides do not separate, indicating no difference between infiltration with the \textit{SOMT} gene and vector control between the first two principal components, which account for \SI{80}{\percent} of the variance.
-However, there is a slight separation between top and bottom leaves in the second principal component and between plant 3 and plants 1/2 in the first principal component.
-This suggest, that the chemical composition as detected by \gls{hplc} is slightly different in the top and botton leaves, as well as between plants.
-
-
+However, there is a slight separation between top and bottom leaves in the second principal component and between plant 3 and plants (1 and 2) in the first principal component (appendix, \autoref{fig:x_pca}).
+%
 \begin{figure}[htpb]
   \centering
   \begin{figureframe}
-    \includegraphics[width=0.5\textwidth]{usr/graphics/static/tmp_pca2}
+    \includegraphics[width=0.4\textwidth]{usr/graphics/static/tmp_pca2}
   \end{figureframe}
-  \caption{\gls{pca} of leaf material. The samples are colored by leaf side.}
+  \caption{Scatterplot of the first two principal components from the \gls{pca} of the \gls{hplc} data obtained from leaf material extracts. The samples are colored by leaf side (left/SOMT-2: red, right/vector control: cyan).}
   \label{fig:e_pca}
 \end{figure}
-
+%
+This suggest, that the chemical composition as detected by \gls{hplc} is slightly different in the top and botton leaves, as well as between the different plants.
 
 
 \subsection{\textit{In vivo} biotransformation in \eco}
 
-Kim \etal already showed, that \somt could be used for the biotransformation of different flavonoids in \eco live cultures \citep{Kim2005b,Kim2005c}.
-Their technique was to be studied and expanded upon to gain additional insight into the enzyme.
-The \textit{\somt} gene was cloned into the pET28a(+) and pET41a(+) vectors, to obtain constructs for the production of \somt without and with a N-terminal \gls{gst}-tag, respectively since both have been used successfully by Kim \etal.
-However, methylated flavonoids were not detected  when biotransformations were prepared according to the methods of the aforementioned authors (\autoref{fig:e_invivomethod}). 
-
-Thus, the biotransformation medium was changed to auto-induction medium (\gls{zyp}) \citep{Studier2005}.
-\SI{0.05}{\percent} glucose were present in the medium.
-Growth curves were measured, alongside glucose depletion, to establish the time at which substrate addition would be most beneficial.
-Furthermore, \sdspage samples were prepared to observe protein accumulation.
-The glucose present in the medium was depleted after about 5\,hours into growth.
-At that time expression of the \textit{\somt} gene is expected to begin, because the catabolite repression on the \textit{lac}~promoter is relieved.
-
-Thus, \SI{0.1}{\milli\molar} flavonoid were added at 4\,hours to minimize its influence on growth and possible degradation.
-Although \sdspage samples were prepared throughout the course of the experiment, accumulating \somt could not be clearly distinguished from endogenous \eco protein in the \sdspage gels (\autoref{fig:x_somtgel}).
-Nonetheless, methylation of some of the tested substrates was observed over a course of 30\,hours (\autoref{tab:invivosomt}).
-
-
+Kim \etal \citep{Kim2005b,Kim2005c,Kim2013} showed, that \somt could be used for the biotransformation of different flavonoids in \eco live cultures.
+%Their technique was to be studied and expanded upon to gain additional insight into the enzyme.
+The \textit{\somt} gene was cloned into the pET28a(+) and pET41a(+) vectors, to obtain constructs for the production of \somt without and with a N-terminal \gls{gst}-tag, respectively since both have been used successfully \citep{Kim2005b,Kim2005c,Kim2013}.
+However, methylated flavonoids were not detected  when biotransformations were prepared according to the methods of the aforementioned authors (\autoref{fig:invivomethod_a}). 
+Thus, the biotransformation medium was changed to \gls{ai}-medium with \SI{0.05}{\percent} glucose \citep{Studier2005}.
+%Growth curves were measured, alongside glucose depletion, to establish the time at which substrate addition would be most beneficial.
+%Furthermore, \sdspage samples were prepared to observe protein accumulation.
+%
 \begin{figure}[htpb]
   \centering
   \begin{figureframe}
-    \includegraphics[width=0.75\textwidth]{usr/graphics/static/tmp_somt_invivo_method}
+    \includegraphics[width=0.4\textwidth]{usr/graphics/static/somt_method}
+    \phantomsubcaption\label{fig:invivomethod_a}
+    \phantomsubcaption\label{fig:invivomethod_b}
   \end{figureframe}
-  \caption{Biotransformation methods as described by Kim \etal (left) and developed in this work (right).}
+  \caption{Biotransformation methods as described by Kim \etal (\textbf{A}) and developed in this work (\textbf{B}). OD -- optiocal density at \SI{600}{\nano\meter}, LB -- \glsentrytext{lb}-medium, AI -- \glsentrytext{ai}-medium.}
   \label{fig:e_invivomethod}
 \end{figure}
-
-\begin{figure}[htpb]
-  \centering
-  \begin{figureframe}
-    \includegraphics[width=0.75\textwidth]{usr/graphics/static/tmp_e_growthcurve}
-  \end{figureframe}
-  \caption{Growth curve of \eco BL21(DE3) expressing \textit{\somt} at \degC{37}. 
-  Glucose is depleted about 5\,hours into growth, at which point the start of \textit{\somt} expression is expected.
-  The \odx{600} after inoculation was about \num{0.1}.}
-  \label{fig:e_growthcurve}
-\end{figure}
-
-
-\gls{lcms} was employed to determine the site of methylation, since this method is highly sensitive and numerous structural studies on flavonoids using tandem-mass spectrometry experiments have highlighted the feasability of this approach  \citep{Fabre2001,Lee2005}.
+%
+Measured growth curves showed, that the glucose present in the medium was depleted after about 5\,hours into growth (appendix, \autoref{fig:e_growthcurve}).
+Expression of the \textit{\somt} gene is expected to begin at this time, because the catabolite repression on the \textit{lac} promoter would be relieved and the promoter would be activated by the lactose present in the \gls{ai}-medium.
+Thus, \SI{0.1}{\milli\molar} of flavonoid substrate were added at 4\,hours to minimize its influence on growth and possible degradation.
+Although \sdspage samples were prepared throughout the course of the experiment, accumulating \somt could not be clearly distinguished from endogenous \eco protein in the \sdspage gels (appendix, \autoref{fig:x_somtgel}).
+Nonetheless, methylation of some of the tested substrates was observed over a course of 30\,hours (\autoref{tab:invivosomt}).
+Therefore, the sampled medium was extracted using acidified ethyl acetate.
+%
+{\setlength\tabcolsep{1.5pt}
+\begin{table}[!htb]\small\centering
+  \caption{\textit{In vivo} biotransformation of different flavonoids, phenylpropanoids and anthraquinones by \somt in \eco. Conversion ratios were calculated for samples taken after 30 hours.
+    Multiple substrates containing a 4'-hydroxyl were methylated.
+    Calculation of conversion percentages are only rough estimates, because of the nature of crude medium extracts. Products were determined by \gls{lcmsms}. \textsuperscript{\textdagger} dihydro cinnamic ketone.}
+  \label{tab:invivosomt}
+  \begin{tabular}{llllp{3.5cm}}
+     \toprule
+    substrate & class & 4'-OH & conversion & product \\
+    \midrule
+    alizarin & anthraquinone & \xmark & \xmark & -- \\
+    purpurin & anthraquinone & \xmark & \xmark & -- \\
+    apigenin & flavone & \cmark & \cmark ($\geq$\SI{54}{\percent}) & 4'-\textit{O}-methyl apigenin \\  
+    chrysin & flavone & \xmark & \xmark & -- \\
+    genistein & isoflavone & \cmark & \cmark ($<$\SI{1}{\percent}) & Biochanin A\\%\footnote{4'-\textit{O}-methyl genistein} \\
+    galangin & flavonol & \xmark & \xmark & -- \\ 
+    kaempferol & flavonol & \cmark & \cmark ($\geq$\SI{6}{\percent}) & kaempferide\\%\footnote{4'-\textit{O}-methyl kaempferol} \\
+    naringenin & flavanone & \cmark & \cmark ($\geq$\SI{55}{\percent}) & ponciretin \\
+    eriodictyol & flavanone & \cmark & \cmark ($\geq$\SI{40}{\percent}) & hesperetin \\
+    homoeriodictyol & flavanone & \cmark & \cmark ($>$\SI{6}{\percent})& 3',4'-(\textit{O,O})-dimethyl eriodictyol\\
+    hesperetin & flavanone & \xmark & \xmark & -- \\
+    phloretin & chalcone & \cmark & \xmark & -- \\
+    resveratrol & stilbene & \cmark & \cmark ($\geq$\SI{86}{\percent})& 4'-\textit{O}-methyl resveratrol \\
+    \textit{p}-coumaric acid & cinnamic acid & \cmark & \xmark & -- \\ 
+    caffeic acid & cinnamic acid & \cmark & \xmark & -- \\
+    reosmin & cinnamic acid\textsuperscript{\textdagger} & \cmark & \xmark & -- \\ 
+    \bottomrule
+  \end{tabular}
+\end{table}
+}
+%
+\Gls{lcms} was employed to determine the site of methylation, since this method is highly sensitive and numerous structural studies on flavonoids using tandem-mass spectrometry experiments have highlighted the feasability of this approach (see \autoref{ch:MSMS}) \citep{Fabre2001,Lee2005}.
 \Gls{cid} was used to obtain structural information about the target molecules, since soft ionization techniques (e.g. \gls{esi}) used in \gls{lcms} instruments primarily produce protonated and deprotonated molecular ions, but rarely yield fragments \citep{Sleno2004}.
 The \gls{cid} method collides the precursor ions with a neutral target gas while increasing the energy to induce fragmentation.
 The produced fragments vary depending on the energy chosen for fragmentation.
@@ -239,9 +197,8 @@ Using the \gls{cid} technique, an energy of \SI{30}{\electronvolt} proved suffic
 The molecular ion [M+H]\textsuperscript{+} of the methylated naringenin has a \gls{mz} of 287.092.
 The fragments helping to derive structural information are \mz{133} and \mz{153}, which can only be explained if the B-ring was methylated (\autoref{fig:e_MSscheme}).
 If the A-ring was methylated, the expected fragment ions of A and B-ring would have \gls{mz}-values of 167 and 119 respectively.
-
-
-\begin{figure}[htpb]
+%
+\begin{figure}[htb]
   \centering
   \begin{figureframe}
     \begin{subfigure}{\textwidth}
@@ -259,58 +216,30 @@ If the A-ring was methylated, the expected fragment ions of A and B-ring would h
   \caption{The masses resulting from the fragmentation into A- and B-ring along the C-ring (dashed line, \textbf{b}) are evidence, that the 4'-hydroxyl on the B-ring is methylated by \somt}
   \label{fig:e_LCMS_ponciretin}
 \end{figure}
-
-
-The \gls{lcms} results suggest, that methylation occured exclusively at the 4'-hydroxyl.
-There was no conversion detected, when a 4'-hydroxyl was absent (\autoref{tab:invivosomt}).
-A free 4'-hydroxyl seems therefore necessary for a substance to be a substrate for \somt, which confirms the previous results by Kim \etal \citep{Kim2005b}. 
-Conversion was observed for flavonoids and the stilbene resveratrol, although conversion rates of the isoflavone genistein were very low.
-No conversion of anthraquinones, cinnamic acid derivates or chalcones was detected, which is also in accordance with previously published data.
+%
+The \gls{lcms} results suggest, that methylation occured exclusively at the 4'-hydroxyl, as there was no conversion detected, when the 4'-hydroxyl was absent (\autoref{tab:invivosomt}).
+A free 4'-hydroxyl seems therefore necessary for a substance to be a substrate for \somt, which confirms the previous results \citep{Kim2005b, Kim2005c}. 
+Conversion was observed for 4'-hydroxylated (iso)flavonoids and the stilbene resveratrol, however conversion rates of the isoflavone genistein were very low.
+No conversion of anthraquinones, cinnamic acid derivates or chalcones was detected, which is also in accordance with previously published data \citep{Kim2005b, Kim2005c}.
 \somt acts on phenolic, catecholic as well as (4-hydroxy-3-methoxy-phenyl)-moeities, as is suggested by the assay results that showed methylation of naringenin, eriodictyol and homoeriodictyol respectively.
 The methylation of (4-hydroxy-3-methoxy-phenyl)-moiteties and of stilbenes are properties of \somt that have not been described before.
 
 The conversion ratios were assessed, but are beset with large errors due to the nature of \eco rich medium extracts.
 The highest conversions were observed for flavanones and flavones (up to $\geq$\SI{55}{\percent}). The tested isoflavones and flavonols showed much lesser conversion ratios (less then \SI{10}{\percent}).
-The conversion ratios of apigenin ($\geq$\SI{54}{\percent}) and naringenin ($\geq$\SI{55}{\percent}) are comparable to the ones published by Kim \etal.
-However, genistein only showed minute conversions, which is converse to the data published by their group \citep{Kim2005b}.
+The conversion ratios of apigenin ($\geq$\SI{54}{\percent}) and naringenin ($\geq$\SI{55}{\percent}) are comparable to the ones published previously \citep{Kim2005b, Kim2005c}.
+However, genistein only showed minute conversions, which is in disagreement with the data previously published \citep{Kim2005b, Kim2005c}.
 Conversion of eriodictyol, homoeriodictyol and kaempferol were not reported before.
 
 The biotransformation of resveratrol to 3,5-dihydroxy-4'-methoxy-stilbene showed a conversion ratio of $\geq$\SI{86}{\percent} in 30 hours.
 This is roughly double the conversion which was recently reported for \invivo biotransformations using the specific resveratrol \gls{omt} sbCOM1, which only achieved \SI{42}{\percent} conversion in 36 hours \citep{Kang2014}.
-
-\begin{table}
-  \caption{\textit{In vivo} biotransformation of different flavonoids, phenylpropanoids and anthraquinones by \somt in \eco}
-  \label{tab:invivosomt}
-  \begin{tabularx}{\linewidth}{XlllX}
-     \toprule\small
-    substrate & class & 4'-OH & conversion\footnote{Calculation of conversion percentages are only rough estimates, because of the nature of crude medium extracts.} & product\footnote{as determined by \gls{lcms}} \\
-    \midrule
-    alizarin & anthraquinone & \xmark & \xmark & -- \\
-    purpurin & anthraquinone & \xmark & \xmark & -- \\
-    apigenin & flavone & \cmark & \cmark ($\geq$\SI{54}{\percent}) & 4'-\textit{O}-methyl apigenin \\  
-    chrysin & flavone & \xmark & \xmark & -- \\
-    genistein & isoflavone & \cmark & \cmark ($<$\SI{1}{\percent}) & Biochanin A\footnote{4'-\textit{O}-methyl genistein} \\
-    galangin & flavonol & \xmark & \xmark & -- \\ 
-    kaempferol & flavonol & \cmark & \cmark ($\geq$\SI{6}{\percent}) & kaempferide\footnote{4'-\textit{O}-methyl kaempferol} \\
-    naringenin & flavanone & \cmark & \cmark ($\geq$\SI{55}{\percent}) & ponciretin \\
-    eriodictyol & flavanone & \cmark & \cmark ($\geq$\SI{40}{\percent}) & hesperetin \\
-    homoeriodictyol & flavanone & \cmark & \cmark ($>$\SI{6}{\percent})& 3',4'-(\textit{O,O})-dimethyl eriodictyol\\
-    hesperetin & flavanone & \xmark & \xmark & -- \\
-    phloretin & chalcone & \cmark & \xmark & -- \\
-    resveratrol & stilbene & \cmark & \cmark ($\geq$\SI{86}{\percent})& 4'-\textit{O}-methyl resveratrol \\
-    \textit{p}-coumaric acid & cinnamic acid & \cmark & \xmark & -- \\ 
-    caffeic acid & cinnamic acid & \cmark & \xmark & -- \\
-    reosmin & cinnamic acid\footnote{homo-dihydro cinnamic ketone} & \cmark & \xmark & -- \\ 
-    \bottomrule
-  \end{tabularx}
-\end{table}
 
 
 \subsection{\textit{In vitro} studies using recombinantly produced \glsentrytext{somt}}
 
 \textit{In vivo} biotransformations are an important tool for the primary characterization of enzymes.
 However, because live organisms are used and lots of variables are unknown, these systems can cause large errors and are not fit to thouroughly characterize an enzyme.
-Initially \somt was to be purified to homogeneity to be later thourougly characterized \invitro, since Kim \etal had showed the recombinant production of \somt in \eco as a fusion protein with an N-terminal \gls{T7tag}, but had missed to characterize the recombinant enzyme.
+Initially, \somt was to be purified to homogeneity to be later thourougly characterized \invitro, since the recombinant production of \somt in \eco as a fusion protein with an N-terminal \gls{T7tag} was previosuly shown. 
+However, the recombinant enzyme had not been characterized \cite{Kim2005c}. 
 
 \subsubsection{Protein production test}
 Initial protein production tests were carried out using \textit{\somt} cloned into pET28a(+) with an N-terminal \gls{histag}.
@@ -321,21 +250,23 @@ The \textit{\somt} gene was cloned into multiple other vectors, inluding pET20b 
 Multiple media, including \gls{tb}, \gls{lb} and autoinductiuon media were used along with different inducers (e.g. lactose, rhamnose, \gls{iptg}) at different temperatures.
 Nonetheless \somt could not be produced in a soluble form and expression only resulted in \glspl{ib}.
 
-\begin{figure}[htpb]
+\begin{figure}[htb]
   \centering
   \begin{figureframe}
     \includegraphics[scale=0.25]{usr/graphics/static/WEB214_SDSPAGE}
   \end{figureframe}
-  \caption{\sdspage of pET28a(+) \textit{\somt} expressed in \eco BL21(DE3) in autoinduction medium at different temperatures (shown above). The insoluble fractions show a protein band the same height as the \SI{40}{\kilo\dalton}) marker band, which corresponds to the \somt protein (\SI{40425}{\dalton}). M -- protein size marker, S -- soluble fraction, I -- insoluble fraction}
+  \caption{\sdspage of pET28a(+) \textit{\somt} expressed in \eco BL21(DE3) in autoinduction medium at different temperatures (shown above). The insoluble fractions show a protein band the same height as the \SI{40}{\kilo\dalton} marker band, which corresponds to the \somt protein (\SI{40425}{\dalton}). M -- protein size marker, S -- soluble fraction, I -- insoluble fraction}
   \label{fig:e_somtgel_exp}
 \end{figure}
 
 \subsubsection{\textit{In vitro} protein refolding}
 
-Since the \somt protein could not be obtained in soluble formen, when recombinantly expressed in \eco, the \glspl{ib} were prepared and used for \invitro refolding studies.
-Protein refolding is no trivial task. 
+Since the \somt protein could not be obtained in soluble formen, when recombinantly expressed in \eco, the \glspl{ib} were prepared \cite{Rudolph1996} and used for \invitro refolding studies.
+For \textit{in vitro} protein refolding, \glspl{ib} are solubilized using denaturants such as \gls{gua} or urea.
+The native tertiary structure of the protein is then restored by removal of the denaturant under the ``right'' conditions (e.g. pH, salt, additives, etc.).
+However, this is no trivial task since initially the ``right'' conditions have to be found by trial and error.
 The refolding process competes with misfolding and aggregation processes and refolding buffers have to be optimized in order to obtain an efficient refolding system with the best possible results \cite{Willis2005,Yamaguchi2014,Rudolph1996}.
-Refolding efficiency is best measured via biological activity, but even with adequate assays refolding studies are a time-consuming process of trial-and-error.
+Refolding efficiency is best measured via biological activity, but even with adequate assays refolding studies are a time-consuming process.
 The number of experiments required to even test only four variables, for example pH, salt, temperature and protein concentration with 3 states each (e.g. low, medium, high) in all possible combinations results in $3^4=81$.
 An experimental setup, which accounts for all possible variable (factor) combinations is also called a \emph{full factorial design}.
 These setups capture main effects, as well as higher level interaction effects \citep{Montgomery2001,Box2005}.
@@ -343,18 +274,20 @@ However, for screening purposes only a fraction of the experiments can be run.
 The objective of these \glsentryfirst{ffd} experiments is to identify the variables, which have large effects and are worth expanding the experimental investigation upon.
 \Glspl{ffd} have been successfully used for a number of protein refolding trials \citep{Willis2005,Vincentelli2004,Tobbell2002}.
 
-The following factors were studied for the \invitro refolding of \somt: pH, arginine addition, glycerol addition, addition of divalent cations, ionic strength, redox system, cyclodextrin addition and effector (\gls{sah}) addition (see tables \ref{tab:ffd_factors} and \ref{tab:ffd_matrix}).
+The following factors were studied for the \invitro refolding of \somt: pH, arginine addition, glycerol addition, addition of divalent cations, ionic strength, redox system, cyclodextrin addition and effector (\gls{sah}) addition.
+These factors were used, because all have been shown to influence refolding success \cite{Tsumoto2004,Anselment2010,Fujimoto2010,Willis2005,Yamaguchi2014,Chen2008a,Vincentelli2004,Akbari2010,Benoit2007}.
 Two factor levels were used in a twelve-run design. This is sufficient to find some main effects, however no statement about interaction effects can be made.
+For a complete listing of the buffers and conditions the reader is referred to the materials and methods chapter (Tables \ref{tab:ffd_factors} and \ref{tab:ffd_matrix}).
 
-The \sdspage gels that were prepared of the soluble and insoluble fraction already show big differences between folding buffers.
-Refolding buffers 2,3 and 8--11 mainly produced insoluble protein, whereas the majority of the protein in refolding buffers 1, 4--7 and 12 was in soluble form in these buffers after an overnight refolding reaction (\autoref{fig:e_refold_gel}). 
-After rebuffering the cleared refolding reactions into a unified buffer the protein concentrations were estimated by Bradford \citep{Bradford1976}.
-The protein concentrations are consistent with the \sdspage gels.
+%The \sdspage gels that were prepared of the soluble and insoluble fraction already show 
+Big differences between soluble and insoluble fractions of different refolding buffers could already be noticed from the \sdspage gels (\autoref{fig:e_refold_gel}, see \autoref{subsec:doerefolding}).
+Refolding buffers 2,3 and 8--11 mainly produced insoluble protein, whereas the majority of the protein in refolding buffers 1, 4--7 and 12 was in soluble form in these buffers after an overnight refolding reaction (Tables \ref{tab:ffd_factors} and \ref{tab:ffd_matrix}, \autoref{fig:e_refold_gel}). 
+After rebuffering the cleared refolding reactions into a unified buffer the protein concentrations were estimated by \textsc{Bradford}-assays \citep{Bradford1976}.
+The protein concentrations measured by \textsc{Bradford}'s method were consistent with the \sdspage gels.
 Soluble protein was obtained for buffers 1, 4--7 and 12.
 The highest amount of soluble protein was present, when the refolding reaction took place in buffers 5 or 7.
-
-
-\begin{figure}[htpb]
+%
+\begin{figure}[htb]
   \centering
   \begin{figureframe}
     \includegraphics[width=0.75\textwidth]{usr/graphics/static/refold_sdspage}
@@ -362,10 +295,10 @@ The highest amount of soluble protein was present, when the refolding reaction t
   \caption{\sdspage of the insoluble and soluble fractions of the refolding reactions.}
   \label{fig:e_refold_gel}
 \end{figure}
-
-
+%
 The common denominator of those buffers is that all of them contained arginine, whose addition has proven beneficial for many refolding applications \citep{Chen2008a,Tsumoto2004,Fujimoto2010}.
-\Glspl{meplot} illustrate the difference between level means for each factor.
+
+\paragraph{\Glspl{meplot}} illustrate the difference between level means for each factor.
 The \meplot for protein concentration shows, that arginine seems to be an important factor for the refolding of \somt (\autoref{fig:MEplot_BF}).
 Furthermore, the addition of \gls{sah} or glycerin and the pH seem to have an influence, whereas the other factors seem to play only a minor role for high protein concentrations after refolding.
 However, the \aov test suggests that only arginine addition has a significant influence on refolding, when the significance level is set to \SI{5}{\percent} ($p$-value \num{0.0158}).

@@ -9,6 +9,20 @@
 %\newacronym[nonumberlist]{pal}{PAL}{phenylalanine ammonia lyase}
 %\newacronym[nonumberlist]{chs}{CHS}{chalcone synthase}
 \newacronym[nonumberlist]{cbd}{CBD}{cobalamin binding domain}
+
+\newglossaryentry{ai}{
+  	type	= \acronymtype,
+        name	= AI,
+      %  nonumberlist,
+        text	= AI,
+        symbol	= AI,
+        first   = auto-induction (AI),
+        see = {zyp},
+        %first	= {\textit{S}-adenosyl-\textsc{L}-homocysteine (SAH)},
+        description	= auto-induction%
+}
+%\newacronym[nonumberlist]{ai}{AI}{auto-induction}
+
 \newacronym[nonumberlist]{udp}{UDP}{uridine diphosphate}
 \newacronym[nonumberlist]{dado}{dAdo}{5'-deoxyadenosyl}
 \newacronym[nonumberlist]{ccoaomt}{CCoAOMT}{caffeoyl CoA dependent \textit{O}-methyltransferase}
@@ -165,7 +179,8 @@
   name	=	ZYP,
   text	=	ZYP-5052,
   symbol=	ZYP,
-  nonumberlist,
+%  nonumberlist,
+  see = {zypg},
   first	=	{N-\emph{Z}-amine, \emph{y}east extract, \emph{p}hosphate (ZYP-5052)},
 % description = {N-Z-amine, yeast extract, phosphate}%
 %  description = {N-\emph{Z}-amine, \emph{y}east extract, \emph{p}hosphate}
@@ -174,7 +189,7 @@
 
 \newglossaryentry{zypg}{
    name	=	\glslink{zyp}{ZYP-5052},
-   nonumberlist,
+%   nonumberlist,
    description = {%
      Autoinduction medium developed by Studier \citep{Studier2005}. The naming stems from the components N-\protect\emph{Z}-amine, \protect\emph{y}east extract and \protect\emph{p}hosphate. The numbering designates the composition; e.g. 5052 refers to 0.5\,\% glycerol, 0.05\,\% glucose and 0.2\,\% lactose.
    }

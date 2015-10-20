@@ -22,7 +22,7 @@
 Flavonoids are an important class of natural compounds and make up a large part of the world's biomass.
 Due to their anti-inflammatory and anti-oxidant properties, many health benefits are associated with flavonoids and there is a growing interest to use flavonoids in medicinal  and dietary contexts.
 The availabilty of methods that provide for a  quick and reliable identification of flavonoids from different sources is therefore essential.
-In this work a range of flavonoids was studied using \gls{lcms}.
+In this work a range of flavonoids was studied using \glsentryfirst{lcms}.
 Two modes of activation, namely \gls{cid} and \gls{hcd}, were evaluated to study fragmentation of flavonoids from their [M+H]\textsuperscript{+} molecular ions.
 It was found, that \gls{hcd} outperformed \gls{cid} in the ring-fragmentations of methylated flavonoids.
 Together, both methods provide complementary information that can be used to distinguish different types of flavonoids.
@@ -38,7 +38,7 @@ However, small molecules rarely produce fragment ions under these conditions and
 A range of different approaches has been used to circumvent this draw-back.
 The most direct approach is to use \gls{ei}, where the analytes are bombarded with electrons, for ionization. 
 However, \gls{ei} is a vacuum method and the coupling with \gls{lc}-systems is not trivial \cite{Venzie2007}.
-In order to still generate fragments in \gls{lcms} \gls{msms} methods such as \gls{cid} or \gls{sid} were developed \cite{Sleno2004}.
+In order to still generate fragments in \gls{lcms} \gls{msms} methods such as \glsentryfirst{cid} or \gls{sid} were developed \cite{Sleno2004}.
 
 Flavonoids comprise a huge chemical space, with millions of theoretical structures \cite{Williams2004}.
 Due to their biological activities and associated health benefits, applications to quickly identify and characterize these compounds are of special interest.
@@ -53,16 +53,16 @@ The labels \frag{\textit{i,j}}{A}{+} and \frag{\textit{i,j}}{B}{+} refer to frag
   \begin{figureframe}
     \includegraphics[scale=1]{usr/graphics/static/fragmentation_nomenclature2}
   \end{figureframe}
-  \caption{Ion fragment nomenclature of flavonoid aglycones as proposed by Ma \etal, illustrated on naringenin.}
+  \caption{Ion fragment nomenclature of flavonoid aglycones as proposed by Ma \etal, illustrated on naringenin. Ions are labelled according to the ring they contain and the positions of the C ring that were broken. Thus \frag{\textit{1,3}}{A}{+}, contains the ring A and bonds 1 and 3 of the C ring were broken.}
   \label{fig:ion_nomenclature}
 \end{figure}
 %
-In this work the complementarity of two activation methods, \gls{cid} and \gls{hcd}, for the structural characterization of flavonoids (\autoref{tab:LCMSsubstrates}), especially those methylated at the B-ring, in positive ionization mode was evaluated.
+In this work the complementarity of two activation methods, \gls{cid} and \glsentryfirst{hcd}, for the structural characterization of flavonoids (\autoref{tab:LCMSsubstrates}), especially those methylated at the B-ring, in positive ionization mode was evaluated.
 %The main focus of this study were flavonoids methylated at the B-ring.
 
 \begin{table}[htpb]\centering\small
   \begin{minipage}{0.7\textwidth}
-    \captionof{table}[]{Substrates studied in this work. Three classes of flavonoids were tested: flavanones (\molref*{naringenin}-\molref*{hed}), flavones (\molref*{apigenin}-\molref*{chrysoeriol}) and flavonols (\molref*{kaempferol}-\molref*{myricetin}). The topology of the bond in the C-ring specifying flavanones or flavones/flavonols is denoted with \textbf{s} (single) or \textbf{d} (double), respectively.}
+    \captionof{table}[]{Substrates studied in this work. Three classes of flavonoids were tested: flavanones (\molref*{naringenin}-\molref*{hed}), flavones (\molref*{apigenin}-\molref*{chrysoeriol}) and flavonols (\molref*{kaempferol}-\molref*{isorhamnetin}). The topology of the bond in the C-ring specifying flavanones or flavones/flavonols is denoted with \textbf{s} (single) or \textbf{d} (double), respectively.}
         \label{tab:LCMSsubstrates}
   \end{minipage}%
   \begin{minipage}{0.29\textwidth}
@@ -130,10 +130,11 @@ This is made clear by the increasing intensities of smaller fragments upon raisi
 %
 \begin{figure}[!htb]\centering
   \begin{figureframe}
-      \includegraphics[width=\textwidth]{usr/graphics/static/1,3A_fragmentation}
+      \includegraphics[width=\textwidth]{usr/graphics/static/13A_fragmentation}
   \end{figureframe}
-  \caption{Proposed MS\textsuperscript{2} fragmentation of \frag{1,3}{A}{+} after \gls{hcd} activation.%
-  }
+  \caption{Proposed MS\tup{2} fragmentation of \frag{1,3}{A}{+} after \gls{hcd} activation. 
+    In high energy MS\tup{2} experiments, \frag{1,3}{A}{+} might loose two \cf{CO} followed by an unusual \cf{C2H4}. A single loss of ketene (\cf{C2H2O}) to afford m/z\,111 is also sensible.%
+}
   \label{fig:ms2_13A}
 \end{figure}
 
@@ -143,16 +144,6 @@ However, the loss of \cf{CO} is the most prominent decomposition of (\frag{1,4}{
 The intensities of the peaks corresponding to the (\frag{1,4}{B}{+}-2H-CO) fragment were as high as \SI{36}{\percent} in \gls{hcd} experiments (\autoref{fig:ed_msspec}).
 Naringenin \molref{naringenin} seems to sequentially lose two \cf{CO} in \gls{hcd} mode to afford \mz{91} (intensities at \num{75} and \SI{100}{\percent} \gls{nce} at \num{24} and \SI{100}{\percent}, respectively).
 This \mz{} is a strong indicator of a benzylium or tropylium cation (\autoref{fig:flavanone_genfrag}).
-Decay of (\frag{1,4}{B}{+}-2H) of the other flavanones likely leads to a stable bicyclo[4.1.0]heptatrienyl cation as the high intensity of peak \mz{89} in \gls{hcd} mode suggests.
-Methylated flavanones \molref{ponciretin}, \molref{hesperetin} and \molref{hed} show a loss of \cf{CO} followed by a loss of a methyl radical (\frag{1,4}{B}{+}-2H-CO-CH3$\mathrm{^\cdot}$), as suggested by the respective \mz{} values  of 118 and 134.
-Another \cf{CO} loss from this fragment is possible for ponciretin \molref{ponciretin} to produce an ion \mz{90}, which is at \SI{49}{\percent} intensity in the \gls{hcd} spectrum recorded with \gls{nce} of \SI{75}{\percent} .
-The evidence suggests, that this ion's structure is best described by a benzylium/tropylium radical cation (\autoref{fig:flavanone_genfrag}).
-%
-It is proposed, that ion \frag{1,3}{A}{+} can decompose via two different pathways under \gls{hcd} conditions (\autoref{fig:ms2_13A}).
-A loss of ketene from \frag{1,3}{A}{+} results in \mz{111}.
-Pyranone (\molnum{pyranone}) is suggested as a structure for this ion. 
-Sequential losses of two \cf{CO} and a \cf{C2H4} could afford ion (\molnum{propanedion}).
-However, further MS\tup{n} experiments are necessary to confirm these proposals.
 %
 \begin{figure}[htpb]\centering
   \begin{figureframe}
@@ -176,6 +167,17 @@ However, further MS\tup{n} experiments are necessary to confirm these proposals.
   }
   \label{fig:ed_msspec}
 \end{figure}
+%
+Decay of (\frag{1,4}{B}{+}-2H) of the other flavanones likely leads to a stable bicyclo[4.1.0]heptatrienyl cation as the high intensity of peak \mz{89} in \gls{hcd} mode suggests.
+Methylated flavanones \molref{ponciretin}, \molref{hesperetin} and \molref{hed} show a loss of \cf{CO} followed by a loss of a methyl radical (\frag{1,4}{B}{+}-2H-CO-CH3$\mathrm{^\cdot}$), as suggested by the respective \mz{} values  of 118 and 134.
+Another \cf{CO} loss from this fragment is possible for ponciretin \molref{ponciretin} to produce an ion \mz{90}, which is at \SI{49}{\percent} intensity in the \gls{hcd} spectrum recorded with \gls{nce} of \SI{75}{\percent} .
+The evidence suggests, that this ion's structure is best described by a benzylium/tropylium radical cation (\autoref{fig:flavanone_genfrag}).
+%
+It is proposed, that ion \frag{1,3}{A}{+} can decompose via two different pathways under \gls{hcd} conditions (\autoref{fig:ms2_13A}).
+A loss of ketene from \frag{1,3}{A}{+} results in \mz{111}.
+Pyranone (\molnum{pyranone}) is suggested as a structure for this ion. 
+Sequential losses of two \cf{CO} and a \cf{C2H4} could afford ion (\molnum{propanedion}).
+However, further MS\tup{n} experiments are necessary to confirm these proposals.
 %
 
 
@@ -285,7 +287,8 @@ The base peaks at a \gls{nce} of \SI{100}{\percent} in \gls{hcd}, \mz{91} \molre
       \caption{Fragments characteristic for methylated flavones.}
     \end{subfigure}
  \end{figureframe}
-  \caption{Major fragmentation pathways of unmethylated and methylated flavones.%
+  \caption{Major fragmentation pathways of unmethylated and methylated flavones. Multiple neutral losses of small molecules (e.g. \cf{CO}, water or ketene) and 0/4 and 1/3 C ring cleavages are predominant in the MS\tup{2} spectra of unmethylated flavones. 
+   Methylated flavones loose a methyl group in \gls{cid} experiments, but only in \gls{hcd} experiments do other fragmentation reaction become obvious.%
     }
   \label{fig:flavone_genfrag}
 \end{figure}
@@ -298,7 +301,7 @@ A relatively stable radical cation is formed after the loss of a methyl group, d
   \begin{figureframe}
       \includegraphics[scale=0.75]{usr/graphics/static/me_flavone_stability}
   \end{figureframe}
-  \caption{The [M+H-\cf{CH3}]\tup{\textbullet+} ion of methylated flavones like diosmetin is highly stabilized by resonance, explaining the high intensity of the corresponding peak and limiting its fragmentation at low activation energies. %
+  \caption{Stability of the [M+H-\cf{CH3}]\tup{\textbullet+} ion of flavones. The [M+H-\cf{CH3}]\tup{\textbullet+} ion of methylated flavones like diosmetin is highly stabilized by resonance, explaining the high intensity of the corresponding peak and limiting its fragmentation at low activation energies. %
   }
   \label{fig:meflavon_stability}
 \end{figure}
@@ -337,7 +340,8 @@ The base peak in the \gls{hcd} spectra of \molref{acacetin} (\mz{242}) and (\mol
   \begin{figureframe}
       \includegraphics[scale=1]{usr/graphics/static/chrysoeriol_fragmentation}
  \end{figureframe}
-  \caption{Proposed pathway of fragmentation of \molref{chrysoeriol} after \gls{hcd} activation.%
+  \caption{Proposed pathway of fragmentation of \molref{chrysoeriol} after \gls{hcd} activation.
+    Losses of \cf{CH3}\tup{textbullet} and \cf{CH4}, followed by loss of \cf{CO} are the major fragmentations observed in the corresponding MS spectra. However, multiple losses of \cf{CO} only occur after a loss of methane (\cf{CH4}), possibly due to the relative stability of the benzochromenylium radical (\molnum{benzochromenylium}). At \SI{100}{\percent} \gls{nce} even higher order fragmentations were observed. %
   }
   \label{fig:chrys_frag}
 \end{figure}
@@ -438,7 +442,11 @@ Only for kaempferol \molref{kaempferol}, a neutral loss of \SI{42}{\dalton} corr
       \caption{Characteristic fragments of methylated flavonoles.}
     \end{subfigure}
  \end{figureframe}
-  \caption{Major fragmentation pathways of flavonoles. n/o -- not observed (relative intensity \textless \SI{1}{\percent}).%
+  \caption{Major fragmentation pathways of flavonoles. Unlike flavones, methylated and unmethylated flavonoles share common fragmentations, albeit signals corresponding to small molecule losses are typically small for methylated analogues.
+Ring fragments observed typically correspond to the cleavage along bonds 0/3 or 0/2.
+Methylated flavonols shared common fragments with the methylated flavones.%, e.g. \cf{CH3}\tup{\textbullet} or \cf{CH4} loss followed by losses of \cf{CO}.
+However, loss of methanol and a couple \cf{CO} was also observed.
+    n/o -- not observed (relative intensity \textless \SI{1}{\percent}).%
     }
   \label{fig:flavonole_genfrag}
 \end{figure}
@@ -490,7 +498,9 @@ The data suggests, that these [M+H-\cf{CH3OH}]\tup{+} fragments can loose up to 
   \begin{figureframe}
       \includegraphics[width=\textwidth]{usr/graphics/static/isorhamnetin_frag}
  \end{figureframe}
-  \caption{Proposed pathway of fragmentation of \molref{isorhamnetin} after methyl, methane or methanol cleavage upon activation. Some fragmentations were observed in \gls{hcd} mode only (box).%
+  \caption{Proposed pathways of fragmentation of isorhamnetin \molref{isorhamnetin}. Isorhamnetin might loose methyl, methane or methanol upon activation. 
+    A similar fragmnentation pathway was proposed for the analogous chrysoeriol (\autoref{fig:chrys_frag}).
+    Some fragmentations were observed in \gls{hcd} mode only (box).%
   }
   \label{fig:isorhamnetin_frag}
 \end{figure}
@@ -503,9 +513,9 @@ As mentioned before, the smaller mass fragments corresponding to multiple neutra
 \section{Conclusions and Discussion}
 
 This comprehensive study shows that, taken together, data from \gls{cid} and \gls{hcd} experiments can be complementary to give a much deeper understanding of structural features of flavonoids.
-Mass errors were calculated for each postulated fragment and ranged from \SIrange{0.4}{10}{\ppm} (not shown), highlighting the accuracy of the instrument which also allowed for the accurate determination of molecular formulas from MS signals.
+Mass errors were calculated for each postulated fragment and ranged from \SIrange{0.4}{10}{\ppm}, highlighting the accuracy of the instrument which also allowed for the accurate determination of molecular formulas from MS signals.
 
-The complementary of \gls{cid} and \gls{hcd} is especially stricking, when comparing spectra of \molref{diosmetin} and \molref{chrysoeriol}.
+The complementary nature of \gls{cid} and \gls{hcd} is especially stricking, when comparing spectra of \molref{diosmetin} and \molref{chrysoeriol}.
 \Gls{cid} fragmentation of these B-ring methylated flavones afforded MS spectra, where a methyl loss was by far the dominant fragmentation.
 \Gls{hcd} on the other hand provided higher order fragmentations combined with a higher signal-to-noise ratio, for a deeper insight into structural features.
 These higher order fragmentations were accelerated by increasing the activation energy, but interpretability of the corresponding spectra was limited.
@@ -555,6 +565,6 @@ Key ions might only present themselves in the spectra of either method, and toge
 \section{Contributions}
 
 Benjamin Weigel prepared substances, analyzed mass spectral data and prepared manuscript.
-Annegret Laub and Jürgen Schmidt conducted \gls{lcms} measurement runs.
+Annegret Laub and Jürgen Schmidt conducted \gls{lcms} measurement runs. Through helpful discussions, Jürgen Schmidt helped tremendously with the preparation of the manuscript.
 
 

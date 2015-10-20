@@ -181,24 +181,37 @@ Primers used in this work. Recognition sites for endonucleases are underlined. P
 \addtocounter{table}{-1} 
 
 \subsection{Software}
-All mathematical and statistical computations and graphics were done with the \verb+R+ software (versions 3.1.X, \url{http://cran.r-project.org/}) \citep{RCoreTeam2015}. Visualizations of macromolecules were arranged using the PyMol Molecular Graphics System, version 1.7.0.0 (Schrödinger, New York, USA).\\
+All mathematical and statistical computations and graphics were done with the \verb+R+ software (versions 3.1.X, \url{http://cran.r-project.org/}) \citep{RCoreTeam2015}. Visualizations of macromolecules were arranged using the PyMol Molecular Graphics System, version 1.7.0.0 (Schrödinger, New York, USA).
+
 Physicochemical calculations and calculations of different molecular descriptors were performed using Marvin Beans 15.4.13.0 (ChemAxon, Budapest, Hungary) and Molecular Operating Environment 2008.10 (Chemical Computing Group, Montreal, Canada).
 Special software used for X-ray crystal structure solution is discussed seperately in the corresponding section (\ref{sec:xraymethods}).
 
 %%%% Molecular Biology methods
 \section{Molecular Biology}
 \label{sec:molbio}
-Basic molecular biology methods like \gls{pcr}, DNA restriction/ligation, DNA gel electrophoresis, preparation of competent cells and transformation were performed based on the protocols summarized by Sambrook and Russell \citep{Sambrook2001}.\\
-Plasmid DNA was isolated using the QIAprep\textsuperscript{\textregistered} Spin Miniprep Kit (QIAGEN, Hilden, Germany) according to the manufacturer's instructions. \\
-In vitro site-directed mutatgenesis was set-up according to the protocol of the \emph{QuikChange\textsuperscript{\texttrademark} Site-Directed Mutagenesis} kit \cite{Technologies} offered by Agilent Technologies (Santa Clara, USA). \\
+Basic molecular biology methods like \gls{pcr}, DNA restriction/ligation, DNA gel electrophoresis, preparation of competent cells and transformation were performed based on the protocols summarized by Sambrook and Russell \citep{Sambrook2001}.
+Plasmid DNA was isolated using the QIAprep\textsuperscript{\textregistered} Spin Miniprep Kit (QIAGEN, Hilden, Germany) according to the manufacturer's instructions. 
+In vitro site-directed mutatgenesis was set-up according to the protocol of the \emph{QuikChange\textsuperscript{\texttrademark} Site-Directed Mutagenesis} kit \cite{Technologies} offered by Agilent Technologies (Santa Clara, USA). 
 Nucleotide fragments obtained by \gls{pcr}, restriction/ligation procedures or excision from electrophoresis gels were purified and concentrated using the \emph{Nucleospin Gel and PCR Clean-up} kit provided by Machery-Nagel (Düren, Germany) according to the instructions provided by the manufacturer.
 
 \subsection{Golden Gate Cloning}
 \label{sec:GGcloning}
-The Golden Gate cloning procedure is a one-pot method, meaning the restriction digestion and ligation are carried out in the same reaction vessel at the same time \cite{Kondou2011,Engler2008}. Consequently \gls{pcr}-fragments, destination vector, restriction endonuclease and ligase are added together in this reaction. The methodology employs type II restriction enzymes, which together with proper design of the fragments allow for a ligation product lacking the original restriction sites.  \\
+The Golden Gate cloning procedure is a one-pot method, meaning the restriction digestion and ligation are carried out in the same reaction vessel at the same time \cite{Kondou2011,Engler2008}. Consequently \gls{pcr}-fragments, destination vector, restriction endonuclease and ligase are added together in this reaction. The methodology employs type II restriction enzymes, which together with proper design of the fragments allow for a ligation product lacking the original restriction sites.  
 For digestion/ligation reactions of fragments containing BpiI sites, 20\,fmol of each fragment or vector, together with 5\,U of BpiI and 5\,U of T4 ligase were combined in a total volume of \ul{15} 1$\times$ ligase buffer.
-For fragments to be cloned via BsaI sites, BpiI in the above reaction was substituted by 5\,U BsaI. \\
+For fragments to be cloned via BsaI sites, BpiI in the above reaction was substituted by 5\,U BsaI. 
 The reaction mixture was placed in a thermocycler and inbcubated at \degC{37} for 2\,min and \degC{16} for 5\,min. These two first steps were repeated 50 times over. Finally, the temperature was raised to \degC{50} (5\,min) and \degC{80} (10\,min) to inactivate the enzymes.
+
+The \textit{SOMT2} gene was amplified from pET28a-SOMT using primers \textit{somt1--somt4} (\autoref{tab:primers}), cloned into vector pICH41308 (level 0) using BpiI and consequently subcloned into the level 1 module pICH75044, alongside 35S promoter and \gls{nos}-terminator, using BsaI (\autoref{fig:cloning}).
+The resulting construct was denoted as pBEW107.
+
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[width=\textwidth]{usr/graphics/static/cloning_pBEW107}
+  \end{figureframe}
+  \caption{Golden Gate cloning scheme for \somt}
+  \label{fig:cloning}
+\end{figure}
 
 \subsection{Subcloning of genes}
 All subcloning procedures were performed according to \autoref{sec:molbio} and specifically \autoref{sec:GGcloning}.
@@ -214,6 +227,7 @@ The culture was centrifuged (\timesg{10000}, 1\,min) and \ul{900} supernatant we
 The pellet was resuspended in the remaining liquid, plated onto \gls{lb}-agar plates supplemented with \ugperml{40} rifampicin and \ugperml{50} carbencillin and incubated at \degC{28} for (2 to 3)\,days.
 
 \section{Treatment of plant material}
+\label{sec:agronico}
 \subsection{Infiltration of \textit{Nicotiana benthamiana}}
 Before infiltration \nico plants were pruned, such that only leaves to be infiltrated remained with the plant (\autoref{fig:c.nico}).
 5\,ml cultures of transformed \agro in \gls{lb}-medium (with \ugperml{40} rifampicin and \ugperml{50} carbencillin) were grown over night at \degC{28} and 220\,rpm.
@@ -222,9 +236,15 @@ When multiple \agro transformed with different contructs/plasmids were used for 
 The solution was infiltrated into the abaxial side of \nico leaves using a plastic syringe.
 The leaf material was harvested after 7 days.
 
+\subsubsection{Infiltration of \nico for \textit{in vivo} biotransformation using SOMT-2}
+Both sides of \nico leaves were infiltrated with different samples (\autoref{fig:c.nico}).
+The left side was infiltrated with \agro cultures transformed with pAGM10733 (\gls{pal}), pAGM10406 (\gls{chs}) and pBEW107 (\somt).
+For the right side the \agro culture containing pBEW107 was replaced by a control: \agro transformed with the empty vector pICH75044. 
+
+
 \begin{figure}[htpb]
   \begin{figureframe}
-    \includegraphics[width=0.5\textwidth]{usr/graphics/static/nico2}
+    \includegraphics[width=0.5\textwidth]{usr/graphics/static/nico2.eps}
   \end{figureframe}
   \caption{Pruned \nico plant, with two bottom and one top leaf, ready to be infiltrated.}
   \label{fig:c.nico}
@@ -390,6 +410,7 @@ Unspecifically bound proteins were washed away by increasing the amount of eluti
 Highly enriched and purified target protein was eluted with 6 to 10\,\gls{cv} of 100\,\% elution buffer. 
 
 \subsection{Refolding of \glsentrytext{somt} on a micro scale using \glsentryfirst{doe}}
+\label{subsec:doerefolding}
 \Gls{doe} and \glsentryfirst{ffd} have been successfully used to optimize the refolding conditions of several proteins \citep{Willis2005,Akbari2010,Benoit2007}.
 Thus, an approach using \gls{ffd} was used to find optimal refolding conditions for \gls{somt}. \\
 Factors studied were pH (buffer), arginine, glycerol, divalent cations, ionic strength, redox system, cyclodextrin and co-factor addition.

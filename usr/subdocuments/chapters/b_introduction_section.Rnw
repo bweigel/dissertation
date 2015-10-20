@@ -301,7 +301,10 @@ The catalytically important N-terminus is not resolved in the structure.
 
 \paragraph{SOMT}
 
-
+\somt has been described in the literature to methylate multiple flavonoids at the 4'-position of the B-ring \citep{Kim2005c,Kim2005b,Kim2013}.
+It has the highest activity towards naringenin, to produce ponciretin (also known as isosakuranetin).
+%Non-chemical methylations of this nature are of great scientific and economic interest.
+Enzymes like \somt, that methylate a \textit{para}-monohydroxylated B ring of flavonoids, either seem to be a rare occurance or fairly inactive, since descriptions of characterized representatives are scarce in the literature and are only limited to a couple of enzymes \cite{Schroder2004,Deavours2006}. \bweigel{is that true?}
 %\subsection{\Glsentryfirstplural{cmt}}
 %\subsection{Other \glsentryfirstplural{mt}}
 %\paragraph{CMTs, NMTs, SMTs}

@@ -10,7 +10,8 @@ Within this section percentages refer to volume per volume (v/v) percentages unl
 Enzymes and buffers used for molecular cloning were obtained from Life Technologies (Darmstadt, Germany), unless otherwise noted. 
 Flavonoid HPLC standards were purchased from Extrasynthese (Genay, France). 
 Deuterated solvents were aquired from Deutero GmbH (Kastellaun, Germany). 
-Solvents, purchased from VWR (Poole, England), were distilled in-house before use. \\
+Solvents, purchased from VWR (Poole, England), were distilled in-house before use. 
+
 All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany), Applichem (Darmstadt, Germany), Carl Roth (Karlsruhe, Germany) or Merck (Darmstadt, Germany).
 
 \subsection{Commonly used solutions and buffers}
@@ -298,18 +299,19 @@ Extinction coefficients of proteins were calculated from the amino acid sequence
 The heterologous production of proteins in \eco was assessed in a small scale protein production test, henceforth called expression test.
 Single colonies of \eco transformed with the constructs to be studied were used to inoculate a 2\,ml starter culture in \gls{lb}-medium containing the appropriate antibiotics. 
 The working concentrations of antiobiotics used was as follows:
-\ugperml{200} ampicillin, \ugperml{150} kanamycin, \ugperml{50} chloramphenicol, \ugperml{20} tetracycline. \\
+\ugperml{200} ampicillin, \ugperml{150} kanamycin, \ugperml{50} chloramphenicol, \ugperml{20} tetracycline. 
 The starter culture was allowed to grow at \degC{37} and 200\,rpm over night.
 A 5\,ml sampling culture of the medium to be studied containing the appropriate antibiotics was prepared. The media tested included \gls{lb}, \gls{tb} and auto-induction media like ZYP-5052.
 The sampling culture was inoculated to an \odx{600} of 0.075 using the starter culture and incubated at different temperatures and 200\,rpm in a shaking incubator.
 1\,mM \gls{iptg} was added when the \odx{600} reached 0.6-0.8, if appropriate for the studied construct.
-1\,ml samples were removed after different times of incubation (e.g. 4, 8, 12 hours), subfractionated (\ref{sec:subfractionation}) and analyzed via \gls{sds}-\gls{page} (\ref{sec:sdspage}).\\
+1\,ml samples were removed after different times of incubation (e.g. 4, 8, 12 hours), subfractionated (\ref{sec:subfractionation}) and analyzed via \gls{sds}-\gls{page} (\ref{sec:sdspage}).
+
 Exact specifications of growth conditions (e.g. temperature, time, constructs) are discussed in the individual sections.
 
 \subsection{Protein subfractionation}
 \label{sec:subfractionation}
 The protein subfractionation procedure described herein was adapted from the protocol described in the pET Manual \citep{Novagen2010}. 
-Overall 5 protein subfractions can be obtained, including \emph{total cell protein, culture supernatant (medium) protein, periplasmic protein, solube cytoplasmic protein} and \emph{insoluble protein}. \\
+Overall 5 protein subfractions can be obtained, including \emph{total cell protein, culture supernatant (medium) protein, periplasmic protein, solube cytoplasmic protein} and \emph{insoluble protein}. 
 The \odx{600} of the culture sample was measured and the cells harvested by centrifugation at \timesg{10000}, \degC{4} for 5\,minutes.
 The protein in the supernatant medium was concentrated by precipitation with \gls{tca} (\ref{sec:tcaprecipitation}) for \sdspage analysis.
 The periplasmic protein was prepared (\ref{sec:ppprep}) and also concentrated by \gls{tca} precipitation for \sdspage.
@@ -331,7 +333,7 @@ After resuspension the sample was analyzed by \sdspage or stored at \degC{-20} u
 \subsection{Preparation of periplasmic protein}
 \label{sec:ppprep}
 Target proteins may be directed to the periplasmic space by N-terminal signal sequences like \textit{pelB} or \textit{DsbA/C} \citep{Makrides1996}. The periplasma is, other than the cytosol, an oxidizing environment and often used for the production of proteins containing dilsufide linkages.
-The preparation of periplasmic protein was accomplished by an osmotic shock protocol modified from Current Protocols in Molecular Biology \citep{Ausubel2008}.\\
+The preparation of periplasmic protein was accomplished by an osmotic shock protocol modified from Current Protocols in Molecular Biology \citep{Ausubel2008}.
 The cell pellet was resuspended in the same volume as the culture sample of 30\,mM tris-HCl, 20\,\% (w/v) sucrose, pH\,8 and 1\,mM \gls{edta} was added. The suspension was stirred for 10\,min at \gls{rt} and the cells were collected by centrifugation at \timesg{10000}, \degC{4} for 10\,min.
 The supernatant was discarded and the cell pellet was resuspended in the same volume of ice-cold 5\,mM \cf{MgSO4}.
 The suspension was stirred for 10\,min on ice, while the periplasmic proteins were released into the solution.
@@ -340,7 +342,7 @@ The cells were collected by centrifugation as before. Periplasmic proteins were 
 \subsection{Discontinous SDS-polyacrylamide gel electrophoresis (\glsentrytext{sds}-\glsentrytext{page})}
 \label{sec:sdspage}
 
-The analysis of samples via \sdspage was realized via the discontinous system first described by Laemmli, which allows separation of proteins based on their electrophoretic mobility, which in turn depends on their size \citep{Laemmli1970}.\\
+The analysis of samples via \sdspage was realized via the discontinous system first described by Laemmli, which allows separation of proteins based on their electrophoretic mobility, which in turn depends on their size \citep{Laemmli1970}.
 The \sdspage procedure was carried out according to standard protocols described by Sambrook and Russell \citep{Sambrook2001}.
 Very dilute and/or samples with high ionic strength were concentrated and/or desalted by the \gls{tca} precipitation procedure described in \autoref{sec:tcaprecipitation}.
 Generally a 10\,\% (acrylamide/bisacrylamide) running gel combined with a 4\,\% stacking gel was used. Reducing \sdspage sample buffer was added to the protein sample to be analyzed, whereafter the sample was heated to \degC{95} for 5\,min, to allow for total unfolding of the protein.
@@ -352,7 +354,7 @@ Gels were stained using a staining solution of 0.25\,\% Coomassie Brilliant Blue
 \label{sec:rebuffer}
 The buffer in protein samples was exchanged either by dialysis, or by centrifugal filter concentrators (Amicon\textsuperscript{\textregistered} Ultra Centrifugal Filter; Merck, Darmstadt, Germany).
 Large volumes of highly concentrated protein solutions were preferably dialyzed.
-Respectively, very dilute samples were concentrated and rebuffered using centrifugal concentrators. \\
+Respectively, very dilute samples were concentrated and rebuffered using centrifugal concentrators. 
 Dialysis was carried out at least twice against a minimum of 100 times the sample volume.
 Dialysis steps were carried out at \gls{rt} for 2 hours, or over-night at \degC{4}.
 Centrifugal concentrators were used according to the manufacturers instructions.
@@ -386,7 +388,7 @@ Cells were harvested by centrifugation (\timesg{10000}, \degC{4}, 10\,min) and u
 Often, when recombinant protein is produced in high levels in \eco it is accumulated in so-called \glsentryfirst{ib} \citep{Rudolph1996}. 
 The accumulating \glspl{ib} consist mainly of the overproduced target protein, which is inherently quite pure already.
 \Glspl{ib} can be selectively recovered from \eco cell lysates and can consequently be refolded. 
-\Glspl{ib} were prepared according to a modified protocol by Palmer \citep{Palmer2012}. \\
+\Glspl{ib} were prepared according to a modified protocol by Palmer \citep{Palmer2012}. 
 The cells were resusupended in 5\,ml/$\mathrm{g_{cells}}$ IB lysis buffer (100\,mM \gls{tris}/HCl, 1\,mM \gls{edta} pH\,7), 0.5\,mM \gls{pmsf} was added as protease inhibitor.
 The solution was homogenized using a tissue grinder homogenizer (Ultra Turrax\textsuperscript\textregistered; IKA\textsuperscript\textregistered-Werke GmbH \& Co. KG, Staufen, Germany).
 \ugperml{200} lysozyme was added to aid in the breakage of cells and the cells were lysed by sonicating thrice at 70\,\% amplitude (1\,s on-off-cycle) for 30 seconds.
@@ -402,7 +404,7 @@ The \glspl{ib} were resuspended in IB solubilization buffer (100\,mM \gls{tris}/
 \label{sec:imac}
 N- or C-terminal oligo-histidine tags (His-tags) are a common tool to ease purification of recombinantly produced proteins.
 The free electron pairs of the imidazol nitrogens of histidines can complex divalent cations such as \cf{Mg^2+} or \cf{Ni^2+}, which are usually immobilized on a matrix of \gls{nta}-derivatives.
-The affinity of the His-tag is correlated with its length and tagged proteins can simply be eluted by increasing the concentration of competing molecules (e.g. imidazole). \\
+The affinity of the His-tag is correlated with its length and tagged proteins can simply be eluted by increasing the concentration of competing molecules (e.g. imidazole). 
 His-tagged protein was purified by \gls{fplc} via \cf{Ni^2+}- (HisTrap FF crude)  or \cf{Co^2+}-NTA (HiTrap Talon FF crude) columns, obtained from GE Healthcare (Freiburg, Germany), following modified suppliers instructions.
 First the column was equilibrated with 5\,\gls{cv} of binding buffer (50\,mM \gls{tris}/HCl, 500\,mM NaCl, 10\,\% glycerol, 2.5\,mM imidazole pH 7).
 The sample (generally clarified lysate) was applied to the column using a flow of \SI{0.75}{\milli\litre\per\minute}. Unound protein was removed by washing with 3\,\gls{cv} binding buffer.
@@ -412,7 +414,7 @@ Highly enriched and purified target protein was eluted with 6 to 10\,\gls{cv} of
 \subsection{Refolding of \glsentrytext{somt} on a micro scale using \glsentryfirst{doe}}
 \label{subsec:doerefolding}
 \Gls{doe} and \glsentryfirst{ffd} have been successfully used to optimize the refolding conditions of several proteins \citep{Willis2005,Akbari2010,Benoit2007}.
-Thus, an approach using \gls{ffd} was used to find optimal refolding conditions for \gls{somt}. \\
+Thus, an approach using \gls{ffd} was used to find optimal refolding conditions for \gls{somt}. 
 Factors studied were pH (buffer), arginine, glycerol, divalent cations, ionic strength, redox system, cyclodextrin and co-factor addition.
 The experimental matrix was constructed using the \verb+FrF2+ package (\url{http://cran.r-project.org/web/packages/FrF2/index.html}) in the R software.
 
@@ -476,7 +478,7 @@ The final protein concentration in the refolding reaction was \ugperml{50}, wher
 The refolding reactions were incubated at \gls{rt} for 1 hour, followed by an over night incubation at \degC{4}.
 After incubation the refolding reactions were centrifuged (\timesg{10000}, \degC{4}, 10\,min) to separate insoluble and soluble protein fractions.
 The supernatant was transferred to a new tube, whereas the pellet was washed twice with \ul{200} acetone and once with \ul{400} methanol/acetone (1:1). 
-The pellet was resuspended in \ul{100} \gls{pbs} with \ul{20} \sdspage sample buffer and \ul{10} were used for \sdspage analysis. \\
+The pellet was resuspended in \ul{100} \gls{pbs} with \ul{20} \sdspage sample buffer and \ul{10} were used for \sdspage analysis. 
 \ul{100} of the supernatant were concentrated using \gls{tca} precipitation (\ref{sec:tcaprecipitation}) and analyzed by \sdspage.
 The remaining supernatant was rebuffered into 50\,mM \gls{bistris} pH\,7.5 using Amicon\textsuperscript{\textregistered} Ultra 0.5 ml centrifugal filters (Merck, Darmstadt, Germany) according to the manufacturers instructions.
 The pre-weighed collection tubes were re-weighed after recovery and the volume of recovered liquid calculated ($\rho \approx \mathrm{\SI{1}{\g\per\cm\cubed}}$).
@@ -484,10 +486,10 @@ The sample was filled up to \ul{100} using 50\,mM \gls{bistris} pH 7.5 and the p
 \ul{50} of each refolded sample was used for an activity test using naringenin as substrate (\ref{sec:omtassay}). 
 The reactions were incubated over night and stopped by the extraction method.
 However, before the actual extraction \ul{1} of \gls{ac9} was added as internal standard.
-The samples were analyzed by \gls{hplc}. \\
+The samples were analyzed by \gls{hplc}. 
 
 \subsubsection{Assessment of refolding performance}
-The performance of each buffer on the refolding of \gls{somt} was examined by comparing the \sdspage results, as well as the amount of soluble protein and the conversion of substrate.
+The performance of each buffer on the refolding of \gls{somt} was examined by comparing the \sdspage results, as well as the amount of soluble protein and the conversion of naringenin over night (see \autoref{sec:omtassay}).
 Main effects were analyzed qualitatively using main effects plots \citep{Box2005}.
   
 \subsubsection{Upscaling of refolding reactions}
@@ -498,16 +500,17 @@ The refolding reaction was allowed to complete over night at \degC{4}.
 
 \subsection{Enzymatic production of \glsentrytext{sam} and \glsentrytext{sae}}
 \label{sec:samprod}
-\Gls{sam} and \gls{sae} were prepared according to the method described by Dippe, et. al \citep{Dippe2015}. \\
+\Gls{sam} and \gls{sae} were prepared according to the method described by Dippe, et. al \citep{Dippe2015}. 
+
 Preparative reactions (20\,ml) were performed in  0.1\,M Tris/HCl, 20\,mM \cf{MgCl2}, 200\,mM \cf{KCl} pH\,8.0 and contained 7.5\,mM \gls{atp}, 10\,mM \textsc{d,l}-methionine or \textsc{d,l}-ethionine, for the production of \gls{sam} or \gls{sae} respectively, and 0.2\,\gls{u} \gls{sams} variant I317V.
 The reaction was stopped by lowering the pH to 4 using 10\,M acetic acid after 18\,h of incubation at \degC{30}, 60\,rpm.
 After 10\,min incubation on ice the solution was centrifuged (\timesg{15000}, 10\,min) to remove insoluble matter. 
-The supernatant was transferred to a round bottom flask, frozen in liquid nitrogen and lyophilized. \\
+The supernatant was transferred to a round bottom flask, frozen in liquid nitrogen and lyophilized. 
 Crude products were extracted from the pellet using 73\,\% ethanol and purified using \gls{iex}.
 \Gls{iex} was performed on a sulfopropyl sepharose matrix (25\,ml) via isocratic elution (500\,mM \cf{HCl}).
 %Therefore the column was equilibrated using 500\,mM \cf{HCl} and the crude extract injected.
 Before injection, the crude extract was acidified to 0.5\,M \cf{HCl} using concentrated hydrochloric acid.
-After elution, the product containing fractions were dried via lyophilization. \\
+After elution, the product containing fractions were dried via lyophilization. 
 The amount of product was determined by \gls{uvvis}-spectroscopy at 260\,nm using the published extinction coefficient of \gls{sam} (\textepsilon\textsubscript{0}\,=\,\SI[per-mode=reciprocal]{15400}{\per\molar\per\cm}) after resuspension in water \citep{Shapiro1966}.
 
 
@@ -529,7 +532,8 @@ Furthermore, fine screens (e.g. for refinement of crystallization conditions) we
 \Gls{pfomt} protein was concentrated to \SIrange{6}{8}{\mg\per\ml} and rebuffered to 10\,mM \gls{tris}/HCl pH 7.5 using Amicon\textsuperscript{\textregistered} Ultracel centrifugal concentrators (10\,kDa \gls{mwco}).
 The concentrated protein solution was centrifuged at \timesg{14000}, \degC{4} for 10\,min to remove any insoluble material or aggregates.
 Flavonoids and phenylpropanoid substrates were added to the protein solution from 10\,mM stock solution in \gls{dmso}. 
-Crystallization screens were set up as described above. \\
+Crystallization screens were set up as described above. 
+
 \textit{apo}-\Gls{pfomt} was crystallized using the following conditions -- 2\,M \cf{(NH4)2SO4}, 20\,\%glycerol. The protein solution contained 0.25\,mM \gls{sae}, 0.25\,mM \cf{MgCl2}, 0.25\,mM eriodictyol and \SI{7.53}{\mg\per\ml} (\SI{0.262}{\milli\molar}) \gls{pfomt} \bweigel{ist das korrekt?}.
 
 \subsubsection{Crystallization of proteins using \glsentrytext{nades}}
@@ -548,7 +552,8 @@ The experiments were set up at \degC{4}.
 \subsection{Data collection and processing}
 Crystallographic data were collected at the beamline of the group of Professor Stubbs (\gls{mlu}, Halle, Germany). 
 The beamline was equipped with a rotating anode X-ray source MicroMax007 (Rigaku/MSC, Tokio, Japan), which had a maximum power of \SI{0.8}{\kilo\watt} (\SI{40}{\kilo\volt}, \SI{20}{\milli\ampere}) and supplied monochromatic \cf{Cu}-K\textsubscript{\textalpha}-radiation with a wavelength of 1.5418\,\gls{a}.
-Diffraction patterns were detected with a Saturn 944+ detector (CCD++, Rigaku/MSC, Tokio, Japan). \\
+Diffraction patterns were detected with a Saturn 944+ detector (CCD++, Rigaku/MSC, Tokio, Japan). 
+
 Indexing and integration of the reflexes via \gls{ft} was accomplished using \emph{XDS} \citep{Kabsch2010,Kabsch1993,Kabsch2010a} or \emph{MOSFLM} \citep{Powell1999}.
 \emph{Scala} \citep{Evans2006}, which is integrated in the \gls{ccp4}-Suite, was used for scaling of the intensities.
 
@@ -560,7 +565,8 @@ However, the phase information is lost during the detection of the diffracted ph
 This constitutes the so-called \emph{phase problem}.
 Thus, additional phasing experiments are necessary in order to obtain the phases.
 A variety of phasing experiments are available, which include \emph{marker atom substructure methods}, \emph{density modification} and \emph{\gls{mr}} techniques \citep{Rupp2009}.
-Phases of the structures herein were exclusively determined by \gls{mr} \citep{Rossmann1962,Rossmann2001}. \\
+Phases of the structures herein were exclusively determined by \gls{mr} \citep{Rossmann1962,Rossmann2001}. 
+
 \Gls{mr} was performed using the software \emph{Phaser} \citep{McCoy2007,McCoy2007a}, which is included in the \gls{ccp4}-Suite \citep{Winn2011}. 
 A previously published \gls{pfomt} structure (\gls{pdb}-code: 3C3Y \citep{Kopycki2008b}) was used as a template during \gls{mr} procedure for the \gls{pfomt} structure solution.
 %%

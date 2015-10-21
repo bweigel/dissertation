@@ -4,6 +4,7 @@ author: "Benjamin Weigel"
 date: "07/23/2015"
 output:
   pdf_document:
+    keep_tex: yes
     number_sections: yes
     toc: yes
 ---
@@ -107,9 +108,14 @@ ggplot(df, aes(x=sample, y=P1_AC)) +
   labs(x="buffer", y="$\\frac{\\mathrm{ponciretin}}{\\mathrm{AC-9}} (\\mathrm{AU})$") +
   theme_bw()
 
-ggplot(df, aes(x=sample, y=(INTDATA$Product_1 / INTDATA$'AC-9') / (INTDATA$Naringenin / INTDATA$'AC-9'))) +   
+# ggplot(df, aes(x=sample, y=(INTDATA$Product_1 / (INTDATA$Naringenin + INTDATA$Product_1)))) +   
+#   geom_bar(stat="identity", fill="coral") +
+#   labs(x="buffer", y="$\\frac{\\mathrm{ponciretin}}{\\mathrm{AC-9}} (\\mathrm{AU})$") +
+#   theme_bw()
+df$conversion <- (INTDATA$Product_1 / INTDATA$'AC-9')/ ((INTDATA$Naringenin / INTDATA$'AC-9')+(INTDATA$Product_1 / INTDATA$'AC-9')) * 100
+ggplot(df, aes(x=sample, y=conversion)) +   
   geom_bar(stat="identity", fill="coral") +
-  labs(x="buffer", y="$\\frac{\\mathrm{ponciretin}}{\\mathrm{AC-9}} (\\mathrm{AU})$") +
+  labs(x="buffer", y="conversion (\\%)") +
   theme_bw()
 ```
 
@@ -133,6 +139,8 @@ The redox status seems to have the biggest impact on refolding efficiency measur
 
 ## Main effects plot ##
 
+### ÁUC ###
+
 ```{r, dev='CairoPDF'}
 library(FrF2)
 test.lm <- lm(P1_AC ~ pH + Arginine + Glycerin + ionicStrength + divCations + redox + CycloDex + SAH, data=df[,c(1:8,12)])
@@ -152,16 +160,51 @@ ggplot(MEgg, aes(x=state, y=value)) +
 
 ```
 
+### conversion ###
+
+```{r, dev='CairoPDF'}
+library(FrF2)
+test.lm <- lm(conversion ~ pH + Arginine + Glycerin + ionicStrength + divCations + redox + CycloDex + SAH, data=df[,c(1:8,14)])
+ME <- MEPlot(test.lm, abbrev=6, select=c(1:8), response="conversion")
+
+MEgg <- tidyr::gather(cbind(as.data.frame(ME), state = rownames(ME)), key = ME, value = value, -state)
+```
+
+```{r, echo=F, fig.height=3}
+ggplot(MEgg, aes(x=state, y=value)) + 
+  theme_bw() +
+  geom_line(aes(group = ME), color="cornflowerblue", size=1) +
+  geom_point(size=3) + 
+  facet_wrap(~ME, nrow=1) +
+  labs(y="mean conversion (\\%)", x="factor level") +
+  geom_hline(aes(yintercept=mean(MEgg$value)), linetype=2, size=1)
+
+```
+
 ## Statistical test ##
 
 Test the statistical significance of main effects.
 Only Arginine is statistically significant to a p-value of 0.05. SAH to a p-value of 0.1.
 
+### AUC ###
+
 ```{r, results='asis'}
+test.lm <- lm(P1_AC ~ pH + Arginine + Glycerin + ionicStrength + divCations + redox + CycloDex + SAH, data=df[,c(1:8,12)])
 aov(test.lm) %>% summary %>% xtable::xtable()
 
 test.lm <- lm(P1_AC ~ Arginine + pH + Glycerin + ionicStrength + divCations + redox + CycloDex + SAH + e1 +e2 + e3, data=df[,c(1:12)])
-LenthPlot(test.lm, alpha=0.05)
+BsMD::LenthPlot(test.lm, alpha=0.05)
+```
+
+### conversion  ###
+
+
+```{r, results='asis'}
+test.lm <- lm(conversion ~ pH + Arginine + Glycerin + ionicStrength + divCations + redox + CycloDex + SAH, data=df[,c(1:8,14)])
+aov(test.lm) %>% summary %>% xtable::xtable()
+
+test.lm <- lm(conversion ~ Arginine + pH + Glycerin + ionicStrength + divCations + redox + CycloDex + SAH + e1 +e2 + e3, data=df[,c(1:11,14)])
+BsMD::LenthPlot(test.lm, alpha=0.05)
 ```
 
 

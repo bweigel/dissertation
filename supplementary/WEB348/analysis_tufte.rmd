@@ -2,7 +2,9 @@
 title: "WEB348"
 author: "Benjamin Weigel"
 date: "July 28th, 2015"
-output: rmarkdown::tufte_handout
+output: 
+  rmarkdown::tufte_handout:
+    keep_tex: true
 ---
 
 ```{r knitr_options, cache=FALSE, echo=FALSE}
@@ -144,10 +146,10 @@ pred <- cbind(newdat %>% filter(substrate=="iso-ferulic acid"), ypred=predict(mo
 tmp <- velo %>% filter(key == "SAH", substrate=="iso-ferulic acid")
     
 ggplot(data=tmp) +
-    geom_point(aes(x = pH, y = V_AUpermin, group=substrate), size=3, color="black") +
-    geom_line(aes(x = pH, y = V_AUpermin, col=substrate)) +
-    geom_linerange(aes(x=pH, ymin=V_AUpermin-sd_AUpermin, ymax=V_AUpermin+sd_AUpermin), 
-                   color="black") +
+    geom_point(aes(x = pH, y = V_AUpermin, group=substrate), shape=15, color="black") +
+#    geom_line(aes(x = pH, y = V_AUpermin, col=substrate), color="grey80") +
+    geom_errorbar(aes(x=pH, ymin=V_AUpermin-sd_AUpermin, ymax=V_AUpermin+sd_AUpermin), 
+                   color="black", width=0.25) +
     geom_line(data=pred, aes(x=pH, y=ypred.fit.fit, group=substrate), color="blue", linetype=2) +
     geom_ribbon(data=pred, aes(x=pH, ymax=ypred.fit.upr, ymin=ypred.fit.lwr, group=substrate), alpha=0.15) +
     facet_grid(.~Mg, labeller=mf_labeller) +   
@@ -178,10 +180,10 @@ pred <- cbind(newdat %>% filter(substrate!="iso-ferulic acid"), ypred=predict(mo
 tmp <- velo %>% filter(key == "SAH", substrate!="iso-ferulic acid")
     
 ggplot(data=tmp) +
-    geom_point(aes(x = pH, y = V_AUpermin, col=substrate)) +
-    geom_line(aes(x = pH, y = V_AUpermin, col=substrate)) +
-    geom_linerange(aes(x=pH, ymin=V_AUpermin-sd_AUpermin, ymax=V_AUpermin+sd_AUpermin), 
-                   color="black") +
+    geom_point(aes(x = pH, y = V_AUpermin, shape=substrate)) +
+#    geom_line(aes(x = pH, y = V_AUpermin, group=substrate), col="grey80") +
+    geom_errorbar(aes(x=pH, ymin=V_AUpermin-sd_AUpermin, ymax=V_AUpermin+sd_AUpermin), 
+                   color="black", width=0.25) +
     geom_line(data=pred, aes(x=pH, y=ypred.fit.fit, group=substrate), color="blue", linetype=2) +
     geom_ribbon(data=pred, aes(x=pH, ymax=ypred.fit.upr, ymin=ypred.fit.lwr, group=substrate), alpha=0.15) +
     facet_grid(.~Mg, labeller=mf_labeller) +   
@@ -373,20 +375,27 @@ ggplot() +
   theme_bw() +
   geom_point(data=flavon.c, aes(x=area, y=concentration, shape=key), alpha=0.25, size=2) +
   geom_line(data=ypred[ypred$area<3e6,], aes(x=area, y=sah.fit), color="blue", fill="blue", linetype=2) +
-  geom_ribbon(data=ypred[ypred$area<3e6,], aes(x=area, ymin=sah.lwr, ymax=sah.upr), alpha=0.1) +
+  geom_ribbon(data=ypred[ypred$area<3e6,], aes(x=area, ymin=sah.lwr, ymax=sah.upr), alpha=0.15) +
   geom_line(data=ypred[ypred$area>1.5e6,], aes(x=area, y=sam.fit), color="red", linetype=2) +
-  geom_ribbon(data=ypred[ypred$area>1.5e6,], aes(x=area, ymin=sam.lwr, ymax=sam.upr), fill="red", alpha=0.1)   +
+  geom_ribbon(data=ypred[ypred$area>1.5e6,], aes(x=area, ymin=sam.lwr, ymax=sam.upr), fill="red", alpha=0.15)   +
   labs(x = "area-under-curve [AU]", y = "concentration $[\\mu M]$")
 
 xtable(sah.lm, caption="Linear fit for SAH area and concentration.")
 
 
 A.sp <- reshape2::dcast(velo, sample*pH*Mg ~ key, value.var="V_AUpermin", fill=0)
+A.sp.sd <- reshape2::dcast(velo, sample*pH*Mg ~ key, value.var="sd_AUpermin", fill=0)
 A.sp %<>% mutate(c.SAH = SAH*1.272e-04 + 6.219e-02,
                 n.SAH = c.SAH*0.00001*1000,
                 Asp.SAH =n.SAH/0.002,
                 Asp.pkat = Asp.SAH/60*1000) 
+A.sp.sd %<>% mutate(c.SAH.sd = SAH*1.272e-04 + 6.219e-02,
+                n.SAH.sd = c.SAH.sd*0.00001*1000,
+                Asp.SAH.sd =n.SAH.sd/0.002,
+                Asp.pkat.sd = Asp.SAH.sd/60*1000) 
+A.sp <- cbind(A.sp, A.sp.sd[,-c(1:5)])
 A.sp.plot <- merge(A.sp, samples[,-3], by.x="sample", by.y="label")
+
 A.sp %<>%  group_by(sample) %>% summarise(max.U.mg = max(Asp.SAH), max.pkat.mg = max(Asp.pkat), at.pH = pH[which(Asp.SAH == max(Asp.SAH))])
 
 A.sp <- merge(A.sp, samples, by.x="sample", by.y="label")
@@ -402,6 +411,19 @@ A.sp.plot %>%
     geom_line(aes(group=substrate)) +
     facet_grid(.~Mg, labeller=mf_labeller) +   
     labs(y = "initial rate $\\Big[\\frac{\\mathrm{nmol}}{\\mathrm{min~mg}}\\Big]$", x="pH") +
+    theme_bw() +
+    theme(legend.position = "none")
+
+A.sp.plot %>% 
+    ggplot(data=., aes(x = pH, y = Asp.pkat, shape=substrate), format(scientific=F)) +
+    geom_line(aes(group=substrate), color="grey80") +
+    geom_point() +
+    facet_grid(.~Mg, labeller=mf_labeller) +   
+    labs(y = "$A_\\mathrm{sp} \\Big[\\frac{\\mathrm{pkat}}{\\mathrm{mg}}\\Big]$", x="pH") +
+     geom_errorbar(aes(ymin=Asp.pkat-Asp.pkat.sd, ymax=Asp.pkat+Asp.pkat.sd), 
+                   color="black", width=0.25) + 
+  #   geom_linerange(aes(ymin=Asp.pkat-Asp.pkat.sd, ymax=Asp.pkat+Asp.pkat.sd), 
+  #                 color="black") +
     theme_bw() +
     theme(legend.position = "none")
 ```

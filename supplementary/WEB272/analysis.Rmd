@@ -16,10 +16,12 @@ knitr::opts_chunk$set(dev='tikz', error=T, warning=F, message=F, size='tiny', ec
 ```
 
 # Protein concetration #
-```{r, fig.height=3}
+```{r, fig.height=3, fig.width=3.5}
 library(magrittr)
 library(dplyr)
 library(ggplot2)
+theme_web <- theme_bw() + theme(axis.text = element_text(size = 12), 
+                                axis.title = element_text(size = 14)) 
 
 load("/media/mori/IPB/WEB272/140625_ResponseData.Rda")
 a <- 0.0055
@@ -36,9 +38,9 @@ df$sample <- as.factor(1:12)
 
 ggplot(df, aes(x=sample, y=BFmean)) +   
   geom_bar(stat="identity", fill="coral") +
-  geom_errorbar(aes(ymin=BFmean-BFsd, ymax=BFmean+BFsd), width=0) +
+  geom_errorbar(aes(ymin=BFmean-BFsd, ymax=BFmean+BFsd), width=0.25) +
   labs(x="buffer", y="protein concentration $(\\frac{\\mu g}{ml})$") +
-  theme_bw()
+  theme_web 
 ```
 
 ## Regression tree ##
@@ -71,15 +73,16 @@ response.names(SOMT2_140625) <- c(RES, "BFmean")
 ME <- MEPlot(SOMT2_140625, abbrev=6, select=c(1:8), response="BFmean")
 
 MEgg <- tidyr::gather(cbind(as.data.frame(ME), state = rownames(ME)), key = ME, value = value, -state)
+xtable::xtable(MEgg)
 ```
 
-```{r, echo=F, fig.height=3}
+```{r, echo=F, fig.height=3, fig.width=7}
 ggplot(MEgg, aes(x=state, y=value)) + 
-  theme_bw() +
+  theme_web +
   geom_line(aes(group = ME), color="cornflowerblue", size=1) +
   geom_point(size=3) + 
   facet_wrap(~ME, nrow=1) +
-  labs(y="mean protein concentration $(\\frac{\\mu g}{ml})$", x="factor level") +
+  labs(y="mean concentration $(\\frac{\\mu g}{ml})$", x="factor level") +
   geom_hline(aes(yintercept=mean(MEgg$value)), linetype=2, size=1)
 ```
 
@@ -97,7 +100,7 @@ LenthPlot(test.lm, alpha=0.05)
 ```
 
 # Protein volume activity #
-```{r, fig.height=3}
+```{r, fig.height=3, fig.width=3.5}
 load("/media/mori/IPB/WEB272/HPLC.Rda")
 
 df <- SOMT2_140625[,c(1:11, 17)]
@@ -106,17 +109,17 @@ df$sample <- as.factor(1:12)
 ggplot(df, aes(x=sample, y=P1_AC)) +   
   geom_bar(stat="identity", fill="coral") +
   labs(x="buffer", y="$\\frac{\\mathrm{ponciretin}}{\\mathrm{AC-9}} (\\mathrm{AU})$") +
-  theme_bw()
+  theme_web
 
 # ggplot(df, aes(x=sample, y=(INTDATA$Product_1 / (INTDATA$Naringenin + INTDATA$Product_1)))) +   
 #   geom_bar(stat="identity", fill="coral") +
 #   labs(x="buffer", y="$\\frac{\\mathrm{ponciretin}}{\\mathrm{AC-9}} (\\mathrm{AU})$") +
-#   theme_bw()
+#   theme_web
 df$conversion <- (INTDATA$Product_1 / INTDATA$'AC-9')/ ((INTDATA$Naringenin / INTDATA$'AC-9')+(INTDATA$Product_1 / INTDATA$'AC-9')) * 100
 ggplot(df, aes(x=sample, y=conversion)) +   
   geom_bar(stat="identity", fill="coral") +
   labs(x="buffer", y="conversion (\\%)") +
-  theme_bw()
+  theme_web
 ```
 
 ## Regression tree ##
@@ -151,7 +154,7 @@ MEgg <- tidyr::gather(cbind(as.data.frame(ME), state = rownames(ME)), key = ME, 
 
 ```{r, echo=F, fig.height=3}
 ggplot(MEgg, aes(x=state, y=value)) + 
-  theme_bw() +
+  theme_web +
   geom_line(aes(group = ME), color="cornflowerblue", size=1) +
   geom_point(size=3) + 
   facet_wrap(~ME, nrow=1) +
@@ -172,7 +175,7 @@ MEgg <- tidyr::gather(cbind(as.data.frame(ME), state = rownames(ME)), key = ME, 
 
 ```{r, echo=F, fig.height=3}
 ggplot(MEgg, aes(x=state, y=value)) + 
-  theme_bw() +
+  theme_web +
   geom_line(aes(group = ME), color="cornflowerblue", size=1) +
   geom_point(size=3) + 
   facet_wrap(~ME, nrow=1) +

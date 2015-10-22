@@ -159,9 +159,9 @@ Therefore, the sampled medium was extracted using acidified ethyl acetate.
 \begin{table}[!htb]\small\centering
   \caption{\textit{In vivo} biotransformation of different flavonoids, phenylpropanoids and anthraquinones by \somt in \eco. Conversion ratios were calculated for samples taken after 30 hours.
     Multiple substrates containing a 4'-hydroxyl were methylated.
-    Calculation of conversion percentages are only rough estimates, because of the nature of crude medium extracts. Products were determined by \gls{lcmsms}. \textsuperscript{\textdagger} dihydro cinnamic ketone.}
+    Calculation of conversion percentages are only rough estimates, because of the nature of crude medium extracts. Products were determined by \gls{lcmsms}.}
   \label{tab:invivosomt}
-  \begin{tabular}{llclp{4.5cm}}
+  \begin{tabular}{llcll}
      \toprule
     substrate & class & 4'-OH & conversion & product \\
     \midrule
@@ -182,6 +182,7 @@ Therefore, the sampled medium was extracted using acidified ethyl acetate.
     caffeic acid & cinnamic acid & \cmark & \xmark & -- \\
     reosmin & cinnamic acid\textsuperscript{\textdagger} & \cmark & \xmark & -- \\ 
     \bottomrule
+    \multicolumn{5}{l}{\scriptsize \textsuperscript{\textdagger} dihydro cinnamic ketone}
   \end{tabular}
 \end{table}
 }
@@ -281,7 +282,7 @@ For a complete listing of the buffers and conditions the reader is referred to t
 
 %The \sdspage gels that were prepared of the soluble and insoluble fraction already show 
 Big differences between soluble and insoluble fractions of different refolding buffers could already be noticed from the \sdspage gels (\autoref{fig:e_refold_gel}, see \autoref{subsec:doerefolding}).
-Refolding buffers 2,3 and 8--11 mainly produced insoluble protein, whereas the majority of the protein in refolding buffers 1, 4--7 and 12 was in soluble form in these buffers after an overnight refolding reaction (Tables \ref{tab:ffd_factors} and \ref{tab:ffd_matrix}, \autoref{fig:e_refold_gel}). 
+Refolding buffers 2,3 and 8--11 mainly produced insoluble protein, whereas the majority of the protein in refolding buffers 1, 4--7 and 12 was in soluble form after an overnight refolding reaction (Tables \ref{tab:ffd_factors} and \ref{tab:ffd_matrix}, \autoref{fig:e_refold_gel}). 
 After rebuffering the cleared refolding reactions into a unified buffer the protein concentrations were estimated by \textsc{Bradford}-assays \citep{Bradford1976}.
 The protein concentrations measured by \textsc{Bradford}'s method were consistent with the observations from the \sdspage gels (compare \autoref{fig:e_refold_BF} and \ref{fig:e_refold_gel}).
 Soluble protein was obtained for buffers 1, 4--7 and 12.
@@ -300,28 +301,36 @@ The highest amount of soluble protein was present, when the refolding reaction t
   \centering
   \begin{figureframe}
     
-    \begin{subfigure}{0.48\textwidth}\centering
-      \includegraphics[width=\textwidth]{usr/graphics/static/e_refold_BF}
+    \begin{subfigure}{0.32\textwidth}\raggedright
+      \includegraphics[width=0.98\textwidth]{usr/graphics/static/e_refold_BF}
       \caption{}
       \label{fig:e_refold_BF}
     \end{subfigure}%       
-    \begin{subfigure}{0.48\textwidth}\centering
-      \includegraphics[width=\textwidth]{usr/graphics/static/MEplot_BF}
+    \begin{subfigure}{0.64\textwidth}\raggedleft
+      \includegraphics[width=0.98\textwidth]{usr/graphics/static/MEplot_BF}
       \caption{}
       \label{fig:MEplot_BF}
     \end{subfigure}
     
-    \begin{subfigure}{0.48\textwidth}\centering
-      \includegraphics[width=\textwidth]{usr/graphics/static/tmp_refold_hplc}
+    \begin{subfigure}{0.32\textwidth}\raggedright
+      \includegraphics[width=0.98\textwidth]{usr/graphics/static/tmp_refold_hplc}
       \caption{}
+      \label{fig:e_refold_activity}
     \end{subfigure}%
-    \begin{subfigure}{0.48\textwidth}\centering
-      \includegraphics[width=\textwidth]{usr/graphics/static/tmp_MEP_activity}
+    \begin{subfigure}{0.64\textwidth}\raggedleft
+      \includegraphics[width=0.98\textwidth]{usr/graphics/static/tmp_MEP_activity}
       \caption{}
+      \label{fig:MEplot_activity}
     \end{subfigure}
     
   \end{figureframe}
-  \caption{Results of \invitro protein refolding trials. Measured data (left) is presented alongside the \glspl{meplot} (right). \textbf{a} -- Protein concetration after refolding and rebuffering into a universal buffer. The highest yield of soluble protein was achieved in buffers 5 and 7. The \glspl{meplot} (\textbf{b}) illustrate the connection between a factor and the measured protein concentration, illustrating that high pH and arginine concentration might be beneficial in the refolding reactions. \textbf{c} -- Calculated conversion of naringenin to ponciretin by the refolded protein fractions. Protein refolded in buffers 1 and 7 seem to afford the most active protein by conversion ($\sim$volume activity). The \glspl{meplot} for the conversion (\textbf{d}) show that the redox state (reducing) of the refolding environment is important to achieve active protein.
+  \caption{Results of \invitro protein refolding trials. Measured data (left) is presented alongside the \glspl{meplot} (right).  The dashed line through the \glspl{meplot} illustrates the overall mean.
+    \textbf{a} -- Protein concetration after refolding and rebuffering into a universal buffer. 
+    The highest yield of soluble protein was achieved in buffers 5 and 7. 
+    The \glspl{meplot} (\textbf{b}) illustrate the connection between a factor and the measured protein concentration, suggesting that high pH and arginine concentration might have been beneficial in the refolding reactions. 
+    \textbf{c} -- Calculated conversion of naringenin to ponciretin by the refolded protein fractions. 
+    Protein refolded in buffers 1 and 7 seem to afforded the most active protein by conversion ($\sim$volume activity). 
+    The \glspl{meplot} for the conversion (\textbf{d}) show that the redox state (reducing) of the refolding environment was important to achieve active protein.
     }
   \label{fig:e_refolding_analysis}
 \end{figure}
@@ -329,47 +338,77 @@ The highest amount of soluble protein was present, when the refolding reaction t
 The common denominator of those buffers is that all of them contained arginine, whose addition has proven beneficial for many refolding applications \citep{Chen2008a,Tsumoto2004,Fujimoto2010}.
 
 \textbf{\Glsentryfirstplural{meplot}} illustrate the difference between level means for each factor.
-The \meplot for protein concentration shows, that arginine seems to be an important factor for the refolding of \somt (\autoref{fig:MEplot_BF}).
-Furthermore, the addition of \gls{sah} or glycerin and the pH seem to have an influence, whereas the other factors seem to play only a minor role to achieve high concentrations of soluble protein after refolding.
-However, the \aov test ($p$-value \num{0.0158} for arginine addition) suggests that only arginine addition has a significant influence on refolding, when the significance level is set to \SI{5}{\percent} (appendix, \autoref{tab:aov_BF}).
-The other $p$-values are all higher than \num{0.05}, which suggests they have no influence on the yield of soluble protein. 
-Only the $p$-value for \gls{sah} addition (\num{0.0897}) would show significance, if the significance level was raised to \SI{10}{\percent}.
+Therefore, the mean of the measured property (i.e. protein concetration) for each level of every factor, described by  + or -, of the used refolding buffers is plotted in relation to the overall mean. 
+For example, the levels of the factor pH are ``low'' (-) and ``high'' (+). 
+When $x^-_i$ is the measured concentration from a refolding reaction in buffer $i$ with ``low'' pH and $x^+_j$ is the measured concentration from a refolding reaction in buffer $j$ with ``high'' pH, then the level means $\overline{x}^{-}$ and $\overline{x}^{+}$ are calculated as follows:
+\begin{eqnarray*}
+  \overline{x}^- = \frac{1}{n} \cdot \sum_{i=1}^n x^-_i \\
+  \overline{x}^+ = \frac{1}{n} \cdot \sum_{j=1}^n x^+_j
+\end{eqnarray*}
+In the presented experiment ``low'' pH buffers were buffers 2, 4, 6, 8, 10 and 12, whereas ``high'' pH buffers were buffers 1, 3, 5, 7, 9 and 11, thus the level means were calculated as such:
+\begin{eqnarray*}
+  \overline{x}^+ = \frac{{x}^+_1 + {x}^+_3 + {x}^+_5 + {x}^+_7 + {x}^+_9 + {x}^+_{11}}{6} = 24.63 \\
+  \overline{x}^- = \frac{{x}^-_2 + {x}^-_4 + {x}^-_6 + {x}^-_8 + {x}^-_{10} + {x}^-_{12}}{6} = 11.34
+\end{eqnarray*}
 
-Activity tests were conducted with the refolded protein samples to check for naringenin conversion.
-The conversion of naringenin to ponciretin as follows:
+The \glspl{meplot} for protein concentration suggest, that arginine was likely an important factor for the refolding of \somt (\autoref{fig:MEplot_BF}).
+Furthermore, the addition of \gls{sah} or glycerin and the pH seemed to have an influence, whereas the other factors seemed to play only minor roles to achieve high concentrations of soluble protein after refolding.
+However, the \aov test, which gave a $p$-value of \num{0.0158} for factor \emph{arginine}, suggests that only arginine addition had a significant influence on refolding, when the significance level is set to \SI{5}{\percent} (appendix, \autoref{tab:aov_BF}).
+The other $p$-values are all higher than \num{0.05}, which suggests the other factors had no influence on the yield of soluble protein. 
+Only the $p$-value for factor \emph{\gls{sah}} (\num{0.0897}) would suggest significance, if the significance level was raised to \SI{10}{\percent}.
+
+However, soluble protein is not necessarily active. 
+Therefore activity tests were conducted with the refolded protein samples to check for naringenin conversion (\autoref{fig:e_refold_activity}).
+The conversion of naringenin to ponciretin was calculated from the \gls{auc} of the susbtrate and product peaks as follows:
 \begin{equation*}
 %  conversion = \frac{\mathrm{AUC_{ponciretin}} / \mathrm{AUC_{AC-9}}}{\mathrm{AUC_{naringenin}}/\mathrm{AUC_{AC-9}}  + \mathrm{AUC_{ponciretin}} / \mathrm{AUC_{AC-9}}}
     conversion = \frac{\mathrm{AUC_{ponciretin}}}{\mathrm{AUC_{naringenin}}  + \mathrm{AUC_{ponciretin}}}
 \end {equation*}
+Although the substrate naringenin was already contaminated with about \SI{2.5}{\percent} ponciretin, this value was not subtracted from the measured conversions to avoid introduction of unnecessary errors.
 The protein activity in the refolded samples was generally very low, as suggested by the low conversions after an overnight activity assay.
-The maximum conversion of about \SI{8.7}{\percent} was observed for the refolded protein sample 7.
-The activity of the samples did not correlate well with the amount of soluble protein.
-This becomes clear from the samples 4 and 5, where the amount of soluble protein was high but the observed activity was at a baseline level.
-The \meplot also suggests that the main effects have changed. 
-Most notably the redox state of the refolding reaction seemed to have a big influence on the protein activity.
-Indeed, the \aov test suggests that using reducing refolding conditions (\gls{dtt}) over a redox-shuffling system (GSH:GSSG, oxidizing) has a significant influence on methylation activity ($p$-value \num{0.0218}; appendix, \autoref{tab:aov_activity}). 
+The maximum conversion of about \SI{8.7}{\percent} (\SI{6.2}{\percent}) was observed for the protein sample refolded in buffer 7.
+The activity of the protein samples did not correlate well with the amount of soluble protein (\autoref{fig:e_refolding_analysis}).
+This becomes clear from the samples refolded in buffers 4 and 5, where the amount of soluble protein was high but the observed activity was at a baseline level.
+
+The \meplot suggests that the main effects for obtaining high amounts of soluble protein and obtaining active protein after refolding are different (\autoref{fig:MEplot_activity}). 
+Most notably, the redox state of the refolding reaction seemed to have a big influence on the protein sample's activity.
+The redox state however had almost no influence on the yield of soluble protein (\autoref{fig:MEplot_BF}).
+Indeed, the \aov test suggests that using reducing refolding conditions (\gls{dtt}) over a redox-shuffling system (GSH:GSSG, oxidizing) has a significant influence on methylation activity judged by the $p$-value \num{0.0218} of the factor \emph{redox} (appendix, \autoref{tab:aov_activity}). 
 However, there is the possibility for \somt to form intramolecular disulfide bridges, as the modelled structure suggests (\autoref{fig:x_somtmodel}).
 There are also reports, which showed that intermolecular disulfide bridges can contribute to the stability of, mainly archeal, \glspl{mt} and have no influence on the enzymatic activity \cite{Guelorget2010,Jorda2011,Gee2005}.
 Nevertheless most \glspl{mt} are only active under reducing conditions and literature suggests, that sometimes assays of \glspl{mt} are explicitly conducted under reducing conditions \cite{Ibdah2003,Zubieta2001a}.
+Reducing environments reduce the chance of disulfide cross-linked protein mono- and oligomers and allow the enzyme to be more flexible, which might be important for catalysis.
+When using a significance level of \SI{10}{\percent}, the $p$-value for \emph{arginine} is 0.0824, which also suggests a significant influence of this factor on the chance to obtain active protein after refolding.
+This is plausible, since there cannot be any activity when no soluble protein is present, and refolding reactions without added arginine did not afford any soluble protein.
+Judging from the \aov test, the remaining factors like \emph{glycerin}, \emph{ionic strength} or \emph{divalent cations} had no significant impact on the protein activity after refolding.
 
-The $p$-value for arginine addition is 0.0824, which also suggests a significant contribution when using a significance level of \SI{10}{\percent}.
-This is plausible, since there cannot be any activity when no soluble protein is present.
-Judging from the \aov test, the remaining factors have no significant impact on the protein activity after refolding.
-
-
-\subsubsection{Scaleup of \invitro refolding reactions}
-
-Buffer 7 (\SI{50}{\milli\molar} borate/NaOH, \SI{0.5}{\molar} arginine, \SI{2}{\milli\molar} \cf{CaCl2}, \SI{2}{\milli\molar} \cf{MgCl2}, \SI{10}{\milli\molar} \cf{NaCl}, \SI{0.5}{\milli\molar} \cf{KCl}, \SI{30}{\milli\molar} \textalpha-cyclodextrin, \SI{5}{\milli\molar} \gls{dtt} pH 8.5) was used to scale up the refolding reaction from a total volume of \SI{1.05}{\milli\litre} to a volume of \SI{50}{\milli\litre}.
-After refolding and concentration the protein solution was analyzed by gel filtration, \gls{cd} spectrometry and activity tests were conducted.
-
-The retention time for \somt during the gel filtration run was 14.5\,min \bweigel{genau raussuchen} (\autoref{fig:x_somt_gefi}).
-From the gel filtration standard measurements, this corresponds to a molecular weight of approximatly \SI{57853}{\dalton}, which is roughly the weight of one \somt monomer (\SI{40}{\kilo\dalton}).
-The \gls{cd} spectrum  (\autoref{fig:x_somt_cd}) suggest, that the refolded \somt possesses a secondary structure and is not present as an unfolded random coil.
+%\subsubsection{Scaleup of \invitro refolding reactions}
+Due to the promising results obtained from the refolding trails, which implicated that the best overall refolding performance (i.e. soluble protein and activity) was achieved in buffer 7 (\SI{50}{\milli\molar} borate/NaOH, \SI{0.5}{\molar} arginine, \SI{2}{\milli\molar} \cf{CaCl2}, \SI{2}{\milli\molar} \cf{MgCl2}, \SI{10}{\milli\molar} \cf{NaCl}, \SI{0.5}{\milli\molar} \cf{KCl}, \SI{30}{\milli\molar} \textalpha-cyclodextrin, \SI{5}{\milli\molar} \gls{dtt} pH 8.5), this buffer was used to scale up the refolding reaction from a total volume of \SI{1.05}{\milli\litre} to a volume of \SI{50}{\milli\litre}.
+After concentration of soluble protein from the scaled-up refolding reaction, activity tests were conducted.
+Unfortunately, the refolded \somt showed no activity for naringenin methylation, which was evidence that the scaled-up refolding was unsuccessful.
+Nonetheless, gel filtration chromatography and \gls{cd} spectroscopy were used as a tool to study the three-dimensional structure of the refolded \somt.
+The retention volume for the major peak eluted during the gel filtration run was 12.47\,ml, but in the chromatogram a shoulder at \SI{14.26}{\milli\litre} was clearly distinguishable (\autoref{fig:x_somt_gefi}).
+Molecular masses of the proteins corresponding to the peaks were estimated from commercial gel filtration protein standards.
+The first peak corresponds to a molecular weight of approximately \SI{165}{\kilo\dalton}, whereas the shoulder at \SI{14.26}{\milli\litre} corresponds to a globular protein of approximately \SI{65.5}{\kilo\dalton}.
+\SI{65.5}{\kilo\dalton} is roughly the weight of one \somt monomer (\SI{40}{\kilo\dalton}) or a dimer, whereas a mass of \SI{165}{\kilo\dalton} would indicate a tetramer.
+These results were further indication, that the majority of the refolded protein was not in the expected native dimeric state.
+However, the refolded \somt had adopted some kind of fold that allowed for it to be in soluble form.
+%
+%% CD spectrum of SOMT
+\begin{figure}[htb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[width=0.75\textwidth]{usr/graphics/static/CD_SOMT}
+  \end{figureframe}
+  \caption{CD-spectrum of refolded \somt (black) compared to the spectrum that was calculated (red) by the K2D3 web service (\url{http://cbdm-01.zdv.uni-mainz.de/~andrade/k2d3//index.html}) from the \somt sequence. Secondary structure estimates from the measured spectrum are \SI{12.39}{\percent} \textalpha-helix and \SI{32.51}{\percent} \textbeta-sheet.}
+  \label{fig:x_somt_cd}
+\end{figure}
+%
+Furthermore, the \gls{cd} spectrum (\autoref{fig:x_somt_cd}) suggested, that the refolded \somt possessed a secondary structure and was not present as an unfolded random coil.
 The secondary structure was estimated from the measured \gls{cd}-spectrum by the K2D3 web service \cite{Louis-Jeune2012}.
-According to the calculations, the secondary structure elements consist of \SI{12.39}{\percent} \textalpha-helix and \SI{32.51}{\percent} \textbeta-sheet.
-However, the calculated protein model (\ref{fig:x_somtmodel}) suggests the helix content is much higher (\SI{52.3}{\percent}), whereas the sheet content is accordingly lower (\SI{15.4}{\percent}).
-This finding suggests, that the refolded protein is not in a native state.
-Also, the enzyme showed no activity for naringenin methylation, which was further evidence that the scaled-up refolding was unsuccessful.
+According to the K2D3 calculations, the secondary structure elements consisted of \SI{12.39}{\percent} \textalpha-helix and \SI{32.51}{\percent} \textbeta-sheet.
+However, the calculated protein model (\autoref{fig:x_somtmodel}) suggests the \textalpha-helix content might be much higher (\SI{52.3}{\percent}), whereas the \textbeta-sheet content might accordingly be lower (\SI{15.4}{\percent}).
+These findings further indicate, that the refolded protein was not in a native state, which might be the cause of the lack of enzymatic activity.
 Even over the course of many trials a successful large scale refolding of \somt yielding active protein could not be achieved.
 
 These results display that \gls{doe} combined with \gls{ffd} can be a valuable tool for the identification of main factors during protein refolding.
@@ -379,12 +418,13 @@ However, there still exists a discrepancy between small scale refolding reaction
 \subsection{Phenolic hydroxyls}
 
 Phenolic hydroxyl groups have \pka-values of around 10 as demonstrated by four \textit{p}-cresole derivatives (\autoref{tab:pkaphenols}). 
-Catecholic systems have two \pka s. The 3-hydroxyl in this example has a much smaller \pka than the 4-hydroxyl. 
-This is in part due to the mesomeric (+M) and inductive (+I/-I) properties the substituents display.
-The M and I--effects let the 3-OH be deprotonated first, which in turn really lowers the acidity and thus inceases the \pka of the 4-OH.
-(4-hydroxy-3-methoxy)- and (3-hydroxy-4-methoxy)-derivatives again have a similar \pka, with the \textit{meta}-position slightly more acidic due to the +I--effect of the methyl substituent.
+Catecholic systems have two \pka-values, one for each hydroxyl group. 
+The 3-hydroxyl (R\tup{2}) of the displayed example has a much smaller \pka than the 4-hydroxyl (R\tup{1}). 
+This is in part due to the mesomeric (+M) and inductive (+I/-I) properties the substituents exhibit.
+The M and I--effects let the 3-OH be deprotonated first, which in turn significantly lowers the acidity and thus increases the \pka of the 4-OH.
+(4-hydroxy-3-methoxy)- and (3-hydroxy-4-methoxy)-derivatives have a similar \pka, with the \textit{meta}-position slightly more acidic due to the +I--effect of the methyl substituent.
 The nucleophilicity of these phenolic groups happens to coincide with their \textsc{Br\o nsted} acidity.
-Chemically speaking the hydroxyl with the lower \pka always reacts first with an electrophile.
+Chemically speaking the hydroxyl group with the lower \pka always reacts first with an electrophile.
       
 However, different enzymes are able to regioselectivly methylate the 3- or the 4-OH of such catecholic systems. \bweigel{cite dippe et al 2015}
 Enzyme's active sites create a ``microclimate'', which can selectively raise or lower the effective \pka of functional groups and allows for the efficient manipulation of the macroscopically observed regioselectivity.
@@ -409,14 +449,15 @@ Enzyme's active sites create a ``microclimate'', which can selectively raise or 
   \end{tabular}
 \end{table}
 
-Previous studies have established that \pfomt is a 3'-\textit{O}-methyl transferase, which is not able to methylate substrates that bear either phenolic (e.g. naringenin), (3'-hydroxy-4-methoxy)- (e.g. hesperetin) or (4'-hydroxy-3-methoxy)-moieties (e.g. homo-eriodictyol) \citep{Ibdah2003}.
-The reactions were all run under the same ``standard''  conditions.
-However, the reaction buffer/medium can have a tremendous impact on enzymes and their reactions. 
+Previous studies have established that \pfomt is a 3'-\textit{O}-methyl transferase, which is not able to methylate substrates that bear either phenolic (e.g. naringenin), (3'-hydroxy-4-methoxy)- (e.g. hesperetin) or (4'-hydroxy-3-methoxy)-moieties (e.g. homoeriodictyol) \citep{Ibdah2003}.
+In these previous studies, the reactions were all run under the same ``standard''  conditions.
+However, the reaction buffer can have a tremendous impact on enzymes and their reactions. 
 Therefore reaction conditions require optimization, just as the enzymes themselves, to augment an enzymatic process \citep{Bornscheuer2012,Koeller2001}.
 
-Using \pfomt the reaction conditions were screened, to assess if any would promote the methylation of non-catecholic substrates.
-Changes in the pH of the medium effect enzymatic activity, especially if charged groups are part of the catalytic mechanism, which was proposed for \pfomt \citep{Brandt2015}.
-Furthermore, \pfomt is a magnesium dependent enzyme and the activity is effected by altering the concentration of \cf{Mg^2+}.
+Using \pfomt reaction conditions were screened, to assess if any would promote the methylation of non-catecholic substrates.
+Although enzymes create a specific environment for catalysis, changes in the pH of the medium can still affect said environment and therefore enzymatic activity, especially if charged groups are part of the catalytic mechanism.
+In the catalytic mechanism of \pfomt a catalytic triad of Lys-Asn-Asp, two of which are charged, is proposed to play a major role \citep{Brandt2015}.
+Furthermore, \pfomt is a magnesium dependent enzyme and the activity is affected by altering the concentration of \cf{Mg^2+} or substitution of \cf{Mg^2+} by other divalent cations \cite{Ibdah2003}.
 Thus, the pH was chosen to be varied along with \cf{Mg^2+} concentration in order to study the influence of those two factors on the methylation reaction.
 
 \subsection{\glsentrytext{pfomt} pH-profiles are influenced by \cf{Mg^2+}}
@@ -427,31 +468,32 @@ pH-profiles (pH 5.5 -- 9.5) of three different substrates (caffeic acid, \textit
 The pH-profiles were measured without and with the addition of \SI{10}{\milli\molar} \cf{MgCl2}.
 
 The catecholic substrates caffeic acid and eriodictyol were converted by \pfomt much more quickly than \ifa, which is a (3-hydroxy-4-methoxy)-substituted cinnamic acid (\autoref{fig:e_pHprofile}).
-The highest rate of \ifa conversion was two orders of magnitude lower than the highest rate for conversion of the other two substrates.
-Nonetheless conversion was observed for \ifa with increasing pH and even an influence of magnesium was observed.
-Addition of \SI{10}{\milli\molar} \cf{Mg^2+} increased the rate of \ifa conversion by 3-fold from \SI{7}{\pico\katal\per\milli\gram} to \SI{21}{\pico\katal\per\milli\gram} at pH 9.45 (\autoref{tab:specific.activity}).
-
-The specific activities observed for the conversion of caffeic acid are comparable to published data \citep{Dippe2015}.
-For the two catecholic substrates, the pH-optimum shifted from neutral to alkaline pHs, when \cf{Mg^2+} was omitted.
-However, the maximum activity remained roughly the same.
-This was not true for \ifa, which was hardly converted at all without the addition of \cf{Mg^2+}.
-
-\begin{figure}[htpb]
+The highest specific activity $A_\mathrm{sp}$ for \ifa conversion was two orders of magnitude lower than the highest activity for the conversion of the other two substrates.
+Nonetheless, conversion was observed for \ifa with increasing pH and even an influence of magnesium was observed (\autoref{fig:e_pHprofile} and \autoref{tab:specific.activity}).
+%
+\begin{figure}[htb]
   \centering
   \begin{figureframe}
     \includegraphics[width=0.65\textwidth]{usr/graphics/static/tmp_pHprofile}
   \end{figureframe}
-  \caption{Initial rate/pH-profiles for the conversion of three different substrates (red -- caffeic acid, green -- eriodictyol, blue -- \textit{iso}-ferulic acid) by \pfomt. The non-catecholic substrate \textit{iso}-ferulic acid is converted much less quickly than the catecholic substrates. \bweigel{evtl alles schwarz weiß mit anderen linien/symbolen?}}
+  \caption{Specific activity/pH-profiles for the conversion of three different substrates (\textfilledpoint~~caffeic acid, \filledtriangleup~~eriodictyol, \textfilledsquare~~\textit{iso}-ferulic acid) by \pfomt. The specific activity for the non-catecholic substrate \textit{iso}-ferulic acid was much lower than the specific activity for the catecholic substrates.
+  When magnesium is omitted, the activity is increased by increasing the pH}
   \label{fig:e_pHprofile}
 \end{figure}
-
-\begin{table}[htpb]\centering
-  \caption{Maximum specific activity for the conversion of three different substrates with and without addition of magnesium. The pH at which the maximal activity was reached is indicated.}
+%
+The specific activities observed for the conversion of caffeic acid are comparable to published data \citep{Dippe2015}.
+For the two catecholic substrates, the pH-optimum shifted from neutral to alkaline pHs, when \cf{Mg^2+} was omitted.
+However, the maximum activity remained roughly the same, even though magnesium addition seemed to have a rate increasing effect.
+The maximum activities without magnesium were observed at pH 9.45 with \SI{1466}{\pico\katal\per\milli\gram} and \SI{824}{\pico\katal\per\milli\gram} for caffeic acid and eriodictyol respectively, while with \SI{10}{\milli\molar} \cf{Mg^2+} the maximum activities were recorded at pH 6.5 and increased to \SI{1572}{\pico\katal\per\milli\gram} and \SI{1354}{\pico\katal\per\milli\gram} respectively.
+This was not observed for \ifa, which was converted rather slowly without the addition of \cf{Mg^2+} ($A_\mathrm{sp}$ \textless \SI{10}{\pico\katal\per\milli\gram}.
+%
+\begin{table}[htb]\centering
+  \caption{Maximum specific activity for the conversion of three different substrates with and without addition of magnesium. The pH at which the maximal activity was reached is indicated by the column titled ``pH''.}
   \label{tab:specific.activity}
   \centering\small
   \begin{tabular}{llrrr}
     \toprule
-     substrate & \cf{Mg^2+} & pH & $A_\mathrm{sp} \big[\frac{\mathrm{U}}{\mathrm{mg}}\big]$ & $A_\mathrm{sp} \big[\frac{\mathrm{pkat}}{\mathrm{mg}}\big]$ \\ 
+     substrate & \cf{Mg^2+} & pH & $A_\mathrm{sp} \big[\frac{\mathrm{mU}}{\mathrm{mg}}\big]$ & $A_\mathrm{sp} \big[\frac{\mathrm{pkat}}{\mathrm{mg}}\big]$ \\ 
     \midrule
      caffeic acid & FALSE & 9.45 & 88 & 1466 \\ 
      caffeic acid & TRUE & 6.50 & 94 & 1572 \\ 
@@ -462,7 +504,8 @@ This was not true for \ifa, which was hardly converted at all without the additi
     \bottomrule
   \end{tabular}
 \end{table}
-
+%
+However, addition of \SI{10}{\milli\molar} \cf{Mg^2+} increased the rate of \ifa conversion by 3-fold, from \SI{7}{\pico\katal\per\milli\gram} to \SI{21}{\pico\katal\per\milli\gram} at pH 9.45 (\autoref{tab:specific.activity}).
 
 Linear regression models of the form
 \begin{equation}
@@ -494,7 +537,7 @@ Nonetheless, all of these rather simple models can not reflect the reality of su
 The shown results are solely included for purposes of making statistics based inferences in the context of domain knowledge.
 
 
-\begin{table}[htpb]\centering
+\begin{table}[htb]\centering
   \caption{Coefficients of the model (\ref{eq:ifa}) for activity of \ifa methylation. The factor $\factor{Mg}$ is a categorical variable (addition/no addition) and can therefore only be 0 or 1.}
   \label{tab:lm-ifa}
   \centering\small
@@ -510,7 +553,7 @@ The shown results are solely included for purposes of making statistics based in
   \end{tabular}
 \end{table}
 
-\begin{figure}[htpb]
+\begin{figure}[htb]
   \centering
   \begin{figureframe}
     \begin{subfigure}{0.45\textwidth}

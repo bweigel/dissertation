@@ -273,26 +273,23 @@ Stock solutions of antibiotics, IPTG or sugars were prepared according to the pE
 Protein concentrations were estimated using the absorption of protein solutions at 280\,nm, which is mainly dependent on the amino acid composition of the protein studied \citep{Gill1989}.
 Extinction coefficients of proteins were calculated from the amino acid sequence using the ExpPASy servers's ProtParam tool \citep{Gasteiger2005}.
 
-\begin{lstTabularx}[1]{\linewidth}{p{0.5\textwidth}X}
-  \caption{Calculated extinction coefficients of proteins used in this work.} \\
+%\begin{lstTabularx}[1]{\linewidth}{p{0.5\textwidth}X}
+\begin{table}\small\centering
+   \caption{Calculated extinction coefficients of proteins used in this work.} 
   \label{tab:extinctioncoefficients}
-  \small
-  \hfill \\
+  \begin{tabular}{lc}
      \toprule
 	protein/enzyme & $\varepsilon^{\mathrm{\SI{1}{\g\per\l}}}_{280\mathrm{nm}}$ in \si[per-mode=reciprocal]{\ml\per\mg\per\cm}\\ 
      \midrule
-     \endfirsthead
-     \toprule
-     protein/enzyme & $\varepsilon^{\mathrm{\SI{1}{\g\per\l}}}_{280\mathrm{nm}}$ in \si[per-mode=reciprocal]{\ml\per\mg\per\cm}\\ 
-     \midrule
-     \endhead
-     \gls{pfomt} (reduced) & 0.714 \\
-     \gls{pfomt} Y51K N202W (reduced) & 0.852 \\
-     \gls{somt} (oxidized) & 1.263 \\
-     \gls{somt} (reduced) & 1.247 \\
-     \gls{comt} & \\
+     \glsentrytext{pfomt} (reduced) & 0.714 \\
+     \glsentrytext{pfomt} Y51K N202W (reduced) & 0.852 \\
+     \glsentrytext{somt} (oxidized) & 1.263 \\
+     \glsentrytext{somt} (reduced) & 1.247 \\
+ %    \glsentrytext{comt} & \\
      \bottomrule
-\end{lstTabularx}
+  \end{tabular}
+\end{table}
+%\end{lstTabularx}
 
 
 \subsection{Protein production test (expression test)}
@@ -418,45 +415,67 @@ Thus, an approach using \gls{ffd} was used to find optimal refolding conditions 
 Factors studied were pH (buffer), arginine, glycerol, divalent cations, ionic strength, redox system, cyclodextrin and co-factor addition.
 The experimental matrix was constructed using the \verb+FrF2+ package (\url{http://cran.r-project.org/web/packages/FrF2/index.html}) in the R software.
 
-\begin{lstTabularx}[1]{\linewidth}{Xc>{\centering\arraybackslash}p{0.25\textwidth}>{\centering\arraybackslash}p{0.25\textwidth}c}
-  \caption{Factors used in the construction of the \gls{ffd}.} \\
-  \label{tab:ffd_factors}
-  \small
-  \hfill \\
-     \toprule
-	factor & symbol & \multicolumn{2}{c}{setting} & unit \\ 
-        & & -1 & +1 & \\
-     \midrule
-     \endfirsthead
-     \toprule
-	factor & symbol & \multicolumn{2}{c}{setting} & unit \\ 
-        & & -1 & +1 & \\
-     \midrule
-     \endhead
-     pH & A & 5.5 & 9.5 & - \\
-     arginine & B & 0 & 0.5 & M \\
-     glycerol & C & 0 & 10 & \% (v/v) \\
-     divalent cations\footnote{no: 1\,mM \gls{edta}; yes: 2\,mM \cf{CaCl2}, \cf{MgCl2}} & D & no & yes & - \\
-     ionic strength\footnote{low: 10\,mM NaCl, 0.5\,mM KCl; high: 250\,mM NaCl, 10\,mM KCl} & E & low & high & -  \\
-     redox state\footnote{reducing: 5\,mM \gls{dtt}; redox-shuffling: 1\,mM \gls{gsh}, 0.2\,mM \gls{gssg}} & F & reducing & redox-shuffling & - \\
-     \textalpha -cyclodextrin & G & 0 & 30 & mM \\
-     \gls{sah} & H & 0 & 0.5 & mM \\
-     \bottomrule
-\end{lstTabularx}
+%% \begin{lstTabularx}[1]{\linewidth}{Xc>{\centering\arraybackslash}p{0.25\textwidth}>{\centering\arraybackslash}p{0.25\textwidth}c}
+%%   \caption{Factors used in the construction of the \gls{ffd}.} \\
+%%   \label{tab:ffd_factors}
+%%   \small
+%%   \hfill \\
+%%      \toprule
+%% 	factor & symbol & \multicolumn{2}{c}{setting (level)} & unit \\ 
+%%         & & - & + & \\
+%%      \midrule
+%%      \endfirsthead
+%%      \toprule
+%% 	factor & symbol & \multicolumn{2}{c}{setting (level)} & unit \\ 
+%%         & & - & + & \\
+%%      \midrule
+%%      \endhead
+%%      pH & A & 5.5 & 9.5 & - \\
+%%      arginine & B & 0 & 0.5 & M \\
+%%      glycerol & C & 0 & 10 & \% (v/v) \\
+%%      divalent cations\footnote{no: 1\,mM \gls{edta}; yes: 2\,mM \cf{CaCl2}, \cf{MgCl2}} & D & no & yes & - \\
+%%      ionic strength\footnote{low: 10\,mM NaCl, 0.5\,mM KCl; high: 250\,mM NaCl, 10\,mM KCl} & E & low & high & -  \\
+%%      redox state\footnote{reducing: 5\,mM \gls{dtt}; redox-shuffling: 1\,mM \gls{gsh}, 0.2\,mM \gls{gssg}} & F & reducing & redox-shuffling & - \\
+%%      \textalpha -cyclodextrin & G & 0 & 30 & mM \\
+%%      \gls{sah} & H & 0 & 0.5 & mM \\
+%%      \bottomrule
+%% \end{lstTabularx}
 
-\begin{lstTabularx}[1]{\linewidth}{ccccccccccccc}
-  \caption{Experimental design matrix for the \gls{ffd}.} \\
+%\begin{lstTabularx}[1]{\linewidth}{Xc>{\centering\arraybackslash}p{0.25\textwidth}>{\centering\arraybackslash}p{0.25\textwidth}c}
+\begin{table}[htb]\small\centering
+  \caption{Factors and their high and low levels (+/-) used in the construction of the \gls{ffd}.} 
+  \label{tab:ffd_factors}
+  \begin{tabular}{lcccc}
+    \toprule
+    factor & symbol & \multicolumn{2}{c}{setting (level)} & unit \\ 
+    & & - & + & \\
+    \midrule
+    pH & A & 5.5 & 9.5 & - \\
+    arginine & B & 0 & 0.5 & M \\
+    glycerol & C & 0 & 10 & \% (v/v) \\
+    divalent cations\textsuperscript{\textdagger} & D & no & yes & - \\
+    ionic strength\textsuperscript{\textdaggerdbl} & E & low & high & -  \\
+    redox state\textsuperscript{$\star$} & F & reducing & redox-shuffling & - \\
+    \textalpha -cyclodextrin & G & 0 & 30 & mM \\
+    \glsentrytext{sah} & H & 0 & 0.5 & mM \\
+    \bottomrule
+    \multicolumn{5}{p{0.95\textwidth}}{\scriptsize \textsuperscript{\textdagger}no: 1\,mM \gls{edta}; yes: 2\,mM \cf{CaCl2}, \cf{MgCl2} \newline \textsuperscript{\textdaggerdbl}low: 10\,mM NaCl, 0.5\,mM KCl; high: 250\,mM NaCl, 10\,mM KCl \newline \textsuperscript{$\star$}reducing: 5\,mM \gls{dtt}; redox-shuffling: 1\,mM \gls{gsh}, 0.2\,mM \gls{gssg}}
+  \end{tabular}
+\end{table}
+
+\begin{table}[htb]\small\centering
+  \caption{Experimental design matrix for the \gls{ffd}.} 
   \label{tab:ffd_matrix}
-  \small
-  \hfill \\
+  \begin{tabular}{ccccccccccccc}
+%\begin{lstTabularx}[1]{\linewidth}{ccccccccccccc}
      \toprule
 	Experiment & A & B & C & D & E & F & G & H \\ 
      \midrule
-     \endfirsthead
-     \toprule
-     Experiment & A & B & C & D & E & F & G & H \\ 
-     \midrule
-     \endhead
+     %% \endfirsthead
+     %% \toprule
+     %% Experiment & A & B & C & D & E & F & G & H \\ 
+     %% \midrule
+     %% \endhead
      1 & +&+&+&-&-&-&-&+\\
      2 & -&-&-&-&-&-&-&-\\
      3 &+&-&+&+&-&+&+&-\\
@@ -470,7 +489,9 @@ The experimental matrix was constructed using the \verb+FrF2+ package (\url{http
      11 &+&-&-&+&+&+&-&+\\
      12 &-&+&+&+&-&+&-&+\\
      \bottomrule
-\end{lstTabularx}
+%\end{lstTabularx}
+  \end{tabular}
+\end{table}
 
 The buffers were mixed from stock solutions and prepared in 1.5\,ml microcentrifuge tubes immediately prior to the experiment.
 \ul{50} of solubilized \gls{somt} (\SI{1}{\mg\per\ml}) in \gls{ib} solubilization buffer was added to \SI{1}{\milli\litre} of each buffer followed by a short vortex boost for rapid mixing.
@@ -674,44 +695,33 @@ Standard reaction conditions were 50\,mM buffer, 0.4\,mM alkyl acceptor (e.g. ca
 \cf{MgCl2} was either omitted or added at \SI{10}{\milli\molar} to assess influences of divalent cations.
 Assays were stopped as described in \ref{sec:omtassay} and analyzed accordingly.
 
-\subsubsection{Estimation of product concentration}
+\subsubsection{Estimation of product concentration and enzymatic activities}
 \label{ref:concestimation}
 
 Product concentrations were estimated from \gls{hplc} runs. 
 The automatically integrated peaks of \gls{sam} and \gls{sah} provided the \gls{auc}.
 From the \gls{auc} of both peaks the concentrations were estimated as follows.
-
+%
 \begin{align*}
   \intertext{Under the assumption, that}
-  AUC^\mathrm{SAH} + AUC^\mathrm{SAM} &= 1 \sim c_0^\mathrm{SAM},x \\
+  AUC^\mathrm{SAH} + AUC^\mathrm{SAM} &= 1 \sim c_0^\mathrm{SAM}, \\
   \intertext{the fraction and concentration of one (e.g. SAH) can be estimated by}
   x^\mathrm{SAH} &= \frac{AUC^\mathrm{SAH}}{AUC^\mathrm{SAH} + AUC^\mathrm{SAM}} \\
   \intertext{and}
   c^\mathrm{SAH} &= x^\mathrm{SAH} \times  c_0^\mathrm{SAM}.
 \end{align*}
-
-Enzymatic activities can be calculated from the concentrations by standard procedures.
+%
+The amount $n$ is obtained by multiplying the concentration $c$ by the injection volume $V$.
+Enzymatic activities (i.e. initial rates) can be calculated from the concentrations by standard procedures.
 
 \subsection{Photospectrometric assay for the methylation of catecholic moieties} 
 \label{sec:photoassay}
 Catecholic moieties can form stable complexes in the presence of heavy metals such as copper or iron \citep{Schweigert2001,Mentasti1973}.
 Hence, caffeic acid can complex ferric (\cf{Fe^3+}) ions and form a colored complex with \textlambda\textsubscript{max} = \SI{595}{nm} \citep{Dippe}. 
 Since the complex formation is specific for caffeic acid and methylated derivatives (i.e. ferulic and iso-ferulic acid) cannot complex \cf{Fe^3+}, this can be used as a measure for methylation reactions.\\
-\Gls{omt} assays were prepared as before (\ref{sec:omtassay}). 
+\Gls{omt} assays were prepared as before (\autoref{sec:omtassay}). 
 However, the reactions were stopped by addition of 0.1 volumes 1\,M Tris/HCl pH 8, immediately followed by 0.5 volumes catechol reagent (\mM{2} \cf{FeCl3} in \mM{10} \cf{HCl}).
 The complex formation reaction was allowed to equilibrate for 5\,min at \gls{rt} and the absorbance at \SI{595}{\nm} was measured.
-
-
-\framedfigure[label = fig:c_plot_cali]{ 
-<<test, echo=F, tidy=TRUE, fig.height=3.25, fig.width=5.25, dev='tikz'>>=
-@ 
-}{%
-    Calibration curves of different relative compositions of ferulic acid to caffeic acid, that were taken as described in \ref{sec:photoassay}. 
-    The total concentration was always \SI{0.4}{\milli\molar}.
-    At lower pH values around 4, the method seems to overestimate the concentration of caffeic acid.
-    However, the slope of the curves stays the same.
-    }
-  
 
 \subsection{Concentration of \glsentrytext{somt} using \glsentryfirst{hic}}
 After refolding using rapid dilution protein samples are very dilute and a concentration step is required.

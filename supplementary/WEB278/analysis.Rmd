@@ -5,6 +5,7 @@ date: "07/24/2015"
 output:
   pdf_document:
     fig_caption: yes
+    keep_tex: yes
     number_sections: yes
     toc: yes
 ---
@@ -18,7 +19,7 @@ library(ggplot2)
 library(dplyr)
 library(magrittr)
 
-DATA <- read.csv("/home//mori/IPB//Experimente/WEB278/data.csv", header=T)
+DATA <- read.csv("data.csv", header=T)
 
 DATA %<>% mutate(K2D3.predEll = K2D3.pred*3298)
 save(DATA, file="data.Rda")
@@ -39,7 +40,7 @@ ggplot(DATA, aes(x=nm, y=Ell)) + geom_line() +
         panel.grid.major = element_blank(),
         panel.background = element_blank(),
         plot.background = element_blank(),
-        axis.text = element_text(size=10),
-        axis.title = element_text(size=14))
+        axis.text = element_text(size=14),
+        axis.title = element_text(size=16))
 ```
 

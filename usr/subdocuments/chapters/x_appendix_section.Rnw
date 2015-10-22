@@ -6,6 +6,16 @@
 
 \chapter{Figures}
 
+\framedfigure[label = fig:c_plot_cali]{ 
+<<test, echo=F, tidy=TRUE, fig.height=3.25, fig.width=5.25, dev='tikz'>>=
+@ 
+}{%
+    Calibration curves of different relative compositions of ferulic acid to caffeic acid, that were prepared as described in \autoref{sec:photoassay}. 
+    The total concentration was always \SI{0.4}{\milli\molar}.
+    At lower pH values around 4, the method seems to overestimate the concentration of caffeic acid.
+    However, the slope of the curves stays the same.
+    }
+  
 \section{Engineering of PFOMT}
 
 \begin{figure}[htpb]
@@ -187,21 +197,12 @@
 \begin{figure}[htpb]
   \centering
   \begin{figureframe}
-    \includegraphics[width=0.75\textwidth]{usr/graphics/static/platzhalter}
+    \includegraphics[width=0.75\textwidth]{usr/graphics/static/somt_gefi}
   \end{figureframe}
-  \caption{Chromatogram of the gel filtration analysis of refolded \somt.}
+  \caption{Chromatogram of the gel filtration analysis of refolded \somt (blue). Gel-filtrations standards (red) were used to assess the size of the \somt protein. The estimated molecular weights for the eluting peaks were  \SI{165}{\kilo\dalton} (\SI{12.47}{\milli\litre}) and \SI{65.5}{\kilo\dalton} (\SI{14.26}{\milli\litre}). Protein standard: \SI{9.15}{\milli\litre} -- thyroglobulin (\SI{670}{\kilo\dalton}), \SI{12.62}{\milli\litre} -- \textgamma-globulin (\SI{158}{\kilo\dalton}), \SI{15.43}{\milli\litre} -- ovalbumin (\SI{44}{\kilo\dalton}), \SI{17.63}{\milli\litre} -- myoglobin (\SI{17}{\kilo\dalton}), \SI{21.11}{\milli\litre} -- vitamin B12 (\SI{1.35}{\kilo\dalton})}
   \label{fig:x_somt_gefi}
 \end{figure}
 
-%% CD spectrum of SOMT
-\begin{figure}[htpb]
-  \centering
-  \begin{figureframe}
-    \includegraphics[width=0.75\textwidth]{usr/graphics/static/CD_SOMT}
-  \end{figureframe}
-  \caption{CD-spectrum of refolded \somt (black) compared to the spectrum that was calculated by the K2D3 web service (\url{http://cbdm-01.zdv.uni-mainz.de/~andrade/k2d3//index.html}). Secondary structure estimates from the spectrum are \SI{12.39}{\percent} \textalpha-helix and \SI{32.51}{\percent} \textbeta-sheet.}
-  \label{fig:x_somt_cd}
-\end{figure}
 
 
 %% Main effects plot PFOMT conversion of non-catechols

@@ -2,7 +2,9 @@
 title: "WEB346"
 author: "Benjamin Weigel"
 date: "July 27th, 2015"
-output: rmarkdown::tufte_handout
+output: 
+  rmarkdown::tufte_handout:
+    keep_tex: true
 ---
 
 ```{r, cache=FALSE, echo=FALSE}
@@ -591,7 +593,7 @@ conversions %>% filter(variant == "WT") %>% xtable
 conversions %>% filter(variant != "WT") %>% xtable
 ```
 
-```{r, fig.width=4, fig.height=5, fig.cap=c("Wild-type conversions. colors from light to dark: low/no, low/yes, high/no, high/yes", "Same as above, but some data is omitted.","4'-selective variant conversions. colors from light to dark: low/no, low/yes, high/no, high/yes")}
+```{r, fig.width=4, error=T, fig.height=5, fig.cap=c("Wild-type conversions. colors from light to dark: low/no, low/yes, high/no, high/yes", "Same as above, but some data is omitted.","4'-selective variant conversions. colors from light to dark: low/no, low/yes, high/no, high/yes")}
 WEB346.results <- res.save
 
 max.nonmyr <- WEB346.results %>% filter(substrate != 17) %>% select(x.SAH) %>% max
@@ -606,6 +608,7 @@ web <-   list(geom_point(aes(x=pH, y=conversion, group=Mg, linetype=Mg)),
               ylim(0,1.3),
               theme(legend.position="none",
                     axis.text.x = element_text(angle=90)))
+
 withingroup <- data.frame(substrate = 1:17, with.in = c(rep(c("phenolic", "catecholic", "3O4M", "4O3M"), 2), "phenolic", 
                                                         "m-coumaric","o-coumaric", "catecholic","4O3M", "3O4M", "phenolic","catecholic","myricetin"))
 withingroup$with.in <- with(withingroup, factor(with.in, levels = c("phenolic", "catecholic", "3O4M", "4O3M", "m-coumaric","o-coumaric", "myricetin")))
@@ -626,21 +629,26 @@ web <- list(  geom_bar(stat = "identity", position = "dodge", aes(fill=condition
               #scale_fill_brewer(palette="Set1"),
               theme_bw(),
               theme(legend.position="none",
-                    axis.text.x = element_text(angle=90))
-              )
+                    axis.text.x = element_text(angle=90,vjust = 0.5),
+                    axis.text = element_text(size=12),
+                    axis.title = element_text(size=14)
+                    ))
 
 ggplot(data = conversions %>% filter(variant == "WT"), aes(x=with.in, y=conversion)) +
-  web
+  web + scale_y_continuous(breaks=seq(0, 1, 0.25), labels=c(0,"",0.5,"",1))
 
 ggplot(data = conversions %>% filter(variant == "WT", with.in != "catecholic" & with.in != "myricetin"), aes(x=with.in, y=conversion)) +
-  web
+  web + scale_y_continuous(breaks=seq(0, 1, 0.1))
+
+ggplot(data = conversions %>% filter(variant == "WT"), aes(x=with.in, y=conversion)) +
+  web + coord_cartesian(ylim = c(0,0.275)) + scale_y_continuous(breaks=seq(0, 1, 0.1)) 
 
 ggplot(data = conversions %>% filter(variant != "WT"), aes(x=with.in, y=conversion)) +
-  web
+  web + scale_y_continuous(breaks=seq(0, 1, 0.25), labels=c(0,"",0.5,"",1))
 
 
 ggplot(data = conversions %>% filter(variant == "WT", group != "flavonole", with.in!="catecholic"), aes(x=with.in, y=conversion)) +
-  web
+  web + scale_y_continuous(breaks=seq(0, 1, 0.1))
 
 
 ```

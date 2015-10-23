@@ -463,13 +463,12 @@ Thus, the pH was chosen to be varied along with \cf{Mg^2+} concentration in orde
 \subsection{\glsentrytext{pfomt} pH-profiles are influenced by \cf{Mg^2+}}
 \label{sec:pfomtph}
 
-\pfomt was dialyzed extensively against buffer containing \SI{5}{\milli\molar} \gls{edta} to obtain enzyme that was virtually free of bound divalent cations.
-pH-profiles (pH 5.5 -- 9.5) of three different substrates (caffeic acid, \textit{iso}-ferulic acid, eriodictyol) were obtained.
+\pfomt was dialyzed against \SI{50}{\milli\molar} \gls{ssg}-buffer pH 7.5 containing \SI{5}{\milli\molar} \gls{edta} and again against the same buffer with the \gls{edta} omitted, to obtain enzyme that was virtually free of bound divalent cations.
+pH-profiles (pH 5.5 -- 9.5) of three different substrates (caffeic acid, \textit{iso}-ferulic acid, eriodictyol) were obtained in the same unified buffer system (\glsentrydesc{ssg}, 2:7:7 molar ratio).
 The pH-profiles were measured without and with the addition of \SI{10}{\milli\molar} \cf{MgCl2}.
-
-The catecholic substrates caffeic acid and eriodictyol were converted by \pfomt much more quickly than \ifa, which is a (3-hydroxy-4-methoxy)-substituted cinnamic acid (\autoref{fig:e_pHprofile}).
-The highest specific activity $A_\mathrm{sp}$ for \ifa conversion was two orders of magnitude lower than the highest activity for the conversion of the other two substrates.
-Nonetheless, conversion was observed for \ifa with increasing pH and even an influence of magnesium was observed (\autoref{fig:e_pHprofile} and \autoref{tab:specific.activity}).
+Maximum methylation activity ($\approx$\SI{1500}{\pico\katal\per\milli\gram}) towards the catecholic substrates (i.e. caffeic acid, eriodictyol) was observed when magnesium was added and the pH was about 6.5  (\autoref{fig:e_pHprofile} and \autoref{tab:specific.activity}).
+However, the observed maximum activity shifted towards basic pH values (pH 9.45), when magnesium was omitted from the reaction.
+The maximum activity for methylation of \ifa was measured at pH 9.45, regardless of whether magnesium was added.
 %
 \begin{figure}[htb]
   \centering
@@ -481,11 +480,17 @@ Nonetheless, conversion was observed for \ifa with increasing pH and even an inf
   \label{fig:e_pHprofile}
 \end{figure}
 %
+The catecholic substrates caffeic acid and eriodictyol were converted by \pfomt much more quickly than \ifa, which is a (3-hydroxy-4-methoxy)-substituted cinnamic acid (\autoref{fig:e_pHprofile}).
+
+The highest specific activity $A_\mathrm{sp}$ for \ifa conversion was two orders of magnitude lower than the highest activity for the conversion of the other two substrates.
+Nonetheless, conversion was observed for \ifa with increasing pH and even an influence of magnesium was observed (\autoref{fig:e_pHprofile} and \autoref{tab:specific.activity}).
+\textit{Iso}-ferulic acid was converted rather slowly without the addition of \cf{Mg^2+} ($A_\mathrm{sp}=$\SI{7}{\pico\katal\per\milli\gram}).
+However, addition of \SI{10}{\milli\molar} \cf{Mg^2+} increased the rate of \ifa conversion by 3-fold, from \SI{7}{\pico\katal\per\milli\gram} to \SI{21}{\pico\katal\per\milli\gram} at pH 9.45 (\autoref{tab:specific.activity}). 
+
 The specific activities observed for the conversion of caffeic acid are comparable to published data \citep{Dippe2015}.
 For the two catecholic substrates, the pH-optimum shifted from neutral to alkaline pHs, when \cf{Mg^2+} was omitted.
-However, the maximum activity remained roughly the same, even though magnesium addition seemed to have a rate increasing effect.
+However, the maximum activity remained roughly the same, even though magnesium addition seemed to have a slight rate increasing effect.
 The maximum activities without magnesium were observed at pH 9.45 with \SI{1466}{\pico\katal\per\milli\gram} and \SI{824}{\pico\katal\per\milli\gram} for caffeic acid and eriodictyol respectively, while with \SI{10}{\milli\molar} \cf{Mg^2+} the maximum activities were recorded at pH 6.5 and increased to \SI{1572}{\pico\katal\per\milli\gram} and \SI{1354}{\pico\katal\per\milli\gram} respectively.
-This was not observed for \ifa, which was converted rather slowly without the addition of \cf{Mg^2+} ($A_\mathrm{sp}$ \textless \SI{10}{\pico\katal\per\milli\gram}.
 %
 \begin{table}[htb]\centering
   \caption{Maximum specific activity for the conversion of three different substrates with and without addition of magnesium. The pH at which the maximal activity was reached is indicated by the column titled ``pH''.}
@@ -505,44 +510,43 @@ This was not observed for \ifa, which was converted rather slowly without the ad
   \end{tabular}
 \end{table}
 %
-However, addition of \SI{10}{\milli\molar} \cf{Mg^2+} increased the rate of \ifa conversion by 3-fold, from \SI{7}{\pico\katal\per\milli\gram} to \SI{21}{\pico\katal\per\milli\gram} at pH 9.45 (\autoref{tab:specific.activity}).
 
-Linear regression models of the form
-\begin{equation}
-  Y =\beta_0 + \beta_1X_1 + \beta_2X_2 + \cdots + \beta_pX_p + \epsilon
-\end{equation}
-were fitted to the data in order to make statistically sound inferences regarding a relationship between activity and pH/\cf{Mg^2+} addition.
-However, to simplify this task two subsets were prepared first. 
-The subsets split the data into substrates with catecholic and substrates without catecholic motifs.
-The \ifa data was fit to the model
+During the catalysis of a methyl transferase reaction, the acceptor moiety of the substrate is activated by abstraction of a proton.
+%The increasing pH might directly abstract a proton 
+At high pH-values, the substrates might already be deprotonated, thus increasing the rates of reaction, while the enzyme just acts as a scaffold.
+High pH-values would also mean that the mainly the 4'-hydroxyl of the catechols would be deprotonated (\autoref{tab:pkaphenols}).
+However, an increasing amount of 4'-methylation was not observed contradicting the notion, that an already deprotonated substrate entered the active site.
+It is more likely, that the external milieu influences the enzymes active site and  makes the active side chains more basic.
+However, why the addition of magnesium would shift the pH-optimum back to neutral pH-values is not clear.
+
+To statistically support the presented findings, the collected data were also studied from a statisticians point of view, which is described in the following paragraph in a bit more detail.
+The shown results are solely included for purposes of making statistics based inferences in the context of domain knowledge.
+Relationships between independent variables $X_{1,\cdots,p}$ influencing a system and the outcome $Y$ of such a system can be mathematically described.
+The simplest relationship between one independent variable $X_1$ and the dependent variable $Y$ is a linear one and is defined mathematically by a linear equation $Y = \beta_1X_1 + \beta_0$.
+The coefficient $\beta_1$ describes how much $Y$ is altered by one unit $X$, while $\beta_0$ is the offset. 
+Even seemingly non-linear outcomes of $Y$ might be sufficiently described by multi-term linear equations such as
+\begin{equation*}
+  Y =\beta_0 + \beta_1X_1 + \beta_2X_2 + \cdots + \beta_pX_p + \epsilon,
+\end{equation*}%
+when the independent variables $X_{1,\cdots,p}$ are known.
+Linear regression models of this form can be used to make statistically sound inferences about a studied system and were thus used to assess the relationship between PFOMT's methylation activity and pH-modulation as well as \cf{Mg^2+} addition.
+Two subsets of the activity data were prepared first.
+The subsets split the data into substrates with catecholic (i.e. caffeic acid, eriodictyol) and substrates without catecholic (i.e. \ifa) motifs.
+This was done to simplify the interpretability of the results, since the activities of the catecholic and non-catecholic  substrates differed greatly.
+The \ifa data was fit to the linear model
 \begin{equation}\label{eq:ifa}
   activity = \beta_0 + \beta_1 \times \factor{Mg} + \beta_2 \times \factor{pH} + \beta_3 \times (\factor{Mg} \times \factor{pH}),
 \end{equation}
-which explains about \SI{93.5}{\percent} of the variance (\autoref{tab:lm-ifa}).
-The small p-values of the coefficients for \factorx{Mg} and \factorx{pH}$\times$\factorx{Mg} suggest that there is a strong interaction between \cf{Mg^2+} addition and pH.
-However, the pH as a main effect has little significance.
-
-The pH profile for the catecholic substrates shows that there might be a quadratic relationship between pH and activity. 
-This is true for most enzymatic reactions, where ionizable groups are involved the reaction.
-A quadratic term was thus included into the linear model to capture this relationship:
-\begin{equation}\label{eq:cat}
-    activity = \beta_0 + \beta_1 \times \factor{Mg} + \beta_2 \times \factor{pH} + \beta_3 \times (\factor{Mg} \times \factor{pH}) + \beta_4 \times \factor{pH^2} + \beta_4 \times (\factor{pH^2} \times \factor{Mg}),
-\end{equation}
-This model describes the actual data reasonable well, with about \SI{68.6}{\percent} of the variance explained (\autoref{fig:e_pHlm}).
-Also here the p-values suggest an interaction between \cf{Mg^2+} and pH (\autoref{tab:lm-cat}).
-In addition more complex linear models were prepared and shrunken via the Lasso method and 5-fold cross validation (see \autoref{tab:lasso-ifa} and \ref{tab:lasso-catechol}) \citep{Tibshirani1994}.
-The Lasso is a shrinkage method that can shrink coefficients to exactly zero and thus make a model more interpretable.
-The results of the the shrunken models match well with the results obtained by linear modelling and are further statistical evidence that pH and \cf{Mg^2+} show main effects and also interaction effects which seem to be associated with the activity towards \ifa and catechol (eriodictyol, caffeic acid) methylation by \pfomt.
-Nonetheless, all of these rather simple models can not reflect the reality of such complex systems as enzymes where lots of factors play important roles.
-The shown results are solely included for purposes of making statistics based inferences in the context of domain knowledge.
-
-
+which contains one term, $\beta_3\times$\factorx{pH}$\times$\factorx{Mg}, to account for an interaction effect between magnesium and pH besides the main effects terms.
+This model explains about \SI{93.6}{\percent} of the variance ($R^2=0.9355$) of the measured data (\autoref{tab:lm-ifa}).
+Fitting the data in the \verb+R+ software using the \emph{stats::lm()} function also calculates $p$-values associated with each parameter estimate.
+%
 \begin{table}[htb]\centering
-  \caption{Coefficients of the model (\ref{eq:ifa}) for activity of \ifa methylation. The factor $\factor{Mg}$ is a categorical variable (addition/no addition) and can therefore only be 0 or 1.}
+  \caption{Coefficients of the model (\autoref{eq:ifa}) for activity of \ifa methylation. The factor $\factor{Mg}$ is a categorical variable (addition/no addition) and can therefore only be 0 or 1.}
   \label{tab:lm-ifa}
   \centering\small
    \begin{tabular}{lrrrrr}
-    \toprule\small
+    \toprule
     & Estimate & Std. Error & t value & p-value &   \\ 
     \midrule
     $($Intercept) & -241.4238 & 420.1485 & -0.57 & 0.5864 &   \\ 
@@ -550,9 +554,27 @@ The shown results are solely included for purposes of making statistics based in
     \factorx{Mg} & -2201.3084 & 594.1797 & -3.70 & 0.0100 & *  \\ 
  \factorx{pH}$\times$\factorx{Mg} & 373.8131 & 77.7503 & 4.81 & 0.0030 &  ** \\ 
     \bottomrule
+    \multicolumn{6}{l}{\footnotesize significance codes: '*' \SI{5}{\percent} level; '**' \SI{1}{\percent} level}
   \end{tabular}
 \end{table}
+%
+The smallest $p$-value 0.0030 was calculated for the interaction factor \factorx{pH}$\times$\factorx{Mg}, and strongly suggests that there is a significant interaction between methylation activity on \ifa and \cf{Mg^2+} addition combined with pH-modulation.
+The parameter estimate $\beta_3$ for this term is almost 374.
+Since in this case \factorx{Mg} is categorical and can only be 0 (no magnesium added) or 1 (magnesium added) the interaction term $\beta_3\times$\factorx{pH}$\times$\factorx{Mg} resolves to 0, if no magnesium was added.
+This means that when \cf{Mg^2+} is added, the activity (in $\mathrm{AU\,min^{-1}}$) is increased by 374 for each unit the pH is raised.
+The $p$-value for \factorx{pH} as a main effect is rather high, suggesting pH alone has no significant impact on the activity.
+The parameter estimate $\beta_1$ for factor \factorx{Mg} however has a low $p$-value of 0.010, which suggest that its impact on activity is significant. 
+Due to the categorical nature of \factorx{Mg}, this means, that the activity is decreased by \num{2201} $\mathrm{AU\,min^{-1}}$ when magnesium is added.
+However, this information is only of importance when predicting the activity outside of the measured pH range, which was not the aim here.
+Together, these results illustrate, that neither magnesium addition, nor the pH alone would have such a strong effect on the activity as both factors combined had.
 
+The data of the second subset containing of the catecholic substrates was also modelled in a similar fashion (see \autoref{sec:apppfomtph}).
+It was found, that the pH has a much stronger influence on the methylation activity of PFOMT towards catechols than \ifa.
+Interaction between magnesium addition and pH-modulation were also suggested for the catecholic substrates from this data.
+For a more thourough discussion see \autoref{sec:apppfomtph}.
+In addition to pure inference based modelling, models can also be used to make predictions based on (new) independent variables (\autoref{fig:e_pHlm}).
+However, it cannot be stressed enough that models do not reflect the truth, but are rather another tool to gain insight into a system.
+%
 \begin{figure}[htb]
   \centering
   \begin{figureframe}
@@ -565,35 +587,37 @@ The shown results are solely included for purposes of making statistics based in
       \caption{Catecholic substrates ($R^2=0.6855$)}
     \end{subfigure}
   \end{figureframe}
-  \caption{pH-profiles of substrate conversion. The linear regression models (blue, dashed lines) grasp the general trend of the data reasonably well to draw inferences. \SI{95}{\percent} prediction intervals are displayed as shaded areas.}
+  \caption{pH-profiles of substrate conversion along with predicted data. Predicted data from the linear regression models (blue, dashed lines) grasp the general trend of the data reasonably well to draw inferences. \SI{95}{\percent} prediction intervals are displayed as shaded areas.}
   \label{fig:e_pHlm}
 \end{figure}
+%
+
+
 
 To the knowledge of the author, this is the first time the effects of \cf{Mg^2+} and pH on methyl transferase activity were systematically analyzed.
 It was shown, that catecholic and non-catecholic substrates could be activated sufficiently by \pfomt at high pHs without the addition of \cf{Mg^2+}. 
 It is improbable that, if the active site retained the same miromilieu under every reaction condition, an influence on the rate of reaction would be observed.
 This could be a hint, that the enzyme relays the chemical information of the environment directly to the substrate to aid in activation.
-
 Furthermore, omission of \cf{Mg^2+} shifts the pH-optimum of the reaction catalyzed by \pfomt to higher pH-values.
-Addition of \cf{Mg^2+}, seems to remedy the effect of high pHs on catalysis at least for caffeic acid, since the initial rates observed were not as high.
+%Addition of \cf{Mg^2+}, seems to remedy the effect of high pHs on catalysis at least for caffeic acid, since the initial rates observed were not as high.
 It would be of interest to analyze this behavior with further systematic studies and multiple levels of \cf{Mg^2+} concentrations.
 
 
 \subsection{Methylation of different chemical motifs}
 
 The initial results, that showed the conversion of  non-catecholic \ifa by \pfomt promted additional experiments with other different non-catechols from multiple flavonoid subgroups (\autoref{tab:substitutions}, \autoref{fig:substitutions}).
-The tested substrates were selected from four different compound groups (cinnamic acids, flavones, flavanones and flavonols) and each group contained each of the structural motifs tested (phenol, catechol, \gls{3o4m}, \gls{4o3m}), if possible.
-Each substrate was assessed for conversion with two enzymes (wild-type and 4'-specific variant; Y51R N202W) at four different conditions (pH/\cf{Mg^2+}: low/no, low/yes, high/no, high/yes).
-The low and high pH-values were 7.5 and 8.6, respectively.
+The tested substrates were selected from four different compound groups (cinnamic acids, flavones, flavanones and flavonols) and each group contained each of the structural motifs tested (phenol, catechol, \glsentryfirst{3o4m}, \glsentryfirst{4o3m}), if possible.
+Each substrate was assessed for conversion with two enzymes (\pfomt wild-type and 4'-specific variant \pfomt Y51R N202W) at four different conditions (pH/\cf{Mg^2+}: low/no, low/yes, high/no, high/yes).
+The ``low'' and ``high'' pH-values were 7.5 and 8.6, respectively.
 When \cf{Mg^2+} was added the concentration was \SI{10}{\milli\molar}.
 The reactions were incubated at \degC{30} for 16\,h (see section \ref{sec:omtassay}).
 
-\begin{table}[htpb]
+\begin{table}[htb]\centering\small
   \caption{Substrate grid that was tested for methylation with \pfomt.
     Four different groups of compounds were screened. The groups of flavones, flavanones and cinnamic acids each contained one representative of each motif (phenolic, catecholic, \glsentryfirst{3o4m}, \glsentryfirst{4o3m}. The substitution patterns refer to \autoref{fig:substitutions}.}
   \label{tab:substitutions}
-  \begin{tabularx}{\textwidth}{Xrrccc}
-    \toprule\small
+  \begin{tabular}{lrrccc}
+    \toprule
     substrate & group & motif & R\textsuperscript{1} & R\textsuperscript{2} & R\textsuperscript{3} \\
     \midrule
     naringenin & flavanon & phenolic & H & OH  &  H \\
@@ -615,21 +639,21 @@ The reactions were incubated at \degC{30} for 16\,h (see section \ref{sec:omtass
     \midrule
     kaempferol & flavonole  &  phenolic & H & OH  &  H \\
     quercetin & flavonole  & catecholic & OH & OH  &  H \\
-    myricetin &  flavonole & catecholic & OH & OH  &  OH \\
+    myricetin &  flavonole & 3',4',5'-trihydroxy & OH & OH  &  OH \\
     \bottomrule
-  \end{tabularx}
+  \end{tabular}
 \end{table}
 
-\begin{figure}[htpb]
+\begin{figure}[htb]
   \begin{figureframe}
-    \includegraphics[width=\textwidth]{usr/graphics/static/substrate_pattern}
+    \includegraphics[width=0.8\textwidth]{usr/graphics/static/substrate_pattern}
   \end{figureframe}
   \caption{Substrates from four different groups were screened for methylation by \pfomt under different conditions (pH/\cf{Mg^2+}). Figure refers to \autoref{tab:substitutions}.}
   \label{fig:substitutions}
 \end{figure}
 
 
-There was almost complete conversion of the catecholic substrates under any condition after 16\,h of incubation, at least when the wild-type enzyme was used (\autoref{tab:pfomtconversion}).
+There was almost complete conversion of the catecholic substrates (eriodictyol, luteolin, caffeic acid and quercetin) under all condition after 16\,h of incubation, at least when the wild-type enzyme was used (\autoref{tab:pfomtconversion}).
 This suggests, that the reaction period was chosen too long. 
 Effects on the conversion of catecholic substrates will therefore be disregarded or only discussed superficially.
 When the wild-type enzyme was employed conversion was observed for all substrates under at least one condition.  
@@ -657,7 +681,7 @@ As expected, methylation only took place on the B-ring of the flavonoids.
 For a throughout discussion refer to \autoref{ch:MSMS}.
 
 
-\begin{figure}[htpb]
+\begin{figure}[htb]
   \begin{figureframe}
     \begin{subfigure}{0.48\textwidth}
       \includegraphics[width=\textwidth]{usr/graphics/static/tmp_conversion_substrates_WT}
@@ -674,13 +698,13 @@ For a throughout discussion refer to \autoref{ch:MSMS}.
 \end{figure}
 
 
-\begin{table}[htpb]
+\begin{table}[htb]\centering\small
   \caption{Conversion of substrates after 16\,hours incubation. Only the maximum conversion is displayed, along with the conditions it was achieved under.
-    \\ \footnotesize \textsuperscript{\textdagger} --  wild-type: substrate conversion was maximal for all pH/\cf{Mg^2+} combinations. \\ \textsuperscript{\textdaggerdbl} -- conversion of caffeic acid by the wild-type was set to 100\,\%.}
+     }
   \label{tab:pfomtconversion}
-  \begin{tabularx}{\textwidth}{Xcccccc}
-    \toprule\small
-    \multirow{2}{*}{substrate} & \multicolumn{3}{c}{wild-type} & \multicolumn{3}{c}{4'-specific variant} \\
+  \begin{tabular}{lcccccc}
+    \toprule
+    \multirow{2}{*}{substrate} & \multicolumn{3}{>{\centering}p{0.3\textwidth}}{wild-type} & \multicolumn{3}{>{\centering}p{0.3\textwidth}}{4'-specific variant} \\
     \cmidrule(lr){2-4}\cmidrule(lr){5-7}
     & conversion & pH & \cf{Mg^2+} & conversion & pH & \cf{Mg^2+}  \\
     & \% & & & \% & & \\
@@ -706,7 +730,8 @@ For a throughout discussion refer to \autoref{ch:MSMS}.
     quercetin & 93  & \textglobrise  & \xmark  & 86 & \textglobrise  &   \\
     myricetin &  129 & \textglobfall  & \xmark  & 102  & \textglobfall  & \cmark  \\
     \bottomrule
-  \end{tabularx}
+    \multicolumn{7}{p{0.9\textwidth}}{\footnotesize \textsuperscript{\textdagger}wild-type: substrate conversion was maximal for all pH/\cf{Mg^2+} combinations. \newline \textsuperscript{\textdaggerdbl}conversion of caffeic acid by the wild-type was set to 100\,\%.}
+  \end{tabular}
 \end{table}
 
 
@@ -737,13 +762,13 @@ Furthermore, the influence of pH and magnesium addition on \pfomt was systematic
 In \invivo biotransformation experiments it could be shown, that the
 class II \glsentrydesc{omt} \somt is able to methylate flavonoids and stilbenes
 at the 4'-OH of the B-ring, regardless the exact moiety (phenolic,
-catecholic, \glsentrydesc{4o3m}).  Although over all the conversions were very
+catecholic, \glsentrydesc{4o3m}).  Although overall the conversions were very
 low, the conversion of the stilbene resveratrol was superior over all
 other tested substrates ($\geq$\SI{86}{\percent} vs. $\geq$\SI{55}{\percent}).
-\somt exclusively methylated the 4'-OH.
-Unfortunately. these results are purely based on \invivo bitransformations carried out in \eco.
+\somt showed methylating activity exclusively when a free 4'-OH was present, suggesting it only acts on 4'-hydroxyl groups. 
+Unfortunately, these results are purely based on \invivo bitransformations carried out in \eco.
 \somt could not be obtained in pure, soluble form for \invitro characterization.
-Nonetheless, using \somt it was shown that \glsentrydesc{doe} and \glsentrydesc{ffd} can be valuable tools for the systematic determination of factors that influence refolding of \glspl{omt}.
+Nonetheless, using \somt it was shown that \glsentryfirst{doe} and \glsentryfirst{ffd} can be valuable tools for the systematic determination of factors that influence refolding of \glspl{omt}.
 
 \textit{In vitro} experiments using the class I \glsentrydesc{omt} \pfomt, showed that non-catecholic substrates could be methylated.
 These findings are contrary to the belief, that \pfomt only acted on vicinal aromatic dihydroxyls that are present in compounds such as eriodictyol or caffeic acid.

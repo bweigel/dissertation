@@ -47,10 +47,10 @@
 \newacronym[nonumberlist]{uhplc}{UHPLC}{ultra-high performance liquid chromatography}
 \newacronym[plural=NCE, nonumberlist, firstplural=normalized collision energies (NCE)]{nce}{NCE}{normalized collision energy}
 \newacronym[nonumberlist]{lc}{LC}{liquid chromatography}
-\newacronym[nonumberlist]{ftms}{FTMS}{fourier transform mass spectrometry}
+\newacronym[nonumberlist]{ftms}{FTMS}{Fourier transform mass spectrometry}
 \newacronym[nonumberlist]{rp}{RP}{resolving power}
 \newacronym[nonumberlist]{apci}{APCI}{atmospheric pressure chemical ionisation}
-\newacronym[nonumberlist]{ei}{EI}{electron impact}
+\newacronym[nonumberlist]{ei}{EI}{electron ionization}
 \newacronym[nonumberlist]{auc}{AUC}{area under the curve}
 \newacronym[nonumberlist]{3o4m}{3O4M}{3'-hydroxy-4'-methoxy}
 \newacronym[nonumberlist]{4o3m}{4O3M}{4'-hydroxy-3'-methoxy}
@@ -62,7 +62,7 @@
 \newacronym[nonumberlist]{esi}{ESI}{electrospray ionization}
 \newacronym[nonumberlist]{maldi}{MALDI}{matrix-assisted laser desorption/ionization}
 \newacronym[nonumberlist]{mz}{\textit{m/z}}{mass-to-charge ratio}
-\newacronym[nonumberlist]{cid}{CID}{collsion induced dissociation}
+\newacronym[nonumberlist]{cid}{CID}{collision induced dissociation}
 \newacronym[nonumberlist]{hcd}{HCD}{higher-energy collisional dissociation}
 \newacronym[nonumberlist]{pca}{PCA}{principal component analysis}
 \newacronym[nonumberlist]{gst}{GST}{Glutathion \textit{S}-transferase}

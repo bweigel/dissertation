@@ -137,15 +137,6 @@ read_chunk("usr/statistics/rproject/itc.R")
 
 ## ----subdoc_content_material_methods, child='usr/subdocuments/chapters/c_material_methods_section.Rnw', eval=T----
 
-## ----test, echo=F, tidy=TRUE, fig.height=3.25, fig.width=5.25, dev='tikz'----
-load("../../statistics/data/WEB338.fa-ca.calibration.Rda")
-ggplot(cali.curve, aes(x=FA, y=value, shape=as.factor(pH), color=as.factor(DES), group=buffer.no)) + 
- labs(x="ferulic acid/caffeic acid (0.4 mM)", y="$\\mathrm{Abs}^{595}$") +
- geom_point() +
- theme_ost()
-
-# torm <- ls()
-# rm(list = torm[!grepl(pattern = "(ost)", torm)])
 
 
 ## ----subdoc_content_results, child='usr/subdocuments/chapters/d_pfomt_section.Rnw', eval=T----
@@ -221,6 +212,16 @@ itc.compare(itcs[c(18,21)], ylim=c(-0.6, 0.05), xlim=c(0,1000),lwd=2, noms = nam
 
 
 ## ----subdoc_content_appendix, child='usr/subdocuments/chapters/x_appendix_section.Rnw', eval=T----
+
+## ----test, echo=F, tidy=TRUE, fig.height=3.25, fig.width=5.25, dev='tikz'----
+load("../../statistics/data/WEB338.fa-ca.calibration.Rda")
+ggplot(cali.curve, aes(x=FA, y=value, shape=as.factor(pH), color=as.factor(DES), group=buffer.no)) + 
+ labs(x="ferulic acid/caffeic acid (0.4 mM)", y="$\\mathrm{Abs}^{595}$") +
+ geom_point() +
+ theme_ost()
+
+# torm <- ls()
+# rm(list = torm[!grepl(pattern = "(ost)", torm)])
 
 ## ----litSAM, eval=T, echo=F, tidy=TRUE, fig.height=5, fig.width=5, out.width='0.7\\textwidth', dev='pdf', error=T, crop=T----
 load("../../statistics/data/litSAMder.Rda")

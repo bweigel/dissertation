@@ -7,10 +7,11 @@
 %%%------------------------------------------------------------------------------------%%
 
 
+\renewcommand\linenumberfont{\normalfont\bfseries\scriptsize}
+
 %%%-------------------------------------------------%%%
 %%% Autoreferencing stuff in the appendix %%%
 %%%-------------------------------------------------%%%
-
 \usepackage{appendix}
 \def\appendixautorefname{Appendix}
 
@@ -215,6 +216,33 @@
 \DeclareCaptionLabelFormat{web-subcap}{\color{black}\sffamily\textbf{#2}}
 
 %%%-------------------------------------------------%%%
+%%% declare new scheme float %%%
+%%%-------------------------------------------------%%%
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[
+fileext=lox,
+listname={List of Schemes},
+name=Scheme,
+placement=htb,
+within=chapter,
+chapterlistsgaps=off,
+]{scheme}
+
+
+\newcounter{sche}
+\renewcommand*{\thesche}{\arabic{sche}}
+\newcommand*{\scheautorefname}{Scheme}
+
+\makeatletter
+\renewcommand*{\p@sche}{%
+  \expandafter\p@@sche
+}
+\newcommand*{\p@@sche}[1]{%
+  \textbf{#1}%
+}
+\makeatother
+
+%%%-------------------------------------------------%%%
 %%% Automatic referencing with \molnum und \molref %%%
 %%%-------------------------------------------------%%%
 
@@ -234,17 +262,33 @@
 	\refstepcounter{mol}%
 \ifthenelse{\equal {#1} {}}{\textbf{\themol}}{{\protect#1}\,(\textbf{\themol})}{\label{mol:#2}}} %% creates the anchor and label
 %\WithSuffix\newcommand\molref*[1]{\ref{mol:#1}} %% calls the reference
-
-
-
 \newcommand{\molref}[1]{(\ref{mol:#1})} %% calls the reference
 \WithSuffix\newcommand\molref*[1]{\ref{mol:#1}} %% calls the reference
 
 
+\newcounter{frg}
+\renewcommand*{\thefrg}{\roman{frg}}
+\newcommand*{\frgautorefname}{fragment}
+\makeatletter
+\renewcommand*{\p@frg}{%
+  \expandafter\p@@frg
+}
+\newcommand*{\p@@frg}[1]{%
+  \textbf{#1}%
+}
+\makeatother
+
+\newcommand{\frgnum}[2][]{%
+	\refstepcounter{frg}%
+\ifthenelse{\equal {#1} {}}{\textbf{\thefrg}}{{\protect#1}\,(\textbf{\thefrg})}{\label{frg:#2}}} %% creates the anchor and label
+
+
+\newcommand{\frgref}[1]{(\ref{frg:#1})} %% calls the reference
+\WithSuffix\newcommand\frgref*[1]{\ref{frg:#1}} %% calls the reference
 
 
 \usepackage{chngcntr}
-
+\counterwithin*{frg}{chapter}
 \counterwithin*{mol}{chapter}
 %%%-------------------------------------------------%%%
 %%% Set own environments %%%

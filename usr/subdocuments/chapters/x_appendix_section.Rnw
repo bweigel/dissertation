@@ -109,8 +109,8 @@
   \begin{figureframe}
     \includegraphics[width=0.75\textwidth]{usr/graphics/static/tmp_e_growthcurve}
   \end{figureframe}
-  \caption{Growth curve of \eco BL21(DE3) expressing \textit{\somt} at \degC{37}. 
-  Glucose is depleted about 5\,hours into growth, at which point the start of \textit{\somt} expression is expected.
+  \caption{Growth curve of \eco BL21(DE3) expressing \glsentryfirst{somt} at \degC{37}. 
+  Glucose is depleted about 5\,hours into growth, at which point the start of \glsentrytext{somt} expression is expected.
   The \odx{600} after inoculation was about \num{0.1}.}
   \label{fig:e_growthcurve}
 \end{figure}
@@ -120,12 +120,12 @@
   \begin{figureframe}
     \includegraphics[width=0.45\textwidth]{usr/graphics/static/sds_somt}
   \end{figureframe}
-  \caption{\sdspage gel of samples aquired during growth curve measurements. The arrow indicated the band that could correspond to the GST-tagged \somt protein.}
+  \caption{\sdspage gel of samples aquired during growth curve measurements. The arrow indicates the band that could correspond to the GST-tagged \glsentrytext{somt} protein.}
   \label{fig:x_somtgel}
 \end{figure}
 
 \begin{table}[htpb]\centering
-  \caption{Results for the \aov of the main effects model describing soluble protein. Significance codes: 0.05 (\textbf{~*~}), 0.1 (\textbf{~.~})} 
+  \caption{Results for the \aov of the main effects model describing soluble protein.} 
   \label{tab:aov_BF}
 \begin{tabular}{lrrrrrl}
     \toprule\small
@@ -138,20 +138,21 @@
     divCations    & 1 & 5.49 & 5.49 & 0.04 & 0.8588 & \\ 
     redox         & 1 & 5.52 & 5.52 & 0.04 & 0.8584 & \\ 
     CycloDex      & 1 & 134.67 & 134.67 & 0.92 & 0.4083 & \\ 
-    SAH           & 1 & 896.83 & 896.83 & 6.13 & 0.0897 & .\\ 
+    SAH           & 1 & 896.83 & 896.83 & 6.13 & 0.0897 & \textbullet\\ 
     Residuals     & 3 & 439.26 & 146.42 &  &  & \\ 
     \bottomrule
+           \multicolumn{6}{l}{\footnotesize significance codes: '\textbullet' \SI{10}{\percent} level; '*' \SI{5}{\percent} level}
 \end{tabular}
 \end{table}
 
 \begin{table}[htpb]\centering
-  \caption{Results for the \aov of the main effects model describing protein activity. Significance codes: 0.05 (\textbf{~*~}), 0.1 (\textbf{~.~})} 
+  \caption{Results for the \aov of the main effects model describing protein activity.} 
   \label{tab:aov_activity}
   \begin{tabular}{lrrrrrl}
     \toprule\small
     & df & Sum Sq & Mean Sq & F value & Pr($>$F) &   \\ 
     \midrule
-    Arginine      & 1 & 8.31 & 8.31 & 6.62 & 0.0824 & . \\ 
+    Arginine      & 1 & 8.31 & 8.31 & 6.62 & 0.0824 & \textbullet \\ 
     pH            & 1 & 5.71 & 5.71 & 4.55 & 0.1227 & \\ 
     Glycerin      & 1 & 0.44 & 0.44 & 0.35 & 0.5945 & \\ 
     ionicStrength & 1 & 3.38 & 3.38 & 2.69 & 0.1997 & \\ 
@@ -161,6 +162,7 @@
     SAH           & 1 & 0.11 & 0.11 & 0.09 & 0.7893 & \\ 
     Residuals     & 3 & 3.77 & 1.26 &  &  & \\ 
     \bottomrule
+           \multicolumn{6}{l}{\footnotesize significance codes: '\textbullet' \SI{10}{\percent} level; '*' \SI{5}{\percent} level}
   \end{tabular}
 \end{table}
 
@@ -187,9 +189,9 @@
 \begin{figure}[htpb]
   \centering
   \begin{figureframe}
-    \includegraphics[width=0.85\textwidth]{usr/graphics/static/SOMT_SS-bridges}
+    \includegraphics[width=\textwidth]{usr/graphics/static/SOMT_SS-bridges}
   \end{figureframe}
-  \caption{Graphical representation of a \somt model obtained from the PHYRE2 web portal (\url{http://www.sbg.bio.ic.ac.uk/phyre2/html/page.cgi?id=index}) \citep{Kelley2015}}
+  \caption{Graphical representation of a \somt model obtained from the PHYRE2 web portal (\url{http://www.sbg.bio.ic.ac.uk/phyre2/html/page.cgi?id=index}) \citep{Kelley2015}. Cysteines are shown as sticks. The distance between neighboring cysteines that could by oxidized to disulfide bridges is shown in orange.}
   \label{fig:x_somtmodel}
 \end{figure}
 
@@ -209,24 +211,27 @@
 \begin{figure}[htpb]
   \centering
   \begin{figureframe}
-    \begin{subfigure}{0.73\textwidth}
+    \begin{subfigure}{0.69\textwidth}
       \includegraphics[width=\textwidth]{usr/graphics/static/tmp_MEP_pfomt}
-      \caption{Main effects plot for PFOMT conversion of non-catechols. 
-        Phenolics (A) are converted worst and conversion of \gls{3o4m} is generally best.
-        There seem to be positive effects of \cf{Mg^2+} and pH.
-        The wild-type enzyme shows better conversion than the 4'-specific variant.}
+      \caption{}
       \label{fig:x_mep_pfomt}
     \end{subfigure}
     %% Interaction plot Mg/pH
-    \begin{subfigure}{0.23\textwidth}
+    \begin{subfigure}{0.3\textwidth}
       \includegraphics[width=\textwidth]{usr/graphics/static/tmp_pfomt_MgpH}
-      \caption{Interaction plot of \cf{Mg^2+} and pH for the conversion of non-catechols and catechols by \pfomt.
-        There seems to be an interaction between \cf{Mg^2+} addition and pH. However, statistical tests suggest this interaction might not be significant.\\
-        blue -- \cf{Mg^2+} addition, red -- no \cf{Mg^2+}}
+      \caption{}
       \label{fig:x_iap_pfomt}
     \end{subfigure}
   \end{figureframe}
-  \caption{}
+  \caption{Main and interaction effects plots for the conversion of non-catecholic phenylpropanoids by \glsentryfirst{pfomt}.
+    (\textbf{\subref{fig:x_mep_pfomt}}) Main effects plot for PFOMT conversion of non-catechols. 
+        Phenolics (A) are converted worst and conversion of \glsentryfirst{3o4m} (C) is generally best.
+        Conversion of \glsentryfirst{4o3m} (D) is a little better than phenolics, but is still below average.
+        There seem to be positive effects of \cf{Mg^2+} and high pH, because conversion is generally best at high pH and with magnesium added.
+        The wild-type enzyme shows better conversion than the 4'-specific variant.
+        (\textbf{\subref{fig:x_iap_pfomt}}) Interaction plot of \cf{Mg^2+} and pH for the conversion of non-catechols and catechols by \pfomt.
+        There seems to be an interaction between \cf{Mg^2+} addition (\textcolor{blue}{blue} -- \cf{Mg^2+} addition, \textcolor{red}{red} -- no \cf{Mg^2+}) and pH. However, statistical tests suggest this interaction might not be significant.}
+
 \end{figure}
 
 
@@ -341,7 +346,7 @@ Overview over the contructs produced for the present thesis. Each step during th
 \begin{table}[htpb]\centering
   \caption{%
 Crystallographic data, phasing and refinement statistics.
-}
+  \bweigel{vervollständigen!}}
 \label{tab:xtalstat}
 \begin{tabular}{ll}%
 % \caption{Crystallographic data, phasing and refinement statistics.} \\
@@ -358,14 +363,14 @@ Crystallographic data, phasing and refinement statistics.
  %   \endhead
      
     \textit{data collection} & \\% & \\
-    wavelength (\gls{a}) & \\% & \\
+%    wavelength (\gls{a}) & \\% & \\
     resolution (\gls{a}) & 1.95 \\% & \\
     total reflections & \num{392368} \\%& \\
     unique reflections & \num{125822} \\%& \\
     completeness (\%) & 99.12 \\%& \\
     $I/\sigma (I)$ & 9.9 \\%& \\
-    $R^a_{sym}$ &  \\%& \\
-    redundancy &  \\%& \\
+%    $R^a_{sym}$ &  \\%& \\
+%    redundancy &  \\%& \\
     space group & $P2_12_12_1$ \\%& \\
     cell dimensions (\gls{a}) \\%&  & \\
     \textit{a} & 86.16 \\%& 48.88 \\
@@ -377,8 +382,8 @@ Crystallographic data, phasing and refinement statistics.
     \gls{rmsd} bond lengths (\gls{a}) & 0.0199  \\%& \\
     \gls{rmsd} bond angles (°) & 2.0568 \\%& \\
     B-values ($\mathrm{\AA^2}$) & 21.593  \\%& \\
-    water &  \\%& \\
-    ions &  \\%& \\ \\
+%    water &  \\%& \\
+%    ions &  \\%& \\ \\
      
     \textit{Ramachandran plot} (\%) &  \\%& \\
     favoured & 96.82 \\%& \\

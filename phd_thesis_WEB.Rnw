@@ -13,7 +13,7 @@
 %
 
 %\documentclass[revision=true, fontchoice=libertine, colortheme=orange, oneside]{ost/subdocuments/open_science_thesis} 
-\documentclass[floatbarrier=true, addfloatbarrierto=section, revision=false, linespacing=onehalfspacing, fontchoice=libertine, colortheme=orange, oneside]{ost/subdocuments/open_science_thesis} 
+\documentclass[floatbarrier=true, addfloatbarrierto=section, revision=false, linenumbers=true, linespacing=onehalfspacing, fontchoice=libertine, colortheme=orange, oneside]{ost/subdocuments/open_science_thesis} 
 
 % linenumbers = true/[false] Enable or disable line numbering. This can be handy on revisions.
 % colormode = [rgb]/cmyk The colormode can be switched between rgb which is optima for displays 
@@ -86,6 +86,7 @@
 
 
 \begin{document}
+\setlength\linenumbersep{0.5cm}
 
 % start front matter
 \frontmatter

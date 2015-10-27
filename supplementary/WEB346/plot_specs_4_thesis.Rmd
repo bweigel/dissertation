@@ -1,0 +1,112 @@
+---
+title: "WEB346 Spectra"
+author: "Benjamin Weigel"
+date: "27.10.2015"
+output:
+  pdf_document:
+    includes:
+      in_header: mystyles.sty
+    keep_tex: yes
+---
+
+```{r, cache=FALSE}
+library(knitr)
+opts_chunk$set(dev='pdf', echo=F)
+```
+
+
+```{r, message=FALSE}
+library(data.table)
+library(dplyr)
+library(nwc.chemsupport)
+```
+
+
+
+```{r pdf_plot, echo=FALSE, message=FALSE, fig.height=3, fig.width=10, eval=FALSE}
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-II/MzXML/WEB346_H_9_nMS2_163,177.mzXML", scan = c(3477))
+
+par(mfrow=c(1,1))
+plotSpec(mssy, title = "negative mode MS.2 spectrum: WEB346_H_9_nMS2_163,177.mzXML\nCID@30%.NCE, precursor.mz 177, rt = 13.6 min, scan 3477", xrange = c(110,185), yrange = c(0,105))  
+
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-II/MzXML/WEB346_G_13_pMS2_209,195.mzXML", scan = c(3363,3575,3364,3572))
+plotSpec(mssy[[1]], title = "negative mode MS.2 spectrum: WEB346_G_13_pMS2_209,195.mzXML\nCID@30%.NCE, precursor.mz 209, rt = 12.95 min, scan 3363", xrange = c(110,210), yrange = c(0,105))  
+plotSpec(mssy[[2]], title = "negative mode MS.2 spectrum: WEB346_G_13_pMS2_209,195.mzXML\nCID@30%.NCE, precursor.mz 209, rt = 13.75 min, scan 3575", xrange = c(110,210), yrange = c(0,105))  
+plotSpec(mssy[[1]], title = "negative mode MS.2 spectrum: WEB346_G_13_pMS2_209,195.mzXML\nCID@40%.NCE, precursor.mz 209, rt = 12.95 min, scan 3364", xrange = c(110,210), yrange = c(0,105))  
+plotSpec(mssy[[2]], title = "negative mode MS.2 spectrum: WEB346_G_13_pMS2_209,195.mzXML\nCID@40%.NCE, precursor.mz 209, rt = 13.75 min, scan 3572", xrange = c(110,210), yrange = c(0,105))  
+
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-II/MzXML/WEB346_G_14_nMS2_193,207.mzXML", scan = c(3726))
+plotSpec(mssy, title = "negative mode MS.2 spectrum: WEB346_G_14_nMS2_193,207.mzXML\nCID@40%.NCE, precursor.mz 207, rt = ??? min, scan 3726", xrange = c(110,210), yrange = c(0,105))  
+
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-II/MzXML/WEB346_E_14_nMS2_193,207.mzXML", scan = c(3261))
+plotSpec(mssy, title = "negative mode MS.2 spectrum: WEB346_E_14_nMS2_193,207.mzXML\nCID@30%.NCE, precursor.mz 207, rt = 12.9 min, scan 3261", xrange = c(90,210), yrange = c(0,105))  
+
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-II/MzXML/WEB346_E_14_pMS2_209,195.mzXML", scan = c(3363,3571))
+plotSpec(mssy[[1]], title = "positive mode MS.2 spectrum: WEB346_E_14_pMS2_209,195.mzXML\nCID@30%.NCE, precursor.mz 209, rt = 12.95 min, scan 3363", xrange = c(90,210), yrange = c(0,105))  
+plotSpec(mssy[[2]], title = "positive mode MS.2 spectrum: WEB346_E_14_pMS2_209,195.mzXML\nCID@30%.NCE, precursor.mz 209, rt = 13.74 min, scan 3571", xrange = c(90,210), yrange = c(0,105)) 
+```
+
+```{r tikz_plot, echo=FALSE, message=FALSE, fig.height=2.5, fig.width=8, dev='tikz'}
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-II/MzXML/WEB346_H_9_nMS2_163,177.mzXML", scan = c(3477))
+
+par(mfrow=c(1,1))
+plotSpec(mssy, title = "negative mode MS.2 spectrum: WEB346\\_H\\_9\\_nMS2\\_163,177.mzXML\nCID@30\\%.NCE, precursor.mz 177, rt = 13.6 min, scan 3477", xrange = c(90,210), yrange = c(0,105))  
+
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-II/MzXML/WEB346_E_14_nMS2_193,207.mzXML", scan = c(3261))
+plotSpec(mssy, title = "negative mode MS.2 spectrum: WEB346\\_E\\_14\\_nMS2\\_193,207.mzXML\nCID@30\\%.NCE, precursor.mz 207, rt = 12.9 min, scan 3261", xrange = c(90,210), yrange = c(0,105))  
+
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-II/MzXML/WEB346_E_14_pMS2_209,195.mzXML", scan = c(3363,3571))
+plotSpec(mssy[[1]], title = "positive mode MS.2 spectrum: WEB346\\_E\\_14\\_pMS2\\_209,195.mzXML\nCID@30\\%.NCE, precursor.mz 209, rt = 12.95 min, scan 3363", xrange = c(90,210), yrange = c(0,105))  
+plotSpec(mssy[[2]], title = "positive mode MS.2 spectrum: WEB346\\_E\\_14\\_pMS2\\_209,195.mzXML\nCID@30\\%.NCE, precursor.mz 209, rt = 13.74 min, scan 3571", xrange = c(90,210), yrange = c(0,105)) 
+
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-II/MzXML/WEB346_A_3_pMS2,HCD_317,303.mzXML", scan = c(3643,3644))
+plotSpec(mssy[[1]], title = "positive mode MS.2 spectrum: WEB346\\_A\\_3\\_pMS2,HCD\\_317,303.mzXML\nCID@45\\%.NCE, precursor.mz 317, rt = 14.54 min, scan 3643", yrange = c(0,105), xrange=c(50,320))  
+plotSpec(mssy[[2]], title = "positive mode MS.2 spectrum: WEB346\\_A\\_3\\_pMS2,HCD\\_317,303.mzXML\nHCD@100\\%.NCE, precursor.mz 317, rt = 14.54 min, scan 3644", yrange = c(0,105), xrange=c(50,320), tresh = 15)  
+
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-II/MzXML/WEB346_E_7_pMS2,HCD_315,301.mzXML", scan = c(3631,3632,3187,3188))
+plotSpec(mssy[[1]], title = "positive mode MS.2 spectrum: WEB346\\_E\\_7\\_pMS2,HCD\\_315,301.mzXML\nCID@45\\%.NCE, precursor.mz 315, rt = 14.53 min, scan 3631", yrange = c(0,105), xrange=c(50,320), tresh=5)  
+plotSpec(mssy[[2]], title = "positive mode MS.2 spectrum: WEB346\\_E\\_7\\_pMS2,HCD\\_315,301.mzXML\nHCD@100\\%.NCE, precursor.mz 315, rt = 14.53 min, scan 3632", yrange = c(0,105), xrange=c(50,320), tresh=10)  
+plotSpec(mssy[[3]], title = "positive mode MS.2 spectrum: WEB346\\_E\\_7\\_pMS2,HCD\\_315,301.mzXML\nCID@45\\%.NCE, precursor.mz 315, rt = 12.77 min, scan 3187", yrange = c(0,105), xrange=c(50,320), tresh=5)  
+plotSpec(mssy[[4]], title = "positive mode MS.2 spectrum: WEB346\\_E\\_7\\_pMS2,HCD\\_315,301.mzXML\nHCD@100\\%.NCE, precursor.mz 315, rt = 12.77 min, scan 3188", yrange = c(0,105), xrange=c(50,320), tresh=15) 
+
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-II/MzXML/WEB346_E_5_pMS2,HCD_285,271.mzXML", scan = c(3139,3140,3760))
+plotSpec(mssy[[1]], title = "positive mode MS.2 spectrum: WEB346\\_E\\_5\\_pMS2,HCD\\_285,271.mzXML\nCID@45\\%.NCE, precursor.mz 285, rt = 12.59 min, scan 3139", yrange = c(0,105), xrange=c(50,320), tresh=5)  
+plotSpec(mssy[[2]], title = "positive mode MS.2 spectrum: WEB346\\_E\\_5\\_pMS2,HCD\\_285,271.mzXML\nHCD@100\\%.NCE, precursor.mz 285, rt = 12.59 min, scan 3140", yrange = c(0,105), xrange=c(50,320), tresh=10)  
+plotSpec(mssy[[3]], title = "positive mode MS.2 spectrum: WEB346\\_E\\_5\\_pMS2,HCD\\_285,271.mzXML\nCID@45\\%.NCE, precursor.mz 285, rt = 15.05 min, scan 3760", yrange = c(0,105), xrange=c(50,320), tresh=5)  
+
+
+library(mzR)
+ms<-openMSfile("/media//mori//Stuff/LCMS/WEB2015-II/MzXML/WEB346_G_14_nMS2_193,207.mzXML")
+xy<-header(ms)
+
+this <- seq(3,length(xy$totIonCurrent),by=3)
+tic <- xy$totIonCurrent
+rt <- xy$retentionTime/60
+plot(y=tic[this], x=rt[this], type="l", xlim=c(10,17))
+points(x=rt[this][which(tic[this] > 20000)], y=tic[this][which(tic[this] > 20000)], col="red", pch=4)
+
+identifyPch <- function(x, y = NULL, this, n = length(x), pch = 19, ...)
+{
+    xy <- xy.coords(x, y); x <- xy$x; y <- xy$y
+    sel <- rep(FALSE, length(x)); res <- integer(0)
+    while(sum(sel) < n) {
+        ans <- identify(x[!sel], y[!sel], n = 1, plot = FALSE, ...)
+        if(!length(ans)) break
+        ans <- which(!sel)[ans]
+        points(x[ans], y[ans], pch = pch)
+        sel[ans] <- TRUE
+        res <- c(res, x[ans])
+    }
+    res
+}
+
+ms<-openMSfile("/media//mori//Stuff/LCMS/WEB2015-II/MzXML/WEB346_E_14_nMS2_193,207.mzXML")
+xy<-header(ms)
+
+this <- seq(3,length(xy$totIonCurrent),by=3)
+tic <- xy$totIonCurrent
+rt <- 1:length(xy$totIonCurrent)
+plot(y=tic[this], x=rt[this], type="l", xlim=c(2500,4000))
+points(x=rt[this][which(tic[this] > 20000)], y=tic[this][which(tic[this] > 20000)], col="red", pch=4)
+identifyPch(x=rt[this][which(tic[this] > 20000)], y=tic[this][which(tic[this] > 20000)], this = this)
+```

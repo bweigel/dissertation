@@ -593,6 +593,24 @@ conversions %>% filter(variant == "WT") %>% xtable
 conversions %>% filter(variant != "WT") %>% xtable
 ```
 
+```{r}
+mf_labeller <- function(var, value){
+   value <- as.character(value)
+   if(var == "Mg"){
+       value[value == "TRUE"] <- "10 mM Mg"
+       value[value == "FALSE"] <- "no Mg"
+   }
+   if(var == "group"){
+       value[value == "cinnamic acid"] <- "cinnamic acid \n \\textbf{A}"
+       value[value == "flavanone"] <- "flavanone \n \\textbf{B}"
+       value[value == "flavone"] <- "flavone \n \\textbf{C}"
+       value[value == "flavonole"] <- "flavonole \n \\textbf{D}"
+   }
+   
+   return(value)
+}
+```
+
 ```{r, fig.width=4, error=T, fig.height=5, fig.cap=c("Wild-type conversions. colors from light to dark: low/no, low/yes, high/no, high/yes", "Same as above, but some data is omitted.","4'-selective variant conversions. colors from light to dark: low/no, low/yes, high/no, high/yes")}
 WEB346.results <- res.save
 
@@ -611,8 +629,10 @@ web <-   list(geom_point(aes(x=pH, y=conversion, group=Mg, linetype=Mg)),
 
 withingroup <- data.frame(substrate = 1:17, with.in = c(rep(c("phenolic", "catecholic", "3O4M", "4O3M"), 2), "phenolic", 
                                                         "m-coumaric","o-coumaric", "catecholic","4O3M", "3O4M", "phenolic","catecholic","myricetin"))
-withingroup$with.in <- with(withingroup, factor(with.in, levels = c("phenolic", "catecholic", "3O4M", "4O3M", "m-coumaric","o-coumaric", "myricetin")))
+withingroup$with.in <- with(withingroup, factor(with.in, levels = c("phenolic", "catecholic", "3O4M", "4O3M", "m-coumaric","o-coumaric", "myricetin"), labels = c("phenolic\n\\textbf{1}", "catecholic\n\\textbf{2}", "3O4M\n\\textbf{3}", "4O3M\n\\textbf{4}", "m-coumaric","o-coumaric", "myricetin"), ordered = T))
 conversions <- merge(conversions, withingroup, by="substrate")
+
+conversions$group <- factor(conversions$group, levels = levels(conversions$group), ordered = T)
 #ggplot(data = conversions %>% filter(variant == "WT")) +
 #  web
 
@@ -623,7 +643,7 @@ conversions %<>% mutate(condition=paste(pH, Mg, sep="."))
 conversions$condition <- with(conversions, factor(condition, levels = c("low.FALSE", "low.TRUE", "high.FALSE", "high.TRUE")))
 
 web <- list(  geom_bar(stat = "identity", position = "dodge", aes(fill=condition)),
-              facet_grid(group~., scale="free_x"),
+              facet_grid(group~., scale="free_x", labeller=mf_labeller),
               labs(x="motif"),
               scale_fill_grey(start=0.8, end=0.2),
               #scale_fill_brewer(palette="Set1"),
@@ -644,18 +664,44 @@ ggplot(data = conversions %>% filter(variant == "WT", with.in != "catecholic" & 
 ggplot(data = conversions %>% filter(variant == "WT"), aes(x=with.in, y=conversion)) +
   web + coord_cartesian(ylim = c(0,0.275)) + scale_y_continuous(breaks=seq(0, 1, 0.1)) 
 
-ggplot(data = conversions %>% filter(variant == "WT"), aes(x=with.in, y=conversion*100)) +
+ggplot(data = conversions %>% filter(variant == "WT", (with.in != "m-coumaric" & with.in != "o-coumaric"& with.in != "myricetin")), aes(x=with.in, y=conversion*100)) +
   web + coord_cartesian(ylim = c(0,115)) + scale_y_continuous(breaks=seq(0, 100, 25), labels=c(0,"",50,"",100))+
   ylab("conversion (\\%)")
 
-ggplot(data = conversions %>% filter(variant != "WT"), aes(x=with.in, y=conversion*100)) +
+ggplot(data = conversions %>% filter(variant != "WT", (with.in != "m-coumaric" & with.in != "o-coumaric"& with.in != "myricetin")), aes(x=with.in, y=conversion*100)) +
   web + coord_cartesian(ylim = c(0,115)) + scale_y_continuous(breaks=seq(0, 100, 25), labels=c(0,"",50,"",100))+
   ylab("conversion (\\%)")
-
 
 ggplot(data = conversions %>% filter(variant == "WT", group != "flavonole", with.in!="catecholic"), aes(x=with.in, y=conversion)) +
   web + scale_y_continuous(breaks=seq(0, 1, 0.1))
 
 
+```
+
+
+```{r  fig.width=4.5, error=T, fig.height=4.5}
+
+web <- list(  geom_bar(stat = "identity", position = "dodge", aes(fill=condition)),
+              facet_grid(group~with.in, scales = "free_x", labeller=mf_labeller),
+              labs(x="motif"),
+              scale_fill_grey(start=0.8, end=0.2),
+              #scale_fill_brewer(palette="Set1"),
+              theme_bw(),
+              theme(legend.position="none",
+                    axis.text.x = element_blank(),
+                    axis.ticks.x = element_blank(),
+                    axis.title.x = element_blank(),
+                    axis.text.y = element_text(size=10),
+                    axis.title = element_text(size=14)
+                    ),
+              coord_cartesian(ylim = c(0,115)), scale_y_continuous(breaks=seq(0, 100, 25), labels=c(0,"",50,"",100)))
+
+ggplot(data = conversions %>% filter(variant == "WT", (with.in != "m-coumaric" & with.in != "o-coumaric"& with.in != "myricetin")), aes(x=with.in, y=conversion*100)) +
+  web + 
+  ylab("conversion (\\%)")
+
+ggplot(data = conversions %>% filter(variant != "WT", (with.in != "m-coumaric" & with.in != "o-coumaric"& with.in != "myricetin")), aes(x=with.in, y=conversion*100)) +
+  web + 
+  ylab("conversion (\\%)")
 ```
 

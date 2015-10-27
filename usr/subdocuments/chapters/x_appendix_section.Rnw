@@ -234,7 +234,95 @@
 
 \end{figure}
 
+\section{Identification of products from conversion of non-catechols by PFOMT}
+\label{sec:pfomt_conversions}
 
+\subsection{\textit{p}-coumaric acid conversion}
+
+The product obtained by conversion of \textit{p}-coumaric acid by \pfomt was determined as 4-hydroxy cinnamic acid methyl ester.
+The negative mode MS\tup{2} spectrum showed four prominent peaks \mz{177}(21) [M-H]\tup{-}, 162(35), 145(100) and 118(47). 
+If the enzymatic product was the methyl ether, one would expect a strong \mz{133}, corresponding to [M-H-\cf{CO2}]\tup{-} \cite{Song2015}.
+However \mz{133} was not observed, strongly suggesting the methyl ester.
+Comparison of the obtained data with literature data confirmed the methyl ester as sole product \cite{Jarrell2014}.
+
+\begin{figure}[!htb]
+  \begin{figureframe}
+  \includegraphics[width=\textwidth]{usr/graphics/static/MS2_p-hydroxy_methylcinnamate}
+  \end{figureframe}
+\end{figure}
+
+\subsection{Ferulic acid and \ifa conversion}
+
+Methylation of \ifa and ferulic acid afforded two methylated products with retention times of \num{12.9} and \SI{13.7}{\minute}.
+The compound eluting at \SI{12.9}{\minute} was identified as caffeic acid dimethylether (\molnum{came}) through comparison to an authentic standard, whereas the compounds eluting about one minute later were identified as the ferulic (\molnum{fame}) and \textit{iso}-ferulic acid methyl esters (\molnum{ifame}).
+Since the the retention time is an indicator for the polarity of an eluting compound and the methyl ester is much more unpolar than the dimethyl ether, it comes as no surprise that the latter elutes earlier on a reversed-phase column.
+Ionization of the enzymatic products was difficult in negative mode, but easily achieved in positive mode.
+The only peaks in the positive mode MS\tup{2} spectra of \molref{came} and (\molref*{fame},\molref*{ifame}) were \mz{191} and \mz{177} respectively.
+This indicates a loss of water and methanol from the dimethylether and methyl ester respectively.
+
+\begin{figure}[!htb]
+  \begin{figureframe}
+    \begin{subfigure}{\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_neg_dimethylCA}
+      \caption{}\label{subfig:came_neg}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_pos_dimethylCA}
+      \caption{}\label{subfig:came_pos}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_pos_CA-methylester}
+      \caption{}\label{subfig:ifame_pos}
+    \end{subfigure}
+  \end{figureframe}
+  \caption{MS\tup{2} spectra of \molref{came} and \molref{ifame}.
+   (\textbf{\subref{subfig:came_neg}}) negative mode MS\tup{2} of \molref{came}.
+    (\textbf{\subref{subfig:came_pos}}) positive mode MS\tup{2} of \molref{came}.
+    (\textbf{\subref{subfig:ifame_pos}}) positive mode MS\tup{2} of \molref{ifame}.
+  }
+\end{figure}
+
+\subsection{3',4'-dimethyl eriodictyol}
+
+\molnum{dimethylED}
+
+\begin{figure}[!htb]
+  \begin{figureframe}
+    \begin{subfigure}{\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_CID_dimethylED}
+      \caption{}\label{subfig:dimethyl_cid}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_HCD_dimethylED}
+      \caption{}\label{subfig:dimethyl_hcd}
+    \end{subfigure}
+  \end{figureframe}
+  \caption{MS\tup{2} spectra of 3'4'-dimethyl eriodictyol \molref{dimethylED}.
+   (\textbf{\subref{subfig:dimethyl_cid}}) positive mode MS\tup{2} \glsentrytext{cid} spectrum of \molref{dimethylED}.
+    (\textbf{\subref{subfig:dimethyl_hcd}}) positive mode MS\tup{2} \glsentrytext{hcd} spectrum of \molref{dimethylED}.
+  }
+\end{figure}
+
+\subsection{3',4'-dimethyl luteolin}
+
+\molnum{dimethyllut}
+
+\begin{figure}[!htb]
+  \begin{figureframe}
+    \begin{subfigure}{\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_CID_dimethylluteolin}
+      \caption{}\label{subfig:dimethyllut_cid}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_HCD_dimethylluteolin}
+      \caption{}\label{subfig:dimethyllut_hcd}
+    \end{subfigure}
+  \end{figureframe}
+  \caption{MS\tup{2} spectra of 3'4'-dimethyl luteolin \molref{dimethyllut}.
+   (\textbf{\subref{subfig:dimethyllut_cid}}) positive mode MS\tup{2} \glsentrytext{cid} spectrum of \molref{dimethyllut}.
+    (\textbf{\subref{subfig:dimethyllut_hcd}}) positive mode MS\tup{2} \glsentrytext{hcd} spectrum of \molref{dimethyllut}.
+  }
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

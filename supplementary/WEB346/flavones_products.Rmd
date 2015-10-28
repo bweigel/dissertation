@@ -1,0 +1,119 @@
+---
+title: "WEB346 - flavones - peculiar products"
+author: "Benjamin Weigel"
+date: "28.10.2015"
+output: 
+  pdf_document:
+      keep_tex: yes  
+---
+
+# Flavones #
+
+Chromatograms that are available are highly biased (only at high pH with Mg and wt, other conditions are highly underrepresented.).
+Chromatograms (high pH, Mg, wt) show two products. One is the original 3' or 4' methylated substrate (rt 14.55 min). The other elutes earlier than the substrate, at 12.59, 12.69 and 12.78 min  when apigenin, chrysoeriol or diosmetin were substrates respectively.
+The fraction of this product to the 'true' product is in favour of the true product when a free 3'-hydroxyl (diosmetin) can be methylated.
+Otherwise it is shifted in favor of the 'false' product (apigenin, chrysoeriol).
+
+```{r echo=FALSE, message=FALSE, dev='tikz', fig.height=2.5, fig.width=4}
+data <- read.csv("~/IPB/thesis/supplementary/WEB346/flavones_deterioration.csv", sep = ";")
+
+library(ggplot2)
+library(dplyr)
+library(nwc.chemsupport)
+
+web <- list(  scale_fill_grey(start=0.8, end=0.2),
+              #scale_fill_brewer(palette="Set1"),
+              theme_bw(),
+              theme(legend.position="none",
+                    axis.text.x = element_blank(),
+                    axis.ticks.x = element_blank(),
+                    axis.title.x = element_blank(),
+                    axis.text.y = element_text(size=10),
+                    axis.title = element_text(size=14)
+                    ))
+
+ggplot(data %>% filter(enzyme == "wt", (precursor == 285 | precursor == 315), pH == 8.6, method == "HCD.100"), aes(x=product, y=height)) + 
+  geom_bar(stat = 'identity', position='dodge', aes(fill=substrate)) + facet_grid(.~substrate) 
+
+ggplot(data %>% filter(enzyme == "wt", (precursor == 285 | precursor == 315), pH == 8.6, method == "HCD.100"), aes(x=substrate, y=height)) + 
+  geom_bar(stat = 'identity', position='dodge', aes(fill=product)) + labs(y="peak height") + facet_grid(.~substrate, scales="free_x") + web
+
+ggplot(data %>% filter(enzyme == "wt", (precursor == 285 | precursor == 315)), aes(x=as.factor(rt), y=height)) + 
+  geom_bar(stat = 'identity', position='dodge', aes(fill=as.factor(pH))) + 
+  facet_grid(method~substrate, scales = "free_x")
+
+# ggplot(data %>% filter(enzyme == "wt"), aes(x=as.factor(rt), y=height)) + 
+#   geom_bar(stat = 'identity', position='dodge', aes(color=as.factor(precursor), fill=as.factor(pH))) + 
+#   facet_grid(method~substrate, scales = "free_x")
+```
+
+```{r tikz_plot, echo=FALSE, message=FALSE, fig.height=3, fig.width=8}
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-II/MzXML/WEB346_E_5_pMS2,HCD_285,271.mzXML", scan = c(3139, 3140))
+
+par(mfrow=c(1,1))
+plotSpec(mssy[[1]], title = "Substrate: apginenin, pos. mode MS.2 spectrum:WEB346_E_5_pMS2,HCD_285,271.mzXML\nCID@45\\%.NCE, precursor.mz 285, rt = 12.59 min, scan 3139", xrange = c(90,310), yrange = c(0,105))  
+plotSpec(mssy[[2]], title = "Substrate: apginenin, pos. mode MS.2 spectrum: WEB346_E_5_pMS2,HCD_285,271.mzXML\nHCD@100\\%.NCE, precursor.mz 285, rt = 12.59 min, scan 3140", xrange = c(90,310), yrange = c(0,105), tresh = 5) 
+
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-II/MzXML/WEB346_E_7_pMS2,HCD_315,301.mzXML", scan = c(3187, 3188))
+
+par(mfrow=c(1,1))
+plotSpec(mssy[[1]], title = "Substrate: diosmetin, pos. mode MS.2 spectrum: WEB346_E_7_pMS2,HCD_315,301.mzXML\nCID@45\\%.NCE, precursor.mz 315, rt = 12.77 min, scan 3187", xrange = c(90,310), yrange = c(0,105))  
+plotSpec(mssy[[2]], title = "Substrate: diosmetin, pos. mode MS.2 spectrum: WEB346_E_7_pMS2,HCD_315,301.mzXML\nHCD@100\\%.NCE, precursor.mz 315, rt = 12.77 min, scan 3188", xrange = c(90,310), yrange = c(0,105), tresh = 5) 
+
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-II/MzXML/WEB346_E_8_pMS2,HCD_315,301.mzXML", scan = c(3171, 3168))
+
+par(mfrow=c(1,1))
+plotSpec(mssy[[1]], title = "Substrate: chrysoeriol, pos. mode MS.2 spectrum: WEB346_E_8_pMS2,HCD_315,301.mzXML\nCID@45\\%.NCE, precursor.mz 315, rt = 12.68 min, scan 3171", xrange = c(90,310), yrange = c(0,105))  
+plotSpec(mssy[[2]], title = "Substrate: chrysoeriol, pos. mode MS.2 spectrum: WEB346_E_8_pMS2,HCD_315,301.mzXML\nHCD@100\\%.NCE, precursor.mz 315, rt = 12.68 min, scan 3168", xrange = c(90,310), yrange = c(0,105), tresh = 5) 
+```
+
+# Flavonoles #
+
+## Kaempferol ##
+
+some contaminations in substarte stock (rt 13.26, 15.22)
+
+WEB346_E_15_pMS2_287,301.mzXML:
+
+- 'product' peaks as 12.97 min and 14.1 min
+- 14.1 min > CID does not produce fragments (just m/z 286) > no idea what > does not match any references
+  - HCD spectrum shows characteristic 121, 136, 184, 213, 229,  258 and 285/286
+- peak at 12.97 min
+  - cid spectrum almost looks the same as peak 14.1 min
+  - hcd spectrum also look s the same
+
+```{r kaempferol, echo=FALSE, message=FALSE, fig.height=2.5, fig.width=8}
+mssy<-getMSSpec("/media//mori//Stuff/LCMS/WEB2015-II/MzXML/WEB346_E_15_pMS2_287,301.mzXML", scan = c(3252, 3536))
+
+par(mfrow=c(1,1))
+plotSpec(mssy[[1]], title = "pos. mode MS.2 spectrum: WEB346_E_15_pMS2_287,301.mzXML\nHCD@75\\%.NCE, precursor.mz 301, rt = 12.97 min, scan 3252", xrange = c(90,310), yrange = c(0,105))  
+plotSpec(mssy[[2]], title = "pos. mode MS.2 spectrum: WEB346_E_15_pMS2_287,301.mzXML\nHCD@75\\%.NCE, precursor.mz 301, rt = 14.1 min, scan 3536", xrange = c(90,310), yrange = c(0,105)) 
+```
+
+WEB346_F_15_pMS2_287,301.mzXML:
+
+- some peak at 14.11 min (same as WEB346_E_15_pMS2_287,301.mzXML) > does not match any reference spectra > no idea what 
+
+
+## Quercetin ##
+
+__product contamination in substrate stock!__ (1.7e7 vs 4e5, substrate vs product in cid)
+
+WEB346_B_16_pMS2_303,317,331.mzXML: 
+
+- mono-methyl product isorhamnetin at 13.98 min (fits the reference spectrum) (2e6 vs 1e7)
+- di-methyl product at 14.17 min (M+H 331) (m/z 153 and CO losses observed in HCD, only [M+H-CH3]+ in CID)
+- other (very small) peaks disregarded
+
+WEB346_E_16_pMS2_303,317,331.mzXML:
+
+- only mono-methyl product observed in chromatogram (1.4e5 vs 5e5)
+- peak at 12.04 min (when precursor ion 317)
+- other peculiar peaks in chromatograms
+
+WEB346_F_16_pMS2_303,317,331.mzXML:
+
+- mono-methyl product at 13.98 min (spectrum fits isorhamnetin) (2e5 vs 8e6)
+- dimethyl product observed at 14.17 min > same as for WEB346_B_16_pMS2_303,317,331.mzXML
+
+

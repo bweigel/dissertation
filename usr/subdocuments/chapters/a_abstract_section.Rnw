@@ -8,6 +8,7 @@
 
 \section{English Abstract}
 
+A novel crystal structure of the \textit{apo}-form of \pfomt was solved, that gives insights into the movements and domains involved in substrate binding.
 
 
 \section{Deutsche Zusammenfassung}

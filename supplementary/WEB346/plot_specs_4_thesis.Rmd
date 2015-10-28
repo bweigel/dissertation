@@ -110,3 +110,32 @@ plot(y=tic[this], x=rt[this], type="l", xlim=c(2500,4000))
 points(x=rt[this][which(tic[this] > 20000)], y=tic[this][which(tic[this] > 20000)], col="red", pch=4)
 identifyPch(x=rt[this][which(tic[this] > 20000)], y=tic[this][which(tic[this] > 20000)], this = this)
 ```
+
+
+```{r}
+identifyPY <- function(x, y = NULL, this, n = length(x), pch = 19, ...)
+{
+    xy <- xy.coords(x, y); x <- xy$x; y <- xy$y
+    sel <- rep(FALSE, length(x)); res <- integer(0)
+    while(sum(sel) < n) {
+        ans <- identify(x[!sel], y[!sel], n = 1, plot = FALSE, ...)
+        if(!length(ans)) break
+        ans <- which(!sel)[ans]
+        points(x[ans], y[ans], pch = pch)
+        sel[ans] <- TRUE
+        res <- c(res, y[ans])
+    }
+    res
+}
+
+ms<-openMSfile("/media//mori//Stuff/LCMS/WEB2015-II/MzXML/WEB346_D_6_pMS2,HCD_301,287.mzXML")
+xy<-header(ms)
+
+this <- seq(4,length(xy$totIonCurrent),by=4)
+tic <- xy$totIonCurrent
+rt <- 1:length(xy$totIonCurrent)
+plot(y=tic[this], x=rt[this], type="l", xlim=c(2500,4000))
+points(x=rt[this][which(tic[this] > 20000)], y=tic[this][which(tic[this] > 20000)], col="red", pch=4)
+identifyPY(x=rt[this][which(tic[this] > 20000)], y=tic[this][which(tic[this] > 20000)], this = this)
+```
+

@@ -16,7 +16,7 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
 
 \subsection{Commonly used solutions and buffers}
 
-\begin{lstTabularx}{\linewidth}{>{\small}p{0.25\textwidth}<{\small}X}
+\begin{tabularx}{\textwidth}{>{\small}p{0.25\textwidth}<{\small}X}
   50$\times$ 5052 & 25\,\% glycerol, 2.5\,\% (w/v) glucose, 10\,\% (w/v) \textalpha-lactose \\
   binding buffer & 50\,mM \gls{tris}/HCl, 500\,mM NaCl, 10\,\% glycerol, 2.5\,mM imidazole pH 7\\
   elution buffer & 50\,mM \gls{tris}/HCl, 500\,mM NaCl, 10\,\% glycerol, 250\,mM imidazole pH 7 \\
@@ -31,41 +31,55 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
     
   5$\times$ SDS sample buffer &  10\,\% (w/v) \gls{sds}, 10\,mM \textbeta-mercaptoethanol, 20\,\% glycerol, 0.2\,M Tris/HCl pH\,6.8, 0.05\,\% (w/v) bromophenolblue\\
   1000$\times$ trace elements & 50\,mM \cf{FeCl3}, 20\,mM \cf{CaCl2}, 10\,mM \cf{MnCl2}, 10\,mM \cf{ZnSO4}, 2\,mM \cf{CoCl2}, 2\,mM \cf{CuCl2}, 2\,mM \cf{NiCl2}, 2\,mM \cf{Na2MoO4}, 2\,mM \cf{Na2SeO3}, 2\,mM \cf{H3BO3} \\
-\end{lstTabularx}
+\end{tabularx}
 \addtocounter{table}{-1} 
   
 \subsubsection{Preparation of \glsentryfirst{nades}}
 
 \Gls{nades} were prepared by adding each component in a round-bottom flask with a stirrer and stirring the mixture at \degC{50} with intermittent sonication treatments until a clear solution was obtained.
 
- \ostTableEnv[label=tab:des]{%
-   \begin{tabularx}{\linewidth}{X p{0.3\textwidth} X p{0.3\textwidth}}
-   \toprule
-   name & composition & mole ratio & mass fraction (w/w) \\
-   \midrule
-   PCH & propane-1,2-diol \newline choline chloride \newline water & 1:1:1 &  0.326 \newline 0.597 \newline 0.077 \\
-   GCH & \textsc{l}-glucose \newline choline chloride \newline water & 2:5:5 & 0.314 \newline 0.608 \newline 0.078 \\
+\begin{table}[!htb]\centering\small
+  \caption{\Glsentryfirst{nades}-mixtures used within this work.}
+  \label{tab:des}
+  \begin{tabular}{lp{0.3\textwidth}l>{\centering}p{0.3\textwidth}}
+    \toprule
+    name & composition & mole ratio & mass fraction (w/w) \tabularnewline
+    \midrule
+    PCH & propane-1,2-diol \newline choline chloride \newline water & 1:1:1 &  0.326 \newline 0.597 \newline 0.077 \tabularnewline
+    GCH & \textsc{l}-glucose \newline choline chloride \newline water & 2:5:5 & 0.314 \newline 0.608 \newline 0.078 \tabularnewline
    \bottomrule
- \end{tabularx}
- }{%
-   \gls{nades}-mixtures used within this work.%
- }
+  \end{tabular}
+\end{table}
+
+%% \ostTableEnv[label=tab:des]{%
+%%    \begin{tabularx}{\linewidth}{X p{0.3\textwidth} X p{0.3\textwidth}}
+%%    \toprule
+%%    name & composition & mole ratio & mass fraction (w/w) \\
+%%    \midrule
+%%    PCH & propane-1,2-diol \newline choline chloride \newline water & 1:1:1 &  0.326 \newline 0.597 \newline 0.077 \\
+%%    GCH & \textsc{l}-glucose \newline choline chloride \newline water & 2:5:5 & 0.314 \newline 0.608 \newline 0.078 \\
+%%    \bottomrule
+%%  \end{tabularx}
+%%  }{%
+%%    \gls{nades}-mixtures used within this work.%
+%%  }
 
 \subsection{Culture media used to grow bacteria}
 
-\begin{lstTabularx}{\linewidth}{>{\small}p{0.25\textwidth}<{\small}X}
+\begin{tabularx}{\linewidth}{>{\small}p{0.25\textwidth}<{\small}X}
   LB-medium & \SI{10}{\g\per\l} NaCl, \SI{10}{\g\per\l} tryptone, \SI{5}{\g\per\l} yeast extract, pH 7.5 \\
   LB-agar & LB + 1.5\,\% (w/v) agar-agar \\ 
   TB-medium & \SI{12}{\g\per\l} tryptone, \SI{24}{\g\per\l} yeaxst extract, 0.4\,\% glycerol, 72\,mM \cf{K2HPO4}, 17\,mM \cf{KH2PO4}\\
   ZY & \SI{10}{\g\per\l} tryptone, \SI{5}{\g\per\l} yeast extract \\ 
   ZYP-5052 & volume fraction (v/v): 0.928 ZY, 0.05 20$\times$ NPS, 0.02 50$\times$ 5052, 0.002 1\,M \cf{MgSO4}, 0.0002 1000$\times$ trace elements\\
-\end{lstTabularx}
+\end{tabularx}
 \addtocounter{table}{-1} 
   
 \subsection{Bacterial strains}
 
 \subsubsection{\textit{E.coli}}
-\begin{lstTabularx}{\linewidth}{>{\small}p{0.25\textwidth}<{\small}X}
+
+\begin{tabularx}{\linewidth}{>{\small}p{0.25\textwidth}>{\small}X}
   BL21(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) \newline Invitrogen, Karslruhe (Germany) \\
   C41(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) \newline Lucigen, Wisconsin (USA) \\
   C43(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3)\newline Lucigen, Wisconsin (USA) \\
@@ -78,13 +92,15 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
   Rosetta(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) pRARE (Cam$^R$) \newline Novagen, Wisconsin (USA) \\
   Rosetta(DE3) pLysS & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) pLysSRARE (Cam$^R$) \newline Novagen, Wisconsin (USA) \\
   T7 Express & \textit{fhuA}2 \textit{lacZ::T}7 \textit{gene}1 \textit{[lon] ompT gal sulA}11 \textit{R}(\textit{mcr-}73\textit{::miniTn}10--Tet$^S$)2 \textit{[dcm] R}(\textit{zgb}-210\textit{::Tn}10--Tet$^S$) \textit{endA}1 $\Delta$(\textit{mcrC-mrr})114\textit{::IS}10 \newline NEB, Massachusetts (USA) \\
-\end{lstTabularx}
+\end{tabularx}
 \addtocounter{table}{-1} 
  
 \subsubsection{\textit{Agrobacterium tumefaciens}}
-\begin{lstTabularx}{\linewidth}{>{\small}p{0.25\textwidth}<{\small}X}
-GV3101 & chromosomal background: C58, marker gene: \textit{rif}, \gls{tip}: cured, opine: nopaline \newline Sylvestre Marillonet, IPB \\
-\end{lstTabularx}
+%\begin{table}[htb]\centering\small
+  \begin{tabularx}{\linewidth}{>{\small}p{0.25\textwidth}>{\small}X}
+    GV3101 & chromosomal background: C58, marker gene: \textit{rif}, \gls{tip}: cured, opine: nopaline \newline Sylvestre Marillonet, IPB \\
+  \end{tabularx}
+%\end{table}
 \addtocounter{table}{-1} 
 
 \subsection{Plasmids}
@@ -108,39 +124,36 @@ GV3101 & chromosomal background: C58, marker gene: \textit{rif}, \gls{tip}: cure
 %% Plasmids used in this work.
 %% }
 
-\begin{lstTabularx}[1]{\linewidth}{p{0.3\textwidth}X}
-  \caption{Plasmids used in this work.} \\
+\begin{table}[htb]\centering\small
+  \caption{Plasmids used in this work.}
   \label{tab:plasmids}
-  \small
-  \hfill \\
-     \toprule
-	name & supplier/source \\ 
-     \midrule
-     \endfirsthead
-     \toprule
-	name & supplier/source \\ 
-     \midrule
-     \endhead
-     pACYCDuet-1 & Merck, Darmstadt (Germany)  \\
-     pCDFDuet-1 & Merck, Darmstadt (Germany) \\
-     pET-20b(+) & Merck, Darmstadt (Germany) \\
-     pET-28a(+) & Merck, Darmstadt (Germany) \\
-     pET-32a(+) & Merck, Darmstadt (Germany) \\
-     pET-41a(+) & Merck, Darmstadt (Germany) \\
-     pQE30 & QIAGEN, Hilden (Germany) \\
-     pUC19 & Invitrogen, Karslruhe (Germany) \\
-     \bottomrule
-\end{lstTabularx}
+  \begin{tabular}{ll}
+    \toprule
+    name & supplier/source \\ 
+    \midrule
+    pACYCDuet-1 & Merck, Darmstadt (Germany)  \\
+    pCDFDuet-1 & Merck, Darmstadt (Germany) \\
+    pET-20b(+) & Merck, Darmstadt (Germany) \\
+    pET-28a(+) & Merck, Darmstadt (Germany) \\
+    pET-32a(+) & Merck, Darmstadt (Germany) \\
+    pET-41a(+) & Merck, Darmstadt (Germany) \\
+    pQE30 & QIAGEN, Hilden (Germany) \\
+    pUC19 & Invitrogen, Karslruhe (Germany) \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 \subsection{Oligonucleotides and synthetic genes}
 Oligonucleotides and primers were ordered from Eurofins Genomics (Ebersberg, Germany). The purity grade was \emph{high purity salt free} (HPSF).
 Synthetic genes or gene fragments were obtained from GeneArt\textsuperscript{\textregistered} (Life Technologies, Darmstadt, Germany) or Eurofins Genomics (Ebersberg, Germany).
 
 \bweigel{needs completion}
-\ostTableEnv[label = tab:primers]{%
-  \begin{tabularx}{\textwidth}{X >{\footnotesize}p{0.70\textwidth} X}
+\begin{table}[!htb]\centering\small
+  \caption{Primers used in this work. Recognition sites for endonucleases are underlined. Positions used for site directed mutagenesis are in lower case font.}
+  \label{tab:primers}
+  \begin{tabular}{l>{\scriptsize}p{0.65\textwidth}l}
     \toprule
-    	name & sequence (5'$\rightarrow$3') & cloning site \\ 
+    	name & \small  sequence (5'$\rightarrow$3') & cloning site \\ 
     \midrule
 %    	T7 & TAATACGACTCACTATAGGGT & n/a \\
 %       T7.term & GCTAGTTATTGCTCAGCGGT & n/a \\
@@ -157,10 +170,9 @@ Synthetic genes or gene fragments were obtained from GeneArt\textsuperscript{\te
         pUC1.fw & GCG TAT TGG Gag aTC TTC CGC TTC CTC & \\
         pUC1.rv & GAG GAA GCG GAA GAt ctC CCA ATA CGC & \\
     \bottomrule
-  \end{tabularx}
-}{%
-Primers used in this work. Recognition sites for endonucleases are underlined. Positions used for site directed mutagenesis are in lower case font.
-}
+  \end{tabular}
+\end{table}
+
 
 \subsection{Instruments}
 
@@ -182,8 +194,7 @@ Primers used in this work. Recognition sites for endonucleases are underlined. P
 \addtocounter{table}{-1} 
 
 \subsection{Software}
-All mathematical and statistical computations and graphics were done with the \verb+R+ software (versions 3.1.X, \url{http://cran.r-project.org/}) \citep{RCoreTeam2015}. Visualizations of macromolecules were arranged using the PyMol Molecular Graphics System, version 1.7.0.0 (Schrödinger, New York, USA).
-
+All mathematical and statistical computations and graphics were done with the \verb+R+ software (versions 3.1.X, \url{http://cran.r-project.org/}) \citep{RCoreTeam2015}. Visualizations of macromolecules were arranged using the PyMol Molecular Graphics System, version 1.7.0.0 (Schrödinger, New York, USA) or UCSF Chimera version 1.9 (\url{http://www.cgl.ucsf.edu/chimera})\cite{Pettersen2004}.
 Physicochemical calculations and calculations of different molecular descriptors were performed using Marvin Beans 15.4.13.0 (ChemAxon, Budapest, Hungary) and Molecular Operating Environment 2008.10 (Chemical Computing Group, Montreal, Canada).
 Special software used for X-ray crystal structure solution is discussed seperately in the corresponding section (\ref{sec:xraymethods}).
 
@@ -205,7 +216,7 @@ The reaction mixture was placed in a thermocycler and inbcubated at \degC{37} fo
 The \textit{SOMT2} gene was amplified from pET28a-SOMT using primers \textit{somt1--somt4} (\autoref{tab:primers}), cloned into vector pICH41308 (level 0) using BpiI and consequently subcloned into the level 1 module pICH75044, alongside 35S promoter and \gls{nos}-terminator, using BsaI (\autoref{fig:cloning}).
 The resulting construct was denoted as pBEW107.
 
-\begin{figure}[htpb]
+\begin{figure}[htb]
   \centering
   \begin{figureframe}
     \includegraphics[width=\textwidth]{usr/graphics/static/cloning_pBEW107}
@@ -243,7 +254,7 @@ The left side was infiltrated with \agro cultures transformed with pAGM10733 (\g
 For the right side the \agro culture containing pBEW107 was replaced by a control: \agro transformed with the empty vector pICH75044. 
 
 
-\begin{figure}[htpb]
+\begin{figure}[htb]
   \begin{figureframe}
     \includegraphics[width=0.5\textwidth]{usr/graphics/static/nico2.eps}
   \end{figureframe}
@@ -303,7 +314,7 @@ The sampling culture was inoculated to an \odx{600} of 0.075 using the starter c
 1\,mM \gls{iptg} was added when the \odx{600} reached 0.6-0.8, if appropriate for the studied construct.
 1\,ml samples were removed after different times of incubation (e.g. 4, 8, 12 hours), subfractionated (\ref{sec:subfractionation}) and analyzed via \gls{sds}-\gls{page} (\ref{sec:sdspage}).
 
-Exact specifications of growth conditions (e.g. temperature, time, constructs) are discussed in the individual sections.
+%Exact specifications of growth conditions (e.g. temperature, time, constructs) are discussed in the individual sections.
 
 \subsection{Protein subfractionation}
 \label{sec:subfractionation}
@@ -443,7 +454,7 @@ The experimental matrix was constructed using the \verb+FrF2+ package (\url{http
 
 %\begin{lstTabularx}[1]{\linewidth}{Xc>{\centering\arraybackslash}p{0.25\textwidth}>{\centering\arraybackslash}p{0.25\textwidth}c}
 \begin{table}[htb]\small\centering
-  \caption{Factors and their high and low levels (+/-) used in the construction of the \gls{ffd}.} 
+  \caption{Factors and their high and low levels (+/-) used in the construction of the \glsentryfirst{ffd}.} 
   \label{tab:ffd_factors}
   \begin{tabular}{lcccc}
     \toprule
@@ -464,7 +475,7 @@ The experimental matrix was constructed using the \verb+FrF2+ package (\url{http
 \end{table}
 
 \begin{table}[htb]\small\centering
-  \caption{Experimental design matrix for the \gls{ffd}.} 
+  \caption{Experimental design matrix for the \glsentrytext{ffd}.} 
   \label{tab:ffd_matrix}
   \begin{tabular}{ccccccccccccc}
 %\begin{lstTabularx}[1]{\linewidth}{ccccccccccccc}
@@ -587,19 +598,18 @@ This constitutes the so-called \emph{phase problem}.
 Thus, additional phasing experiments are necessary in order to obtain the phases.
 A variety of phasing experiments are available, which include \emph{marker atom substructure methods}, \emph{density modification} and \emph{\gls{mr}} techniques \citep{Rupp2009}.
 Phases of the structures herein were exclusively determined by \gls{mr} \citep{Rossmann1962,Rossmann2001}. 
-
 \Gls{mr} was performed using the software \emph{Phaser} \citep{McCoy2007,McCoy2007a}, which is included in the \gls{ccp4}-Suite \citep{Winn2011}. 
 A previously published \gls{pfomt} structure (\gls{pdb}-code: 3C3Y \citep{Kopycki2008b}) was used as a template during \gls{mr} procedure for the \gls{pfomt} structure solution.
 %%
-\bweigel{Lysozym struktur}
-For the \gls{mr} of the lysozyme structure the \gls{pdb}-entry 4NHI was used.
+%\bweigel{Lysozym struktur}
+%For the \gls{mr} of the lysozyme structure the \gls{pdb}-entry 4NHI was used.
 
 
 \subsection{Model building, refinement and validation}
 Macromolecular model building and manipulation, as well as real space refinement and Ramachandran idealization were performed using the \gls{coot} software \citep{emsley2010:coot}.
 Structure refinement was done using the software REFMAC5 \citep{Murshudov1997,Vagin2004} as part of the \gls{ccp4}-suite or the \gls{phenix} \citep{Adams2010}.
 Validation of the structures was carried out using the web service MolProbity (\url{http://molprobity.biochem.duke.edu/}) \citep{Chen2010}.
-Structure visualization and the preparation of figures was performed using PyMOL (Schrödinger, New York, USA).
+Structure visualization and the preparation of figures was performed using PyMOL (Schrödinger, New York, USA) and UCSF Chimera (\url{http://www.cgl.ucsf.edu/chimera})\cite{Pettersen2004}.
 
 \subsection{\textit{In silico} substrate docking}
 \textit{In silico} molecular docking studies were performed using the AutoDock Vina 1.1.2 or AutoDock 4.2.6 software in combination with the AutoDockTools-Suite (\url{http://autodock.scripps.edu/}) \citep{Huey2007,Morris2009,Trott2010}.
@@ -627,12 +637,13 @@ Exitation ($\lambda^{\mathrm{ex}}$) and emission ($\lambda^{\mathrm{em}}$) wavel
 \subsection{\textit{In vitro} determination of glucose}
 The glucose concentration in clarified, aqueous samples was determined by a modified version of the glucose assay kit procedure provided by Sigma-Aldrich \citep{Sigma-Aldrich}. \Gls{god} oxidizes \textsc{d}-glucose to gluconic acid, whereby hydrogen peroxide is produced. 
 The hydrogen peroxide can be detected and quantified by \gls{hrp}, which reduces the produced \cf{H2O2} and thereby oxidizes its chromogenic substrate \textit{o}-dianisidine via consecutive one-electron transfers. 
-The oxidized diimine form of \textit{o}-dianisidine can then be measured photospectrometrically \citep{Claiborne1979}.\\
+The oxidized diimine form of \textit{o}-dianisidine can then be measured photospectrometrically \citep{Claiborne1979}.
+
 The methodology employs a coupled photospectrometric assay using \gls{god} and \gls{hrp} with \textit{o}-dianisidine as reporter substrate. 
-The assay was prepared in \gls{mtp}-format. A reaction solution containing \SI{12.5}{U\per\milli\litre} \gls{god}, \SI{2.5}{U\per\milli\litre} \gls{hrp} and \SI{0.125}{\milli\gram\per\milli\litre} \textit{o}-dianisidine dihydrochloride in \SI{50}{mM} sodium acetate pH\,5.1 was prepared. \\
+The assay was prepared in \gls{mtp}-format. A reaction solution containing \SI{12.5}{U\per\milli\litre} \gls{god}, \SI{2.5}{U\per\milli\litre} \gls{hrp} and \SI{0.125}{\milli\gram\per\milli\litre} \textit{o}-dianisidine dihydrochloride in \SI{50}{mM} sodium acetate pH\,5.1 was prepared. 
 Sample solutions from culture supernatants were typically diluted in 9\,volumes of water.
 The reaction was started, by adding \ul{50} reaction solution to \ul{25} of sample and was incubated at \degC{37} and 200\,rpm for 30\,min in a shaking incubator.
-\ul{50} 6\,M sulfuric acid was added to stop the reaction and achieve maximum color development (full oxidation of any \textit{o}-dianisidine charge transfer complexes) (\autoref{fig:godassay}). \\
+\ul{50} 6\,M sulfuric acid was added to stop the reaction and achieve maximum color development (full oxidation of any \textit{o}-dianisidine charge transfer complexes) (\autoref{fig:godassay}). 
 The developed pink color was measured at 540\,nm in a \gls{mtp}-reader.
 A calibration curve of a standard \textsc{d}-glucose solutions (0 to 100\,\si{\micro\gram\per\milli\litre}), that was always part of the experiments, was used to quantify the sample measurements.
 
@@ -677,19 +688,19 @@ A calibration curve of a standard \textsc{d}-glucose solutions (0 to 100\,\si{\m
 The standard assay buffer was 100\,mM Tris/HCl, \uM{2.5} \gls{gsh} pH\,7.5.
 \SI{1}{\milli\molar} \cf{MgCl2}, which was otherwise omitted, was added for reactions using cation dependent \glspl{omt} (e.g. \gls{pfomt}).
 Reactions contained \SI{0.5}{\milli\molar} alkyl donor (e.g.~(\textit{S},\textit{S})-\glslink{sam}{SAM}) and \SI{0.4}{\milli\molar} flavonoid or cinnamic acid substrate.
-Enzymatic reactions were started by addition of enzyme (usually \SI{0.2}{\milli\gram\per\milli\litre}) and incubated at \degC{30}.\\
+Enzymatic reactions were started by addition of enzyme (usually \SI{0.2}{\milli\gram\per\milli\litre}) and incubated at \degC{30}.
 %%%%%%%%%%%%%%%%%%%%%%% Platzhalter
 Reactions were stopped by addition of \ul{500} ethyl acetate containing 2\,\% formic acid and vortexed for 15\,s to extract the hydrophobic phenylpropanoids and flavonoids.
 After centrifugation (\timesg{10000}, \degC{4}, 10\,min) the organic phase was transferred into a new tube.
 The reaction was extraced once more with \ul{500} ethyl acetate, 0.2\,\% formic acid and the pooled organic phases were evaporated using a vacuum concentrator (Concentrator 5301; eppendorf, Hamburg, Germany).
 The residue was dissolved in methanol and centrifuged at \timesg{10000} for 10\,min to remove unsoluble matter. 
-The supernatant was transferred into a \glsentrytext{hplc} vial and analyzed by \gls{hplc} (\ref{sec:hplc}).\\
+The supernatant was transferred into a \glsentrytext{hplc} vial and analyzed by \gls{hplc} (\ref{sec:hplc}).
 When detection of hydrophobic (e.g. flavonoids) and hydrophilic compounds (e.g. \gls{sam}, \gls{sah}) was performed simultaneously reactions were stopped by addition of 0.3 volumes 10\,\% (w/v) \gls{tca} in 50\,\% acetonitrile.
 The mixture was vortexed for complete mixing and incubated on ice for at least 30\,min.
 After centrifugation (\timesg{10000}, \degC{4}, 10\,min) the supernatant was transferred into \glsentrytext{hplc}-sample vials and analyzed (see \ref{sec:hplc}).
 
 \subsubsection{Measurement of activity/pH profiles}\label{sec:pHassay}
-Assays to measure activity over larger pH ranges were set up in 50\,mM \glsentryfirst{mmt}- (pH 4 to 9) or \glsentryfirst{ssg}-buffer (pH 4 to 10) to keep the concentrations of buffer salts constant for each pH \citep{Newman2004}. \\
+Assays to measure activity over larger pH ranges were set up in 50\,mM \glsentryfirst{mmt}- (pH 4 to 9) or \glsentryfirst{ssg}-buffer (pH 4 to 10) to keep the concentrations of buffer salts constant for each pH \citep{Newman2004}. 
 The protein of interest was first extensively dialyzed against the reaction buffer (e.g. \glsentrytext{mmt}, \glsentrytext{ssg}) at pH 7 with added \gls{edta} (\mM{5}) and then against the same buffer without \gls{edta}.
 Standard reaction conditions were 50\,mM buffer, 0.4\,mM alkyl acceptor (e.g. caffeic acid), 0.5\,mM \gls{sam}, \uM{2.5} \gls{gsh} and \SI{0.2}{\mg\per\ml} enyzme.
 \cf{MgCl2} was either omitted or added at \SI{10}{\milli\molar} to assess influences of divalent cations.
@@ -718,14 +729,14 @@ Enzymatic activities (i.e. initial rates) can be calculated from the concentrati
 \label{sec:photoassay}
 Catecholic moieties can form stable complexes in the presence of heavy metals such as copper or iron \citep{Schweigert2001,Mentasti1973}.
 Hence, caffeic acid can complex ferric (\cf{Fe^3+}) ions and form a colored complex with \textlambda\textsubscript{max} = \SI{595}{nm} \citep{Dippe}. 
-Since the complex formation is specific for caffeic acid and methylated derivatives (i.e. ferulic and iso-ferulic acid) cannot complex \cf{Fe^3+}, this can be used as a measure for methylation reactions.\\
+Since the complex formation is specific for caffeic acid and methylated derivatives (i.e. ferulic and iso-ferulic acid) cannot complex \cf{Fe^3+}, this can be used as a measure for methylation reactions.
 \Gls{omt} assays were prepared as before (\autoref{sec:omtassay}). 
 However, the reactions were stopped by addition of 0.1 volumes 1\,M Tris/HCl pH 8, immediately followed by 0.5 volumes catechol reagent (\mM{2} \cf{FeCl3} in \mM{10} \cf{HCl}).
 The complex formation reaction was allowed to equilibrate for 5\,min at \gls{rt} and the absorbance at \SI{595}{\nm} was measured.
 
 \subsection{Concentration of \glsentrytext{somt} using \glsentryfirst{hic}}
 After refolding using rapid dilution protein samples are very dilute and a concentration step is required.
-Refolded \gls{somt} was concentrated directly from the refolding buffer using \gls{hic}. \\
+Refolded \gls{somt} was concentrated directly from the refolding buffer using \gls{hic}. 
 The ammonium sulfate concentration of the protein sample was brought to 1\,M using a 2\,M \cf{(NH4)2SO4} solution and the pH was adjusted to 7 using 5\,M NaOH.
 The sample was centrifuged (\timesg{20000}, \degC{4}, 30\,min) to remove insoluble material and the clarified supernatant was applied to a 1\,ml HiTrap Phenyl FF (Low Sub) (GE Healthcare, Freiburg, Germany), which had been equilibrated with high salt buffer (1\,M \cf{(NH4)2SO4}, 50\,mM \gls{hepes} pH 7).
 The target protein was eluted using a stepwise gradient (\SIlist{1;0.8;0.6;0.4;0.2;0}{\molar} \cf{(NH4)2SO4}, 50\,mM \gls{hepes} pH 7; 5\,\gls{cv} each) to remove the ammonium sulfate.
@@ -739,7 +750,7 @@ The Gel Filtration Standard by Bio-Rad (München, Germany) was run seperately to
 
 
 \subsection{Binding experiments using \Glsentryfirst{itc}}
-\Gls{itc} can be used to directly characterize the thermodynamics of an observed process, be this a binding interaction or an enzymatic reaction \citep{Freyer2008}.   \\
+\Gls{itc} can be used to directly characterize the thermodynamics of an observed process, be this a binding interaction or an enzymatic reaction \citep{Freyer2008}.   
 \Gls{itc} measurements to describe the interaction between \gls{pfomt} and its substrates/effector where performed using a MicroCal iTC200 device (Malvern, Worcestershire, UK).
 \Gls{pfomt} protein was extensively dialyzed against 50\,mM \gls{mmt}-buffer pH 7 prior to \gls{itc} experiments.
 The solution was susequently centrifuged (\timesg{14000}, \degC{4}, 10\,min), to remove insoluble matter and aggregates.
@@ -753,7 +764,7 @@ The injection volume was set to \SIrange{2}{4}{\micro\litre}, amounting to a tot
 \subsection{\Glsentryfirst{hplc} analytics}
 \label{sec:hplc}
 Due to their aromaticity, methanolic extracts of flavonoids exhibit two major absorption peaks in the \gls{uvvis} region of the light spectrum in the range of \SIrange{240}{400}{\nm} \citep{Mabry1970}.
-However, even the more simple phenyl propanoids (e.g. cinnamic acids) show absorption of light in the \gls{uvvis}-region. \\
+However, even the more simple phenyl propanoids (e.g. cinnamic acids) show absorption of light in the \gls{uvvis}-region. 
 Methanolic extracts of flavonoids and phenyl propanoids were analyzed by \gls{hplc} using a \gls{pda}-detector, which was set to record in the range of \SIrange{200}{400}{\nm}.
 \Gls{hplc} runs were performed on a reverse-phase C-18 end-capped column (YMC-Pack ODS-A; YMC Europe, Dinslaken, Germany) with a pore size of 120\,\gls{a}.
 The mobile phase was aqueous acetonitrile supplemented with 0.2\,\% formic acid. The flow was kept constant at \SI{0.8}{\milli\litre\per\minute}.

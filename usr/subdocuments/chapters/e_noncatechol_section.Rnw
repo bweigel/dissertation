@@ -606,8 +606,8 @@ It would be of interest to analyze this behavior with further systematic studies
 
 \subsection{Methylation of different chemical motifs}
 
-The previous section showed the conversion of  non-catecholic \ifa by \pfomt and promted additional experiments with other different non-catechols from multiple flavonoid subgroups (\autoref{tab:substitutions}, \autoref{fig:substitutions}).
-The tested substrates were selected from four different compound groups (cinnamic acids, flavones, flavanones and flavonols) and each group contained each of four structural motifs (phenol, catechol, \glsentryfirst{3o4m}, \glsentryfirst{4o3m}), if possible.
+The previous section showed the conversion of  non-catecholic \ifa by \pfomt and promted additional experiments with other different non-catechols from multiple flavonoid subgroups (\autoref{tab:substitutions}).
+The tested substrates were selected from three different compound groups (cinnamic acids, flavones, flavanones) and each group contained each of four structural motifs -- phenol, catechol, \glsentryfirst{3o4m} and \glsentryfirst{4o3m}.
 Each substrate was assessed for conversion with two enzymes (\pfomt wild-type and 4'-specific variant Y51R N202W) at four different conditions.
 Magnesium addition and pH were varied for the different conditions (pH/\cf{Mg^2+}: low/no, low/yes, high/no, high/yes).
 The ``low'' and ``high'' pH-values were 7.5 and 8.6, respectively.
@@ -624,11 +624,11 @@ The reactions were incubated at \degC{30} for 16\,h (see section \ref{sec:omtass
 %
 \begin{table}[htb]\centering\small
   \caption{Substrate grid that was tested for methylation with \pfomt.
-    Four different groups of compounds were screened. The groups of flavones, flavanones and cinnamic acids each contained one representative of each motif (phenolic, catecholic, \glsentryfirst{3o4m}, \glsentryfirst{4o3m}).}% The substitution patterns refer to \autoref{fig:substitutions}.}
+    Four different groups of compounds were screened. The groups of flavones, flavanones and cinnamic acids each contained one representative of each motif, phenolic, catecholic, \glsentryfirst{3o4m} and \glsentryfirst{4o3m}.}% The substitution patterns refer to \autoref{fig:substitutions}.}
   \label{tab:substitutions}
   \begin{subfigure}{\textwidth}
     \begin{figureframe}
-        \includegraphics[width=0.8\textwidth]{usr/graphics/static/substrate_pattern}
+        \includegraphics[width=0.6\textwidth]{usr/graphics/static/substrate_pattern}
     \end{figureframe}
   \end{subfigure}
   \begin{subtable}[c]{\textwidth}\centering\small
@@ -652,9 +652,9 @@ The reactions were incubated at \degC{30} for 16\,h (see section \ref{sec:omtass
       C.2 &  luteolin & flavone & catecholic & OH & OH  \\%&  H \\
       C.2  &  diosmetin & flavone & 3O4M & OH & OMe  \\%&  H \\
       C.4  &  chrysoeriol & flavone & 4O3M & OMe & OH  \\%&  H \\
-      \midrule
-      D.1  &  kaempferol & flavonole  &  phenolic & H & OH  \\%&  H \\
-      D.2 &  quercetin & flavonole  & catecholic & OH & OH  \\%&  H \\
+  %    \midrule
+   %   D.1  &  kaempferol & flavonole  &  phenolic & H & OH  \\%&  H \\
+    %  D.2 &  quercetin & flavonole  & catecholic & OH & OH  \\%&  H \\
       %D  &  myricetin &  flavonole & 3',4',5'-trihydroxy & OH & OH  &  OH \\
       \bottomrule
     \end{tabular}
@@ -667,9 +667,9 @@ The highest conversion of non-catecholic substrates was shown for 3'-hydroxy-4'-
 Conversions of substances with free 4'-hydroxyl groups did not extend beyond \SI{7}{\percent} (chrysoeriol).
 This was to be expected, due to the fact that \pfomt is a 3'-specific \gls{mt} at physiological conditions.
 However, unexpectedly the 4'specific variant hardly showed any conversion of non-catecholic substrates.
-High pH supported the conversion of non-catechols.
+High pH favoured the conversion of non-catechols.
 
-There was almost complete conversion of the catecholic substrates (eriodictyol, luteolin, caffeic acid and quercetin) after 16\,h of incubation regardless the reaction conditions, at least when the wild-type enzyme was used (\autoref{fig:pfomt_conversion} and \autoref{tab:pfomtconversion}).
+There was almost complete conversion of the catecholic substrates (eriodictyol, luteolin and caffeic acid) after 16\,h of incubation regardless the reaction conditions, at least when the wild-type enzyme was used (\autoref{fig:pfomt_conversion} and \autoref{tab:pfomtconversion}).
 This suggests, that the reaction period was chosen too long for this group of substrates and effects of pH or magnesium addition on this group cannot be distinguished. 
 %The effects of pH or magnesium addition on the conversion of catecholic substrates will therefore be disregarded or only discussed superficially.
 Conversion was observed for all tested substrates at least under high pH-conditions, when the wild-type was employed (\autoref{fig:pfomt_conversion}).  
@@ -679,7 +679,7 @@ For example, conversion of \ifa was up to \SI{25}{\percent} at pH 8.6 with \SI{1
 This is a 10-fold increase over the conversion of \SI{2.5}{\percent}, which was observed at pH 7.5 with no magnesium added. 
 These findings support the claims from the previous \autoref{sec:pfomtph}, that \pfomt activity might be modulated enough by pH and magnesium to achieve methylation of non-catecholic phenyl propanoid substrates.
 Again, the trend in the data suggests, that methylation efficiency of non-catecholic moieties increases with pH, but especially in combination with the addition of magnesium 
-\footnote{The \gls{meplot} and \gls{iaplot} also suggest a synergistic effect of pH and magnesium addition (see \autoref{fig:x_mep_pfomt}, \ref{fig:x_iap_pfomt}).%, however judging from the ANOVA results, there is no statistical evidence to support this notion (see \autoref{fig:x_mep_pfomt}, \ref{fig:x_iap_pfomt} \bweigel{evtö hier noch ne tabelle von modelcoefficiebnts?}).
+%\footnote{The \gls{meplot} and \gls{iaplot} also suggest a synergistic effect of pH and magnesium addition (see \autoref{fig:x_mep_pfomt}, \ref{fig:x_iap_pfomt}).%, however judging from the ANOVA results, there is no statistical evidence to support this notion (see \autoref{fig:x_mep_pfomt}, \ref{fig:x_iap_pfomt} \bweigel{evtö hier noch ne tabelle von modelcoefficiebnts?}).
 %Although the statistical tests performed on this data do not back the hypothesis, this does not rule out an influence of pH or \cf{Mg^2+}.
 %Enzymatic systems are quite complex and simple linear regression models that allow for inferences often cannot describe what is going on accurately and therefore might fail.
 %Furthermore this very complex dataset is limited to only about 150 observations.
@@ -697,13 +697,13 @@ Again, the trend in the data suggests, that methylation efficiency of non-catech
       \caption{}\label{subfig:conv_var}
     \end{subfigure}
   \end{figureframe}
-  \caption{Conversion of multiple different substrates, catecholic and non catecholic, by PFOMT wild-type (\textbf{\subref{subfig:conv_wt}}) and the 4'-specific variant Y51R N202W (\textbf{\subref{subfig:conv_var}}). Every individual box represents one substrate \textit{p}-coumaric acid (A.1), $\ldots$, kaempferol (D.2).
+  \caption{Conversion of multiple different substrates, catecholic and non-catecholic, by PFOMT wild-type (\textbf{\subref{subfig:conv_wt}}) and the 4'-specific variant Y51R N202W (\textbf{\subref{subfig:conv_var}}). Every individual box represents one substrate \textit{p}-coumaric acid (A.1), $\ldots$, chrysoeriol (C.4).
  pH/\cf{Mg^2+}-conditions are color coded from light to dark: \textglobfall/\xmark, \textglobfall/\cmark, \textglobrise/\xmark, \textglobrise/\cmark.~---~%\hfill \newline
- {\footnotesize Codes: \textglobfall (low pH), \textglobrise (high pH), \xmark (no \cf{Mg^2+}), \cmark(yes, \cf{Mg^2+})}}
+ {\footnotesize \textglobfall (low pH), \textglobrise (high pH), \xmark (no \cf{Mg^2+}), \cmark(yes, \cf{Mg^2+})}}
   \label{fig:pfomt_conversion}
 \end{figure}
 %
-Overall, methylation of \gls{3o4m} motifs was highest.
+Overall, methylation of \gls{3o4m} motifs was highest apart from the catecholic substrates.
 Observed conversions of close to \SI{25}{\percent} for the cinnamic acid and flavanone substrates (\ifa and hesperetin) were observed.
 For these substrates the conversion increased by almost 5-fold upon \cf{Mg^2+} addition, which is close to the observed increase of the initial rate of \ifa methylation (\autoref{sec:pfomtph}).
 Similar results have been shown for SaOMT5, an \gls{omt} from \textit{Streptomyces avermitilis}, where the enzymatic activity towards quercetin increased by about 5-fold from metal-free conditions to magnesium addition \citep{Youngdae2010}.
@@ -738,9 +738,9 @@ The fact, that conversion of \gls{3o4m}-moiety bearing substrates is greater tha
  C.2 &  luteolin\textsuperscript{\textdagger} &  95  & \multicolumn{2}{c}{(all)}  & 92  & \textglobrise  &   \\ 
  C.3 &  diosmetin & 12  & \textglobrise  & \cmark  &   &   &   \\
  C.4 &  chrysoeriol & 7  & \textglobrise  &  \cmark &   &   &   \\
-    \midrule
- D.1  &  kaempferol & 6  & \textglobrise  & \cmark  & 7  & \textglobrise  & \cmark  \\
- D.2  &  quercetin & 93  & \textglobrise  & \xmark  & 86 & \textglobrise  &   \\
+%    \midrule
+% D.1  &  kaempferol & 6  & \textglobrise  & \cmark  & 7  & \textglobrise  & \cmark  \\
+% D.2  &  quercetin & 93  & \textglobrise  & \xmark  & 86 & \textglobrise  &   \\
   %  myricetin &  129 & \textglobfall  & \xmark  & 102  & \textglobfall  & \cmark  \\
     \bottomrule
     \multicolumn{7}{p{0.8\textwidth}}{\footnotesize \textsuperscript{\textdagger}wild-type: substrate conversion was maximal for all pH/\cf{Mg^2+} combinations. \newline \textsuperscript{\textdaggerdbl}conversion of caffeic acid by the wild-type was set to 100\,\%.}
@@ -749,14 +749,21 @@ The fact, that conversion of \gls{3o4m}-moiety bearing substrates is greater tha
 %
 
 The 4'-specific variant for the most part only showed conversion of the catecholic substrates.
-Only some conversion of homoeriodictyol ($\approx$\SI{4}{\percent}), \ifa ($\approx$\SI{3}{\percent}) and kaempferol ($\approx$\SI{7}{\percent}) was observed under high pH/\cf{Mg^2+} conditions (\autoref{tab:pfomtconversion}, \autoref{fig:pfomt_conversion}).
+Only some conversion of homoeriodictyol ($\approx$\SI{4}{\percent}) and \ifa ($\approx$\SI{3}{\percent}) was observed under high pH/\cf{Mg^2+} conditions (\autoref{tab:pfomtconversion}, \autoref{fig:pfomt_conversion}).
 However, for the catecholic substrates the same trend -- increasing pH/\cf{Mg^2+} increases activity -- as before holds true.
-Control experiments without enzyme at high pH and \SI{10}{\milli\molar} revealed, that no substrate conversion took place under these conditions.
+Control experiments without enzyme at high pH and \SI{10}{\milli\molar} \cf{Mg^2+} revealed, that no substrate conversion took place under these conditions, meaning the enzyme must be involved in the conversion.
 
-The products and methylation sites were confirmed by comparison to authentic standards, or by \gls{lcmsms} (\autoref{tab:conv_products}). 
+Products and methylation sites were identified by comparison to authentic standards, or by \gls{lcmsms} (\autoref{tab:conv_products}). 
 As previous studies demonstrated, the products for the conversion of the catecholic substrates by the wild-type and variant were the 3'-methylated and 4'-methylated substrates respectively \cite{Vogt2004,Dippe,Ibdah2003,Kopycki2008b}.
-As expected, methylation only took place on the B-ring of the flavonoids.
-However, enzymatic methylation of the non-catecholic cinnamic acids afforded different products.
+As expected, methylation took place on the B-ring of the flavonoids.
+Ponciretin and acacetin were produced, when naringenin and apigenin were converted by \pfomt respectively.
+However, conversion of the \gls{3o4m} and \gls{4o3m} flavonoids (hesperetin/chrysoeriol and homoeriodictyol/disometin respectively), afforded the 3',4'-dimethylated compounds.
+This demonstrates, that even the \pfomt wild-type is able to methylate the 4'-position of flavonoids, given the right conditions (prolonged incubation, high pH, no free 3'-hydroxyl).
+Furthermore, another type of product, eluting earlier than the corresponding substrates, was observed for the flavones apigenin, chrysoeriol and diosmetin after conversion with the wild-type in the \gls{lcms} runs.
+Unfortunately, these products could not be identified.
+Nonetheless the production of these products seemed favoured over the 3' or 4'-\textit{O}-methylated ones, when a free 3'-hydroxyl was absent (Appendix, \autoref{fig:flavone_prods}).
+
+Enzymatic methylation of the non-catecholic cinnamic acids also afforded two different types of product, methyl esters and methyl ethers.
 Methylation of \textit{p}-coumaric acid only gave rise to the corresponding \emph{methyl ester} (\autoref{sec:pfomt_conversions}).
 Two different products were observed for the enzymatic methylation of ferulic acid and \ifa.
 One product was the methyl ester of the corresponding cinnamic acid, whereas the other product was the di-ether, 3,4-dimethyl caffeic acid.
@@ -784,10 +791,10 @@ One product was the methyl ester of the corresponding cinnamic acid, whereas the
    apigenin & acacetin  &    \tabularnewline
    luteolin & chrysoeriol & \textcolor{lightgray}{n/d}   \tabularnewline
    diosmetin & 3',4'-dimethyl luteolin\tup{\textdagger} &    \tabularnewline
-   chrysoeriol & 3',4'-dimethyl luteolin\tup{\textdagger} & 3',4'-dimethyl luteolin\tup{\textdagger}   \tabularnewline
-   \midrule
-   kaempferol & kaempferide & kaempferide\tup{\textdagger}   \tabularnewline
-   quercetin & isorhamnetin & \textcolor{lightgray}{n/d}   \tabularnewline
+   chrysoeriol & 3',4'-dimethyl luteolin\tup{\textdagger} &    \tabularnewline
+%   \midrule
+%   kaempferol & kaempferide & kaempferide\tup{\textdagger}   \tabularnewline
+%   quercetin & isorhamnetin & \textcolor{lightgray}{n/d}   \tabularnewline
     \bottomrule
     \multicolumn{3}{l}{\scriptsize \textdagger determined via LCMS; n/d -- not determined}
   \end{tabular}
@@ -797,18 +804,19 @@ To the authors knowledge, this is the first time that methylation of a diverse s
 A flavonoid-specific \gls{omt} from \textit{Catharanthus roseus} was described to methylate the 4'-position, when the substrates B-ring possessed a \gls{4o3m} substitution \citep{Schroder2004}. 
 However, said enzyme only showed marginal activities towards catechols and \gls{3o4m} derivatives.
 A class II \gls{omt} from wheat, named TaOMT2, is able to sequentially methylate the three hydroxyl-groups on the B-ring of tricetin, in the proposed order 3'-methyl \textrightarrow 3',5'-dimethyl \textrightarrow 3',4',5'-trimethyl \cite{Zhou2006}.
-Methylation of dihydroxy-derivatives such as luteolin and eriodictyol by TaOMT2 only gave rise to 3'-mono-methylated products, which is similar to \pfomt.
-However, there it was also demonstrated that TaOMT2 could methylate tamarixetin, the \gls{4o3m} derivative of quercetin, albeit at low activities.
+However, methylation of dihydroxy-derivatives such as luteolin and eriodictyol by TaOMT2 only afforded 3'-mono-methylated products, which is similar to \pfomt.
+Nonetheless, TaOMT2 can methylate tamarixetin, the \gls{4o3m} derivative of quercetin, albeit at low activities.
 
 Of the the two \pfomt enzymes, 4'-specific variant and wild-type, only the wild-type showed significant methylation of non-catecholic moieties. 
 These findings support the previous results, that could show a pH and magnesium-dependent rate of methylation of \ifa (\autoref{sec:pfomtph}).
 Although methylation of 3'-hydroxyl groups was preferred by the wild-type, a tendency to methylate 4'-hydroxyls, when these were the only ones present, could be demonstrated.
+Furthermore, methylation of the acid functionalities of cinnamic acids was demonstrated using \pfomt.
 
-Whereas it is clear, that the N-terminus of \pfomt is important for the function of the enzyme, the role of it \invivo is still not fully understood \citep{Kopycki2008b,Vogt2004b,Ibdah2003}.
-However, it cannot be ruled out that acts as a signal sequence that can direct the enzyme to different compartments.
-The findings presented here might give some implications as to the regulation of \glspl{omt}, such as \pfomt, since the pH can be quite different in different cell compartments in plants \cite{Martiniere2013}.
+The N-terminus of \pfomt is important for the function of the enzyme, as was demonstrated in previous studies, however the role of it \invivo is still not fully understood \citep{Kopycki2008b,Vogt2004b,Ibdah2003}.
+It cannot be ruled out that it acts as a signal sequence that can direct the enzyme to different compartments.
+The findings presented here might give some implications as to the regulation of \glspl{omt}, such as \pfomt, since the millieu can be quite different in different cell compartments in plants \cite{Martiniere2013}.
 
-\section{Conclusion/Discussion}
+\section{Conclusion}
 
 Enzymatic methylation of non-catecholic moieties, was studied using
 the two methyl transferases \pfomt and \somt, of classes I and II
@@ -833,9 +841,8 @@ These findings are contrary to the belief, that \pfomt only acted on vicinal aro
 The best conversion of non-catechols was achieved for substrates with \glsentrydesc{3o4m}-moieties (e.g. hesperetin, \ifa), even though conversion was observed for phenolic (e.g. naringenin) and \glsentrydesc{4o3m}-substrates (e.g. homoeriodictyol), thus demosntrating the ability of \pfomt to methylate both 3'- and 4'-hydroxyls.
 The best conversions were obtained using the \pfomt wild-type at elevated pH and after \cf{Mg^2+} addition.
 Magnesium addition and pH displayed synergistic effects, meaning the effects of both are not just additive.
-pH optima shifted under conditions with and without addition of \cf{Mg^2+}.
-When magnesium was omitted, it seemed as though the chemical environment surronding the enzyme was relayed into the active site.
-Thus, non-catecholic substrates were methylated at high pH without magnesium, whereas they were hardly methylated at low pH.
-
-These findings show, that the linear stepwise optimization of reaction condions might not always yield the best overall results, when it comes to such complex systems as enzymes and that synergistic effects need to be considered when looking for the best working conditions.
+pH optimum of \pfomt  shifted from around pH 7 to more basic conditions (pH \textgreater 8), when \cf{Mg^2+} was omitted.
+Although no magnesium was present under these high pH conditions, it seemed as though the chemical environment surronding the enzyme was relayed into the active site.
+Thus, non-catecholic substrates were methylated at high pH without magnesium, whereas they were hardly methylated at low pH without the addition of magnesium.
+These findings also show, that the linear stepwise optimization of reaction conditions might not always yield the best overall results, when it comes to such complex systems as enzymes and that synergistic effects need to be considered when looking for the best working conditions.
 

@@ -158,25 +158,29 @@ ggplot(MEgg, aes(x=state, y=value)) +
   labs(y="mean $\\frac{\\mathrm{SAH}}{\\mathrm{flavone}} (\\mathrm{AU})$", x="factor level") +
   geom_hline(aes(yintercept=mean(MEgg$value)), linetype=2, size=1)
 
-a<-WEB346.results %>% filter(motif != "B") %>%
+#a<-WEB346.results %>% filter(motif != "B") %>%
+a<-WEB346.results %>% filter(motif != "B" ,(substrate != 15 | substrate != 16 | substrate != 17 | substrate != 10 | substrate != 11)) %>%
   group_by(motif) %>%
   summarise_each(funs(mean(., na.rm=TRUE)), value)
 names(a)[1] <- "state"
 a %<>% mutate(state = as.factor(state), ME = "motif")
 
-b<-WEB346.results %>% filter(motif != "B") %>%
+#b<-WEB346.results %>% filter(motif != "B") %>%
+b<-WEB346.results %>% filter(motif != "B" ,(substrate != 15 | substrate != 16 | substrate != 17 | substrate != 10 | substrate != 11)) %>%
   group_by(Mg) %>%
   summarise_each(funs(mean(., na.rm=TRUE)), value)
 names(b)[1] <- "state"
 b%<>% mutate(state = as.factor(state), ME = "Mg")
 
-c<-WEB346.results %>% filter(motif != "B") %>%
+#c<-WEB346.results %>% filter(motif != "B") %>%
+c<-WEB346.results %>% filter(motif != "B" ,(substrate != 15 | substrate != 16 | substrate != 17 | substrate != 10 | substrate != 11)) %>%
   group_by(pH) %>%
   summarise_each(funs(mean(., na.rm=TRUE)), value)
 names(c)[1] <- "state"
 c %<>% mutate(state = as.factor(state), ME = "pH")
 
-d<-WEB346.results %>% filter(motif != "B") %>%
+#d<-WEB346.results %>% filter(motif != "B") %>%
+d<-WEB346.results %>% filter(motif != "B" ,(substrate != 15 | substrate != 16 | substrate != 17 | substrate != 10 | substrate != 11)) %>%
   group_by(variant) %>%
   summarise_each(funs(mean(., na.rm=TRUE)), value)
 names(d)[1] <- "state"
@@ -196,7 +200,7 @@ ggplot(MEgg, aes(x=state, y=value)) +
 ```
 
 ```{r IAP, results='asis', fig.height=3, fig.width=2.5, fig.margin=T, fig.cap='Interaction plot for Mg and pH. The lines suggest an interaction between pH and Mg, but this is not enough evidence to say wether that interaction is significant. red -- no magnesium, blue -- magnesium added.'}
-d<-WEB346.results %>%
+d<-WEB346.results %>% filter(motif != "B" ,(substrate != 15 | substrate != 16 | substrate != 17 | substrate != 10 | substrate != 11)) %>%
   group_by(Mg,pH) %>%
   summarise_each(funs(mean(., na.rm=TRUE), sd(., na.rm=TRUE)), value)
 
@@ -696,11 +700,11 @@ web <- list(  geom_bar(stat = "identity", position = "dodge", aes(fill=condition
                     ),
               coord_cartesian(ylim = c(0,115)), scale_y_continuous(breaks=seq(0, 100, 25), labels=c(0,"",50,"",100)))
 
-ggplot(data = conversions %>% filter(variant == "WT", (with.in != "m-coumaric" & with.in != "o-coumaric"& with.in != "myricetin")), aes(x=with.in, y=conversion*100)) +
+ggplot(data = conversions %>% filter(variant == "WT", (with.in != "m-coumaric" & with.in != "o-coumaric"& with.in != "myricetin"), group != "flavonole"), aes(x=with.in, y=conversion*100)) +
   web + 
   ylab("conversion (\\%)")
 
-ggplot(data = conversions %>% filter(variant != "WT", (with.in != "m-coumaric" & with.in != "o-coumaric"& with.in != "myricetin")), aes(x=with.in, y=conversion*100)) +
+ggplot(data = conversions %>% filter(variant != "WT", (with.in != "m-coumaric" & with.in != "o-coumaric"& with.in != "myricetin"), group != "flavonole"), aes(x=with.in, y=conversion*100)) +
   web + 
   ylab("conversion (\\%)")
 ```

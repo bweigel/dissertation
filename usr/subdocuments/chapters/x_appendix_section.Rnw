@@ -4,431 +4,43 @@
 
 \part{Appendix}
 
-\chapter{Figures}
+%\chapter{Figures}
 
-\framedfigure[label = fig:c_plot_cali]{ 
-<<test, echo=F, tidy=TRUE, fig.height=3.25, fig.width=5.25, dev='tikz'>>=
+%\framedfigure[label = fig:c_plot_cali]{ 
+<<test, eval=F, echo=F, tidy=TRUE, fig.height=3.25, fig.width=5.25, dev='tikz'>>=
 @ 
-}{%
-    Calibration curves of different relative compositions of ferulic acid to caffeic acid, that were prepared as described in \autoref{sec:photoassay}. 
-    The total concentration was always \SI{0.4}{\milli\molar}.
-    At lower pH values around 4, the method seems to overestimate the concentration of caffeic acid.
-    However, the slope of the curves stays the same.
-    }
-  
-\section{Engineering of PFOMT}
+%}{%
+%    Calibration curves of different relative compositions of ferulic acid to caffeic acid, that were prepared as described in \autoref{sec:photoassay}. 
+%    The total concentration was always \SI{0.4}{\milli\molar}.
+%    At lower pH values around 4, the method seems to overestimate the concentration of caffeic acid.
+%    However, the slope of the curves stays the same.
+%    }
 
-\begin{figure}[htpb]
-  \centering
-  \begin{figureframe}
-<<litSAM, eval=T, echo=F, tidy=TRUE, fig.height=5, fig.width=5, out.width='0.7\\textwidth', dev='pdf', error=T, crop=T>>=
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% PFOMT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Engineering of PFOMT}
+
+%\begin{figure}[htpb]
+%  \centering
+%  \begin{figureframe}
+<<litSAM, eval=F, echo=F, tidy=TRUE, fig.height=5, fig.width=5, out.width='0.7\\textwidth', dev='pdf', error=T, crop=T>>=
 @ 
-  \end{figureframe}
-  \caption{%
-    Graphical representation of the work that has been done on \glspl{mt} in combination with \gls{sam} analogues.
-    The grey areas represent individual groups of \gls{sam} analogues (aliphatic, allylic, propargylic, aromatic, \gls{seam} analogues, nitrogen analogues and miscelaneous others). 
-    The height of the grey areas represents the number of times a member of the corresponding group has been described as tested in the \gls{mt} literature.
-    The height of the colored bars represents the times that individual substrate has been tested. The colors represent the different types of \gls{mt} (red -- \gls{dmt}, green -- \gls{pmt}, lilac -- small molecule \gls{mt}, blue -- \gls{rna} \gls{mt}).
-    The black dash across the bar shows the number of times this substrate was actually converted by either enzyme.%    
-}
-  \label{fig:d_lit_sam}
-\end{figure}
-
-
-\begin{figure}[htpb]
-  \centering
-  \begin{figureframe}
-    <<struct.compare.appendix,  echo=F, tidy=TRUE, fig.height=2, fig.width=5.6, out.width='\\textwidth', dev='tikz', error=T>>=
-    @
-  \end{figureframe}
-  \caption{Differences in the dihedrals \textpsi~(red) and \textphi~(black) of the solved \textit{apo}-PFOMT and the structure with bound \gls{sah} (pdb: 3C3Y).
-  The secondary structure is displayed at the top. Helices are displayed as rectangles and sheets are shown as arrows.
-  Graphical background annotations are used to display the binding sites of \gls{sah} (green) and the metal ion (plum).
-  The orange bars indicate regions, where much movement seems to happen upon binding or release of the co-substrate.
-  The blue bar shows the region that was annotated as "insertion loop" in previous studies.}
-  \label{fig:app_struc.compare}
-\end{figure}  
-
-
-\begin{figure}[htpb]
-  \centering
-  \begin{figureframe}
-    \includegraphics[width=0.5\textwidth]{usr/graphics/static/pfomt_3to4_activities}
-  \end{figureframe}
-  \caption{Differences in the regioselectivity of some \pfomt variants. The products observed in \gls{hplc} and \gls{lcms} measurements switched from 3'-methylated (dark grey) to 4'-methylated (light grey) for the displayed variants. The height of the bars corresponds to the total conversion of substrate.}
-  \label{fig:app_pfomt_3to4}
-\end{figure}  
-
-\clearpage
-
-%% \section{Chapter 6}
-
-%% \begin{figure}[htpb]\centering
-%%   \begin{figureframe}  
-%%     \begin{subfigure}{\textwidth}\centering
-%%       \includegraphics[scale=1]{usr/graphics/static/hesperetin_HCD_1,3B}
-%%       \caption{}
-%%       \label{fig:HCD_hesperetin_1.3}
-%%     \end{subfigure}  
-%%     \begin{subfigure}{\textwidth}\centering
-%%       \includegraphics[scale=1]{usr/graphics/static/hesperetin_HCD_1,4B}
-%%       \caption{}
-%%       \label{fig:HCD_hesperetin_1.4}
-%%     \end{subfigure}
-%%   \end{figureframe}
-%%   \caption{Proposed mechanisms for the formation of \textbf{\subref{fig:HCD_hesperetin_1.3}} -- \frag{1,3}{B}{+} and \textbf{\subref{fig:HCD_hesperetin_1.4}} -- \frag{1,4}{B}{+} ions from hesperetin upon \gls{hcd}.}
-%%   \label{fig:mechanism_hcd_hesp}
-%% \end{figure}
-
-
-
-
-%% \begin{figure}[htpb]\centering
-%%   \begin{figureframe}
-%%    \includegraphics[scale=1]{usr/graphics/static/chrysoeriol_HCD_0,2B}
-%%   \end{figureframe}
-%%   \caption{Proposed mechanism for the formation of \frag{0,2}{B}{+} and resulting ions from the molecular ion of chrysoeriol under \gls{hcd} conditions.}
-%% \end{figure}
-%% \clearpage
-
-
-\section{Enzymatic methylation of non-catechols}
-
-\begin{figure}[htpb]
-  \centering
-  \begin{figureframe}
-    \includegraphics[width=0.9\textwidth]{usr/graphics/static/tmp_pca1}
-  \end{figureframe}
-  \caption{Additional scatterplots of the \gls{pca} of \gls{hplc} data obtained from \nico leaves infiltraded by \agro harbouring different constructs. \textbf{A} -- samples colored by leaf position (top: red; bottom: cyan), \textbf{B} -- samples colored by plant (plant 1: red; plant 2: green; plant 3: blue)}
-  \label{fig:x_pca}
-\end{figure}
-
-
-\begin{figure}[htpb]
-  \centering
-  \begin{figureframe}
-    \includegraphics[width=0.75\textwidth]{usr/graphics/static/tmp_e_growthcurve}
-  \end{figureframe}
-  \caption{Growth curve of \eco BL21(DE3) expressing \glsentryfirst{somt} at \degC{37}. 
-  Glucose is depleted about 5\,hours into growth, at which point the start of \glsentrytext{somt} expression is expected.
-  The \odx{600} after inoculation was about \num{0.1}.}
-  \label{fig:e_growthcurve}
-\end{figure}
-
-\begin{figure}[htpb]
-  \centering
-  \begin{figureframe}
-    \includegraphics[width=0.45\textwidth]{usr/graphics/static/sds_somt}
-  \end{figureframe}
-  \caption{\sdspage gel of samples aquired during growth curve measurements. The arrow indicates the band that could correspond to the GST-tagged \glsentrytext{somt} protein.}
-  \label{fig:x_somtgel}
-\end{figure}
-
-\begin{table}[htpb]\centering
-  \caption{Results for the \aov of the main effects model describing soluble protein.} 
-  \label{tab:aov_BF}
-\begin{tabular}{lrrrrrl}
-    \toprule\small
-    & df & Sum Sq & Mean Sq & F value & Pr($>$F) & \\ 
-    \hline
-    Arginine      & 1 & 3595.63 & 3595.63 & 24.56 & 0.0158 & * \\ 
-    pH            & 1 & 529.87 & 529.87 & 3.62 & 0.1533 & \\ 
-    Glycerin      & 1 & 752.08 & 752.08 & 5.14 & 0.1083 & \\ 
-    ionicStrength & 1 & 82.37 & 82.37 & 0.56 & 0.5077 & \\ 
-    divCations    & 1 & 5.49 & 5.49 & 0.04 & 0.8588 & \\ 
-    redox         & 1 & 5.52 & 5.52 & 0.04 & 0.8584 & \\ 
-    CycloDex      & 1 & 134.67 & 134.67 & 0.92 & 0.4083 & \\ 
-    SAH           & 1 & 896.83 & 896.83 & 6.13 & 0.0897 & \textbullet\\ 
-    Residuals     & 3 & 439.26 & 146.42 &  &  & \\ 
-    \bottomrule
-           \multicolumn{6}{l}{\footnotesize significance codes: '\textbullet' \SI{10}{\percent} level; '*' \SI{5}{\percent} level}
-\end{tabular}
-\end{table}
-
-\begin{table}[htpb]\centering
-  \caption{Results for the \aov of the main effects model describing protein activity.} 
-  \label{tab:aov_activity}
-  \begin{tabular}{lrrrrrl}
-    \toprule\small
-    & df & Sum Sq & Mean Sq & F value & Pr($>$F) &   \\ 
-    \midrule
-    Arginine      & 1 & 8.31 & 8.31 & 6.62 & 0.0824 & \textbullet \\ 
-    pH            & 1 & 5.71 & 5.71 & 4.55 & 0.1227 & \\ 
-    Glycerin      & 1 & 0.44 & 0.44 & 0.35 & 0.5945 & \\ 
-    ionicStrength & 1 & 3.38 & 3.38 & 2.69 & 0.1997 & \\ 
-    divCations    & 1 & 0.54 & 0.54 & 0.43 & 0.5605 & \\ 
-    redox         & 1 & 24.26 & 24.26 & 19.31 & 0.0218 & * \\ 
-    CycloDex      & 1 & 1.07 & 1.07 & 0.85 & 0.4250 & \\ 
-    SAH           & 1 & 0.11 & 0.11 & 0.09 & 0.7893 & \\ 
-    Residuals     & 3 & 3.77 & 1.26 &  &  & \\ 
-    \bottomrule
-           \multicolumn{6}{l}{\footnotesize significance codes: '\textbullet' \SI{10}{\percent} level; '*' \SI{5}{\percent} level}
-  \end{tabular}
-\end{table}
-
-%% \begin{table}[htpb]\centering
-%%   \caption{Results for the \aov of the main effects model describing protein activity. Significance codes: 0.05 (\textbf{~*~}), 0.1 (\textbf{~.~})} 
-%%   \label{tab:aov_activity}
-%%   \begin{tabular}{lrrrrrl}
-%%     \toprule\small
-%%     & df & Sum Sq & Mean Sq & F value & Pr($>$F) &   \\ 
-%%     \midrule
-%%     Arginine      & 1 & 0.03 & 0.03 & 8.14 & 0.0649 & .  \\ 
-%%     pH            & 1 & 0.02 & 0.02 & 4.83 & 0.1153 &   \\ 
-%%     Glycerin      & 1 & 0.00 & 0.00 & 0.55 & 0.5122 &   \\ 
-%%     ionicStrength & 1 & 0.01 & 0.01 & 3.27 & 0.1682 &   \\ 
-%%     divCations    & 1 & 0.00 & 0.00 & 0.57 & 0.5047 &   \\ 
-%%     redox         & 1 & 0.06 & 0.06 & 19.88 & 0.0210 & *  \\ 
-%%     CycloDex      & 1 & 0.00 & 0.00 & 0.78 & 0.4428 &   \\ 
-%%     SAH           & 1 & 0.00 & 0.00 & 0.13 & 0.7439 &   \\ 
-%%     Residuals     & 3 & 0.01 & 0.00 &  &  &   \\ 
-%%     \bottomrule
-%%   \end{tabular}
-%% \end{table}
-
-\begin{figure}[htpb]
-  \centering
-  \begin{figureframe}
-    \includegraphics[width=\textwidth]{usr/graphics/static/SOMT_SS-bridges}
-  \end{figureframe}
-  \caption{Graphical representation of a \somt model obtained from the PHYRE2 web portal (\url{http://www.sbg.bio.ic.ac.uk/phyre2/html/page.cgi?id=index}) \citep{Kelley2015}. Cysteines are shown as sticks. The distance between neighboring cysteines that could by oxidized to disulfide bridges is shown in orange.}
-  \label{fig:x_somtmodel}
-\end{figure}
-
-
-\begin{figure}[htpb]
-  \centering
-  \begin{figureframe}
-    \includegraphics[width=0.75\textwidth]{usr/graphics/static/somt_gefi}
-  \end{figureframe}
-  \caption{Chromatogram of the gel filtration analysis of refolded \somt (blue). Gel-filtrations standards (red) were used to assess the size of the \somt protein. The estimated molecular weights for the eluting peaks were  \SI{165}{\kilo\dalton} (\SI{12.47}{\milli\litre}) and \SI{65.5}{\kilo\dalton} (\SI{14.26}{\milli\litre}). Protein standard: \SI{9.15}{\milli\litre} -- thyroglobulin (\SI{670}{\kilo\dalton}), \SI{12.62}{\milli\litre} -- \textgamma-globulin (\SI{158}{\kilo\dalton}), \SI{15.43}{\milli\litre} -- ovalbumin (\SI{44}{\kilo\dalton}), \SI{17.63}{\milli\litre} -- myoglobin (\SI{17}{\kilo\dalton}), \SI{21.11}{\milli\litre} -- vitamin B12 (\SI{1.35}{\kilo\dalton})}
-  \label{fig:x_somt_gefi}
-\end{figure}
-
-
-
-%% Main effects plot PFOMT conversion of non-catechols
-\begin{figure}[htpb]
-  \centering
-  \begin{figureframe}
-    \begin{subfigure}{0.69\textwidth}
-      \includegraphics[width=\textwidth]{usr/graphics/static/tmp_MEP_pfomt}
-      \caption{}
-      \label{fig:x_mep_pfomt}
-    \end{subfigure}
-    %% Interaction plot Mg/pH
-    \begin{subfigure}{0.3\textwidth}
-      \includegraphics[width=\textwidth]{usr/graphics/static/tmp_pfomt_MgpH}
-      \caption{}
-      \label{fig:x_iap_pfomt}
-    \end{subfigure}
-  \end{figureframe}
-  \caption{Main and interaction effects plots for the conversion of non-catecholic phenylpropanoids by \glsentryfirst{pfomt}.
-    (\textbf{\subref{fig:x_mep_pfomt}}) Main effects plot for PFOMT conversion of non-catechols. 
-        Phenolics (A) are converted worst and conversion of \glsentryfirst{3o4m} (C) is generally best.
-        Conversion of \glsentryfirst{4o3m} (D) is a little better than phenolics, but is still below average.
-        There seem to be positive effects of \cf{Mg^2+} and high pH, because conversion is generally best at high pH and with magnesium added.
-        The wild-type enzyme shows better conversion than the 4'-specific variant.
-        (\textbf{\subref{fig:x_iap_pfomt}}) Interaction plot of \cf{Mg^2+} and pH for the conversion of non-catechols and catechols by \pfomt.
-        There seems to be an interaction between \cf{Mg^2+} addition (\textcolor{blue}{blue} -- \cf{Mg^2+} addition, \textcolor{red}{red} -- no \cf{Mg^2+}) and pH. However, statistical tests suggest this interaction might not be significant.}
-
-\end{figure}
-
-\section{Identification of products from conversion of non-catechols by PFOMT}
-\label{sec:pfomt_conversions}
-
-\subsection{\textit{p}-coumaric acid conversion}
-
-The product obtained by conversion of \textit{p}-coumaric acid by \pfomt was determined as 4-hydroxy cinnamic acid methyl ester.
-The negative mode MS\tup{2} spectrum showed four prominent peaks \mz{177}(21) [M-H]\tup{-}, 162(35), 145(100) and 118(47). 
-If the enzymatic product was the methyl ether, one would expect a strong \mz{133}, corresponding to [M-H-\cf{CO2}]\tup{-} \cite{Song2015}.
-However \mz{133} was not observed, strongly suggesting the methyl ester.
-Comparison of the obtained data with literature data confirmed the methyl ester as sole product \cite{Jarrell2014}.
-
-\begin{figure}[!htb]
-  \begin{figureframe}
-  \includegraphics[width=\textwidth]{usr/graphics/static/MS2_p-hydroxy_methylcinnamate}
-  \end{figureframe}
-\end{figure}
-
-\subsection{Ferulic acid and \ifa conversion}
-
-Methylation of \ifa and ferulic acid afforded two methylated products with retention times of \num{12.9} and \SI{13.7}{\minute}.
-The compound eluting at \SI{12.9}{\minute} was identified as caffeic acid dimethylether (\molnum{came}) through comparison to an authentic standard, whereas the compounds eluting about one minute later were identified as the ferulic (\molnum{fame}) and \textit{iso}-ferulic acid methyl esters (\molnum{ifame}).
-Since the the retention time is an indicator for the polarity of an eluting compound and the methyl ester is much more unpolar than the dimethyl ether, it comes as no surprise that the latter elutes earlier on a reversed-phase column.
-Ionization of the enzymatic products was difficult in negative mode, but easily achieved in positive mode.
-The only peaks in the positive mode MS\tup{2} spectra of \molref{came} and (\molref*{fame},\molref*{ifame}) were \mz{191} and \mz{177} respectively.
-This indicates a loss of water and methanol from the dimethylether and methyl ester respectively.
-
-\begin{figure}[!htb]
-  \begin{figureframe}
-    \begin{subfigure}{\textwidth}
-      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_neg_dimethylCA}
-      \caption{}\label{subfig:came_neg}
-    \end{subfigure}
-    \begin{subfigure}{\textwidth}
-      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_pos_dimethylCA}
-      \caption{}\label{subfig:came_pos}
-    \end{subfigure}
-    \begin{subfigure}{\textwidth}
-      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_pos_CA-methylester}
-      \caption{}\label{subfig:ifame_pos}
-    \end{subfigure}
-  \end{figureframe}
-  \caption{MS\tup{2} spectra of \molref{came} and \molref{ifame}.
-   (\textbf{\subref{subfig:came_neg}}) negative mode MS\tup{2} of \molref{came}.
-    (\textbf{\subref{subfig:came_pos}}) positive mode MS\tup{2} of \molref{came}.
-    (\textbf{\subref{subfig:ifame_pos}}) positive mode MS\tup{2} of \molref{ifame}.
-  }
-\end{figure}
-
-\subsection{3',4'-dimethyl eriodictyol}
-
-\molnum{dimethylED}
-
-\begin{figure}[!htb]
-  \begin{figureframe}
-    \begin{subfigure}{\textwidth}
-      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_CID_dimethylED}
-      \caption{}\label{subfig:dimethyl_cid}
-    \end{subfigure}
-    \begin{subfigure}{\textwidth}
-      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_HCD_dimethylED}
-      \caption{}\label{subfig:dimethyl_hcd}
-    \end{subfigure}
-  \end{figureframe}
-  \caption{MS\tup{2} spectra of 3'4'-dimethyl eriodictyol \molref{dimethylED}.
-   (\textbf{\subref{subfig:dimethyl_cid}}) positive mode MS\tup{2} \glsentrytext{cid} spectrum of \molref{dimethylED}.
-    (\textbf{\subref{subfig:dimethyl_hcd}}) positive mode MS\tup{2} \glsentrytext{hcd} spectrum of \molref{dimethylED}.
-  }
-\end{figure}
-
-\subsection{3',4'-dimethyl luteolin}
-
-\molnum{dimethyllut}
-
-\begin{figure}[!htb]
-  \begin{figureframe}
-    \begin{subfigure}{\textwidth}
-      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_CID_dimethylluteolin}
-      \caption{}\label{subfig:dimethyllut_cid}
-    \end{subfigure}
-    \begin{subfigure}{\textwidth}
-      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_HCD_dimethylluteolin}
-      \caption{}\label{subfig:dimethyllut_hcd}
-    \end{subfigure}
-  \end{figureframe}
-  \caption{MS\tup{2} spectra of 3'4'-dimethyl luteolin \molref{dimethyllut}.
-   (\textbf{\subref{subfig:dimethyllut_cid}}) positive mode MS\tup{2} \glsentrytext{cid} spectrum of \molref{dimethyllut}.
-    (\textbf{\subref{subfig:dimethyllut_hcd}}) positive mode MS\tup{2} \glsentrytext{hcd} spectrum of \molref{dimethyllut}.
-  }
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%% Tables
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\chapter{Tables}
-
-%% Table of cloned constructs (appendix)
-\ostTableEnv|[label = tab:molecularcloning]{%
-  \scriptsize
-  \begin{tabularx}{\textwidth}{l p{0.35\textwidth} p{0.1\textwidth} l X}
-    \toprule
-    construct name & description & entry constructs & destination & workflow steps (primers/cloning sites)\\ 
-    \midrule
-    pBEW101 & & & & \\
-    pBEW102 & lsrA promoter & & & \\
-    pBEW103 & pBEW102 with BamHI cloning site & pBEW102 & & \\
-    pBEW104 & rhaP$_{\mathrm{BAD}}$ promoter & pBEW4b & pBEW103 & amplification (\textit{pRha1.fw/rv}), cloning (BglII, BamHI)\\
-    pBEW106 & pICH413038-somt & pET28MC-somt & pICH413038 & amplification (\textit{somt1/2/3/4}), golden gate cloning (BpiI) \\
-    pBEW107 & & pICH51266, pBEW106, pICH41421 & pICH75044 & golden gate cloning (BsaI) \\
-    pBEW1a & & & & \\
-    pBEW1b & & & & \\
-    pBEW2a & & & & \\
-    pBEW2b & & & & \\
-    pBEW3a & & & & \\
-    pBEW3b & & & & \\
-    pBEW4a & & & & \\
-    pBEW4b & & & & \\
-    pET28-pfomt & \textit{pfomt} gene in pET-28a(+), endogenous NdeI site removed & pQE30-pfomt & pET-28a(+) & mutagenesis (\emph{pfomt1.fw/rv}), amplification (\emph{pfomt2.fw/rv}), cloning (NdeI, EcoRI) \\
-    pET20-somt & N-terminal pelB-tag fusion for periplasmic expression & & pET20-b(+)& \\
-    pET28-somt & & & pET28-a(+)& \\
-    pET28MC-somt & & &  & \\
-    pET32-somt & N-terminal TrX-tag fusion & & pET-32a(+) & \\
-    pET41-somt & N-terminal GST-tag fusion & & pET-41a(+) & \\
-    pUC19* & added BglII site & pUC19 & - & mutagenesis (\textit{pUC1.fw/rv}) \\
-    pUCB1 & pUC19 derivative with lsrA promoter & lsr-XX-DAS & pUC19* & cloning (NdeI, BglII) \\ 
-    pUCB1-sfGFP-DAS+4 & & & & \\
-    
-    \bottomrule
-  \end{tabularx}
-}{%
-Overview over the contructs produced for the present thesis. Each step during the production of the construct is given in the workflow steps column. Primers (italic font) or restriction sites used during each step are displayed in parenthesis.
-}
-% }}}
-
-\section{Engineering of PFOMT}
-
-\begin{lstTabularx}[1]{\linewidth}{>{\scriptsize}p{0.45\textwidth}XX>{\scriptsize}p{0.12\textwidth}}
-  \caption{\gls{sam} analogues that have been used with \glspl{mt}. Targets: \emph{P} -- peptide/protein, \emph{D} -- DNA, \emph{R} -- RNA, \emph{S} -- small molecule.} \\
-  \label{tab:mtlit}
-  \hfill \\
-     \toprule
-	\small analogue & enzyme & target & \small references \\ 
-     \midrule
-     \endfirsthead
-     \toprule
-	\small analogue & enzyme & target & \small references \\ 
-     \midrule
-     \endhead
-     \small\textit{SAM} & & &\\
-    % \cf{-CH3} & & &\\
-     \cf{-CH2-CH3} & PRMT1, M.TaqI, M.HhaI, M.BcnIB, RebM, RapM & S,P,D & \citep{Thomsen2013,Dalhoff2006,Singh2014,Law2015} \footnote{Singh \etal (2014) published a series of 44 biocatalytically synthesized \gls{sam} and \gls{seam} derivatives, most of which were not tested towards their alkyl donation potential in \gls{mt} reactions.}\\
-     \cf{-CH2-CH2-CH3} & PRMT1, M.TaqI, M.HhaI, M.BcnIB & P,D & \citep{Thomsen2013,Dalhoff2006}\\
-     \cf{-CH2-CH2-CH2-CH3} & PRMT1 & P & \citep{Thomsen2013}\\
-     \cf{-CH2-C6H5} & NovO, CouO, PRMT1 & S,P & \citep{Stecher2009,Thomsen2013}\\
-%    \cf{-CH2-CH2-C6H5} & & & \citep{Thomsen2013}\\ % not tested with MTs
-%    \cf{-CH2-CH(-NH2)-COOH} & & & \citep{Thomsen2013}\\ % not tested with Mts
-%     \cf{-CH2-C(=O)-NH2} & & & \citep{Thomsen2013}\\ % not tested with Mts
-     \cf{-CH2-C(=O)-CH3} & COMT, TPMT, CazF & S & \citep{Lee2010,Winter2013}\\
-     
-     \cf{-CH2-CH=CH2} & NovO, CouO, RapM, PRMT1, M.TaqI, M.HhaI, M.BcnIB, RebM, Tgs & P,S,D & \citep{Stecher2009,Thomsen2013,Dalhoff2006,Singh2014,Wang2011,Wang2011a,Tengg2012a,Law2015,Schulz2013} \\
-     \cf{-CH2-CH=CH-CH3} & NovO, CouO & S & \citep{Stecher2009}\\
-  %  \cf{-CH2-CH=CH-CH2-CH3} & & & \citep{Wang2014}\\ %% only SAM synthase
-    
-     \cf{-CH2-C#CH} & Dim-5, \textit{Hs}MLL, TRM1, NovO, CouO, PRMT1 & P,R,S & \citep{Willnow2012,Stecher2009,Wang2011,Wang2011a,Islam2011}\\
-     \cf{-CH2-C#N} & RebM & S & \citep{Singh2014} \\
-     \cf{-CH2-CH2-C#CH} & PKMT & P & \citep{Islam2011}\\
-     \cf{-CH2-CH2-CH2-C#CH} & PKMT & P & \citep{Islam2011}\\
-     \cf{-CH2-C#C-CH3} & NovO, CouO, M.HhaI, M.TaqI, M.BcnIB & S,D & \citep{Stecher2009,Dalhoff2006,Lukinavicius2013}\\
-     \cf{-CH2-C#C-CH2-CH3} & M.HhaI & D & \citep{Lukinavicius2013} \\
-     \cf{-CH2-C#C-CH2-NH2} & M.HhaI & D & \citep{Lukinavicius2013} \\
-     \cf{-CH2-C#C-CH2-NH-C(=O)(-CH2-)3-NH2} & M.HhaI & D & \citep{Lukinavicius2013} \\
-     \cf{-CH2-C#C(-CH2-)3-NH2} & M.HhaI & D & \citep{Lukinavicius2013} \\
-     \cf{-CH2-C#C(-CH2-)3-NH-C(=O)(-CH2-)3-NH2} & M.HhaI & D & \citep{Lukinavicius2013} \\
-     \cf{-CH2-C#C(-CH2-)3-C#CH} & M.HhaI & D & \citep{Lukinavicius2013} \\
-     \cf{-CH2-C#C(-CH2-)3-N3} & M.HhaI & D & \citep{Lukinavicius2013} \\
-     \cf{-CH2-CH=CH-C#CH} & Dim-5, \textit{Hs}MLL, TRM1, PRMT1, Tgs & P,R & \citep{Willnow2012,Peters2010,Wang2011,Wang2011a,Motorin2011,Islam2011,Schulz2013}\\
-     \cf{-CH2-CH=CH-CH2-C#CH} & & & \citep{Wang2011a,Islam2011} \\
-     \cf{-CH2-CH=CH-CH2-O-CH2-C#CH} & PRMT1 & P & \citep{Wang2011,Wang2011a}\\
-     
-    \\
-     \small\textit{SeAM} & & &\\
-     \cf{-CH3} & & & \\
-     \cf{-CH2-C#CH} & Dim-5, \textit{Hs}MLL, TRM1, RebM, CazF & P,R,S & \citep{Willnow2012,Singh2014,Bothwell2012, Winter2013}\\
-     
-     \\
-     \small\textit{N}-mustard derivatives & & &\\
-     \cf{-CH2-CH2-I} & RebM & S & \citep{Zhang2006} \\
-     
-     \bottomrule
-\end{lstTabularx}
-
+%  \end{figureframe}
+%  \caption{%
+%    Graphical representation of the work that has been done on \glspl{mt} in combination with \gls{sam} analogues.
+%    The grey areas represent individual groups of \gls{sam} analogues (aliphatic, allylic, propargylic, aromatic, \gls{seam} analogues, nitrogen analogues and miscelaneous others). 
+%    The height of the grey areas represents the number of times a member of the corresponding group has been described as tested in the \gls{mt} literature.
+%    The height of the colored bars represents the times that individual substrate has been tested. The colors represent the different types of \gls{mt} (red -- \gls{dmt}, green -- \gls{pmt}, lilac -- small molecule \gls{mt}, blue -- \gls{rna} \gls{mt}).
+%    The black dash across the bar shows the number of times this substrate was actually converted by either enzyme.%    
+%}
+%  \label{fig:d_lit_sam}
+%\end{figure}
 
 %\ostTableEnv[label = tab:xtalstat]{%
 \begin{table}[htpb]\centering
@@ -481,92 +93,70 @@ Crystallographic data, phasing and refinement statistics.
   \end{tabular}
 \end{table}
 
-\section{Enzymatic methylation of non-catechols}
+\begin{figure}[htb]
+  \centering
+  \begin{figureframe}
+    <<struct.compare.appendix,  echo=F, tidy=TRUE, fig.height=2, fig.width=5.6, out.width='\\textwidth', dev='tikz', error=T>>=
+    @
+  \end{figureframe}
+  \caption{Differences in the dihedrals \textpsi~(red) and \textphi~(black) of the solved \textit{apo}-PFOMT and the structure with bound \gls{sah} (pdb: 3C3Y).
+  The secondary structure is displayed at the top. Helices are displayed as rectangles and sheets are shown as arrows.
+  Graphical background annotations are used to display the binding sites of \gls{sah} (green) and the metal ion (plum).
+  The orange bars indicate regions, where much movement seems to happen upon binding or release of the co-substrate.
+  The blue bar shows the region that was annotated as "insertion loop" in previous studies.}
+  \label{fig:app_struc.compare}
+\end{figure}  
 
-\subsection{Modelling and shrinkage of catechols subset}
-\label{sec:apppfomtph}
 
-The bell-shaped pH profile for the catecholic substrates showed, that there might be a quadratic relationship between pH and activity. 
-A bell-shaped pH profile is common for most enzymatic reactions, where ionizable groups are involved the reaction \cite{Cornish-Bowden2004}.
-A quadratic term was thus included into the linear model to capture this relationship:
-\begin{equation}\label{eq:cat}
-    activity = \beta_0 + \beta_1 \times \factor{Mg} + \beta_2 \times \factor{pH} + \beta_3 \times (\factor{Mg} \times \factor{pH}) + \beta_4 \times \factor{pH^2} + \beta_5 \times (\factor{pH^2} \times \factor{Mg}).
-\end{equation}
-%
-\begin{table}[htb]  \centering\small
-  \caption{Coefficients of the model (\ref{eq:cat}) for activity of catechol methylation by PFOMT. The factor $\factor{Mg}$ is a categorical variable (addition/no addition) and can therefore only be 0 or 1.}
-  \label{tab:lm-cat}
-  \begin{tabular}{lrrrrr}
-    \toprule
-    & Estimate & Std. Error & t value & p-value &  \\ 
-    \midrule
-    $($Intercept) & -421929.9946 & 356063.7085 & -1.18 & 0.2557 &  \\ 
-    \factorx{Mg} & -839999.8874 & 503550.1257 & -1.67 & 0.1175 &  \\ 
-    \factorx{pH} & 103271.3345 & 97739.1728 & 1.06 & 0.3086 &  \\ 
-    $\factor{pH^2}$ & -4977.7406 & 6512.6996 & -0.76 & 0.4574 &  \\ 
-    \factorx{Mg}$\times$\factorx{pH} & 266920.7964 & 138224.0638 & 1.93 & 0.0740 & \textbullet \\ 
-    \factorx{Mg}$\times\factor{pH^2}$ & -19830.2264 & 9210.3481 & -2.15 & 0.0492 & * \\ 
-    \bottomrule
-        \multicolumn{6}{l}{\footnotesize significance codes: '\textbullet' \SI{10}{\percent} level; '*' \SI{5}{\percent} level}
-  \end{tabular}
-\end{table}
-%
-The model describes the actual data reasonable well, with about \SI{68.6}{\percent} of the variance explained ($R^2 = 0.6855$)(\autoref{fig:e_pHlm}).
-Also here the p-values for the coefficients $\beta_3$ (0.074) and $\beta_4$ (0.0492) suggest an interaction between \cf{Mg^2+} and pH (\autoref{tab:lm-cat}), at significant levels of \num{10} and \SI{5}{\percent} respectively.
-The coefficient estimate of 266920 for $\beta_3$ illustrates, that for the catecholic substrates the effect of the pH is much larger than for the methylation of \ifa.
-In addition to the simplified linear model (\autoref{eq:cat}) a more complex linear model, 
-%
-\setlength\multlinegap{0pt}
-\begin{multline} %\tag{2}
-       activity = \beta_0 + \beta_1 \times \factor{Mg} + \beta_2 \times \factor{pH} + \beta_3 \times \factor{pH^2} + \beta_4 \times (\factor{Mg} \times \factor{pH}) + \\ \beta_5 \times (\factor{pH^2} \times \factor{Mg}) + \beta_6 \times (\factor{pH} \times \factor{pH^2}) + \beta_7 \times (\factor{Mg} \times \factor{pH} \times \factor{pH^2}),
-\end{multline}
-%
-%\end{equation*}
-was prepared and shrunken via the \textsc{Lasso} method and 5-fold cross validation (\autoref{tab:lasso-catechol}) \citep{Tibshirani1994}.
-The \textsc{Lasso} is a shrinkage method that can shrink coefficients to exactly zero and thus make a complex model less complex and therefore more interpretable \citep{Tibshirani1994}.
-The shrunken model only contained the factors \factorx{pH}, \factorx{pH}$\times$\factorx{Mg},  \factorx{pH}$\times$\factorx{pH\tup{2}} and  \factorx{pH}$\times$\factorx{Mg}$\times$\factorx{pH\tup{2}}.
-The large coefficient estimate for parameter $\beta_2$ (\factorx{pH}) suggests, that in fact the pH has a large influence on the activity.
-This is contrary to the linear model (\autoref{eq:cat}), which, judged by the $p$-value for this coefficient, suggested otherwise.
-However, the shrunken model also shows that the activity is dependent on the interaction of pH and magnesium, which supports the implications of the linear model (\autoref{eq:cat}).
-The results of the the shrunken model and the results obtained by linear modelling are further statistical evidence that pH and \cf{Mg^2+} show main effects and also interaction effects which seem to be associated with the enzyme's activity towards catecholic substrates (i.e eriodictyol, caffeic acid).
-Nonetheless, all of these rather simple models can not reflect the reality of such complex systems as enzymes where lots of factors play important roles.
-%
-%
-%% \begin{table}[htb]
-%%   \caption{Coefficients obtained for linear regression model using the \ifa subset after shrinkage using the Lasso method and 5-fold cross validation. Only non-zero coefficients (variables actually do have an effect) are retained during the Lasso. Seed was set to 1337.}
-%%   \label{tab:lasso-ifa}
-%%   \centering\small
-%%   \begin{tabular}{lr}
-%%     \toprule
-%%     variable & coefficient \\ 
-%%     \midrule
-%%     $($Intercept) & -509.8385 \\ 
-%%     \factorx{pH} & 73.4085 \\ 
-%%     \factorx{Mg} & -1606.1362 \\ 
-%%     \factorx{pH}$\times$\factorx{Mg} & 296.0753 \\ 
-%%     \bottomrule
-%%   \end{tabular}
-%% \end{table}
-%
-\begin{table}
-  \caption{Coefficients obtained for linear regression model using the catechols subset after shrinkage using the Lasso method and 5-fold cross validation. Only non-zero coefficients (variables actually do have an effect) are retained during the Lasso. Seed was set to 1336.} 
-  \label{tab:lasso-catechol}
-  \centering\small
-  \begin{tabular}{lr}
-    \toprule
-    variable & coefficient \\ 
-    \midrule
-    $($Intercept) & -467632.3821 \\ 
-    \factorx{pH} & 94469.8366  \\ 
-    \factorx{pH}$\times$\factorx{Mg} & 19068.9540 \\ 
-    \factorx{pH}$\times\factor{pH^2}$ & -381.5863 \\ 
-    \factorx{pH}$\times$\factorx{Mg}$\times\factor{pH^2}$ & -292.3608 \\ 
-    \bottomrule
-  \end{tabular}
-\end{table}
+\begin{figure}[htb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[width=0.5\textwidth]{usr/graphics/static/pfomt_3to4_activities}
+  \end{figureframe}
+  \caption{Differences in the regioselectivity of some \pfomt variants. The products observed in \gls{hplc} and \gls{lcms} measurements switched from 3'-methylated (dark grey) to 4'-methylated (light grey) for the displayed variants. The height of the bars corresponds to the total conversion of substrate.}
+  \label{fig:app_pfomt_3to4}
+\end{figure}  
 
-\clearpage
-\section{Tandem mass-spectrometry studies of flavonoids}
+
+%% \section{Chapter 6}
+
+%% \begin{figure}[htpb]\centering
+%%   \begin{figureframe}  
+%%     \begin{subfigure}{\textwidth}\centering
+%%       \includegraphics[scale=1]{usr/graphics/static/hesperetin_HCD_1,3B}
+%%       \caption{}
+%%       \label{fig:HCD_hesperetin_1.3}
+%%     \end{subfigure}  
+%%     \begin{subfigure}{\textwidth}\centering
+%%       \includegraphics[scale=1]{usr/graphics/static/hesperetin_HCD_1,4B}
+%%       \caption{}
+%%       \label{fig:HCD_hesperetin_1.4}
+%%     \end{subfigure}
+%%   \end{figureframe}
+%%   \caption{Proposed mechanisms for the formation of \textbf{\subref{fig:HCD_hesperetin_1.3}} -- \frag{1,3}{B}{+} and \textbf{\subref{fig:HCD_hesperetin_1.4}} -- \frag{1,4}{B}{+} ions from hesperetin upon \gls{hcd}.}
+%%   \label{fig:mechanism_hcd_hesp}
+%% \end{figure}
+
+
+
+
+%% \begin{figure}[htpb]\centering
+%%   \begin{figureframe}
+%%    \includegraphics[scale=1]{usr/graphics/static/chrysoeriol_HCD_0,2B}
+%%   \end{figureframe}
+%%   \caption{Proposed mechanism for the formation of \frag{0,2}{B}{+} and resulting ions from the molecular ion of chrysoeriol under \gls{hcd} conditions.}
+%% \end{figure}
+%% \clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% MSMS studies
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Tandem mass-spectrometry studies of flavonoids}
 
 %%%%%%%%%%%%%%%%%% Fragmentation tables
 
@@ -927,3 +517,467 @@ Nonetheless, all of these rather simple models can not reflect the reality of su
 }
 \end{sidewaystable}
 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% Non-catechols
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Enzymatic methylation of non-catechols}
+
+\section{SOMT expression studies}
+\begin{figure}[htb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[width=0.9\textwidth]{usr/graphics/static/tmp_pca1}
+  \end{figureframe}
+  \caption{Additional scatterplots of the \gls{pca} of \gls{hplc} data obtained from \nico leaves infiltraded by \agro harbouring different constructs. \textbf{A} -- samples colored by leaf position (top: red; bottom: cyan), \textbf{B} -- samples colored by plant (plant 1: red; plant 2: green; plant 3: blue)}
+  \label{fig:x_pca}
+\end{figure}
+
+
+\begin{figure}[htpb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[width=0.75\textwidth]{usr/graphics/static/tmp_e_growthcurve}
+  \end{figureframe}
+  \caption{Growth curve of \eco BL21(DE3) expressing \glsentryfirst{somt} at \degC{37}. 
+  Glucose is depleted about 5\,hours into growth, at which point the start of \glsentrytext{somt} expression is expected.
+  The \odx{600} after inoculation was about \num{0.1}.}
+  \label{fig:e_growthcurve}
+\end{figure}
+
+\begin{figure}[htb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[width=0.45\textwidth]{usr/graphics/static/sds_somt}
+  \end{figureframe}
+  \caption{\sdspage gel of samples aquired during growth curve measurements. The arrow indicates the band that could correspond to the GST-tagged \glsentrytext{somt} protein.}
+  \label{fig:x_somtgel}
+\end{figure}
+
+\begin{table}[htb]\centering
+  \caption{Results for the \aov of the main effects model describing soluble protein obtained after refolding.} 
+  \label{tab:aov_BF}
+\begin{tabular}{lrrrrrl}
+    \toprule\small
+    & df & Sum Sq & Mean Sq & F value & Pr($>$F) & \\ 
+    \hline
+    Arginine      & 1 & 3595.63 & 3595.63 & 24.56 & 0.0158 & * \\ 
+    pH            & 1 & 529.87 & 529.87 & 3.62 & 0.1533 & \\ 
+    Glycerin      & 1 & 752.08 & 752.08 & 5.14 & 0.1083 & \\ 
+    ionicStrength & 1 & 82.37 & 82.37 & 0.56 & 0.5077 & \\ 
+    divCations    & 1 & 5.49 & 5.49 & 0.04 & 0.8588 & \\ 
+    redox         & 1 & 5.52 & 5.52 & 0.04 & 0.8584 & \\ 
+    CycloDex      & 1 & 134.67 & 134.67 & 0.92 & 0.4083 & \\ 
+    SAH           & 1 & 896.83 & 896.83 & 6.13 & 0.0897 & \textbullet\\ 
+    Residuals     & 3 & 439.26 & 146.42 &  &  & \\ 
+    \bottomrule
+           \multicolumn{6}{l}{\footnotesize significance codes: '\textbullet' \SI{10}{\percent} level; '*' \SI{5}{\percent} level}
+\end{tabular}
+\end{table}
+
+\begin{table}[htb]\centering
+  \caption{Results for the \aov of the main effects model describing protein activity after refolding.} 
+  \label{tab:aov_activity}
+  \begin{tabular}{lrrrrrl}
+    \toprule\small
+    & df & Sum Sq & Mean Sq & F value & Pr($>$F) &   \\ 
+    \midrule
+    Arginine      & 1 & 8.31 & 8.31 & 6.62 & 0.0824 & \textbullet \\ 
+    pH            & 1 & 5.71 & 5.71 & 4.55 & 0.1227 & \\ 
+    Glycerin      & 1 & 0.44 & 0.44 & 0.35 & 0.5945 & \\ 
+    ionicStrength & 1 & 3.38 & 3.38 & 2.69 & 0.1997 & \\ 
+    divCations    & 1 & 0.54 & 0.54 & 0.43 & 0.5605 & \\ 
+    redox         & 1 & 24.26 & 24.26 & 19.31 & 0.0218 & * \\ 
+    CycloDex      & 1 & 1.07 & 1.07 & 0.85 & 0.4250 & \\ 
+    SAH           & 1 & 0.11 & 0.11 & 0.09 & 0.7893 & \\ 
+    Residuals     & 3 & 3.77 & 1.26 &  &  & \\ 
+    \bottomrule
+           \multicolumn{6}{l}{\footnotesize significance codes: '\textbullet' \SI{10}{\percent} level; '*' \SI{5}{\percent} level}
+  \end{tabular}
+\end{table}
+
+%% \begin{table}[htpb]\centering
+%%   \caption{Results for the \aov of the main effects model describing protein activity. Significance codes: 0.05 (\textbf{~*~}), 0.1 (\textbf{~.~})} 
+%%   \label{tab:aov_activity}
+%%   \begin{tabular}{lrrrrrl}
+%%     \toprule\small
+%%     & df & Sum Sq & Mean Sq & F value & Pr($>$F) &   \\ 
+%%     \midrule
+%%     Arginine      & 1 & 0.03 & 0.03 & 8.14 & 0.0649 & .  \\ 
+%%     pH            & 1 & 0.02 & 0.02 & 4.83 & 0.1153 &   \\ 
+%%     Glycerin      & 1 & 0.00 & 0.00 & 0.55 & 0.5122 &   \\ 
+%%     ionicStrength & 1 & 0.01 & 0.01 & 3.27 & 0.1682 &   \\ 
+%%     divCations    & 1 & 0.00 & 0.00 & 0.57 & 0.5047 &   \\ 
+%%     redox         & 1 & 0.06 & 0.06 & 19.88 & 0.0210 & *  \\ 
+%%     CycloDex      & 1 & 0.00 & 0.00 & 0.78 & 0.4428 &   \\ 
+%%     SAH           & 1 & 0.00 & 0.00 & 0.13 & 0.7439 &   \\ 
+%%     Residuals     & 3 & 0.01 & 0.00 &  &  &   \\ 
+%%     \bottomrule
+%%   \end{tabular}
+%% \end{table}
+
+\begin{figure}[htb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[width=\textwidth]{usr/graphics/static/SOMT_SS-bridges}
+  \end{figureframe}
+  \caption{Graphical representation of a \somt model obtained from the PHYRE2 web portal (\url{http://www.sbg.bio.ic.ac.uk/phyre2/html/page.cgi?id=index}) \citep{Kelley2015}. Cysteines are shown as sticks. The distance between neighboring cysteines that could by oxidized to disulfide bridges is shown in orange.}
+  \label{fig:x_somtmodel}
+\end{figure}
+
+
+\begin{figure}[htb]
+  \centering
+  \begin{figureframe}
+    \includegraphics[width=0.75\textwidth]{usr/graphics/static/somt_gefi}
+  \end{figureframe}
+  \caption{Chromatogram of the gel filtration analysis of refolded \somt (blue). Gel-filtrations standards (red) were used to assess the size of the \somt protein. The estimated molecular weights for the eluting peaks were  \SI{165}{\kilo\dalton} (\SI{12.47}{\milli\litre}) and \SI{65.5}{\kilo\dalton} (\SI{14.26}{\milli\litre}). Protein standard: \SI{9.15}{\milli\litre} -- thyroglobulin (\SI{670}{\kilo\dalton}), \SI{12.62}{\milli\litre} -- \textgamma-globulin (\SI{158}{\kilo\dalton}), \SI{15.43}{\milli\litre} -- ovalbumin (\SI{44}{\kilo\dalton}), \SI{17.63}{\milli\litre} -- myoglobin (\SI{17}{\kilo\dalton}), \SI{21.11}{\milli\litre} -- vitamin B12 (\SI{1.35}{\kilo\dalton})}
+  \label{fig:x_somt_gefi}
+\end{figure}
+
+
+\section{Conversion of non-catechols by PFOMT}
+
+\subsection{Modelling and shrinkage of catechols subset (pH profile)}
+\label{sec:apppfomtph}
+
+The bell-shaped pH profile for the catecholic substrates showed, that there might be a quadratic relationship between pH and activity. 
+A bell-shaped pH profile is common for most enzymatic reactions, where ionizable groups are involved the reaction \cite{Cornish-Bowden2004}.
+A quadratic term was thus included into the linear model to capture this relationship:
+\begin{equation}\label{eq:cat}
+    activity = \beta_0 + \beta_1 \times \factor{Mg} + \beta_2 \times \factor{pH} + \beta_3 \times (\factor{Mg} \times \factor{pH}) + \beta_4 \times \factor{pH^2} + \beta_5 \times (\factor{pH^2} \times \factor{Mg}).
+\end{equation}
+%
+\begin{table}[htb]  \centering\small
+  \caption{Coefficients of the model (\ref{eq:cat}) for activity of catechol methylation by PFOMT. The factor $\factor{Mg}$ is a categorical variable (addition/no addition) and can therefore only be 0 or 1.}
+  \label{tab:lm-cat}
+  \begin{tabular}{lrrrrr}
+    \toprule
+    & Estimate & Std. Error & t value & p-value &  \\ 
+    \midrule
+    $($Intercept) & -421929.9946 & 356063.7085 & -1.18 & 0.2557 &  \\ 
+    \factorx{Mg} & -839999.8874 & 503550.1257 & -1.67 & 0.1175 &  \\ 
+    \factorx{pH} & 103271.3345 & 97739.1728 & 1.06 & 0.3086 &  \\ 
+    $\factor{pH^2}$ & -4977.7406 & 6512.6996 & -0.76 & 0.4574 &  \\ 
+    \factorx{Mg}$\times$\factorx{pH} & 266920.7964 & 138224.0638 & 1.93 & 0.0740 & \textbullet \\ 
+    \factorx{Mg}$\times\factor{pH^2}$ & -19830.2264 & 9210.3481 & -2.15 & 0.0492 & * \\ 
+    \bottomrule
+        \multicolumn{6}{l}{\footnotesize significance codes: '\textbullet' \SI{10}{\percent} level; '*' \SI{5}{\percent} level}
+  \end{tabular}
+\end{table}
+%
+The model describes the actual data reasonable well, with about \SI{68.6}{\percent} of the variance explained ($R^2 = 0.6855$)(\autoref{fig:e_pHlm}).
+Also here the p-values for the coefficients $\beta_3$ (0.074) and $\beta_4$ (0.0492) suggest an interaction between \cf{Mg^2+} and pH (\autoref{tab:lm-cat}), at significant levels of \num{10} and \SI{5}{\percent} respectively.
+The coefficient estimate of 266920 for $\beta_3$ illustrates, that for the catecholic substrates the effect of the pH is much larger than for the methylation of \ifa.
+In addition to the simplified linear model (\autoref{eq:cat}) a more complex linear model, 
+%
+\setlength\multlinegap{0pt}
+\begin{multline} %\tag{2}
+       activity = \beta_0 + \beta_1 \times \factor{Mg} + \beta_2 \times \factor{pH} + \beta_3 \times \factor{pH^2} + \beta_4 \times (\factor{Mg} \times \factor{pH}) + \\ \beta_5 \times (\factor{pH^2} \times \factor{Mg}) + \beta_6 \times (\factor{pH} \times \factor{pH^2}) + \beta_7 \times (\factor{Mg} \times \factor{pH} \times \factor{pH^2}),
+\end{multline}
+%
+%\end{equation*}
+was prepared and shrunken via the \textsc{Lasso} method and 5-fold cross validation (\autoref{tab:lasso-catechol}) \citep{Tibshirani1994}.
+The \textsc{Lasso} is a shrinkage method that can shrink coefficients to exactly zero and thus make a complex model less complex and therefore more interpretable \citep{Tibshirani1994}.
+The shrunken model only contained the factors \factorx{pH}, \factorx{pH}$\times$\factorx{Mg},  \factorx{pH}$\times$\factorx{pH\tup{2}} and  \factorx{pH}$\times$\factorx{Mg}$\times$\factorx{pH\tup{2}}.
+The large coefficient estimate for parameter $\beta_2$ (\factorx{pH}) suggests, that in fact the pH has a large influence on the activity.
+This is contrary to the linear model (\autoref{eq:cat}), which, judged by the $p$-value for this coefficient, suggested otherwise.
+However, the shrunken model also shows that the activity is dependent on the interaction of pH and magnesium, which supports the implications of the linear model (\autoref{eq:cat}).
+The results of the the shrunken model and the results obtained by linear modelling are further statistical evidence that pH and \cf{Mg^2+} show main effects and also interaction effects which seem to be associated with the enzyme's activity towards catecholic substrates (i.e eriodictyol, caffeic acid).
+Nonetheless, all of these rather simple models can not reflect the reality of such complex systems as enzymes where lots of factors play important roles.
+%
+%
+%% \begin{table}[htb]
+%%   \caption{Coefficients obtained for linear regression model using the \ifa subset after shrinkage using the Lasso method and 5-fold cross validation. Only non-zero coefficients (variables actually do have an effect) are retained during the Lasso. Seed was set to 1337.}
+%%   \label{tab:lasso-ifa}
+%%   \centering\small
+%%   \begin{tabular}{lr}
+%%     \toprule
+%%     variable & coefficient \\ 
+%%     \midrule
+%%     $($Intercept) & -509.8385 \\ 
+%%     \factorx{pH} & 73.4085 \\ 
+%%     \factorx{Mg} & -1606.1362 \\ 
+%%     \factorx{pH}$\times$\factorx{Mg} & 296.0753 \\ 
+%%     \bottomrule
+%%   \end{tabular}
+%% \end{table}
+%
+\begin{table}[htb]\centering\small
+  \caption{Coefficients obtained for linear regression model using the catechols subset after shrinkage using the Lasso method and 5-fold cross validation. Only non-zero coefficients (variables actually do have an effect) are retained during the Lasso. Seed was set to 1336.} 
+  \label{tab:lasso-catechol}
+  \begin{tabular}{lr}
+    \toprule
+    variable & coefficient \\ 
+    \midrule
+    $($Intercept) & -467632.3821 \\ 
+    \factorx{pH} & 94469.8366  \\ 
+    \factorx{pH}$\times$\factorx{Mg} & 19068.9540 \\ 
+    \factorx{pH}$\times\factor{pH^2}$ & -381.5863 \\ 
+    \factorx{pH}$\times$\factorx{Mg}$\times\factor{pH^2}$ & -292.3608 \\ 
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+%% Main effects plot PFOMT conversion of non-catechols
+%% \begin{figure}[htpb]
+%%   \centering
+%%   \begin{figureframe}
+%%     \begin{subfigure}{0.69\textwidth}
+%%       \includegraphics[width=\textwidth]{usr/graphics/static/tmp_MEP_pfomt}
+%%       \caption{}
+%%       \label{fig:x_mep_pfomt}
+%%     \end{subfigure}
+%%     %% Interaction plot Mg/pH
+%%     \begin{subfigure}{0.3\textwidth}
+%%       \includegraphics[width=\textwidth]{usr/graphics/static/tmp_pfomt_MgpH}
+%%       \caption{}
+%%       \label{fig:x_iap_pfomt}
+%%     \end{subfigure}
+%%   \end{figureframe}
+%%   \caption{Main and interaction effects plots for the conversion of non-catecholic phenylpropanoids by \glsentryfirst{pfomt}.
+%%     (\textbf{\subref{fig:x_mep_pfomt}}) Main effects plot for PFOMT conversion of non-catechols. 
+%%         Phenolics (A) are converted worst and conversion of \glsentryfirst{3o4m} (C) is generally best.
+%%         Conversion of \glsentryfirst{4o3m} (D) is a little better than phenolics, but is still below average.
+%%         There seem to be positive effects of \cf{Mg^2+} and high pH, because conversion is generally best at high pH and with magnesium added.
+%%         The wild-type enzyme shows better conversion than the 4'-specific variant.
+%%         (\textbf{\subref{fig:x_iap_pfomt}}) Interaction plot of \cf{Mg^2+} and pH for the conversion of non-catechols and catechols by \pfomt.
+%%         There seems to be an interaction between \cf{Mg^2+} addition (\textcolor{blue}{blue} -- \cf{Mg^2+} addition, \textcolor{red}{red} -- no \cf{Mg^2+}) and pH. However, statistical tests suggest this interaction might not be significant.}
+
+%% \end{figure}
+
+\section{Identification of products from conversion of non-catechols by PFOMT}
+\label{sec:pfomt_conversions}
+
+\subsection{\textit{p}-Coumaric acid methylester}
+
+The product obtained by conversion of \textit{p}-coumaric acid by \pfomt was determined as 4-hydroxy cinnamic acid methyl ester.
+The negative mode MS\tup{2} spectrum showed four prominent peaks \mz{177}(21) [M-H]\tup{-}, 162(35), 145(100) and 118(47). 
+If the enzymatic product was the methyl ether, one would expect a strong \mz{133}, corresponding to [M-H-\cf{CO2}]\tup{-} \cite{Song2015}.
+However \mz{133} was not observed, strongly suggesting the methyl ester.
+Comparison of the obtained data with literature data confirmed the methyl ester as sole product \cite{Jarrell2014}.
+
+\begin{figure}[!htb]
+  \begin{figureframe}
+  \includegraphics[width=\textwidth]{usr/graphics/static/MS2_p-hydroxy_methylcinnamate}
+  \end{figureframe}
+\end{figure}
+
+\subsection{\textit{iso}-Ferulic acid esters and caffeic acid dimethylether}
+
+Methylation of \ifa and ferulic acid afforded two methylated products with retention times of \num{12.9} and \SI{13.7}{\minute}.
+The compound eluting at \SI{12.9}{\minute} was identified as caffeic acid dimethylether (\molnum{came}) through comparison to an authentic standard, whereas the compounds eluting about one minute later were identified as the ferulic (\molnum{fame}) and \textit{iso}-ferulic acid methyl esters (\molnum{ifame}).
+Since the the retention time is an indicator for the polarity of an eluting compound and the methyl ester is much more unpolar than the dimethyl ether, it comes as no surprise that the latter elutes earlier on a reversed-phase column.
+Ionization of the enzymatic products was difficult in negative mode, but easily achieved in positive mode.
+The only peaks in the positive mode MS\tup{2} spectra of \molref{came} and (\molref*{fame},\molref*{ifame}) were \mz{191} and \mz{177} respectively.
+This indicates a loss of water and methanol from the dimethylether and methyl ester respectively.
+
+\begin{figure}[htbp]
+  \begin{figureframe}
+    \begin{subfigure}{\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_neg_dimethylCA}
+      \caption{}\label{subfig:came_neg}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_pos_dimethylCA}
+      \caption{}\label{subfig:came_pos}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_pos_CA-methylester}
+      \caption{}\label{subfig:ifame_pos}
+    \end{subfigure}
+  \end{figureframe}
+  \caption{MS\tup{2} spectra of \molref{came} and \molref{ifame}.
+   (\textbf{\subref{subfig:came_neg}}) negative mode MS\tup{2} of \molref{came}.
+    (\textbf{\subref{subfig:came_pos}}) positive mode MS\tup{2} of \molref{came}.
+    (\textbf{\subref{subfig:ifame_pos}}) positive mode MS\tup{2} of \molref{ifame}.
+  }
+\end{figure}
+
+\subsection{3',4'-dimethyl eriodictyol}
+
+Conversion of homoeriodictyol or hesperetin by \pfomt afforded 3',4'-dimethyl eriodictyol (\molnum{dimethylED}).
+The product was identified by \gls{lcmsms}. 
+Products from both conversions possessed the same retention times of \SI{14.54}{\minute}.
+The \gls{cid} spectra of these products showed five distinct signals at \mz{299}(14), 191(100), 179(62), 165(17) and 153(67) (\autoref{fig:dimethyled_ms}).
+The \mz{299} corresponds to the ion [M+H-\cf{H2O}]\tup{+}, showing that both, homoeriodictyol as well as hesperetin were methylated.
+The \mz{153} corresponds to the \frag{1,3}{A}{+} fragment, which is characteristic for 3,7-dihydroxy substituted flavonoids. 
+This indicates a methylation of the B-ring.
+Further evidence of a dimethoxylated B-ring is the fragment \frag{1,4}{B}{+}-2H with \mz{191}.
+The fragmentation pattern of 3',4'-dimethyl eriodictyol agrees with the general fragmentation of flavanones described in \autoref{ch:MSMS}.
+
+\begin{figure}[htb]
+  \begin{figureframe}
+    \begin{subfigure}{\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_CID_dimethylED}
+      \caption{}\label{subfig:dimethyl_cid}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_HCD_dimethylED}
+      \caption{}\label{subfig:dimethyl_hcd}
+    \end{subfigure}
+  \end{figureframe}
+  \caption{MS\tup{2} spectra of 3'4'-dimethyl eriodictyol \molref{dimethylED}.
+   (\textbf{\subref{subfig:dimethyl_cid}}) positive mode MS\tup{2} \glsentrytext{cid} spectrum of \molref{dimethylED}.
+    (\textbf{\subref{subfig:dimethyl_hcd}}) positive mode MS\tup{2} \glsentrytext{hcd} spectrum of \molref{dimethylED}.
+  }
+  \label{fig:dimethyled_ms}
+\end{figure}
+
+\subsection{3',4'-dimethyl luteolin}
+
+Conversion of diosmetin and chrysoeriol by \pfomt afforded 3',4'-dimethyl luteolin (\molnum{dimethyllut}) and an unidentified product.
+\molref{dimethyllut} eluted after \SI{14.53}{\minute}.
+The \gls{cid} spectrum of \molref{dimethyllut} shows three signals, \mz{300}(100), 299(87) and 271(17) (\autoref{fig:dimethyllut_ms}).
+These signals correspond to the [M+H-\cf{CH3}]\tup{\textbullet+}, [M+H-\cf{CH4}]\tup{+} and [M+H-\cf{CH4}-CO]\tup{+} ions respectively.
+The \gls{hcd} spectrum of \molref{dimethyllut} clearly shows a peak with \mz{153} amongst other masses.
+Again, this is spectrometric evidence of a 3,7-dihydroxylated flavonoid (fragment \frag{1,3}{A}{+}) demonstrating a 3',4'-dimethylation.
+%
+\begin{figure}[htb]
+  \begin{figureframe}
+    \begin{subfigure}{\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_CID_dimethylluteolin}
+      \caption{}\label{subfig:dimethyllut_cid}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+      \includegraphics[width=\textwidth]{usr/graphics/static/MS2_HCD_dimethylluteolin}
+      \caption{}\label{subfig:dimethyllut_hcd}
+    \end{subfigure}
+  \end{figureframe}
+  \caption{MS\tup{2} spectra of 3'4'-dimethyl luteolin \molref{dimethyllut}.
+   (\textbf{\subref{subfig:dimethyllut_cid}}) positive mode MS\tup{2} \glsentrytext{cid} spectrum of \molref{dimethyllut}.
+    (\textbf{\subref{subfig:dimethyllut_hcd}}) positive mode MS\tup{2} \glsentrytext{hcd} spectrum of \molref{dimethyllut}.
+  }
+  \label{fig:dimethyllut_ms}
+\end{figure}
+%
+The unidentified products of the conversions of apigenin, diosmetin and chrysoeriol eluted after \num{12.59}, \num{12.77} and \SI{12.69}{\minute} respectively.
+
+\begin{figure}[htb]\centering
+  \begin{figureframe}
+    \includegraphics[width=0.4\textwidth]{usr/graphics/static/flavones_products}
+  \end{figureframe}
+  \caption{Product composition after conversion of flavones with PFOMT.
+    Bar chart of the the peak heights of the unidentified (black) and (3' or 4')-\textit{O}-methylated products (gray) in the selected ion chromatograms (\glsentrytext{hcd} at \SI{100}{\percent} \glsentrytext{nce}).
+    The conversion experiments were conducted with the wild-type PFOMT at pH 8.6 with \SI{10}{\milli\molar} \cf{Mg^2+} added.
+  }
+  \label{fig:flavone_prods}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% Additional Appendix
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\chapter{Additional information}
+
+%% Table of cloned constructs (appendix)
+%\ostTableEnv|[label = tab:molecularcloning]{%
+\begin{sidewaystable}  \scriptsize\centering
+\caption{Overview over the contructs produced for the present thesis. Each step during the production of the construct is given in the workflow steps column. Primers (italic font) or restriction sites used during each step are displayed in parenthesis.}
+\label{tab:molecularcloning}
+%  \begin{tabularx}{\textwidth}{l p{0.35\textwidth} p{0.1\textwidth} l X}
+    \begin{tabular}{l p{0.25\textwidth} p{0.1\textwidth} l p{0.3\textwidth}}
+    \toprule
+    \small construct name & \small  description & \small  entry constructs & \small  destination & \small  workflow steps (primers/cloning sites)\\ 
+    \midrule
+    pBEW101 & & & & \\
+    pBEW102 & lsrA promoter & & & \\
+    pBEW103 & pBEW102 with BamHI cloning site & pBEW102 & & \\
+    pBEW104 & rhaP$_{\mathrm{BAD}}$ promoter & pBEW4b & pBEW103 & amplification (\textit{pRha1.fw/rv}), cloning (BglII, BamHI)\\
+    pBEW106 & pICH413038-somt & pET28MC-somt & pICH413038 & amplification (\textit{somt1/2/3/4}), golden gate cloning (BpiI) \\
+    pBEW107 & & pICH51266, pBEW106, pICH41421 & pICH75044 & golden gate cloning (BsaI) \\
+    pBEW1a & & & & \\
+    pBEW1b & & & & \\
+    pBEW2a & & & & \\
+    pBEW2b & & & & \\
+    pBEW3a & & & & \\
+    pBEW3b & & & & \\
+    pBEW4a & & & & \\
+    pBEW4b & & & & \\
+    pET28-pfomt & \textit{pfomt} gene in pET-28a(+), endogenous NdeI site removed & pQE30-pfomt & pET-28a(+) & mutagenesis (\emph{pfomt1.fw/rv}), amplification (\emph{pfomt2.fw/rv}), cloning (NdeI, EcoRI) \\
+    pET20-somt & N-terminal pelB-tag fusion for periplasmic expression & & pET20-b(+)& \\
+    pET28-somt & & & pET28-a(+)& \\
+    pET28MC-somt & & &  & \\
+    pET32-somt & N-terminal TrX-tag fusion & & pET-32a(+) & \\
+    pET41-somt & N-terminal GST-tag fusion & & pET-41a(+) & \\
+    pUC19* & added BglII site & pUC19 & - & mutagenesis (\textit{pUC1.fw/rv}) \\
+    pUCB1 & pUC19 derivative with lsrA promoter & lsr-XX-DAS & pUC19* & cloning (NdeI, BglII) \\ 
+    pUCB1-sfGFP-DAS+4 & & & & \\
+    \bottomrule
+    \end{tabular}
+\end{sidewaystable}
+%}{%
+%Overview over the contructs produced for the present thesis. Each step during the production of the construct is given in the workflow steps column. Primers (italic font) or restriction sites used during each step are displayed in parenthesis.
+%}
+%% }}}
+
+\begin{lstTabularx}[1]{\linewidth}{>{\scriptsize}p{0.45\textwidth}XX>{\scriptsize}p{0.12\textwidth}}
+  \caption{\gls{sam} analogues that have been used with \glspl{mt}. Targets: \emph{P} -- peptide/protein, \emph{D} -- DNA, \emph{R} -- RNA, \emph{S} -- small molecule.} \\
+  \label{tab:mtlit}
+  \hfill \\
+     \toprule
+	\small analogue & enzyme & target & \small references \\ 
+     \midrule
+     \endfirsthead
+     \toprule
+	\small analogue & enzyme & target & \small references \\ 
+     \midrule
+     \endhead
+     \small\textit{SAM} & & &\\
+    % \cf{-CH3} & & &\\
+     \cf{-CH2-CH3} & PRMT1, M.TaqI, M.HhaI, M.BcnIB, RebM, RapM & S,P,D & \citep{Thomsen2013,Dalhoff2006,Singh2014,Law2015} \footnote{Singh \etal (2014) published a series of 44 biocatalytically synthesized \gls{sam} and \gls{seam} derivatives, most of which were not tested towards their alkyl donation potential in \gls{mt} reactions.}\\
+     \cf{-CH2-CH2-CH3} & PRMT1, M.TaqI, M.HhaI, M.BcnIB & P,D & \citep{Thomsen2013,Dalhoff2006}\\
+     \cf{-CH2-CH2-CH2-CH3} & PRMT1 & P & \citep{Thomsen2013}\\
+     \cf{-CH2-C6H5} & NovO, CouO, PRMT1 & S,P & \citep{Stecher2009,Thomsen2013}\\
+%    \cf{-CH2-CH2-C6H5} & & & \citep{Thomsen2013}\\ % not tested with MTs
+%    \cf{-CH2-CH(-NH2)-COOH} & & & \citep{Thomsen2013}\\ % not tested with Mts
+%     \cf{-CH2-C(=O)-NH2} & & & \citep{Thomsen2013}\\ % not tested with Mts
+     \cf{-CH2-C(=O)-CH3} & COMT, TPMT, CazF & S & \citep{Lee2010,Winter2013}\\
+     
+     \cf{-CH2-CH=CH2} & NovO, CouO, RapM, PRMT1, M.TaqI, M.HhaI, M.BcnIB, RebM, Tgs & P,S,D & \citep{Stecher2009,Thomsen2013,Dalhoff2006,Singh2014,Wang2011,Wang2011a,Tengg2012a,Law2015,Schulz2013} \\
+     \cf{-CH2-CH=CH-CH3} & NovO, CouO & S & \citep{Stecher2009}\\
+  %  \cf{-CH2-CH=CH-CH2-CH3} & & & \citep{Wang2014}\\ %% only SAM synthase
+    
+     \cf{-CH2-C#CH} & Dim-5, \textit{Hs}MLL, TRM1, NovO, CouO, PRMT1 & P,R,S & \citep{Willnow2012,Stecher2009,Wang2011,Wang2011a,Islam2011}\\
+     \cf{-CH2-C#N} & RebM & S & \citep{Singh2014} \\
+     \cf{-CH2-CH2-C#CH} & PKMT & P & \citep{Islam2011}\\
+     \cf{-CH2-CH2-CH2-C#CH} & PKMT & P & \citep{Islam2011}\\
+     \cf{-CH2-C#C-CH3} & NovO, CouO, M.HhaI, M.TaqI, M.BcnIB & S,D & \citep{Stecher2009,Dalhoff2006,Lukinavicius2013}\\
+     \cf{-CH2-C#C-CH2-CH3} & M.HhaI & D & \citep{Lukinavicius2013} \\
+     \cf{-CH2-C#C-CH2-NH2} & M.HhaI & D & \citep{Lukinavicius2013} \\
+     \cf{-CH2-C#C-CH2-NH-C(=O)(-CH2-)3-NH2} & M.HhaI & D & \citep{Lukinavicius2013} \\
+     \cf{-CH2-C#C(-CH2-)3-NH2} & M.HhaI & D & \citep{Lukinavicius2013} \\
+     \cf{-CH2-C#C(-CH2-)3-NH-C(=O)(-CH2-)3-NH2} & M.HhaI & D & \citep{Lukinavicius2013} \\
+     \cf{-CH2-C#C(-CH2-)3-C#CH} & M.HhaI & D & \citep{Lukinavicius2013} \\
+     \cf{-CH2-C#C(-CH2-)3-N3} & M.HhaI & D & \citep{Lukinavicius2013} \\
+     \cf{-CH2-CH=CH-C#CH} & Dim-5, \textit{Hs}MLL, TRM1, PRMT1, Tgs & P,R & \citep{Willnow2012,Peters2010,Wang2011,Wang2011a,Motorin2011,Islam2011,Schulz2013}\\
+     \cf{-CH2-CH=CH-CH2-C#CH} & & & \citep{Wang2011a,Islam2011} \\
+     \cf{-CH2-CH=CH-CH2-O-CH2-C#CH} & PRMT1 & P & \citep{Wang2011,Wang2011a}\\
+     
+    \\
+     \small\textit{SeAM} & & &\\
+     \cf{-CH3} & & & \\
+     \cf{-CH2-C#CH} & Dim-5, \textit{Hs}MLL, TRM1, RebM, CazF & P,R,S & \citep{Willnow2012,Singh2014,Bothwell2012, Winter2013}\\
+     
+     \\
+     \small\textit{N}-mustard derivatives & & &\\
+     \cf{-CH2-CH2-I} & RebM & S & \citep{Zhang2006} \\
+     
+     \bottomrule
+\end{lstTabularx}
+
+
+

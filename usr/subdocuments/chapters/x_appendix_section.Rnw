@@ -893,29 +893,29 @@ The unidentified products of the conversions of apigenin, diosmetin and chrysoer
     \toprule
     \small construct name & \small  description & \small  entry constructs & \small  destination & \small  workflow steps (primers/cloning sites)\\ 
     \midrule
-    pBEW101 & & & & \\
-    pBEW102 & lsrA promoter & & & \\
+  %  pBEW101 & & & & \\
+  %  pBEW102 & lsrA promoter & & & \\
     pBEW103 & pBEW102 with BamHI cloning site & pBEW102 & & \\
     pBEW104 & rhaP$_{\mathrm{BAD}}$ promoter & pBEW4b & pBEW103 & amplification (\textit{pRha1.fw/rv}), cloning (BglII, BamHI)\\
     pBEW106 & pICH413038-somt & pET28MC-somt & pICH413038 & amplification (\textit{somt1/2/3/4}), golden gate cloning (BpiI) \\
     pBEW107 & & pICH51266, pBEW106, pICH41421 & pICH75044 & golden gate cloning (BsaI) \\
-    pBEW1a & & & & \\
-    pBEW1b & & & & \\
-    pBEW2a & & & & \\
-    pBEW2b & & & & \\
-    pBEW3a & & & & \\
-    pBEW3b & & & & \\
-    pBEW4a & & & & \\
-    pBEW4b & & & & \\
+ %   pBEW1a & & & & \\
+ %   pBEW1b & & & & \\
+ %   pBEW2a & & & & \\
+ %   pBEW2b & & & & \\
+ %   pBEW3a & & & & \\
+ %   pBEW3b & & & & \\
+ %   pBEW4a & & & & \\
+ %   pBEW4b & & & & \\
     pET28-pfomt & \textit{pfomt} gene in pET-28a(+), endogenous NdeI site removed & pQE30-pfomt & pET-28a(+) & mutagenesis (\emph{pfomt1.fw/rv}), amplification (\emph{pfomt2.fw/rv}), cloning (NdeI, EcoRI) \\
     pET20-somt & N-terminal pelB-tag fusion for periplasmic expression & & pET20-b(+)& \\
     pET28-somt & & & pET28-a(+)& \\
-    pET28MC-somt & & &  & \\
+  %  pET28MC-somt & & &  & \\
     pET32-somt & N-terminal TrX-tag fusion & & pET-32a(+) & \\
     pET41-somt & N-terminal GST-tag fusion & & pET-41a(+) & \\
     pUC19* & added BglII site & pUC19 & - & mutagenesis (\textit{pUC1.fw/rv}) \\
     pUCB1 & pUC19 derivative with lsrA promoter & lsr-XX-DAS & pUC19* & cloning (NdeI, BglII) \\ 
-    pUCB1-sfGFP-DAS+4 & & & & \\
+  %  pUCB1-sfGFP-DAS+4 & & & & \\
     \bottomrule
     \end{tabular}
 \end{sidewaystable}

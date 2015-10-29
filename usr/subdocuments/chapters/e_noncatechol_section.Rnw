@@ -2,8 +2,11 @@
 %%% Sub document for methylation of non-catechols %%%
 %%%-------------------------------------------------%%%
 
-\chapter{Enzymatic methylation of Non-catechols}
-
+\chapter{Enzymatic methylation of non-catechols}
+\newpage
+%\phantomsection
+\label{ch:noncatechols}
+%\addcontentsline{toc}{chapter}{Enzymatic methylation of non-catechols}
 
 \ospSetTitle{Enzymatic methylation of non-catecholic aromatic hydroxyls using class I and class II methyl transferases}
 \ospSetAuthors{\underline{Benjamin Weigel}\textsuperscript{1,a}, %
@@ -21,27 +24,40 @@
  \Gls{pfomt} and \somt are \gls{sam}-dependent \glspl{mt}, belonging to classes I  (23--27\,kDa, cation-dependent) 
  and II (38--43\,kDa, cation-independent) 
  respectively.
- Methylation of non-catecholic aromatic hydroxyls (phenolic, \gls{3o4m}, \gls{4o3m}) examplified by different compound classes was achieved by both enzymes, although this has never been described for \pfomt.
- Active \somt could not be obtained for \invitro experiments, although soluble enyzme was obtained by optimizing refolding conditions using \gls{ffd} and \gls{doe}.
- The activity of \pfomt towards non-catechols is increased at high pH.
+ Methylation of non-catecholic aromatic hydroxyls (phenolic, \gls{3o4m}, \gls{4o3m}) examplified by different compound classes was achieved by both enzymes.
+ This is the first time this behavior is described for \pfomt.
+ It is shown, that the activity of \pfomt towards non-catechols is increased at high pH.
+  Adjusting the pH to more basic conditions can also partly remedy the deletrious effect of missing \cf{Mg^2+} for class I enzyme \pfomt.
+ Soluble \somt enzyme was obtained by optimizing \invitro refolding conditions using \gls{ffd} and \gls{doe}.
+ However, the activity of the refolded \somt was insufficient for \invitro experiments.
  %\Gls{FrFD} and \gls{doe} can be used to efficiently optimize \invitro refolding conditions.
- Adjusting the pH to more basic conditions can also partly remedy the negative effect of missing \cf{Mg^2+} for class I enzyme \pfomt.
+
 }
 
 
 
 \section{Introduction}
-Non-catechols in nature (biosynthesis, mode of action?), chemical methylation???
 
-phenol vs methoxyphenols vs catechols 
+Phenyl propanoid derived polyphenols are one of the most abundant plant secondary product in nature.
+Representatives such as flavonoids and anthocyanidins play important roles in plant development, flower color or in the defense systems combating biotic and abiotic stresses.
+Lignin, the main component of wood, is mostly comprised of phenyl propanoid alcohols and is responsible for the structure and rigidity in (lignified) vascular plants.
 
-The 4'-hydroxyl of naringenin is non-catecholic in nature.
-However it is much more acidic than the 4'-hydroxyl of eriodictyol (pKa 9.8 vs 12.7) and thus about equally as acidic as the 3'-hydroxyl of eriodictyol (pKa 9.7) \footnote{pKa values were calculated using ChemAxon's MarvinBeans 15.2.16.0} \citep{Schweigert2001a}.
+The properties of flavonoids, lignins and other is largely influenced by their derivatization pattern, and thus so-called tailoring enzymes are widespread in nature.
+Tailoring enzymes such as methyl-, prenyl- and glycosyl-transferases are responsible for hydroxylations, (\textit{C}  and \textit{O})-methylations, -prenylations and -glycosylations, which are common derivatizations of polyphenols, respectively \cite{Wessjohann2013,Dagne1990,Wollenweber1985,Simonsen2002,Harborne1988,Struck2012}.
 
-Because \somt was already well characterized in the literature and acted on flavonoids as well as isoflavonoids, it was selected as a model candidate for enzymes that can methylate 4'-hydroxyls of non-catecholic flavonoids.
+The biosynthetic or biocatalytic production of tailor made natural materials (e.g. lignins) with desireable properties is an important step towards a more ecological and economical industry and has the potential to greatly impact many areas of modern life \cite{Zubieta2002}.
+Flavonoids and polyphenols such as resveratrol, that exhibit health-beneficial effects (e.g. antioxidative, antimicrobial), are often used in functional foods or to improve the ``properties'' of food products \cite{Ley2005,Cowan1999,Yordi2012}.
+
+It is therefore of great importance to evaluate and develop new methods to biocatalytically produce known and new polyphenols with interesting properties.
+The aim of this study was to assess two plant \glspl{omt}, \pfomt and \somt, of classes I and II towards their potential for the methylation of structural motifs commonly found in polyphenols. 
+The main interest was to study methylation of so-called non-catecholic moieties, such as phenolic, \glsentryfirst{3o4m} and \glsentryfirst{4o3m} structural motifs and to see whether permethoxylated compounds could be produced by these enzymes.
+
 
 \section{\glsentrytext{somt}}
 
+\somt is already well characterized in the literature and acts on flavonoids as well as isoflavonoids\cite{Kim2013,Kim2005c,Kim2005b}. 
+However, \invitro data of this enzyme has not been published.
+It was selected as a model candidate as a class II plant \gls{omt}, that can already methylate 4'-hydroxyls of non-catecholic flavonoids.
 
 \subsection{\textit{In vivo} biotransformation in \textit{Nicotiana benthamiana}}
 \bweigel{eventuell weglassen? wo ist der mehrwert für die arbeit???}
@@ -415,6 +431,11 @@ These results display that \gls{doe} combined with \gls{ffd} can be a valuable t
 However, there still exists a discrepancy between small scale refolding reactions and the process of upscaling, which might not be trivial.
 
 \section{\glsentrytext{pfomt}}
+
+\pfomt is a class I plant \gls{omt}, that was throuroughly characterized in previous studies \cite{Ibdah2003,Dippe,Vogt2004,Kopycki2008b,Brandt2015}.
+It is easily obtained by heterologous expression in \eco after which it is fairly active and stable, which is importantz for \invitro experiments.
+The activity of \pfomt in relation to the pH of the buffer and magnesium addition was the main aim of this part of the study.
+
 \subsection{Phenolic hydroxyls}
 
 Phenolic hydroxyl groups have \pka-values of around 10 as demonstrated by four \textit{p}-cresole derivatives (\autoref{tab:pkaphenols}). 

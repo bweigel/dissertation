@@ -3,6 +3,10 @@
 %%%-------------------------------------------------%%%
 
 \chapter{Engineering of \glsentryfirst{pfomt}}
+\newpage
+%\phantomsection
+\label{ch:pfomt}
+%\addcontentsline{toc}{chapter}{Evaluation of PFOMT towards the acceptance of long-chain SAM analogues}
 
   
 \ospSetTitle{Evaluation of PFOMT towards the acceptance of long-chain SAM analogues}
@@ -39,7 +43,7 @@ Between the highly complex core structures of natural products, which are produc
 Thus, natural products containing longer chain alkyl modifications like ethyl or propyl moieties on O, N or S-centers have rarely, if ever been observed.\footnote{Reaxys searches for natural product isolates with a molecular mass between (150 and 1500) containing the substructures methyl, ethyl or propyl connected to a heteroatom return 66759, 2797 and 52 results respectively. However, it stands to note that 70\,\% of the propyl results were either esters or otherwise activated moieties. \citep{Elsevier}}
 
 It has recently been shown however, that a wide array of \gls{sam} analogues are used as co-substrates by a variety of \glspl{mt} \citep{Struck2012}.  
-The majority of the work so far has been done on \glspl{pmt} and \glspl{dmt} (\autoref{fig:d_lit_sam}), since epi-genetics and finding regions of gene-regulation is of great interest. 
+The majority of the work so far has been done on \glspl{pmt} and \glspl{dmt}, since epi-genetics and finding regions of gene-regulation is of great interest. 
 However, \glspl{smmt} have also been shown to accept different \gls{sam} analogues \cite{Stecher2009,Lee2010,Law2015,Singh2014,Zhang2006}.
 There have been a great many of \gls{sam} analogues synthesized, both chemically and enzymatically, that were consequently studied with the help of \glspl{mt} \citep{Struck2012,Dalhoff2006,Singh2014}.
 

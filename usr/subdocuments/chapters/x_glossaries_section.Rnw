@@ -3,7 +3,7 @@
 %%%-------------------------------------------------%%%
 
 % \part{Backmatter}
-
+\small
 % print the acronyms
 \printglossary[numberedsection, type=\acronymtype]
 

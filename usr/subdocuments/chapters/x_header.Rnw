@@ -2,7 +2,12 @@
 %%% Sub document header %%%
 %%%-------------------------------------------------%%% 
 
+{
+  \ostHeaderSetup{LO,RE}{\ostSizeHeaderMarks\ostFontHeaderMarks{\nouppercase{\textcolor{ostColorHeaderMarks}{}}}}
+\ostHeaderSetup{RO,LE}{\ostSizeHeaderMarks\ostFontHeaderMarks{\nouppercase{\textcolor{ostColorHeaderMarks}{}}}}
+
 \maketitle
+
 
 {\null\vfill\raggedleft
 It is what it is. Accept it and move on. \hfill \\
@@ -11,4 +16,7 @@ It is what it is. Accept it and move on. \hfill \\
 %{\null\vfill\raggedleft
 %\barquote[author=unknown]{It is what it is. Accept it and move on.}
 %}
+}
 
+\ostHeaderSetup{LO,RE}{\ostSizeHeaderMarks\ostFontHeaderMarks{\nouppercase{\textcolor{ostColorHeaderMarks}{\leftmark}}}}
+\ostHeaderSetup{RO,LE}{\ostSizeHeaderMarks\ostFontHeaderMarks{\nouppercase{\textcolor{ostColorHeaderMarks}{\thesection}}}}

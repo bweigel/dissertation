@@ -8,9 +8,61 @@
 
 \section{English Abstract}
 
-A novel crystal structure of the \textit{apo}-form of \pfomt was solved, that gives insights into the movements and domains involved in substrate binding.
+The present study outlines the useability of two plant \glspl{omt}, \pfomt and \somt, of classes I and II for the biocatalytic methylation of common structural motifs encountered throughout the group of plant polyphenolic compounds.
+Class I plant \glspl{omt}, such as \pfomt, are magnesium-dependent \gls{ccoaomt}-like enzymes comprising 200 to 280 amino acids, generally with a limited substrate scope.
+Class II plant \glspl{omt} (i.e. \somt) are metal-ion independent, 340 to 390 amino acids in length and generally more promiscuous than class I representatives.
 
+Biophysical characterization of \pfomt using \glsentrydesc{itc} demonstrated its ability to bind the biosynthetically obtained \glsentrydesc{sam} analogue \gls{sae}.
+However, although numerous variants were characterized, conversion of \gls{sae} by \pfomt was not observed.
+Nonetheless, a novel crystal structure of the \textit{apo}-form of \pfomt obtained during the present study gives new insights into the movements and domains involved in substrate binding.
+
+A systematic grid of 15 flavonoids (i.e. flavanones, flavones and flavonoles) with different substitutions at the B-ring was characterized by \gls{msms} studies in positive mode.
+Thereby, the fragmentation patterns produced by activation via \gls{cid} and \gls{hcd} were compared.
+Fragmentation, especially the appearance of characteristic C-ring cleavage fragments such as \frag{1,3}{A}{+}, of methylated members of flavones and flavonoles was easily achieved in \gls{hcd} experiments.
+The results obtained demonstrate the complementary nature of both activation methods and the importance of \gls{hcd} spectra for the identification of methylated flavones and flavonols.
+
+\textit{In vivo} studies using \somt showed its capability to methylate flavonoids and stilbenes at the 4'-position.
+\Glsentrydesc{doe} and \glsentrydesc{ffd} were used successfully to optimize \invitro refolding conditions for \somt.
+However, sufficiently active enzyme could not be obtained.
+Moreover, using \pfomt it was demonstrated, that the activity of this class I plant \gls{omt} could be modulated by high a pH and magnesium concentration to achieve previously unobserved methylations of non-catecholic moieties such as \glsentrydesc{3o4m} and \glsentrydesc{4o3m}.
+This resulted in the production of e.g. 3',4'-dimethyl eriodictyol and 3',4'-dimethyl luteolin by \pfomt from hesperetin and diosmetin respectively.
+The knowledge obtained from the \gls{msms} studies was crucial in identifying these products.
 
 \section{Deutsche Zusammenfassung}
 
+Die vorliegende Arbeit umreißt die Verwertbarkeit zweier pflanzlicher \textit{O}-Methyltransferasen (\glspl{omt}), \pfomt und \somt, der Klassen I and II für die biokatalytische Methylierung in polyphenolischen Verbindungen verbreiteter Strukturmotive.
+Klasse I Planzen \glspl{omt}, wie \pfomt, sind magnesiumabhängige Kaffeoyl CoA-abhängige \textit{O}-Methyltransferase (\gls{ccoaomt})-ähnliche Enzyme von 200 bis 280 Aminosäuren und einem gemeinhin limitierten Substratumfang.
+Vertreter der Klasse II (d.h. \somt) sind metallionen-unabhängig, 340 bis 390 Aminosäuren lang und im Allgemeinen promiskuitiver im Substratspektrum denn Vertreter der Klasse I.
+
+Die biophysikalische Charakterisierung der \pfomt mittels isothermaler Titrationskalorimetrie zeigte die Bindung von \textit{S}-Adenosyl-\textsc{l}-ethionin (\gls{sae}), ein biosynthetisch gewonnenes \textit{S}-Adenosyl-\textsc{l}-methionin-Derivat, an das Enzym.
+Eine Umsetzung von \gls{sae} durch \pfomt konnte jedoch nicht gezeigt werden, obgleich mehrere Enzymvarianten untersucht wurden.
+Nichtsdestotrotz wurde eine neue Kristallstruktur des \textit{apo}-Enzyms gelöst, welche neuerliche Einblicke in die Bewegungen innerhalb des Enzyms und an der Substratbindung involvierter Domänen liefert.
+
+Fünfzehn Flavonoide (d.h. Flavanone, Flavone und Flavonole) mit unterschiedlichen Substitutionsmustern am B-Ring wurden mittels Tandem-Massenspektrometrie (MS/MS) im positiven Modus charakterisiert.
+Dabei wurden zwei Aktivierungsmethoden, \textit{collision induced dissociation} (\gls{hcd}) und \textit{higher-energy collisional dissociation} (\gls{cid}), verglichen.
+\Gls{hcd} erleichterte die Fragmentierung, besonders das Erscheinen durch C-Ring-Spaltung enstandener Fragmente (z.B. \frag{1,3}{A}{+}), methylierter Vertreter von Flavonen und Flavolonen. 
+Die erhaltenen Ergebnisse demonstrieren die Komplementarität beider Aktivierungsmethoden und die Bedeutung von \gls{hcd}-Spektren für die Ientifizierung methylierter Flavone und Flavonole.
+
+\textit{In vivo} Studien der \somt zeigten die Methylierung von Flavonoiden und Stilbenen an der 4'-Position.
+Statistische Versuchplanung und ein Teilfaktorplan wurden erfolgreich verwendet, um die Rückfaltungsausbeuten der \invitro Rückfaltung der \somt zu optimieren.
+Jedoch konnten nur ungenügende Mengen an aktivem Protein erhalten werden.
+Es wurde weiterhin gezeigt, dass die Aktivität der \pfomt durch Variation von pH und Magnesium so weit moduliert werden konnte vorher unbeschriebene Methylierungen von 3'-Hydroxy-4'-methoxy und 4'-Hydroxy-3'-methoxy-Motiven zu erreichen.
+So konnten unter anderem 3',4'-Dimethyleriodictyol und 3',4'-Dimethylluteolin durch Umsetztung von Hesperetin und Diosmetin mittels \pfomt produziert werden.
+Für die Identifizierung der genannten Produkte wurde unter anderem auf das in den \gls{msms}-Studien gewonnene Wissen zurückgegriffen.
+
+\chapter{List of Publications}
+
+Part of this work have been published:
+
+\begin{enumerate}
+\item Wessjohann, L. A., Keim, J., \underline{Weigel, B.}, \& Dippe, M. (2013). Alkylating enzymes. Current Opinion in Chemical Biology, 17(2), 229–235. \url{http://doi.org/10.1016/j.cbpa.2013.02.016}
+\item Dippe, M., \underline{Weigel, B.}, Heinke, R., Vogt, T., \& Wessjohann, L. A. (2015). Engineering of a Mg2+-dependent O-methyltransferase towards novel regiospecificity. Manuscript to be submitted.
+\end{enumerate}
+
+\noindent
+Publications that are not part of this work:
+
+\begin{enumerate}
+\item Landgraf, R., Smolka, U., Altmann, S., Eschen-Lippold, L., Senning, M., Sonnewald, S., \underline{Weigel, B.}, … Rosahl, S. (2014). The ABC Transporter ABCG1 Is Required for Suberin Formation in Potato Tuber Periderm. The Plant Cell, 13(August), 3403–3415. \url{http://doi.org/10.1105/tpc.114.124776}
+\end{enumerate}
 

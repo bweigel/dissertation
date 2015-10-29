@@ -74,9 +74,10 @@
 \newif\ifost@titlepagebackgroundimage%
 \newif\ifost@titlepagehorizontal%
 \newif\ifost@titlepageplain%
+\newif\ifost@titlepagemlu%
 \newif\ifost@titlepagevertical%
 
-\define@choicekey*[KV]{open-science-thesis}{titlepagetheme}[\val\nr]{image, horizontal, plain, vertical}{%
+\define@choicekey*[KV]{open-science-thesis}{titlepagetheme}[\val\nr]{image, horizontal, plain, vertical, mlu}{%
   \ifcase\nr\relax%
     \ost@titlepagebackgroundimagetrue%
   \or% 
@@ -85,6 +86,8 @@
     \ost@titlepageplaintrue%
   \or%
     \ost@titlepageverticaltrue%
+  \or%
+    \ost@titlepagemlutrue%
   \fi%
 }
 
@@ -1645,6 +1648,50 @@
 }
 \fi%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Uni Halle
+
+\ifost@titlepagemlu
+\newcommand{\ostMakeTitle}{% 
+  \ifost@setspacing%
+    \ifost@sensitivespacing%
+      \begin{singlespace}
+    \fi%
+  \fi%
+  \begin{titlepage}
+    {\centering%
+      \ostTitleStretchAbove{}
+      {\par\ifdefempty{\ostTitle}{\relax}{\color{ostColorTitle}{{\noindent\ostSizeTitle\ostFontTitle\ostTitle}}\par}}\vspace{\baselineskip}   
+     % {\ifdefempty{\ostSubtitle}{\relax}{\color{ostColorSubtitle}{{\noindent\ostSizeSubtitle\ostFontSubtitle\ostSubtitle}}\par}}\vspace{\baselineskip}
+      {\Huge\noindent Dissertation \par}\vspace{\baselineskip}
+      {\ostSizeSubtitle\ostFontSubtitle\noindent zur Erlangung des Doktorgrades der Naturwissenschaften \par}
+      {\ostSizeSubtitle\ostFontSubtitle\noindent (Dr. rer. nat) \par}\vspace{\baselineskip}
+      {\ostSizeSubtitle\ostFontSubtitle\noindent der \par}\vspace{\baselineskip}
+      {\ostSizeSubtitle\ostFontSubtitle\noindent Naturwissenschaftlichen Fakultät II \par}
+      {\ostSizeSubtitle\ostFontSubtitle\noindent Chemie, Physik und Mathematik \par}\vspace{\baselineskip}
+      {\ostSizeSubtitle\ostFontSubtitle\noindent der Martin-Luther-Universität \par}
+      {\ostSizeSubtitle\ostFontSubtitle\noindent Halle-Wittenberg \par}\vspace{\baselineskip}
+      \ostTitleStretchBelow{} 
+      {\ostSizeSubtitle\ostFontSubtitle\noindent vorgelegt von \par}\vspace{\baselineskip}
+      {\ifdefempty{\ostAuthors}{\relax}{\color{ostColorAuthors}{{\noindent\ostSizeSubtitle\ostFontSubtitle Herr \ostAuthors}}\par}}
+      {\ostSizeSubtitle\ostFontSubtitle\noindent geb. am 06. April 1986 in Bernburg (Saale) \par}\vspace{\baselineskip}
+{\raggedright{\color{ostColorAdvisors}{{\noindent\ostSizeAdvisors\ostFontAdvisors Gutachter:}\par}}
+      {\par\ifdefempty{\ostAdvisorOne}{\relax}{\color{ostColorAdvisors}{{\ostSizeAdvisors\ostFontAdvisors 1.~\ostAdvisorOne}}}\par} 
+%      \vspace{\baselineskip}
+      {\par\ifdefempty{\ostAdvisorTwo}{\relax}{\color{ostColorAdvisors}{{\ostSizeAdvisors\ostFontAdvisors 2.~\ostAdvisorTwo}}}\par}\vspace{\baselineskip}
+{\ifdefempty{\ostDate}{\relax}{\color{ostColorAdvisors}{{\noindent\ostSizeAdvisors\ostFontAdvisors Halle (Saale), \ostDate}}}\par} 
+}
+    }
+  \end{titlepage}
+  \ifost@setspacing%
+    \ifost@sensitivespacing%
+      \end{singlespace}
+    \fi%
+  \fi%
+}
+\fi%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Uni Halle
+
 \ifost@titlepagevertical%
 \newcommand{\ostMakeTitle}{% 
   \ifost@setspacing%
@@ -2039,7 +2086,7 @@
     {\color{ostColorChapterHeaderNumber}\ostSizeChapterHeaderNumber\ostFontChapterHeaderNumber\thechapter}
     {0.5em}
     {\relax}
-    [\thispagestyle{pageStyleChapter}\glsresetall\newpage]
+    [\thispagestyle{pageStyleChapter}\glsresetall]
     \titlespacing*{\chapter}{0pt}{50pt}{40pt}
   \fi%
 

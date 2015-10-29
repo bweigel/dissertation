@@ -315,6 +315,7 @@ Enzymes like \somt, that methylate a \textit{para}-monohydroxylated B ring of fl
 
 \section{Alkylations and biotransformations}
 
+\subsection{Overview}
 Alkylation reactions are a crucial factor helping nature create highly diverse natural products from a limited number of precursors and as such, these reactions are becoming more and more important in biocatalysis.
 Methylation, prenylation and glycosylation constitute the major alkylation reactions in nature and can largely influence the (bio)chemical characteristics of a compound.
 Intra- and intermolecular prenylation is achieved by prenyl transferases, which employ mono- and oligo-prenyl diphosphates and are mainly responsible for the over \num{70000} terpenoids described today \cite{Brandt2009a}.
@@ -399,15 +400,15 @@ However, no bioactivity data has been reported that shows the biological activit
 
 The motivation of this work was to assess the useability of plant \glsentryfirstplural{omt} for the derivatization and functionalization of phenyl propanoid derived phenolics, especially flavonoids.
 
-\Glsentryfirst{pfomt} from the ice-plant \textit{Mesembryanthemum crystallinum} was to be used as a model enzyme to study the promiscuity of class I plant \glspl{omt} towards the alkyl donor, using the hemisynthetically produced \gls{sam} analogue \glsentryfirst{sae}.
+\Glsentryfirst{pfomt} from the ice-plant \textit{Mesembryanthemum crystallinum} was to be used as a model enzyme to study the promiscuity of class I plant \glspl{omt} towards the alkyl donor, using the hemisynthetically produced \glsentrydesc{sam} analogue \glsentrydesc{sae}.
 Biophysical methods such as x-ray crystallography and \glsentryfirst{itc} should be used to study the binding of the artificial analogues.
-The obtained knowledge could be used to aid the development of novel \glsentryfirst{smmt} with desirable catalytic properties.
+The obtained knowledge could be used to aid the development of novel \glsentrydesc{smmt} with desirable catalytic properties.
 
 Furthermore, the enzymatic methylation of different structural motifs encountered throughout the phenyl propanoids was to be studied using class I and class II plant \glspl{omt}.
 \Glsentryfirst{somt} and \pfomt are examples of both classes and should thus be used in this work.
 The results should help in understanding the specific catalytic properties of both classes.
 
-Furthermore, the analytical power of \glsentryfirst{msms} to study substitutions commonly occuring in 3,7-dihydroxylated flavonoids should be assessed using a distinct set of examplary compounds.
+Furthermore, the analytical power of \glsentryfirst{msms} to study substitutions commonly occuring in 5,7-dihydroxylated flavonoids should be assessed using a distinct set of examplary compounds.
 The insights obtained should provide a reliable and fast method to determine structural properties of unknown flavonoids.
 
 

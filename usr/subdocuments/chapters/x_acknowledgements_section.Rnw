@@ -5,4 +5,4 @@
 \chapter{Acknowledgements}
 
 % Remove the lipsum and fill in your acknowledgements here
-\lipsum[4-5]
+%\lipsum[4-5]

@@ -246,16 +246,16 @@
         symbol	    = Isothermal Titration Calori\-metry,
 	first       = Isothermal Titration Calori\-metry (ITC),
 %	see         = [see also]{itc},
-	description = \glslink{itcg}{Isothermal Titration Calori\-metry}
+	description = Isothermal Titration Calori\-metry
 }
 
-\newglossaryentry{itcg}{
-	name        = \glslink{itc}{Isothermal Titration Calorimetry (ITC)},
-        nonumberlist,
-	description = {
-		Fill in description here%
-	}
-}
+%\newglossaryentry{itcg}{
+%	name        = \glslink{itc}{Isothermal Titration Calorimetry (ITC)},
+%        nonumberlist,
+%	description = {
+%		Fill in description here%
+%	}
+%}
 
 %\newglossaryentry{ethionine}{
 %  name = ethionine,
@@ -291,18 +291,18 @@
         nonumberlist,
         longplural  = micro-titer plates,
 	first       = micro-titer plate (MTP),
-	description = \glslink{mtpg}{micro-titer plate}
+	description = micro-titer plate
 }
 
-\newglossaryentry{mtpg}{
-	name        = \glslink{mtp}{MTP},
-        plural      = MTPs,
-        nonumberlist,
-        longplural  = micro-titer plates,
-	description = {
-		Micro-titer plate. Small format rectangular plastic plate containing wells to allow for storage of multiple small samples or the containment multiple simultaneous reactions. Typical sizes include 24, 96 and 384-wells%
-        }
-}
+%\newglossaryentry{mtpg}{
+%	name        = \glslink{mtp}{MTP},
+%        plural      = MTPs,
+%        nonumberlist,
+%        longplural  = micro-titer plates,
+%	description = {
+%		Micro-titer plate. Small format rectangular plastic plate containing wells to allow for storage of multiple small samples or the containment multiple simultaneous reactions. Typical sizes include 24, 96 and 384-wells%
+%        }
+%}
 
 \newglossaryentry{tip}{
 	type        = \acronymtype,
@@ -331,16 +331,16 @@
         nonumberlist,
 	text        = GOD,
 	first       = glucose oxidase (GOD),
-	description = \glslink{godg}{glucose oxidase}
+	description = glucose oxidase
 }
 
-\newglossaryentry{godg}{
-	name        = \glslink{god}{GOD},
-	nonumberlist,
-        description = {
-		Glucose oxidase is an enzyme....
-        }
-}
+%% \newglossaryentry{godg}{
+%% 	name        = \glslink{god}{GOD},
+%% 	nonumberlist,
+%%         description = {
+%% 		Glucose oxidase is an enzyme....
+%%         }
+%% }
 
 \newglossaryentry{T7tag}{
   name = T7-tag,

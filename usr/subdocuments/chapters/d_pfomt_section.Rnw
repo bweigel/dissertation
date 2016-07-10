@@ -140,13 +140,15 @@ However, all of the regions that moved are located at or near the active site.
 
 \framedfigure[label = fig:d_struct]{%
   \begin{subfigure}{\textwidth}\centering
-    \includegraphics[scale=0.225, trim=0 0 0 0, clip]{usr/graphics/static/tetramer.png}
+%    \includegraphics[scale=0.225, trim=0 0 0 0, clip]{usr/graphics/static/tetramer.png}
+    \includegraphics[width=0.9\textwidth, trim=0 0 0 0, clip]{usr/graphics/static/tetramer.png}
     \caption{}
     \label{fig:d_struct_a}
   \end{subfigure}
   
   \begin{subfigure}{\textwidth}\centering
-    \includegraphics[scale=0.175, trim=0 0 0 0, clip]{usr/graphics/static/pfomt_monomer.png}
+%    \includegraphics[scale=0.175, trim=0 0 0 0, clip]{usr/graphics/static/pfomt_monomer.png}
+    \includegraphics[width=0.9\textwidth, trim=0 0 0 0, clip]{usr/graphics/static/pfomt_monomer.png}
     \caption{}
     \label{fig:d_struct_b}
   \end{subfigure}
@@ -182,11 +184,17 @@ The binding of different substrates to \gls{pfomt} was examined by \gls{itc}, to
 The homologues \gls{sah}, \gls{sam} and \gls{sae} were selected to also study the influence of the alkyl chain length on binding (\autoref{fig:d_itc_substances}).
 Furthermore the binding of the substrate caffeic acid and the influence of \cf{Mg^2+} addition on substrate binding was investigated.
 
-\framedfigure[label = fig:d_itc_substances]{%
-\includegraphics{usr/graphics/static/itc-sam}
-}{%
-   The binding of different \gls{sam} analogues was measured via \gls{itc}.%, but also calculated using molecular modelling techniques.%    
-    }
+\begin{figure}[htb]
+  \begin{figureframe}
+    %\framedfigure[label = fig:d_itc_substances]{%
+    \includegraphics[width=\textwidth]{usr/graphics/static/itc-sam}
+    \caption{The binding of different \glsentrytext{sam} analogues was measured via \glsentrytext{itc}}
+    \label{fig:d_itc_substances}
+  \end{figureframe}
+\end{figure}
+%}{%
+   %    
+%    }
 
 The $K_D$ values of \gls{sah}, \gls{sam} and \gls{sae} were all in the low micromolar range, around \SI{2}{\micro\molar}.
 However, the binding enthalpy clearly decreased with the length of the aliphatic chain connected to the sulfur atom (\autoref{fig:itc.a}).

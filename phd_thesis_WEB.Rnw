@@ -13,7 +13,8 @@
 %
 
 %\documentclass[revision=true, fontchoice=libertine, colortheme=orange, oneside]{ost/subdocuments/open_science_thesis} 
-\documentclass[floatbarrier=true, addfloatbarrierto=section, revision=false, linenumbers=true, linespacing=onehalfspacing, fontchoice=libertine, colortheme=orange, oneside, titlepagetheme=mlu]{ost/subdocuments/open_science_thesis} 
+%\documentclass[addfloatbarrierto=section, revision=false, linenumbers=true, linespacing=onehalfspacing, fontchoice=libertine, colortheme=orange, oneside, titlepagetheme=mlu]{ost/subdocuments/open_science_thesis} 
+\documentclass[autolayout=false, addfloatbarrierto=section, revision=false, linenumbers=true, linespacing=onehalfspacing, fontchoice=libertine, colortheme=orange, oneside, titlepagetheme=mlu]{ost/subdocuments/open_science_thesis} 
 
 
 
@@ -93,7 +94,8 @@
 
 
 \begin{document}
-\setlength\linenumbersep{0.5cm}
+\newgeometry{right=6cm, scale=0.6, vmargin=1.5cm, includeheadfoot}
+\setlength\linenumbersep{0.1cm}
 
 % start front matter
 \frontmatter

@@ -163,7 +163,7 @@ This \mz{} is a strong indicator of a benzylium or tropylium cation (\autoref{sc
            {\captionsetup{labelformat=web-subcap, justification=raggedright, singlelinecheck=false, font=bf}
     \renewcommand{\thesubfigure}{\Alph{subfigure}}
     \subcaption{}}
-      \includegraphics[width=0.7 \textwidth]{usr/graphics/static/flavanones_msint}
+      \includegraphics[width=0.7\textwidth]{usr/graphics/static/flavanones_msint}
     \end{subfigure}
   \end{figureframe}
   \caption{Comparison of \gls{cid} and \gls{hcd} MS\tup{2} spectra of eriodictyol \molref{ed}. 

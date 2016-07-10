@@ -71,7 +71,7 @@ Next, the linear chalcone can cyclize spontaneously or catalyzed by a \gls{chi} 
 %
 \begin{figure}[!htb]
   \begin{figureframe}
-    \includegraphics[scale=1]{usr/graphics/static/flavonoid_production}
+    \includegraphics[width=\textwidth]{usr/graphics/static/flavonoid_production}
   \end{figureframe}
   \caption{General pathways in the biosynthesis of flavonoids. PAL -- phenylalanin ammonia lyase, C4H -- cinnamate-4-hydroxylase, 4CL -- 4-coumarate:CoA ligase, CHS -- chalcone synthase, CHI -- chalcone isomerase, F3H -- flavanone-3-hydroxylase, FLS -- flavonol synthase, FNS -- flavone synthase, IFS -- isoflavone synthase.}
   \label{fig:b_flav_prod}
@@ -147,7 +147,7 @@ However, four new folding architectures, namely SSo0622-like, all-\textbeta, all
 %
 \begin{figure}[htpb]
   \begin{figureframe}
-    \includegraphics[scale=1]{usr/graphics/static/methyl_transferases}
+    \includegraphics[width=\textwidth]{usr/graphics/static/methyl_transferases}
   \end{figureframe}
   \caption{Reactions catalyzed by \glsentryfirstplural{mt}. Different shades of gray were used to differantiate between different groups of compounds and \glsentrydescplural{mt}. In contrast to other \glsentrydescplural{mt}, the group of \glsentrydescplural{rsmt} also requires additional co-factors to \glsentrytext{sam}.}
   \label{fig:b_methyltransferases}
@@ -379,7 +379,7 @@ The specific introduction of alkine functionalized groups made it then possible 
 %
 \begin{figure}[htb]
   \begin{figureframe}
-    \includegraphics{usr/graphics/static/CuAAC}    
+    \includegraphics[width=\textwidth]{usr/graphics/static/CuAAC}    
   \end{figureframe}
   \caption{Labelling of macromolecules by using a combination of novel alkine-derivatized \glsentrydesc{sam} analogues and \glsentryfirst{cuaac}.
     Depending on the type of label used, it can be employed for detection (e.g. through fluorophores, coupled assays) or affinity purification (e.g. biotin).

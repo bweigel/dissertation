@@ -94,8 +94,8 @@
 
 
 \begin{document}
-\newgeometry{right=6cm, scale=0.6, vmargin=1.5cm, includeheadfoot}
-\setlength\linenumbersep{0.1cm}
+%\newgeometry{right=6cm, scale=0.6, vmargin=1.5cm, includeheadfoot} % Korrekturrand
+\setlength\linenumbersep{0.5cm}
 
 % start front matter
 \frontmatter

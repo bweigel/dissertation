@@ -125,10 +125,10 @@
 %\newacronym[nonumberlist]{sdspage}{sodium dodecylsulfate-polyacrylamid gel elecrtophoresis}%
 %\newacronym[nonumberlist]{pcr}{PCR}{polymerase chain reaction}
 % enzymes
-%newacronym[nonumberlist]{pfomt}{PFOMT}{phenylpropanoid and flavonoid O-methyl transferase}
-\newacronym[nonumberlist,  first={catechol O-methyl transferase (COMT, EC 2.1.1.6)}]{mcomt}{COMT}{catechol O-methyl transferase}
-\newacronym[nonumberlist]{comt}{COMT}{catechol O-methyl transferase}
-\newacronym[nonumberlist]{somt}{SOMT-2}{soy O-methyl transferase}
+%newacronym[nonumberlist]{pfomt}{PFOMT}{phenylpropanoid and flavonoid \protect\textit{O}-methyl transferase}
+\newacronym[nonumberlist,  first={catechol \protect\textit{O}-methyl transferase (COMT, EC 2.1.1.6)}]{mcomt}{COMT}{catechol \protect\textit{O}-methyl transferase}
+\newacronym[nonumberlist]{comt}{COMT}{catechol \protect\textit{O}-methyl transferase}
+\newacronym[nonumberlist]{somt}{SOMT-2}{soy \protect\textit{O}-methyl transferase}
 \newacronym[nonumberlist]{sams}{SAMS}{\protect\textit{S}-adenosylmethionine synthase}
 %\newacronym[nonumberlist]{des}{DES}{deep eutectic solvent, see also \gls{nades}}
 \newacronym[nonumberlist]{ft}{FT}{Fourier transformation}
@@ -270,16 +270,16 @@
 	name        = PFOMT,
 	text        = PFOMT,
         nonumberlist,
-	first       = phenylpropanoid and flavonoid O-methyl transferase (PFOMT),
+	first       = phenylpropanoid and flavonoid \protect\textit{O}-methyl transferase (PFOMT),
 %	see         = [see also]{itc},
-	description = \glslink{pfomtg}{phenylpropanoid and flavonoid O-methyl transferase}
+	description = \glslink{pfomtg}{phenylpropanoid and flavonoid \protect\textit{O}-methyl transferase}
 }
 
 \newglossaryentry{pfomtg}{
 	name        = \glslink{pfomt}{PFOMT},
         nonumberlist,
 	description = {
-		Phenylpropanoid and flavonoid O-methyl transferase from \textit{Mesembryanthemum crystallinum}, which was first described by Ibdah et al. in 2003 \citep{Ibdah2003}%
+		Phenylpropanoid and flavonoid \protect\textit{O}-methyl transferase from \textit{Mesembryanthemum crystallinum}, which was first described by Ibdah et al. in 2003 \citep{Ibdah2003}%
         }
 }
 

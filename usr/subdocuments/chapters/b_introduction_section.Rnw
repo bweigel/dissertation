@@ -10,18 +10,18 @@ Secondary metabolites comprise a vast collection of organic compounds produced i
 Many functions of these natural products are unknown and remain to be elucidated, but it has been shown that they can used for gene regulation, defense against biotic and abiotic stresses, (pollinator) attractant, communication and others.
 Natural compounds can be quite complex and show remarkable biological activities.
 The major classes of secondary compounds are terpenoids, alkaloids, phenylpropanoids including lignans/lignins, flavonoids and polyketides.
-This work is largely concerned about phenyl propanoids and flavonoids, as well as their modification, and will therefore mainly focus on these compounds.
+This work is largely concerned about phenylpropanoids and flavonoids, as well as their modification, and will therefore mainly focus on these compounds.
 
 \section{Flavonoids} 
 
 \subsection{Overview}
 
 Plant phenolic compounds account for more than \SI{40}{\percent} of the organic carbon in the biosphere and are essential for the survival of vascular plants.
-They are largely derived from the \emph {phenylpropanoid} and relating pathways and take on various structural (e.g. cell walls) and non-structural roles (e.g. plant defense, flower color) \cite{Croteau2000}.
+They are largely derived from the \emph {phenylpropanoid} and related pathways and take on various structural (e.g. cell walls) and non-structural roles (e.g. plant defense, flower color) \cite{Croteau2000}.
 The name \emph{phenylpropanoid} describes the aromatic phenyl connected to a three-carbon chain, which biosynthetically originates from phenylalanine.
 Flavonoids, from the Latin \emph{flavus} (yellow), are a diverse subclass of these phenolic compounds comprising more than \num{4500} different compounds described thus far and their main structural feature is the central chromane (benzodihydropyran) moiety (\autoref{fig:b_flav_struc}).
 They consist of three rings named A, B and C.
-Ring A and B are of acetate and phenylpropanoid origin respectively, whereas ring C is a result of the condensation of the former.
+Ring A and B are of acetate/malonate and phenylpropanoid origin, respectively, whereas ring C is a result of the condensation of the former.
 %
 %
 \begin{figure}[htb]
@@ -35,19 +35,19 @@ Ring A and B are of acetate and phenylpropanoid origin respectively, whereas rin
   \end{figureframe}
   \caption{The central feature of the flavonoids is the chromane ring. 
     The names of the different groups of flavonoids are derived from the substitution of this moiety.
-    From a biosynthetic point of view, flavonoids are built up from phenylpropanoid (blue) and acetate derived moieties (orange).}
+    From a biosynthetic point of view, flavonoids are built up from phenylpropanoid (blue) and acetate/malonate derived \cf{C2}-moieties (orange).}
   \label{fig:b_flav_struc}
 \end{figure}
 %
 Different types of flavonoids are named depending on the substitution pattern of the chromane ring (\autoref{fig:b_flav_struc}).
 For example, a phenyl group at C-2 or C-3 gives flavonoids or isoflavonoids respectively,
-an unsubstituted C-4 means flavane, whereas a carbonyl group at C-4 indicates flavan\emph{on}es \textit{et cetera}.
+an unsubstituted C-4 means flavan, whereas a carbonyl group at C-4 indicates flavan\emph{on}es \textit{et cetera}.
 Flavonoids are usually poly-hydroxylated, but can also carry multiple other different substitutions.
 %The most common hydroxylations are at positions 5,7,3,3',4',5'.
 \textit{O}-methylations are common at all hydroxyl positions, but flavonoids can also be \textit{C}-methylated \cite{Barton1972}. 
 Other common derivatizations are (\textit{O} or \textit{C})-prenylation, (\textit{O} or \textit{C})-glycosylation, methylene-dioxy bridges (C-3'/C-4' or C-6/C-7) and various (\textit{O} or \textit{C})-acylations (aliphatic and aromatic acids) \cite{Dagne1990,Wollenweber1985,Simonsen2002,Harborne1988}.
 
-In plants flavonoids are usually produced to combat biotic or abiotic stresses.
+In plants, flavonoids are usually produced to combat biotic or abiotic stresses.
 They can absorb highly energetic \gls{uv} light, suppress the formation of, or scavange \gls{ros} \cite{Agati2012}.
 Furthermore, flavonoids can act as regulators during plant development \cite{Taylor2005}.
 A growing interest in flavonoids for the use in medicinal and nutritional applications has been spiked by their beneficial effects on health.
@@ -56,7 +56,7 @@ Furthermore, they show anti-inflammatory, hepatoprotective, antimicrobial and  a
 
 A number of flavonoids are produced by the valorization of wastes and by-products of the food industry. 
 Citrus and olive processing byproducts are especially rich in polyphenols \cite{Goodrich2006,Mulinacci2001,Ouallagui2012}.
-However, many flavonoids are scarce in nature and/or the production from by-products is not enough to saturate the market demand, thus requiring different approaches for production.
+However, many flavonoids are scarce in nature or the production from by-products is not sufficient to saturate the market demand, thus requiring different approaches for production.
 Recent developments in the field of metabolic engineering allowed for the high-level production of many flavonoids in microbial hosts, such as \textit{Escherichia coli} or \textit{Saccharomyces cerevisiae} \cite{Wessjohann2013,Trantas2015}.
 For example, eriodictyol was produced from tyrosine in metabolically engineered \eco at levels of up to \SI{107}{\milli\gram\per\milli\litre} \cite{Zhu2014}, whereas naringenin was produced in \scer from glucose at levels of \SI{109}{\milli\gram\per\milli\litre} \cite{Koopman2012}.
 
@@ -67,13 +67,13 @@ Biosynthesis of flavonoids via the phenylpropanoid pathway starts from phenylala
 \Gls{c4h}, a P450 monooxygenase, hydroxylates the cinnamic acid at the \textit{para}-position and \gls{4cl} converts the \textit{p}-coumaric acid to its corresponding \gls{coa}-ester \cite{Urban1994,Hu2010}.
 \Gls{chs} uses 3 molecules of malonyl-CoA (produced from acetyl-\gls{coa} by acetyl-\gls{coa} carboxylase) to produce naringenin chalcone from \textit{p}-coumaryl-\gls{coa} \cite{Ferrer1999}.
 %The malonyl-\gls{coa} is produced from acetyl-\gls{coa} by acetyl-\gls{coa} carboxylase.
-Next, the linear chalcone can cyclize spontaneously or catalyzed by a \gls{chi} via a \textsc{Michael}-type addition to afford the flavanone naringenin \cite{Jez2000}.
+Next, the linear chalcone can cyclize spontaneously, or catalyzed by a \gls{chi}, via a \textsc{Michael}-type addition to afford the flavanone naringenin \cite{Jez2000}.
 %
 \begin{figure}[!htb]
   \begin{figureframe}
     \includegraphics[width=\textwidth]{usr/graphics/static/flavonoid_production}
   \end{figureframe}
-  \caption{General pathways in the biosynthesis of flavonoids. PAL -- phenylalanin ammonia lyase, C4H -- cinnamate-4-hydroxylase, 4CL -- 4-coumarate:CoA ligase, CHS -- chalcone synthase, CHI -- chalcone isomerase, F3H -- flavanone-3-hydroxylase, FLS -- flavonol synthase, FNS -- flavone synthase, IFS -- isoflavone synthase.}
+  \caption{Major pathways in the biosynthesis of flavonoids. PAL -- phenylalanin ammonia lyase, C4H -- cinnamate-4-hydroxylase, 4CL -- 4-coumarate:CoA ligase, CHS -- chalcone synthase, CHI -- chalcone isomerase, F3H -- flavanone-3-hydroxylase, FLS -- flavonol synthase, FNS -- flavone synthase, IFS -- isoflavone synthase.}
   \label{fig:b_flav_prod}
 \end{figure}
 %
@@ -88,7 +88,7 @@ Several mechanisms that might be involved in the antioxidant activity of flavono
 They can act as scavangers for free \gls{ros} or mask metal ions by chelation to suppress the production of radicals \cite{Cao1997,Leopoldini2006}.
 The substitution pattern plays an important role in the antioxidant activity.
 Generally, the more free hydroxyls are present, the stronger the antioxidant activity of the flavonoid \cite{Cao1997}.
-Hydroxyls can donate an electron, or a hydrogen atom to free \gls{ros} to inactive such molecules.
+Hydroxyls can donate an electron, or a hydrogen atom to free \gls{ros} to inactivate such molecules.
 The resulting flavonoid radicals are stabilized by resonance, however possess prooxidant properties \cite{Metodiewa1999}.
 %Flavonoids containing catecholic hydroxyls at the B-ring are even better antioxidants, because they  can donate two hydrogen radicals and be converted into stable 1,2-benzoquinones.
 
@@ -107,12 +107,12 @@ The mechanisms of action for the antimicrobial activity can be the inactivation 
 \Gls{sam}-dependent \mts (EC 2.1.1.x) transfer the methyl group of \sam to an activated atom of an acceptor molecule, via an S\textsubscript{N}2 displacement mechanism.  
 \Gls{sam} is converted to \gls{sah}, the co-product of the reaction, in the process.
 There are currently over 300 manually annotated \mts, each catalyzing a different reaction, included in the UniProtKB/Swiss-Prot database (\url{http://www.uniprot.org}). 
-Transfer of the methyl group to oxygen and nitrogen atoms is most common, but carbon, sulfur, selenium, arsenic atoms and even halide ions can be methylated too(\autoref{fig:b_methyltransferases})\cite{Thomas2007,Schmidberger2010}.
+Transfer of the methyl group to oxygen and nitrogen atoms is most common, but carbon, sulfur, selenium, arsenic atoms and even halide ions can be methylated too (\autoref{fig:b_methyltransferases})\cite{Thomas2007,Schmidberger2010}.
 Acceptor molecules are diverse and range from relatively small natural products (e.g. flavonoids) to bio-macromolecules such as nucleic acids or proteins.
 In fact, \glspl{mt} are key-tailoring enzymes for many natural products of all groups (e.g. flavonoids, alkaloids or non-ribosomal peptides) \cite{Kim2010,Kopycki2008b,Struck2012,Wessjohann2013}.
 These \glspl{smmt} account for a significant part of the diversity present in natural products.
 
-Other \glspl{mt}, such as \glspl{pmt}, \glspl{dmt} and \glspl{rmt} methylate proteins and nucleic acids respectively.
+Other \glspl{mt}, such as \glspl{pmt}, \glspl{dmt} and \glspl{rmt} methylate proteins and nucleic acids, respectively.
 In eukaryotes, \glspl{dmt} and \glspl{pmt} play important roles in the epigentic regulation of gene expression and have been associated with a number of cancers and other diseases \cite{Copeland2013,Robertson2001,Robertson2005}.
 In bacteria, \glspl{dmt} are an essential part of the restriction modification system \cite{McClelland1994}.
 
@@ -134,12 +134,12 @@ Protein lysine \mts make up the largest part of \glspl{pmt} and structurally bel
       \includegraphics[scale=0.25]{usr/graphics/static/topo_rsmt}
     \end{subfigure}      
   \end{figureframe}
-  \caption{Topology plots of the five major structural classes of \glsdescplural{mt} and \glsentryfirstplural{rsmt} (modified and extended from Schubert \etal \cite{Schubert2003}). Helices are depicted as circles and \textbeta-strands as triangles. The \sam binding site is depicted as a flag. \Glsentrydescplural{rsmt} all share a common ``radical SAM''-domain, which cotains the iron sulfur cluster (red checker). The individual \glsentrydesc{rsmt} classes are differentiated according to the other domains they contain.}
+  \caption{Topology plots of the five major structural classes of \glsdescplural{mt} and \glsentryfirstplural{rsmt} (modified and extended from Schubert \etal \cite{Schubert2003}). Helices are depicted as circles and \textbeta-strands as triangles. The \sam binding site is depicted as a flag. \Glsentrydescplural{rsmt} all share a common ``radical SAM''-domain, which contains the iron sulfur cluster (red checker). The individual \glsentrydesc{rsmt} classes are differentiated according to the other domains they contain.}
   \label{fig:b_mtclasses}
 \end{figure}
 %
 Interestingly, a recent study of the methyltransferome of baker's yeast (\textit{S. cerevisiae}) argues, that there are four more classes of \glspl{mt} \cite{Wlodarski2011}.
-Opposite to the studies by Schubert \etal, this work mainly relied on bioinformatical methods for structural information.
+Opposite to the studies by Schubert \etal, this work mainly relied on bioinformatics methods for structural information.
 83 out of 86 \gls{mt} structures in total were homology-modelled.
 It was shown, that two thirds of the reviewed yeast \glspl{mt} belonged to class I.
 However, four new folding architectures, namely SSo0622-like, all-\textbeta, all-\textalpha~(RNA/DNA 3-helical bundle) and transmembrane, were postulated.
@@ -149,7 +149,7 @@ However, four new folding architectures, namely SSo0622-like, all-\textbeta, all
   \begin{figureframe}
     \includegraphics[width=\textwidth]{usr/graphics/static/methyl_transferases}
   \end{figureframe}
-  \caption{Reactions catalyzed by \glsentryfirstplural{mt}. Different shades of gray were used to differantiate between different groups of compounds and \glsentrydescplural{mt}. In contrast to other \glsentrydescplural{mt}, the group of \glsentrydescplural{rsmt} also requires additional co-factors to \glsentrytext{sam}.}
+  \caption{Reactions catalyzed by \glsentryfirstplural{mt}. Different shades of gray were used to differentiate between different groups of compounds and \glsentrydescplural{mt}. In contrast to other \glsentrydescplural{mt}, the group of \glsentrydescplural{rsmt} also requires additional co-factors to \glsentrytext{sam}.}
   \label{fig:b_methyltransferases}
 \end{figure}
 %
@@ -157,7 +157,7 @@ However, four new folding architectures, namely SSo0622-like, all-\textbeta, all
 
 \Glspl{rsmt} comprise another class of resently discovered \glspl{mt} that contain an iron-sulfur ([4Fe-4S])-cluster coordinated by a three cysteine CxxxCxxC motif. \Glspl{rsmt} methylate unreactive centers through a radical mechanism \cite{Werner2011}.
 Structural evidence suggests, that the mechanism is initiated by reductive cleavage of \sam into a reactive \gls{dado} radical by the [4Fe-4S] cluster \cite{Boal2011,Broderick2014}. 
-Three distinct classes (A, B, C) with distinct structural and mechanistic characteristics have been recognized within the \glspl{rsmt} \cite{Zhang2012a}.
+Three classes (A, B, C) with distinct structural and mechanistic characteristics have been recognized within the \glspl{rsmt} \cite{Zhang2012a}.
 The centerpiece of \glspl{rsmt} is the \emph{radical SAM} domain, whose structure was first described in the \gls{rrna} methyl transferase RlmN of \eco \cite{Boal2011}.
 This domain consists of an \textalpha\textsubscript{6}/\textbeta\textsubscript{6} partial barrel and contains the [4Fe-4S] cluster, as well as the \gls{sam} binding site ({\autoref{fig:b_mtclasses}).
 Class A only contains the radical \gls{sam} domain and mainly comprises \gls{rrna} methyl transferases. 
@@ -227,7 +227,7 @@ They found, that the enzymatic transfer of two methyl groups (\textit{N} and \te
 This experiment also demonstrated that, \invivo, [\textit{methyl}-\textsuperscript{2}H,\textsuperscript{3}H]-methionine is converted to [\textit{methyl}-\textsuperscript{2}H,\textsuperscript{3}H]-\gls{sam} before the methyl group is transferred by a \gls{mt}.
 \textit{In vitro} experiments conducted using \gls{comt} further supported the hypothesis of an \sntwo mechanism \cite{Woodard1980a}.
 
-The nucleophile attacking the methyl group of \sam is usually activated by abstraction of a proton through a general base (e.g. histidine, lysine) \cite{Zubieta2002,Zubieta2001a,Brandt2015} and/or with the help of a lewis acid such as complexed \cf{Mg^2+} \cite{Vidgren1994,Kopycki2008b}.
+The nucleophile attacking the methyl group of \sam is usually activated by abstraction of a proton through a general base (e.g. histidine, lysine) \cite{Zubieta2002,Zubieta2001a,Brandt2015} or with the help of a \textsc{Lewis} acid such as complexed \cf{Mg^2+} \cite{Vidgren1994,Kopycki2008b}.
 In a bimolecular reaction, the rate is highly dependent on the concentration of both compounds:
 \begin{equation*}
   rate = k[A][B].
@@ -286,10 +286,10 @@ For example, \gls{pfomt} from the ice-plant \textit{Mesembryanthemum crystallinu
 \paragraph{\protect\Glsentryfirst{pfomt}} is a \cf{Mg^2+}-dependent class I plant \gls{omt} from the ice plant \mesem and was first described in 2003 by Ibdah \etal \cite{Ibdah2003}.
 \pfomt was the first class I \gls{mt} that provided evidence showing, that methylation of flavonoids is not only restricted to class II plant \glspl{omt}.
 It belongs to a subgroup of class I plant \glspl{omt}, that is distinguished from \gls{ccoaomt} by a lower sequence homology and a broader substrate promiscuity and regiospecificity.
-\pfomt methylates a number of flavonoids and phenyl propanoids at the \textit{meta}-position, provided a catecholic moiety is present.
-Enzyme purified from its native source \mesem is truncated N-terminally by 11 amino acids, although there is no known signaling sequence \cite{Vogt2004}.
+\pfomt methylates a number of flavonoids and phenyl propanoids at the \textit{meta}-position of the B ring, provided a catecholic moiety is present.
+Enzyme purified from its native source \mesem is truncated \textit{N}-terminally by 11 amino acids, although there is no known signaling sequence \cite{Vogt2004}.
 This truncation has deleterious effects on the catalytic efficiency, especially towards substrates such as caffeoyl glucose and caffeoyl-CoA, but also influences the regioselectivity.
-There is only speculation as to the purpose of this N-terminal truncation \invivo, but metabolic regulation is plausible.
+There is only speculation as to the purpose of this \textit{N}-terminal truncation \invivo, but metabolic regulation is plausible.
 %The truncated and non-truncated enzymes differ in their temperature optimum, which is located at \SIrange{37}{40}{\celsius} and \SIrange{45}{5}{\celsius} respectively.
 %For the native (truncated) \pfomt, the maximal activity is \SI{150}{\micro\molar} \cf{Mg^2+}.
 
@@ -302,7 +302,7 @@ The catalytically important N-terminus is not resolved in the structure.
 
 \paragraph{\protect\Glsentryfirst{somt}} has been described in the literature to methylate multiple flavonoids at the 4'-position of the B-ring \citep{Kim2005c,Kim2005b,Kim2013}.
 It has the highest activity towards naringenin, to produce ponciretin (also known as isosakuranetin).
-No structurual data of \somt or \invitro activity studies have been published to date.
+No structural data of \somt or \invitro activity studies have been published to date.
 %Non-chemical methylations of this nature are of great scientific and economic interest.
 Enzymes like \somt, that methylate a \textit{para}-monohydroxylated B ring of flavonoids, either seem to be a rare occurance or fairly inactive, since descriptions of characterized representatives are scarce in the literature and are only limited to a couple of enzymes \cite{Schroder2004,Deavours2006}. \bweigel{is that true?}
 %\subsection{\Glsentryfirstplural{cmt}}
@@ -322,10 +322,10 @@ Intra- and intermolecular prenylation is achieved by prenyl transferases, which 
 Glycosyl transferases catalyze the formation of a glycosidic bond using nucleotide- or lipid phospho-sugars (e.g. \gls{udp}-glucose, dolichol phosphate oligosaccharides) as sugar donating substrates \cite{Lairson2008}.
 Methylation reactions are catalyzed by \glspl{mt} using \gls{sam} as methyl donor and will be the focus of this section.
 
-The introduction of a methyl group ($V\approx$\SI{20}{\angstrom\cubed}) for a hydrogen ($V\approx$\SI{5}{\angstrom\cubed}) can have different effects, chemically and biologically.
+The introduction of a methyl group ($V\approx\,$\SI{20}{\angstrom\cubed}) for a hydrogen ($V\approx\,$\SI{5}{\angstrom\cubed}) can have different effects, chemically and biologically.
 Polar groups (e.g. hydroxyl, amine, carboxyl) are masked by methylation, which majorly alters their chemistry.
 Possible hydrogen donors are lost and the lipophilicity is increased.
-The methylation can act as a molecular signal, which might be specifically recognized by other enzymes than the original more polar, hydrogen donating group.
+The methylation can act as a molecular signal, which might be specifically recognized by other enzymes in contrast to the original more polar, hydrogen donating group.
 This can in turn have dramatic physiological consequences in an organism.
 
 %%%%%%%%%%%%%%%
@@ -339,8 +339,8 @@ Li and Frost \cite{Li1998} presented an environmentally friendly method to produ
 Recent developments mainly focus on the synthesis of structurally more complex and highly valuable compounds, especially flavonoids, due to their manifold biological effects (\autoref{fig:b_review}). 
 For example, \molnum[ermanine]{ermanine} with a claimed anti-inflammatory and antiviral activity, can be synthesized from its inactive precursor kaempferol (5,7-dihydroxy-3,4'-dimethoxyflavone) by whole-cell biotransformation \cite{Bong2006}. 
 Sequential introduction of the two methyl groups was performed by OMT-9 from rice (ROMT-9) and OMT-2 from soybean and resulted in almost quantitative conversion of the substrate. 
-Similarly, transformation of kaempferol and quercetin by an engineered variant of the OMT-7 from \textit{Populus deltoides} gave the 3,7-di-O-methyl products in \SI{58}{\percent} and \SI{70}{\percent} yield, respectively \cite{Joe2010}. 
-The conversion of naringenin (4',5,7-trihydroxyflavanone) to 3-O-methylkaempferol was performed as an enzymatic two-step process involving initial oxidation by flavonol synthase and methylation of the intermediate by ROMT-9 \cite{Eun2010}.
+Similarly, transformation of kaempferol and quercetin by an engineered variant of the OMT-7 from \textit{Populus deltoides} gave the 3,7-di-\textit{O}-methyl products in \SI{58}{\percent} and \SI{70}{\percent} yield, respectively \cite{Joe2010}. 
+The conversion of naringenin (4',5,7-trihydroxyflavanone) to 3-\textit{O}-methylkaempferol was performed as an enzymatic two-step process involving initial oxidation by flavonol synthase and methylation of the intermediate by ROMT-9 \cite{Eun2010}.
 
 \begin{figure}[htb]
   \begin{figureframe}

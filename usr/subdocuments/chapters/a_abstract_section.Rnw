@@ -24,29 +24,29 @@ The results obtained demonstrate the complementary nature of both activation met
 \textit{In vivo} studies using \somt showed its capability to methylate flavonoids and stilbenes at the 4'-position.
 \Glsentrydesc{doe} and \glsentrydesc{ffd} were used successfully to optimize \invitro refolding conditions for \somt.
 However, sufficiently active enzyme could not be obtained.
-Moreover, using \pfomt it was demonstrated, that the activity of this class I plant \gls{omt} could be modulated by high a pH and magnesium concentration to achieve previously unobserved methylations of non-catecholic moieties such as \glsentrydesc{3o4m} and \glsentrydesc{4o3m}.
-This resulted in the production of e.g. 3',4'-dimethyl eriodictyol and 3',4'-dimethyl luteolin by \pfomt from hesperetin and diosmetin respectively.
+Moreover, using \pfomt it was demonstrated, that the activity of this class I plant \gls{omt} could be modulated by pH and magnesium concentration to achieve previously unobserved methylations of non-catecholic moieties such as \glsentrydesc{3o4m} and \glsentrydesc{4o3m}.
+This resulted in the production of e.g. 3',4'-dimethyl eriodictyol and 3',4'-dimethyl luteolin by \pfomt from hesperetin and diosmetin, respectively.
 The knowledge obtained from the \gls{msms} studies was crucial in identifying these products.
 
 \section{Deutsche Zusammenfassung}
 
 Die vorliegende Arbeit umreißt die Verwertbarkeit zweier pflanzlicher \textit{O}-Methyltransferasen (\glspl{omt}), \pfomt und \somt, der Klassen I and II für die biokatalytische Methylierung in polyphenolischen Verbindungen verbreiteter Strukturmotive.
-Klasse I Planzen \glspl{omt}, wie \pfomt, sind magnesiumabhängige Kaffeoyl CoA-abhängige \textit{O}-Methyltransferase (\gls{ccoaomt})-ähnliche Enzyme von 200 bis 280 Aminosäuren und einem gemeinhin limitierten Substratumfang.
-Vertreter der Klasse II (d.h. \somt) sind metallionen-unabhängig, 340 bis 390 Aminosäuren lang und im Allgemeinen promiskuitiver im Substratspektrum denn Vertreter der Klasse I.
+Klasse I Planzen-\glspl{omt}, wie \pfomt, sind magnesiumabhängige Kaffeoyl CoA-abhängige \textit{O}-Methyltransferase (\gls{ccoaomt})-ähnliche Enzyme von 200 bis 280 Aminosäuren und einem gemeinhin limitierten Substratumfang.
+Vertreter der Klasse II (d.h. \somt) sind metallionen-unabhängig, 340 bis 390 Aminosäuren lang und im Allgemeinen promiskuitiver im Substratspektrum als Vertreter der Klasse I.
 
-Die biophysikalische Charakterisierung der \pfomt mittels isothermaler Titrationskalorimetrie zeigte die Bindung von \textit{S}-Adenosyl-\textsc{l}-ethionin (\gls{sae}), ein biosynthetisch gewonnenes \textit{S}-Adenosyl-\textsc{l}-methionin-Derivat, an das Enzym.
+Die biophysikalische Charakterisierung der \pfomt mittels isothermer Titrationskalorimetrie zeigte die Bindung von \textit{S}-Adenosyl-\textsc{l}-ethionin (\gls{sae}), ein biosynthetisch gewonnenes \textit{S}-Adenosyl-\textsc{l}-methionin-Derivat, an das Enzym.
 Eine Umsetzung von \gls{sae} durch \pfomt konnte jedoch nicht gezeigt werden, obgleich mehrere Enzymvarianten untersucht wurden.
 Nichtsdestotrotz wurde eine neue Kristallstruktur des \textit{apo}-Enzyms gelöst, welche neuerliche Einblicke in die Bewegungen innerhalb des Enzyms und an der Substratbindung involvierter Domänen liefert.
 
 Fünfzehn Flavonoide (d.h. Flavanone, Flavone und Flavonole) mit unterschiedlichen Substitutionsmustern am B-Ring wurden mittels Tandem-Massenspektrometrie (MS/MS) im positiven Modus charakterisiert.
 Dabei wurden zwei Aktivierungsmethoden, \textit{collision induced dissociation} (\gls{hcd}) und \textit{higher-energy collisional dissociation} (\gls{cid}), verglichen.
-\Gls{hcd} erleichterte die Fragmentierung, besonders das Erscheinen durch C-Ring-Spaltung enstandener Fragmente (z.B. \frag{1,3}{A}{+}), methylierter Vertreter von Flavonen und Flavolonen. 
-Die erhaltenen Ergebnisse demonstrieren die Komplementarität beider Aktivierungsmethoden und die Bedeutung von \gls{hcd}-Spektren für die Ientifizierung methylierter Flavone und Flavonole.
+\Gls{hcd} er\-leich\-terte die Fragmentierung, besonders das Erscheinen durch C-Ring-Spaltung enstandener Fragmente (z.B. \frag{1,3}{A}{+}), methylierter Vertreter von Flavonen und Flavolonen. 
+Die Ergebnisse demonstrieren die Komplementarität beider Aktivierungsmethoden und die Bedeutung von \gls{hcd}-Spektren für die Identifizierung methylierter Flavone und Flavonole.
 
 \textit{In vivo} Studien der \somt zeigten die Methylierung von Flavonoiden und Stilbenen an der 4'-Position.
 Statistische Versuchplanung und ein Teilfaktorplan wurden erfolgreich verwendet, um die Rückfaltungsausbeuten der \invitro Rückfaltung der \somt zu optimieren.
 Jedoch konnten nur ungenügende Mengen an aktivem Protein erhalten werden.
-Es wurde weiterhin gezeigt, dass die Aktivität der \pfomt durch Variation von pH und Magnesium so weit moduliert werden konnte vorher unbeschriebene Methylierungen von 3'-Hydroxy-4'-methoxy und 4'-Hydroxy-3'-methoxy-Motiven zu erreichen.
+Es wurde weiterhin gezeigt, dass die Aktivität der \pfomt durch Variation von pH-Wert und Magnesium so weit moduliert werden kann, dass vorher unbeschriebene Methylierungen von 3'-Hydroxy-4'-methoxy und 4'-Hydroxy-3'-methoxy-Motiven möglich sind.
 So konnten unter anderem 3',4'-Dimethyleriodictyol und 3',4'-Dimethylluteolin durch Umsetztung von Hesperetin und Diosmetin mittels \pfomt produziert werden.
 Für die Identifizierung der genannten Produkte wurde unter anderem auf das in den \gls{msms}-Studien gewonnene Wissen zurückgegriffen.
 

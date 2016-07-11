@@ -63,7 +63,8 @@ knit_hooks$set(crop = hook_pdfcrop)
   options(replace.assign=TRUE, width=60)
   options(tikzSanitizeCharacters = c('%','$','}','{','^', '_'))
   options(tikzReplacementCharacters = c('\\%','\\$','\\}','\\{','\\^{}', '\\textunderscore')) 
-
+  options(tikzDefaultEngine="pdftex")
+  options(tikzMetricsDictionary = paste("Thesis", 'tikzDictionary', sep = '-'))
   ## ggplot2  
 
   # Plot theme for ggplot2 (use with "+ theme_ost()") 

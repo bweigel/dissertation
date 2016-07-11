@@ -96,8 +96,9 @@ Crystallographic data, phasing and refinement statistics.
 \begin{figure}[htb]
   \centering
   \begin{figureframe}
-    <<struct.compare.appendix,  echo=F, tidy=TRUE, fig.height=2, fig.width=5.6, out.width='\\textwidth', dev='tikz', error=T>>=
+    <<struct.compare.appendix,  eval=F, echo=F, tidy=TRUE, fig.height=2, fig.width=5.6, out.width='\\textwidth', dev='tikz', error=T>>=
     @
+    \includegraphics[width=\textwidth, trim=0 0 0 0, clip]{usr/graphics/static/struct_compare_appendix-1}
   \end{figureframe}
   \caption{Differences in the dihedrals \textpsi~(red) and \textphi~(black) of the solved \textit{apo}-PFOMT and the structure with bound \gls{sah} (pdb: 3C3Y).
   The secondary structure is displayed at the top. Helices are displayed as rectangles and sheets are shown as arrows.

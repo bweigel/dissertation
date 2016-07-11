@@ -84,9 +84,9 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
   C41(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) \newline Lucigen, Wisconsin (USA) \\
   C43(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3)\newline Lucigen, Wisconsin (USA) \\
   DH5$\alpha$ & F$^-$ $\Phi$80\textit{lacZ}$\Delta$M15 $\Delta$(\textit{lacZYA-argF}) U169 \textit{recA}1 \textit{endA}1 \textit{hsdR}17(r$_K^-$m$_K^+$) \textit{phoA supE}44 $\lambda^-$ \textit{thi}-1 \textit{gyrA}96 \textit{relA}1 \newline Invitrogen, Karlsruhe (Germany) \\
-  JM110 & \textit{rpsL thr leu thi lacY galK galT ara tonA tsx dam dcm glnV}44 $\Delta$(\textit{lac-proAB}) e14- [F' \textit{traD}36 \textit{proAB}$^+$ \textit{lacI}$^q$ \textit{lacZ}$\Delta$M15] \textit{hsdR}17(r$_K^-$m$_K^+$) \newline Martin-Luther-University Halle-Wittenberg \\
+  JM110 & \textit{rpsL thr leu thi lacY galK galT ara tonA tsx dam dcm glnV}44 $\Delta$(\textit{lac-proAB}) e14- [F' \textit{traD}36 \textit{proAB}$^+$ \textit{lacI}$^q$ \textit{lacZ}$\Delta$M15] \textit{hsdR}17(r$_K^-$m$_K^+$) \newline Martin-Luther-University Halle-Wittenberg, AG Bordusa \\
   JW1593 \newline (BW25113 derivative) & \textit{rrnB} $\Delta$\textit{lacZ}4787 \textit{HsdR}514 $\Delta$(\textit{araBAD})568 \textit{rph}-1 $\Delta$\textit{ydgG} (Kan$^R$) \newline Keio Collection, National Institute of Genetics (Japan) \\
-  MG1655 & F$^-$ $\lambda^-$ \textit{ilvG}$^-$ \textit{rfb}-50 \textit{rph}-1 \newline DSMZ, Hamburg (Germany) \\
+  MG1655 & F$^-$ $\lambda^-$ \textit{ilvG}$^-$ \textit{rfb}-50 \textit{rph}-1 \newline DSMZ, Braunschweig (Germany) \\
   One Shot TOP10 & F$^-$ $\Phi$80\textit{lacZ}$\Delta$M15 $\Delta$(\textit{mrr-hsdRMS-mcrBC}) \textit{recA}1 \textit{endA}1 \textit{mcrA} $\Delta$\textit{lacX}74 \textit{araD}139 $\Delta$(\textit{ara-leu})7697 \textit{galU galK rpsL} (Str$^R$) $\lambda^-$ \textit{nupG} \newline Invitrogen, Karlsruhe (Germany) \\
   Origami(DE3) & $\Delta$(\textit{ara-leu})7697 $\Delta$\textit{lacX}74 $\Delta$\textit{phoA} \textit{Pvull phoR araD}139 \textit{ahpC galE galK rpsL} F'[\textit{lac + lacI q pro}] (DE3)\textit{gor}522::\textit{Tn}10 \textit{trxB} (Kan$^R$, Str$^R$, Tet$^R$) \newline Novagen, Wisconsin (USA) \\
   Rosetta(DE3) & F$^-$ \textit{ompT} \textit{hsdSB}(r$_B^-$,m$_B^-$) \textit{gal dcm} $\lambda$(DE3) pRARE (Cam$^R$) \newline Novagen, Wisconsin (USA) \\
@@ -195,7 +195,7 @@ Synthetic genes or gene fragments were obtained from GeneArt\textsuperscript{\te
 
 \subsection{Software}
 All mathematical and statistical computations and graphics were done with the \verb+R+ software (versions 3.1.X, \url{http://cran.r-project.org/}) \citep{RCoreTeam2015}. Visualizations of macromolecules were arranged using the PyMol Molecular Graphics System, version 1.7.0.0 (Schrödinger, New York, USA) or UCSF Chimera version 1.9 (\url{http://www.cgl.ucsf.edu/chimera})\cite{Pettersen2004}.
-Physicochemical calculations and calculations of different molecular descriptors were performed using Marvin Beans 15.4.13.0 (ChemAxon, Budapest, Hungary) and Molecular Operating Environment 2008.10 (Chemical Computing Group, Montreal, Canada).
+Phy\-si\-co\-che\-mi\-cal calculations and calculations of different molecular descriptors were performed using Marvin Beans 15.4.13.0 (ChemAxon, Budapest, Hungary) and Molecular Operating Environment 2008.10 (Chemical Computing Group, Montreal, Canada).
 Special software used for X-ray crystal structure solution is discussed seperately in the corresponding section (\ref{sec:xraymethods}).
 
 %%%% Molecular Biology methods
@@ -203,7 +203,7 @@ Special software used for X-ray crystal structure solution is discussed seperate
 \label{sec:molbio}
 Basic molecular biology methods like \gls{pcr}, DNA restriction/ligation, DNA gel electrophoresis, preparation of competent cells and transformation were performed based on the protocols summarized by Sambrook and Russell \citep{Sambrook2001}.
 Plasmid DNA was isolated using the QIAprep\textsuperscript{\textregistered} Spin Miniprep Kit (QIAGEN, Hilden, Germany) according to the manufacturer's instructions. 
-In vitro site-directed mutatgenesis was set-up according to the protocol of the \emph{QuikChange\textsuperscript{\texttrademark} Site-Directed Mutagenesis} kit \cite{Technologies} offered by Agilent Technologies (Santa Clara, USA). 
+In vitro site-directed mutagenesis was set-up according to the protocol of the \emph{QuikChange\textsuperscript{\texttrademark} Site-Directed Mutagenesis} kit \cite{Technologies} offered by Agilent Technologies (Santa Clara, USA). 
 Nucleotide fragments obtained by \gls{pcr}, restriction/ligation procedures or excision from electrophoresis gels were purified and concentrated using the \emph{Nucleospin Gel and PCR Clean-up} kit provided by Machery-Nagel (Düren, Germany) according to the instructions provided by the manufacturer.
 
 \subsection{Golden Gate Cloning}

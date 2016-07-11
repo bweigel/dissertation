@@ -19,3 +19,4 @@
 usr/graphics/dynamic/*
 usr/cache/*
 .Rhistory
+.Rproj.user

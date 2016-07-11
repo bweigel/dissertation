@@ -163,8 +163,9 @@ An overview of the features in the \emph{apo}-\gls{pfomt} structure. \textbf{\su
 \begin{figure}[htpb]
   \centering
   \begin{figureframe}
-    <<struct.compare,  echo=F, tidy=TRUE, fig.height=2, fig.width=5.6, out.width='\\textwidth', dev='tikz', error=T>>=
+    <<struct.compare,  eval=F, echo=F, tidy=TRUE, fig.height=2, fig.width=5.6, out.width='\\textwidth', dev='tikz', error=T>>=
     @
+    \includegraphics[width=\textwidth, trim=0 0 0 0, clip]{usr/graphics/static/struct_compare-1}
   \end{figureframe}
     \caption{Positional differences between the individual residues of the solved \textit{apo}-PFOMT and the structure with bound \gls{sah} (pdb: \href{http://www.rcsb.org/pdb/explore/explore.do?structureId=3c3y}{3C3Y}). The \glsentryfirst{dpi} of the structures was \SIlist{0.137;0.064}{\angstrom} respectively.
       The overall \gls{rmsd} amounted to \SI{0.9034}{\angstrom}.

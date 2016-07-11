@@ -1,6 +1,6 @@
 ## @knitr struct.compare
-
-load("../../statistics/data/structurecompare.Rda")
+URL <- "../../statistics/data/structurecompare.Rda"
+load(URL)
 
 geom_arrow <- function(label, start=1, end=4, y=2, width=1, a=NULL, b=NULL, fill){
   if(is.null(b)) b <- 0.45*width
@@ -34,14 +34,17 @@ ggplot() +
   ## data
   geom_step(data=tmp, aes(x=as.numeric(q.resnum), y=distance.A), col="black") +
   ## secondary structure annotation
-  geom_line(data=ss, aes(x=c(min(ss$start), max(ss$start)), y=top)) +
+  geom_line(data=data.frame(x = c(min(ss$start), max(ss$start)), y= top), aes(x, y)) +
+  #geom_line(data=ss, aes(x=max(ss$start), y=top)) +
   geom_arrow(ss$ss.elem[!ss$helix], ss$start[!ss$helix], ss$stop[!ss$helix], y = top, width = width, fill="black") +
   geom_rect(data=ss[ss$helix,], aes(xmin=start, xmax=stop, ymin=top-width/2, ymax=top+width/2), fill="black") +
   geom_text(data=ss, aes(x=start+(stop-start)/2, y=top+(top*0.07), label=latexannotation), size=2.5)+
   theme(legend.position="none")
 
+
 ## @knitr struct.compare.appendix
-load("../../statistics/data/structurecompare.Rda")
+URL <- "../../statistics/data/structurecompare.Rda"
+load(URL)
 
 ss$helix <- grepl("a", ss$ss.elem)
 cols <- c("A"="palegreen", "B"="palegreen", "C"="plum2", "orange"="orange", "cornflowerblue"="cornflowerblue")
@@ -76,7 +79,7 @@ ggplot() +
   geom_step(data=struc.diff, aes(x=number, y=phi), col="black") +
   geom_step(data=struc.diff, aes(x=number, y=psi), col="red") +
   ## secondary structure annotation
-  geom_line(data=ss, aes(x=c(min(ss$start), max(ss$start)), y=top)) +
+  geom_line(data=data.frame(x = c(min(ss$start), max(ss$start)), y= top), aes(x, y)) +
   geom_arrow(ss$ss.elem[!ss$helix], ss$start[!ss$helix], ss$stop[!ss$helix], y = top, width = width, fill="black") +
   geom_rect(data=ss[ss$helix,], aes(xmin=start, xmax=stop, ymin=top-width/2, ymax=top+width/2), fill="black") +
   geom_text(data=ss, aes(x=start+(stop-start)/2, y=top+(top*0.07), label=latexannotation), size=2.5)+

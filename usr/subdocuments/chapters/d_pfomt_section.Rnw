@@ -234,14 +234,16 @@ Nonetheless, the thermodynamic parameters did not differ significantly.
     \end{subfigure}
     \begin{subfigure}{0.45\textwidth}
       \begin{subfigure}{\textwidth}
-        <<itc.sah,  echo=F, tidy=TRUE, fig.height=4.5, fig.width=8, out.width='\\textwidth', dev='tikz', error=T>>=
+        \includegraphics[width=\textwidth]{usr/graphics/static/itc_sah-1}
+        <<itc.sah,  eval=F, echo=F, tidy=TRUE, fig.height=4.5, fig.width=8, out.width='\\textwidth', dev='tikz', error=T>>=
         @
         \caption{}
         \label{fig:itc.b}
       \end{subfigure}
      
       \begin{subfigure}{\textwidth}
-        <<itc.ca,  echo=F, tidy=TRUE, fig.height=4.5, fig.width=8, dev='tikz', error=T>>=
+      \includegraphics[width=\textwidth]{usr/graphics/static/itc_ca-1}
+        <<itc.ca, eval=F,  echo=F, tidy=TRUE, fig.height=4.5, fig.width=8, dev='tikz', error=T>>=
         @
         \caption{}
         \label{fig:itc.c}
@@ -256,10 +258,12 @@ Nonetheless, the thermodynamic parameters did not differ significantly.
 \end{figure}
 
 %\ostTableEnv[label=tab:ditc]{%
-\begin{lstTabularx}[1]{\textwidth}{Xrrrr}%
-  \caption{Results of fitting a simple one-site binding model to the data obtained from \gls{itc} experiments.} \\
+%\begin{lstTabularx}[1]{\textwidth}{Xrrrr}%
+\begin{table}[htb]\centering\small
+  \caption{Results of fitting a simple one-site binding model to the data obtained from \gls{itc} experiments.} %\\
   \label{tab:ditc}
-  \hfill \\
+  \begin{tabular}{lrrrr}
+  %\hfill \\
     \toprule
     & $K_D$ [\si{\micro\molar}]  & $\Delta H$ [\si[per-mode=reciprocal]{\cal\per\mole}] & $\Delta S$ [\si[per-mode=reciprocal]{\cal\per\mole\per\kelvin}] & N  \\
     \midrule
@@ -267,7 +271,9 @@ Nonetheless, the thermodynamic parameters did not differ significantly.
     SAM & \num[separate-uncertainty]{1.08(350)} &  \num[separate-uncertainty]{-4606(242)} & \num[separate-uncertainty]{11.6} & \num[separate-uncertainty]{0.492(18)} \\
     SAE & \num[separate-uncertainty]{2.22(379)} &  \num[separate-uncertainty]{-1338(190)} & \num[separate-uncertainty]{21.3} & \num[separate-uncertainty]{0.513(50)} \\
     \bottomrule
-\end{lstTabularx}
+\end{tabular}
+\end{table}
+%\end{lstTabularx}
 %}{%
 %Results of fitting a simple one-site binding model to the data obtained from \gls{itc} experiments.
 %}

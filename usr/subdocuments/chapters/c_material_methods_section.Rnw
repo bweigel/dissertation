@@ -331,7 +331,7 @@ To obtain only the total cell protein fraction, the preparation of periplasmic a
 
 \subsection{Protein sample concentration by \glsentrytext{tca} precipitation}
 \label{sec:tcaprecipitation}
-Diluted protein samples were concetrated by \gls{tca} precipitation in microcentrifuge tubes.
+Diluted protein samples were concentrated by \gls{tca} precipitation in microcentrifuge tubes.
 Therefore 0.1\,\gls{v} of 100\,\%~(w/v) \gls{tca} in water was added to the clarified sample, which was then vortexed for 15\,s and placed on ice for a minimum of 15\,min.
 The sample was centrifuged at \timesg{14000}, \degC{4} for 15\,min. The supernatant was discarded and the pellet was washed twice with 0.2\,\gls{v} ice-cold acetone.
 The acetone was removed and the pellet set to air-dry in an open tube.
@@ -340,7 +340,7 @@ After resuspension the sample was analyzed by \sdspage or stored at \degC{-20} u
 
 \subsection{Preparation of periplasmic protein}
 \label{sec:ppprep}
-Target proteins may be directed to the periplasmic space by N-terminal signal sequences like \textit{pelB} or \textit{DsbA/C} \citep{Makrides1996}. The periplasma is, other than the cytosol, an oxidizing environment and often used for the production of proteins containing dilsufide linkages.
+Target proteins may be directed to the periplasmic space by N-terminal signal sequences like \textit{pelB} or \textit{DsbA/C} \citep{Makrides1996}. The periplasma is, other than the cytosol, an oxidizing environment and often used for the production of proteins containing disufide linkages.
 The preparation of periplasmic protein was accomplished by an osmotic shock protocol modified from Current Protocols in Molecular Biology \citep{Ausubel2008}.
 The cell pellet was resuspended in the same volume as the culture sample of 30\,mM tris-HCl, 20\,\% (w/v) sucrose, pH\,8 and 1\,mM \gls{edta} was added. The suspension was stirred for 10\,min at \gls{rt} and the cells were collected by centrifugation at \timesg{10000}, \degC{4} for 10\,min.
 The supernatant was discarded and the cell pellet was resuspended in the same volume of ice-cold 5\,mM \cf{MgSO4}.
@@ -393,7 +393,7 @@ Cells were harvested by centrifugation (\timesg{10000}, \degC{4}, 10\,min) and u
 
 \subsection{Preparation of \glsentryfirst{ib}}
 \label{sec:ibprep}
-Often, when recombinant protein is produced in high levels in \eco it is accumulated in so-called \glsentryfirst{ib} \citep{Rudolph1996}. 
+Often, when recombinant protein is produced at high levels in \eco it is accumulated in so-called \glsentryfirst{ib} \citep{Rudolph1996}. 
 The accumulating \glspl{ib} consist mainly of the overproduced target protein, which is inherently quite pure already.
 \Glspl{ib} can be selectively recovered from \eco cell lysates and can consequently be refolded. 
 \Glspl{ib} were prepared according to a modified protocol by Palmer \citep{Palmer2012}. 
@@ -692,7 +692,7 @@ Enzymatic reactions were started by addition of enzyme (usually \SI{0.2}{\milli\
 %%%%%%%%%%%%%%%%%%%%%%% Platzhalter
 Reactions were stopped by addition of \ul{500} ethyl acetate containing 2\,\% formic acid and vortexed for 15\,s to extract the hydrophobic phenylpropanoids and flavonoids.
 After centrifugation (\timesg{10000}, \degC{4}, 10\,min) the organic phase was transferred into a new tube.
-The reaction was extraced once more with \ul{500} ethyl acetate, 0.2\,\% formic acid and the pooled organic phases were evaporated using a vacuum concentrator (Concentrator 5301; eppendorf, Hamburg, Germany).
+The reaction was extraced once more with \ul{500} ethyl acetate, 0.2\,\% formic acid and the pooled organic phases were evaporated using a vacuum concentrator (Concentrator 5301; Eppendorf AG, Hamburg, Germany).
 The residue was dissolved in methanol and centrifuged at \timesg{10000} for 10\,min to remove unsoluble matter. 
 The supernatant was transferred into a \glsentrytext{hplc} vial and analyzed by \gls{hplc} (\ref{sec:hplc}).
 When detection of hydrophobic (e.g. flavonoids) and hydrophilic compounds (e.g. \gls{sam}, \gls{sah}) was performed simultaneously reactions were stopped by addition of 0.3 volumes 10\,\% (w/v) \gls{tca} in 50\,\% acetonitrile.
@@ -703,7 +703,7 @@ After centrifugation (\timesg{10000}, \degC{4}, 10\,min) the supernatant was tra
 Assays to measure activity over larger pH ranges were set up in 50\,mM \glsentryfirst{mmt}- (pH 4 to 9) or \glsentryfirst{ssg}-buffer (pH 4 to 10) to keep the concentrations of buffer salts constant for each pH \citep{Newman2004}. 
 The protein of interest was first extensively dialyzed against the reaction buffer (e.g. \glsentrytext{mmt}, \glsentrytext{ssg}) at pH 7 with added \gls{edta} (\mM{5}) and then against the same buffer without \gls{edta}.
 Standard reaction conditions were 50\,mM buffer, 0.4\,mM alkyl acceptor (e.g. caffeic acid), 0.5\,mM \gls{sam}, \uM{2.5} \gls{gsh} and \SI{0.2}{\mg\per\ml} enyzme.
-\cf{MgCl2} was either omitted or added at \SI{10}{\milli\molar} to assess influences of divalent cations.
+\cf{MgCl2} was either omitted or added at \SI{10}{\milli\molar} to assess the influence of divalent cations.
 Assays were stopped as described in \ref{sec:omtassay} and analyzed accordingly.
 
 \subsubsection{Estimation of product concentration and enzymatic activities}
@@ -729,7 +729,7 @@ Enzymatic activities (i.e. initial rates) can be calculated from the concentrati
 \label{sec:photoassay}
 Catecholic moieties can form stable complexes in the presence of heavy metals such as copper or iron \citep{Schweigert2001,Mentasti1973}.
 Hence, caffeic acid can complex ferric (\cf{Fe^3+}) ions and form a colored complex with \textlambda\textsubscript{max} = \SI{595}{nm} \citep{Dippe}. 
-Since the complex formation is specific for caffeic acid and methylated derivatives (i.e. ferulic and iso-ferulic acid) cannot complex \cf{Fe^3+}, this can be used as a measure for methylation reactions.
+Since the colored complex is specific for caffeic acid and not observed with methylated derivatives (i.e. ferulic and iso-ferulic acid), this can be used as a measure for methylation reactions.
 \Gls{omt} assays were prepared as before (\autoref{sec:omtassay}). 
 However, the reactions were stopped by addition of 0.1 volumes 1\,M Tris/HCl pH 8, immediately followed by 0.5 volumes catechol reagent (\mM{2} \cf{FeCl3} in \mM{10} \cf{HCl}).
 The complex formation reaction was allowed to equilibrate for 5\,min at \gls{rt} and the absorbance at \SI{595}{\nm} was measured.
@@ -755,7 +755,7 @@ The Gel Filtration Standard by Bio-Rad (München, Germany) was run seperately to
 \Gls{pfomt} protein was extensively dialyzed against 50\,mM \gls{mmt}-buffer pH 7 prior to \gls{itc} experiments.
 The solution was susequently centrifuged (\timesg{14000}, \degC{4}, 10\,min), to remove insoluble matter and aggregates.
 The dialysate was stored at \degC{4} and used to prepare substrate and effector solutions.
-Generally \uM{50} protein was provided in the \gls{itc} cell and the effectors/substrates to be titrated were loaded into the syringe.
+Generally, \uM{50} protein was provided in the \gls{itc} cell and the effectors/substrates to be titrated were loaded into the syringe.
 The substance concentration in the syringe was ten times higher than the protein solution.
 Experiments were carried out at \degC{20} unless otherwise stated. The stirring speed was set to 500\,rpm.
 The injection volume was set to \SIrange{2}{4}{\micro\litre}, amounting to a total of \numrange{10}{19} injections.

@@ -13,7 +13,7 @@
   Martin Dippe\textsuperscript{2,b}, %
   Annegret Laub\textsuperscript{1,b}, %
   Ludger A. Wessjohann\textsuperscript{1,d}}
-\ospSetContacts{bweigel@ipb-halle.de\textsuperscript{a}, mdippe@ipb-halle.de\textsuperscript{b}, alaub@ipb-halle.de\textsuperscript{c}, law@ipb-halle.de\textsuperscript{d}}
+\ospSetContacts{bweigel@ipb-halle.de\textsuperscript{a}, mdippe@ipb-halle.de\textsuperscript{b}, alaub@ipb-halle.de\textsuperscript{c}, wessjohann@ipb-halle.de\textsuperscript{d}}
 \ospSetAffiliations{Leibniz-Institute of Plant Biochemistry, Department of Bioorganic Chemistry\textsuperscript{1}}
 \ospSetKeywords{methyl transferase, SAM, biocatalysis}
 
@@ -59,7 +59,7 @@ The main interest was to study methylation of so-called non-catecholic moieties,
 However, \invitro data of this enzyme has not been published.
 It was selected as a model candidate as a class II plant \gls{omt}, that can already methylate 4'-hydroxyls of non-catecholic flavonoids.
 
-\subsection{\textit{In vivo} biotransformation in \textit{Nicotiana benthamiana}}
+\subsection{\textit{In vivo} biotransformation in \textit{Nicotiana bent\-ham\-ia\-na}}
 \bweigel{eventuell weglassen? wo ist der mehrwert für die arbeit???}
 The group of Sylvestre Marillonet (IPB) established an efficient system to clone and assemble multi enzyme pathways in \textit{Nicotiana benthamiana}, using a modular cloning toolbox, which has already been used to produce flavonoids \cite{Konig2014}.
 All the genes required to establish the pathway up to naringenin in \nico in theory had been cloned previously (\autoref{fig:somtpathway}).
@@ -236,13 +236,13 @@ If the A-ring was methylated, the expected fragment ions of A and B-ring would h
 %
 The \gls{lcms} results suggest, that methylation occured exclusively at the 4'-hydroxyl, as there was no conversion detected, when the 4'-hydroxyl was absent (\autoref{tab:invivosomt}).
 A free 4'-hydroxyl seems therefore necessary for a substance to be a substrate for \somt, which confirms the previous results \citep{Kim2005b, Kim2005c}. 
-Conversion was observed for 4'-hydroxylated (iso)flavonoids and the stilbene resveratrol, however conversion rates of the isoflavone genistein were very low.
+Conversion was observed for 4'-hydroxylated (iso)flavonoids and the stilbene resveratrol, however, conversion rates of the isoflavone genistein were very low.
 No conversion of anthraquinones, cinnamic acid derivates or chalcones was detected, which is also in accordance with previously published data \citep{Kim2005b, Kim2005c}.
-\somt acts on phenolic, catecholic as well as (4-hydroxy-3-methoxy-phenyl)-moeities, as is suggested by the assay results that showed methylation of naringenin, eriodictyol and homoeriodictyol respectively.
-The methylation of (4-hydroxy-3-methoxy-phenyl)-moiteties and of stilbenes are properties of \somt that have not been described before.
+\somt acts on phenolic, catecholic as well as (4-hydroxy-3-methoxy-phenyl)-moieties, as is suggested by the assay results that showed methylation of naringenin, eriodictyol and homoeriodictyol, respectively.
+The methylation of (4-hydroxy-3-methoxy-phenyl)-moieties and of stilbenes are properties of \somt that have not been described before.
 
 The conversion ratios were assessed, but are beset with large errors due to the nature of \eco rich medium extracts.
-The highest conversions were observed for flavanones and flavones (up to $\geq$\SI{55}{\percent}). The tested isoflavones and flavonols showed much lesser conversion ratios (less then \SI{10}{\percent}).
+The highest conversions were observed for flavanones and flavones (up to $\geq$\SI{55}{\percent}). The tested isoflavones and flavonols showed much lower conversion ratios (less then \SI{10}{\percent}).
 The conversion ratios of apigenin ($\geq$\SI{54}{\percent}) and naringenin ($\geq$\SI{55}{\percent}) are comparable to the ones published previously \citep{Kim2005b, Kim2005c}.
 However, genistein only showed minute conversions, which is in disagreement with the data previously published \citep{Kim2005b, Kim2005c}.
 Conversion of eriodictyol, homoeriodictyol and kaempferol were not reported before.
@@ -265,7 +265,7 @@ Numerous systems were tested for the expression of \textit{\somt}.
 \eco strains used for the trials included BL21(DE3), Rosetta(DE3), Origami(DE3), C41(DE3), C43(DE3), C41(DE3) pLys, C43(DE3) pLys and DH5\textalpha. 
 The \textit{\somt} gene was cloned into multiple other vectors, inluding pET20b for periplasmic protein proiduction, pET32 for expression with an \gls{trx} and vectors that carry promoters for induction by rhamnose.
 Multiple media, including \gls{tb}, \gls{lb} and autoinductiuon media were used along with different inducers (e.g. lactose, rhamnose, \gls{iptg}) at different temperatures.
-Nonetheless \somt could not be produced in a soluble form and expression only resulted in \glspl{ib}.
+Nonetheless, \somt could not be produced in a soluble form and expression only resulted in \glspl{ib}.
 
 \begin{figure}[htb]
   \centering
@@ -341,7 +341,7 @@ The highest amount of soluble protein was present, when the refolding reaction t
     
   \end{figureframe}
   \caption{Results of \invitro protein refolding trials. Measured data (left) is presented alongside the \glspl{meplot} (right).  The dashed line through the \glspl{meplot} illustrates the overall mean.
-    \textbf{a} -- Protein concetration after refolding and rebuffering into a universal buffer. 
+    \textbf{a} -- Protein concentration after refolding and rebuffering into a universal buffer. 
     The highest yield of soluble protein was achieved in buffers 5 and 7. 
     The \glspl{meplot} (\textbf{b}) illustrate the connection between a factor and the measured protein concentration, suggesting that high pH and arginine concentration might have been beneficial in the refolding reactions. 
     \textbf{c} -- Calculated conversion of naringenin to ponciretin by the refolded protein fractions. 
@@ -388,18 +388,18 @@ This becomes clear from the samples refolded in buffers 4 and 5, where the amoun
 
 The \meplot suggests that the main effects for obtaining high amounts of soluble protein and obtaining active protein after refolding are different (\autoref{fig:MEplot_activity}). 
 Most notably, the redox state of the refolding reaction seemed to have a big influence on the protein sample's activity.
-The redox state however had almost no influence on the yield of soluble protein (\autoref{fig:MEplot_BF}).
+The redox state, however, had almost no influence on the yield of soluble protein (\autoref{fig:MEplot_BF}).
 Indeed, the \aov test suggests that using reducing refolding conditions (\gls{dtt}) over a redox-shuffling system (GSH:GSSG, oxidizing) has a significant influence on methylation activity judged by the $p$-value \num{0.0218} of the factor \emph{redox} (appendix, \autoref{tab:aov_activity}). 
 However, there is the possibility for \somt to form intramolecular disulfide bridges, as the modelled structure suggests (\autoref{fig:x_somtmodel}).
-There are also reports, which showed that intermolecular disulfide bridges can contribute to the stability of, mainly archeal, \glspl{mt} and have no influence on the enzymatic activity \cite{Guelorget2010,Jorda2011,Gee2005}.
-Nevertheless most \glspl{mt} are only active under reducing conditions and literature suggests, that sometimes assays of \glspl{mt} are explicitly conducted under reducing conditions \cite{Ibdah2003,Zubieta2001a}.
-Reducing environments reduce the chance of disulfide cross-linked protein mono- and oligomers and allow the enzyme to be more flexible, which might be important for catalysis.
+There are also reports, which showed that intermolecular disulfide bridges can contribute to the stability of -- mainly archeal -- \glspl{mt} and have no influence on the enzymatic activity \cite{Guelorget2010,Jorda2011,Gee2005}.
+Nevertheless, most \glspl{mt} are only active under reducing conditions and literature suggests that sometimes assays of \glspl{mt} are explicitly conducted under reducing conditions \cite{Ibdah2003,Zubieta2001a}.
+Reducing environments decrease the chance of disulfide cross-linked protein mono- and oligomers and allow the enzyme to be more flexible, which might be important for catalysis.
 When using a significance level of \SI{10}{\percent}, the $p$-value for \emph{arginine} is 0.0824, which also suggests a significant influence of this factor on the chance to obtain active protein after refolding.
 This is plausible, since there cannot be any activity when no soluble protein is present, and refolding reactions without added arginine did not afford any soluble protein.
 Judging from the \aov test, the remaining factors like \emph{glycerin}, \emph{ionic strength} or \emph{divalent cations} had no significant impact on the protein activity after refolding.
 
 %\subsubsection{Scaleup of \invitro refolding reactions}
-Due to the promising results obtained from the refolding trails, which implicated that the best overall refolding performance (i.e. soluble protein and activity) was achieved in buffer 7 (\SI{50}{\milli\molar} borate/NaOH, \SI{0.5}{\molar} arginine, \SI{2}{\milli\molar} \cf{CaCl2}, \SI{2}{\milli\molar} \cf{MgCl2}, \SI{10}{\milli\molar} \cf{NaCl}, \SI{0.5}{\milli\molar} \cf{KCl}, \SI{30}{\milli\molar} \textalpha-cyclodextrin, \SI{5}{\milli\molar} \gls{dtt} pH 8.5), this buffer was used to scale up the refolding reaction from a total volume of \SI{1.05}{\milli\litre} to a volume of \SI{50}{\milli\litre}.
+Due to the promising results obtained from the refolding trials, which implicated that the best overall refolding performance (i.e. soluble protein and activity) was achieved in buffer 7 (\SI{50}{\milli\molar} borate/NaOH, \SI{0.5}{\molar} arginine, \SI{2}{\milli\molar} \cf{CaCl2}, \SI{2}{\milli\molar} \cf{MgCl2}, \SI{10}{\milli\molar} \cf{NaCl}, \SI{0.5}{\milli\molar} \cf{KCl}, \SI{30}{\milli\molar} \textalpha-cyclodextrin, \SI{5}{\milli\molar} \gls{dtt} pH 8.5), this buffer was used to scale up the refolding reaction from a total volume of \SI{1.05}{\milli\litre} to a volume of \SI{50}{\milli\litre}.
 After concentration of soluble protein from the scaled-up refolding reaction, activity tests were conducted.
 Unfortunately, the refolded \somt showed no activity for naringenin methylation, which was evidence that the scaled-up refolding was unsuccessful.
 Nonetheless, gel filtration chromatography and \gls{cd} spectroscopy were used as a tool to study the three-dimensional structure of the refolded \somt.
@@ -433,26 +433,26 @@ However, there still exists a discrepancy between small scale refolding reaction
 \section{\glsentrytext{pfomt}}
 
 \pfomt is a class I plant \gls{omt}, that was throuroughly characterized in previous studies \cite{Ibdah2003,Dippe,Vogt2004,Kopycki2008b,Brandt2015}.
-It is easily obtained by heterologous expression in \eco after which it is fairly active and stable, which is importantz for \invitro experiments.
+It is easily obtained by heterologous expression in \eco after which it is fairly active and stable, which is important for \invitro experiments.
 The activity of \pfomt in relation to the pH of the buffer and magnesium addition was the main aim of this part of the study.
 
-\subsection{Phenolic hydroxyls}
+\subsection{Phenols}
 
-Phenolic hydroxyl groups have \pka-values of around 10 as demonstrated by four \textit{p}-cresole derivatives (\autoref{tab:pkaphenols}). 
+Phenols have \pka-values of around 10 as demonstrated by four \textit{p}-cresol derivatives (\autoref{tab:pkaphenols}). 
 Catecholic systems have two \pka-values, one for each hydroxyl group. 
 The 3-hydroxyl (R\tup{2}) of the displayed example has a much smaller \pka than the 4-hydroxyl (R\tup{1}). 
 This is in part due to the mesomeric (+M) and inductive (+I/-I) properties the substituents exhibit.
-The M and I--effects let the 3-OH be deprotonated first, which in turn significantly lowers the acidity and thus increases the \pka of the 4-OH.
-(4-hydroxy-3-methoxy)- and (3-hydroxy-4-methoxy)-derivatives have a similar \pka, with the \textit{meta}-position slightly more acidic due to the +I--effect of the methyl substituent.
+The M and I--effects let the 3-OH to be deprotonated preferentially, which in turn significantly lowers the acidity and thus increases the \pka of the 4-OH.
+(4-Hydroxy-3-methoxy)- and (3-hydroxy-4-methoxy)-derivatives have a similar \pka, with the \textit{meta}-position being slightly more acidic due to the +I--effect of the methyl substituent.
 The nucleophilicity of these phenolic groups happens to coincide with their \textsc{Br\o nsted} acidity.
 Chemically speaking the hydroxyl group with the lower \pka always reacts first with an electrophile.
       
 However, different enzymes are able to regioselectivly methylate the 3- or the 4-OH of such catecholic systems. \bweigel{cite dippe et al 2015}
-Enzyme's active sites create a ``microclimate'', which can selectively raise or lower the effective \pka of functional groups and allows for the efficient manipulation of the macroscopically observed regioselectivity.
+Enzyme's active sites create a micro-environment, which can selectively raise or lower the effective \pka of functional groups and allows for the efficient manipulation of the macroscopically observed regioselectivity.
 
 
 \begin{table}[htpb]\centering
-    \caption{\pka-values of phenolic hydroxyl groups examplified by \textit{p}-cresole derivatives. Substituent positions on the aromatic ring are arbitrary and do not reflect conventions of the \glsentryfirst{iupac}.} 
+    \caption{\pka-values of phenolic groups examplified by \textit{p}-cresol derivatives. Substituent numberings on the aromatic ring do not reflect conventions of the \glsentryfirst{iupac}.} 
   \label{tab:pkaphenols}
   \centering\small
   \begin{tabular}{cllll}
@@ -470,14 +470,14 @@ Enzyme's active sites create a ``microclimate'', which can selectively raise or 
   \end{tabular}
 \end{table}
 
-Previous studies have established that \pfomt is a 3'-\textit{O}-methyl transferase, which is not able to methylate substrates that bear either phenolic (e.g. naringenin), (3'-hydroxy-4-methoxy)- (e.g. hesperetin) or (4'-hydroxy-3-methoxy)-moieties (e.g. homoeriodictyol) \citep{Ibdah2003}.
+Previous studies have established that \pfomt is a 3'-\textit{O}-methyl transferase, which is not able to methylate substrates that bear either single phenolic (e.g. naringenin), (3'-hydroxy-4-methoxy)- (e.g. hesperetin) or (4'-hydroxy-3-methoxy)-moieties (e.g. homoeriodictyol) \citep{Ibdah2003}.
 In these previous studies, the reactions were all run under the same ``standard''  conditions.
 However, the reaction buffer can have a tremendous impact on enzymes and their reactions. 
 Therefore reaction conditions require optimization, just as the enzymes themselves, to augment an enzymatic process \citep{Bornscheuer2012,Koeller2001}.
 
-Using \pfomt reaction conditions were screened, to assess if any would promote the methylation of non-catecholic substrates.
+Using \pfomt, reaction conditions were screened to assess if any would promote the methylation of non-catecholic substrates.
 Although enzymes create a specific environment for catalysis, changes in the pH of the medium can still affect said environment and therefore enzymatic activity, especially if charged groups are part of the catalytic mechanism.
-In the catalytic mechanism of \pfomt a catalytic triad of Lys-Asn-Asp, two of which are charged, is proposed to play a major role \citep{Brandt2015}.
+For \pfomt a catalytic triad of Lys-Asn-Asp, two of which are charged, is proposed to play a major role \citep{Brandt2015}.
 Furthermore, \pfomt is a magnesium dependent enzyme and the activity is affected by altering the concentration of \cf{Mg^2+} or substitution of \cf{Mg^2+} by other divalent cations \cite{Ibdah2003}.
 Thus, the pH was chosen to be varied along with \cf{Mg^2+} concentration in order to study the influence of those two factors on the methylation reaction.
 
@@ -496,7 +496,7 @@ The maximum activity for methylation of \ifa was measured at pH 9.45, regardless
   \begin{figureframe}
     \includegraphics[width=0.65\textwidth]{usr/graphics/static/tmp_pHprofile}
   \end{figureframe}
-  \caption{Specific activity/pH-profiles for the conversion of three different substrates (\textfilledpoint~~caffeic acid, \filledtriangleup~~eriodictyol, \textfilledsquare~~\textit{iso}-ferulic acid) by \pfomt. The specific activity for the non-catecholic substrate \textit{iso}-ferulic acid was much lower than the specific activity for the catecholic substrates.
+  \caption{Specific activity/pH-profiles for the conversion of three different substrates (\textfilledpoint~~caffeic acid  [catecholic], \filledtriangleup~~eriodictyol [catecholic], \textfilledsquare~~\textit{iso}-ferulic acid [3-hydroxy-4-methoxy]) by \pfomt. The specific activity for the non-catecholic substrate \textit{iso}-ferulic acid was much lower than the specific activity for the catecholic substrates.
   When magnesium is omitted, the activity is increased by increasing the pH}
   \label{fig:e_pHprofile}
 \end{figure}
@@ -504,9 +504,9 @@ The maximum activity for methylation of \ifa was measured at pH 9.45, regardless
 The catecholic substrates caffeic acid and eriodictyol were converted by \pfomt much more quickly than \ifa, which is a (3-hydroxy-4-methoxy)-substituted cinnamic acid (\autoref{fig:e_pHprofile}).
 
 The highest specific activity $A_\mathrm{sp}$ for \ifa conversion was two orders of magnitude lower than the highest activity for the conversion of the other two substrates.
-Nonetheless, conversion was observed for \ifa with increasing pH and even an influence of magnesium was observed (\autoref{fig:e_pHprofile} and \autoref{tab:specific.activity}).
-\textit{Iso}-ferulic acid was converted rather slowly without the addition of \cf{Mg^2+} ($A_\mathrm{sp}=$\SI{7}{\pico\katal\per\milli\gram}).
-However, addition of \SI{10}{\milli\molar} \cf{Mg^2+} increased the rate of \ifa conversion by 3-fold, from \SI{7}{\pico\katal\per\milli\gram} to \SI{21}{\pico\katal\per\milli\gram} at pH 9.45 (\autoref{tab:specific.activity}). 
+Nonetheless, conversion was observed at low rates even for \ifa with increasing pH and an influence of magnesium was also observed (\autoref{fig:e_pHprofile} and \autoref{tab:specific.activity}).
+\textit{Iso}-ferulic acid was converted rather slowly without the addition of \cf{Mg^2+} ($A_\mathrm{sp}=\,$\SI{7}{\pico\katal\per\milli\gram}).
+However, addition of \SI{10}{\milli\molar} \cf{Mg^2+} increased the rate by 3-fold, from \SI{7}{\pico\katal\per\milli\gram} to \SI{21}{\pico\katal\per\milli\gram} at pH 9.45 (\autoref{tab:specific.activity}). 
 
 The specific activities observed for the conversion of caffeic acid are comparable to published data \citep{Dippe2015}.
 For the two catecholic substrates, the pH-optimum shifted from neutral to alkaline pHs, when \cf{Mg^2+} was omitted.
@@ -585,15 +585,15 @@ The parameter estimate $\beta_3$ for this term is almost 374.
 Since in this case \factorx{Mg} is categorical and can only be 0 (no magnesium added) or 1 (magnesium added) the interaction term $\beta_3\times$\factorx{pH}$\times$\factorx{Mg} resolves to 0, if no magnesium was added.
 This means that when \cf{Mg^2+} is added, the activity (in $\mathrm{AU\,min^{-1}}$) is increased by 374 for each unit the pH is raised.
 The $p$-value for \factorx{pH} as a main effect is rather high, suggesting pH alone has no significant impact on the activity.
-The parameter estimate $\beta_1$ for factor \factorx{Mg} however has a low $p$-value of 0.010, which suggest that its impact on activity is significant. 
-Due to the categorical nature of \factorx{Mg}, this means, that the activity is decreased by \num{2201} $\mathrm{AU\,min^{-1}}$ when magnesium is added.
+The parameter estimate $\beta_1$ for factor \factorx{Mg}, however, has a low $p$-value of 0.010, which suggests that its impact on activity is significant. 
+Due to the categorical nature of \cf{Mg^2+}, this means, that the activity is decreased by \num{2201} $\mathrm{AU\,min^{-1}}$ when magnesium is added.
 However, this information is only of importance when predicting the activity outside of the measured pH range, which was not the aim here.
 Together, these results illustrate, that neither magnesium addition, nor the pH alone would have such a strong effect on the activity as both factors combined had.
 
 The data of the second subset containing of the catecholic substrates was also modelled in a similar fashion (see \autoref{sec:apppfomtph}).
 It was found, that the pH has a much stronger influence on the methylation activity of PFOMT towards catechols than \ifa.
-Interaction between magnesium addition and pH-modulation were also suggested for the catecholic substrates from this data.
-For a more thourough discussion see \autoref{sec:apppfomtph}.
+Interaction between magnesium addition and pH-modulation were also suggested for the catecholic substrates from these data.
+For a more thorough discussion see \autoref{sec:apppfomtph}.
 In addition to pure inference based modelling, models can also be used to make predictions based on (new) independent variables (\autoref{fig:e_pHlm}).
 However, it cannot be stressed enough that models do not reflect the truth, but are rather another tool to gain insight into a system.
 %
@@ -627,12 +627,12 @@ It would be of interest to analyze this behavior with further systematic studies
 
 \subsection{Methylation of different chemical motifs}
 
-The previous section showed the conversion of  non-catecholic \ifa by \pfomt and promted additional experiments with other different non-catechols from multiple flavonoid subgroups (\autoref{tab:substitutions}).
-The tested substrates were selected from three different compound groups (cinnamic acids, flavones, flavanones) and each group contained each of four structural motifs -- phenol, catechol, \glsentryfirst{3o4m} and \glsentryfirst{4o3m}.
+The previous section showed the conversion of  non-catecholic \ifa by \pfomt and prompted additional experiments with other non-catechols from multiple flavonoid subgroups (\autoref{tab:substitutions}).
+The tested substrates were selected from three different compound groups (cinnamic acids, flavones, flavanones) and each group contained each of four substitution patterns -- single phenol, catechol, \glsentryfirst{3o4m} and \glsentryfirst{4o3m}.
 Each substrate was assessed for conversion with two enzymes (\pfomt wild-type and 4'-specific variant Y51R N202W) at four different conditions.
 Magnesium addition and pH were varied for the different conditions (pH/\cf{Mg^2+}: low/no, low/yes, high/no, high/yes).
 The ``low'' and ``high'' pH-values were 7.5 and 8.6, respectively.
-When \cf{Mg^2+} was added the concentration was \SI{10}{\milli\molar}.
+When \cf{Mg^2+} was added, the concentration was \SI{10}{\milli\molar}.
 The reactions were incubated at \degC{30} for 16\,h (see section \ref{sec:omtassay}).
 %
 %% \begin{figure}[htb]
@@ -645,9 +645,9 @@ The reactions were incubated at \degC{30} for 16\,h (see section \ref{sec:omtass
 %
 \begin{table}[htb]\centering\small
   \caption{Substrate grid that was tested for methylation with \pfomt.
-    Four different groups of compounds were screened. The groups of flavones, flavanones and cinnamic acids each contained one representative of each motif, phenolic, catecholic, \glsentryfirst{3o4m} and \glsentryfirst{4o3m}.}% The substitution patterns refer to \autoref{fig:substitutions}.}
+    Four different groups of compounds were screened. The groups of flavones, flavanones and cinnamic acids each contained one representative of each motif, single phenolic, catecholic, \glsentryfirst{3o4m} and \glsentryfirst{4o3m}. R\textsuperscript{1/2} denote possible methylation positions.}% The substitution patterns refer to \autoref{fig:substitutions}.}
   \label{tab:substitutions}
-  \begin{subfigure}{\textwidth}
+  \begin{subfigure}{\textwidth}\centering
     \begin{figureframe}
         \includegraphics[width=0.6\textwidth]{usr/graphics/static/substrate_pattern}
     \end{figureframe}
@@ -684,17 +684,17 @@ The reactions were incubated at \degC{30} for 16\,h (see section \ref{sec:omtass
 %
 
 Conversion of all substrates, catecholic and non-catecholic, by the wild-type could be demonstrated.
-The highest conversion of non-catecholic substrates was shown for 3'-hydroxy-4'-methoxy substituted compounds, especially cinnamic acids and flavanones where conversions of up to \SI{25}{\percent} were observed.
+The highest conversion of non-catecholic substrates was shown for 3'-hydroxy-4'-methoxy substituted compounds, especially cinnamic acids and flavanones, where conversions of up to \SI{25}{\percent} were observed.
 Conversions of substances with free 4'-hydroxyl groups did not extend beyond \SI{7}{\percent} (chrysoeriol).
 This was to be expected, due to the fact that \pfomt is a 3'-specific \gls{mt} at physiological conditions.
 However, unexpectedly the 4'specific variant hardly showed any conversion of non-catecholic substrates.
-High pH favoured the conversion of non-catechols.
+High pH favoured the conversion of non-catechols, as expected.
 
-There was almost complete conversion of the catecholic substrates (eriodictyol, luteolin and caffeic acid) after 16\,h of incubation regardless the reaction conditions, at least when the wild-type enzyme was used (\autoref{fig:pfomt_conversion} and \autoref{tab:pfomtconversion}).
+There was almost complete conversion of the catecholic substrates (eriodictyol, luteolin and caffeic acid) after 16\,h of incubation, regardless of the reaction conditions, at least when the wild-type enzyme was used (\autoref{fig:pfomt_conversion} and \autoref{tab:pfomtconversion}).
 This suggests, that the reaction period was chosen too long for this group of substrates and effects of pH or magnesium addition on this group cannot be distinguished. 
 %The effects of pH or magnesium addition on the conversion of catecholic substrates will therefore be disregarded or only discussed superficially.
 Conversion was observed for all tested substrates at least under high pH-conditions, when the wild-type was employed (\autoref{fig:pfomt_conversion}).  
-The 4'-variant however hardly showed any conversion of non-catecholic substrates (\autoref{subfig:conv_var}).
+The 4'-variant, however, hardly showed any conversion of non-catecholic substrates (\autoref{subfig:conv_var}).
 Generally, the highest conversions of non-catecholic substrates were observed at high pH and high \cf{Mg^2+} conditions (\autoref{fig:pfomt_conversion}).
 For example, conversion of \ifa was up to \SI{25}{\percent} at pH 8.6 with \SI{10}{\milli\molar} \cf{Mg^2+} in the reaction.
 This is a 10-fold increase over the conversion of \SI{2.5}{\percent}, which was observed at pH 7.5 with no magnesium added. 

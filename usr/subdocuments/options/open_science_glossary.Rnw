@@ -65,7 +65,7 @@
 \newacronym[nonumberlist]{cid}{CID}{collision induced dissociation}
 \newacronym[nonumberlist]{hcd}{HCD}{higher-energy collisional dissociation}
 \newacronym[nonumberlist]{pca}{PCA}{principal component analysis}
-\newacronym[nonumberlist]{gst}{GST}{Glutathion \textit{S}-transferase}
+\newacronym[nonumberlist]{gst}{GST}{glutathione \textit{S}-transferase}
 \newacronym[nonumberlist]{pal}{PAL}{phenylalanine ammonia-lyase}
 \newacronym[nonumberlist]{chs}{CHS}{chalcone synthase}
 \newacronym[nonumberlist]{nos}{nos}{nopaline synthase}
@@ -80,7 +80,7 @@
 \newacronym[nonumberlist]{dmso}{DMSO}{dimethyl sulfoxide}
 \newacronym[nonumberlist]{rna}{RNA}{ribonucleic acid}
 \newacronym[nonumberlist]{rrna}{rRNA}{ribosomal ribonucleic acid}
-\newacronym[plural={PKS}, nonumberlist]{pks}{PKS}{poly ketide synthase}
+\newacronym[plural={PKS}, nonumberlist]{pks}{PKS}{polyketide synthase}
 \newacronym[nonumberlist]{mt}{MT}{methyl transferase}
 \newacronym[nonumberlist]{pmt}{P-MT}{protein methyl transferase}
 \newacronym[nonumberlist, first={DNA}]{dna}{DNA}{desoxyribonucleic acid}
@@ -145,7 +145,7 @@
 \newacronym[nonumberlist]{tb}{TB}{terrific broth}
 \newacronym[first={inlusion bodies (IBs)}, nonumberlist, plural={IBs}, longplural={inclusion bodies}]{ib}{IB}{inclusion body}
 \newacronym[nonumberlist]{mmt}{MMT}{\protect\textsc{l}-malic acid/\glslink{mes}{MES}/\glslink{tris}{Tris}}
-\newacronym[nonumberlist]{ssg}{SSG}{succinate/sodium phosphate/glycine}
+\newacronym[nonumberlist]{ssg}{SSG}{succinate/sodium phosphate/gly\-cine}
 \newacronym[nonumberlist]{iptg}{IPTG}{isopropyl-\textsc{d}-thiogalactopyranosid}
 \newacronym[nonumberlist]{tca}{TCA}{trichloro acetic acid}
 \newacronym[nonumberlist]{atp}{ATP}{adenosine triphosphate}

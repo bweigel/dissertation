@@ -100,7 +100,7 @@ Crystallographic data, phasing and refinement statistics.
     @
     \includegraphics[width=\textwidth, trim=0 0 0 0, clip]{usr/graphics/static/struct_compare_appendix-1}
   \end{figureframe}
-  \caption{Differences in the dihedrals \textpsi~(red) and \textphi~(black) of the solved \textit{apo}-PFOMT and the structure with bound \gls{sah} (pdb: 3C3Y).
+  \caption{Differences in the dihedral-angles \textpsi~(red) and \textphi~(black) of the solved \textit{apo}-PFOMT and the structure with bound \gls{sah} (pdb: 3C3Y).
   The secondary structure is displayed at the top. Helices are displayed as rectangles and sheets are shown as arrows.
   Graphical background annotations are used to display the binding sites of \gls{sah} (green) and the metal ion (plum).
   The orange bars indicate regions, where much movement seems to happen upon binding or release of the co-substrate.
@@ -114,7 +114,7 @@ Crystallographic data, phasing and refinement statistics.
   \begin{figureframe}
     \includegraphics[width=0.5\textwidth]{usr/graphics/static/pfomt_3to4_activities}
   \end{figureframe}
-  \caption{Differences in the regioselectivity of some \pfomt variants. The products observed in \gls{hplc} and \gls{lcms} measurements switched from 3'-methylated (dark grey) to 4'-methylated (light grey) for the displayed variants. The height of the bars corresponds to the total conversion of substrate.}
+  \caption{Differences in the regioselectivity of some \pfomt variants. The products observed in \gls{hplc} and \gls{lcms} measurements switched from 3'-\textit{O}-methylated (dark grey) to 4'-\textit{O}-methylated (light grey) for the displayed variants. The height of the bars corresponds to the total conversion of substrate.}
   \label{fig:app_pfomt_3to4}
 \end{figure}  
 
@@ -536,7 +536,7 @@ Crystallographic data, phasing and refinement statistics.
   \begin{figureframe}
     \includegraphics[width=0.9\textwidth]{usr/graphics/static/tmp_pca1}
   \end{figureframe}
-  \caption{Additional scatterplots of the \gls{pca} of \gls{hplc} data obtained from \nico leaves infiltraded by \agro harbouring different constructs. \textbf{A} -- samples colored by leaf position (top: red; bottom: cyan), \textbf{B} -- samples colored by plant (plant 1: red; plant 2: green; plant 3: blue)}
+  \caption{Additional scatterplots of the \gls{pca} of \gls{hplc} data obtained from \nico leaves infiltrated by \agro harbouring different constructs. \textbf{A} -- samples colored by leaf position (top: red; bottom: cyan), \textbf{B} -- samples colored by plant (plant 1: red; plant 2: green; plant 3: blue)}
   \label{fig:x_pca}
 \end{figure}
 
@@ -649,7 +649,7 @@ Crystallographic data, phasing and refinement statistics.
 \label{sec:apppfomtph}
 
 The bell-shaped pH profile for the catecholic substrates showed, that there might be a quadratic relationship between pH and activity. 
-A bell-shaped pH profile is common for most enzymatic reactions, where ionizable groups are involved the reaction \cite{Cornish-Bowden2004}.
+A bell-shaped pH profile is common for most enzymatic reactions, where ionizable groups are involved \cite{Cornish-Bowden2004}.
 A quadratic term was thus included into the linear model to capture this relationship:
 \begin{equation}\label{eq:cat}
     activity = \beta_0 + \beta_1 \times \factor{Mg} + \beta_2 \times \factor{pH} + \beta_3 \times (\factor{Mg} \times \factor{pH}) + \beta_4 \times \factor{pH^2} + \beta_5 \times (\factor{pH^2} \times \factor{Mg}).
@@ -674,8 +674,8 @@ A quadratic term was thus included into the linear model to capture this relatio
 \end{table}
 %
 The model describes the actual data reasonable well, with about \SI{68.6}{\percent} of the variance explained ($R^2 = 0.6855$)(\autoref{fig:e_pHlm}).
-Also here the p-values for the coefficients $\beta_3$ (0.074) and $\beta_4$ (0.0492) suggest an interaction between \cf{Mg^2+} and pH (\autoref{tab:lm-cat}), at significant levels of \num{10} and \SI{5}{\percent} respectively.
-The coefficient estimate of 266920 for $\beta_3$ illustrates, that for the catecholic substrates the effect of the pH is much larger than for the methylation of \ifa.
+Also, the p-values for the coefficients $\beta_3$ (\num{0.074}) and $\beta_4$ (\num{0.0492}) suggest an interdependency of \cf{Mg^2+} and pH (\autoref{tab:lm-cat}), at significant levels of \num{10} and \SI{5}{\percent}, respectively.
+The coefficient estimate of \num{266920} for $\beta_3$ illustrates that for the catecholic substrates the effect of the pH is much larger than for the methylation of \ifa.
 In addition to the simplified linear model (\autoref{eq:cat}) a more complex linear model, 
 %
 \setlength\multlinegap{0pt}
@@ -685,13 +685,13 @@ In addition to the simplified linear model (\autoref{eq:cat}) a more complex lin
 %
 %\end{equation*}
 was prepared and shrunken via the \textsc{Lasso} method and 5-fold cross validation (\autoref{tab:lasso-catechol}) \citep{Tibshirani1994}.
-The \textsc{Lasso} is a shrinkage method that can shrink coefficients to exactly zero and thus make a complex model less complex and therefore more interpretable \citep{Tibshirani1994}.
+The \textsc{Lasso} is a shrinkage method. It can shrink coefficients to exactly zero, thus making a model less complex and therefore more interpretable \citep{Tibshirani1994}.
 The shrunken model only contained the factors \factorx{pH}, \factorx{pH}$\times$\factorx{Mg},  \factorx{pH}$\times$\factorx{pH\tup{2}} and  \factorx{pH}$\times$\factorx{Mg}$\times$\factorx{pH\tup{2}}.
 The large coefficient estimate for parameter $\beta_2$ (\factorx{pH}) suggests, that in fact the pH has a large influence on the activity.
 This is contrary to the linear model (\autoref{eq:cat}), which, judged by the $p$-value for this coefficient, suggested otherwise.
 However, the shrunken model also shows that the activity is dependent on the interaction of pH and magnesium, which supports the implications of the linear model (\autoref{eq:cat}).
 The results of the the shrunken model and the results obtained by linear modelling are further statistical evidence that pH and \cf{Mg^2+} show main effects and also interaction effects which seem to be associated with the enzyme's activity towards catecholic substrates (i.e eriodictyol, caffeic acid).
-Nonetheless, all of these rather simple models can not reflect the reality of such complex systems as enzymes where lots of factors play important roles.
+Nonetheless, all of these rather simple models can not reflect the reality of such complex systems as enzymes, where many more factors play important roles.
 %
 %
 %% \begin{table}[htb]
@@ -757,12 +757,12 @@ Nonetheless, all of these rather simple models can not reflect the reality of su
 \section{Identification of products from conversion of non-catechols by PFOMT}
 \label{sec:pfomt_conversions}
 
-\subsection{\textit{p}-Coumaric acid methylester}
+\subsection{\textit{p}-Coumaric acid methyl ester}
 
 The product obtained by conversion of \textit{p}-coumaric acid by \pfomt was determined as 4-hydroxy cinnamic acid methyl ester.
 The negative mode MS\tup{2} spectrum showed four prominent peaks \mz{177}(21) [M-H]\tup{-}, 162(35), 145(100) and 118(47). 
 If the enzymatic product was the methyl ether, one would expect a strong \mz{133}, corresponding to [M-H-\cf{CO2}]\tup{-} \cite{Song2015}.
-However \mz{133} was not observed, strongly suggesting the methyl ester.
+However, \mz{133} was not observed, strongly suggesting the methyl ester.
 Comparison of the obtained data with literature data confirmed the methyl ester as sole product \cite{Jarrell2014}.
 
 \begin{figure}[!htb]
@@ -777,8 +777,8 @@ Methylation of \ifa and ferulic acid afforded two methylated products with reten
 The compound eluting at \SI{12.9}{\minute} was identified as caffeic acid dimethylether (\molnum{came}) through comparison to an authentic standard, whereas the compounds eluting about one minute later were identified as the ferulic (\molnum{fame}) and \textit{iso}-ferulic acid methyl esters (\molnum{ifame}).
 Since the the retention time is an indicator for the polarity of an eluting compound and the methyl ester is much more unpolar than the dimethyl ether, it comes as no surprise that the latter elutes earlier on a reversed-phase column.
 Ionization of the enzymatic products was difficult in negative mode, but easily achieved in positive mode.
-The only peaks in the positive mode MS\tup{2} spectra of \molref{came} and (\molref*{fame},\molref*{ifame}) were \mz{191} and \mz{177} respectively.
-This indicates a loss of water and methanol from the dimethylether and methyl ester respectively.
+The only peaks in the positive mode MS\tup{2} spectra of \molref{came} and (\molref*{fame},\molref*{ifame}) were \mz{191} and \mz{177}, respectively.
+This indicates a loss of water and methanol from the dimethylether and methyl ester, respectively.
 
 \begin{figure}[htbp]
   \begin{figureframe}
@@ -802,7 +802,7 @@ This indicates a loss of water and methanol from the dimethylether and methyl es
   }
 \end{figure}
 
-\subsection{3',4'-dimethyl eriodictyol}
+\subsection{3',4'-Dimethyl eriodictyol}
 
 Conversion of homoeriodictyol or hesperetin by \pfomt afforded 3',4'-dimethyl eriodictyol (\molnum{dimethylED}).
 The product was identified by \gls{lcmsms}. 
@@ -832,13 +832,13 @@ The fragmentation pattern of 3',4'-dimethyl eriodictyol agrees with the general 
   \label{fig:dimethyled_ms}
 \end{figure}
 
-\subsection{3',4'-dimethyl luteolin}
+\subsection{3',4'-Dimethyl luteolin}
 
 Conversion of diosmetin and chrysoeriol by \pfomt afforded 3',4'-dimethyl luteolin (\molnum{dimethyllut}) and an unidentified product.
 \molref{dimethyllut} eluted after \SI{14.53}{\minute}.
 The \gls{cid} spectrum of \molref{dimethyllut} shows three signals, \mz{300}(100), 299(87) and 271(17) (\autoref{fig:dimethyllut_ms}).
-These signals correspond to the [M+H-\cf{CH3}]\tup{\textbullet+}, [M+H-\cf{CH4}]\tup{+} and [M+H-\cf{CH4}-CO]\tup{+} ions respectively.
-The \gls{hcd} spectrum of \molref{dimethyllut} clearly shows a peak with \mz{153} amongst other masses.
+These signals correspond to the [M+H-\cf{CH3}]\tup{\textbullet+}, [M+H-\cf{CH4}]\tup{+} and [M+H-\cf{CH4}-CO]\tup{+} ions, respectively.
+The \gls{hcd} spectrum of \molref{dimethyllut} clearly shows a peak with \mz{153} amongst others.
 Again, this is spectrometric evidence of a 3,7-dihydroxylated flavonoid (fragment \frag{1,3}{A}{+}) demonstrating a 3',4'-dimethylation.
 %
 \begin{figure}[htb]
@@ -859,14 +859,14 @@ Again, this is spectrometric evidence of a 3,7-dihydroxylated flavonoid (fragmen
   \label{fig:dimethyllut_ms}
 \end{figure}
 %
-The unidentified products of the conversions of apigenin, diosmetin and chrysoeriol eluted after \num{12.59}, \num{12.77} and \SI{12.69}{\minute} respectively.
+The unidentified products of the conversions of apigenin, diosmetin and chrysoeriol eluted after \num{12.59}, \num{12.77} and \SI{12.69}{\minute}, respectively.
 
 \begin{figure}[htb]\centering
   \begin{figureframe}
     \includegraphics[width=0.4\textwidth]{usr/graphics/static/flavones_products}
   \end{figureframe}
   \caption{Product composition after conversion of flavones with PFOMT.
-    Bar chart of the the peak heights of the unidentified (black) and (3' or 4')-\textit{O}-methylated products (gray) in the selected ion chromatograms (\glsentrytext{hcd} at \SI{100}{\percent} \glsentrytext{nce}).
+    Bar chart of the the peak heights of the unidentified (black) and 3',4'-\textit{O}-di\-methylated products (gray) in the selected ion chromatograms (\glsentrytext{hcd} at \SI{100}{\percent} \glsentrytext{nce}).
     The conversion experiments were conducted with the wild-type PFOMT at pH 8.6 with \SI{10}{\milli\molar} \cf{Mg^2+} added.
   }
   \label{fig:flavone_prods}

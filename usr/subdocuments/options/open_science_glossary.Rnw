@@ -52,8 +52,8 @@
 \newacronym[nonumberlist]{apci}{APCI}{atmospheric pressure chemical ionisation}
 \newacronym[nonumberlist]{ei}{EI}{electron ionization}
 \newacronym[nonumberlist]{auc}{AUC}{area under the curve}
-\newacronym[nonumberlist]{3o4m}{3O4M}{3'-hydroxy-4'-methoxy}
-\newacronym[nonumberlist]{4o3m}{4O3M}{4'-hydroxy-3'-methoxy}
+\newacronym[nonumberlist]{3o4m}{3O4M}{3\tup{(}'\tup{)}-hydroxy-4\tup{(}'\tup{)}-methoxy}
+\newacronym[nonumberlist]{4o3m}{4O3M}{4\tup{(}'\tup{)}-hydroxy-3\tup{(}'\tup{)}-methoxy}
 \newacronym[nonumberlist]{iupac}{IUPAC}{International Union of Pure and Applied Chemistry}
 \newacronym[nonumberlist]{aov}{ANOVA}{\emph{An}alysis \emph{o}f \emph{Va}riance}
 \newacronym[nonumberlist]{meplot}{ME-plot}{main effects plot}

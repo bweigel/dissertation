@@ -41,7 +41,7 @@ All other chemicals were obtained from either Sigma-Aldrich (Steinheim, Germany)
 \begin{table}[!htb]\centering\small
   \caption{\Glsentryfirst{nades}-mixtures used within this work.}
   \label{tab:des}
-  \begin{tabular}{lp{0.3\textwidth}l>{\centering}p{0.3\textwidth}}
+  \begin{tabular}{lp{0.3\textwidth}lp{0.2\textwidth}}
     \toprule
     name & composition & mole ratio & mass fraction (w/w) \tabularnewline
     \midrule

@@ -505,7 +505,7 @@ Apart from the discussed fragmentations, MS\tup{2} spectra of the methylated fla
 Methyl and methane loss followed by sequential losses of carbon monoxide were already shown for flavones (\molref*{acacetin}--\molref*{chrysoeriol}) and are postulated to proceed in a similar manner in flavonols \molref{kaempferide} and \molref{isorhamnetin} (\autoref{sche:isorhamnetin_frag}).
 Because of the extra hydroxyl at the C-ring, methylated flavonols such as isorhamnetin can loose two \cf{CO} instead of just one after loss of a methyl radical (compare \autoref{sche:isorhamnetin_frag} and (\autoref{sche:chrys_frag})).
 Other than flavones, spectra of methylated flavonols \molref{kaempferide} and \molref{isorhamnetin} also showed signals (\mz{269} and  \mz{285}) corresponding to a loss of methanol.
-The data suggests, that these [M+H-\cf{CH3OH}]\tup{+} fragments can loose up to two \cf{CO}, similar to the loss of water and \cf{CO} (\autoref{sche:isorhamnetin_frag} and \ref{sche:flavonol_genfrag}).
+The data suggests, that these [M+H-\cf{CH3OH}]\tup{+} fragments can loose up to two \cf{CO}, similar to the loss of water and \cf{CO} (\autoref{sche:isorhamnetin_frag} and \ref{sche:flavonole_genfrag}).
 %
 \begin{scheme}[htpb]\centering
   \begin{figureframe}

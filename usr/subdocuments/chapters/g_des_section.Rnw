@@ -10,9 +10,9 @@ These biological activities are largely determined by the compounds substitution
 Phenyl propanoid derived phenolic compounds such as flavonoids make up a major part of the secondary metabolites in plants and tailoring enzymes such as methyl-, prenyl- and glycosyl-transferases are responsible of putting a finish on their molecular structure.
 This work aimed to study the ability of two plant \glspl{omt}, \pfomt and \somt, for the alkylation of common structural motifs in polyphenols.
 
-In the first part \pfomt was characterized by biophysical methods, which showed that the enzyme is able to bind the non-natural ethylated \gls{sam} analogue \gls{sae}.
-Conversion of \gls{sae} was however not observed.
-In addition a novel crystal structure of the \textit{apo}-form of \pfomt was solved that gave insights into the movements associated with substrate binding.
+In the first part, \pfomt was characterized by biophysical methods. It was shown, that the enzyme is able to bind the non-natural ethylated \gls{sam} analogue \gls{sae}.
+Conversion of \gls{sae} was, however, not observed.
+In addition, a novel crystal structure of the \textit{apo}-form of \pfomt was solved that gave insights into the movements associated with substrate binding.
 
 The second part comprised of a \gls{msms}-study of 15 flavonoids of different classes (i.e. flavanones, flavones and flavonoles).
 Two activation methods, \gls{cid} and \gls{hcd}, were shown to produce complementary information that enables a fast and reliable structural characterization of the studied substances.
@@ -23,5 +23,5 @@ For the first time methylation of phenolic, \glsentrydesc{3o4m} and \glsentrydes
 Together, the results presented herein show that both class I and II plant \glspl{omt} can be used to methylate non-catecholic moities of polyphenolic compounds.
 Modulation of the reaction conditions is a worthwhile study and might bring to light new activities, that were not to be expected.
 This is of specific interest for biocatalytic reactions, where the naturally observed reaction might not be the desired behavior of an enzyme.
-Furthermore these results might spark new discussions about the regulation and function of enzymes in different compartments (i.e. reaction milieus).
+Furthermore, these results might spark new discussions about the regulation and function of enzymes in different compartments (i.e. reaction milieus).
 

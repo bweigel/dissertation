@@ -59,6 +59,10 @@
 % morefloats
 \usepackage{morefloats}
 
+% tightlist macro required by pandoc >= 1.14
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
 % title / author / date
 \title{WEB346}
 \author{Benjamin Weigel}
@@ -467,24 +471,26 @@ zero.
   \toprule
  & variable & coefficient \\ 
   \midrule
-1 & (Intercept) & 0.0128 \\ 
-  2 & pHlow & -0.0144 \\ 
-  3 & MgTRUE & 0.0017 \\ 
-  4 & variantWT & 0.0258 \\ 
-  5 & motifB & 0.8890 \\ 
-  6 & pHlow:variantWT & -0.0096 \\ 
-  7 & MgTRUE:variantWT & 0.0003 \\ 
-  8 & MgTRUE:motifD & 0.0023 \\ 
-  9 & variantWT:motifB & 0.1481 \\ 
-  10 & variantWT:motifC & 0.0234 \\ 
-  11 & pHlow:variantWT:motifB & 0.0237 \\ 
-  12 & pHlow:variantY51RN202W:motifB & -0.5812 \\ 
-  13 & pHlow:variantWT:motifC & -0.0005 \\ 
-  14 & MgTRUE:variantWT:motifB & -0.0052 \\ 
-  15 & MgTRUE:variantY51RN202W:motifB & 0.0944 \\ 
-  16 & MgTRUE:variantWT:motifC & 0.1173 \\ 
-  17 & MgTRUE:variantWT:motifD & 0.0031 \\ 
-  18 & pHlow:MgTRUE:variantY51RN202W:motifB & 0.4286 \\ 
+1 & (Intercept) & 0.0040 \\ 
+  2 & pHlow & -0.0054 \\ 
+  3 & MgTRUE & 0.0025 \\ 
+  4 & variantWT & 0.0313 \\ 
+  5 & motifB & 0.9142 \\ 
+  6 & pHlow:variantWT & -0.0281 \\ 
+  7 & MgTRUE:variantWT & 0.0125 \\ 
+  8 & MgTRUE:motifD & 0.0078 \\ 
+  9 & variantWT:motifB & 0.1466 \\ 
+  10 & variantWT:motifC & 0.0402 \\ 
+  11 & pHlow:MgTRUE:variantWT & -0.0004 \\ 
+  12 & pHlow:MgTRUE:motifB & 0.0282 \\ 
+  13 & pHlow:variantWT:motifB & 0.0237 \\ 
+  14 & pHlow:variantY51RN202W:motifB & -0.6298 \\ 
+  15 & pHlow:variantWT:motifC & -0.0122 \\ 
+  16 & MgTRUE:variantWT:motifB & -0.0545 \\ 
+  17 & MgTRUE:variantY51RN202W:motifB & 0.0810 \\ 
+  18 & MgTRUE:variantWT:motifC & 0.1102 \\ 
+  19 & pHlow:MgTRUE:variantY51RN202W:motifB & 0.4459 \\ 
+  20 & pHlow:MgTRUE:variantWT:motifC & -0.0037 \\ 
    \bottomrule
 \end{tabular}
 \caption{Variables and coefficients that were retained. Non-zero coefficients not shown.} 
@@ -716,6 +722,16 @@ conversions}\label{calculation-of-all-conversions}
  \includegraphics{tufte_files/figure-latex/unnamed-chunk-16-1.pdf}
 \end{figure}\begin{figure}
  \includegraphics{tufte_files/figure-latex/unnamed-chunk-16-2.pdf}
+\end{figure}
+
+\begin{verbatim}
+## Error in ifelse(pl.dat$Mg, "+", "-"): invalid to change the storage mode of a factor
+\end{verbatim}
+
+\begin{figure}
+ \includegraphics{tufte_files/figure-latex/forthesis-1.pdf}
+\end{figure}\begin{figure}
+ \includegraphics{tufte_files/figure-latex/forthesis-2.pdf}
 \end{figure}
 
 

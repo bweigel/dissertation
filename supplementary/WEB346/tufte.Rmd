@@ -7,8 +7,12 @@ output:
     keep_tex: true
 ---
 
-```{r, cache=FALSE, echo=FALSE}
+```{r, cache=FALSE, echo=FALSE, tidy=F}
 knitr::opts_chunk$set(dev='tikz', error=T, warning=F, message=F, size='tiny', echo=F)
+options(tikzDocumentDeclaration = "\\documentclass[10pt]{article}\\usepackage{textcomp}\\usepackage{pifont}\\newcommand{\\textglobfall}{\\ding{216}}
+\\newcommand{\\textglobrise}{\\ding{218}}")
+#options(tikzMetricPackages = c("\\usepackage[utf8{inputenc}",
+#                               "\\usepackage[T1]{fontenc}", "\\usetikzlibrary{calc}", "\\usepackage{amssymb}"))
 ```
 
 # Question
@@ -429,7 +433,7 @@ ypred <- cbind(ypred, sam=predict(sam.lm, type="response", interval="prediction"
 ggplot() +
   theme_bw() +
   geom_point(data=WEB346.results, aes(x=area, y=concentration, shape=key), alpha=0.25, size=2) +
-  geom_line(data=ypred[ypred$area<3e6,], aes(x=area, y=sah.fit), color="blue", fill="blue", linetype=2) +
+  geom_line(data=ypred[ypred$area<3e6,], aes(x=area, y=sah.fit), color="blue", linetype=2) +
   geom_ribbon(data=ypred[ypred$area<3e6,], aes(x=area, ymin=sah.lwr, ymax=sah.upr), alpha=0.1) +
   geom_line(data=ypred[ypred$area>1.5e6,], aes(x=area, y=sam.fit), color="red", linetype=2) +
   geom_ribbon(data=ypred[ypred$area>1.5e6,], aes(x=area, ymin=sam.lwr, ymax=sam.upr), fill="red", alpha=0.1)   +
@@ -494,15 +498,29 @@ lm.boot.sam
 \newpage
 
 ```{r mf.labeller}
-mf_labeller <- function(var, value){
-   value <- as.character(value)
-   if(var == "Mg"){
-       value[value == "TRUE"] <- "10 mM Mg"
-       value[value == "FALSE"] <- "no Mg"
+# doesnt run anymore (ggplot 2.x)
+# mf_labeller <- function(var, value){
+#    value <- as.character(value)
+#    if(var == "Mg"){
+#        value[value == "TRUE"] <- "10 mM Mg"
+#        value[value == "FALSE"] <- "no Mg"
+#    }
+#    if(var == "pH"){
+#        value[value == "low"] <- "low pH"
+#        value[value == "high"] <- "high pH"
+#    }
+#    
+#    return(value)
+# }
+mf_labeller <- function(labels, multi_line=TRUE){
+   value <- label_value(labels, multi_line = multi_line)
+   var <- ggplot2:::label_variable(labels, multi_line = multi_line)
+
+   if(names(value) == "Mg"){
+       value$Mg <- ifelse(value$Mg, "10 mM Mg", "no Mg")
    }
-   if(var == "pH"){
-       value[value == "low"] <- "low pH"
-       value[value == "high"] <- "high pH"
+   if(names(value) == "pH"){
+      value$pH <- ifelse(value$pH == "low", "low pH", "high pH") 
    }
    
    return(value)
@@ -522,6 +540,7 @@ knitr::opts_chunk$set(fig.height=4)
 themeweb <- list(theme(axis.text.x = element_text(angle=90),
                        legend.position="none"),
   facet_grid(variant~pH, labeller=mf_labeller),
+  #facet_grid(variant~pH, labeller=label_both),
   geom_line(aes(group=Mg, linetype=Mg), color="black"),
   labs(y="SAM-conversion"))
 
@@ -598,19 +617,40 @@ conversions %>% filter(variant != "WT") %>% xtable
 ```
 
 ```{r}
-mf_labeller <- function(var, value){
-   value <- as.character(value)
-   if(var == "Mg"){
-       value[value == "TRUE"] <- "10 mM Mg"
-       value[value == "FALSE"] <- "no Mg"
+# mf_labeller <- function(var, value){
+#    value <- as.character(value)
+#    if(var == "Mg"){
+#        value[value == "TRUE"] <- "10 mM Mg"
+#        value[value == "FALSE"] <- "no Mg"
+#    }
+#    if(var == "group"){
+#        value[value == "cinnamic acid"] <- "cinnamic acid \n \\textbf{A}"
+#        value[value == "flavanone"] <- "flavanone \n \\textbf{B}"
+#        value[value == "flavone"] <- "flavone \n \\textbf{C}"
+#        value[value == "flavonole"] <- "flavonole \n \\textbf{D}"
+#    }
+#    
+#    return(value)
+# }
+
+mf_labeller <- function(labels, multi_line=TRUE){
+   value <- label_value(labels, multi_line = multi_line)
+   var <- ggplot2:::label_variable(labels, multi_line = multi_line)
+
+   if(names(value) == "Mg"){
+       value$Mg <- ifelse(value$Mg, "10 mM Mg", "no Mg")
    }
-   if(var == "group"){
-       value[value == "cinnamic acid"] <- "cinnamic acid \n \\textbf{A}"
-       value[value == "flavanone"] <- "flavanone \n \\textbf{B}"
-       value[value == "flavone"] <- "flavone \n \\textbf{C}"
-       value[value == "flavonole"] <- "flavonole \n \\textbf{D}"
+   if(names(value) == "pH"){
+      value$pH <- ifelse(value$pH == "low", "low pH", "high pH") 
    }
-   
+  if(names(value) == "group"){
+      value$group <- sapply(value$group, function(x){
+        if(x == "cinnamic acid") "cinnamic acid \n \\textbf{A}"
+        else if(x == "flavanone") "flavanone \n \\textbf{B}"
+        else if(x == "flavone") "flavone \n \\textbf{C}"
+        else if(x == "flavonole") "flavonol \n \\textbf{D}"
+      })
+   }
    return(value)
 }
 ```
@@ -648,6 +688,7 @@ conversions$condition <- with(conversions, factor(condition, levels = c("low.FAL
 
 web <- list(  geom_bar(stat = "identity", position = "dodge", aes(fill=condition)),
               facet_grid(group~., scale="free_x", labeller=mf_labeller),
+              #facet_grid(group~., scale="free_x", labeller=label_both),
               labs(x="motif"),
               scale_fill_grey(start=0.8, end=0.2),
               #scale_fill_brewer(palette="Set1"),
@@ -701,10 +742,47 @@ web <- list(  geom_bar(stat = "identity", position = "dodge", aes(fill=condition
               coord_cartesian(ylim = c(0,115)), scale_y_continuous(breaks=seq(0, 100, 25), labels=c(0,"",50,"",100)))
 
 ggplot(data = conversions %>% filter(variant == "WT", (with.in != "m-coumaric" & with.in != "o-coumaric"& with.in != "myricetin"), group != "flavonole"), aes(x=with.in, y=conversion*100)) +
-  web + 
+  web +
   ylab("conversion (\\%)")
 
 ggplot(data = conversions %>% filter(variant != "WT", (with.in != "m-coumaric" & with.in != "o-coumaric"& with.in != "myricetin"), group != "flavonole"), aes(x=with.in, y=conversion*100)) +
+  web + 
+  ylab("conversion (\\%)")
+```
+
+```{r forthesis, fig.width=4.5, error=T, fig.height=4.5}
+
+web <- list(  geom_bar(stat = "identity", position = "dodge", aes(fill=Mg), color="black"),
+              facet_grid(group~with.in, scales = "free_x", labeller=mf_labeller),
+              labs(x="motif"),  
+              ################# new
+              geom_vline(xintercept = 2.5, color="grey70", linetype=3),
+              geom_text(data = data.frame(x = c(1.5, 3.5, 2.5), y = c(107,107, 107), label=c("\\textdownarrow", "\\textuparrow", "pH")), aes(x,y,label=label), size = 3), 
+              #scale_fill_grey(start=0.8, end=0.2),
+              scale_fill_manual(values = c("TRUE" = "black", "FALSE" = "white")),
+              #scale_fill_brewer(palette="Set1"),
+              theme_bw(),
+              theme(legend.position="none",
+                    panel.grid = element_blank(),
+                    axis.text.x = element_blank(),
+                    axis.ticks.x = element_blank(),
+                    axis.title.x = element_blank(),
+                    axis.text.y = element_text(size=10),
+                    axis.title = element_text(size=14)
+                    ),
+              coord_cartesian(ylim = c(0,115)), scale_y_continuous(breaks=seq(0, 100, 25), labels=c(0,"",50,"",100)))
+
+pl.dat <- conversions %>% filter(variant == "WT", (with.in != "m-coumaric" & with.in != "o-coumaric"& with.in != "myricetin"), group != "flavonole") %>% select(group, with.in, conversion, condition, Mg)
+pl.dat$Mg <- ifelse(pl.dat$Mg, "+", "-")
+
+ggplot(data = pl.dat, aes(x=condition, y=conversion*100)) +
+  web + 
+  ylab("conversion (\\%)")
+
+pl.dat <- conversions %>% filter(variant != "WT", (with.in != "m-coumaric" & with.in != "o-coumaric"& with.in != "myricetin"), group != "flavonole") %>% select(group, with.in, conversion, condition, Mg)
+#pl.dat$Mg <- ifelse(pl.dat$Mg, "+", "-")
+
+ggplot(data = pl.dat, aes(x=condition, y=conversion*100)) +
   web + 
   ylab("conversion (\\%)")
 ```

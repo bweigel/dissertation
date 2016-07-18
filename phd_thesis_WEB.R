@@ -65,7 +65,8 @@ knit_hooks$set(crop = hook_pdfcrop)
   options(replace.assign=TRUE, width=60)
   options(tikzSanitizeCharacters = c('%','$','}','{','^', '_'))
   options(tikzReplacementCharacters = c('\\%','\\$','\\}','\\{','\\^{}', '\\textunderscore')) 
-
+  options(tikzDefaultEngine="pdftex")
+  options(tikzMetricsDictionary = paste("Thesis", 'tikzDictionary', sep = '-'))
   ## ggplot2  
 
   # Plot theme for ggplot2 (use with "+ theme_ost()") 
@@ -141,62 +142,64 @@ read_chunk("usr/statistics/rproject/itc.R")
 
 ## ----subdoc_content_results, child='usr/subdocuments/chapters/d_pfomt_section.Rnw', eval=T----
 
-## ----struct.compare,  echo=F, tidy=TRUE, fig.height=2, fig.width=5.6, out.width='\\textwidth', dev='tikz', error=T----
-load("../../statistics/data/structurecompare.Rda")
+## ----struct.compare,  eval=F, echo=F, tidy=TRUE, fig.height=2, fig.width=5.6, out.width='\\textwidth', dev='tikz', error=T----
+## URL <- "../../statistics/data/structurecompare.Rda"
+## load(URL)
+## 
+## geom_arrow <- function(label, start=1, end=4, y=2, width=1, a=NULL, b=NULL, fill){
+##   if(is.null(b)) b <- 0.45*width
+##   if(is.null(a)) a <- 2.4
+##   enda <- end-a
+##   start[start>enda] <- enda[start>enda]
+##   polyx <- c(start, start, enda, enda, end, enda, enda)
+##   polyy <- rep(c(y-width/2, y+width/2, y+width/2, y+width/2+b, y, y-width/2-b, y-width/2), each=length(start))
+##   polydf <- data.frame(label = rep(label, 7), x = polyx, y = polyy)
+## 
+##   return(geom_polygon(data = polydf, aes(x=x, y=y, group=label), fill=fill))
+## }
+## 
+## 
+## ss$helix <- grepl("a", ss$ss.elem)
+## cols <- c("A"="palegreen", "B"="palegreen", "C"="plum2", "orange"="orange", "cornflowerblue"="cornflowerblue")
+## 
+## top <- 4.75
+## width <- top/22.5
+## bottom <- -0.25
+## ggplot() +
+##   theme_ost()+
+##   #theme(axis.text.y = element_blank(),
+##   #      axis.ticks.y = element_blank()) +
+##   labs(x="residue no.", y="residue distance [\\AA]") +
+##   ## binding site annotation
+##   geom_rect(data=anno, aes(xmax = xstop+0.5, xmin = xstart-0.5, ymax = 4.5, ymin = ymin, fill=region), alpha=0.8) +
+##   scale_fill_manual(values = cols) +
+##   ## deviance annotation
+##   geom_rect(data=anno.2, aes(xmax = xstop+0.5, xmin = xstart-0.5, ymax = bottom+width/4, ymin = bottom-width/4, fill=col), alpha=0.8) +
+##   ## data
+##   geom_step(data=tmp, aes(x=as.numeric(q.resnum), y=distance.A), col="black") +
+##   ## secondary structure annotation
+##   geom_line(data=data.frame(x = c(min(ss$start), max(ss$start)), y= top), aes(x, y)) +
+##   #geom_line(data=ss, aes(x=max(ss$start), y=top)) +
+##   geom_arrow(ss$ss.elem[!ss$helix], ss$start[!ss$helix], ss$stop[!ss$helix], y = top, width = width, fill="black") +
+##   geom_rect(data=ss[ss$helix,], aes(xmin=start, xmax=stop, ymin=top-width/2, ymax=top+width/2), fill="black") +
+##   geom_text(data=ss, aes(x=start+(stop-start)/2, y=top+(top*0.07), label=latexannotation), size=2.5)+
+##   theme(legend.position="none")
 
-geom_arrow <- function(label, start=1, end=4, y=2, width=1, a=NULL, b=NULL, fill){
-  if(is.null(b)) b <- 0.45*width
-  if(is.null(a)) a <- 2.4
-  enda <- end-a
-  start[start>enda] <- enda[start>enda]
-  polyx <- c(start, start, enda, enda, end, enda, enda)
-  polyy <- rep(c(y-width/2, y+width/2, y+width/2, y+width/2+b, y, y-width/2-b, y-width/2), each=length(start))
-  polydf <- data.frame(label = rep(label, 7), x = polyx, y = polyy)
-  
-  return(geom_polygon(data = polydf, aes(x=x, y=y, group=label), fill=fill))
-}
+## ----itc.sah,  eval=F, echo=F, tidy=TRUE, fig.height=4.5, fig.width=8, out.width='\\textwidth', dev='tikz', error=T----
+## #library(nwc.itc)
+## 
+## load("../../statistics/data/WEB338.itc.Rda")
+## cols <- c("black", "red")
+## 
+## names <- c("PFOMT vs. SAH", "PFOMT/caffeic acid/\\cf{Mg^2+} vs SAH/\\cf{Mg^2+}")
+## itc.compare(itcs[c(5, 16)], noms = names, ylim=c(-0.85, 0.05), lwd=2, cols = cols, main=F, cex.axis=1)
 
-
-ss$helix <- grepl("a", ss$ss.elem)
-cols <- c("A"="palegreen", "B"="palegreen", "C"="plum2", "orange"="orange", "cornflowerblue"="cornflowerblue")
-
-top <- 4.75
-width <- top/22.5
-bottom <- -0.25
-ggplot() +
-  theme_ost()+
-  #theme(axis.text.y = element_blank(),
-  #      axis.ticks.y = element_blank()) +
-  labs(x="residue no.", y="residue distance [\\AA]") +
-  ## binding site annotation
-  geom_rect(data=anno, aes(xmax = xstop+0.5, xmin = xstart-0.5, ymax = 4.5, ymin = ymin, fill=region), alpha=0.8) +
-  scale_fill_manual(values = cols) + 
-  ## deviance annotation
-  geom_rect(data=anno.2, aes(xmax = xstop+0.5, xmin = xstart-0.5, ymax = bottom+width/4, ymin = bottom-width/4, fill=col), alpha=0.8) +
-  ## data
-  geom_step(data=tmp, aes(x=as.numeric(q.resnum), y=distance.A), col="black") +
-  ## secondary structure annotation
-  geom_line(data=ss, aes(x=c(min(ss$start), max(ss$start)), y=top)) +
-  geom_arrow(ss$ss.elem[!ss$helix], ss$start[!ss$helix], ss$stop[!ss$helix], y = top, width = width, fill="black") +
-  geom_rect(data=ss[ss$helix,], aes(xmin=start, xmax=stop, ymin=top-width/2, ymax=top+width/2), fill="black") +
-  geom_text(data=ss, aes(x=start+(stop-start)/2, y=top+(top*0.07), label=latexannotation), size=2.5)+
-  theme(legend.position="none")
-
-## ----itc.sah,  echo=F, tidy=TRUE, fig.height=4.5, fig.width=8, out.width='\\textwidth', dev='tikz', error=T----
-#library(nwc.itc)
-
-load("../../statistics/data/WEB338.itc.Rda")
-cols <- c("black", "red")
-
-names <- c("PFOMT vs. SAH", "PFOMT/caffeic acid/\\cf{Mg^2+} vs SAH/\\cf{Mg^2+}")
-itc.compare(itcs[c(5, 16)], noms = names, ylim=c(-0.85, 0.05), lwd=2, cols = cols, main=F, cex.axis=1)
-
-## ----itc.ca,  echo=F, tidy=TRUE, fig.height=4.5, fig.width=8, dev='tikz', error=T----
-load("../../statistics/data/WEB338.itc.Rda")
-cols <- c("black", "red")
-
-names <- c("PFOMT/\\cf{Mg^2+} vs caffeic acid/\\cf{Mg^2+}", "PFOMT/SAH/\\cf{Mg^2+} vs caffeic acid/\\cf{Mg^2+}")
-itc.compare(itcs[c(18,21)], ylim=c(-0.6, 0.05), xlim=c(0,1000),lwd=2, noms = names, cols = cols, main=F, cex.axis=1)
+## ----itc.ca, eval=F,  echo=F, tidy=TRUE, fig.height=4.5, fig.width=8, dev='tikz', error=T----
+## load("../../statistics/data/WEB338.itc.Rda")
+## cols <- c("black", "red")
+## 
+## names <- c("PFOMT/\\cf{Mg^2+} vs caffeic acid/\\cf{Mg^2+}", "PFOMT/SAH/\\cf{Mg^2+} vs caffeic acid/\\cf{Mg^2+}")
+## itc.compare(itcs[c(18,21)], ylim=c(-0.6, 0.05), xlim=c(0,1000),lwd=2, noms = names, cols = cols, main=F, cex.axis=1)
 
 
 ## ----subdoc_content_results, child='usr/subdocuments/chapters/f_mtscreening_section.Rnw', eval=T----
@@ -274,47 +277,48 @@ itc.compare(itcs[c(18,21)], ylim=c(-0.6, 0.05), xlim=c(0,1000),lwd=2, noms = nam
 ## # torm <- ls()
 ## # rm(list = torm[!grepl(pattern = "(ost)", torm)])
 
-## ----struct.compare.appendix,  echo=F, tidy=TRUE, fig.height=2, fig.width=5.6, out.width='\\textwidth', dev='tikz', error=T----
-load("../../statistics/data/structurecompare.Rda")
-
-ss$helix <- grepl("a", ss$ss.elem)
-cols <- c("A"="palegreen", "B"="palegreen", "C"="plum2", "orange"="orange", "cornflowerblue"="cornflowerblue")
-
-geom_arrow <- function(label, start=1, end=4, y=2, width=1, a=NULL, b=NULL, fill){
-  if(is.null(b)) b <- 0.45*width
-  if(is.null(a)) a <- 2.4
-  enda <- end-a
-  start[start>enda] <- enda[start>enda]
-  polyx <- c(start, start, enda, enda, end, enda, enda)
-  polyy <- rep(c(y-width/2, y+width/2, y+width/2, y+width/2+b, y, y-width/2-b, y-width/2), each=length(start))
-  polydf <- data.frame(label = rep(label, 7), x = polyx, y = polyy)
-  
-  return(geom_polygon(data = polydf, aes(x=x, y=y, group=label), fill=fill))
-}
-
-
-top <- 285
-width <- top/22.5
-bottom <- -7
-ggplot() +
-  theme_ost()+
-  # theme(axis.text.y = element_blank(),
-  #      axis.ticks.y = element_blank())+
-  labs(x="residue no.", y="root squared difference") +
-  ## binding site annotation
-  geom_rect(data=anno, aes(xmax = xstop+0.5, xmin = xstart-0.5, ymax = ymax, ymin = ymin, fill=region), alpha=0.8) +
-  scale_fill_manual(values = cols) + 
-  ## deviance annotation
-  geom_rect(data=anno.2, aes(xmax = xstop+0.5, xmin = xstart-0.5, ymax = bottom+width/4, ymin = bottom-width/4, fill=col), alpha=0.8) +
-  ## data
-  geom_step(data=struc.diff, aes(x=number, y=phi), col="black") +
-  geom_step(data=struc.diff, aes(x=number, y=psi), col="red") +
-  ## secondary structure annotation
-  geom_line(data=ss, aes(x=c(min(ss$start), max(ss$start)), y=top)) +
-  geom_arrow(ss$ss.elem[!ss$helix], ss$start[!ss$helix], ss$stop[!ss$helix], y = top, width = width, fill="black") +
-  geom_rect(data=ss[ss$helix,], aes(xmin=start, xmax=stop, ymin=top-width/2, ymax=top+width/2), fill="black") +
-  geom_text(data=ss, aes(x=start+(stop-start)/2, y=top+(top*0.07), label=latexannotation), size=2.5)+
-  theme(legend.position="none")
+## ----struct.compare.appendix,  eval=F, echo=F, tidy=TRUE, fig.height=2, fig.width=5.6, out.width='\\textwidth', dev='tikz', error=T----
+## URL <- "../../statistics/data/structurecompare.Rda"
+## load(URL)
+## 
+## ss$helix <- grepl("a", ss$ss.elem)
+## cols <- c("A"="palegreen", "B"="palegreen", "C"="plum2", "orange"="orange", "cornflowerblue"="cornflowerblue")
+## 
+## geom_arrow <- function(label, start=1, end=4, y=2, width=1, a=NULL, b=NULL, fill){
+##   if(is.null(b)) b <- 0.45*width
+##   if(is.null(a)) a <- 2.4
+##   enda <- end-a
+##   start[start>enda] <- enda[start>enda]
+##   polyx <- c(start, start, enda, enda, end, enda, enda)
+##   polyy <- rep(c(y-width/2, y+width/2, y+width/2, y+width/2+b, y, y-width/2-b, y-width/2), each=length(start))
+##   polydf <- data.frame(label = rep(label, 7), x = polyx, y = polyy)
+## 
+##   return(geom_polygon(data = polydf, aes(x=x, y=y, group=label), fill=fill))
+## }
+## 
+## 
+## top <- 285
+## width <- top/22.5
+## bottom <- -7
+## ggplot() +
+##   theme_ost()+
+##   # theme(axis.text.y = element_blank(),
+##   #      axis.ticks.y = element_blank())+
+##   labs(x="residue no.", y="root squared difference") +
+##   ## binding site annotation
+##   geom_rect(data=anno, aes(xmax = xstop+0.5, xmin = xstart-0.5, ymax = ymax, ymin = ymin, fill=region), alpha=0.8) +
+##   scale_fill_manual(values = cols) +
+##   ## deviance annotation
+##   geom_rect(data=anno.2, aes(xmax = xstop+0.5, xmin = xstart-0.5, ymax = bottom+width/4, ymin = bottom-width/4, fill=col), alpha=0.8) +
+##   ## data
+##   geom_step(data=struc.diff, aes(x=number, y=phi), col="black") +
+##   geom_step(data=struc.diff, aes(x=number, y=psi), col="red") +
+##   ## secondary structure annotation
+##   geom_line(data=data.frame(x = c(min(ss$start), max(ss$start)), y= top), aes(x, y)) +
+##   geom_arrow(ss$ss.elem[!ss$helix], ss$start[!ss$helix], ss$stop[!ss$helix], y = top, width = width, fill="black") +
+##   geom_rect(data=ss[ss$helix,], aes(xmin=start, xmax=stop, ymin=top-width/2, ymax=top+width/2), fill="black") +
+##   geom_text(data=ss, aes(x=start+(stop-start)/2, y=top+(top*0.07), label=latexannotation), size=2.5)+
+##   theme(legend.position="none")
 
 
 ## ----options_bibliography, child='usr/subdocuments/chapters/x_bibliography_section.Rnw', eval=T----

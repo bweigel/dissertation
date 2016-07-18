@@ -14,7 +14,7 @@
 
 %\documentclass[revision=true, fontchoice=libertine, colortheme=orange, oneside]{ost/subdocuments/open_science_thesis} 
 %\documentclass[addfloatbarrierto=section, revision=false, linenumbers=true, linespacing=onehalfspacing, fontchoice=libertine, colortheme=orange, oneside, titlepagetheme=mlu]{ost/subdocuments/open_science_thesis} 
-\documentclass[autolayout=false, addfloatbarrierto=section, revision=false, linenumbers=true, linespacing=onehalfspacing, fontchoice=libertine, colortheme=orange, oneside, titlepagetheme=mlu]{ost/subdocuments/open_science_thesis} 
+\documentclass[autolayout=false, addfloatbarrierto=section, revision=false, linenumbers=false, linespacing=onehalfspacing, fontchoice=libertine, colortheme=orange, twoside, titlepagetheme=mlu, natbib=true, style=chem-acs]{ost/subdocuments/open_science_thesis} 
 
 
 

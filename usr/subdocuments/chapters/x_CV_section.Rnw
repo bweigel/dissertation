@@ -1,0 +1,35 @@
+%%%-------------------------------------------------%%%
+%%% Sub document affidavit %%%
+%%%-------------------------------------------------%%% 
+
+% \part{Preface}
+\newpage
+\section*{Curriculum vit\ae} 
+\addcontentsline{toc}{chapter}{Curriculum vit\ae}
+\thispagestyle{empty}
+
+\subsection*{Personal Information}
+
+\begin{tabular}{L!{\cvVRule}R}
+Degree & Diplom-Biochemiker \\ [2pt]
+Surname & Weigel \\[2pt]
+Name & Benjamin \\[2pt]
+Address & Elcknerplatz 16b, 12555 Berlin \\[2pt]
+Date of Birth & 06.04.1986 \\[2pt]
+Place of Birth & Bernburg (Saale) \\[2pt]
+Nationality & German \\
+\end{tabular}
+
+\subsection*{Education}
+
+
+\begin{tabular}{L!{\cvVRule}R}
+2011--2015&{\bf Graduate Studies.} Leibniz-Institute of Plant Biochemistry - Group of Bioorganic Chemistry, Halle (Saale), Advisor: Prof. Dr. Ludger A. Wessjohann, Thesis: ``Test``\\[10pt]
+2010--2011&{\bf Diploma thesis.} Leibniz-Institute of Pflant Biochemistry, Halle(Saale), Advisor: Prof. Dr. Ludger A. Wessjohann, Thesis: \glqq Biotransformationen mit \textit{Cannabis sativa} Monoterpensynthasen.\grqq \\ [10pt]
+2009&  \textbf{LANDO/NSF research fellow.} Department of Chemistry, University of Minnesota, Minneapolis, MN (USA), Advisor: Prof. Dr. Mark D. Distefano\\[10pt]
+2006--2011&{\bf Studies in Biochemistry.} Martin-Luther-University Halle-Wittenberg, Halle(Saale), Degree: Diplom-Biochemiker\\
+\end{tabular}
+
+
+\vspace{1cm}
+\ostAffidavitSignatureLine{}

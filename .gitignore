@@ -16,7 +16,13 @@
 *.acn
 *.acr
 *.alg
+*.glg
+*.glo
+*.rtf
+*.xml
+*.docx
 usr/graphics/dynamic/*
 usr/cache/*
 .Rhistory
 .Rproj.user
+supplementary/*.pdf

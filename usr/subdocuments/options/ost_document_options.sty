@@ -88,6 +88,8 @@
 %%% Set your geometry %%%
 %%%-------------------------------------------------%%%
 
+%\PassOptionsToPackage{BCOR=0.8cm}{scrbook}
+
 %% Note: 
 
 % Needs the class option autolayout=false
@@ -95,7 +97,7 @@
 %% Example:
 
 % \ostSetGeometry{top=2cm, bottom=2cm, left=1cm, right=2.1cm, headsep=14pt}
-
+%\ostSetGeometry{top=1.5cm, bottom=1.5cm, bindingoffset=6mm}
 %% Note: 
 
 % This is a wrapper to the geometry package. Find all available options 
@@ -116,10 +118,21 @@
 
 % \ostDefineColor{YourColor}{rgb}{0,0,0.7}
 
+\ostDefineColor{Grey80}{rgb}{0.5, 0.5, 0.5}
+
 %%%-------------------------------------------------%%%
 %%% Set your color schema %%%
 %%%-------------------------------------------------%%%
 
+%\ostSetColor{PartHeader}{Grey80}
+%\ostSetColor{Title}{Grey80}
+%\ostSetColor{Subtitle}{Grey80}
+%\ostSetColor{ChapterHeader}{Grey80}
+%\ostSetColor{SectionHeader}{Grey80}
+%\ostSetColor{SubsectionHeader}{Grey80}
+%\ostSetColor{SubSubsectionHeader}{Grey80}
+%\ostSetColor{ParagraphHeader}{Grey80}
+%\ostSetColor{CaptionLabel}{Grey80}
 % usage: 
 
 % \ostSetColor{ost internal color name}{your color name}
@@ -140,6 +153,17 @@
 % \ostSetColor{FooterRule}{LightGray}
 % \ostSetColor{FullLeftFooter}{DarkGray} 
 % \ostSetColor{FooterPageNumber}{DarkGray}
+
+
+%%%-------------------------------------------------%%%
+%%% CV %%%
+%%%-------------------------------------------------%%%
+
+
+\definecolor{cvlightgray}{gray}{0.8}
+\newcolumntype{L}{>{\raggedleft}p{0.2\textwidth}}
+\newcolumntype{R}{p{0.7\textwidth}}
+\newcommand\cvVRule{\color{cvlightgray}\vrule width 0.5pt}
 
 %%%-------------------------------------------------%%%
 %%% Set lengths %%%
@@ -162,6 +186,14 @@
 %%%-------------------------------------------------%%%
 %%% Set own commands %%%
 %%%-------------------------------------------------%%%
+
+\usepackage{afterpage}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
 
 %% Example:
 %\newcommand{\ra}{\textrightarrow\xspace}
@@ -403,8 +435,10 @@ chapterlistsgaps=off,
 \ostSetContent{Institution}{Leibniz-Institute of Plant Biochemistry \\ Department of Bioorganic Chemistry \\ Weinberg 3 \\ 06120 Halle(Saale)}
 \ostSetContent{Date}{\today}
 %\ostSetContent{AdvisorOne}{Prof. Dr. Ludger A. Wessjohann\\ wessjohann@ipb-halle.de \\ +49 (345) 5582-1301}
-\ostSetContent{AdvisorOne}{Prof. Dr. Ludger A. Wessjohann (Martin-Luther Universität Halle-Wittenberg)}
-\ostSetContent{AdvisorTwo}{Prof. Dr. Andreas Liese (Technische-Universität Hamburg)}
+%\ostSetContent{AdvisorOne}{Prof. Dr. Ludger A. Wessjohann (Martin-Luther Universität Halle-Wittenberg)}
+\ostSetContent{AdvisorOne}{}
+\ostSetContent{AdvisorTwo}{}
+%\ostSetContent{AdvisorTwo}{Prof. Dr. Andreas Liese (Technische-Universität Hamburg)}
 
 \ostSetContent{TextOnBar}{Dissertation}
 
@@ -618,7 +652,7 @@ firstinits=true%
 
 
 \newcommand{\WEBmakeTitle}[1]{%\relax
-\ospTitleRule\par\vspace{0pt}%
+\noindent\ospTitleRule\par\vspace{0pt}%
 %         \begin{tabularx}{\textwidth}{p{0.2\textwidth}X}
 %            \begin{minipage}{\linewidth}
 % \ospTitleLogo

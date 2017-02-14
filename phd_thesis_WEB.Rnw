@@ -14,8 +14,8 @@
 
 %\documentclass[revision=true, fontchoice=libertine, colortheme=orange, oneside]{ost/subdocuments/open_science_thesis} 
 %\documentclass[addfloatbarrierto=section, revision=false, linenumbers=true, linespacing=onehalfspacing, fontchoice=libertine, colortheme=orange, oneside, titlepagetheme=mlu]{ost/subdocuments/open_science_thesis} 
-\documentclass[autolayout=false, addfloatbarrierto=section, revision=false, linenumbers=false, linespacing=onehalfspacing, fontchoice=libertine, colortheme=orange, twoside, titlepagetheme=mlu, natbib=true, style=chem-acs]{ost/subdocuments/open_science_thesis} 
-
+\documentclass[autolayout=false, addfloatbarrierto=section, revision=false, linenumbers=false, linespacing=onehalfspacing, fontchoice=libertine, colormode=cmyk, twoside, titlepagetheme=mlu, colortheme=gray, natbib=true, style=chem-acs]{ost/subdocuments/open_science_thesis} 
+%\documentclass[autolayout=false, addfloatbarrierto=section, revision=false, linenumbers=false, linespacing=onehalfspacing, fontchoice=libertine, colormode=rgb, oneside, titlepagetheme=mlu, colortheme=blue, natbib=true, style=chem-acs]{ost/subdocuments/open_science_thesis} 
 
 
 \ostSetSize{Title}{\LARGE}
@@ -135,6 +135,14 @@ read_chunk("usr/statistics/rproject/itc.R")
 @
 
 %%%-------------------------------------------------%%%
+%%% Include acknowledgements %%%
+%%%-------------------------------------------------%%%
+
+<<subdoc_content_acknowledgement, child='usr/subdocuments/chapters/x_acknowledgements_section.Rnw', eval=T>>=
+@
+
+
+%%%-------------------------------------------------%%%
 %%% Tables of content %%%
 %%%-------------------------------------------------%%%
 
@@ -212,12 +220,6 @@ read_chunk("usr/statistics/rproject/itc.R")
 <<subdoc_content_results, child='usr/subdocuments/chapters/g_des_section.Rnw', eval=T>>=
 @
 
-%%%-------------------------------------------------%%%
-%%% Include acknowledgements %%%
-%%%-------------------------------------------------%%%
-
-<<subdoc_content_acknowledgement, child='usr/subdocuments/chapters/x_acknowledgements_section.Rnw', eval=T>>=
-@
 
 %%-------------------------------------------------%%%
 %%% Affidavit %%%
@@ -225,6 +227,14 @@ read_chunk("usr/statistics/rproject/itc.R")
 
 <<subdoc_content_affidavit, child='usr/subdocuments/chapters/x_affidavit_section.Rnw', eval=T>>=
 @
+
+%%-------------------------------------------------%%%
+%%% CV %%%
+%%%-------------------------------------------------%%%
+
+<<subdoc_content_cv, child='usr/subdocuments/chapters/x_CV_section.Rnw', eval=T>>=
+@
+
 %%%-------------------------------------------------%%%
 %%% Include the appendix %%%
 %%%-------------------------------------------------%%%

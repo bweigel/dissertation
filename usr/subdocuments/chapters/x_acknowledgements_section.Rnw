@@ -2,7 +2,51 @@
 %%% Sub document for acknowledgement %%%
 %%%-------------------------------------------------%%%
 
-\chapter{Acknowledgements}
+\blankpage
 
-% Remove the lipsum and fill in your acknowledgements here
-%\lipsum[4-5]
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\thispagestyle{empty}
+
+\barquote[author=Isaac Asimov]{The true delight is in the finding out rather than in the knowing.}
+
+First I would like to thank Professor Ludger Wessjohann for giving me the opportunity 
+to work on this challenging problem and become a better scientist, and also for his steady professional support throughout the years.
+\textcolor{white}{Gunaxf sbe xrrcvat znahfpevcgf va gur qrfx sbe lrnef ba raq naq nyy gur rkphfrf.}
+
+Thanks go to Annegret Laub, Dr. Jürgen Schmidt, Anja Ehrlich, Christine Kuhnt, Dr. Andrea Porzel, Martina Lerbs and Gudrun Hahn for all their help with analytics measurements and problems.
+I am grateful to all the people in the IPB and especially the group of Bioorganic Chemistry for a great and always helpful professional and personal atmosphere.
+Many thanks go to Dr. Danilo Meyer and Dr. Martin Dippe, who were an enrichment to the biocatalysis lab and always provided helpful ideas and discussions.
+
+I would like to thank Dr. Thomas Vogt for his advice. Thanks to Dr. Sylvestre Marillonet and Ramona Grützner for theoretical and practical help with the Golden Gate system and plant expression.
+
+I thank Professor Milton Stubbs for the opportunity to run crystallization and diffraction experiments in his group. Here, a special thanks to Dr. Christoph Parthier for his practical and theoretical
+help concerning the solution of crystal structures.
+
+I thank Dr. Marco Kloos for the \textit{black-ops} style screening experiments during a long night in Leipzig.
+
+To the people of ``IPB Aktuell`` -- Steve Ludwig, Robert Berger, Anne-Katrin Bauer, Jeanette Keim, Sebastian Stark, as well as Rainer and Julia Kufka -- a very special thank you. 
+Your are like a family \textless 3. Thank you Anne for being an awesome roomie (that was not annoyed by my messiness) throughout all the years. Thanks Robert for all the time we spent watching TV-series,
+and the personal, professional and R related conversations. Thanks Steve for the longest consecutive foosball match of (probably) all time \ldots and your mother.
+Thanks Jeanette for getting me set up when I first started and all the great help, especially in moving. Thanks for the effort we shared writing that manuscript.
+Thanks Sebastian for the Pflaumenknödel and scientific sceptisism. Thanks Rainer and Julia for always being so positive (when I see you in my head I always see you grinning). 
+
+\thispagestyle{empty}
+
+A big shoutout goes to the ThursdayNightBoardGamingAndWhiskyTasting (TNBGAWT)-crew -- René Wartner \textless 3, Christian Arlt, Marcus Böhme, sometimes others and \glqq Hexeee! \grqq. 
+I always had a blast and appreciate that we kept it going for all these years. I dearly miss it.
+
+Thanks to the guys and girls, who have attended every biochemistry retreat -- Bea, Susi, René, Christian and Marcus. This weekend is always welcome and a great way to meet up again.
+I hope it keeps on going till the end.
+
+I am truly grateful to my surrogate father, Melvin Allen Vermillion. Thanks for always keeping an open door.
+You will forever be in my heart.
+
+I thank my family for all their love and support. 
+My grandparents Ingrid and Siegfried, who will always have us over for lunch and prepare the the meal that we so crave.
+My grandpa Siegfried, whose mindset and ethical views I deeply admire.  
+I thank my parents Heike and René for all they have done in making dreams become reality and their dependability.
+My brother, Konstantin, for his ability and willingness to get things organized, even when it is high time.
+To Oma Lilo, I miss you.
+
+I thank my wife Maika, for keeping up and sticking with me over the years. Thank you for condoning my flaws and making me a better person. I am grateful to have you in my life -- forever and always.

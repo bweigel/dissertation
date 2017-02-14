@@ -443,13 +443,13 @@ Only for kaempferol \molref{kaempferol}, a neutral loss of \SI{42}{\dalton} corr
 %
 \begin{scheme}[htpb]\centering
   \begin{figureframe}
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{0.9\textwidth}
 %      \includegraphics[width=\textwidth]{usr/graphics/static/flavonole_genfrag}
       \includegraphics[width=\textwidth]{usr/graphics/static/scheme_1-7a_flavonole_genfrag}
       \caption{Fragments characteristic for all studied flavonols.}
     \end{subfigure}
     
-    \begin{subfigure}{\textwidth}
+    \begin{subfigure}{0.9\textwidth}
 %      \includegraphics[width=\textwidth]{usr/graphics/static/me_flavonole_genfrag}
       \includegraphics[width=\textwidth]{usr/graphics/static/scheme_1-7b_me_flavonole_genfrag}
       \caption{Characteristic fragments of methylated flavonols.}

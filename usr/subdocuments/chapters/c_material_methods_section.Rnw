@@ -173,7 +173,7 @@ Synthetic genes or gene fragments were obtained from GeneArt\textsuperscript{\te
   \end{tabular}
 \end{table}
 
-
+\newpage
 \subsection{Instruments}
 
 %\begin{small}
@@ -238,6 +238,7 @@ After pulsing (2.5\,kV, \SI{200}{\ohm}) 1\,ml of \gls{lb}-medium was added, the 
 The culture was centrifuged (\timesg{10000}, 1\,min) and \ul{900} supernatant were discarded.
 The pellet was resuspended in the remaining liquid, plated onto \gls{lb}-agar plates supplemented with \ugperml{40} rifampicin and \ugperml{50} carbencillin and incubated at \degC{28} for (2 to 3)\,days.
 
+\newpage
 \section{Treatment of plant material}
 \label{sec:agronico}
 \subsection{Infiltration of \textit{Nicotiana benthamiana}}

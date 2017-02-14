@@ -137,8 +137,9 @@
 \newif\ifost@blue%
 \newif\ifost@green%
 \newif\ifost@red%
+\newif\ifost@gray%
 
-\define@choicekey*[KV]{open-science-thesis}{colortheme}[\val\nr]{orange, blue, green, red}{%
+\define@choicekey*[KV]{open-science-thesis}{colortheme}[\val\nr]{orange, blue, green, red, gray}{%
   \ifcase\nr\relax% 
     \ost@colortrue%
     \ost@orangetrue%
@@ -151,6 +152,9 @@
   \or%
     \ost@colortrue%
     \ost@redtrue%
+  \or%
+    \ost@colortrue%
+    \ost@graytrue%
   \fi%
 }
 
@@ -271,7 +275,7 @@
 
 \ProcessOptionsX[KV]<open-science-thesis>
 
-\LoadClass{scrbook}
+\LoadClass[BCOR=8mm]{scrbook}
 
 \ifost@loadgeometrypackage%
   \RequirePackage{geometry}
@@ -447,6 +451,17 @@
     \colorlet{ostColorSubSubsectionHeader}{DarkOrange}
     \colorlet{ostColorParagraphHeader}{DarkOrange} 
     \colorlet{ostColorCaptionLabel}{DarkOrange}
+  \fi
+  \ifost@gray%
+    \colorlet{ostColorTitle}{DimGray}
+    \colorlet{ostColorSubtitle}{DimGray}
+    \colorlet{ostColorPartHeader}{DimGray} 
+    \colorlet{ostColorChapterHeader}{DimGray} 
+    \colorlet{ostColorSectionHeader}{DimGray}  
+    \colorlet{ostColorSubsectionHeader}{DimGray}
+    \colorlet{ostColorSubSubsectionHeader}{DimGray}
+    \colorlet{ostColorParagraphHeader}{DimGray} 
+    \colorlet{ostColorCaptionLabel}{DimGray}
   \fi
   \ifost@blue
       \xdefinecolor{ostColorTitle}{RGB}{8,81,156}
@@ -1674,9 +1689,9 @@
       {\ostSizeSubtitle\ostFontSubtitle\noindent Halle-Wittenberg \par}\vspace{\baselineskip}
       \ostTitleStretchBelow{} 
       {\ostSizeSubtitle\ostFontSubtitle\noindent vorgelegt von \par}\vspace{\baselineskip}
-      {\ifdefempty{\ostAuthors}{\relax}{\color{ostColorAuthors}{{\noindent\ostSizeSubtitle\ostFontSubtitle Herr \ostAuthors}}\par}}
+      {\ifdefempty{\ostAuthors}{\relax}{\color{ostColorAuthors}{{\noindent\ostSizeSubtitle\ostFontSubtitle Herrn Diplom-Biochemiker \ostAuthors}}\par}}
       {\ostSizeSubtitle\ostFontSubtitle\noindent geb. am 06. April 1986 in Bernburg (Saale) \par}\vspace{\baselineskip}
-{\raggedright{\color{ostColorAdvisors}{{\noindent\ostSizeAdvisors\ostFontAdvisors Gutachter:}\par}}
+      {%\raggedright{\color{ostColorAdvisors}{{\noindent\ostSizeAdvisors\ostFontAdvisors Gutachter:}\par}}
       {\par\ifdefempty{\ostAdvisorOne}{\relax}{\color{ostColorAdvisors}{{\ostSizeAdvisors\ostFontAdvisors 1.~\ostAdvisorOne}}}\par} 
 %      \vspace{\baselineskip}
       {\par\ifdefempty{\ostAdvisorTwo}{\relax}{\color{ostColorAdvisors}{{\ostSizeAdvisors\ostFontAdvisors 2.~\ostAdvisorTwo}}}\par}\vspace{\baselineskip}

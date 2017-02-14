@@ -4,11 +4,25 @@
 
 % \part{Preface}
 
-\chapter{Affidavit} 
+\chapter*{Affidavit / Eidesstattliche Erklärung} 
+\addcontentsline{toc}{chapter}{Affidavit}
+\thispagestyle{empty}
 
 I hereby declare that this document has been written only by the undersigned
 and without any assistance from third parties. Furthermore, I confirm that no
 sources have been used in the preparation of this document other than those
-indicated in the thesis itself. 
+indicated in the thesis itself. I furthermore declare that it is the first time
+that I have used this document to try and gain a doctoral degree.
+
+\vspace{2cm}
+
+Hiermit erkläre ich, dass ich die vorliegende Arbeit selbstständig und ohne fremde Hilfe
+verfasst habe. Andere als die von mir angegebenen Quellen und Hilfsmittel habe ich nicht
+benutzt und die den benutzten Werken wörtlich oder inhaltlich entnommenen Stellen habe
+ich als solche kenntlich gemacht. Außerdem erkläre ich, dass ich mich mit der
+vorliegenden wissenschaftlichen Arbeit erstmals um die Erlangung des Doktorgrades
+bewerbe.
+
+\vspace{0.5cm}
 
 \ostAffidavitSignatureLine{}

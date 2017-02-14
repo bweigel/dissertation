@@ -128,6 +128,10 @@ read_chunk("usr/statistics/rproject/itc.R")
 
 
 
+## ----subdoc_content_acknowledgement, child='usr/subdocuments/chapters/x_acknowledgements_section.Rnw', eval=T----
+
+
+
 ## ----subdoc_content_abstract, child='usr/subdocuments/chapters/a_abstract_section.Rnw', eval=T----
 
 
@@ -214,11 +218,11 @@ read_chunk("usr/statistics/rproject/itc.R")
 
 
 
-## ----subdoc_content_acknowledgement, child='usr/subdocuments/chapters/x_acknowledgements_section.Rnw', eval=T----
-
-
-
 ## ----subdoc_content_affidavit, child='usr/subdocuments/chapters/x_affidavit_section.Rnw', eval=T----
+
+
+
+## ----subdoc_content_cv, child='usr/subdocuments/chapters/x_CV_section.Rnw', eval=T----
 
 
 

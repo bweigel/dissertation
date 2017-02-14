@@ -30,7 +30,7 @@ The knowledge obtained from the \gls{msms} studies was crucial in identifying th
 
 \section{Deutsche Zusammenfassung}
 
-Die vorliegende Arbeit umreißt die Verwertbarkeit zweier pflanzlicher \textit{O}-Methyltransferasen (\glspl{omt}), \pfomt und \somt, der Klassen I and II für die biokatalytische Methylierung in polyphenolischen Verbindungen verbreiteter Strukturmotive.
+Die vorliegende Arbeit umreißt die Verwertbarkeit zweier pflanzlicher \textit{O}-Methyl\-trans\-fer\-asen (\glspl{omt}), \pfomt und \somt, der Klassen I and II für die biokatalytische Methylierung in polyphenolischen Verbindungen verbreiteter Strukturmotive.
 Klasse I Planzen-\glspl{omt}, wie \pfomt, sind magnesiumabhängige Kaffeoyl CoA-abhängige \textit{O}-Methyltransferase (\gls{ccoaomt})-ähnliche Enzyme von 200 bis 280 Aminosäuren und einem gemeinhin limitierten Substratumfang.
 Vertreter der Klasse II (d.h. \somt) sind metallionen-unabhängig, 340 bis 390 Aminosäuren lang und im Allgemeinen promiskuitiver im Substratspektrum als Vertreter der Klasse I.
 
@@ -38,7 +38,7 @@ Die biophysikalische Charakterisierung der \pfomt mittels isothermer Titrationsk
 Eine Umsetzung von \gls{sae} durch \pfomt konnte jedoch nicht gezeigt werden, obgleich mehrere Enzymvarianten untersucht wurden.
 Nichtsdestotrotz wurde eine neue Kristallstruktur des \textit{apo}-Enzyms gelöst, welche neuerliche Einblicke in die Bewegungen innerhalb des Enzyms und an der Substratbindung involvierter Domänen liefert.
 
-Fünfzehn Flavonoide (d.h. Flavanone, Flavone und Flavonole) mit unterschiedlichen Substitutionsmustern am B-Ring wurden mittels Tandem-Massenspektrometrie (MS/MS) im positiven Modus charakterisiert.
+Fünfzehn Flavonoide (d.h. Flavanone, Flavone und Flavonole) mit unterschiedlichen Substitutionsmustern am B-Ring wurden mittels Tandem-Massen\-spek\-tro\-metrie (MS/MS) im positiven Modus charakterisiert.
 Dabei wurden zwei Aktivierungsmethoden, \textit{collision induced dissociation} (\gls{hcd}) und \textit{higher-energy collisional dissociation} (\gls{cid}), verglichen.
 \Gls{hcd} er\-leich\-terte die Fragmentierung, besonders das Erscheinen durch C-Ring-Spaltung enstandener Fragmente (z.B. \frag{1,3}{A}{+}), methylierter Vertreter von Flavonen und Flavolonen. 
 Die Ergebnisse demonstrieren die Komplementarität beider Aktivierungsmethoden und die Bedeutung von \gls{hcd}-Spektren für die Identifizierung methylierter Flavone und Flavonole.
@@ -52,7 +52,7 @@ Für die Identifizierung der genannten Produkte wurde unter anderem auf das in d
 
 \chapter{List of Publications}
 
-Part of this work have been published:
+Parts of this work have been published:
 
 \begin{enumerate}
 \item Wessjohann, L. A., Keim, J., \underline{Weigel, B.}, \& Dippe, M. (2013). Alkylating enzymes. Current Opinion in Chemical Biology, 17(2), 229–235. \url{http://doi.org/10.1016/j.cbpa.2013.02.016}
@@ -64,5 +64,5 @@ Publications that are not part of this work:
 
 \begin{enumerate}
 \item Landgraf, R., Smolka, U., Altmann, S., Eschen-Lippold, L., Senning, M., Sonnewald, S., \underline{Weigel, B.}, … Rosahl, S. (2014). The ABC Transporter ABCG1 Is Required for Suberin Formation in Potato Tuber Periderm. The Plant Cell, 13(August), 3403–3415. \url{http://doi.org/10.1105/tpc.114.124776}
+\item Mullen, D. G., \underline{Weigel, B.}, Barany, G., \& Distefano, M. D. (2010). On-resin conversion of Cys(Acm)-containing peptides to their corresponding Cys(Scm) congeners. Journal of Peptide Science, 16(5), 219–22. \url{http://doi.org/10.1002/psc.1223}
 \end{enumerate}
-

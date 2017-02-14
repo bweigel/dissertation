@@ -11,6 +11,7 @@
 *.blg
 *.lof
 *.lot
+*.lox
 *.toc
 *.xdy
 *.acn
@@ -26,3 +27,4 @@ usr/cache/*
 .Rhistory
 .Rproj.user
 supplementary/*.pdf
+versions

@@ -15,9 +15,14 @@ It is what it is. Accept it and move on. \hfill \\
 \hfill -- \textit{unknown} --
 }
 
-%{\null\vfill\raggedleft
-%\barquote[author=unknown]{It is what it is. Accept it and move on.}
-%}
+\newpage
+
+{\thispagestyle{empty}\null\vfill\raggedleft
+erster Gutachter: Prof. Dr. Ludger A. Wessjohann \hfill \\
+zweiter Gutachter: Prof. Dr. Andreas Liese \hfill \\
+Tag der öffentlichen Verteidigung: 06.04.2017 \hfill \\
+}
+
 }
 
 \ostHeaderSetup{LO,RE}{\ostSizeHeaderMarks\ostFontHeaderMarks{\nouppercase{\textcolor{ostColorHeaderMarks}{\leftmark}}}}

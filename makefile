@@ -17,8 +17,8 @@ DEPENDENCIES = $(DOCUMENT).Rnw ost/subdocuments/*.cls usr/subdocuments/bibliogra
 KNITR = knit
 XINDY = xindy
 #BIBTEX = biber --output-encoding=ascii
-BIBTEX = biber --output-safechars
-COMPILER = pdflatex -interaction=nonstopmode
+BIBTEX = biber --output_safechars
+COMPILER = pdflatex --interaction=nonstopmode
 # The Open-Science-Thesis is prepared for Lua-LaTeX if you prefer it. Just comment out pdflatex and comment in lualatex as compiler
 # COMPILER = lualatex 
 PACKER= tar -czf

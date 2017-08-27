@@ -1,0 +1,65 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{lmodern}
+\usepackage{libertine}
+\usepackage{glossaries}
+\usepackage{xspace}
+
+\makeglossaries
+\newacronym[nonumberlist]{msms}{MS/MS}{tandem mass-spectrometry}
+\newacronym[nonumberlist]{cid}{CID}{collision induced dissociation}
+\newacronym[nonumberlist]{hcd}{HCD}{higher-energy collisional dissociation}
+\newacronym[nonumberlist]{omt}{\protect\textit{O}-MT}{\protect\textit{O}-methyl transferase}
+\newacronym[symbol=LC-MS/MS, nonumberlist]{lcmsms}{LC-MS/MS}{liquid chromatography-tandem mass spectrometry}
+\newacronym[nonumberlist,  first={catechol \protect\textit{O}-methyl transferase (COMT, EC 2.1.1.6)}]{mcomt}{COMT}{catechol \protect\textit{O}-methyl transferase}
+\newacronym[nonumberlist]{comt}{COMT}{catechol \protect\textit{O}-methyl transferase}
+\newacronym[nonumberlist]{somt}{SOMT-2}{soy \protect\textit{O}-methyl transferase}
+
+\newglossaryentry{pfomt}{
+	type        = \acronymtype,
+	name        = PFOMT,
+	text        = PFOMT,
+        nonumberlist,
+	first       = phenylpropanoid and flavonoid \protect\textit{O}-methyl transferase (PFOMT),
+%	see         = [see also]{itc},
+	description = \glslink{pfomtg}{phenylpropanoid and flavonoid \protect\textit{O}-methyl transferase}
+}
+
+\newcommand{\pfomt}{\gls{pfomt}\xspace}
+\newcommand{\somt}{\gls{somt}\xspace}
+\begin{document}
+
+ \section*{English Abstract} 
+
+The present study outlines the useability of two plant \glspl{omt}, \pfomt and \somt, of classes I and II for the biocatalytic methylation of common structural motifs encountered throughout the group of in plant polyphenolic compounds.
+
+\pfomt was biophysically characterized through \glsentrydesc{itc} and the solution of a novel crystal structure of its \textit{apo}-form.
+
+ 
+  \textit{In vivo} studies using \somt showed its capability to methylate flavonoids and stilbenes at the 4'-position. 
+ 
+  It was demonstrated that the activity of class I plant \gls{omt}, \pfomt, could be modulated by pH and magnesium concentration to achieve previously unobserved methylations of non-catecholic moieties. 
+ 
+  Addtionally, a systematic grid of 15 flavonoids with different substitutions at the B-ring was characterized by \gls{msms} studies through \gls{hcd} and \gls{cid}.
+
+\clearpage
+
+\section*{Deutsche Zusammenfassung}
+
+ Die vorliegende Arbeit umreißt die Verwertbarkeit zweier pflanzlicher \textit{O}-Methyl\-trans\-fer\-asen (\glspl{omt}), \pfomt und \somt, der Klassen I and II für die biokatalytische Methylierung in polyphenolischen Verbindungen verbreiteter Strukturmotive. 
+ 
+ Die \pfomt wurde mithilfe der isothermen Titrationskalorimetrie sowie der Lösung einer Kristallstruktur des \textit{apo}-Enzyms biophysikalisch charakterisiert. 
+ 
+ \textit{In vivo} Studien der \somt zeigten die Methylierung von Flavonoiden und Stilbenen an der 4'-Position. 
+ 
+  Es wurde gezeigt, dass die Aktivität der \pfomt durch Variation von pH-Wert und Magnesium so weit moduliert werden kann, dass vorher unbeschriebene Methylierungen von nicht-catecholen Motiven möglich sind. 
+ 
+ Zuletzt wurden fünfzehn Flavonoide mit unterschiedlichen Substitutionsmustern am B-Ring mittels Tandem-Massen\-spek\-tro\-metrie (MS/MS) durch \textit{collision induced dissociation} (\gls{hcd}) und \textit{higher-energy collisional dissociation} (\gls{cid}) charakterisiert.   
+
+
+
+
+\end{document}

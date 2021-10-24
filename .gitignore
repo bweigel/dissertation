@@ -364,3 +364,4 @@ docs/
 
 # translation temp files
 po/*~
+!docker_latex_r/**/*

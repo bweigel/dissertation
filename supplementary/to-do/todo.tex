@@ -1,0 +1,75 @@
+\documentclass[10pt]{scrartcl}\usepackage[]{graphicx}\usepackage[]{color}
+
+\usepackage{alltt}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[a4paper]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx, chemstyle, enumitem}
+\usepackage[space]{grffile}
+\usepackage{hyperref, rotating, multirow, caption, subcaption}
+\usepackage{units}
+\usepackage[numbers]{natbib}
+\usepackage[version=3,arrows=pgf-filled]{mhchem}
+\usepackage{makeidx}
+
+%%%% -----------------------------------
+%%%% define new commands
+%%%% -----------------------------------
+\newcommand{\degC}{$^\circ$C~}
+\newcommand{\ul}{$\mu$l~}
+\newcommand{\ug}{$\mu$g~}
+
+%%%% -----------------------------------
+%%%% define global settings
+%%%% -----------------------------------
+
+%% enumerate package
+\setlist{noitemsep}
+
+%% tables
+\renewenvironment{table}%
+  {\renewcommand{\familydefault}{\sfdefault}\selectfont
+  \@float{table}}
+  {\end@float}
+
+%%%% -----------------------------------
+%%%% set title etc.
+%%%% -----------------------------------
+\author{Benjamin Weigel}
+\title{To-Do-List for Thesis}
+\date{13th January, 2015}
+
+\makeindex
+
+
+\begin{document}
+\sffamily
+\maketitle
+
+\section{PFOMT / COMT}
+\begin{itemize}
+\item[-]express COMT in high quantities
+\item[-]measure ITC of COMT (CoSubstrate binding \& \emph{maybe} substrate binding)
+\vspace{0.5cm}
+\item[-]measure ITC of PFOMT
+\end{itemize}
+
+\section{Xtallization}
+\begin{itemize}
+\item[-]write paper apo-PFOMT structure \href{http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%292053-230X}{Acta Crystallographica Section F} (\textbf{structural communications})
+\item[-]
+\end{itemize}
+
+\section{SOMT}
+\begin{itemize}
+\item[-]reevaluate all HPLC/LCMS data with \href{http://cran.r-project.org/web/packages/ChemoSpec/index.html}{\ttfamily ChemoSpec} package (or similar) in R
+\item[-]use PCA if possible 
+\vspace{0.5cm}
+\item[-]clone SOMT into pEt41 with GST tag
+\item[-]do \textit{in vivo} biotransformation with GST-SOMT
+\end{itemize}
+
+\end{document}
